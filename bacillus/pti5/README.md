@@ -1,7 +1,7 @@
 # pti5
 
-# RNA-seq
+## RNA-seq
 
 
-# qPCR
+## qPCR
 
