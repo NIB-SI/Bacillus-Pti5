@@ -1,11 +1,11 @@
 # qPCR
 
-# concepts
+# general concepts
 
-test of normality
+descriptive statistics
+- test of normality
   - [Shapiro-Wilk test](https://rpkgs.datanovia.com/rstatix/reference/shapiro_test.html)
-  
-test for homogeneity of variance
+- test for homogeneity of variance
 - [Levene test](https://rpkgs.datanovia.com/rstatix/reference/levene_test.html)
 
 effect size
@@ -14,7 +14,7 @@ effect size
 
 t-test
 - Welch's t-test -- unequal variances t-test
-- Permutation test -- a subset of non-parametric statistics
+- [Permutation test](https://cran.r-project.org/web//packages/MKinfer/vignettes/MKinfer.html#permutation-t-test) -- a subset of non-parametric statistics
 
 Multiple testing correction
 - Family-wise error rate
