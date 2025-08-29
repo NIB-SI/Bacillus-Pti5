@@ -1,23 +1,31 @@
 # RNA-seq
 
+## input
 
-## Trimming
+- genome fasta
+- general feature format (gff3)
+- gene set file (gmt)
+
+
+## pipeline
+
+### Trimming
 
 [TrimGalore](https://github.com/FelixKrueger/TrimGalore)
 
 PHRED basecall quality score > 20
 
-## QC
+### QC
 
 [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-## Taxonomic classification
+### Taxonomic classification
 
 [Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
 
 [Pavian](https://github.com/fbreitwieser/pavian)
 
-## Mapping
+### Mapping
 
 [STAR](https://github.com/alexdobin/STAR)
 
@@ -35,13 +43,13 @@ additional alignment parameters:
 --alignMatesGapMax 10000
 ```
 
-## DE
+### DE
 
 [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
 
 [limma](https://www.bioconductor.org/packages/release/bioc/html/limma.html)
 
-## GSEA
+### GSEA
 
 [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
 
