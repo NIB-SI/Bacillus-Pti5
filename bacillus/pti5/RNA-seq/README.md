@@ -5,9 +5,17 @@
 
 [TrimGalore](https://github.com/FelixKrueger/TrimGalore)
 
+PHRED basecall quality score > 20
+
 ## QC
 
 [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+
+## Taxonomic classification
+
+[Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
+
+[Pavian](https://github.com/fbreitwieser/pavian)
 
 ## Mapping
 
