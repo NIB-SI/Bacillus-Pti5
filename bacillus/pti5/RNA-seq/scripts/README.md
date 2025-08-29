@@ -1,8 +1,6 @@
-# RNA-seq scripts
+# RNA-seq analysis pipeline
 
-## pipeline
-
-### QC
+## QC
 ```
 fastqc -t $ncores ./data/*.fq.gz -o ../output/fastqc
 multiqc ../output/ -o ../output/fastqc
@@ -10,7 +8,7 @@ multiqc ../output/ -o ../output/fastqc
 
 [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-### Trimming
+## Trimming
 
 PHRED basecall quality score > 20
 
@@ -22,13 +20,13 @@ do
 done
 ```
 
-### Taxonomic classification
+## Taxonomic classification
 
 [Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
 
 [Pavian](https://github.com/fbreitwieser/pavian)
 
-### Mapping
+## Mapping
 
 [STAR](https://github.com/alexdobin/STAR)
 
@@ -57,7 +55,7 @@ done
 ```          
 
 
-### DE
+## DE
 
 [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
 
@@ -85,7 +83,7 @@ fit2 <- eBayes(fit2)
 resultsX <- topTable(fit2, coef=X, number=1000000, sort.by="none") # replace X by exact coef number
 ```
 
-### GSEA
+## GSEA
 
 [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
 
