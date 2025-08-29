@@ -21,6 +21,20 @@ PHRED basecall quality score > 20
 
 [STAR](https://github.com/alexdobin/STAR)
 
+additional alignment parameters:
+```
+--outFilterMultimapNmax 1
+
+--outFilterMismatchNoverReadLmax 0.02
+--quantTranscriptomeBan Singleend
+--outFilterType BySJout
+--alignSJoverhangMin 10
+--alignSJDBoverhangMin 1
+--alignIntronMin 20
+--alignIntronMax 10000
+--alignMatesGapMax 10000
+```
+
 ## DE
 
 [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
