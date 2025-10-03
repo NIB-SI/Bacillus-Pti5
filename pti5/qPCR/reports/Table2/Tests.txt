@@ -1,0 +1,542 @@
+shoots
+shapiro
+  transcript         W     p.value      p.adj
+1      RBOHD 0.7874158 0.001862611 0.01490089
+2       PR1B 0.8993058 0.078338424 0.33825800
+3       CPI8 0.9062989 0.101443018 0.33825800
+4        CAB 0.8401944 0.009805441 0.05883265
+5      BGLU2 0.8902525 0.067651599 0.33825800
+6      HSP70 0.9724352 0.876344929 1.00000000
+7       PTI5 0.8185296 0.004851631 0.03396142
+8     13-LOX 0.9536693 0.549948270 1.00000000
+levene
+  transcript df1 df2 statistic          p
+1      RBOHD   3  12 5.5766121 0.01246723
+2       PR1B   3  12 0.7718106 0.53171942
+3       CPI8   3  12 1.5285861 0.25763069
+4        CAB   3  12 0.5503027 0.65748542
+5      BGLU2   3  11 0.3366299 0.79926916
+6      HSP70   3  12 0.1255807 0.94314965
+7       PTI5   3  12 0.8181401 0.50838920
+8     13-LOX   3  12 0.2678473 0.84732848
+wilcoxon
+           .y.         group1         group2    effsize transcript n1 n2
+1  measurement  noninoculated         PS-216 0.80178373      RBOHD  4  3
+2  measurement  noninoculated PS-216 ΔcomQXP 0.81649658      RBOHD  4  5
+3  measurement  noninoculated    PS-216 srfA 0.81649658      RBOHD  4  4
+4  measurement         PS-216 PS-216 ΔcomQXP 0.47434165      RBOHD  3  5
+5  measurement         PS-216    PS-216 srfA 0.40089186      RBOHD  3  4
+6  measurement PS-216 ΔcomQXP    PS-216 srfA 0.57154761      RBOHD  5  4
+7  measurement  noninoculated         PS-216 0.66815310       PR1B  4  3
+8  measurement  noninoculated PS-216 ΔcomQXP 0.57154761       PR1B  4  5
+9  measurement  noninoculated    PS-216 srfA 0.61237244       PR1B  4  4
+10 measurement         PS-216 PS-216 ΔcomQXP 0.36893239       PR1B  3  5
+11 measurement         PS-216    PS-216 srfA 0.13363062       PR1B  3  4
+12 measurement PS-216 ΔcomQXP    PS-216 srfA 0.32659863       PR1B  5  4
+13 measurement  noninoculated         PS-216 0.80178373       CPI8  4  3
+14 measurement  noninoculated PS-216 ΔcomQXP 0.73484692       CPI8  4  5
+15 measurement  noninoculated    PS-216 srfA 0.81649658       CPI8  4  4
+16 measurement         PS-216 PS-216 ΔcomQXP 0.15811388       CPI8  3  5
+17 measurement         PS-216    PS-216 srfA 0.26726124       CPI8  3  4
+18 measurement PS-216 ΔcomQXP    PS-216 srfA 0.00000000       CPI8  5  4
+19 measurement  noninoculated         PS-216 0.80178373        CAB  4  3
+20 measurement  noninoculated PS-216 ΔcomQXP 0.81649658        CAB  4  5
+21 measurement  noninoculated    PS-216 srfA 0.81649658        CAB  4  4
+22 measurement         PS-216 PS-216 ΔcomQXP 0.26352314        CAB  3  5
+23 measurement         PS-216    PS-216 srfA 0.26726124        CAB  3  4
+24 measurement PS-216 ΔcomQXP    PS-216 srfA 0.73484692        CAB  5  4
+25 measurement  noninoculated         PS-216 0.66815310      BGLU2  4  3
+26 measurement  noninoculated PS-216 ΔcomQXP 0.40824829      BGLU2  4  4
+27 measurement  noninoculated    PS-216 srfA 0.51031036      BGLU2  4  4
+28 measurement         PS-216 PS-216 ΔcomQXP 0.53452248      BGLU2  3  4
+29 measurement         PS-216    PS-216 srfA 0.53452248      BGLU2  3  4
+30 measurement PS-216 ΔcomQXP    PS-216 srfA 0.10206207      BGLU2  4  4
+31 measurement  noninoculated         PS-216 0.80178373      HSP70  4  3
+32 measurement  noninoculated PS-216 ΔcomQXP 0.40824829      HSP70  4  5
+33 measurement  noninoculated    PS-216 srfA 0.40824829      HSP70  4  4
+34 measurement         PS-216 PS-216 ΔcomQXP 0.15811388      HSP70  3  5
+35 measurement         PS-216    PS-216 srfA 0.53452248      HSP70  3  4
+36 measurement PS-216 ΔcomQXP    PS-216 srfA 0.57154761      HSP70  5  4
+37 measurement  noninoculated         PS-216 0.80178373       PTI5  4  3
+38 measurement  noninoculated PS-216 ΔcomQXP 0.65319726       PTI5  4  5
+39 measurement  noninoculated    PS-216 srfA 0.61237244       PTI5  4  4
+40 measurement         PS-216 PS-216 ΔcomQXP 0.26352314       PTI5  3  5
+41 measurement         PS-216    PS-216 srfA 0.26726124       PTI5  3  4
+42 measurement PS-216 ΔcomQXP    PS-216 srfA 0.08164966       PTI5  5  4
+43 measurement  noninoculated         PS-216 0.80178373     13-LOX  4  3
+44 measurement  noninoculated PS-216 ΔcomQXP 0.73484692     13-LOX  4  5
+45 measurement  noninoculated    PS-216 srfA 0.20412415     13-LOX  4  4
+46 measurement         PS-216 PS-216 ΔcomQXP 0.05270463     13-LOX  3  5
+47 measurement         PS-216    PS-216 srfA 0.53452248     13-LOX  3  4
+48 measurement PS-216 ΔcomQXP    PS-216 srfA 0.48989795     13-LOX  5  4
+   magnitude
+1      large
+2      large
+3      large
+4   moderate
+5   moderate
+6      large
+7      large
+8      large
+9      large
+10  moderate
+11     small
+12  moderate
+13     large
+14     large
+15     large
+16     small
+17     small
+18     small
+19     large
+20     large
+21     large
+22     small
+23     small
+24     large
+25     large
+26  moderate
+27     large
+28     large
+29     large
+30     small
+31     large
+32  moderate
+33  moderate
+34     small
+35     large
+36     large
+37     large
+38     large
+39     large
+40     small
+41     small
+42     small
+43     large
+44     large
+45     small
+46     small
+47     large
+48  moderate
+cohensd
+           .y.         group1         group2     effsize transcript n1 n2
+1  measurement  noninoculated         PS-216  3.43703574      RBOHD  4  3
+2  measurement  noninoculated PS-216 ΔcomQXP  2.94842257      RBOHD  4  5
+3  measurement  noninoculated    PS-216 srfA  3.68828504      RBOHD  4  4
+4  measurement         PS-216 PS-216 ΔcomQXP -0.81624663      RBOHD  3  5
+5  measurement         PS-216    PS-216 srfA  0.65571090      RBOHD  3  4
+6  measurement PS-216 ΔcomQXP    PS-216 srfA  1.35315647      RBOHD  5  4
+7  measurement  noninoculated         PS-216 -2.08891161       PR1B  4  3
+8  measurement  noninoculated PS-216 ΔcomQXP -1.47116650       PR1B  4  5
+9  measurement  noninoculated    PS-216 srfA -1.55640317       PR1B  4  4
+10 measurement         PS-216 PS-216 ΔcomQXP  0.78183951       PR1B  3  5
+11 measurement         PS-216    PS-216 srfA  0.06270225       PR1B  3  4
+12 measurement PS-216 ΔcomQXP    PS-216 srfA -0.57030465       PR1B  5  4
+13 measurement  noninoculated         PS-216 -1.70987336       CPI8  4  3
+14 measurement  noninoculated PS-216 ΔcomQXP -1.81804541       CPI8  4  5
+15 measurement  noninoculated    PS-216 srfA -1.99848731       CPI8  4  4
+16 measurement         PS-216 PS-216 ΔcomQXP -0.51005059       CPI8  3  5
+17 measurement         PS-216    PS-216 srfA -0.51121706       CPI8  3  4
+18 measurement PS-216 ΔcomQXP    PS-216 srfA  0.03395457       CPI8  5  4
+19 measurement  noninoculated         PS-216  4.60760766        CAB  4  3
+20 measurement  noninoculated PS-216 ΔcomQXP  5.04505149        CAB  4  5
+21 measurement  noninoculated    PS-216 srfA  7.67712521        CAB  4  4
+22 measurement         PS-216 PS-216 ΔcomQXP -0.46061783        CAB  3  5
+23 measurement         PS-216    PS-216 srfA  0.70701209        CAB  3  4
+24 measurement PS-216 ΔcomQXP    PS-216 srfA  1.60024095        CAB  5  4
+25 measurement  noninoculated         PS-216 -1.61392770      BGLU2  4  3
+26 measurement  noninoculated PS-216 ΔcomQXP -0.50048288      BGLU2  4  4
+27 measurement  noninoculated    PS-216 srfA -0.52617423      BGLU2  4  4
+28 measurement         PS-216 PS-216 ΔcomQXP  1.48532971      BGLU2  3  4
+29 measurement         PS-216    PS-216 srfA  1.06952442      BGLU2  3  4
+30 measurement PS-216 ΔcomQXP    PS-216 srfA -0.16329794      BGLU2  4  4
+31 measurement  noninoculated         PS-216 -1.55976965      HSP70  4  3
+32 measurement  noninoculated PS-216 ΔcomQXP -1.00489518      HSP70  4  5
+33 measurement  noninoculated    PS-216 srfA  0.62094367      HSP70  4  4
+34 measurement         PS-216 PS-216 ΔcomQXP  0.63198321      HSP70  3  5
+35 measurement         PS-216    PS-216 srfA  1.65722096      HSP70  3  4
+36 measurement PS-216 ΔcomQXP    PS-216 srfA  1.23070256      HSP70  5  4
+37 measurement  noninoculated         PS-216 -1.47567436       PTI5  4  3
+38 measurement  noninoculated PS-216 ΔcomQXP -1.44253094       PTI5  4  5
+39 measurement  noninoculated    PS-216 srfA -1.14623641       PTI5  4  4
+40 measurement         PS-216 PS-216 ΔcomQXP  0.51637982       PTI5  3  5
+41 measurement         PS-216    PS-216 srfA  0.26822384       PTI5  3  4
+42 measurement PS-216 ΔcomQXP    PS-216 srfA -0.20132175       PTI5  5  4
+43 measurement  noninoculated         PS-216 -2.32000310     13-LOX  4  3
+44 measurement  noninoculated PS-216 ΔcomQXP -1.87717637     13-LOX  4  5
+45 measurement  noninoculated    PS-216 srfA -0.70011484     13-LOX  4  4
+46 measurement         PS-216 PS-216 ΔcomQXP  0.27119719     13-LOX  3  5
+47 measurement         PS-216    PS-216 srfA  1.52430632     13-LOX  3  4
+48 measurement PS-216 ΔcomQXP    PS-216 srfA  1.16697786     13-LOX  5  4
+    magnitude
+1       large
+2       large
+3       large
+4       large
+5    moderate
+6       large
+7       large
+8       large
+9       large
+10   moderate
+11 negligible
+12   moderate
+13      large
+14      large
+15      large
+16   moderate
+17   moderate
+18 negligible
+19      large
+20      large
+21      large
+22      small
+23   moderate
+24      large
+25      large
+26   moderate
+27   moderate
+28      large
+29      large
+30 negligible
+31      large
+32      large
+33   moderate
+34   moderate
+35      large
+36      large
+37      large
+38      large
+39      large
+40   moderate
+41      small
+42      small
+43      large
+44      large
+45   moderate
+46      small
+47      large
+48      large
+
+[1] "shoots"
+   transcript         group1         group2          p      p.adj p.adj.signif
+1       RBOHD  noninoculated         PS-216 0.01428571 0.05274725           ns
+2        PR1B  noninoculated         PS-216 0.08571429 0.20571429           ns
+3        CPI8  noninoculated         PS-216 0.01428571 0.05274725           ns
+4         CAB  noninoculated         PS-216 0.01428571 0.05274725           ns
+5       BGLU2  noninoculated         PS-216 0.17142857 0.32914286           ns
+6       HSP70  noninoculated         PS-216 0.01428571 0.05274725           ns
+7        PTI5  noninoculated         PS-216 0.05714286 0.16134454           ns
+8      13-LOX  noninoculated         PS-216 0.01428571 0.05274725           ns
+9       RBOHD  noninoculated PS-216 ΔcomQXP 0.01428571 0.05274725           ns
+10       PR1B  noninoculated PS-216 ΔcomQXP 0.05714286 0.16134454           ns
+11       CPI8  noninoculated PS-216 ΔcomQXP 0.01428571 0.05274725           ns
+12        CAB  noninoculated PS-216 ΔcomQXP 0.01428571 0.05274725           ns
+13      BGLU2  noninoculated PS-216 ΔcomQXP 0.47142857 0.62857143           ns
+14      HSP70  noninoculated PS-216 ΔcomQXP 0.20000000 0.35555556           ns
+15       PTI5  noninoculated PS-216 ΔcomQXP 0.01428571 0.05274725           ns
+16     13-LOX  noninoculated PS-216 ΔcomQXP 0.04285714 0.14693878           ns
+17      RBOHD  noninoculated    PS-216 srfA 0.01428571 0.05274725           ns
+18       PR1B  noninoculated    PS-216 srfA 0.11428571 0.26122449           ns
+19       CPI8  noninoculated    PS-216 srfA 0.01428571 0.05274725           ns
+20        CAB  noninoculated    PS-216 srfA 0.01428571 0.05274725           ns
+21      BGLU2  noninoculated    PS-216 srfA 0.44285714 0.62521008           ns
+22      HSP70  noninoculated    PS-216 srfA 0.42857143 0.62337662           ns
+23       PTI5  noninoculated    PS-216 srfA 0.14285714 0.28571429           ns
+24     13-LOX  noninoculated    PS-216 srfA 0.37142857 0.57511521           ns
+25      RBOHD         PS-216 PS-216 ΔcomQXP 0.28571429 0.47290640           ns
+26       PR1B         PS-216 PS-216 ΔcomQXP 0.31428571 0.50285714           ns
+27       CPI8         PS-216 PS-216 ΔcomQXP 0.54285714 0.66813187           ns
+28        CAB         PS-216 PS-216 ΔcomQXP 0.74285714 0.79238095           ns
+29      BGLU2         PS-216 PS-216 ΔcomQXP 0.14285714 0.28571429           ns
+30      HSP70         PS-216 PS-216 ΔcomQXP 0.45714286 0.62693878           ns
+31       PTI5         PS-216 PS-216 ΔcomQXP 0.57142857 0.68571429           ns
+32     13-LOX         PS-216 PS-216 ΔcomQXP 0.71428571 0.77922078           ns
+33      RBOHD         PS-216    PS-216 srfA 0.50000000 0.63157895           ns
+34       PR1B         PS-216    PS-216 srfA 0.85714286 0.87537994           ns
+35       CPI8         PS-216    PS-216 srfA 0.50000000 0.63157895           ns
+36        CAB         PS-216    PS-216 srfA 0.60000000 0.70166113           ns
+37      BGLU2         PS-216    PS-216 srfA 0.27142857 0.46530612           ns
+38      HSP70         PS-216    PS-216 srfA 0.08571429 0.20571429           ns
+39       PTI5         PS-216    PS-216 srfA 0.62857143 0.70166113           ns
+40     13-LOX         PS-216    PS-216 srfA 0.07142857 0.19047619           ns
+41      RBOHD PS-216 ΔcomQXP    PS-216 srfA 0.05714286 0.16134454           ns
+42       PR1B PS-216 ΔcomQXP    PS-216 srfA 0.41428571 0.62142857           ns
+43       CPI8 PS-216 ΔcomQXP    PS-216 srfA 0.98571429 0.98571429           ns
+44        CAB PS-216 ΔcomQXP    PS-216 srfA 0.01428571 0.05274725           ns
+45      BGLU2 PS-216 ΔcomQXP    PS-216 srfA 0.85714286 0.87537994           ns
+46      HSP70 PS-216 ΔcomQXP    PS-216 srfA 0.12857143 0.28051948           ns
+47       PTI5 PS-216 ΔcomQXP    PS-216 srfA 0.62857143 0.70166113           ns
+48     13-LOX PS-216 ΔcomQXP    PS-216 srfA 0.18571429 0.34285714           ns
+
+roots
+shapiro
+  transcript         W      p.value        p.adj
+1      RBOHD 0.9277017 2.241278e-01 2.635360e-01
+2       PR1B 0.3370574 1.237624e-07 9.900992e-07
+3       CPI8 0.8222137 7.190811e-03 3.595406e-02
+4        CAB 0.9133461 1.317680e-01 2.635360e-01
+5      BGLU2 0.7757789 1.321837e-03 9.252859e-03
+6      HSP70 0.7876177 1.873861e-03 1.124317e-02
+7       PTI5 0.8806379 3.970326e-02 1.191098e-01
+8     13-LOX 0.8365335 8.686931e-03 3.595406e-02
+levene
+  transcript df1 df2 statistic          p
+1      RBOHD   3  12 4.1041639 0.03216287
+2       PR1B   3  12 1.3639815 0.30069436
+3       CPI8   3  11 1.9970955 0.17293053
+4        CAB   3  12 1.1089550 0.38364728
+5      BGLU2   3  12 1.9951484 0.16855447
+6      HSP70   3  12 0.3824216 0.76755503
+7       PTI5   3  12 1.5118779 0.26167622
+8     13-LOX   3  12 0.7162814 0.56102739
+wilcoxon
+           .y.         group1         group2   effsize transcript n1 n2
+1  measurement  noninoculated         PS-216 0.8214005      RBOHD  4  4
+2  measurement  noninoculated PS-216 ΔcomQXP 0.8164966      RBOHD  4  4
+3  measurement  noninoculated    PS-216 srfA 0.7144345      RBOHD  4  4
+4  measurement         PS-216 PS-216 ΔcomQXP 0.6160504      RBOHD  4  4
+5  measurement         PS-216    PS-216 srfA 0.7187254      RBOHD  4  4
+6  measurement PS-216 ΔcomQXP    PS-216 srfA 0.4082483      RBOHD  4  4
+7  measurement  noninoculated         PS-216 0.3061862       PR1B  4  4
+8  measurement  noninoculated PS-216 ΔcomQXP 0.3061862       PR1B  4  4
+9  measurement  noninoculated    PS-216 srfA 0.7144345       PR1B  4  4
+10 measurement         PS-216 PS-216 ΔcomQXP 0.4082483       PR1B  4  4
+11 measurement         PS-216    PS-216 srfA 0.8164966       PR1B  4  4
+12 measurement PS-216 ΔcomQXP    PS-216 srfA 0.6123724       PR1B  4  4
+13 measurement  noninoculated         PS-216 0.8017837       CPI8  4  3
+14 measurement  noninoculated PS-216 ΔcomQXP 0.8164966       CPI8  4  4
+15 measurement  noninoculated    PS-216 srfA 0.6123724       CPI8  4  4
+16 measurement         PS-216 PS-216 ΔcomQXP 0.2672612       CPI8  3  4
+17 measurement         PS-216    PS-216 srfA 0.8017837       CPI8  3  4
+18 measurement PS-216 ΔcomQXP    PS-216 srfA 0.6123724       CPI8  4  4
+19 measurement  noninoculated         PS-216 0.8164966        CAB  4  4
+20 measurement  noninoculated PS-216 ΔcomQXP 0.8164966        CAB  4  4
+21 measurement  noninoculated    PS-216 srfA 0.8164966        CAB  4  4
+22 measurement         PS-216 PS-216 ΔcomQXP 0.1020621        CAB  4  4
+23 measurement         PS-216    PS-216 srfA 0.6123724        CAB  4  4
+24 measurement PS-216 ΔcomQXP    PS-216 srfA 0.6123724        CAB  4  4
+25 measurement  noninoculated         PS-216 0.2041241      BGLU2  4  4
+26 measurement  noninoculated PS-216 ΔcomQXP 0.3061862      BGLU2  4  4
+27 measurement  noninoculated    PS-216 srfA 0.4082483      BGLU2  4  4
+28 measurement         PS-216 PS-216 ΔcomQXP 0.4082483      BGLU2  4  4
+29 measurement         PS-216    PS-216 srfA 0.2041241      BGLU2  4  4
+30 measurement PS-216 ΔcomQXP    PS-216 srfA 0.2041241      BGLU2  4  4
+31 measurement  noninoculated         PS-216 0.6123724      HSP70  4  4
+32 measurement  noninoculated PS-216 ΔcomQXP 0.8164966      HSP70  4  4
+33 measurement  noninoculated    PS-216 srfA 0.7144345      HSP70  4  4
+34 measurement         PS-216 PS-216 ΔcomQXP 0.1020621      HSP70  4  4
+35 measurement         PS-216    PS-216 srfA 0.1020621      HSP70  4  4
+36 measurement PS-216 ΔcomQXP    PS-216 srfA 0.0000000      HSP70  4  4
+37 measurement  noninoculated         PS-216 0.8164966       PTI5  4  4
+38 measurement  noninoculated PS-216 ΔcomQXP 0.8164966       PTI5  4  4
+39 measurement  noninoculated    PS-216 srfA 0.8164966       PTI5  4  4
+40 measurement         PS-216 PS-216 ΔcomQXP 0.8164966       PTI5  4  4
+41 measurement         PS-216    PS-216 srfA 0.8164966       PTI5  4  4
+42 measurement PS-216 ΔcomQXP    PS-216 srfA 0.1020621       PTI5  4  4
+43 measurement  noninoculated         PS-216 0.8164966     13-LOX  4  4
+44 measurement  noninoculated PS-216 ΔcomQXP 0.8164966     13-LOX  4  4
+45 measurement  noninoculated    PS-216 srfA 0.8164966     13-LOX  4  4
+46 measurement         PS-216 PS-216 ΔcomQXP 0.7144345     13-LOX  4  4
+47 measurement         PS-216    PS-216 srfA 0.8164966     13-LOX  4  4
+48 measurement PS-216 ΔcomQXP    PS-216 srfA 0.4082483     13-LOX  4  4
+   magnitude
+1      large
+2      large
+3      large
+4      large
+5      large
+6   moderate
+7   moderate
+8   moderate
+9      large
+10  moderate
+11     large
+12     large
+13     large
+14     large
+15     large
+16     small
+17     large
+18     large
+19     large
+20     large
+21     large
+22     small
+23     large
+24     large
+25     small
+26  moderate
+27  moderate
+28  moderate
+29     small
+30     small
+31     large
+32     large
+33     large
+34     small
+35     small
+36     small
+37     large
+38     large
+39     large
+40     large
+41     large
+42     small
+43     large
+44     large
+45     large
+46     large
+47     large
+48  moderate
+cohensd
+           .y.         group1         group2       effsize transcript n1 n2
+1  measurement  noninoculated         PS-216  4.7601286497      RBOHD  4  4
+2  measurement  noninoculated PS-216 ΔcomQXP  4.3632908141      RBOHD  4  4
+3  measurement  noninoculated    PS-216 srfA  1.7599882308      RBOHD  4  4
+4  measurement         PS-216 PS-216 ΔcomQXP -1.7421200257      RBOHD  4  4
+5  measurement         PS-216    PS-216 srfA -2.0594749152      RBOHD  4  4
+6  measurement PS-216 ΔcomQXP    PS-216 srfA -1.2329881585      RBOHD  4  4
+7  measurement  noninoculated         PS-216  0.0002939159       PR1B  4  4
+8  measurement  noninoculated PS-216 ΔcomQXP -0.5569301099       PR1B  4  4
+9  measurement  noninoculated    PS-216 srfA -0.8605660434       PR1B  4  4
+10 measurement         PS-216 PS-216 ΔcomQXP -0.5570669971       PR1B  4  4
+11 measurement         PS-216    PS-216 srfA -0.8605682996       PR1B  4  4
+12 measurement PS-216 ΔcomQXP    PS-216 srfA -0.8511402990       PR1B  4  4
+13 measurement  noninoculated         PS-216  3.1804204814       CPI8  4  3
+14 measurement  noninoculated PS-216 ΔcomQXP  2.7658278552       CPI8  4  4
+15 measurement  noninoculated    PS-216 srfA  1.0992443200       CPI8  4  4
+16 measurement         PS-216 PS-216 ΔcomQXP -0.7428075907       CPI8  3  4
+17 measurement         PS-216    PS-216 srfA -1.3784434523       CPI8  3  4
+18 measurement PS-216 ΔcomQXP    PS-216 srfA -1.0907199197       CPI8  4  4
+19 measurement  noninoculated         PS-216  4.4569836025        CAB  4  4
+20 measurement  noninoculated PS-216 ΔcomQXP  5.5439687713        CAB  4  4
+21 measurement  noninoculated    PS-216 srfA  2.3949300508        CAB  4  4
+22 measurement         PS-216 PS-216 ΔcomQXP  0.1045079788        CAB  4  4
+23 measurement         PS-216    PS-216 srfA -1.4158563476        CAB  4  4
+24 measurement PS-216 ΔcomQXP    PS-216 srfA -1.6913765162        CAB  4  4
+25 measurement  noninoculated         PS-216 -0.5350923978      BGLU2  4  4
+26 measurement  noninoculated PS-216 ΔcomQXP -1.0210705408      BGLU2  4  4
+27 measurement  noninoculated    PS-216 srfA -0.7607376486      BGLU2  4  4
+28 measurement         PS-216 PS-216 ΔcomQXP -0.7810513086      BGLU2  4  4
+29 measurement         PS-216    PS-216 srfA -0.2577278769      BGLU2  4  4
+30 measurement PS-216 ΔcomQXP    PS-216 srfA  0.6384318762      BGLU2  4  4
+31 measurement  noninoculated         PS-216 -1.3200475667      HSP70  4  4
+32 measurement  noninoculated PS-216 ΔcomQXP -1.0279839343      HSP70  4  4
+33 measurement  noninoculated    PS-216 srfA -1.3592364683      HSP70  4  4
+34 measurement         PS-216 PS-216 ΔcomQXP -0.2615204047      HSP70  4  4
+35 measurement         PS-216    PS-216 srfA -0.1014640316      HSP70  4  4
+36 measurement PS-216 ΔcomQXP    PS-216 srfA  0.1865783495      HSP70  4  4
+37 measurement  noninoculated         PS-216 -6.0367889259       PTI5  4  4
+38 measurement  noninoculated PS-216 ΔcomQXP -1.5660076812       PTI5  4  4
+39 measurement  noninoculated    PS-216 srfA -3.2980417828       PTI5  4  4
+40 measurement         PS-216 PS-216 ΔcomQXP  2.4416871452       PTI5  4  4
+41 measurement         PS-216    PS-216 srfA  3.2916479765       PTI5  4  4
+42 measurement PS-216 ΔcomQXP    PS-216 srfA -0.0621286170       PTI5  4  4
+43 measurement  noninoculated         PS-216 -6.7127116425     13-LOX  4  4
+44 measurement  noninoculated PS-216 ΔcomQXP -1.3601094370     13-LOX  4  4
+45 measurement  noninoculated    PS-216 srfA -3.7676684211     13-LOX  4  4
+46 measurement         PS-216 PS-216 ΔcomQXP  2.3199466557     13-LOX  4  4
+47 measurement         PS-216    PS-216 srfA  4.5105821431     13-LOX  4  4
+48 measurement PS-216 ΔcomQXP    PS-216 srfA  0.2905648499     13-LOX  4  4
+    magnitude
+1       large
+2       large
+3       large
+4       large
+5       large
+6       large
+7  negligible
+8    moderate
+9       large
+10   moderate
+11      large
+12      large
+13      large
+14      large
+15      large
+16   moderate
+17      large
+18      large
+19      large
+20      large
+21      large
+22 negligible
+23      large
+24      large
+25   moderate
+26      large
+27   moderate
+28   moderate
+29      small
+30   moderate
+31      large
+32      large
+33      large
+34      small
+35 negligible
+36 negligible
+37      large
+38      large
+39      large
+40      large
+41      large
+42 negligible
+43      large
+44      large
+45      large
+46      large
+47      large
+48      small
+
+[1] "roots"
+   transcript         group1         group2          p      p.adj p.adj.signif
+1       RBOHD  noninoculated         PS-216 0.01428571 0.03265306            *
+2        PR1B  noninoculated         PS-216 0.57142857 0.65306122           ns
+3        CPI8  noninoculated         PS-216 0.01428571 0.03265306            *
+4         CAB  noninoculated         PS-216 0.01428571 0.03265306            *
+5       BGLU2  noninoculated         PS-216 0.45714286 0.56263736           ns
+6       HSP70  noninoculated         PS-216 0.01428571 0.03265306            *
+7        PTI5  noninoculated         PS-216 0.01428571 0.03265306            *
+8      13-LOX  noninoculated         PS-216 0.01428571 0.03265306            *
+9       RBOHD  noninoculated PS-216 ΔcomQXP 0.01428571 0.03265306            *
+10       PR1B  noninoculated PS-216 ΔcomQXP 0.42857143 0.54135338           ns
+11       CPI8  noninoculated PS-216 ΔcomQXP 0.01428571 0.03265306            *
+12        CAB  noninoculated PS-216 ΔcomQXP 0.05714286 0.11428571           ns
+13      BGLU2  noninoculated PS-216 ΔcomQXP 0.18571429 0.27012987           ns
+14      HSP70  noninoculated PS-216 ΔcomQXP 0.01428571 0.03265306            *
+15       PTI5  noninoculated PS-216 ΔcomQXP 0.01428571 0.03265306            *
+16     13-LOX  noninoculated PS-216 ΔcomQXP 0.01428571 0.03265306            *
+17      RBOHD  noninoculated    PS-216 srfA 0.01428571 0.03265306            *
+18       PR1B  noninoculated    PS-216 srfA 0.02857143 0.06233766           ns
+19       CPI8  noninoculated    PS-216 srfA 0.08571429 0.13714286           ns
+20        CAB  noninoculated    PS-216 srfA 0.01428571 0.03265306            *
+21      BGLU2  noninoculated    PS-216 srfA 0.30000000 0.41142857           ns
+22      HSP70  noninoculated    PS-216 srfA 0.08571429 0.13714286           ns
+23       PTI5  noninoculated    PS-216 srfA 0.01428571 0.03265306            *
+24     13-LOX  noninoculated    PS-216 srfA 0.01428571 0.03265306            *
+25      RBOHD         PS-216 PS-216 ΔcomQXP 0.07142857 0.12244898           ns
+26       PR1B         PS-216 PS-216 ΔcomQXP 0.37142857 0.48185328           ns
+27       CPI8         PS-216 PS-216 ΔcomQXP 0.37142857 0.48185328           ns
+28        CAB         PS-216 PS-216 ΔcomQXP 1.00000000 1.00000000           ns
+29      BGLU2         PS-216 PS-216 ΔcomQXP 0.24285714 0.34285714           ns
+30      HSP70         PS-216 PS-216 ΔcomQXP 0.72857143 0.81328904           ns
+31       PTI5         PS-216 PS-216 ΔcomQXP 0.01428571 0.03265306            *
+32     13-LOX         PS-216 PS-216 ΔcomQXP 0.07142857 0.12244898           ns
+33      RBOHD         PS-216    PS-216 srfA 0.01428571 0.03265306            *
+34       PR1B         PS-216    PS-216 srfA 0.01428571 0.03265306            *
+35       CPI8         PS-216    PS-216 srfA 0.01428571 0.03265306            *
+36        CAB         PS-216    PS-216 srfA 0.10000000 0.15483871           ns
+37      BGLU2         PS-216    PS-216 srfA 0.55714286 0.65226481           ns
+38      HSP70         PS-216    PS-216 srfA 0.78571429 0.85714286           ns
+39       PTI5         PS-216    PS-216 srfA 0.01428571 0.03265306            *
+40     13-LOX         PS-216    PS-216 srfA 0.07142857 0.12244898           ns
+41      RBOHD PS-216 ΔcomQXP    PS-216 srfA 0.18571429 0.27012987           ns
+42       PR1B PS-216 ΔcomQXP    PS-216 srfA 0.05714286 0.11428571           ns
+43       CPI8 PS-216 ΔcomQXP    PS-216 srfA 0.07142857 0.12244898           ns
+44        CAB PS-216 ΔcomQXP    PS-216 srfA 0.01428571 0.03265306            *
+45      BGLU2 PS-216 ΔcomQXP    PS-216 srfA 0.48571429 0.58285714           ns
+46      HSP70 PS-216 ΔcomQXP    PS-216 srfA 0.81428571 0.86857143           ns
+47       PTI5 PS-216 ΔcomQXP    PS-216 srfA 0.90000000 0.93913043           ns
+48     13-LOX PS-216 ΔcomQXP    PS-216 srfA 1.00000000 1.00000000           ns
+

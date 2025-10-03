@@ -1,0 +1,1236 @@
+---
+title: "PS216-PS218_roots-shoots"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 12
+    fig_height: 7
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(#dev = c('pdf', 'png'),
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 7, 
+                      fig.width = 12,
+                      warning = FALSE, message = FALSE, echo = TRUE
+                      )
+
+
+```
+
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+
+```
+
+
+# packages
+
+```{r, libs}
+
+
+# %>% 
+library(magrittr)
+library(ggplot2)
+
+
+`%!in%` = Negate(`%in%`)
+
+
+
+```
+
+
+# palette
+
+```{r, palette}
+
+n = 4
+col = RColorBrewer::brewer.pal(n, 'Paired')
+
+pal = col[seq(1, n, 2)]
+
+
+
+```
+
+
+
+```{r, reports}
+
+my_dir = file.path("..", "reports", "Table7")
+if (!dir.exists(my_dir)) {
+  dir.create(my_dir)
+}
+fr = file.path(my_dir, 'Tests.txt')
+file.create(fr)
+
+```
+
+
+# f-ctions
+
+## summary stat
+
+```{r, summary_stats}
+
+summary_stats <- function(df, measurevar, groupvars, conf.level = 0.95) {
+  df %>%
+    dplyr::group_by(across(all_of(groupvars))) %>%
+    dplyr::summarise(
+      N = sum(!is.na(.data[[measurevar]])),
+      mean = mean(.data[[measurevar]], na.rm = TRUE),
+      sd = sd(.data[[measurevar]], na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    dplyr::mutate(
+      se = sd / sqrt(N),
+      ci = se * qt(conf.level/2 + 0.5, N - 1)
+    )
+}
+
+
+```
+
+
+## scale PS
+
+```{r, scale_PS}
+
+
+process_data <- function(df, groupvars, measurevar, scale_treatment = "noninoculated") {
+
+  df.long = df %>%
+    tidyr::pivot_longer(cols = 3:ncol(df), names_to = "transcript",
+                        values_to = measurevar, values_drop_na = TRUE)
+  data.SE = summary_stats(df.long, measurevar, groupvars)
+  scale_reference = data.SE %>%
+    dplyr::filter(Treatment == scale_treatment) %>%
+    dplyr::select(Tissue, transcript, mean) %>%
+    dplyr::rename(scale_mean = mean)
+  df.scaled <- dplyr::left_join(df.long, scale_reference, by = c("Tissue", "transcript")) %>%
+    dplyr::mutate(scaled = .data[[measurevar]] / scale_mean) %>%
+    dplyr::select(-scale_mean)
+  df.scaled = df.scaled %>% 
+    dplyr::arrange(dplyr::desc(transcript), dplyr::desc(Treatment))
+  shoots = df.scaled %>% dplyr::filter(Tissue == "shoots")
+  roots = df.scaled %>% dplyr::filter(Tissue == "roots")
+  
+  return(list(
+    shoots = shoots,
+    roots = roots
+  ))
+}
+
+
+
+
+```
+
+
+## perm t
+
+```{r, perm_t}
+
+perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", groupvar = "Treatment") {
+  
+  temp = data.frame()
+  transcript_levels = levels(mydata.long$transcript)
+  treatment_levels = levels(mydata.long[[groupvar]])
+  treatment_pairs = combn(treatment_levels, 2, simplify = FALSE)
+  
+  for(i in transcript_levels) {
+    data = mydata.long[mydata.long$transcript == i, ]
+    k = 8 # nrow(data)
+    pvalues = purrr::map_dbl(treatment_pairs, function(x) {
+      subset_data = base::subset(data, data[[groupvar]] %in% x)
+      res = MKinfer::perm.t.test(
+        formula = stats::as.formula(base::paste(measurevar, "~", groupvar)),
+        data = subset_data,
+        alternative = "two.sided",
+        mu = 0,
+        paired = FALSE,
+        var.equal = FALSE,
+        conf.level = 0.95,
+        perm.conf.int = 0.95,
+        symmetric = TRUE,
+        p.adjust.method = "holm",
+        detailed = TRUE,
+        R = choose(k, k/2), # sum(choose(k, 1:(k-1))),
+        set.seed = 123456
+      )
+      res$perm.p.value
+    })
+    
+    tmp = base::as.data.frame(base::t(pvalues))
+    colnames(tmp) = purrr::map_chr(treatment_pairs, ~base::paste(.x, collapse = ' vs '))
+    rownames(tmp) = i
+    
+    temp <- base::rbind(temp, tmp)
+  }
+  
+  return(temp)
+}
+
+
+
+```
+
+## plot
+
+```{r, plot}
+
+plot_gene_expression <- function(data.SE
+                                 , data.long
+                                 , stat.test.sig
+                                 , transcripts_excl = c('13-LOX', 'PTI5')
+                                 , color_values
+                                 , facet_cols = 6
+                                 , y_scales = NULL
+                                 , dodge_width = 0.8,
+                                 plot_title = ""
+                                 ) {
+  
+  dodge = position_dodge(width = dodge_width)
+  
+  data.SE.filtered = dplyr::filter(data.SE, !transcript %in% transcripts_excl)
+  data.long.filtered = dplyr::filter(data.long, !transcript %in% transcripts_excl)
+  
+  stat.test.filtered = NULL
+  if (nrow(stat.test.sig) > 0) stat.test.filtered = dplyr::filter(stat.test.sig, !transcript %in% transcripts_excl)
+  
+  p = ggplot(data.SE.filtered, aes(x = Treatment, y = mean), colour = "black") +
+    geom_point(size=3.5, shape = 22, position = dodge, aes(fill = Treatment), colour = "black") +
+    geom_point(data = data.long.filtered, aes(x = Treatment, y = scaled, fill = Treatment), colour = "black",
+               size = 2.0, shape = 21,
+               position = dodge) +
+    geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.3, lwd = 0.5,
+                  position = dodge) +
+    facet_wrap(~ transcript, ncol = facet_cols, scales = "free", drop = TRUE)
+  
+  if (!is.null(y_scales)) {
+    p = p + ggh4x::facetted_pos_scales(y = y_scales)
+  }
+  
+  p = p +
+    # geom_hline(yintercept = 2.5, alpha = 0.0) +
+    geom_hline(yintercept = 0, alpha = 0.0) +
+    geom_hline(yintercept = 1, alpha = 0.5, linetype = "dotted", col = "gray45") +
+    ggtitle(plot_title) +
+    theme_bw() +
+    scale_colour_manual(name = "", values = rev(color_values)) +
+    scale_fill_manual(name = "", values = rev(color_values)) +
+    labs(x = "", y = "Relative gene expression (+/- SE)"
+         # , subtitle = "Permutation t-test measurements"
+         ) +
+    theme(plot.subtitle = element_text(size = 10),
+          axis.text = element_text(size = 12.5),
+          axis.text.x = element_text(size = 12.5, angle = 90),
+          axis.title = element_text(size = 12.5, face = "bold"),
+          strip.text = element_text(size = 12.5),
+          title = element_text(size = 15, face = "bold"),
+          # axis.ticks.x = element_blank(),
+          legend.key.height = unit(1.5, "cm"),
+          legend.key.width = unit(1.75, "cm"),
+          legend.text = element_text(size = 12.5),
+          legend.title = element_text(size = 12.5),
+          legend.background = element_rect(fill = "transparent", size = 0.5, linetype = "dotted"),
+          legend.position = "top",
+          legend.justification = "right",
+          plot.background = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.title.y.right = element_blank(),
+          axis.text.y.right = element_blank(),
+          # axis.ticks.y = element_blank(),
+          axis.text.y = element_text(size = 12.5, margin = margin(r = 0)),
+          panel.spacing = unit(1, "lines"),
+          strip.background = element_rect(size = 0.5, fill = "transparent", color = NA) ,
+          panel.border = element_blank(),
+          axis.line = element_line(color = "black")
+          )
+  
+    p = p + theme(legend.position = "none")
+
+  
+
+
+  
+  if (!is.null(stat.test.filtered) && nrow(stat.test.filtered) > 0) {
+    
+    p = p + ggpubr::stat_pvalue_manual(
+      stat.test.filtered,
+      label = "p.adj.signif",
+      xmin = "xmin",
+      xmax = "xmax",
+      y.position = "y.position",
+      hide.ns = FALSE,
+      tip.length = 0.01,
+      step.increase = 0.075,
+      inherit.aes = FALSE 
+    )
+    
+  }
+    
+  return(p)
+  
+}
+
+
+
+```
+
+## effects
+
+**Denote:** PR1B has LOQ values
+
+```{r, effects}
+
+dens_and_effect <- function(mydata.long, p_colors) {
+  
+  # Plot density with x="measurement"
+  p1 = ggpubr::ggdensity(mydata.long, x = "measurement",
+              add = "mean", rug = TRUE,
+              color = "Treatment", fill = "Treatment",
+              facet.by = 'transcript') +
+    scale_fill_manual(name = "", values = rev(p_colors)) +
+    scale_color_manual(name = "", values = rev(p_colors)) +
+    ggtitle("measurement") +
+    facet_wrap(~transcript, ncol = 4, scales = "free")
+  print(p1)
+  
+  # Plot density with x="scaled"
+  p2 = ggpubr::ggdensity(mydata.long, x = "scaled",
+              add = "mean", rug = TRUE,
+              color = "Treatment", fill = "Treatment",
+              facet.by = 'transcript') +
+    scale_fill_manual(name = "", values = rev(p_colors)) +
+    scale_color_manual(name = "", values = rev(p_colors)) +
+    ggtitle("scaled") +
+    facet_wrap(~transcript, ncol = 4, scales = "free")
+  print(p2)
+  
+  
+  cat(crayon::red('Shapiro-Wilk Normality Test\n'))
+  
+  # Shapiro-Wilk normality test on measurement
+  norm_meas = mydata.long %>%
+    dplyr::select(-Tissue, -Treatment, -scaled) %>%
+    tidyr::gather(key = "transcript", value = "measurement") %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::do(broom::tidy(shapiro.test(.$measurement))) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(p.adj = p.adjust(p.value, method = "holm")) %>%  # or "bonferroni", "BH"
+    dplyr::select(transcript, W = statistic, p.value, p.adj)
+  print(norm_meas)
+  
+  # Shapiro-Wilk normality test on scaled
+  norm_scaled = mydata.long %>%
+    dplyr::select(-Tissue, -Treatment, -measurement) %>%
+    tidyr::gather(key = "transcript", value = "scaled") %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::do(broom::tidy(shapiro.test(.$scaled))) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(p.adj = p.adjust(p.value, method = "holm")) %>%  # or "bonferroni", "BH"
+    dplyr::select(transcript, W = statistic, p.value, p.adj)
+  print(norm_scaled)
+  
+
+  cat(crayon::red("Quantile-Quantile plots\n"))
+  plot_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      ggpubr::ggqqplot(.x$measurement) +
+        ggplot2::ggtitle(paste("", .y$transcript))
+    })
+  ggpubr::ggarrange(plotlist = plot_list, ncol = 4, nrow = ceiling(length(plot_list) / 4))
+
+  
+  cat(crayon::red("Levene's test for homogeneity of variance across groups\n"))
+  
+  # Levene's test on measurement
+  lev_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::levene_test(measurement ~ Treatment)
+  print(lev_meas)
+  
+  # Levene's test on scaled
+  lev_scaled = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::levene_test(scaled ~ Treatment)
+  print(lev_scaled)
+  
+  cat(crayon::red("Wilcoxon effect size\n"))
+  
+  # Wilcoxon effect size on measurement
+  eff_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::wilcox_effsize(measurement ~ Treatment)
+  print(eff_meas)
+  
+  # Wilcoxon effect size on scaled
+  eff_scaled = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::wilcox_effsize(scaled ~ Treatment)
+  print(eff_scaled)
+  
+  cat(crayon::red("Cohen's d Measure of Effect Size\n"))
+  
+  # Cohen's d on measurement
+  coh_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::cohens_d(measurement ~ Treatment, paired = FALSE)
+  print(coh_meas)
+  
+  # Cohen's d on scaled
+  coh_scaled = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::cohens_d(scaled ~ Treatment, paired = FALSE)
+  print(coh_scaled)
+  
+  invisible(list(
+    p_scaled = p1,
+    p_measurement = p2,
+    shapiro_measurement = norm_meas,
+    shapiro_scaled = norm_scaled,
+    levene_measurement = lev_meas,
+    levene_scaled = lev_scaled,
+    wilcoxon_measurement = eff_meas,
+    wilcoxon_scaled = eff_scaled,
+    cohensd_measurement = coh_meas,
+    cohensd_scaled = coh_scaled
+  ))
+}
+
+
+
+```
+
+
+## test and plot
+
+```{r, test_and_plot}
+
+test_and_plot <- function(data_long_raw
+                          , myorder
+                          , pal
+                          , what
+                          , plot_gene_expression_func
+                          , groupvars = c("Treatment", "transcript")
+                          , y_scales1
+                          , y_scales2
+                          ) {
+
+  
+  mydata.long = dplyr::as_tibble(data.table::data.table(data_long_raw))
+  mydata.long$transcript = factor(mydata.long$transcript, levels = myorder)
+  mydata.long = mydata.long %>% dplyr::arrange(factor(transcript, levels = myorder))
+  
+  mydata.long.SE = summary_stats(mydata.long, measurevar = "scaled", groupvars = groupvars)
+  
+  results = dens_and_effect(mydata.long, p_colors = pal)
+  
+  cat(what, file = fr, append = TRUE, sep = "\n")
+  cat("shapiro", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(as.data.frame(results$shapiro_measurement))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("levene", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(as.data.frame(results$levene_measurement))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("wilcoxon", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(as.data.frame(results$wilcoxon_measurement))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("cohensd", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(as.data.frame(results$cohensd_measurement))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
+
+  
+  temp = perm_test_by_transcript(mydata.long, measurevar = "measurement", groupvar = "Treatment")
+  temp$transcript = rownames(temp)
+  perm = tidyr::gather(temp, contrast, perm.p, colnames(temp)[1]:colnames(temp)[ncol(temp)-1], factor_key=TRUE)
+  perm$group1 = gsub(' vs.*', '', perm$contrast)
+  perm$group2 = gsub('.* vs ', '', perm$contrast)
+  perm$perm.p.adj = p.adjust(perm$perm.p, method = 'BH')
+  perm$perm.p.adj.signif = 'ns'
+  perm$perm.p.adj.signif[perm$perm.p.adj < 0.0001] = '**'
+  perm$perm.p.adj.signif[perm$perm.p.adj < 0.001] = '**'
+  perm$perm.p.adj.signif[perm$perm.p.adj < 0.05] = '*'
+  
+  # like rstatix object
+  stat.test = perm %>%
+    dplyr::select(transcript, group1, group2, perm.p, perm.p.adj, perm.p.adj.signif) %>%
+    dplyr::rename(
+      p = perm.p,
+      p.adj = perm.p.adj,
+      p.adj.signif = perm.p.adj.signif
+    )
+  y_pos_df = mydata.long %>%
+    dplyr::group_by(transcript, Treatment) %>%
+    dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE)) %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::summarise(y.position = max(max_scaled) * 1.0)
+  stat.test = stat.test %>%
+    dplyr::left_join(y_pos_df, by = "transcript")
+  stat.test = stat.test %>%
+    dplyr::mutate(
+      xmin = as.numeric(factor(group1, levels = unique(mydata.long$Treatment))),
+      xmax = as.numeric(factor(group2, levels = unique(mydata.long$Treatment)))
+    )
+  stat.test.sig <- stat.test %>%
+    dplyr::filter(p.adj < 0.05)
+  
+  group1 =  sapply(y_scales1, function(x) {
+    s = deparse(x)
+    s_full = paste(s, collapse = " ")
+    sub('.*transcript == *"([^"]+)".*', '\\1', s_full)
+  })
+  group2 =  sapply(y_scales2, function(x) {
+    s = deparse(x)
+    s_full = paste(s, collapse = " ")
+    sub('.*transcript == *"([^"]+)".*', '\\1', s_full)
+  })
+
+
+  p1 = plot_gene_expression_func(
+    data.SE = mydata.long.SE,
+    data.long = mydata.long,
+    stat.test.sig = stat.test.sig,
+    transcripts_excl = group2,
+    facet_cols = 2,
+    color_values = pal,
+    plot_title = what,
+    y_scales = y_scales1,
+    dodge_width = 0.8
+  )
+  print(p1)
+  
+  p2 = plot_gene_expression_func(
+    data.SE = mydata.long.SE,
+    data.long = mydata.long,
+    stat.test.sig = stat.test.sig,
+    transcripts_excl = group1,
+    facet_cols = 6,
+    color_values = pal,
+    plot_title = what,
+    y_scales = y_scales2,
+    dodge_width = 0.8
+  )
+  print(p2)
+  
+  return(list(plot1 = p1, plot2 = p2, stat.test = stat.test))
+}
+
+
+
+```
+
+# Test
+
+## input
+
+```{r, input_Test}
+
+
+fp = file.path('..', "input")
+list.files(fp)
+
+
+fn = 'Table S7.xlsx'
+
+PS216 = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = 'Test',
+                            startRow = 1,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(PS216)
+PS216[, Sample.ID := NULL]
+PS216[, Genotype := NULL]
+PS216$Tissue = as.factor(trimws(PS216$Tissue))
+PS216$Treatment = factor(trimws(PS216$Treatment), levels = c("noninoculated", "inoculated"))
+
+PS218 = PS216[grep('PS-216', PS216$Strain, invert = TRUE), ]
+PS216 = PS216[grep('PS-218', PS216$Strain, invert = TRUE), ]
+PS216[, Strain := NULL]
+PS218[, Strain := NULL]
+
+```
+
+## params
+
+```{r, params_Test}
+
+groupvars = c("Tissue", "Treatment", "transcript")
+measurevar = 'measurement'
+dodge = position_dodge(width = 0.5)
+
+myorder = c("RBOHD", "PR1B", "CPI8", "CAB", "BGLU2", "HSP70", "PTI5", "13-LOX")
+
+```
+
+
+## results
+
+```{r, results_Test}
+
+shoots.216 = process_data(PS216, groupvars, measurevar, scale_treatment = "noninoculated")$shoots
+roots.216 = process_data(PS216, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+shoots.218 = process_data(PS218, groupvars, measurevar, scale_treatment = "noninoculated")$shoots
+roots.218 = process_data(PS218, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1)))
+y_scales2 = list(transcript == "RBOHD" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
+                 , transcript == "PR1B" ~ scale_y_continuous(limits = c(0,NA), breaks = seq(0, 11, 1))
+                 , transcript == "CPI8" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 1))
+                 , transcript == "CAB" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 1))
+                 , transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
+                 )
+result = test_and_plot(data_long_raw = shoots.216
+                       , myorder = myorder
+                       , pal = pal
+                       , what = "shoots 216"
+                       , plot_gene_expression_func = plot_gene_expression
+                       , groupvars = c("Treatment", "transcript")
+                       , y_scales1
+                       , y_scales2
+                       )
+res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+print(res)
+
+output_text = capture.output(paste0("Test - shoots - 216"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(res)
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+  
+
+ggsave(
+  filename = file.path(my_dir, "Test_shoots.216_1.pdf"),
+  plot = result$plot1,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(my_dir, "Test_shoots.216_2.pdf"),
+  plot = result$plot2,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+result = test_and_plot(data_long_raw = roots.216
+                       , myorder = myorder
+                       , pal = pal
+                       , what = "roots 216"
+                       , plot_gene_expression_func = plot_gene_expression
+                       , groupvars = c("Treatment", "transcript")
+                       , y_scales1
+                       , y_scales2
+                       )
+res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+print(res)
+
+output_text = capture.output(paste0("Test - roots - 216"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(res)
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+
+ggsave(
+  filename = file.path(my_dir, "Test_roots.216_1.pdf"),
+  plot = result$plot1,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(my_dir, "Test_roots.216_2.pdf"),
+  plot = result$plot2,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+result = test_and_plot(data_long_raw = shoots.218
+                       , myorder = myorder
+                       , pal = pal
+                       , what = "shoots 218"
+                       , plot_gene_expression_func = plot_gene_expression
+                       , groupvars = c("Treatment", "transcript")
+                       , y_scales1
+                       , y_scales2
+                       )
+res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+print(res)
+
+output_text = capture.output(paste0("Test - shoots - 218"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(res)
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+
+
+ggsave(
+  filename = file.path(my_dir, "Test_shoots.218_1.pdf"),
+  plot = result$plot1,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(my_dir, "Test_shoots.218_2.pdf"),
+  plot = result$plot2,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+result = test_and_plot(data_long_raw = roots.218
+                       , myorder = myorder
+                       , pal = pal
+                       , what = "roots 218"
+                       , plot_gene_expression_func = plot_gene_expression
+                       , groupvars = c("Treatment", "transcript")
+                       , y_scales1
+                       , y_scales2
+                       )
+res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+print(res)
+
+output_text = capture.output(paste0("Test - roots - 218"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(res)
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+ggsave(
+  filename = file.path(my_dir, "Test_roots.218_1.pdf"),
+  plot = result$plot1,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(my_dir, "Test_roots.218_2.pdf"),
+  plot = result$plot2,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+
+
+
+```
+
+
+```{r}
+
+
+keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr")
+all_objs = ls()
+# Objects that are functions or named in keep
+keep = c(lsf.str(), intersect(all_objs, keep))
+rm(list = setdiff(all_objs, keep))
+
+
+
+
+```
+
+
+# Exp1
+
+## input
+
+```{r, input_Exp1}
+
+
+fp = file.path('..', "input")
+list.files(fp)
+
+fn = 'Table S7.xlsx'
+
+PS218 = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = 'Exp1',
+                            startRow = 1,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(PS218)
+PS218[, Sample.ID := NULL]
+PS218[, Genotype := NULL]
+PS218[, Strain := NULL]
+PS218$Tissue = as.factor(trimws(PS218$Tissue))
+PS218$Treatment = factor(trimws(PS218$Treatment), levels = c("noninoculated", "inoculated"))
+
+table(PS218$Time)
+
+```
+
+## params
+
+```{r, params_Exp1}
+
+groupvars = c("Tissue", "Treatment", "transcript")
+measurevar = 'measurement'
+dodge = position_dodge(width = 0.5)
+
+myorder = c("BGLU2", "HSP70", "PTI5", "13-LOX")
+
+```
+
+
+## results
+
+```{r, results_Exp1}
+
+run_analysis_for_time <- function(data
+                                  , time_point
+                                  , myorder
+                                  , pal
+                                  , groupvars
+                                  , measurevar
+                                  , y_scales1
+                                  , y_scales2
+                                  , y_scales3
+                                  , y_scales4
+                                  , my_dir
+                                  , plot_gene_expression
+                                  , test_and_plot) {
+
+  temp = data[data$Time == time_point, ]
+  temp[, Time := NULL]
+
+  shoots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$shoots
+  roots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+  
+
+  result_shoots = test_and_plot(data_long_raw = shoots,
+                                myorder = myorder,
+                                pal = pal,
+                                what = paste("shoots", time_point),
+                                plot_gene_expression_func = plot_gene_expression,
+                                groupvars = groupvars,
+                                y_scales1 = y_scales1,
+                                y_scales2 = y_scales2)
+  res = result_shoots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_shoots$stat.test))]
+  print(res)
+  
+  output_text = capture.output(paste0("Exp 1 shoots - ", time_point))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(res)
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
+  
+  
+  ggsave(filename = file.path(my_dir, paste0("Exp1_shoots.", gsub(" ", "", time_point), "_1.pdf")),
+         plot = result_shoots$plot1, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  ggsave(filename = file.path(my_dir, paste0("Exp1_shoots.", gsub(" ", "", time_point), "_2.pdf")),
+         plot = result_shoots$plot2, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  
+
+  result_roots = test_and_plot(data_long_raw = roots,
+                               myorder = myorder,
+                               pal = pal,
+                               what = paste("roots", time_point),
+                               plot_gene_expression_func = plot_gene_expression,
+                               groupvars = groupvars,
+                               y_scales1 = y_scales3,
+                               y_scales2 = y_scales4)
+  res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
+  print(res)
+  
+  output_text = capture.output(paste0("Exp 1 roots - ", time_point))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(res)
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
+  
+  
+  ggsave(filename = file.path(my_dir, paste0("Exp1_roots.", gsub(" ", ".", time_point), "_1.pdf")),
+         plot = result_roots$plot1, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  ggsave(filename = file.path(my_dir, paste0("Exp1_roots.", gsub(" ", ".", time_point), "_2.pdf")),
+         plot = result_roots$plot2, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  
+
+  list(shoots = result_shoots, roots = result_roots)
+}
+
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1)))
+y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 )
+y_scales3 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1)))
+y_scales4 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 )
+
+results_2h = run_analysis_for_time(data = PS218
+                                   , time_point = "2 h"
+                                   , myorder
+                                   , pal
+                                   , groupvars
+                                   , measurevar
+                                   , y_scales1
+                                   , y_scales2
+                                   , y_scales3
+                                   , y_scales4
+                                   , my_dir
+                                   , plot_gene_expression
+                                   , test_and_plot)
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 5), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 5), breaks = seq(0, 11, 1)))
+results_4h = run_analysis_for_time(data = PS218
+                                   , time_point = "4 h"
+                                   , myorder
+                                   , pal
+                                   , groupvars
+                                   , measurevar
+                                   , y_scales1
+                                   , y_scales2
+                                   , y_scales3
+                                   , y_scales4
+                                   , my_dir
+                                   , plot_gene_expression
+                                   , test_and_plot)
+
+
+results_6h = run_analysis_for_time(data = PS218
+                                   , time_point = "6 h"
+                                   , myorder
+                                   , pal
+                                   , groupvars
+                                   , measurevar
+                                   , y_scales1
+                                   , y_scales2
+                                   , y_scales3
+                                   , y_scales4
+                                   , my_dir
+                                   , plot_gene_expression
+                                   , test_and_plot)
+
+```
+
+
+
+```{r}
+
+
+keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr")
+all_objs = ls()
+# Objects that are functions or named in keep
+keep = c(lsf.str(), intersect(all_objs, keep))
+rm(list = setdiff(all_objs, keep))
+
+
+
+
+```
+
+
+# Exp2
+
+## input
+
+```{r, input_Exp2}
+
+
+fp = file.path('..', "input")
+list.files(fp)
+
+fn = 'Table S7.xlsx'
+
+PS218 = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = 'Exp2',
+                            startRow = 1,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(PS218)
+PS218[, Sample.ID := NULL]
+PS218[, Genotype := NULL]
+PS218[, Strain := NULL]
+PS218$Tissue = as.factor(trimws(PS218$Tissue))
+PS218$Treatment = factor(trimws(PS218$Treatment), levels = c("noninoculated", "inoculated"))
+
+table(PS218$Time)
+
+```
+
+## params
+
+```{r, params_Exp2}
+
+groupvars = c("Tissue", "Treatment", "transcript")
+measurevar = 'measurement'
+dodge = position_dodge(width = 0.5)
+
+myorder = c("BGLU2", "HSP70", "PTI5", "13-LOX")
+
+```
+
+
+## results
+
+```{r, results_Exp2}
+
+run_analysis_for_time <- function(data
+                                  , time_point
+                                  , myorder
+                                  , pal
+                                  , groupvars
+                                  , measurevar
+                                  , y_scales1
+                                  , y_scales2
+                                  , my_dir
+                                  , plot_gene_expression
+                                  , test_and_plot
+                                  ) {
+
+  temp = data[data$Time == time_point, ]
+  temp[, Time := NULL]
+
+  roots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+  
+
+  result_roots = test_and_plot(data_long_raw = roots,
+                               myorder = myorder,
+                               pal = pal,
+                               what = paste("roots", time_point),
+                               plot_gene_expression_func = plot_gene_expression,
+                               groupvars = groupvars,
+                               y_scales1,
+                               y_scales2)
+  res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
+  print(res)
+  
+  output_text = capture.output(paste0("Exp 2 roots - ", time_point))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(res)
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
+
+
+  
+  ggsave(filename = file.path(my_dir, paste0("Exp2_roots.", gsub(" ", ".", time_point), "_1.pdf")),
+         plot = result_roots$plot1, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  ggsave(filename = file.path(my_dir, paste0("Exp2_roots.", gsub(" ", ".", time_point), "_2.pdf")),
+         plot = result_roots$plot2, device = pdf, width = 3, height = 8, units = "in", dpi = 900)
+  
+
+  list(roots = result_roots)
+}
+
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1)))
+y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 )
+
+results_1min = run_analysis_for_time(data = PS218
+                                     , time_point = "1 min"
+                                     , myorder
+                                     , pal
+                                     , groupvars
+                                     , measurevar
+                                     , y_scales1
+                                     , y_scales2
+                                     , my_dir
+                                     , plot_gene_expression
+                                     , test_and_plot
+                                     )
+
+results_15min = run_analysis_for_time(data = PS218
+                                     , time_point = "15 min"
+                                     , myorder
+                                     , pal
+                                     , groupvars
+                                     , measurevar
+                                     , y_scales1
+                                     , y_scales2
+                                     , my_dir
+                                     , plot_gene_expression
+                                     , test_and_plot
+                                     )
+
+results_30min = run_analysis_for_time(data = PS218
+                                     , time_point = "30 min"
+                                     , myorder
+                                     , pal
+                                     , groupvars
+                                     , measurevar
+                                     , y_scales1
+                                     , y_scales2
+                                     , my_dir
+                                     , plot_gene_expression
+                                     , test_and_plot
+                                     )
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 8), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 8), breaks = seq(0, 11, 1)))
+y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 )
+
+
+results_1h = run_analysis_for_time(data = PS218
+                                     , time_point = "1 h"
+                                     , myorder
+                                     , pal
+                                     , groupvars
+                                     , measurevar
+                                     , y_scales1
+                                     , y_scales2
+                                     , my_dir
+                                     , plot_gene_expression
+                                     , test_and_plot
+                                     )
+
+y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 12), breaks = seq(0, 11, 1))
+                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 12), breaks = seq(0, 11, 1)))
+y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
+                 )
+
+results_2h = run_analysis_for_time(data = PS218
+                                     , time_point = "2 h"
+                                     , myorder
+                                     , pal
+                                     , groupvars
+                                     , measurevar
+                                     , y_scales1
+                                     , y_scales2
+                                     , my_dir
+                                     , plot_gene_expression
+                                     , test_and_plot
+                                     )
+
+```
+
+
+
+```{r}
+
+sessionInfo()
+
+```
+
+
