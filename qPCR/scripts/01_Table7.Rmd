@@ -16,6 +16,8 @@ output:
     number_sections: yes
     theme: flatly
     highlight: tango
+editor_options: 
+  chunk_output_type: console
 ---
 ```{r setup, include=FALSE}
 
@@ -215,7 +217,7 @@ plot_gene_expression <- function(data.SE
   stat.test.filtered = NULL
   if (nrow(stat.test.sig) > 0) stat.test.filtered = dplyr::filter(stat.test.sig, !transcript %in% transcripts_excl)
   
-  p = ggplot(data.SE.filtered, aes(x = Treatment, y = mean), colour = "black") +
+  p = ggplot(data.SE.filtered, aes(x = Treatment, y = mean)) +
     geom_point(size=3.5, shape = 22, position = dodge, aes(fill = Treatment), colour = "black") +
     geom_point(data = data.long.filtered, aes(x = Treatment, y = scaled, fill = Treatment), colour = "black",
                size = 2.0, shape = 21,
@@ -282,7 +284,7 @@ plot_gene_expression <- function(data.SE
       y.position = "y.position",
       hide.ns = FALSE,
       tip.length = 0.01,
-      step.increase = 0.075,
+      step.increase = 0.0,
       inherit.aes = FALSE 
     )
     
@@ -298,7 +300,8 @@ plot_gene_expression <- function(data.SE
 
 ## effects
 
-**Denote:** PR1B has LOQ values
+- **Denote:** LOQ values skew distributions
+
 
 ```{r, effects}
 
@@ -327,42 +330,97 @@ dens_and_effect <- function(mydata.long, p_colors) {
   print(p2)
   
   
-  cat(crayon::red('Shapiro-Wilk Normality Test\n'))
+  cat(crayon::red('####  ####  \nDistribution tests\n####  ####  \n'))
   
-  # Shapiro-Wilk normality test on measurement
-  norm_meas = mydata.long %>%
-    dplyr::select(-Tissue, -Treatment, -scaled) %>%
-    tidyr::gather(key = "transcript", value = "measurement") %>%
+    distr_tests = mydata.long %>%
     dplyr::group_by(transcript) %>%
-    dplyr::do(broom::tidy(shapiro.test(.$measurement))) %>%
+    dplyr::group_map(~ {
+      x = na.omit(.x$measurement)
+      if (length(x) < 3) {
+        return(tibble::tibble(
+          Shapiro_Wilk = NA_real_,
+          Anderson_Darling = NA_real_,
+          Lilliefors_KS = NA_real_,
+          Jarque_Bera = NA_real_,
+          DAgostino_Skewness = NA_real_,
+          n = length(x),
+          transcript = .y$transcript
+        ))
+      }
+      tibble::tibble(
+        Shapiro_Wilk = tryCatch(shapiro.test(x)$p.value, error = function(e) NA_real_),
+        Anderson_Darling = tryCatch(nortest::ad.test(x)$p.value, error = function(e) NA_real_),
+        Lilliefors_KS = tryCatch(nortest::lillie.test(x)$p.value, error = function(e) NA_real_),
+        Jarque_Bera = tryCatch(tseries::jarque.bera.test(x)$p.value, error = function(e) NA_real_),
+        DAgostino_Skewness = tryCatch(moments::agostino.test(x)$p.value, error = function(e) NA_real_),
+        n = length(x),
+        transcript = .y$transcript
+      )
+    }) %>%
+    dplyr::bind_rows() %>%
     dplyr::ungroup() %>%
-    dplyr::mutate(p.adj = p.adjust(p.value, method = "holm")) %>%  # or "bonferroni", "BH"
-    dplyr::select(transcript, W = statistic, p.value, p.adj)
-  print(norm_meas)
-  
-  # Shapiro-Wilk normality test on scaled
-  norm_scaled = mydata.long %>%
-    dplyr::select(-Tissue, -Treatment, -measurement) %>%
-    tidyr::gather(key = "transcript", value = "scaled") %>%
-    dplyr::group_by(transcript) %>%
-    dplyr::do(broom::tidy(shapiro.test(.$scaled))) %>%
-    dplyr::ungroup() %>%
-    dplyr::mutate(p.adj = p.adjust(p.value, method = "holm")) %>%  # or "bonferroni", "BH"
-    dplyr::select(transcript, W = statistic, p.value, p.adj)
-  print(norm_scaled)
+    dplyr::mutate(
+      Shapiro_Wilk_BH = stats::p.adjust(Shapiro_Wilk, method = "BH"),
+      Anderson_Darling_BH = stats::p.adjust(Anderson_Darling, method = "BH"),
+      Lilliefors_KS_BH = stats::p.adjust(Lilliefors_KS, method = "BH"),
+      Jarque_Bera_BH = stats::p.adjust(Jarque_Bera, method = "BH"),
+      DAgostino_Skewness_BH = stats::p.adjust(DAgostino_Skewness, method = "BH")
+    )
+
   
 
-  cat(crayon::red("Quantile-Quantile plots\n"))
-  plot_list = mydata.long %>%
+  combined_results = distr_tests[grep("^n$|transcript|_BH", colnames(distr_tests))]
+
+  
+  
+
+  cat(crayon::red("####  ####  \nQuantile-Quantile plots\n####  ####  \n"))
+  qq_plot_list = mydata.long %>%
     dplyr::group_by(transcript) %>%
     dplyr::group_map(~ {
       ggpubr::ggqqplot(.x$measurement) +
-        ggplot2::ggtitle(paste("", .y$transcript))
+        ggplot2::ggtitle(paste("Raw:", .y$transcript))
     })
-  ggpubr::ggarrange(plotlist = plot_list, ncol = 4, nrow = ceiling(length(plot_list) / 4))
+  
+  resid_qq_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      model = lm(measurement ~ Treatment, data = .x)
+      resids = resid(model)
+      ggpubr::ggqqplot(resids) +
+        ggplot2::ggtitle(paste("Resid:", .y$transcript))
+    })
+  
+
+  resid_density_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      model = lm(measurement ~ Treatment, data = .x)
+      resids = scale(resid(model))  # standardize residuals
+      df = data.frame(resids = as.numeric(resids))
+      ggplot(df, aes(x = resids)) +
+        geom_density(fill = "steelblue", alpha = 0.6) +
+        stat_function(fun = dnorm, color = "red", linetype = "dashed") +
+        ggtitle(paste("Residuals:", .y$transcript)) +
+        theme_minimal()
+    })
+  
+  # Arrange and print all plots
+  qq_arranged = ggpubr::ggarrange(plotlist = qq_plot_list, ncol = 4, nrow = ceiling(length(qq_plot_list) / 4))
+  resid_qq_arranged = ggpubr::ggarrange(plotlist = resid_qq_list, ncol = 4, nrow = ceiling(length(resid_qq_list) / 4))
+  resid_hist_arranged = ggpubr::ggarrange(plotlist = resid_density_list, ncol = 4, nrow = ceiling(length(resid_density_list) / 4))
+  
+  print(qq_arranged)
+  print(resid_qq_arranged)
+  print(resid_hist_arranged)
+  
+  # Return invisibly
+  invisible(list(qq = qq_arranged, resid_qq = resid_qq_arranged, resid_hist = resid_hist_arranged))
+
+
 
   
-  cat(crayon::red("Levene's test for homogeneity of variance across groups\n"))
+  cat(crayon::red("####  ####  \nLevene's test for homogeneity of variance across groups\n####  ####  \n"))
   
   # Levene's test on measurement
   lev_meas = mydata.long %>%
@@ -376,7 +434,7 @@ dens_and_effect <- function(mydata.long, p_colors) {
     rstatix::levene_test(scaled ~ Treatment)
   print(lev_scaled)
   
-  cat(crayon::red("Wilcoxon effect size\n"))
+  cat(crayon::red("####  ####  \nWilcoxon effect size\n####  ####  \n"))
   
   # Wilcoxon effect size on measurement
   eff_meas = mydata.long %>%
@@ -390,7 +448,7 @@ dens_and_effect <- function(mydata.long, p_colors) {
     rstatix::wilcox_effsize(scaled ~ Treatment)
   print(eff_scaled)
   
-  cat(crayon::red("Cohen's d Measure of Effect Size\n"))
+  cat(crayon::red("####  ####  \nCohen's d Measure of Effect Size\n####  ####  \n"))
   
   # Cohen's d on measurement
   coh_meas = mydata.long %>%
@@ -407,8 +465,7 @@ dens_and_effect <- function(mydata.long, p_colors) {
   invisible(list(
     p_scaled = p1,
     p_measurement = p2,
-    shapiro_measurement = norm_meas,
-    shapiro_scaled = norm_scaled,
+    distr_measurement = combined_results,
     levene_measurement = lev_meas,
     levene_scaled = lev_scaled,
     wilcoxon_measurement = eff_meas,
@@ -417,8 +474,6 @@ dens_and_effect <- function(mydata.long, p_colors) {
     cohensd_scaled = coh_scaled
   ))
 }
-
-
 
 ```
 
@@ -447,17 +502,20 @@ test_and_plot <- function(data_long_raw
   results = dens_and_effect(mydata.long, p_colors = pal)
   
   cat(what, file = fr, append = TRUE, sep = "\n")
-  cat("shapiro", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(as.data.frame(results$shapiro_measurement))
+  cat("\nDistribution tests", file = fr, append = TRUE, sep = "\n")
+  # output_text = capture.output(as.data.frame(results$distr_measurement))
+  output_text = apply(results$distr_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  cat("levene", file = fr, append = TRUE, sep = "\n")
+  cat("\nLevene's test for homogeneity of variance across groups", file = fr, append = TRUE, sep = "\n")
   output_text = capture.output(as.data.frame(results$levene_measurement))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  cat("wilcoxon", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(as.data.frame(results$wilcoxon_measurement))
+  cat("\nWilcoxon effect size", file = fr, append = TRUE, sep = "\n")
+  # output_text = capture.output(as.data.frame(results$wilcoxon_measurement))
+  output_text = apply(results$wilcoxon_measurement, 1, function(row) paste(row, collapse = "\t")) # do  not split in multiple lines
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  cat("cohensd", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(as.data.frame(results$cohensd_measurement))
+  cat("\nCohen's d Measure of Effect Size", file = fr, append = TRUE, sep = "\n")
+  # output_text = capture.output(as.data.frame(results$cohensd_measurement))
+  output_text = apply(results$cohensd_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
 
@@ -474,6 +532,28 @@ test_and_plot <- function(data_long_raw
   perm$perm.p.adj.signif[perm$perm.p.adj < 0.05] = '*'
   
   # like rstatix object
+  # stat.test = perm %>%
+  #   dplyr::select(transcript, group1, group2, perm.p, perm.p.adj, perm.p.adj.signif) %>%
+  #   dplyr::rename(
+  #     p = perm.p,
+  #     p.adj = perm.p.adj,
+  #     p.adj.signif = perm.p.adj.signif
+  #   )
+  # y_pos_df = mydata.long %>%
+  #   dplyr::group_by(transcript, Treatment) %>%
+  #   dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE)) %>%
+  #   dplyr::group_by(transcript) %>%
+  #   dplyr::summarise(y.position = max(max_scaled) * 1.0)
+  # stat.test = stat.test %>%
+  #   dplyr::left_join(y_pos_df, by = "transcript")
+  # stat.test = stat.test %>%
+  #   dplyr::mutate(
+  #     xmin = as.numeric(factor(group1, levels = unique(mydata.long$Treatment))),
+  #     xmax = as.numeric(factor(group2, levels = unique(mydata.long$Treatment)))
+  #   )
+  # stat.test.sig <- stat.test %>%
+  #   dplyr::filter(p.adj < 0.05)
+  # Prepare stat.test object
   stat.test = perm %>%
     dplyr::select(transcript, group1, group2, perm.p, perm.p.adj, perm.p.adj.signif) %>%
     dplyr::rename(
@@ -481,20 +561,60 @@ test_and_plot <- function(data_long_raw
       p.adj = perm.p.adj,
       p.adj.signif = perm.p.adj.signif
     )
-  y_pos_df = mydata.long %>%
-    dplyr::group_by(transcript, Treatment) %>%
-    dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE)) %>%
+  
+  # Compute y-position using both mean ± se and scaled values
+  y_pos_df = mydata.long.SE %>%
     dplyr::group_by(transcript) %>%
-    dplyr::summarise(y.position = max(max_scaled) * 1.0)
-  stat.test = stat.test %>%
-    dplyr::left_join(y_pos_df, by = "transcript")
-  stat.test = stat.test %>%
+    dplyr::summarise(
+      max_mean_se = max(mean + se, na.rm = TRUE),
+      min_mean_se = min(mean - se, na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    dplyr::left_join(
+      mydata.long %>%
+        dplyr::group_by(transcript) %>%
+        dplyr::summarise(
+          max_scaled = max(scaled, na.rm = TRUE),
+          min_scaled = min(scaled, na.rm = TRUE),
+          .groups = "drop"
+        ),
+      by = "transcript"
+    ) %>%
     dplyr::mutate(
-      xmin = as.numeric(factor(group1, levels = unique(mydata.long$Treatment))),
-      xmax = as.numeric(factor(group2, levels = unique(mydata.long$Treatment)))
+      plot_max = pmax(max_mean_se, max_scaled, na.rm = TRUE),
+      plot_min = pmin(min_mean_se, min_scaled, na.rm = TRUE),
+      plot_range = pmax(plot_max - plot_min, 1e-6)
+    ) %>%
+    dplyr::select(transcript, plot_max, plot_range)
+  
+  # Map group names to numeric x positions
+  pos_map = mydata.long %>%
+    dplyr::distinct(transcript, Treatment) %>%
+    dplyr::mutate(xpos = as.numeric(factor(Treatment, levels = levels(mydata.long$Treatment))))
+  
+  # Attach y-position and x-position info to stat.test
+  stat.test = stat.test %>%
+    dplyr::left_join(y_pos_df, by = "transcript") %>%
+    dplyr::left_join(pos_map %>% dplyr::rename(group1 = Treatment, xmin = xpos), by = c("transcript", "group1")) %>%
+    dplyr::left_join(pos_map %>% dplyr::rename(group2 = Treatment, xmax = xpos), by = c("transcript", "group2")) %>%
+    dplyr::mutate(
+      xmin = dplyr::if_else(is.na(xmin), as.numeric(factor(group1, levels = levels(mydata.long$Treatment))), xmin),
+      xmax = dplyr::if_else(is.na(xmax), as.numeric(factor(group2, levels = levels(mydata.long$Treatment))), xmax)
     )
-  stat.test.sig <- stat.test %>%
-    dplyr::filter(p.adj < 0.05)
+  
+  # Compute distinct y.position per comparison for significant results
+  stat.test.sig = stat.test %>%
+    dplyr::filter(!is.na(p.adj) & p.adj <= 0.05) %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::arrange(xmin, xmax, .by_group = TRUE) %>%
+    dplyr::mutate(
+      base_y = plot_max + 0.03 * plot_range,
+      inc = 0.05 * plot_range,
+      y.position = base_y + (dplyr::row_number() - 1) * inc
+    ) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(transcript, group1, group2, p.adj, p.adj.signif, y.position, xmin, xmax)
+
   
   group1 =  sapply(y_scales1, function(x) {
     s = deparse(x)
@@ -592,6 +712,35 @@ measurevar = 'measurement'
 dodge = position_dodge(width = 0.5)
 
 myorder = c("RBOHD", "PR1B", "CPI8", "CAB", "BGLU2", "HSP70", "PTI5", "13-LOX")
+group1_names = c("PTI5", "13-LOX")
+
+make_scale_params <- function(maxval) {
+  upper = maxval + 0.1 # 0.5
+  step = dplyr::case_when(
+    maxval >= 50 ~ 25,
+    maxval >= 30 ~ 10,
+    maxval >= 15 ~ 5,
+    maxval >= 10 ~ 2,
+    maxval >  2  ~ 1,
+    TRUE         ~ 0.5
+  )
+  upper_round = ceiling(upper / step) * step
+  breaks = seq(0, upper_round, by = step)
+  list(limits = c(0, upper_round), breaks = breaks)
+}
+
+build_y_scales_for <- function(names_vec, max_per_transcript) {
+  max_per_transcript %>%
+    dplyr::filter(transcript %in% names_vec) %>%
+    purrr::pmap(function(transcript, max_scaled) {
+      params = make_scale_params(max_scaled)
+      lhs = rlang::expr(transcript == !!transcript)
+      rhs = rlang::expr(ggplot2::scale_y_continuous(limits = !!params$limits, breaks = !!params$breaks))
+      rlang::new_formula(lhs, rhs)
+    })
+}
+
+
 
 ```
 
@@ -606,15 +755,23 @@ shoots.218 = process_data(PS218, groupvars, measurevar, scale_treatment = "nonin
 roots.218 = process_data(PS218, groupvars, measurevar, scale_treatment = "noninoculated")$roots
 
 
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1)))
-y_scales2 = list(transcript == "RBOHD" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
-                 , transcript == "PR1B" ~ scale_y_continuous(limits = c(0,NA), breaks = seq(0, 11, 1))
-                 , transcript == "CPI8" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 1))
-                 , transcript == "CAB" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 1))
-                 , transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, NA), breaks = seq(0, 11, 0.5))
-                 )
+cat("Test", file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+```
+
+
+### shoots 216
+
+```{r, test_shoots.216}
+
+max_per_transcript = shoots.216 %>%
+  dplyr::group_by(transcript) %>%
+  dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+group2_names = setdiff(max_per_transcript$transcript, group1_names)
+y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+
 result = test_and_plot(data_long_raw = shoots.216
                        , myorder = myorder
                        , pal = pal
@@ -625,11 +782,12 @@ result = test_and_plot(data_long_raw = shoots.216
                        , y_scales2
                        )
 res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
-print(res)
+print(res[res$p.adj.signif != 'ns', ])
 
-output_text = capture.output(paste0("Test - shoots - 216"))
+cat("", file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(paste0("permutational t-test"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(res)
+output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
   
@@ -662,7 +820,19 @@ ggsave(
   bg = NULL
 )
 
+```
 
+
+### roots 216
+
+```{r, roots.216}
+
+max_per_transcript = roots.216 %>%
+  dplyr::group_by(transcript) %>%
+  dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+group2_names = setdiff(max_per_transcript$transcript, group1_names)
+y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
 
 result = test_and_plot(data_long_raw = roots.216
                        , myorder = myorder
@@ -674,11 +844,12 @@ result = test_and_plot(data_long_raw = roots.216
                        , y_scales2
                        )
 res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
-print(res)
+print(res[res$p.adj.signif != 'ns', ])
 
-output_text = capture.output(paste0("Test - roots - 216"))
+cat("", file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(paste0("permutational t-test"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(res)
+output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
@@ -711,7 +882,18 @@ ggsave(
   bg = NULL
 )
 
+```
 
+### shoots 218
+
+```{r, shoots.218}
+
+max_per_transcript = shoots.218 %>%
+  dplyr::group_by(transcript) %>%
+  dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+group2_names = setdiff(max_per_transcript$transcript, group1_names)
+y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
 
 result = test_and_plot(data_long_raw = shoots.218
                        , myorder = myorder
@@ -723,11 +905,12 @@ result = test_and_plot(data_long_raw = shoots.218
                        , y_scales2
                        )
 res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
-print(res)
+print(res[res$p.adj.signif != 'ns', ])
 
-output_text = capture.output(paste0("Test - shoots - 218"))
+cat("", file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(paste0("permutational t-test"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(res)
+output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
@@ -762,6 +945,19 @@ ggsave(
 )
 
 
+```
+
+### roots 218
+
+```{r, roots.218}
+
+max_per_transcript = roots.218 %>%
+  dplyr::group_by(transcript) %>%
+  dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+group2_names = setdiff(max_per_transcript$transcript, group1_names)
+y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+
 result = test_and_plot(data_long_raw = roots.218
                        , myorder = myorder
                        , pal = pal
@@ -772,11 +968,12 @@ result = test_and_plot(data_long_raw = roots.218
                        , y_scales2
                        )
 res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
-print(res)
+print(res[res$p.adj.signif != 'ns', ])
 
-output_text = capture.output(paste0("Test - roots - 218"))
+cat("", file = fr, append = TRUE, sep = "\n")
+output_text = capture.output(paste0("permutational t-test"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(res)
+output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
@@ -819,7 +1016,7 @@ ggsave(
 ```{r}
 
 
-keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr")
+keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr", "group1_names")
 all_objs = ls()
 # Objects that are functions or named in keep
 keep = c(lsf.str(), intersect(all_objs, keep))
@@ -880,6 +1077,7 @@ dodge = position_dodge(width = 0.5)
 
 myorder = c("BGLU2", "HSP70", "PTI5", "13-LOX")
 
+
 ```
 
 
@@ -887,16 +1085,16 @@ myorder = c("BGLU2", "HSP70", "PTI5", "13-LOX")
 
 ```{r, results_Exp1}
 
+cat("EXP1", file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+
 run_analysis_for_time <- function(data
                                   , time_point
                                   , myorder
                                   , pal
                                   , groupvars
                                   , measurevar
-                                  , y_scales1
-                                  , y_scales2
-                                  , y_scales3
-                                  , y_scales4
                                   , my_dir
                                   , plot_gene_expression
                                   , test_and_plot) {
@@ -906,6 +1104,20 @@ run_analysis_for_time <- function(data
 
   shoots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$shoots
   roots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+  
+  max_per_transcript = shoots %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+  group2_names = setdiff(max_per_transcript$transcript, group1_names)
+  y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+  y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+  max_per_transcript = roots %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+  y_scales3 = build_y_scales_for(group1_names, max_per_transcript)
+  y_scales4 = build_y_scales_for(group2_names, max_per_transcript)
+
+
   
 
   result_shoots = test_and_plot(data_long_raw = shoots,
@@ -917,11 +1129,12 @@ run_analysis_for_time <- function(data
                                 y_scales1 = y_scales1,
                                 y_scales2 = y_scales2)
   res = result_shoots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_shoots$stat.test))]
-  print(res)
+  print(res[res$p.adj.signif != 'ns', ])
   
-  output_text = capture.output(paste0("Exp 1 shoots - ", time_point))
+  cat("", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(paste0("permutational t-test"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(res)
+  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
   
@@ -941,11 +1154,12 @@ run_analysis_for_time <- function(data
                                y_scales1 = y_scales3,
                                y_scales2 = y_scales4)
   res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
-  print(res)
+  print(res[res$p.adj.signif != 'ns', ])
   
-  output_text = capture.output(paste0("Exp 1 roots - ", time_point))
+  cat("", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(paste0("permutational t-test"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(res)
+  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
   
@@ -960,43 +1174,22 @@ run_analysis_for_time <- function(data
 }
 
 
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1)))
-y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 )
-y_scales3 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 11), breaks = seq(0, 11, 1)))
-y_scales4 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 )
-
 results_2h = run_analysis_for_time(data = PS218
                                    , time_point = "2 h"
                                    , myorder
                                    , pal
                                    , groupvars
                                    , measurevar
-                                   , y_scales1
-                                   , y_scales2
-                                   , y_scales3
-                                   , y_scales4
                                    , my_dir
                                    , plot_gene_expression
                                    , test_and_plot)
 
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 5), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 5), breaks = seq(0, 11, 1)))
 results_4h = run_analysis_for_time(data = PS218
                                    , time_point = "4 h"
                                    , myorder
                                    , pal
                                    , groupvars
                                    , measurevar
-                                   , y_scales1
-                                   , y_scales2
-                                   , y_scales3
-                                   , y_scales4
                                    , my_dir
                                    , plot_gene_expression
                                    , test_and_plot)
@@ -1008,10 +1201,6 @@ results_6h = run_analysis_for_time(data = PS218
                                    , pal
                                    , groupvars
                                    , measurevar
-                                   , y_scales1
-                                   , y_scales2
-                                   , y_scales3
-                                   , y_scales4
                                    , my_dir
                                    , plot_gene_expression
                                    , test_and_plot)
@@ -1023,7 +1212,7 @@ results_6h = run_analysis_for_time(data = PS218
 ```{r}
 
 
-keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr")
+keep = c("magrittr", "ggplot2", "%!in%", "pal", "my_dir", "fr", "group1_names")
 all_objs = ls()
 # Objects that are functions or named in keep
 keep = c(lsf.str(), intersect(all_objs, keep))
@@ -1084,6 +1273,10 @@ dodge = position_dodge(width = 0.5)
 
 myorder = c("BGLU2", "HSP70", "PTI5", "13-LOX")
 
+cat("EXP2", file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+
 ```
 
 
@@ -1109,6 +1302,14 @@ run_analysis_for_time <- function(data
 
   roots = process_data(temp, groupvars, measurevar, scale_treatment = "noninoculated")$roots
   
+  max_per_transcript = roots %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+  group2_names = setdiff(max_per_transcript$transcript, group1_names)
+  y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+  y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+  
+  
 
   result_roots = test_and_plot(data_long_raw = roots,
                                myorder = myorder,
@@ -1119,11 +1320,12 @@ run_analysis_for_time <- function(data
                                y_scales1,
                                y_scales2)
   res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
-  print(res)
+  print(res[res$p.adj.signif != 'ns', ])
   
-  output_text = capture.output(paste0("Exp 2 roots - ", time_point))
+  cat("", file = fr, append = TRUE, sep = "\n")
+  output_text = capture.output(paste0("permutational t-test"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(res)
+  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
 
@@ -1139,11 +1341,6 @@ run_analysis_for_time <- function(data
 }
 
 
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 1)))
-y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 )
 
 results_1min = run_analysis_for_time(data = PS218
                                      , time_point = "1 min"
@@ -1184,13 +1381,6 @@ results_30min = run_analysis_for_time(data = PS218
                                      , test_and_plot
                                      )
 
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 8), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 8), breaks = seq(0, 11, 1)))
-y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 )
-
-
 results_1h = run_analysis_for_time(data = PS218
                                      , time_point = "1 h"
                                      , myorder
@@ -1203,12 +1393,6 @@ results_1h = run_analysis_for_time(data = PS218
                                      , plot_gene_expression
                                      , test_and_plot
                                      )
-
-y_scales1 = list(transcript == "PTI5" ~ scale_y_continuous(limits = c(0, 12), breaks = seq(0, 11, 1))
-                 , transcript == "13-LOX" ~ scale_y_continuous(limits = c(0, 12), breaks = seq(0, 11, 1)))
-y_scales2 = list(transcript == "BGLU2" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 , transcript == "HSP70" ~ scale_y_continuous(limits = c(0, 3), breaks = seq(0, 11, 0.5))
-                 )
 
 results_2h = run_analysis_for_time(data = PS218
                                      , time_point = "2 h"

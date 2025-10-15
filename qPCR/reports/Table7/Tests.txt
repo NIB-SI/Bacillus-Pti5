@@ -1,15 +1,18 @@
+Test
+
 shoots 216
-shapiro
-  transcript         W      p.value       p.adj
-1      RBOHD 0.9470859 0.6818333877 1.000000000
-2       PR1B 0.6005045 0.0001611796 0.001289437
-3       CPI8 0.9181101 0.4147165808 1.000000000
-4        CAB 0.9533578 0.7449857067 1.000000000
-5      BGLU2 0.9304559 0.5202341030 1.000000000
-6      HSP70 0.9620574 0.8294562408 1.000000000
-7       PTI5 0.8793362 0.1855950204 1.000000000
-8     13-LOX 0.7904805 0.0226190743 0.158333520
-levene
+
+Distribution tests
+8	RBOHD	0.829456241	0.7486866	0.804322933	0.7886734	0.645231451
+8	PR1B	0.001289437	0.0012488	0.008127695	0.1553993	0.008771794
+8	CPI8	0.829433162	0.7486866	0.804322933	0.7886734	0.645231451
+8	CAB	0.829456241	0.7486866	0.804322933	0.7886734	0.431699901
+8	BGLU2	0.829456241	0.7486866	0.804322933	0.7886734	0.431699901
+8	HSP70	0.829456241	0.7486866	0.804322933	0.7886734	0.579030751
+8	PTI5	0.494920055	0.4272378	0.264369079	0.7886734	0.645231451
+8	13-LOX	0.090476297	0.1082900	0.130837773	0.7886734	0.209138561
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2   statistic         p
 1      RBOHD   1   6 0.181159968 0.6852224
 2       PR1B   1   6 0.477863234 0.5152333
@@ -19,50 +22,54 @@ levene
 6      HSP70   1   6 0.013762377 0.9104404
 7       PTI5   1   6 1.686972044 0.2416796
 8     13-LOX   1   6 2.611523510 0.1572171
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.1020621      RBOHD  4  4     small
-2 measurement noninoculated inoculated 0.3061862       PR1B  4  4  moderate
-3 measurement noninoculated inoculated 0.5103104       CPI8  4  4     large
-4 measurement noninoculated inoculated 0.1020621        CAB  4  4     small
-5 measurement noninoculated inoculated 0.6123724      BGLU2  4  4     large
-6 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-7 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-8 measurement noninoculated inoculated 0.7144345     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated -0.2693135      RBOHD  4  4     small
-2 measurement noninoculated inoculated -0.6956236       PR1B  4  4  moderate
-3 measurement noninoculated inoculated -1.2124563       CPI8  4  4     large
-4 measurement noninoculated inoculated -0.4246189        CAB  4  4     small
-5 measurement noninoculated inoculated -1.4433514      BGLU2  4  4     large
-6 measurement noninoculated inoculated -0.3887531      HSP70  4  4     small
-7 measurement noninoculated inoculated -4.4459633       PTI5  4  4     large
-8 measurement noninoculated inoculated -1.6767944     13-LOX  4  4     large
 
-[1] "Test - shoots - 216"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      RBOHD noninoculated inoculated 0.54285714 0.5857143           ns
-2       PR1B noninoculated inoculated 0.40000000 0.5857143           ns
-3       CPI8 noninoculated inoculated 0.18571429 0.3714286           ns
-4        CAB noninoculated inoculated 0.58571429 0.5857143           ns
-5      BGLU2 noninoculated inoculated 0.02857143 0.1142857           ns
-6      HSP70 noninoculated inoculated 0.51428571 0.5857143           ns
-7       PTI5 noninoculated inoculated 0.01428571 0.1142857           ns
-8     13-LOX noninoculated inoculated 0.04285714 0.1142857           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.1020621	RBOHD	4	4	small
+measurement	noninoculated	inoculated	0.3061862	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	0.5103104	CPI8	4	4	large
+measurement	noninoculated	inoculated	0.1020621	CAB	4	4	small
+measurement	noninoculated	inoculated	0.6123724	BGLU2	4	4	large
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.7144345	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-0.2693135	RBOHD	4	4	small
+measurement	noninoculated	inoculated	-0.6956236	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	-1.2124563	CPI8	4	4	large
+measurement	noninoculated	inoculated	-0.4246189	CAB	4	4	small
+measurement	noninoculated	inoculated	-1.4433514	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.3887531	HSP70	4	4	small
+measurement	noninoculated	inoculated	-4.4459633	PTI5	4	4	large
+measurement	noninoculated	inoculated	-1.6767944	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 8 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 RBOHD      noninoculated inocu… 0.714  0.714  ns               1.20      0.408
+2 PR1B       noninoculated inocu… 0.371  0.594  ns               6.24      6.04 
+3 CPI8       noninoculated inocu… 0.0857 0.171  ns               2.51      2.37 
+4 CAB        noninoculated inocu… 0.586  0.669  ns               1.26      0.548
+5 BGLU2      noninoculated inocu… 0.0143 0.0381 *                3.53      3.07 
+6 HSP70      noninoculated inocu… 0.529  0.669  ns               1.16      0.319
+7 PTI5       noninoculated inocu… 0.0143 0.0381 *               10.3       9.97 
+8 13-LOX     noninoculated inocu… 0.0143 0.0381 *               12.4      11.9  
 
 roots 216
-shapiro
-  transcript         W      p.value      p.adj
-1      RBOHD 0.9209702 4.377851e-01 1.00000000
-2       PR1B 0.5276088 2.215250e-05 0.00017722
-3       CPI8 0.8239291 5.130966e-02 0.25654831
-4        CAB 0.7862704 2.037080e-02 0.12222482
-5      BGLU2 0.5551335 4.709857e-05 0.00032969
-6      HSP70 0.9554099 7.654194e-01 1.00000000
-7       PTI5 0.8284392 5.718757e-02 0.25654831
-8     13-LOX 0.9149908 3.905501e-01 1.00000000
-levene
+
+Distribution tests
+8	RBOHD	0.5003257850	0.5318049052	0.6194122537	0.85290120	0.910823649
+8	PR1B	0.0001772200	0.0003087073	0.0002304429	0.04368757	0.002403976
+8	CPI8	0.0915001090	0.1206217278	0.2582699668	0.85290120	0.423695106
+8	CAB	0.0543221424	0.0534047800	0.0216156596	0.85290120	0.423695106
+8	BGLU2	0.0001883943	0.0003389510	0.0006160896	0.04368757	0.002403976
+8	HSP70	0.7654194092	0.8088198761	0.9559012076	0.85290120	0.761461434
+8	PTI5	0.0915001090	0.1260261686	0.2582699668	0.85290120	0.423695106
+8	13-LOX	0.5003257850	0.5318049052	0.5804828038	0.85290120	0.628573407
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2  statistic          p
 1      RBOHD   1   6 1.19186830 0.31684003
 2       PR1B   1   6 1.00000534 0.35591649
@@ -72,50 +79,54 @@ levene
 6      HSP70   1   6 0.01231323 0.91526291
 7       PTI5   1   6 9.03176593 0.02384491
 8     13-LOX   1   6 0.25784363 0.62972683
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.3061862      RBOHD  4  4  moderate
-2 measurement noninoculated inoculated 0.1020621       PR1B  4  4     small
-3 measurement noninoculated inoculated 0.4082483       CPI8  4  4  moderate
-4 measurement noninoculated inoculated 0.4082483        CAB  4  4  moderate
-5 measurement noninoculated inoculated 0.3061862      BGLU2  4  4  moderate
-6 measurement noninoculated inoculated 0.8164966      HSP70  4  4     large
-7 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-8 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated  0.3181535      RBOHD  4  4     small
-2 measurement noninoculated inoculated -0.6530669       PR1B  4  4  moderate
-3 measurement noninoculated inoculated -1.2622158       CPI8  4  4     large
-4 measurement noninoculated inoculated -1.6025122        CAB  4  4     large
-5 measurement noninoculated inoculated -0.4992047      BGLU2  4  4     small
-6 measurement noninoculated inoculated -2.8190256      HSP70  4  4     large
-7 measurement noninoculated inoculated -2.4269990       PTI5  4  4     large
-8 measurement noninoculated inoculated -3.0914966     13-LOX  4  4     large
 
-[1] "Test - roots - 216"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      RBOHD noninoculated inoculated 0.54285714 0.62040816           ns
-2       PR1B noninoculated inoculated 0.47142857 0.62040816           ns
-3       CPI8 noninoculated inoculated 0.14285714 0.22857143           ns
-4        CAB noninoculated inoculated 0.10000000 0.20000000           ns
-5      BGLU2 noninoculated inoculated 0.94285714 0.94285714           ns
-6      HSP70 noninoculated inoculated 0.01428571 0.03809524            *
-7       PTI5 noninoculated inoculated 0.01428571 0.03809524            *
-8     13-LOX noninoculated inoculated 0.01428571 0.03809524            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.3061862	RBOHD	4	4	moderate
+measurement	noninoculated	inoculated	0.1020621	PR1B	4	4	small
+measurement	noninoculated	inoculated	0.4082483	CPI8	4	4	moderate
+measurement	noninoculated	inoculated	0.4082483	CAB	4	4	moderate
+measurement	noninoculated	inoculated	0.3061862	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	0.8164966	HSP70	4	4	large
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 0.3181535	RBOHD	4	4	small
+measurement	noninoculated	inoculated	-0.6530669	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	-1.2622158	CPI8	4	4	large
+measurement	noninoculated	inoculated	-1.6025122	CAB	4	4	large
+measurement	noninoculated	inoculated	-0.4992047	BGLU2	4	4	small
+measurement	noninoculated	inoculated	-2.8190256	HSP70	4	4	large
+measurement	noninoculated	inoculated	-2.4269990	PTI5	4	4	large
+measurement	noninoculated	inoculated	-3.0914966	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 8 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 RBOHD      noninoculated inocu… 0.6    0.686  ns               1.34      0.871
+2 PR1B       noninoculated inocu… 0.443  0.590  ns              14.2      13.8  
+3 CPI8       noninoculated inocu… 0.243  0.389  ns               4.12      3.61 
+4 CAB        noninoculated inocu… 0.143  0.286  ns               4.11      3.55 
+5 BGLU2      noninoculated inocu… 0.943  0.943  ns              10.0       9.93 
+6 HSP70      noninoculated inocu… 0.0143 0.0381 *                1.62      0.737
+7 PTI5       noninoculated inocu… 0.0143 0.0381 *                7.52      7.02 
+8 13-LOX     noninoculated inocu… 0.0143 0.0381 *                5.62      5.14 
 
 shoots 218
-shapiro
-  transcript         W      p.value        p.adj
-1      RBOHD 0.9433510 6.443223e-01 1.0000000000
-2       PR1B 0.5605354 5.457524e-05 0.0004366019
-3       CPI8 0.7439459 6.999851e-03 0.0489989577
-4        CAB 0.9447432 6.582633e-01 1.0000000000
-5      BGLU2 0.9058201 3.255659e-01 1.0000000000
-6      HSP70 0.9387059 5.983943e-01 1.0000000000
-7       PTI5 0.9058909 3.260331e-01 1.0000000000
-8     13-LOX 0.8983631 2.792923e-01 1.0000000000
-levene
+
+Distribution tests
+8	RBOHD	0.6582633107	0.4949231730	0.633526533	0.9743685	0.823158179
+8	PR1B	0.0004366019	0.0004498361	0.005515768	0.1010488	0.005622984
+8	CPI8	0.0279994044	0.0265507307	0.061413541	0.3042844	0.022363807
+8	CAB	0.6582633107	0.4888632240	0.604292559	0.9999121	0.992744430
+8	BGLU2	0.5216529575	0.4888632240	0.604292559	0.9743685	0.992744430
+8	HSP70	0.6582633107	0.5049096149	0.604292559	0.9743685	0.992744430
+8	PTI5	0.5216529575	0.4888632240	0.604292559	0.9743685	0.992744430
+8	13-LOX	0.5216529575	0.4888632240	0.604292559	0.9743685	0.245767002
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2    statistic         p
 1      RBOHD   1   6 0.2552252694 0.6314357
 2       PR1B   1   6 0.5852190952 0.4732796
@@ -125,50 +136,54 @@ levene
 6      HSP70   1   6 0.0007366367 0.9792274
 7       PTI5   1   6 0.0321419668 0.8636175
 8     13-LOX   1   6 1.9078545848 0.2164396
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.4082483      RBOHD  4  4  moderate
-2 measurement noninoculated inoculated 0.2041241       PR1B  4  4     small
-3 measurement noninoculated inoculated 0.0000000       CPI8  4  4     small
-4 measurement noninoculated inoculated 0.3061862        CAB  4  4  moderate
-5 measurement noninoculated inoculated 0.6123724      BGLU2  4  4     large
-6 measurement noninoculated inoculated 0.6123724      HSP70  4  4     large
-7 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-8 measurement noninoculated inoculated 0.6123724     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated -1.2293113      RBOHD  4  4     large
-2 measurement noninoculated inoculated -0.7018058       PR1B  4  4  moderate
-3 measurement noninoculated inoculated  0.4355029       CPI8  4  4     small
-4 measurement noninoculated inoculated -0.6145828        CAB  4  4  moderate
-5 measurement noninoculated inoculated -1.7940086      BGLU2  4  4     large
-6 measurement noninoculated inoculated -1.7749090      HSP70  4  4     large
-7 measurement noninoculated inoculated -4.6177621       PTI5  4  4     large
-8 measurement noninoculated inoculated -1.3701361     13-LOX  4  4     large
 
-[1] "Test - shoots - 218"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      RBOHD noninoculated inoculated 0.11428571 0.1828571           ns
-2       PR1B noninoculated inoculated 0.37142857 0.4952381           ns
-3       CPI8 noninoculated inoculated 0.70000000 0.7000000           ns
-4        CAB noninoculated inoculated 0.48571429 0.5551020           ns
-5      BGLU2 noninoculated inoculated 0.05714286 0.1828571           ns
-6      HSP70 noninoculated inoculated 0.11428571 0.1828571           ns
-7       PTI5 noninoculated inoculated 0.08571429 0.1828571           ns
-8     13-LOX noninoculated inoculated 0.05714286 0.1828571           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.4082483	RBOHD	4	4	moderate
+measurement	noninoculated	inoculated	0.2041241	PR1B	4	4	small
+measurement	noninoculated	inoculated	0.0000000	CPI8	4	4	small
+measurement	noninoculated	inoculated	0.3061862	CAB	4	4	moderate
+measurement	noninoculated	inoculated	0.6123724	BGLU2	4	4	large
+measurement	noninoculated	inoculated	0.6123724	HSP70	4	4	large
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.6123724	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-1.2293113	RBOHD	4	4	large
+measurement	noninoculated	inoculated	-0.7018058	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	 0.4355029	CPI8	4	4	small
+measurement	noninoculated	inoculated	-0.6145828	CAB	4	4	moderate
+measurement	noninoculated	inoculated	-1.7940086	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-1.7749090	HSP70	4	4	large
+measurement	noninoculated	inoculated	-4.6177621	PTI5	4	4	large
+measurement	noninoculated	inoculated	-1.3701361	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 8 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 RBOHD      noninoculated inocu… 0.229  0.366  ns               1.31      0.519
+2 PR1B       noninoculated inocu… 0.343  0.408  ns               7.85      7.65 
+3 CPI8       noninoculated inocu… 0.8    0.8    ns               2.46      2.33 
+4 CAB        noninoculated inocu… 0.357  0.408  ns               1.43      0.716
+5 BGLU2      noninoculated inocu… 0.0571 0.152  ns               2.71      2.25 
+6 HSP70      noninoculated inocu… 0.0857 0.171  ns               1.32      0.485
+7 PTI5       noninoculated inocu… 0.0143 0.0571 ns               5.20      4.85 
+8 13-LOX     noninoculated inocu… 0.0143 0.0571 ns               3.95      3.51 
 
 roots 218
-shapiro
-  transcript         W     p.value       p.adj
-1      RBOHD 0.8752508 0.169533678 0.678134712
-2       PR1B 0.6365773 0.000423578 0.003388624
-3       CPI8 0.8018496 0.029959681 0.179758085
-4        CAB 0.7772007 0.016240701 0.113684909
-5      BGLU2 0.8939056 0.254325939 0.762977818
-6      HSP70 0.8985591 0.280435482 0.762977818
-7       PTI5 0.8256165 0.053437919 0.267189594
-8     13-LOX 0.9060181 0.326873658 0.762977818
-levene
+
+Distribution tests
+8	RBOHD	0.271253885	0.322114082	0.572935153	0.7293507	0.41674229
+8	PR1B	0.003388624	0.006286833	0.001583876	0.2743854	0.01626014
+8	CPI8	0.079892482	0.114614318	0.295997713	0.7293507	0.22247798
+8	CAB	0.064962805	0.059581927	0.019493300	0.7293507	0.29051769
+8	BGLU2	0.320497693	0.348030439	0.572935153	0.7293507	0.52077550
+8	HSP70	0.320497693	0.334517563	0.538948180	0.7293507	0.91302396
+8	PTI5	0.106875838	0.120981928	0.295997713	0.7293507	0.29051769
+8	13-LOX	0.326873658	0.377714631	0.572935153	0.7293507	0.52077550
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2   statistic           p
 1      RBOHD   1   6  8.00804612 0.029963709
 2       PR1B   1   6  0.66810629 0.444949283
@@ -178,398 +193,449 @@ levene
 6      HSP70   1   6  0.02207489 0.886755775
 7       PTI5   1   6 24.42836454 0.002597392
 8     13-LOX   1   6  4.35882719 0.081849150
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.3061862      RBOHD  4  4  moderate
-2 measurement noninoculated inoculated 0.4082483       PR1B  4  4  moderate
-3 measurement noninoculated inoculated 0.5103104       CPI8  4  4     large
-4 measurement noninoculated inoculated 0.8164966        CAB  4  4     large
-5 measurement noninoculated inoculated 0.4082483      BGLU2  4  4  moderate
-6 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-7 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-8 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated -0.9282060      RBOHD  4  4     large
-2 measurement noninoculated inoculated -0.7691187       PR1B  4  4  moderate
-3 measurement noninoculated inoculated -1.4403054       CPI8  4  4     large
-4 measurement noninoculated inoculated -1.9433310        CAB  4  4     large
-5 measurement noninoculated inoculated  0.9058467      BGLU2  4  4     large
-6 measurement noninoculated inoculated -0.5598458      HSP70  4  4  moderate
-7 measurement noninoculated inoculated -2.1169714       PTI5  4  4     large
-8 measurement noninoculated inoculated -2.8100430     13-LOX  4  4     large
 
-[1] "Test - roots - 218"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      RBOHD noninoculated inoculated 0.20000000 0.26666667           ns
-2       PR1B noninoculated inoculated 0.28571429 0.32653061           ns
-3       CPI8 noninoculated inoculated 0.12857143 0.25714286           ns
-4        CAB noninoculated inoculated 0.01428571 0.03809524            *
-5      BGLU2 noninoculated inoculated 0.20000000 0.26666667           ns
-6      HSP70 noninoculated inoculated 0.60000000 0.60000000           ns
-7       PTI5 noninoculated inoculated 0.01428571 0.03809524            *
-8     13-LOX noninoculated inoculated 0.01428571 0.03809524            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.3061862	RBOHD	4	4	moderate
+measurement	noninoculated	inoculated	0.4082483	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	0.5103104	CPI8	4	4	large
+measurement	noninoculated	inoculated	0.8164966	CAB	4	4	large
+measurement	noninoculated	inoculated	0.4082483	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-0.9282060	RBOHD	4	4	large
+measurement	noninoculated	inoculated	-0.7691187	PR1B	4	4	moderate
+measurement	noninoculated	inoculated	-1.4403054	CPI8	4	4	large
+measurement	noninoculated	inoculated	-1.9433310	CAB	4	4	large
+measurement	noninoculated	inoculated	 0.9058467	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.5598458	HSP70	4	4	moderate
+measurement	noninoculated	inoculated	-2.1169714	PTI5	4	4	large
+measurement	noninoculated	inoculated	-2.8100430	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 8 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 RBOHD      noninoculated inocu… 0.271  0.359  ns               1.34      0.595
+2 PR1B       noninoculated inocu… 0.314  0.359  ns               7.61      7.28 
+3 CPI8       noninoculated inocu… 0.114  0.229  ns               7.18      6.56 
+4 CAB        noninoculated inocu… 0.0143 0.0381 *                6.55      5.69 
+5 BGLU2      noninoculated inocu… 0.2    0.32   ns               1.49      1.20 
+6 HSP70      noninoculated inocu… 0.443  0.443  ns               1.23      0.357
+7 PTI5       noninoculated inocu… 0.0143 0.0381 *               10.5      10.00 
+8 13-LOX     noninoculated inocu… 0.0143 0.0381 *                5.85      5.37 
+
+EXP1
 
 shoots 2 h
-shapiro
-  transcript         W   p.value p.adj
-1      BGLU2 0.9071967 0.3347449     1
-2      HSP70 0.9537541 0.7489479     1
-3       PTI5 0.9308994 0.5242981     1
-4     13-LOX 0.9561653 0.7728841     1
-levene
+
+Distribution tests
+8	BGLU2	0.7728841	0.6865436	0.5743519	0.8507642	0.6626457
+8	HSP70	0.7728841	0.6865436	0.5743519	0.8507642	0.6626457
+8	PTI5	0.7728841	0.6865436	0.6309251	0.8507642	0.6626457
+8	13-LOX	0.7728841	0.6959983	0.6891845	0.8507642	0.6912939
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2  statistic         p
 1      BGLU2   1   6 1.91490178 0.2156985
 2      HSP70   1   6 0.06632676 0.8053672
 3       PTI5   1   6 0.15559935 0.7068800
 4     13-LOX   1   6 0.02805786 0.8724760
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.5103104      BGLU2  4  4     large
-2 measurement noninoculated inoculated 0.1020621      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.6123724       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.0000000     13-LOX  4  4     small
-cohensd
-          .y.        group1     group2     effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated  1.13444732      BGLU2  4  4      large
-2 measurement noninoculated inoculated -0.17640409      HSP70  4  4 negligible
-3 measurement noninoculated inoculated -1.18718626       PTI5  4  4      large
-4 measurement noninoculated inoculated  0.04351864     13-LOX  4  4 negligible
 
-[1] "Exp 1 shoots - 2 h"
-  transcript        group1     group2         p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.1000000 0.2285714           ns
-2      HSP70 noninoculated inoculated 0.8428571 0.9571429           ns
-3       PTI5 noninoculated inoculated 0.1142857 0.2285714           ns
-4     13-LOX noninoculated inoculated 0.9571429 0.9571429           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.5103104	BGLU2	4	4	large
+measurement	noninoculated	inoculated	0.1020621	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.6123724	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.0000000	13-LOX	4	4	small
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 1.13444732	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.17640409	HSP70	4	4	negligible
+measurement	noninoculated	inoculated	-1.18718626	PTI5	4	4	large
+measurement	noninoculated	inoculated	 0.04351864	13-LOX	4	4	negligible
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocula… 0.243 0.486 ns               1.43      1.12 
+2 HSP70      noninoculated inocula… 0.843 0.9   ns               1.31      0.538
+3 PTI5       noninoculated inocula… 0.1   0.4   ns               2.38      1.76 
+4 13-LOX     noninoculated inocula… 0.9   0.9   ns               1.65      1.23 
 
 roots 2 h
-shapiro
-  transcript         W    p.value      p.adj
-1      BGLU2 0.8855238 0.25211819 0.25211819
-2      HSP70 0.7872492 0.02087329 0.06261987
-3       PTI5 0.8140485 0.04038622 0.08077243
-4     13-LOX 0.7611817 0.01084929 0.04339714
-levene
+
+Distribution tests
+7	BGLU2	0.25211819	NA	0.7165988	0.5372725	NA
+8	HSP70	0.04174658	0.03467752	0.1475860	0.5372725	0.1536076
+8	PTI5	0.05384829	0.06059175	0.3559579	0.5372725	0.1175011
+8	13-LOX	0.04174658	0.03467752	0.1439186	0.5372725	0.9457299
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2  statistic            p
 1      BGLU2   1   5  2.6279575 0.1659229889
 2      HSP70   1   6 38.9226783 0.0007851617
 3       PTI5   1   6  4.0572555 0.0906177395
 4     13-LOX   1   6  0.3695213 0.5655484321
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.2672612      BGLU2  4  3     small
-2 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2     effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated  -0.7892726      BGLU2  4  3  moderate
-2 measurement noninoculated inoculated  -0.8225783      HSP70  4  4     large
-3 measurement noninoculated inoculated  -1.9857346       PTI5  4  4     large
-4 measurement noninoculated inoculated -11.6877657     13-LOX  4  4     large
 
-[1] "Exp 1 roots - 2 h"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.40000000 0.40000000           ns
-2      HSP70 noninoculated inoculated 0.35714286 0.40000000           ns
-3       PTI5 noninoculated inoculated 0.01428571 0.02857143            *
-4     13-LOX noninoculated inoculated 0.01428571 0.02857143            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.2672612	BGLU2	4	3	small
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 -0.7892726	BGLU2	4	3	moderate
+measurement	noninoculated	inoculated	 -0.8225783	HSP70	4	4	large
+measurement	noninoculated	inoculated	 -1.9857346	PTI5	4	4	large
+measurement	noninoculated	inoculated	-11.6877657	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocu… 0.371  0.414  ns               3.05      2.62 
+2 HSP70      noninoculated inocu… 0.414  0.414  ns               1.29      0.346
+3 PTI5       noninoculated inocu… 0.0143 0.0286 *                8.98      8.24 
+4 13-LOX     noninoculated inocu… 0.0143 0.0286 *                9.34      8.81 
 
 shoots 4 h
-shapiro
-  transcript         W     p.value      p.adj
-1      BGLU2 0.9077397 0.338421179 1.00000000
-2      HSP70 0.9144798 0.386691440 1.00000000
-3       PTI5 0.7396860 0.009887835 0.03955134
-4     13-LOX 0.9192571 0.423864719 1.00000000
-levene
+
+Distribution tests
+8	BGLU2	0.42386472	0.492229	0.70285468	0.7051886	0.5154983
+8	HSP70	0.42386472	0.492229	0.72335425	0.7051886	0.3702574
+7	PTI5	0.03955134	NA	0.01957002	0.7051886	NA
+8	13-LOX	0.42386472	0.492229	0.72335425	0.7051886	0.6059119
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2  statistic          p
 1      BGLU2   1   6 7.26230361 0.03581987
 2      HSP70   1   6 2.06071340 0.20115102
 3       PTI5   1   5 3.62335911 0.11534229
 4     13-LOX   1   6 0.07435212 0.79424395
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.4082483      BGLU2  4  4  moderate
-2 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.6681531       PTI5  4  3     large
-4 measurement noninoculated inoculated 0.5103104     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2     effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated  1.14203530      BGLU2  4  4      large
-2 measurement noninoculated inoculated -0.01962766      HSP70  4  4 negligible
-3 measurement noninoculated inoculated -1.40744661       PTI5  4  3      large
-4 measurement noninoculated inoculated -0.80168873     13-LOX  4  4      large
 
-[1] "Exp 1 shoots - 4 h"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.20000000 0.4000000           ns
-2      HSP70 noninoculated inoculated 0.97142857 0.9714286           ns
-3       PTI5 noninoculated inoculated 0.04285714 0.1714286           ns
-4     13-LOX noninoculated inoculated 0.37142857 0.4952381           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.4082483	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.6681531	PTI5	4	3	large
+measurement	noninoculated	inoculated	0.5103104	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 1.14203530	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.01962766	HSP70	4	4	negligible
+measurement	noninoculated	inoculated	-1.40744661	PTI5	4	3	large
+measurement	noninoculated	inoculated	-0.80168873	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocula… 0.129 0.343 ns               1.42      1.10 
+2 HSP70      noninoculated inocula… 0.986 0.986 ns               1.58      0.895
+3 PTI5       noninoculated inocula… 0.171 0.343 ns               4.80      4.13 
+4 13-LOX     noninoculated inocula… 0.257 0.343 ns               1.77      1.13 
 
 roots 4 h
-shapiro
-  transcript         W    p.value     p.adj
-1      BGLU2 0.9083983 0.34292294 0.8316029
-2      HSP70 0.9042383 0.31526609 0.8316029
-3       PTI5 0.7807914 0.02631198 0.1052479
-4     13-LOX 0.8980028 0.27720097 0.8316029
-levene
+
+Distribution tests
+8	BGLU2	0.3429229	0.35011	0.4550077	0.7438277	0.6356495
+8	HSP70	0.3429229	0.35011	0.5432413	0.7438277	0.6356495
+7	PTI5	0.1052479	NA	0.2520308	0.7438277	NA
+8	13-LOX	0.3429229	0.35011	0.4532013	0.7438277	0.6323669
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2   statistic         p
 1      BGLU2   1   6  0.03976731 0.8485227
 2      HSP70   1   6  0.49409002 0.5084498
 3       PTI5   1   5 13.69280173 0.0139939
 4     13-LOX   1   6  2.51892273 0.1635846
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.2041241      BGLU2  4  4     small
-2 measurement noninoculated inoculated 0.7144345      HSP70  4  4     large
-3 measurement noninoculated inoculated 0.8017837       PTI5  3  4     large
-4 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2   effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated  0.101155      BGLU2  4  4 negligible
-2 measurement noninoculated inoculated -2.664759      HSP70  4  4      large
-3 measurement noninoculated inoculated -1.619361       PTI5  3  4      large
-4 measurement noninoculated inoculated -2.652463     13-LOX  4  4      large
 
-[1] "Exp 1 roots - 4 h"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.77142857 0.77142857           ns
-2      HSP70 noninoculated inoculated 0.01428571 0.02857143            *
-3       PTI5 noninoculated inoculated 0.04285714 0.05714286           ns
-4     13-LOX noninoculated inoculated 0.01428571 0.02857143            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.2041241	BGLU2	4	4	small
+measurement	noninoculated	inoculated	0.7144345	HSP70	4	4	large
+measurement	noninoculated	inoculated	0.8017837	PTI5	3	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 0.101155	BGLU2	4	4	negligible
+measurement	noninoculated	inoculated	-2.664759	HSP70	4	4	large
+measurement	noninoculated	inoculated	-1.619361	PTI5	3	4	large
+measurement	noninoculated	inoculated	-2.652463	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocu… 0.814  0.814  ns               1.72      1.39 
+2 HSP70      noninoculated inocu… 0.0714 0.0952 ns               1.45      0.523
+3 PTI5       noninoculated inocu… 0.0143 0.0286 *                7.21      6.30 
+4 13-LOX     noninoculated inocu… 0.0143 0.0286 *                3.74      3.00 
 
 shoots 6 h
-shapiro
-  transcript         W   p.value     p.adj
-1      BGLU2 0.8531601 0.1025383 0.4101532
-2      HSP70 0.9746351 0.9316904 1.0000000
-3       PTI5 0.8910754 0.2394748 0.7184244
-4     13-LOX 0.9582473 0.7932479 1.0000000
-levene
+
+Distribution tests
+8	BGLU2	0.4101532	0.4198315	0.5847481	0.86247	0.2585455
+8	HSP70	0.9316904	0.8248433	0.7795848	0.86247	0.7769854
+8	PTI5	0.4789496	0.6956515	0.7795848	0.86247	0.7769854
+8	13-LOX	0.9316904	0.8248433	0.7795848	0.86247	0.7769854
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2 statistic          p
 1      BGLU2   1   6 9.3336220 0.02236516
 2      HSP70   1   6 1.7562611 0.23331953
 3       PTI5   1   6 0.6324337 0.45676181
 4     13-LOX   1   6 0.1574879 0.70521062
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.2041241      BGLU2  4  4     small
-2 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.7144345       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.5103104     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated -0.7832941      BGLU2  4  4   moderate
-2 measurement noninoculated inoculated -0.1672777      HSP70  4  4 negligible
-3 measurement noninoculated inoculated -2.2606687       PTI5  4  4      large
-4 measurement noninoculated inoculated -1.0107767     13-LOX  4  4      large
 
-[1] "Exp 1 shoots - 6 h"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.41428571 0.5523810           ns
-2      HSP70 noninoculated inoculated 0.84285714 0.8428571           ns
-3       PTI5 noninoculated inoculated 0.04285714 0.1714286           ns
-4     13-LOX noninoculated inoculated 0.14285714 0.2857143           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.2041241	BGLU2	4	4	small
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.7144345	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.5103104	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-0.7832941	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	-0.1672777	HSP70	4	4	negligible
+measurement	noninoculated	inoculated	-2.2606687	PTI5	4	4	large
+measurement	noninoculated	inoculated	-1.0107767	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocula… 0.329 0.438 ns               3.02      2.49 
+2 HSP70      noninoculated inocula… 0.729 0.729 ns               1.46      0.791
+3 PTI5       noninoculated inocula… 0.129 0.314 ns               3.95      3.40 
+4 13-LOX     noninoculated inocula… 0.157 0.314 ns               2.01      1.56 
 
 roots 6 h
-shapiro
-  transcript         W    p.value     p.adj
-1      BGLU2 0.8541160 0.10483704 0.3145111
-2      HSP70 0.9297335 0.51365241 0.5136524
-3       PTI5 0.8392509 0.07399871 0.2959948
-4     13-LOX 0.8606871 0.12198199 0.3145111
-levene
+
+Distribution tests
+8	BGLU2	0.1626427	0.1843426	0.1270941	0.6927652	0.6160166
+8	HSP70	0.5136524	0.4496192	0.3298909	0.6927652	0.8523726
+8	PTI5	0.1626427	0.1843426	0.1270941	0.6927652	0.8187037
+8	13-LOX	0.1626427	0.1846193	0.3298909	0.6927652	0.6160166
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2  statistic          p
 1      BGLU2   1   6 1.48323428 0.26898521
 2      HSP70   1   6 0.03748391 0.85287117
 3       PTI5   1   6 1.79839224 0.22844130
 4     13-LOX   1   6 6.90978010 0.03913047
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.7144345      BGLU2  4  4     large
-2 measurement noninoculated inoculated 0.3061862      HSP70  4  4  moderate
-3 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated -2.0997846      BGLU2  4  4     large
-2 measurement noninoculated inoculated -0.8858742      HSP70  4  4     large
-3 measurement noninoculated inoculated -4.3901908       PTI5  4  4     large
-4 measurement noninoculated inoculated -2.6391944     13-LOX  4  4     large
 
-[1] "Exp 1 roots - 6 h"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.01428571 0.01904762            *
-2      HSP70 noninoculated inoculated 0.27142857 0.27142857           ns
-3       PTI5 noninoculated inoculated 0.01428571 0.01904762            *
-4     13-LOX noninoculated inoculated 0.01428571 0.01904762            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.7144345	BGLU2	4	4	large
+measurement	noninoculated	inoculated	0.3061862	HSP70	4	4	moderate
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-2.0997846	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.8858742	HSP70	4	4	large
+measurement	noninoculated	inoculated	-4.3901908	PTI5	4	4	large
+measurement	noninoculated	inoculated	-2.6391944	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocu… 0.0143 0.0190 *                6.94      6.48 
+2 HSP70      noninoculated inocu… 0.414  0.414  ns               1.16      0.240
+3 PTI5       noninoculated inocu… 0.0143 0.0190 *                6.03      5.36 
+4 13-LOX     noninoculated inocu… 0.0143 0.0190 *                8.54      8.13 
+
+EXP2
 
 roots 1 min
-shapiro
-  transcript         W   p.value     p.adj
-1      BGLU2 0.8981828 0.2782444 0.8347332
-2      HSP70 0.9563261 0.7744684 0.8627551
-3       PTI5 0.9201864 0.4313776 0.8627551
-4     13-LOX 0.8838254 0.2047916 0.8191662
-levene
+
+Distribution tests
+8	BGLU2	0.5564888	0.3281398	0.3425706	0.9339213	0.8475745
+8	HSP70	0.7744684	0.5105869	0.4002828	0.9339213	0.8475745
+8	PTI5	0.5751701	0.3281398	0.4002828	0.9339213	0.8475745
+8	13-LOX	0.5564888	0.3281398	0.4002828	0.9339213	0.8475745
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2   statistic         p
 1      BGLU2   1   6 1.631378974 0.2487089
 2      HSP70   1   6 0.530141200 0.4939709
 3       PTI5   1   6 0.000530977 0.9823632
 4     13-LOX   1   6 0.651556303 0.4503618
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.6123724      BGLU2  4  4     large
-2 measurement noninoculated inoculated 0.2041241      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.1020621       PTI5  4  4     small
-4 measurement noninoculated inoculated 0.2041241     13-LOX  4  4     small
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated -1.0480745      BGLU2  4  4      large
-2 measurement noninoculated inoculated -0.7975083      HSP70  4  4   moderate
-3 measurement noninoculated inoculated  0.4298949       PTI5  4  4      small
-4 measurement noninoculated inoculated  0.1370478     13-LOX  4  4 negligible
 
-[1] "Exp 2 roots - 1 min"
-  transcript        group1     group2         p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.1142857 0.4571429           ns
-2      HSP70 noninoculated inoculated 0.2714286 0.5428571           ns
-3       PTI5 noninoculated inoculated 0.5857143 0.7809524           ns
-4     13-LOX noninoculated inoculated 0.8000000 0.8000000           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.6123724	BGLU2	4	4	large
+measurement	noninoculated	inoculated	0.2041241	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.1020621	PTI5	4	4	small
+measurement	noninoculated	inoculated	0.2041241	13-LOX	4	4	small
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-1.0480745	BGLU2	4	4	large
+measurement	noninoculated	inoculated	-0.7975083	HSP70	4	4	moderate
+measurement	noninoculated	inoculated	 0.4298949	PTI5	4	4	small
+measurement	noninoculated	inoculated	 0.1370478	13-LOX	4	4	negligible
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocula… 0.129 0.514 ns               2.33      1.95 
+2 HSP70      noninoculated inocula… 0.343 0.571 ns               1.41      0.698
+3 PTI5       noninoculated inocula… 0.429 0.571 ns               1.57      1.39 
+4 13-LOX     noninoculated inocula… 0.829 0.829 ns               1.26      0.657
 
 roots 15 min
-shapiro
-  transcript         W   p.value     p.adj
-1      BGLU2 0.8600046 0.1200876 0.4803503
-2      HSP70 0.9670400 0.8738220 1.0000000
-3       PTI5 0.9729924 0.9203995 1.0000000
-4     13-LOX 0.9365791 0.5777667 1.0000000
-levene
+
+Distribution tests
+8	BGLU2	0.4803503	0.6664117	0.9476467	0.7951641	0.5062645
+8	HSP70	0.9203995	0.9100111	0.9476467	0.7951641	0.5197324
+8	PTI5	0.9203995	0.9100111	0.9476467	0.7951641	0.5197324
+8	13-LOX	0.9203995	0.9100111	0.9476467	0.7951641	0.5197324
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2 statistic         p
 1      BGLU2   1   6 2.8320965 0.1433870
 2      HSP70   1   6 0.7949650 0.4069351
 3       PTI5   1   6 0.8897731 0.3819534
 4     13-LOX   1   6 3.6685476 0.1039348
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.3061862      BGLU2  4  4  moderate
-2 measurement noninoculated inoculated 0.8164966      HSP70  4  4     large
-3 measurement noninoculated inoculated 0.4082483       PTI5  4  4  moderate
-4 measurement noninoculated inoculated 0.2041241     13-LOX  4  4     small
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated  0.6615047      BGLU2  4  4  moderate
-2 measurement noninoculated inoculated  2.0679752      HSP70  4  4     large
-3 measurement noninoculated inoculated -0.8825601       PTI5  4  4     large
-4 measurement noninoculated inoculated  0.6228802     13-LOX  4  4  moderate
 
-[1] "Exp 2 roots - 15 min"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.30000000 0.30000000           ns
-2      HSP70 noninoculated inoculated 0.01428571 0.05714286           ns
-3       PTI5 noninoculated inoculated 0.22857143 0.30000000           ns
-4     13-LOX noninoculated inoculated 0.22857143 0.30000000           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.3061862	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	0.8164966	HSP70	4	4	large
+measurement	noninoculated	inoculated	0.4082483	PTI5	4	4	moderate
+measurement	noninoculated	inoculated	0.2041241	13-LOX	4	4	small
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	 0.6615047	BGLU2	4	4	moderate
+measurement	noninoculated	inoculated	 2.0679752	HSP70	4	4	large
+measurement	noninoculated	inoculated	-0.8825601	PTI5	4	4	large
+measurement	noninoculated	inoculated	 0.6228802	13-LOX	4	4	moderate
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocu… 0.386  0.386  ns               2.11      1.93 
+2 HSP70      noninoculated inocu… 0.0143 0.0571 ns               1.14      0.413
+3 PTI5       noninoculated inocu… 0.2    0.386  ns               2.28      1.81 
+4 13-LOX     noninoculated inocu… 0.329  0.386  ns               1.43      0.924
 
 roots 30 min
-shapiro
-  transcript         W   p.value p.adj
-1      BGLU2 0.9218759 0.4452693     1
-2      HSP70 0.9336917 0.5502666     1
-3       PTI5 0.9170755 0.4065859     1
-4     13-LOX 0.9755013 0.9373344     1
-levene
+
+Distribution tests
+8	BGLU2	0.7336889	0.6718553	0.5794218	0.7951553	0.7493135
+8	HSP70	0.7336889	0.6718553	0.5794218	0.7951553	0.7493135
+8	PTI5	0.7336889	0.6718553	0.5794218	0.7951553	0.7294636
+8	13-LOX	0.9373344	0.9209036	0.7875485	0.7951553	0.8912841
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2 statistic         p
 1      BGLU2   1   6 0.7522463 0.4190966
 2      HSP70   1   6 1.6361559 0.2480931
 3       PTI5   1   6 0.3098823 0.5978866
 4     13-LOX   1   6 1.3600991 0.2877751
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.1020621      BGLU2  4  4     small
-2 measurement noninoculated inoculated 0.4082483      HSP70  4  4  moderate
-3 measurement noninoculated inoculated 0.6123724       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.2041241     13-LOX  4  4     small
-cohensd
-          .y.        group1     group2     effsize transcript n1 n2  magnitude
-1 measurement noninoculated inoculated -0.05960928      BGLU2  4  4 negligible
-2 measurement noninoculated inoculated -0.79996949      HSP70  4  4   moderate
-3 measurement noninoculated inoculated -1.15876704       PTI5  4  4      large
-4 measurement noninoculated inoculated -0.49668312     13-LOX  4  4      small
 
-[1] "Exp 2 roots - 30 min"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.94285714 0.9428571           ns
-2      HSP70 noninoculated inoculated 0.27142857 0.5428571           ns
-3       PTI5 noninoculated inoculated 0.08571429 0.3428571           ns
-4     13-LOX noninoculated inoculated 0.51428571 0.6857143           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.1020621	BGLU2	4	4	small
+measurement	noninoculated	inoculated	0.4082483	HSP70	4	4	moderate
+measurement	noninoculated	inoculated	0.6123724	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.2041241	13-LOX	4	4	small
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-0.05960928	BGLU2	4	4	negligible
+measurement	noninoculated	inoculated	-0.79996949	HSP70	4	4	moderate
+measurement	noninoculated	inoculated	-1.15876704	PTI5	4	4	large
+measurement	noninoculated	inoculated	-0.49668312	13-LOX	4	4	small
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocula… 0.943 0.943 ns               2.29      2.05 
+2 HSP70      noninoculated inocula… 0.186 0.371 ns               1.25      0.416
+3 PTI5       noninoculated inocula… 0.1   0.371 ns               3.58      3.50 
+4 13-LOX     noninoculated inocula… 0.514 0.686 ns               1.48      0.824
 
 roots 1 h
-shapiro
-  transcript         W    p.value     p.adj
-1      BGLU2 0.8943882 0.29834404 0.5966881
-2      HSP70 0.8075794 0.04864303 0.1459291
-3       PTI5 0.7681392 0.01955303 0.0782121
-4     13-LOX 0.9051207 0.36312404 0.5966881
-levene
+
+Distribution tests
+7	BGLU2	0.36312404	NA	0.7177288	0.6934183	NA
+7	HSP70	0.09728607	NA	0.1881636	0.6934183	NA
+7	PTI5	0.07821210	NA	0.1881636	0.6934183	NA
+7	13-LOX	0.36312404	NA	0.7177288	0.6934183	NA
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2 statistic            p
 1      BGLU2   1   5 93.567419 0.0002004494
 2      HSP70   1   5  5.096958 0.0735685438
 3       PTI5   1   5  1.072959 0.3477528988
 4     13-LOX   1   5  1.851450 0.2317373164
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.0000000      BGLU2  3  4     small
-2 measurement noninoculated inoculated 0.4008919      HSP70  3  4  moderate
-3 measurement noninoculated inoculated 0.6681531       PTI5  3  4     large
-4 measurement noninoculated inoculated 0.8017837     13-LOX  3  4     large
-cohensd
-          .y.        group1     group2    effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated -0.3930558      BGLU2  3  4     small
-2 measurement noninoculated inoculated -0.9118949      HSP70  3  4     large
-3 measurement noninoculated inoculated -1.3475231       PTI5  3  4     large
-4 measurement noninoculated inoculated -3.0857290     13-LOX  3  4     large
 
-[1] "Exp 2 roots - 1 h"
-  transcript        group1     group2          p     p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.40000000 0.4000000           ns
-2      HSP70 noninoculated inoculated 0.34285714 0.4000000           ns
-3       PTI5 noninoculated inoculated 0.07142857 0.1428571           ns
-4     13-LOX noninoculated inoculated 0.04285714 0.1428571           ns
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.0000000	BGLU2	3	4	small
+measurement	noninoculated	inoculated	0.4008919	HSP70	3	4	moderate
+measurement	noninoculated	inoculated	0.6681531	PTI5	3	4	large
+measurement	noninoculated	inoculated	0.8017837	13-LOX	3	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	-0.3930558	BGLU2	3	4	small
+measurement	noninoculated	inoculated	-0.9118949	HSP70	3	4	large
+measurement	noninoculated	inoculated	-1.3475231	PTI5	3	4	large
+measurement	noninoculated	inoculated	-3.0857290	13-LOX	3	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2       p p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>    <dbl> <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocul… 0.486  0.486 ns               2.43      2.18 
+2 HSP70      noninoculated inocul… 0.343  0.457 ns               1.49      0.547
+3 PTI5       noninoculated inocul… 0.0286 0.114 ns               7.60      6.91 
+4 13-LOX     noninoculated inocul… 0.0714 0.143 ns               7.91      7.39 
 
 roots 2 h
-shapiro
-  transcript         W    p.value      p.adj
-1      BGLU2 0.8861072 0.21520244 0.21520244
-2      HSP70 0.7600773 0.01055018 0.04220073
-3       PTI5 0.8380677 0.07195276 0.14390552
-4     13-LOX 0.7723024 0.01436196 0.04308589
-levene
+
+Distribution tests
+8	BGLU2	0.21520244	0.29014717	0.75460246	0.5388162	0.13700653
+8	HSP70	0.02872393	0.02750249	0.02909437	0.3616103	0.02799403
+8	PTI5	0.09593702	0.12691611	0.40029278	0.5388162	0.14206427
+8	13-LOX	0.02872393	0.02750249	0.09137177	0.5388162	0.95437856
+
+Levene's test for homogeneity of variance across groups
   transcript df1 df2 statistic         p
 1      BGLU2   1   6 0.1509133 0.7110744
 2      HSP70   1   6 0.9256292 0.3731552
 3       PTI5   1   6 2.1393730 0.1938828
 4     13-LOX   1   6 0.6335513 0.4563833
-wilcoxon
-          .y.        group1     group2   effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated 0.1020621      BGLU2  4  4     small
-2 measurement noninoculated inoculated 0.0000000      HSP70  4  4     small
-3 measurement noninoculated inoculated 0.8164966       PTI5  4  4     large
-4 measurement noninoculated inoculated 0.8164966     13-LOX  4  4     large
-cohensd
-          .y.        group1     group2     effsize transcript n1 n2 magnitude
-1 measurement noninoculated inoculated   0.4126661      BGLU2  4  4     small
-2 measurement noninoculated inoculated  -0.4424349      HSP70  4  4     small
-3 measurement noninoculated inoculated  -2.3703635       PTI5  4  4     large
-4 measurement noninoculated inoculated -12.6051313     13-LOX  4  4     large
 
-[1] "Exp 2 roots - 2 h"
-  transcript        group1     group2          p      p.adj p.adj.signif
-1      BGLU2 noninoculated inoculated 0.67142857 0.81428571           ns
-2      HSP70 noninoculated inoculated 0.81428571 0.81428571           ns
-3       PTI5 noninoculated inoculated 0.01428571 0.02857143            *
-4     13-LOX noninoculated inoculated 0.01428571 0.02857143            *
+Wilcoxon effect size
+measurement	noninoculated	inoculated	0.1020621	BGLU2	4	4	small
+measurement	noninoculated	inoculated	0.0000000	HSP70	4	4	small
+measurement	noninoculated	inoculated	0.8164966	PTI5	4	4	large
+measurement	noninoculated	inoculated	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+measurement	noninoculated	inoculated	  0.4126661	BGLU2	4	4	small
+measurement	noninoculated	inoculated	 -0.4424349	HSP70	4	4	small
+measurement	noninoculated	inoculated	 -2.3703635	PTI5	4	4	large
+measurement	noninoculated	inoculated	-12.6051313	13-LOX	4	4	large
+
+
+[1] "permutational t-test"
+# A tibble: 4 × 8
+  transcript group1        group2      p  p.adj p.adj.signif plot_max plot_range
+  <chr>      <chr>         <chr>   <dbl>  <dbl> <chr>           <dbl>      <dbl>
+1 BGLU2      noninoculated inocu… 0.614  0.786  ns               2.01       1.68
+2 HSP70      noninoculated inocu… 0.786  0.786  ns               1.77       1.00
+3 PTI5       noninoculated inocu… 0.0143 0.0286 *               12.8       12.2 
+4 13-LOX     noninoculated inocu… 0.0143 0.0286 *               12.0       11.6 
 
