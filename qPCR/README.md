@@ -1,4 +1,4 @@
-# 🧬 qPCR assays
+# 🧬 qPCR and qPCR-related assays
 
 
 ## 📁 structure
