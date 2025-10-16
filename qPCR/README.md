@@ -34,12 +34,16 @@
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
 ### Heteroscedasticity
 - some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality
-  - Levene’s test with mean, under asumptions `levene_test`
-  - more robust test Brown-Forsythe with median, under asumptions `levene_test(center = median)`
-  - Fligner-Killeen when data are non-normally distributed or when problems related to outliers in the dataset cannot be resolved `fligner.test`
+| Test               | Assumptions                     | Robustness to Outliers | R 
+|--------------------|----------------------------------|-------------------------|-|
+| Levene’s Test      | Normality (mean-based)           | Moderate                |`levene_test`|
+| Brown-Forsythe     | Normality (median-based)         | High                    |`levene_test(center = median)`|
+| Fligner-Killeen    | Non-parametric                   | Very high               |`fligner.test`|
 ### Effect Size
-  - Cohen’s d - parametric, under assumptions, sensitive to outliers `cohens_d`
-  - Wilcoxon Effect Size - the non-parametric alternative; different sensitivity to outliers `wilcox_effsize`
+| Metric               | Type           | Notes                        |R|
+|----------------------|----------------|------------------------------|-|
+| Cohen’s d            | Parametric     | Sensitive to outliers        |`cohens_d`|
+| Wilcoxon Effect Size | Non-parametric | More robust alternative      |`wilcox_effsize`|
 
 ## permutation t-test
 - Non-parametric alternative to traditional t-tests
