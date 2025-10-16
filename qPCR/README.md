@@ -42,6 +42,7 @@
 #### 📙 Distribution
   - various robustness under varying skewness and kurtosis
   - can have low power for small sample size
+  - avoid overinterpreting p-values — focus on effect size and distribution shape
 
 | Test                 |  Type                          | Sensitivity to Tails | R |
 |----------------------|-------------------------------|----------------------|-|
@@ -51,7 +52,7 @@
 | Jarque–Bera          | Parametric                    | Low–Moderate        | `tseries::jarque.bera.test()`|
 | D’Agostino Skewness  | Parametric                    | Focused on skewness | `moments::agostino.test()`|
 
-  - 📚 **Q-Q (Quantile-Quantile) plots and a Residual plots** `ggqqplot`
+  - 📚 **Q-Q (Quantile-Quantile) plots and a Residual plots ** `ggqqplot` 🔎
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
 
@@ -62,14 +63,14 @@
 |--------------------|----------------------------------|-------------------------|-|
 | Levene’s Test      | Normality (mean-based)           | Moderate                |`levene_test`|
 | Brown-Forsythe     | Normality (median-based)         | High                    |`levene_test(center = median)`|
-| **Fligner-Killeen**    | Non-parametric                   | Very high               |`fligner.test`|
+| **Fligner-Killeen**    | Non-parametric                   | Very high               |`fligner.test` 🔎|
 
 #### 📗 Effect Size
 
 | Metric               | Type           | Notes                        |R|
 |----------------------|----------------|------------------------------|-|
 | Cohen’s d            | Parametric     | Sensitive to outliers        |`cohens_d`|
-| **Wilcoxon Effect Size** | Non-parametric | More robust alternative      |`wilcox_effsize`|
+| **Wilcoxon Effect Size** | Non-parametric | More robust alternative      |`wilcox_effsize` 🔎|
 
 ### 📔 permutation t-test
 - Non-parametric alternative to traditional t-tests
