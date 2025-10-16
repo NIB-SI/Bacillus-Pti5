@@ -1,13 +1,24 @@
-🧬 qPCR assays
+# 🧬 qPCR assays
 
-# qPCR data
+
+## 📁 structure
+
+├── input/              # processed qPCR data and other input tables
+├── other/              
+├── output/              # output tables
+├── reports/              # separate `.pdf` and `.svg` plots
+├── scripts/              # `.Rmd` scripts and `.html` reports
+├── README.md             
+
+
+## about qPCR data
  - [MIQE 2.0: Revision of the Minimum Information for Publication of Quantitative Real-Time PCR Experiments Guidelines](https://academic.oup.com/clinchem/article/71/6/634/8119148)
  - [quantGenius - quantification of qPCR data using standard curve](http://quantgenius.nib.si)
    - [Equations used in quantGenius workflow](https://static-content.springer.com/esm/art%3A10.1186%2Fs12859-017-1688-7/MediaObjects/12859_2017_1688_MOESM2_ESM.pdf)
  - quantification based on a standard curve inherently involves a log transformation of the input data
  - LOQ values skew distributions
 
-# R packages    
+$# R packages of interest    
 - [MKinfer](https://stamats.r-universe.dev/MKinfer)
 - [exactRankTests](https://thothorn.r-universe.dev/exactRankTests)
 - [rstatix](https://kassambara.r-universe.dev/rstatix)
@@ -19,25 +30,25 @@
 - [egg](https://baptiste.r-universe.dev/egg)
 - ...
 
-# concepts
-## distribution, variance and effects
-### Distribution
+## concepts
+### distribution, variance and effects
+#### Distribution
   - various robustness under varying skewness and kurtosis
   - can have low power for small sample size
 
-| Test Name            | R                  | Type                          | Sensitivity to Tails | 
-|----------------------|-----------------------------|-------------------------------|----------------------|
-| Shapiro–Wilk     | `shapiro.test()`            | Parametric                    | Moderate             | 
-| Lilliefors (KS)  | `nortest::lillie.test()`    | Non-parametric (KS variant)   | High                 | 
-| Anderson–Darling | `nortest::ad.test()`        | Empirical distribution-based  | Very High           | 
-| Jarque–Bera      | `tseries::jarque.bera.test()` | Parametric                    | Low–Moderate        | 
-| D’Agostino Skewness | `moments::agostino.test()` | Parametric                    | Focused on skewness | 
+| Test                 |  Type                          | Sensitivity to Tails | R |
+|----------------------|-------------------------------|----------------------|-|
+| Shapiro–Wilk         | Parametric                    | Moderate             | `shapiro.test()` |
+| Lilliefors (KS)      | Non-parametric (KS variant)   | High                 | `nortest::lillie.test()`|
+| Anderson–Darling     | Empirical distribution-based  | Very High           | `nortest::ad.test()` |
+| Jarque–Bera          | Parametric                    | Low–Moderate        | `tseries::jarque.bera.test()`|
+| D’Agostino Skewness  | Parametric                    | Focused on skewness | `moments::agostino.test()`|
 
   - Q-Q (Quantile-Quantile) plots and a Residual plots `ggqqplot`
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
 
-### Heteroscedasticity
+#### Heteroscedasticity
 - some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality
 
 | Test               | Assumptions                     | Robustness to Outliers | R 
@@ -46,7 +57,7 @@
 | Brown-Forsythe     | Normality (median-based)         | High                    |`levene_test(center = median)`|
 | Fligner-Killeen    | Non-parametric                   | Very high               |`fligner.test`|
 
-### Effect Size
+#### Effect Size
 
 | Metric               | Type           | Notes                        |R|
 |----------------------|----------------|------------------------------|-|
