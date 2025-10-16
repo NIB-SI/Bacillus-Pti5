@@ -32,14 +32,18 @@
   - Q-Q (Quantile-Quantile) plots and a Residual plots `ggqqplot`
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
+
 ### Heteroscedasticity
 - some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality
+
 | Test               | Assumptions                     | Robustness to Outliers | R 
 |--------------------|----------------------------------|-------------------------|-|
 | Levene’s Test      | Normality (mean-based)           | Moderate                |`levene_test`|
 | Brown-Forsythe     | Normality (median-based)         | High                    |`levene_test(center = median)`|
 | Fligner-Killeen    | Non-parametric                   | Very high               |`fligner.test`|
+
 ### Effect Size
+
 | Metric               | Type           | Notes                        |R|
 |----------------------|----------------|------------------------------|-|
 | Cohen’s d            | Parametric     | Sensitive to outliers        |`cohens_d`|
