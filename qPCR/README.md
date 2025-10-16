@@ -79,6 +79,7 @@
   - Non-i.i.d. data
 - Robust and flexible for exploratory comparisons
 - `MKinfer::perm.t.test`, `exactRankTests::perm.test`
+- `stats::p.adjust(method = "BH")`
 
 ### Games-Howell Post-hoc Test
 - `games_howell_test`
