@@ -80,7 +80,7 @@ my_dir = file.path("..", "reports", "Table7")
 if (!dir.exists(my_dir)) {
   dir.create(my_dir)
 }
-fr = file.path(my_dir, 'Tests.txt')
+fr = file.path('..', 'output',  'Table7_stat.txt')
 file.create(fr)
 
 ```
@@ -111,7 +111,7 @@ summary_stats <- function(df, measurevar, groupvars, conf.level = 0.95) {
 ```
 
 
-## scale PS
+## scale to the average of the reference group
 
 ```{r, scale_PS}
 
@@ -146,7 +146,12 @@ process_data <- function(df, groupvars, measurevar, scale_treatment = "noninocul
 ```
 
 
-## perm t
+## permutation t-test
+
+- for non-i.i.d, hypotheses
+- a non-parametric robust alternative to traditional t-tests
+- small sample sizes
+- robust to unequal variances
 
 ```{r, perm_t}
 
@@ -159,7 +164,7 @@ perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", gro
   
   for(i in transcript_levels) {
     data = mydata.long[mydata.long$transcript == i, ]
-    k = 8 # nrow(data)
+    k = 8 # nrow(data); an exact permutation test, assuming the groups are balanced (i.e., 4 observations in each group)
     pvalues = purrr::map_dbl(treatment_pairs, function(x) {
       subset_data = base::subset(data, data[[groupvar]] %in% x)
       res = MKinfer::perm.t.test(
@@ -174,7 +179,7 @@ perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", gro
         symmetric = TRUE,
         p.adjust.method = "holm",
         detailed = TRUE,
-        R = choose(k, k/2), # sum(choose(k, 1:(k-1))),
+        R = choose(k, k/2), # choose(k, k/2) for balanced groups, # sum(choose(k, 1:(k-1))) for unbalanced groups
         set.seed = 123456
       )
       res$perm.p.value
@@ -298,10 +303,18 @@ plot_gene_expression <- function(data.SE
 
 ```
 
-## effects
+## distribution, variance and effects
 
+- on qPCR data
+  - [quantGenius - quantification of qPCR data using standard curve](http://quantgenius.nib.si/user/login)
+  - [MIQE 2.0: Revision of the Minimum Information for Publication of Quantitative Real-Time PCR Experiments Guidelines](https://academic.oup.com/clinchem/article/71/6/634/8119148)
+  - quantification based on a standard curve inherently involves a log transformation of the input data
 - **Denote:** LOQ values skew distributions
-
+- **Denote:** distribution tests: low power for small sample size, see QQ of residuals
+ - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
+ - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem 
+- **Denote:** heteroscedasticity: some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality; Levene’s test with mean, more robust test Brown-Forsythe with median, Fligner-Killeen when data are non-normally distributed or when problems related to outliers in the dataset cannot be resolved
+- **Denote:** effect size: Cohen’s d - parametric with assumptions, Wilcoxon Effect Size - the non-parametric alternative; different sensitivity to outliers
 
 ```{r, effects}
 
@@ -318,16 +331,16 @@ dens_and_effect <- function(mydata.long, p_colors) {
     facet_wrap(~transcript, ncol = 4, scales = "free")
   print(p1)
   
-  # Plot density with x="scaled"
-  p2 = ggpubr::ggdensity(mydata.long, x = "scaled",
-              add = "mean", rug = TRUE,
-              color = "Treatment", fill = "Treatment",
-              facet.by = 'transcript') +
-    scale_fill_manual(name = "", values = rev(p_colors)) +
-    scale_color_manual(name = "", values = rev(p_colors)) +
-    ggtitle("scaled") +
-    facet_wrap(~transcript, ncol = 4, scales = "free")
-  print(p2)
+  # optional: Plot density with x="scaled"- sam e shape wih a shift
+  # p2 = ggpubr::ggdensity(mydata.long, x = "scaled",
+  #             add = "mean", rug = TRUE,
+  #             color = "Treatment", fill = "Treatment",
+  #             facet.by = 'transcript') +
+  #   scale_fill_manual(name = "", values = rev(p_colors)) +
+  #   scale_color_manual(name = "", values = rev(p_colors)) +
+  #   ggtitle("scaled") +
+  #   facet_wrap(~transcript, ncol = 4, scales = "free")
+  # print(p2)
   
   
   cat(crayon::red('####  ####  \nDistribution tests\n####  ####  \n'))
@@ -370,6 +383,7 @@ dens_and_effect <- function(mydata.long, p_colors) {
   
 
   combined_results = distr_tests[grep("^n$|transcript|_BH", colnames(distr_tests))]
+  print(combined_results)
 
   
   
@@ -388,7 +402,7 @@ dens_and_effect <- function(mydata.long, p_colors) {
       model = lm(measurement ~ Treatment, data = .x)
       resids = resid(model)
       ggpubr::ggqqplot(resids) +
-        ggplot2::ggtitle(paste("Resid:", .y$transcript))
+        ggplot2::ggtitle(paste("Residuals:", .y$transcript))
     })
   
 
@@ -420,20 +434,31 @@ dens_and_effect <- function(mydata.long, p_colors) {
 
 
   
-  cat(crayon::red("####  ####  \nLevene's test for homogeneity of variance across groups\n####  ####  \n"))
+  cat(crayon::red("####  ####  \nTest for homogeneity of variance across groups\n####  ####  \n"))
   
+  cat(crayon::red("####  ####  \nLevene\n####  ####  \n"))
   # Levene's test on measurement
   lev_meas = mydata.long %>%
     dplyr::group_by(transcript) %>%
     rstatix::levene_test(measurement ~ Treatment)
   print(lev_meas)
   
-  # Levene's test on scaled
-  lev_scaled = mydata.long %>%
+  cat(crayon::red("####  ####  \nBrown-Forsythe\n####  ####  \n"))
+  # center = "median" switches Levene’s test to the Brown-Forsythe variant
+  bf_meas = mydata.long %>%
     dplyr::group_by(transcript) %>%
-    rstatix::levene_test(scaled ~ Treatment)
-  print(lev_scaled)
+    rstatix::levene_test(measurement ~ Treatment, center = "median")
+  print(bf_meas)
   
+  cat(crayon::red("####  ####  \nFligner\n####  ####  \n"))
+  fk_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_modify(~ broom::tidy(stats::fligner.test(measurement ~ Treatment, data = .x)))
+  print(fk_meas)
+
+
+  
+
   cat(crayon::red("####  ####  \nWilcoxon effect size\n####  ####  \n"))
   
   # Wilcoxon effect size on measurement
@@ -443,10 +468,10 @@ dens_and_effect <- function(mydata.long, p_colors) {
   print(eff_meas)
   
   # Wilcoxon effect size on scaled
-  eff_scaled = mydata.long %>%
-    dplyr::group_by(transcript) %>%
-    rstatix::wilcox_effsize(scaled ~ Treatment)
-  print(eff_scaled)
+  # eff_scaled = mydata.long %>%
+  #   dplyr::group_by(transcript) %>%
+  #   rstatix::wilcox_effsize(scaled ~ Treatment)
+  # print(eff_scaled)
   
   cat(crayon::red("####  ####  \nCohen's d Measure of Effect Size\n####  ####  \n"))
   
@@ -456,23 +481,48 @@ dens_and_effect <- function(mydata.long, p_colors) {
     rstatix::cohens_d(measurement ~ Treatment, paired = FALSE)
   print(coh_meas)
   
-  # Cohen's d on scaled
-  coh_scaled = mydata.long %>%
-    dplyr::group_by(transcript) %>%
-    rstatix::cohens_d(scaled ~ Treatment, paired = FALSE)
-  print(coh_scaled)
-  
+
   invisible(list(
-    p_scaled = p1,
-    p_measurement = p2,
+    p_measurement = p1,
     distr_measurement = combined_results,
     levene_measurement = lev_meas,
-    levene_scaled = lev_scaled,
+    brownforsythe_measurement = bf_meas,
+    fligner_measurement = fk_meas,
     wilcoxon_measurement = eff_meas,
-    wilcoxon_scaled = eff_scaled,
-    cohensd_measurement = coh_meas,
-    cohensd_scaled = coh_scaled
+    cohensd_measurement = coh_meas
   ))
+}
+
+```
+
+## ggplot limits
+
+```{r, limits}
+
+make_scale_params <- function(maxval) {
+  upper = ifelse(maxval > 2, maxval + 2, maxval + 0.1) # 0.5
+  step = dplyr::case_when(
+    maxval >= 50 ~ 25,
+    maxval >= 30 ~ 10,
+    maxval >= 15 ~ 5,
+    maxval >= 10 ~ 2,
+    maxval >  2  ~ 1,
+    TRUE         ~ 0.5
+  )
+  upper_round = ceiling(upper / step) * step
+  breaks = seq(0, upper_round, by = step)
+  list(limits = c(0, upper_round), breaks = breaks)
+}
+
+build_y_scales_for <- function(names_vec, max_per_transcript) {
+  max_per_transcript %>%
+    dplyr::filter(transcript %in% names_vec) %>%
+    purrr::pmap(function(transcript, max_scaled) {
+      params = make_scale_params(max_scaled)
+      lhs = rlang::expr(transcript == !!transcript)
+      rhs = rlang::expr(ggplot2::scale_y_continuous(limits = !!params$limits, breaks = !!params$breaks))
+      rlang::new_formula(lhs, rhs)
+    })
 }
 
 ```
@@ -502,22 +552,42 @@ test_and_plot <- function(data_long_raw
   results = dens_and_effect(mydata.long, p_colors = pal)
   
   cat(what, file = fr, append = TRUE, sep = "\n")
+  
   cat("\nDistribution tests", file = fr, append = TRUE, sep = "\n")
-  # output_text = capture.output(as.data.frame(results$distr_measurement))
+  header = paste(colnames(results$distr_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
   output_text = apply(results$distr_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
   cat("\nLevene's test for homogeneity of variance across groups", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(as.data.frame(results$levene_measurement))
+  header = paste(colnames(results$levene_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$levene_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("\nBrown-Forsythe (Levene with median)", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$brownforsythe_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$brownforsythe_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("\nFligner-Killeen test of homogeneity of variances", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$fligner_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$fligner_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
   cat("\nWilcoxon effect size", file = fr, append = TRUE, sep = "\n")
-  # output_text = capture.output(as.data.frame(results$wilcoxon_measurement))
-  output_text = apply(results$wilcoxon_measurement, 1, function(row) paste(row, collapse = "\t")) # do  not split in multiple lines
+  header = paste(colnames(results$wilcoxon_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$wilcoxon_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
   cat("\nCohen's d Measure of Effect Size", file = fr, append = TRUE, sep = "\n")
-  # output_text = capture.output(as.data.frame(results$cohensd_measurement))
+  header = paste(colnames(results$cohensd_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
   output_text = apply(results$cohensd_measurement, 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
   cat("", file = fr, append = TRUE, sep = "\n")
+
 
   
   temp = perm_test_by_transcript(mydata.long, measurevar = "measurement", groupvar = "Treatment")
@@ -531,29 +601,7 @@ test_and_plot <- function(data_long_raw
   perm$perm.p.adj.signif[perm$perm.p.adj < 0.001] = '**'
   perm$perm.p.adj.signif[perm$perm.p.adj < 0.05] = '*'
   
-  # like rstatix object
-  # stat.test = perm %>%
-  #   dplyr::select(transcript, group1, group2, perm.p, perm.p.adj, perm.p.adj.signif) %>%
-  #   dplyr::rename(
-  #     p = perm.p,
-  #     p.adj = perm.p.adj,
-  #     p.adj.signif = perm.p.adj.signif
-  #   )
-  # y_pos_df = mydata.long %>%
-  #   dplyr::group_by(transcript, Treatment) %>%
-  #   dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE)) %>%
-  #   dplyr::group_by(transcript) %>%
-  #   dplyr::summarise(y.position = max(max_scaled) * 1.0)
-  # stat.test = stat.test %>%
-  #   dplyr::left_join(y_pos_df, by = "transcript")
-  # stat.test = stat.test %>%
-  #   dplyr::mutate(
-  #     xmin = as.numeric(factor(group1, levels = unique(mydata.long$Treatment))),
-  #     xmax = as.numeric(factor(group2, levels = unique(mydata.long$Treatment)))
-  #   )
-  # stat.test.sig <- stat.test %>%
-  #   dplyr::filter(p.adj < 0.05)
-  # Prepare stat.test object
+  
   stat.test = perm %>%
     dplyr::select(transcript, group1, group2, perm.p, perm.p.adj, perm.p.adj.signif) %>%
     dplyr::rename(
@@ -714,33 +762,6 @@ dodge = position_dodge(width = 0.5)
 myorder = c("RBOHD", "PR1B", "CPI8", "CAB", "BGLU2", "HSP70", "PTI5", "13-LOX")
 group1_names = c("PTI5", "13-LOX")
 
-make_scale_params <- function(maxval) {
-  upper = maxval + 0.1 # 0.5
-  step = dplyr::case_when(
-    maxval >= 50 ~ 25,
-    maxval >= 30 ~ 10,
-    maxval >= 15 ~ 5,
-    maxval >= 10 ~ 2,
-    maxval >  2  ~ 1,
-    TRUE         ~ 0.5
-  )
-  upper_round = ceiling(upper / step) * step
-  breaks = seq(0, upper_round, by = step)
-  list(limits = c(0, upper_round), breaks = breaks)
-}
-
-build_y_scales_for <- function(names_vec, max_per_transcript) {
-  max_per_transcript %>%
-    dplyr::filter(transcript %in% names_vec) %>%
-    purrr::pmap(function(transcript, max_scaled) {
-      params = make_scale_params(max_scaled)
-      lhs = rlang::expr(transcript == !!transcript)
-      rhs = rlang::expr(ggplot2::scale_y_continuous(limits = !!params$limits, breaks = !!params$breaks))
-      rlang::new_formula(lhs, rhs)
-    })
-}
-
-
 
 ```
 
@@ -781,15 +802,19 @@ result = test_and_plot(data_long_raw = shoots.216
                        , y_scales1
                        , y_scales2
                        )
-res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+res = result$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result$stat.test))]
 print(res[res$p.adj.signif != 'ns', ])
 
 cat("", file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(paste0("permutational t-test"))
+output_text = "permutational t-test"
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+header = paste(colnames(res), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
   
 
 ggsave(
@@ -843,14 +868,17 @@ result = test_and_plot(data_long_raw = roots.216
                        , y_scales1
                        , y_scales2
                        )
-res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+res = result$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result$stat.test))]
 print(res[res$p.adj.signif != 'ns', ])
 
 cat("", file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(paste0("permutational t-test"))
+output_text = "permutational t-test"
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+header = paste(colnames(res), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
 
@@ -904,14 +932,17 @@ result = test_and_plot(data_long_raw = shoots.218
                        , y_scales1
                        , y_scales2
                        )
-res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+res = result$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result$stat.test))]
 print(res[res$p.adj.signif != 'ns', ])
 
 cat("", file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(paste0("permutational t-test"))
+output_text = "permutational t-test"
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+header = paste(colnames(res), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
 
@@ -967,14 +998,17 @@ result = test_and_plot(data_long_raw = roots.218
                        , y_scales1
                        , y_scales2
                        )
-res = result$stat.test[, grep("transcript|group1|group2|^p", colnames(result$stat.test))]
+res = result$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result$stat.test))]
 print(res[res$p.adj.signif != 'ns', ])
 
 cat("", file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(paste0("permutational t-test"))
+output_text = "permutational t-test"
 cat(output_text, file = fr, append = TRUE, sep = "\n")
-output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+header = paste(colnames(res), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
 cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
 cat("", file = fr, append = TRUE, sep = "\n")
 
 ggsave(
@@ -1128,14 +1162,17 @@ run_analysis_for_time <- function(data
                                 groupvars = groupvars,
                                 y_scales1 = y_scales1,
                                 y_scales2 = y_scales2)
-  res = result_shoots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_shoots$stat.test))]
+  res = result_shoots$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result_shoots$stat.test))]
   print(res[res$p.adj.signif != 'ns', ])
   
   cat("", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(paste0("permutational t-test"))
+  output_text = "permutational t-test"
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+  header = paste(colnames(res), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
   
   
@@ -1153,14 +1190,17 @@ run_analysis_for_time <- function(data
                                groupvars = groupvars,
                                y_scales1 = y_scales3,
                                y_scales2 = y_scales4)
-  res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
+  res = result_roots$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result_roots$stat.test))]
   print(res[res$p.adj.signif != 'ns', ])
   
   cat("", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(paste0("permutational t-test"))
+  output_text = "permutational t-test"
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+  header = paste(colnames(res), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
   
   
@@ -1319,14 +1359,17 @@ run_analysis_for_time <- function(data
                                groupvars = groupvars,
                                y_scales1,
                                y_scales2)
-  res = result_roots$stat.test[, grep("transcript|group1|group2|^p", colnames(result_roots$stat.test))]
+  res = result_roots$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result_roots$stat.test))]
   print(res[res$p.adj.signif != 'ns', ])
   
   cat("", file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(paste0("permutational t-test"))
+  output_text = "permutational t-test"
   cat(output_text, file = fr, append = TRUE, sep = "\n")
-  output_text = capture.output(print(tibble::as_tibble(res), n = Inf))
+  header = paste(colnames(res), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
   cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("", file = fr, append = TRUE, sep = "\n")
   cat("", file = fr, append = TRUE, sep = "\n")
 
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="zagor" />
 
-<meta name="date" content="2025-10-15" />
+<meta name="date" content="2025-10-16" />
 
 <title>AMF colonisation</title>
 
@@ -1570,7 +1570,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">AMF colonisation</h1>
 <h4 class="author">zagor</h4>
-<h4 class="date">2025-10-15</h4>
+<h4 class="date">2025-10-16</h4>
 
 </div>
 
@@ -1578,8 +1578,8 @@ border-radius: 0px;
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">gc</span>()</span></code></pre></div>
 <pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells  554889 29.7    1242168 66.4   686457 36.7
-## Vcells 1016966  7.8    8388608 64.0  1877161 14.4</code></pre>
+## Ncells  554891 29.7    1242174 66.4   686457 36.7
+## Vcells 1017061  7.8    8388608 64.0  1877161 14.4</code></pre>
 <div id="packages" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> packages</h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># %&gt;% </span></span>
@@ -1630,8 +1630,13 @@ border-radius: 0px;
 ## 3 L6       0.192 0.0638 0.0285</code></pre>
 </div>
 <div id="hypothesis-test-for-two-means-of-percentages" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Hypothesis test for two
+<h1><span class="header-section-number">6</span> hypothesis test for two
 means of percentages</h1>
+<ul>
+<li>performs a two-sample test for proportions (like a t-test for
+percentages), assuming beta-distributed data</li>
+<li>must manually run for each pair</li>
+</ul>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>Rfast<span class="sc">::</span><span class="fu">percent.ttest</span>(df[df<span class="sc">$</span>Genotype <span class="sc">==</span> <span class="st">&#39;NT&#39;</span>, ]<span class="sc">$</span>Percentage.root.lenght.colonized<span class="sc">/</span><span class="dv">100</span>,</span>
 <span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>                     df[df<span class="sc">$</span>Genotype <span class="sc">==</span> <span class="st">&#39;L2&#39;</span>, ]<span class="sc">$</span>Percentage.root.lenght.colonized<span class="sc">/</span><span class="dv">100</span>,</span>
 <span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>                     <span class="at">logged =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
@@ -1644,7 +1649,7 @@ means of percentages</h1>
 ## 2.195009e-02 1.380542e+01 2.027504e-04</code></pre>
 </div>
 <div id="beta-regression" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Beta Regression</h1>
+<h1><span class="header-section-number">7</span> beta regression</h1>
 <ul>
 <li>analyzing percentage data using beta regression followed by
 estimated marginal means (EMMs) and pairwise comparisons</li>
@@ -1654,7 +1659,10 @@ and 1 (i.e., proportions or percentages)</li>
 significant overall effect</li>
 <li>Estimated Marginal Means – EMMs are interpretable as model-adjusted
 group means.</li>
-<li>Sidak adjustment for controlling family-wise error rate</li>
+<li>Sidak adjustment for controlling family-wise error rate - sdjusts
+p-values or alpha levels for multiple comparisons; Dunnettx is designed
+for one-vs-control comparisons and is more statistically powerful in
+that context</li>
 </ul>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>model <span class="ot">=</span> betareg<span class="sc">::</span><span class="fu">betareg</span>(perc <span class="sc">~</span> Genotype,</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>                <span class="at">data =</span> df)</span>
@@ -1677,7 +1685,7 @@ group means.</li>
 ##  L2 - L6   -0.0497 0.0351 Inf  -1.415  0.4012
 ## 
 ## P value adjustment: sidak method for 3 tests</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># Set up a compact letter display of all pair-wise comparisons</span></span>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># Set up a compact letter display of all pair-wise comparisons against control</span></span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>cld <span class="ot">=</span> multcomp<span class="sc">::</span><span class="fu">cld</span>(marginal,</span>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>              <span class="at">alpha=</span><span class="fl">0.05</span>,</span>
 <span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>              <span class="at">Letters=</span>letters,      <span class="do">### Use lower-case letters for .group</span></span>

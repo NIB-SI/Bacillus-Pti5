@@ -1,0 +1,273 @@
+roots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+19	RBOHD	0.104777090	0.1335521796	0.36795626	0.6691694	0.5870622
+19	CPI8	0.028934652	0.0368444103	0.04029820	0.4662236	0.1372843
+19	CAB	0.163845684	0.2038376039	0.36795626	0.6691694	0.5870622
+19	BGLU2	0.002362543	0.0004578113	0.00553890	0.4662236	0.1372843
+19	HSP70	0.673965521	0.3180732943	0.33931533	0.8402960	0.5870622
+19	PTI5	0.005247696	0.0024638476	0.01524719	0.5281422	0.4782329
+19	13-LOX	0.002362543	0.0008006665	0.00553890	0.4662236	0.1372843
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+RBOHD	4	14	1.0269879	0.427343799
+CPI8	4	14	1.1624916	0.368756356
+CAB	4	14	0.8312811	0.527256635
+BGLU2	4	14	1.3429092	0.302855528
+HSP70	4	14	1.9509034	0.157734276
+PTI5	4	14	6.3828523	0.003857577
+13-LOX	4	14	1.1757076	0.363477712
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+RBOHD	4	14	1.0269879	0.427343799
+CPI8	4	14	1.1624916	0.368756356
+CAB	4	14	0.8312811	0.527256635
+BGLU2	4	14	1.3429092	0.302855528
+HSP70	4	14	1.9509034	0.157734276
+PTI5	4	14	6.3828523	0.003857577
+13-LOX	4	14	1.1757076	0.363477712
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+RBOHD	 3.809535	0.43239575	4	Fligner-Killeen test of homogeneity of variances
+CPI8	 5.072779	0.27991114	4	Fligner-Killeen test of homogeneity of variances
+CAB	 6.150958	0.18815474	4	Fligner-Killeen test of homogeneity of variances
+BGLU2	 8.328331	0.08026497	4	Fligner-Killeen test of homogeneity of variances
+HSP70	 8.453577	0.07630693	4	Fligner-Killeen test of homogeneity of variances
+PTI5	12.749787	0.01256535	4	Fligner-Killeen test of homogeneity of variances
+13-LOX	11.704259	0.01969147	4	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	0.5547002	RBOHD	3	4	large
+measurement	noninoculated	PS-216 medium	0.3370999	RBOHD	3	4	moderate
+measurement	noninoculated	PS-216 srfA	0.2672612	RBOHD	3	4	small
+measurement	noninoculated	PS-216 srfA medium	0.2672612	RBOHD	3	4	small
+measurement	PS-216	PS-216 medium	0.6274950	RBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	0.8214005	RBOHD	4	4	large
+measurement	PS-216	PS-216 srfA medium	0.8214005	RBOHD	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.4082483	RBOHD	4	4	moderate
+measurement	PS-216 medium	PS-216 srfA medium	0.4082483	RBOHD	4	4	moderate
+measurement	PS-216 srfA	PS-216 srfA medium	0.5103104	RBOHD	4	4	large
+measurement	noninoculated	PS-216	0.8017837	CPI8	3	4	large
+measurement	noninoculated	PS-216 medium	0.0000000	CPI8	3	4	small
+measurement	noninoculated	PS-216 srfA	0.0000000	CPI8	3	4	small
+measurement	noninoculated	PS-216 srfA medium	0.0000000	CPI8	3	4	small
+measurement	PS-216	PS-216 medium	0.8164966	CPI8	4	4	large
+measurement	PS-216	PS-216 srfA	0.7144345	CPI8	4	4	large
+measurement	PS-216	PS-216 srfA medium	0.8164966	CPI8	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.5103104	CPI8	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.5103104	CPI8	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	0.1020621	CPI8	4	4	small
+measurement	noninoculated	PS-216	0.8017837	CAB	3	4	large
+measurement	noninoculated	PS-216 medium	0.2672612	CAB	3	4	small
+measurement	noninoculated	PS-216 srfA	0.0000000	CAB	3	4	small
+measurement	noninoculated	PS-216 srfA medium	0.1336306	CAB	3	4	small
+measurement	PS-216	PS-216 medium	0.8164966	CAB	4	4	large
+measurement	PS-216	PS-216 srfA	0.8164966	CAB	4	4	large
+measurement	PS-216	PS-216 srfA medium	0.8164966	CAB	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.8164966	CAB	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.7144345	CAB	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	0.2041241	CAB	4	4	small
+measurement	noninoculated	PS-216	0.4008919	BGLU2	3	4	moderate
+measurement	noninoculated	PS-216 medium	0.5345225	BGLU2	3	4	large
+measurement	noninoculated	PS-216 srfA	0.5345225	BGLU2	3	4	large
+measurement	noninoculated	PS-216 srfA medium	0.4008919	BGLU2	3	4	moderate
+measurement	PS-216	PS-216 medium	0.4620378	BGLU2	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.3061862	BGLU2	4	4	moderate
+measurement	PS-216	PS-216 srfA medium	0.4082483	BGLU2	4	4	moderate
+measurement	PS-216 medium	PS-216 srfA	0.8164966	BGLU2	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.3061862	BGLU2	4	4	moderate
+measurement	PS-216 srfA	PS-216 srfA medium	0.7144345	BGLU2	4	4	large
+measurement	noninoculated	PS-216	0.4008919	HSP70	3	4	moderate
+measurement	noninoculated	PS-216 medium	0.2672612	HSP70	3	4	small
+measurement	noninoculated	PS-216 srfA	0.8017837	HSP70	3	4	large
+measurement	noninoculated	PS-216 srfA medium	0.1336306	HSP70	3	4	small
+measurement	PS-216	PS-216 medium	0.4082483	HSP70	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.2041241	HSP70	4	4	small
+measurement	PS-216	PS-216 srfA medium	0.5103104	HSP70	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.8164966	HSP70	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.2041241	HSP70	4	4	small
+measurement	PS-216 srfA	PS-216 srfA medium	0.8164966	HSP70	4	4	large
+measurement	noninoculated	PS-216	0.8017837	PTI5	3	4	large
+measurement	noninoculated	PS-216 medium	0.4008919	PTI5	3	4	moderate
+measurement	noninoculated	PS-216 srfA	0.8017837	PTI5	3	4	large
+measurement	noninoculated	PS-216 srfA medium	0.8017837	PTI5	3	4	large
+measurement	PS-216	PS-216 medium	0.8164966	PTI5	4	4	large
+measurement	PS-216	PS-216 srfA	0.3061862	PTI5	4	4	moderate
+measurement	PS-216	PS-216 srfA medium	0.8164966	PTI5	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.8164966	PTI5	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.8164966	PTI5	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	0.8164966	PTI5	4	4	large
+measurement	noninoculated	PS-216	0.8017837	13-LOX	3	4	large
+measurement	noninoculated	PS-216 medium	0.8017837	13-LOX	3	4	large
+measurement	noninoculated	PS-216 srfA	0.8017837	13-LOX	3	4	large
+measurement	noninoculated	PS-216 srfA medium	0.8017837	13-LOX	3	4	large
+measurement	PS-216	PS-216 medium	0.8164966	13-LOX	4	4	large
+measurement	PS-216	PS-216 srfA	0.4082483	13-LOX	4	4	moderate
+measurement	PS-216	PS-216 srfA medium	0.8164966	13-LOX	4	4	large
+measurement	PS-216 medium	PS-216 srfA	0.8164966	13-LOX	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	0.6123724	13-LOX	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	0.8164966	13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	  1.51033994	RBOHD	3	4	large
+measurement	noninoculated	PS-216 medium	  0.05988821	RBOHD	3	4	negligible
+measurement	noninoculated	PS-216 srfA	  0.63967553	RBOHD	3	4	moderate
+measurement	noninoculated	PS-216 srfA medium	  0.52723770	RBOHD	3	4	moderate
+measurement	PS-216	PS-216 medium	 -1.97057962	RBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	 -4.88363871	RBOHD	4	4	large
+measurement	PS-216	PS-216 srfA medium	 -4.87628109	RBOHD	4	4	large
+measurement	PS-216 medium	PS-216 srfA	  0.77709906	RBOHD	4	4	moderate
+measurement	PS-216 medium	PS-216 srfA medium	  0.62088888	RBOHD	4	4	moderate
+measurement	PS-216 srfA	PS-216 srfA medium	 -0.55768146	RBOHD	4	4	moderate
+measurement	noninoculated	PS-216	  1.59734095	CPI8	3	4	large
+measurement	noninoculated	PS-216 medium	 -0.32936514	CPI8	3	4	small
+measurement	noninoculated	PS-216 srfA	  0.75170429	CPI8	3	4	moderate
+measurement	noninoculated	PS-216 srfA medium	  0.64666454	CPI8	3	4	moderate
+measurement	PS-216	PS-216 medium	 -2.72017167	CPI8	4	4	large
+measurement	PS-216	PS-216 srfA	 -2.17305250	CPI8	4	4	large
+measurement	PS-216	PS-216 srfA medium	 -3.34496923	CPI8	4	4	large
+measurement	PS-216 medium	PS-216 srfA	  1.47484050	CPI8	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	  1.37813145	CPI8	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	 -0.28870477	CPI8	4	4	small
+measurement	noninoculated	PS-216	  2.38092320	CAB	3	4	large
+measurement	noninoculated	PS-216 medium	 -0.75101936	CAB	3	4	moderate
+measurement	noninoculated	PS-216 srfA	  0.49177415	CAB	3	4	small
+measurement	noninoculated	PS-216 srfA medium	  0.16751727	CAB	3	4	negligible
+measurement	PS-216	PS-216 medium	-12.16978006	CAB	4	4	large
+measurement	PS-216	PS-216 srfA	 -2.76970766	CAB	4	4	large
+measurement	PS-216	PS-216 srfA medium	 -5.07979000	CAB	4	4	large
+measurement	PS-216 medium	PS-216 srfA	  1.95153045	CAB	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	  1.90088201	CAB	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	 -0.51788036	CAB	4	4	moderate
+measurement	noninoculated	PS-216	 -1.51874016	BGLU2	3	4	large
+measurement	noninoculated	PS-216 medium	  1.56646275	BGLU2	3	4	large
+measurement	noninoculated	PS-216 srfA	 -1.48156874	BGLU2	3	4	large
+measurement	noninoculated	PS-216 srfA medium	  1.08973284	BGLU2	3	4	large
+measurement	PS-216	PS-216 medium	  1.91741709	BGLU2	4	4	large
+measurement	PS-216	PS-216 srfA	  0.34926630	BGLU2	4	4	small
+measurement	PS-216	PS-216 srfA medium	  1.80661639	BGLU2	4	4	large
+measurement	PS-216 medium	PS-216 srfA	 -2.04000257	BGLU2	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	 -0.71958312	BGLU2	4	4	moderate
+measurement	PS-216 srfA	PS-216 srfA medium	  1.88715102	BGLU2	4	4	large
+measurement	noninoculated	PS-216	 -1.07174158	HSP70	3	4	large
+measurement	noninoculated	PS-216 medium	 -0.72726916	HSP70	3	4	moderate
+measurement	noninoculated	PS-216 srfA	 -2.63801673	HSP70	3	4	large
+measurement	noninoculated	PS-216 srfA medium	  0.33071265	HSP70	3	4	small
+measurement	PS-216	PS-216 medium	  0.90914040	HSP70	4	4	large
+measurement	PS-216	PS-216 srfA	  0.11112957	HSP70	4	4	negligible
+measurement	PS-216	PS-216 srfA medium	  1.10290388	HSP70	4	4	large
+measurement	PS-216 medium	PS-216 srfA	 -2.20831208	HSP70	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	  0.59005758	HSP70	4	4	moderate
+measurement	PS-216 srfA	PS-216 srfA medium	  1.67902690	HSP70	4	4	large
+measurement	noninoculated	PS-216	 -8.36442215	PTI5	3	4	large
+measurement	noninoculated	PS-216 medium	 -0.94510906	PTI5	3	4	large
+measurement	noninoculated	PS-216 srfA	 -4.16773705	PTI5	3	4	large
+measurement	noninoculated	PS-216 srfA medium	 -4.88346250	PTI5	3	4	large
+measurement	PS-216	PS-216 medium	  8.24069610	PTI5	4	4	large
+measurement	PS-216	PS-216 srfA	  0.45061974	PTI5	4	4	small
+measurement	PS-216	PS-216 srfA medium	  6.45140739	PTI5	4	4	large
+measurement	PS-216 medium	PS-216 srfA	 -4.10811451	PTI5	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	 -4.45773410	PTI5	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	  3.22419615	PTI5	4	4	large
+measurement	noninoculated	PS-216	 -3.25162576	13-LOX	3	4	large
+measurement	noninoculated	PS-216 medium	 -3.07002269	13-LOX	3	4	large
+measurement	noninoculated	PS-216 srfA	 -5.68575892	13-LOX	3	4	large
+measurement	noninoculated	PS-216 srfA medium	 -4.16794862	13-LOX	3	4	large
+measurement	PS-216	PS-216 medium	  3.08733186	13-LOX	4	4	large
+measurement	PS-216	PS-216 srfA	  1.41564605	13-LOX	4	4	large
+measurement	PS-216	PS-216 srfA medium	  2.89333617	13-LOX	4	4	large
+measurement	PS-216 medium	PS-216 srfA	 -5.11229869	13-LOX	4	4	large
+measurement	PS-216 medium	PS-216 srfA medium	 -1.96573183	13-LOX	4	4	large
+measurement	PS-216 srfA	PS-216 srfA medium	  4.42041153	13-LOX	4	4	large
+
+
+Permutational ANOVA
+transcript	statistic	p.value	permANOVA_BH
+RBOHD	 7.717716	0.10000000	0.1166667
+CPI8	 9.416724	0.01428571	0.0200000
+CAB	13.155634	0.00000000	0.0000000
+BGLU2	10.064990	0.00000000	0.0000000
+HSP70	 6.621883	0.18571429	0.1857143
+PTI5	16.339238	0.00000000	0.0000000
+13-LOX	14.708626	0.00000000	0.0000000
+
+Games Howell
+transcript	group1	group2	p.adj	p.adj.signif
+RBOHD	noninoculated	PS-216	0.517	ns
+RBOHD	noninoculated	PS-216 medium	1.000	ns
+RBOHD	noninoculated	PS-216 srfA	0.916	ns
+RBOHD	noninoculated	PS-216 srfA medium	0.953	ns
+RBOHD	PS-216	PS-216 medium	0.227	ns
+RBOHD	PS-216	PS-216 srfA	0.003	**
+RBOHD	PS-216	PS-216 srfA medium	0.003	**
+RBOHD	PS-216 medium	PS-216 srfA	0.801	ns
+RBOHD	PS-216 medium	PS-216 srfA medium	0.890	ns
+RBOHD	PS-216 srfA	PS-216 srfA medium	0.925	ns
+CPI8	noninoculated	PS-216	0.487	ns
+CPI8	noninoculated	PS-216 medium	0.991	ns
+CPI8	noninoculated	PS-216 srfA	0.867	ns
+CPI8	noninoculated	PS-216 srfA medium	0.912	ns
+CPI8	PS-216	PS-216 medium	0.111	ns
+CPI8	PS-216	PS-216 srfA	0.178	ns
+CPI8	PS-216	PS-216 srfA medium	0.052	ns
+CPI8	PS-216 medium	PS-216 srfA	0.362	ns
+CPI8	PS-216 medium	PS-216 srfA medium	0.424	ns
+CPI8	PS-216 srfA	PS-216 srfA medium	0.992	ns
+CAB	noninoculated	PS-216	0.282	ns
+CAB	noninoculated	PS-216 medium	0.869	ns
+CAB	noninoculated	PS-216 srfA	0.961	ns
+CAB	noninoculated	PS-216 srfA medium	0.999	ns
+CAB	PS-216	PS-216 medium	0.002	**
+CAB	PS-216	PS-216 srfA	0.109	ns
+CAB	PS-216	PS-216 srfA medium	0.022	*
+CAB	PS-216 medium	PS-216 srfA	0.203	ns
+CAB	PS-216 medium	PS-216 srfA medium	0.189	ns
+CAB	PS-216 srfA	PS-216 srfA medium	0.940	ns
+BGLU2	noninoculated	PS-216	0.374	ns
+BGLU2	noninoculated	PS-216 medium	0.452	ns
+BGLU2	noninoculated	PS-216 srfA	0.385	ns
+BGLU2	noninoculated	PS-216 srfA medium	0.681	ns
+BGLU2	PS-216	PS-216 medium	0.246	ns
+BGLU2	PS-216	PS-216 srfA	0.985	ns
+BGLU2	PS-216	PS-216 srfA medium	0.277	ns
+BGLU2	PS-216 medium	PS-216 srfA	0.213	ns
+BGLU2	PS-216 medium	PS-216 srfA medium	0.839	ns
+BGLU2	PS-216 srfA	PS-216 srfA medium	0.251	ns
+HSP70	noninoculated	PS-216	0.616	ns
+HSP70	noninoculated	PS-216 medium	0.866	ns
+HSP70	noninoculated	PS-216 srfA	0.081	ns
+HSP70	noninoculated	PS-216 srfA medium	0.987	ns
+HSP70	PS-216	PS-216 medium	0.717	ns
+HSP70	PS-216	PS-216 srfA	1.000	ns
+HSP70	PS-216	PS-216 srfA medium	0.573	ns
+HSP70	PS-216 medium	PS-216 srfA	0.136	ns
+HSP70	PS-216 medium	PS-216 srfA medium	0.905	ns
+HSP70	PS-216 srfA	PS-216 srfA medium	0.270	ns
+PTI5	noninoculated	PS-216	0.005	**
+PTI5	noninoculated	PS-216 medium	0.711	ns
+PTI5	noninoculated	PS-216 srfA	0.037	*
+PTI5	noninoculated	PS-216 srfA medium	0.021	*
+PTI5	PS-216	PS-216 medium	0.005	**
+PTI5	PS-216	PS-216 srfA	0.962	ns
+PTI5	PS-216	PS-216 srfA medium	0.006	**
+PTI5	PS-216 medium	PS-216 srfA	0.039	*
+PTI5	PS-216 medium	PS-216 srfA medium	0.022	*
+PTI5	PS-216 srfA	PS-216 srfA medium	0.067	ns
+13-LOX	noninoculated	PS-216	0.073	ns
+13-LOX	noninoculated	PS-216 medium	0.059	ns
+13-LOX	noninoculated	PS-216 srfA	0.015	*
+13-LOX	noninoculated	PS-216 srfA medium	0.030	*
+13-LOX	PS-216	PS-216 medium	0.083	ns
+13-LOX	PS-216	PS-216 srfA	0.410	ns
+13-LOX	PS-216	PS-216 srfA medium	0.096	ns
+13-LOX	PS-216 medium	PS-216 srfA	0.019	*
+13-LOX	PS-216 medium	PS-216 srfA medium	0.172	ns
+13-LOX	PS-216 srfA	PS-216 srfA medium	0.023	*
+
+

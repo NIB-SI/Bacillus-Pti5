@@ -113,7 +113,10 @@ print(df.SE)
 ```
 
 
-# Hypothesis test for two means of percentages
+# hypothesis test for two means of percentages
+
+- performs a two-sample test for proportions (like a t-test for percentages), assuming beta-distributed data
+- must manually run for each pair
 
 ```{r, perctest}
 
@@ -127,13 +130,13 @@ logged = FALSE)
 ```
 
 
-# Beta Regression 
+# beta regression 
 
 - analyzing percentage data using beta regression followed by estimated marginal means (EMMs) and pairwise comparisons
 - Beta regression is well-suited for modeling data bounded between 0 and 1 (i.e., proportions or percentages)
 - Joint Tests is useful for testing whether the factor Genotype has a significant overall effect
 - Estimated Marginal Means -- EMMs are interpretable as model-adjusted group means.
-- Sidak adjustment for controlling family-wise error rate
+- Sidak adjustment for controlling family-wise error rate - sdjusts p-values or alpha levels for multiple comparisons; Dunnettx is designed for one-vs-control comparisons and is more statistically powerful in that context
 
 
 ```{r, betareg}
@@ -154,7 +157,7 @@ pairs(marginal,
       adjust="sidak")
 
 
-# Set up a compact letter display of all pair-wise comparisons
+# Set up a compact letter display of all pair-wise comparisons against control
 cld = multcomp::cld(marginal,
               alpha=0.05,
               Letters=letters,      ### Use lower-case letters for .group
