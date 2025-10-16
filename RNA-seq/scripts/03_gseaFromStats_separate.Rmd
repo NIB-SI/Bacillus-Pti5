@@ -1,0 +1,679 @@
+---
+title: "01_gseaFromStats"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 12
+    fig_height: 6
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 5
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  word_document:
+    toc: yes
+    toc_depth: '2'
+editor_options:
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(# dev = c('png', 'pdf'),  # this embeds pdf and crates scrolable blocks
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 6, 
+                      fig.width = 12 ,
+                      warning = FALSE, message = FALSE
+                      )
+# options(knitr.table.format = "html")
+```
+
+# libraries
+
+```{r, warning=FALSE, message=FALSE}
+
+# devtools::install_github(repo = "https://github.com/martingarridorc/biokit")
+library(biokit)
+
+library(magrittr)
+library(ggplot2)
+
+library(RColorBrewer)
+
+```
+
+
+
+<!-- # test data -->
+
+
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE}
+
+# data("sarsCovData")
+# data("humanHallmarks")
+# 
+# sarsCovMat <- sarsCovMat[rowSums(sarsCovMat) >= 15, ]
+# tmmMat <- countsToTmm(sarsCovMat)
+# diffRes <- biokit::autoLimmaComparison(mat = tmmMat, sampInfo = sarsCovSampInfo, groupCol = "group")
+# 
+# length(humanHallmarks)
+# lapply(humanHallmarks[1:10], head)
+# gseaResults <- gseaFromStats(df = diffRes, funCatList = humanHallmarks, rankCol = "logFc", splitCol = "comparison")
+# head(gseaResults)
+# colnames(gseaResults)
+# gseaPlot(gseaResults)
+# 
+# tstCol = gseaResults[, c(1,2,4,6,8)]
+# gseaPlot(tstCol)
+# range(tstCol$NES)
+
+
+
+```
+
+
+# Data
+
+```{r}
+
+fp = file.path('..', 'reports')
+fn = 'sel-bins.txt'
+
+sel = data.table::fread(file.path(fp, fn), sep = '\n', header = FALSE)
+sel = sel$V1
+
+fn = 'sel-bins_names_TL za MZ.xlsx'
+renaming = openxlsx::read.xlsx(file.path(fp, fn),
+                     sheet = 1,
+                     startRow = 1,
+                     colNames = TRUE,
+                     rowNames = FALSE,
+                     detectDates = FALSE,
+                     skipEmptyRows = TRUE,
+                     skipEmptyCols = TRUE,
+                     rows = NULL,
+                     cols = NULL,
+                     check.names = FALSE,
+                     sep.names = "_",
+                     namedRegion = NULL,
+                     na.strings = "NA",
+                     fillMergedCells = FALSE)
+
+# sel = c("1 PS",
+# "2.2.1.3 MAJOR CHO METABOLISM.DEGRADATION.SUCROSE.INVERTASES",
+# "8.1 TCA / ORGANIC TRANSFORMATION.TCA",
+# "10.6.1 CELL WALL.DEGRADATION.CELLULASES AND BETA-1,4-GLUCANASES",
+# "10.7 CELL WALL.MODIFICATION",
+# "10.8.1 CELL WALL.PECTINESTERASES.PME",
+# "11.1.15 LIPID METABOLISM.FA SYNTHESIS AND FA ELONGATION.ACP DESATURASE",
+# "11.8.1 LIPID METABOLISM.EXOTICS (STEROIDS, SQUALENE ETC).SPHINGOLIPIDS",
+# "13.2.4 AMINO ACID METABOLISM.DEGRADATION.BRANCHED CHAIN GROUP",
+# "16.1.5 SECONDARY METABOLISM.ISOPRENOIDS.TERPENOIDS",
+# "16.2.1 SECONDARY METABOLISM.PHENYLPROPANOIDS.LIGNIN BIOSYNTHESIS",
+# "16.2.1.10 SECONDARY METABOLISM.PHENYLPROPANOIDS.LIGNIN BIOSYNTHESIS.CAD",
+# "16.5.99 SECONDARY METABOLISM.SULFUR-CONTAINING.MISC",
+# "16.5.99.1 SECONDARY METABOLISM.SULFUR-CONTAINING.MISC.ALLIINASE",
+# "16.7 SECONDARY METABOLISM.WAX",
+# "17.6.1.11 HORMONE METABOLISM.GIBBERELIN.SYNTHESIS-DEGRADATION.GA20 OXIDASE",
+# "17.6.3 HORMONE METABOLISM.GIBBERELIN.INDUCED-REGULATED-RESPONSIVE-ACTIVATED",
+# "17.8 HORMONE METABOLISM.SALICYLIC ACID",
+# "19 TETRAPYRROLE SYNTHESIS",
+# "20.1.7 STRESS.BIOTIC.PR-PROTEINS",
+# "20.1.7.1 STRESS.BIOTIC.PR-PROTEINS.PR1 (ANTIFUNGAL)",
+# "20.1.7.3 STRESS.BIOTIC.PR-PROTEINS.PR3/4/8/11 (CHITINASES AND CHITIN BINDING PROTEINS)",
+# "20.1.7.6 STRESS.BIOTIC.PR-PROTEINS.PR6 (PROTEINASE INHIBITORS)",
+# "20.2.1 STRESS.ABIOTIC.HEAT",
+# "26.16 MISC.MYROSINASES-LECTIN-JACALIN",
+# "26.25 MISC.SULFOTRANSFERASE",
+# "28.1.3 DNA.SYNTHESIS/CHROMATIN STRUCTURE.HISTONE",
+# "29.2.1.1 PROTEIN.SYNTHESIS.RIBOSOMAL PROTEIN.PROKARYOTIC",
+# "29.5.11.4.1 PROTEIN.DEGRADATION.UBIQUITIN.E3.HECT",
+# "30.2.8.2 SIGNALLING.RECEPTOR KINASES.LEUCINE RICH REPEAT VIII.TYPE 2",
+# "30.2.12 SIGNALLING.RECEPTOR KINASES.LEUCINE RICH REPEAT XII",
+# "30.2.17 SIGNALLING.RECEPTOR KINASES.DUF 26",
+# "30.2.99 SIGNALLING.RECEPTOR KINASES.MISC",
+# "30.6 SIGNALLING.MAP KINASES",
+# "31.3 CELL.CYCLE",
+# "31.4 CELL.VESICLE TRANSPORT")
+
+```
+
+
+```{r, warning=FALSE, message=FALSE}
+
+fp = file.path('..', 'output')
+fn = 'GSEA_all-cols_monocultures.xlsx'
+gseaR = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                              sheet = 1, 
+                              startRow = 1,
+                              colNames = TRUE,
+                              rowNames = FALSE,
+                              detectDates = FALSE,
+                              skipEmptyRows = TRUE,
+                              skipEmptyCols = TRUE,
+                              rows = NULL,
+                              cols = NULL,
+                              check.names = FALSE,
+                              sep.names = "_",
+                              namedRegion = NULL,
+                              na.strings = "NA",
+                              fillMergedCells = FALSE
+                              )
+gseaR = data.frame(lapply(gseaR, function(x) {
+                  gsub('---', NA, x)
+              }))
+
+
+gseaR = gseaR[, c(1:2, grep('^NES|^FDR_q', colnames(gseaR)))]
+colnames(gseaR)[1:2] = c('pathway', 'size')
+# colnames(gseaR) = gsub('\\.1', '_padj', colnames(gseaR))
+i = grep('^NES', colnames(gseaR))
+NES = tidyr::gather(gseaR[, c(1:2, i)], 
+                    comparison, NES, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                    factor_key=TRUE)
+i = grep('^FDR_q', colnames(gseaR))
+padj = tidyr::gather(gseaR[, c(1:2, i)], 
+                     comparison, padj, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                     factor_key=TRUE)
+NES$comparison = gsub('NES\\.', '', NES$comparison)
+padj$comparison = gsub('FDR_q\\.val\\.', '', padj$comparison)
+
+table(is.na(NES$NES))
+table(is.na(padj$padj))
+table((NES$NES == '---'))
+table((padj$padj == '---'))
+table((NES$NES == '-'))
+table((padj$padj == '-'))
+
+gseaRes.1 = merge(NES, padj, by = c('pathway', 'size', 'comparison'), all.x = TRUE, all.y = TRUE)
+typeof(gseaRes.1$NES)
+typeof(gseaRes.1$padj)
+gseaRes.1$NES = as.numeric(gseaRes.1$NES)
+gseaRes.1$padj = as.numeric(gseaRes.1$padj)
+
+
+```
+
+
+```{r, warning=FALSE, message=FALSE}
+
+fp = file.path('..', '..', '..', '_S_NGS_mixed_cultures_exp2', '_A_04-RNAseq-GSEA', 'output')
+fn = 'GSEA_all-cols_mixed_cultures_exp2.xlsx'
+gseaR = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                              sheet = 1, 
+                              startRow = 1,
+                              colNames = TRUE,
+                              rowNames = FALSE,
+                              detectDates = FALSE,
+                              skipEmptyRows = TRUE,
+                              skipEmptyCols = TRUE,
+                              rows = NULL,
+                              cols = NULL,
+                              check.names = FALSE,
+                              sep.names = "_",
+                              namedRegion = NULL,
+                              na.strings = "NA",
+                              fillMergedCells = FALSE
+                              )
+gseaR = data.frame(lapply(gseaR, function(x) {
+                  gsub('---', NA, x)
+              }))
+
+
+gseaR = gseaR[, c(1:2, grep('^NES|^FDR_q', colnames(gseaR)))]
+colnames(gseaR)[1:2] = c('pathway', 'size')
+# colnames(gseaR) = gsub('\\.1', '_padj', colnames(gseaR))
+i = grep('^NES', colnames(gseaR))
+NES = tidyr::gather(gseaR[, c(1:2, i)], 
+                    comparison, NES, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                    factor_key=TRUE)
+i = grep('^FDR_q', colnames(gseaR))
+padj = tidyr::gather(gseaR[, c(1:2, i)], 
+                     comparison, padj, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                     factor_key=TRUE)
+NES$comparison = gsub('NES\\.', '', NES$comparison)
+padj$comparison = gsub('FDR_q\\.val\\.', '', padj$comparison)
+
+table(is.na(NES$NES))
+table(is.na(padj$padj))
+table((NES$NES == '---'))
+table((padj$padj == '---'))
+table((NES$NES == '-'))
+table((padj$padj == '-'))
+
+gseaRes.2 = merge(NES, padj, by = c('pathway', 'size', 'comparison'), all.x = TRUE, all.y = TRUE)
+typeof(gseaRes.2$NES)
+typeof(gseaRes.2$padj)
+gseaRes.2$NES = as.numeric(gseaRes.2$NES)
+gseaRes.2$padj = as.numeric(gseaRes.2$padj)
+
+
+```
+
+
+
+```{r}
+
+all(gseaRes.1$pathway == gseaRes.2$pathway)
+all(gseaRes.1$size == gseaRes.2$size)
+gseaRes = rbind(gseaRes.1, gseaRes.2)
+j = grep('REST', gseaRes$comparison)
+gseaRes = gseaRes[-j, ]
+
+table(gseaRes$comparison)
+
+tmp = gseaRes
+tmp$NES[tmp$padj >= 0.1] = NA
+table(tmp$NES == 0)
+tmp$NES[tmp$NES < 0] = -1
+tmp$NES[tmp$NES > 0] = 1
+table(tmp$NES)
+tmp = tmp[, -ncol(tmp)]
+
+# https://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/
+
+temp = tidyr::spread(tmp, comparison, NES)
+rs = rowSums(is.na(temp[, 3:ncol(temp)]))
+ind = which(rs/ncol(temp[, 3:ncol(temp)]) == 1)
+temp = temp[-ind, ]
+
+fp = file.path('..', 'reports')
+fn = 'GSEA_NES_monocultures_interactions.xlsx'
+openxlsx::write.xlsx(temp, file = file.path(fp, fn), asTable = TRUE, overwrite = TRUE)
+
+
+```
+
+
+```{r}
+
+# sel = gseaRes$pathway[grep('^20|^21|^29|^30', gseaRes$pathway)]
+# sel = unique(gseaRes$pathway[grep('^20|^21|^^30.2|^30.6', gseaRes$pathway)])
+# sel = unique(gseaRes$pathway[grep('^17|^20.2|^30.2.11|^30.2.24|^30.2.3', gseaRes$pathway)])
+# sel = unique(gseaRes$pathway[grep('^10.8.1 |^13.2.4 |^16.5.99|^16.5.99.1 |^17.6.1.11 |^20.1.7 |^20.1.7.1 |^20.1.7.3 |^20.1.7.6 |^26.25 |^28.1.3 |^29.2.1.1 |^30.2.8.2 |^31.3 ', gseaRes$pathway)])
+
+i = which(gseaRes$comparison == '218_YFP_218_MKATE')
+j = which(gseaRes$comparison == '216_YFP_218_MKATE')
+a = gseaRes[i, ]
+b = gseaRes[j, ]
+
+a$NES[a$padj >= 0.1] = 0
+b$NES[b$padj >= 0.1] = 0
+a = a[, -ncol(a)]
+b = b[, -ncol(b)]
+e = merge(a, b, by = c("pathway",
+                       "size"),
+          all.x = TRUE, all.y = TRUE)
+remove = which(e$NES.x == 0 & e$NES.y == 0)
+e = e[-remove, ]
+
+
+# gseaRes$pathway[grep('17.5.1.1', gseaRes$pathway)] = '17.5.1.1 HORMONE METABOLISM.ETHYLENE.SYNTHESIS-DEGRADATION'
+
+
+```
+
+
+
+
+
+```{r, warning=FALSE, message=FALSE}
+
+# colnames(gseaRes)
+gseaRes = gseaRes[gseaRes$pathway %in% sel, ]
+gseaRes = gseaRes[gseaRes$comparison != '218_YFP', ]
+
+gseaRes$group = 'Monocultures'
+gseaRes$group[grep('YFP|MKATE', gseaRes$comparison)] = 'Interactions'
+gseaRes$subgroup = 'Roots'
+gseaRes$subgroup[grep('leaf', gseaRes$comparison)] = 'Shoots'
+gseaRes$group = factor(gseaRes$group, levels = unique(gseaRes$group))
+gseaRes$subgroup = factor(gseaRes$subgroup, levels = c('Roots', 'Shoots'))
+
+
+gseaRes$comparison = gsub('216_YFP_218_MKATE', 'NONKIN', gseaRes$comparison)
+gseaRes$comparison = gsub('218_YFP_218_MKATE', 'KIN', gseaRes$comparison)
+gseaRes$comparison = gsub('216_YFP', 'PS-216', gseaRes$comparison)
+gseaRes$comparison = gsub('218_MKATE', 'PS-218', gseaRes$comparison)
+gseaRes$comparison = gsub('_PS2', '_PS-2', gseaRes$comparison)
+gseaRes$comparison = gsub('root_', '', gseaRes$comparison)
+
+
+gseaResX = gseaRes
+gseaResX$pathway = renaming$TLname[match(gseaRes$pathway, renaming$originalName)]
+gseaRes = gseaResX
+sel2 = renaming$TLname[match(sel, renaming$originalName)]
+sel = sel2
+
+
+gseaRes$pathway = factor(gseaRes$pathway, levels = rev(sel))
+gseaRes$comparison = factor(gseaRes$comparison, 
+                            levels = c('PS-216_2h', 'PS-218_2h', 'PS-216_26h', 'PS-218_26h',
+                                       'leaf_PS-216', 'leaf_PS-218',
+                                       'PS-216', 'PS-218', 'KIN', 'NONKIN'))
+
+r = range(gseaRes$NES, na.rm = TRUE)
+hist(gseaRes$NES, breaks = 100)
+
+
+# ? gseaFromStats(
+
+my.gseaRes = function (gseaResDf, pCutoff, mytitle) {
+    outP <- gseaResDf %>% 
+      dplyr::mutate(status = ifelse(NES > 0, "Up", "Down")) # %>% 
+      # subset(padj < pCutoff)  %>%
+      
+      p = ggplot(outP,
+             aes(x = comparison, 
+                 y = pathway, 
+                 fill = NES,
+                 size = -log10(padj), 
+                 shape = status
+                 )) + 
+      geom_point(alpha=0.75) + 
+      scale_shape_manual(values = c(Up = 24, #21,
+                                    Down = 25# 21#25
+                                    )
+                         ) +
+      scale_fill_gradient2(high = "darkred",#("darkred"),
+                           mid = "white",
+                           low = "darkblue",#("darkblue"),
+                           midpoint = 0,
+                           limits = c(-3,3),
+                           # n.breaks = 10,
+                           breaks = c(-1, 0, 1),
+                           na.value = 'white') +
+      guides(x = guide_axis(angle = 90#,
+                            #n.dodge = 
+                              )) + 
+      theme_bw() + 
+        ggtitle(paste0(mytitle, " (FDR < ",
+                       pCutoff, ")")) +
+      theme(
+            axis.text.x = element_text(size = 12),
+            axis.text.y = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size=32)) +
+        xlab('') + 
+        ylab('MapManBin') +
+      theme(legend.position="none") +
+        geom_vline(xintercept = c(4.5), linetype='longdash', col = 'gray75') +
+        geom_vline(xintercept = c(2.5), linetype='twodash', col = 'gray75') +
+        geom_vline(xintercept = c(6.5), col = 'gray75',linewidth= 1.1)
+      
+    return(p)
+}
+
+
+table(is.na(gseaRes$NES))
+gseaRes$NES[which(gseaRes$NES < 0)] = -1
+gseaRes$NES[which(gseaRes$NES > 0)] = 1
+gseaRes$NES[gseaRes$padj >= 0.1] = NA
+gseaRes$padj[gseaRes$padj == 0] = min(gseaRes$padj[gseaRes$padj != 0])
+table(is.na(gseaRes$padj))
+table(is.na(gseaRes$NES))
+
+
+
+my.gseaRes(gseaRes, pCutoff = 0.1, mytitle = '')
+
+
+# gseaRes[grep('13.2.4', gseaRes$pathway), ]
+
+
+
+```
+
+
+
+```{r}
+
+table(gseaRes$group)
+table(gseaRes$subgroup)
+
+Interactions = gseaRes[gseaRes$group == 'Interactions', ]
+Monocultures = gseaRes[gseaRes$group == 'Monocultures', ]
+
+Interactions$group = droplevels(Interactions$group)
+Monocultures$group = droplevels(Monocultures$group)
+Interactions$subgroup = droplevels(Interactions$subgroup)
+Monocultures$subgroup = droplevels(Monocultures$subgroup)
+
+
+Interactions = Interactions[!is.na(Interactions$NES), ]
+Monocultures = Monocultures[!is.na(Monocultures$NES), ]
+
+Interactions$pathway = droplevels(Interactions$pathway)
+Monocultures$pathway = droplevels(Monocultures$pathway)
+
+```
+
+
+
+```{r}
+
+fp = file.path('..', 'reports')
+
+ggsave(
+  filename = file.path(fp, 'GSEA_TLnaming.png'),
+  plot = last_plot(),
+  device = png,
+  path = file.path('.'),
+  scale = 1,
+  width = 6500,
+  height = 6000,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(fp, 'GSEA_TLnaming.pdf'),
+  plot = last_plot(),
+  device = pdf,
+  path = file.path('.'),
+  scale = 1,
+  width = 6500,
+  height = 6000,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+```
+
+
+```{r}
+
+my.gseaRes = function (gseaResDf, pCutoff, mytitle) {
+    outP <- gseaResDf %>% 
+      dplyr::mutate(status = ifelse(NES > 0, "Up", "Down")) # %>% 
+      # subset(padj < pCutoff)  %>%
+      
+      p = ggplot(outP,
+             aes(x = comparison, 
+                 y = pathway, 
+                 fill = NES,
+                 size = -log10(padj), 
+                 shape = status
+                 )) + 
+      geom_point(alpha=0.75) + 
+      scale_shape_manual(values = c(Up = 24, #21,
+                                    Down = 25# 21#25
+                                    )
+                         ) +
+      scale_fill_gradient2(high = "darkred",#("darkred"),
+                           mid = "white",
+                           low = "darkblue",#("darkblue"),
+                           midpoint = 0,
+                           limits = c(-3,3),
+                           # n.breaks = 10,
+                           breaks = c(-1, 0, 1),
+                           na.value = 'white') +
+      guides(x = guide_axis(angle = 90#,
+                            #n.dodge = 
+                              )) + 
+      theme_bw() + 
+        ggtitle(paste0(mytitle
+                       )) +
+      theme(
+            axis.text.x = element_text(size = 12),
+            axis.text.y = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size=32)) +
+        xlab('') + 
+        ylab('MapManBin') +
+      theme(legend.position="none") +
+        geom_vline(xintercept = c(2.5), linetype='twodash', col = 'gray75')
+
+    return(p)
+}
+
+# Interactions$padj[Interactions$padj < 0.1] = min(Interactions$padj)
+
+my.gseaRes(Interactions, pCutoff = 0.1, mytitle = 'Inter.')
+
+ggsave(
+  filename = file.path(fp, 
+                       # 'GSEA-Interactions_TLnaming_sameSize.png',
+                       'GSEA-Interactions_TLnaming_differentSize.png'),
+  plot = last_plot(),
+  device = png,
+  path = file.path('.'),
+  scale = 1,
+  width = 3500,
+  height = 4000,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(fp, 
+                       # 'GSEA-Interactions_TLnaming_sameSize.pdf',
+                       'GSEA-Interactions_TLnaming_differentSize.pdf'),
+  plot = last_plot(),
+  device = pdf,
+  path = file.path('.'),
+  scale = 1,
+  width = 3500,
+  height = 4000,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+```
+
+
+```{r}
+
+my.gseaRes = function (gseaResDf, pCutoff, mytitle) {
+    outP <- gseaResDf %>% 
+      dplyr::mutate(status = ifelse(NES > 0, "Up", "Down")) # %>% 
+      # subset(padj < pCutoff)  %>%
+      
+      p = ggplot(outP,
+             aes(x = comparison, 
+                 y = pathway, 
+                 fill = NES,
+                 size = -log10(padj), 
+                 shape = status
+                 )) + 
+      geom_point(alpha=0.75) + 
+      scale_shape_manual(values = c(Up = 24, #21,
+                                    Down = 25# 21#25
+                                    )
+                         ) +
+      scale_fill_gradient2(high = "darkred",#("darkred"),
+                           mid = "white",
+                           low = "darkblue",#("darkblue"),
+                           midpoint = 0,
+                           limits = c(-3,3),
+                           # n.breaks = 10,
+                           breaks = c(-1, 0, 1),
+                           na.value = 'white') +
+      guides(x = guide_axis(angle = 90#,
+                            #n.dodge = 
+                              )) + 
+      theme_bw() + 
+        ggtitle(paste0(mytitle
+                       )) +
+      theme(
+            axis.text.x = element_text(size = 12),
+            axis.text.y = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size=32)) +
+        xlab('') + 
+        ylab('MapManBin') +
+      theme(legend.position="none") +
+        geom_vline(xintercept = c(4.5), linetype='longdash', col = 'gray75') +
+        geom_vline(xintercept = c(2.5), linetype='twodash', col = 'gray75')
+
+      
+    return(p)
+}
+
+# Monocultures$padj[Monocultures$padj < 0.1] = min(Monocultures$padj)
+
+my.gseaRes(Monocultures, pCutoff = 0.1, mytitle = 'Monoc.')
+
+ggsave(
+  filename = file.path(fp, 
+                       # 'GSEA-Monocultures_TLnaming_sameSize.png',
+                       'GSEA-Monocultures_TLnaming_differentSize.png'),
+  plot = last_plot(),
+  device = png,
+  path = file.path('.'),
+  scale = 1,
+  width = 3750,
+  height = 5500,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(fp, 
+                       # 'GSEA-Monocultures_TLnaming_sameSize.pdf',
+                       'GSEA-Monocultures_TLnaming_differentSize.pdf'),
+  plot = last_plot(),
+  device = pdf,
+  path = file.path('.'),
+  scale = 1,
+  width = 3750,
+  height = 5500,
+  units = "px",
+  dpi = 600,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+```
+
+
+
+# sessionInfo
+
+```{r}
+
+sessionInfo()
+
+```
+
