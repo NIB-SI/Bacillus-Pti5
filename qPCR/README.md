@@ -1,9 +1,9 @@
-# qPCR
+🧬 qPCR assays
 
 # qPCR data
+ - [MIQE 2.0: Revision of the Minimum Information for Publication of Quantitative Real-Time PCR Experiments Guidelines](https://academic.oup.com/clinchem/article/71/6/634/8119148)
  - [quantGenius - quantification of qPCR data using standard curve](http://quantgenius.nib.si)
    - [Equations used in quantGenius workflow](https://static-content.springer.com/esm/art%3A10.1186%2Fs12859-017-1688-7/MediaObjects/12859_2017_1688_MOESM2_ESM.pdf)
- - [MIQE 2.0: Revision of the Minimum Information for Publication of Quantitative Real-Time PCR Experiments Guidelines](https://academic.oup.com/clinchem/article/71/6/634/8119148)
  - quantification based on a standard curve inherently involves a log transformation of the input data
  - LOQ values skew distributions
 
