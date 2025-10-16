@@ -82,7 +82,7 @@
 - `stats::p.adjust(method = "BH")`
 
 ### Games-Howell Post-hoc Test
-- `games_howell_test`
+- `rstatix::games_howell_test`
 - Compares all group pairs when variance homogeneity is violated
 - Based on:
   - Welch’s degrees of freedom correction
