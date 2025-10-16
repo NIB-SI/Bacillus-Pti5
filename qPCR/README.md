@@ -70,8 +70,11 @@
 | Metric               | Type           | Notes                        |R|
 |----------------------|----------------|------------------------------|-|
 | Cohen’s d            | Parametric     | Sensitive to outliers        |`cohens_d`|
+| Hedges’ g            | Parametric     | Smaller sample size        |`cohen.d(hedges.correction = TRUE)`|
 | **Wilcoxon Effect Size** | Non-parametric | More robust alternative      |`wilcox_effsize` 🔎|
 
+- Cohen’s d or Hedges’ g are not used when reporting results from a non-parametric test
+- 
 ### 📔 permutation t-test
 - Non-parametric alternative to traditional t-tests
 - Suitable for:
