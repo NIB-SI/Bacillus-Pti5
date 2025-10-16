@@ -23,12 +23,16 @@
 ## distribution, variance and effects
 ### Distribution
   - various robustness under varying skewness and kurtosis
-    - Shapiro–Wilk `shapiro.test`
-    - Lilliefors `lillie.test`
-    - Anderson–Darling (Empirical distribution-based test) `ad.test`
-    - Jarque–Bera `jarque.bera.test`
-    - D’Agostino Skewness `agostino.test`
-  - low power for small sample size
+  - can have low power for small sample size
+
+| Test Name            | R                  | Type                          | Sensitivity to Tails | 
+|----------------------|-----------------------------|-------------------------------|----------------------|
+| Shapiro–Wilk     | `shapiro.test()`            | Parametric                    | Moderate             | 
+| Lilliefors (KS)  | `nortest::lillie.test()`    | Non-parametric (KS variant)   | High                 | 
+| Anderson–Darling | `nortest::ad.test()`        | Empirical distribution-based  | Very High           | 
+| Jarque–Bera      | `tseries::jarque.bera.test()` | Parametric                    | Low–Moderate        | 
+| D’Agostino Skewness | `moments::agostino.test()` | Parametric                    | Focused on skewness | 
+
   - Q-Q (Quantile-Quantile) plots and a Residual plots `ggqqplot`
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
