@@ -81,6 +81,12 @@
 - `MKinfer::perm.t.test`, `exactRankTests::perm.test`
 - `stats::p.adjust(method = "BH")`
 
+### ANOVA (parametric, non-parametric, and permutation-based variants)
+- Running ANOVA assumes you're testing whether group means differ significantly, under the null hypothesis that all groups are equal
+- When experimental design intentionally introduces differences violates the null hypothesis from the start
+- Can obscure meaningful planned contrasts or targeted comparisons
+- Post-hoc tests (e.g., Dunnett, Games-Howell, emmeans) are often more informative and aligned with design
+
 ### Games-Howell Post-hoc Test
 - `rstatix::games_howell_test`
 - Compares all group pairs when variance homogeneity is violated
