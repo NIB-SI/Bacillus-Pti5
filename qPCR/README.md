@@ -98,7 +98,7 @@
   - No need for additional p-value corrections
   - Assumes approximate normality of residuals 
 
-### 📔 Hypothesis Test for Two Means of Percentages
+### 🗞️ Hypothesis Test for Two Means of Percentages
 - Use `Rfast::percent.ttest()` for pairwise proportion comparisons
 - Assumes beta-distributed data
 - Must be run manually for each pair
