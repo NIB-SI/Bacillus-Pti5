@@ -4,10 +4,15 @@
 ## 📁 structure
 
 ├── input/              # processed qPCR data and other input tables
-├── other/              
+
+├── other/    
+
 ├── output/              # output tables
+
 ├── reports/              # separate `.pdf` and `.svg` plots
+
 ├── scripts/              # `.Rmd` scripts and `.html` reports
+
 ├── README.md             
 
 
@@ -18,7 +23,7 @@
  - quantification based on a standard curve inherently involves a log transformation of the input data
  - LOQ values skew distributions
 
-$# R packages of interest    
+## R packages of interest    
 - [MKinfer](https://stamats.r-universe.dev/MKinfer)
 - [exactRankTests](https://thothorn.r-universe.dev/exactRankTests)
 - [rstatix](https://kassambara.r-universe.dev/rstatix)
@@ -64,7 +69,7 @@ $# R packages of interest
 | Cohen’s d            | Parametric     | Sensitive to outliers        |`cohens_d`|
 | Wilcoxon Effect Size | Non-parametric | More robust alternative      |`wilcox_effsize`|
 
-## permutation t-test
+### permutation t-test
 - Non-parametric alternative to traditional t-tests
 - Suitable for:
   - Small sample sizes
@@ -73,7 +78,7 @@ $# R packages of interest
 - Robust and flexible for exploratory comparisons
 - `MKinfer::perm.t.test`, `exactRankTests::perm.test`
 
-## Games-Howell Post-hoc Test
+### Games-Howell Post-hoc Test
 - `games_howell_test`
 - Compares all group pairs when variance homogeneity is violated
 - Based on:
@@ -84,12 +89,12 @@ $# R packages of interest
   - No need for additional p-value corrections
   - Assumes approximate normality of residuals 
 
-## Hypothesis Test for Two Means of Percentages
+### Hypothesis Test for Two Means of Percentages
 - Use `Rfast::percent.ttest()` for pairwise proportion comparisons
 - Assumes beta-distributed data
 - Must be run manually for each pair
 
-## Beta Regression & EMMs
+### Beta Regression & EMMs
 - Use `betareg::betareg()` for modeling data bounded between 0 and 1 (i.e., proportions or percentages)
 - Use `emmeans::emmeans()` for estimated marginal means (EMMs)
 - Use `emmeans::joint_tests()` to test overall factor effects
