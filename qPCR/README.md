@@ -28,7 +28,7 @@
     - Anderson–Darling (Empirical distribution-based test) `ad.test`
     - Jarque–Bera `jarque.bera.test`
     - D’Agostino Skewness `agostino.test`
-  - low power for small sample size,
+  - low power for small sample size
   - Q-Q (Quantile-Quantile) plots and a Residual plots `ggqqplot`
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
