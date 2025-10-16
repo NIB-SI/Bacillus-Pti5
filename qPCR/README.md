@@ -10,34 +10,36 @@
 # R packages    
 - [MKinfer](https://stamats.r-universe.dev/MKinfer)
 - [exactRankTests](https://thothorn.r-universe.dev/exactRankTests)
-- [rstatix]([https://rpkgs.datanovia.com/rstatix/](https://kassambara.r-universe.dev/rstatix))
+- [rstatix](https://kassambara.r-universe.dev/rstatix)
 - [Rfast](https://rfastofficial.r-universe.dev/Rfast)
 - [emmeans](https://rvlenth.r-universe.dev/emmeans)
 - [multcomp](https://r-forge.r-universe.dev/multcomp)
 - [ggplot2](https://tidyverse.r-universe.dev/ggplot2)
 - [ggplubr](https://kassambara.r-universe.dev/ggpubr)
+- [egg](https://baptiste.r-universe.dev/egg)
 - ...
 
 # concepts
 ## distribution, variance and effects
 ### Distribution
   - various robustness under varying skewness and kurtosis
-    - Shapiro–Wilk
-    - Lilliefors
-    - Anderson–Darling (Empirical distribution-based test)
-    - Jarque–Bera
-    - D’Agostino Skewness 
+    - Shapiro–Wilk `shapiro.test`
+    - Lilliefors `lillie.test`
+    - Anderson–Darling (Empirical distribution-based test) `ad.test`
+    - Jarque–Bera `jarque.bera.test`
+    - D’Agostino Skewness `agostino.test`
   - low power for small sample size,
-  - Q-Q (Quantile-Quantile) plots and a Residual plots
+  - Q-Q (Quantile-Quantile) plots and a Residual plots `ggqqplot`
       - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
       - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem
-### Heteroscedasticity: some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality
-  - Levene’s test with mean, under asumptions
-  - more robust test Brown-Forsythe with median, under asumptions
-  - Fligner-Killeen when data are non-normally distributed or when problems related to outliers in the dataset cannot be resolved
+### Heteroscedasticity
+- some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality
+  - Levene’s test with mean, under asumptions `levene_test`
+  - more robust test Brown-Forsythe with median, under asumptions `levene_test(center = median)`
+  - Fligner-Killeen when data are non-normally distributed or when problems related to outliers in the dataset cannot be resolved `fligner.test`
 ### Effect Size
-  - Cohen’s d - parametric, under assumptions, sensitive to outliers
-  - Wilcoxon Effect Size - the non-parametric alternative; different sensitivity to outliers
+  - Cohen’s d - parametric, under assumptions, sensitive to outliers `cohens_d`
+  - Wilcoxon Effect Size - the non-parametric alternative; different sensitivity to outliers `wilcox_effsize`
 
 ## permutation t-test
 - Non-parametric alternative to traditional t-tests
@@ -46,8 +48,10 @@
   - Unequal variances
   - Non-i.i.d. data
 - Robust and flexible for exploratory comparisons
+- `MKinfer::perm.t.test`, `exactRankTests::perm.test`
 
 ## Games-Howell Post-hoc Test
+- `games_howell_test`
 - Compares all group pairs when variance homogeneity is violated
 - Based on:
   - Welch’s degrees of freedom correction
@@ -55,7 +59,7 @@
 - Features:
   - Confidence intervals for mean differences
   - No need for additional p-value corrections
-  - Assumes approximate normality of residuals
+  - Assumes approximate normality of residuals 
 
 ## Hypothesis Test for Two Means of Percentages
 - Use `Rfast::percent.ttest()` for pairwise proportion comparisons
