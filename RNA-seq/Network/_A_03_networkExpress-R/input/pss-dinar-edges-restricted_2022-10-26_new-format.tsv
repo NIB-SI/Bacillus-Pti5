@@ -1,0 +1,824 @@
+source	target	interaction_type	directed	reaction_type	reaction_effect	reaction_id	source_edge_type	source_location	source_form	target_edge_type	target_location	target_form
+HC-Pro	CRT	inhibition	FALSE	binding/oligomerisation	inhibition	rx00215	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+CRT	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00215	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+SNRK2	ARR-A	activation	TRUE	protein activation	activation	rx00570	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	nucleus	protein
+HC-Pro	EDF2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00218	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+EDF2	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00218	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+CML	HC-Pro	binding	FALSE	binding/oligomerisation	activation	rx00219	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+HC-Pro	CML	binding	FALSE	binding/oligomerisation	activation	rx00219	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+CML	CML|HC-Pro	activation	TRUE	binding/oligomerisation	activation	rx00219	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+HC-Pro	CML|HC-Pro	activation	TRUE	binding/oligomerisation	activation	rx00219	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+CA	CA-CoA	activation	TRUE	catalysis	activation	rx00532	SUBSTRATE	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+CA	BZO1	activation	TRUE	catalysis	activation	rx00532	SUBSTRATE	peroxisome	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+BZO1	CA-CoA	activation	TRUE	catalysis	activation	rx00532	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	peroxisome	metabolite
+EDS1	PAD4	binding	FALSE	binding/oligomerisation	activation	rx00087	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+PAD4	EDS1	binding	FALSE	binding/oligomerisation	activation	rx00087	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+EDS1	EDS1|PAD4	activation	TRUE	binding/oligomerisation	activation	rx00087	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+PAD4	EDS1|PAD4	activation	TRUE	binding/oligomerisation	activation	rx00087	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+MPK3,6	EDS1|PAD4	binding	FALSE	binding/oligomerisation	activation	rx00090	SUBSTRATE	cytoplasm	protein_active	PRODUCT	nucleus	complex_active
+EDS1|PAD4	MPK3,6	binding	FALSE	binding/oligomerisation	activation	rx00090	PRODUCT	nucleus	complex_active	SUBSTRATE	cytoplasm	protein_active
+MPK3,6	EDS1|MPK3|PAD4	activation	TRUE	binding/oligomerisation	activation	rx00090	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+EDS1|PAD4	EDS1|MPK3|PAD4	activation	TRUE	binding/oligomerisation	activation	rx00090	PRODUCT	nucleus	complex_active	PRODUCT	cytoplasm	complex_active
+HC-Pro	TDX	inhibition	FALSE	binding/oligomerisation	inhibition	rx00220	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+TDX	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00220	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RBC	P3	inhibition	FALSE	binding/oligomerisation	inhibition	rx00221	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+P3	RBC	inhibition	FALSE	binding/oligomerisation	inhibition	rx00221	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+OBE1	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00226	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+VPg	OBE1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00226	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+VPg	RH8	inhibition	FALSE	binding/oligomerisation	inhibition	rx00227	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RH8	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00227	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+ETR	CRT	binding	FALSE	binding/oligomerisation	activation	rx00228	SUBSTRATE	endoplasmic reticulum	protein	SUBSTRATE	cytoplasm	protein_active
+CRT	ETR	binding	FALSE	binding/oligomerisation	activation	rx00228	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	endoplasmic reticulum	protein
+ETR	CRT|ETR	activation	TRUE	binding/oligomerisation	activation	rx00228	SUBSTRATE	endoplasmic reticulum	protein	PRODUCT	cytoplasm	complex_active
+CRT	CRT|ETR	activation	TRUE	binding/oligomerisation	activation	rx00228	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+CRT	Ca2+	inhibition	FALSE	binding/oligomerisation	inhibition	rx00194	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	metabolite
+Ca2+	CRT	inhibition	FALSE	binding/oligomerisation	inhibition	rx00194	SUBSTRATE	cytoplasm	metabolite	SUBSTRATE	cytoplasm	protein_active
+HC-Pro	SAMS	inhibition	TRUE	protein deactivation	inhibition	rx00197	SUBSTRATE	cytoplasm	protein	PRODUCT	endoplasmic reticulum	protein
+HC-Pro	SAHH	inhibition	TRUE	protein deactivation	inhibition	rx00198	SUBSTRATE	cytoplasm	protein	PRODUCT	endoplasmic reticulum	protein
+HSP90	SGT1	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HSP90	RAR1	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+SGT1	HSP90	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+SGT1	RAR1	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RAR1	HSP90	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RAR1	SGT1	binding	FALSE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HSP90	HSP90|RAR1|SGT1	activation	TRUE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+SGT1	HSP90|RAR1|SGT1	activation	TRUE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+RAR1	HSP90|RAR1|SGT1	activation	TRUE	binding/oligomerisation	activation	rx00053	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+VPg	PR5	inhibition	FALSE	binding/oligomerisation	inhibition	rx00673	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+PR5	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00673	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+HC-Pro	AGO1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00199	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+AGO1	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00199	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+SAGs	EDS1|PAD4	binding	FALSE	binding/oligomerisation	activation	rx00054	SUBSTRATE	nucleus	protein	PRODUCT	nucleus	complex_active
+EDS1|PAD4	SAGs	binding	FALSE	binding/oligomerisation	activation	rx00054	PRODUCT	nucleus	complex_active	SUBSTRATE	nucleus	protein
+SAGs	EDS1|PAD4|SAG	activation	TRUE	binding/oligomerisation	activation	rx00054	SUBSTRATE	nucleus	protein	PRODUCT	nucleus	complex_active
+EDS1|PAD4	EDS1|PAD4|SAG	activation	TRUE	binding/oligomerisation	activation	rx00054	PRODUCT	nucleus	complex_active	PRODUCT	nucleus	complex_active
+CI	AGO1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00200	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+AGO1	CI	inhibition	FALSE	binding/oligomerisation	inhibition	rx00200	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+CPIP	CP	inhibition	FALSE	binding/oligomerisation	inhibition	rx00201	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+CP	CPIP	inhibition	FALSE	binding/oligomerisation	inhibition	rx00201	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+HC-Pro	DXPS2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00204	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+DXPS2	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00204	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HC-Pro	ATPB	inhibition	FALSE	binding/oligomerisation	inhibition	rx00205	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+ATPB	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00205	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RIN4	NDR1	binding	FALSE	binding/oligomerisation	activation	rx00055	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+NDR1	RIN4	binding	FALSE	binding/oligomerisation	activation	rx00055	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+RIN4	NDR1|RIN4	activation	TRUE	binding/oligomerisation	activation	rx00055	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+NDR1	NDR1|RIN4	activation	TRUE	binding/oligomerisation	activation	rx00055	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+HC-Pro	MIND1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00207	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+MIND1	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00207	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HC-Pro	PAA2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00211	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+PAA2	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00211	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+PBB2	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00212	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HC-Pro	PBB2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00212	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+TGA2,5,6	NPR1	binding	FALSE	binding/oligomerisation	activation	rx00099	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+NPR1	TGA2,5,6	binding	FALSE	binding/oligomerisation	activation	rx00099	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+TGA2,5,6	NPR1|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00099	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex
+NPR1	NPR1|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00099	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex
+NPR1 high & JAZ high	NPR1|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00099	ACTIVATES		condition	PRODUCT	nucleus	complex
+NPR1 high & JAZ low	NPR1|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00099	ACTIVATES		condition	PRODUCT	nucleus	complex
+RANGAP	Rx	binding	FALSE	binding/oligomerisation	activation	rx00057	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+Rx	RANGAP	binding	FALSE	binding/oligomerisation	activation	rx00057	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+RANGAP	RANGAP|Rx	activation	TRUE	binding/oligomerisation	activation	rx00057	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+Rx	RANGAP|Rx	activation	TRUE	binding/oligomerisation	activation	rx00057	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+GPAphid2	RANGAP	binding	FALSE	binding/oligomerisation	activation	rx00059	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+RANGAP	GPAphid2	binding	FALSE	binding/oligomerisation	activation	rx00059	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+GPAphid2	GPAphid2|RANGAP	activation	TRUE	binding/oligomerisation	activation	rx00059	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+RANGAP	GPAphid2|RANGAP	activation	TRUE	binding/oligomerisation	activation	rx00059	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+PBE1	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00213	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HC-Pro	PBE1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00213	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+WRKY17	OBE1	binding	FALSE	binding/oligomerisation	activation	rx00229	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+OBE1	WRKY17	binding	FALSE	binding/oligomerisation	activation	rx00229	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+WRKY17	OBE1|WRKY17	activation	TRUE	binding/oligomerisation	activation	rx00229	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+OBE1	OBE1|WRKY17	activation	TRUE	binding/oligomerisation	activation	rx00229	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+OBE1	WRKY11	binding	FALSE	binding/oligomerisation	activation	rx00230	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+WRKY11	OBE1	binding	FALSE	binding/oligomerisation	activation	rx00230	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+OBE1	OBE1|WRKY11	activation	TRUE	binding/oligomerisation	activation	rx00230	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+WRKY11	OBE1|WRKY11	activation	TRUE	binding/oligomerisation	activation	rx00230	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+OBE1	CO	binding	FALSE	binding/oligomerisation	activation	rx00231	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+CO	OBE1	binding	FALSE	binding/oligomerisation	activation	rx00231	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+OBE1	CO|OBE1	activation	TRUE	binding/oligomerisation	activation	rx00231	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+CO	CO|OBE1	activation	TRUE	binding/oligomerisation	activation	rx00231	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+RBC	COI1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00232	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+COI1	RBC	inhibition	FALSE	binding/oligomerisation	inhibition	rx00232	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein_active
+JAZ	RBC	inhibition	FALSE	binding/oligomerisation	inhibition	rx00233	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein_active
+RBC	JAZ	inhibition	FALSE	binding/oligomerisation	inhibition	rx00233	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+HC-Pro	HEN1	inhibition	TRUE	protein deactivation	inhibition	rx00580	SUBSTRATE	cytoplasm	protein	PRODUCT	putative:cytoplasm	protein
+IsoChor-9-Glu	N-pyruvoyl-L-Glu	activation	TRUE	catalysis	activation	rx00515	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IsoChor-9-Glu	SA	activation	TRUE	catalysis	activation	rx00515	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IsoChor-9-Glu	EPS1	activation	TRUE	catalysis	activation	rx00515	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+EPS1	N-pyruvoyl-L-Glu	activation	TRUE	catalysis	activation	rx00515	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+EPS1	SA	activation	TRUE	catalysis	activation	rx00515	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+SA	GST	inhibition	TRUE	protein deactivation	inhibition	rx00234	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	protein
+FLS2	BAK1	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+FLS2	flg22	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+BAK1	FLS2	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+BAK1	flg22	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+flg22	FLS2	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+flg22	BAK1	binding	FALSE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+FLS2	BAK1|FLS2|flg22	activation	TRUE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	PRODUCT	extracellular	complex_active
+BAK1	BAK1|FLS2|flg22	activation	TRUE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein	PRODUCT	extracellular	complex_active
+flg22	BAK1|FLS2|flg22	activation	TRUE	binding/oligomerisation	activation	rx00237	SUBSTRATE	cytoplasm	protein_active	PRODUCT	extracellular	complex_active
+WRKY33	MKS1	binding	FALSE	binding/oligomerisation	activation	rx00242	SUBSTRATE	nucleus	protein	SUBSTRATE	cytoplasm	protein
+MKS1	WRKY33	binding	FALSE	binding/oligomerisation	activation	rx00242	SUBSTRATE	cytoplasm	protein	SUBSTRATE	nucleus	protein
+WRKY33	MKS1|WRKY33	activation	TRUE	binding/oligomerisation	activation	rx00242	SUBSTRATE	nucleus	protein	PRODUCT	cytoplasm	complex_active
+MKS1	MKS1|WRKY33	activation	TRUE	binding/oligomerisation	activation	rx00242	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+CI	PSAK	inhibition	FALSE	binding/oligomerisation	inhibition	rx00214	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+PSAK	CI	inhibition	FALSE	binding/oligomerisation	inhibition	rx00214	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+GA	GID	binding	FALSE	binding/oligomerisation	activation	rx00283	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	nucleus	protein_active
+GID	GA	binding	FALSE	binding/oligomerisation	activation	rx00283	SUBSTRATE	nucleus	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+GA	GA|GID1	activation	TRUE	binding/oligomerisation	activation	rx00283	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	complex_active
+GID	GA|GID1	activation	TRUE	binding/oligomerisation	activation	rx00283	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:cytoplasm	complex_active
+DELLA	GA|GID1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00292	SUBSTRATE	nucleus	protein	PRODUCT	putative:cytoplasm	complex_active
+GA|GID1	DELLA	inhibition	FALSE	binding/oligomerisation	inhibition	rx00292	PRODUCT	putative:cytoplasm	complex_active	SUBSTRATE	nucleus	protein
+WRKY53	ESP	inhibition	FALSE	binding/oligomerisation	inhibition	rx00122	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+ESP	WRKY53	inhibition	FALSE	binding/oligomerisation	inhibition	rx00122	SUBSTRATE	cytoplasm	protein	SUBSTRATE	nucleus	protein_active
+WRKY53	WRKY30	binding	FALSE	binding/oligomerisation	activation	rx00125	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+WRKY30	WRKY53	binding	FALSE	binding/oligomerisation	activation	rx00125	SUBSTRATE	cytoplasm	protein	SUBSTRATE	nucleus	protein_active
+WRKY53	WRKY30|WRKY53	activation	TRUE	binding/oligomerisation	activation	rx00125	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	complex_active
+WRKY30	WRKY30|WRKY53	activation	TRUE	binding/oligomerisation	activation	rx00125	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	complex_active
+JAZ	WRKY57	inhibition	FALSE	binding/oligomerisation	inhibition	rx00128	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+WRKY57	JAZ	inhibition	FALSE	binding/oligomerisation	inhibition	rx00128	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+WRKY57	AUX/IAA	inhibition	FALSE	binding/oligomerisation	inhibition	rx00130	SUBSTRATE	nucleus	protein_active	SUBSTRATE	putative:nucleus	protein_active
+AUX/IAA	WRKY57	inhibition	FALSE	binding/oligomerisation	inhibition	rx00130	SUBSTRATE	putative:nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SCL14	TGA2,5,6	binding	FALSE	binding/oligomerisation	activation	rx00156	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+TGA2,5,6	SCL14	binding	FALSE	binding/oligomerisation	activation	rx00156	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+SCL14	SCL14|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00156	SUBSTRATE	nucleus	protein	PRODUCT	nucleus	complex_active
+TGA2,5,6	SCL14|TGA2,5,6	activation	TRUE	binding/oligomerisation	activation	rx00156	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+JAZ	DELLA	inhibition	FALSE	binding/oligomerisation	inhibition	rx00159	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+DELLA	JAZ	inhibition	FALSE	binding/oligomerisation	inhibition	rx00159	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+MYC2	DELLA	inhibition	FALSE	binding/oligomerisation	inhibition	rx00162	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+DELLA	MYC2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00162	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+GID	SCF	binding	FALSE	binding/oligomerisation	activation	rx00295	SUBSTRATE	nucleus	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+SCF	GID	binding	FALSE	binding/oligomerisation	activation	rx00295	SUBSTRATE	putative:cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+GID	GID|SCF	activation	TRUE	binding/oligomerisation	activation	rx00295	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:cytoplasm	complex_active
+SCF	GID|SCF	activation	TRUE	binding/oligomerisation	activation	rx00295	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	putative:cytoplasm	complex_active
+CAT	LSD1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00310	SUBSTRATE	peroxisome	protein_active	SUBSTRATE	putative:cytoplasm	protein
+LSD1	CAT	inhibition	FALSE	binding/oligomerisation	inhibition	rx00310	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	peroxisome	protein_active
+CAT	ACX	activation	TRUE	protein activation	activation	rx00312	SUBSTRATE	peroxisome	protein_active	PRODUCT	peroxisome	protein_active
+MAX2	D14	binding	FALSE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	protein_active
+MAX2	SCF	binding	FALSE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+D14	MAX2	binding	FALSE	binding/oligomerisation	activation	rx00319	PRODUCT	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	protein_active
+D14	SCF	binding	FALSE	binding/oligomerisation	activation	rx00319	PRODUCT	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+SCF	MAX2	binding	FALSE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	complex_active	SUBSTRATE	putative:cytoplasm	protein_active
+SCF	D14	binding	FALSE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	putative:cytoplasm	protein_active
+MAX2	D14|MAX2|SCF	activation	TRUE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	complex_active
+D14	D14|MAX2|SCF	activation	TRUE	binding/oligomerisation	activation	rx00319	PRODUCT	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	complex_active
+SCF	D14|MAX2|SCF	activation	TRUE	binding/oligomerisation	activation	rx00319	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	putative:cytoplasm	complex_active
+DMAPP	prenyl-tRNA	activation	TRUE	catalysis	activation	rx00323	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+tRNA-adenine	prenyl-tRNA	activation	TRUE	catalysis	activation	rx00323	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+tZ	AHK2,3,4	activation	TRUE	protein activation	activation	rx00384	ACTIVATES	putative:cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein_active
+cZ	AHK2,3,4	activation	TRUE	protein activation	activation	rx00385	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein_active
+DZ	AHK2,3,4	activation	TRUE	protein activation	activation	rx00386	ACTIVATES	putative:cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein_active
+iP	AHK2,3,4	activation	TRUE	protein activation	activation	rx00387	ACTIVATES	putative:cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein_active
+L-Met	SAMe	activation	TRUE	catalysis	activation	rx00001	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+L-Met	SAMS	activation	TRUE	catalysis	activation	rx00001	SUBSTRATE	cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein
+SAMS	SAMe	activation	TRUE	catalysis	activation	rx00001	PRODUCT	endoplasmic reticulum	protein	PRODUCT	cytoplasm	metabolite
+NPR1	NIMIN	inhibition	FALSE	binding/oligomerisation	inhibition	rx00100	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+NIMIN	NPR1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00100	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+SAMe	ACC	activation	TRUE	catalysis	activation	rx00002	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+SAMe	ACS	activation	TRUE	catalysis	activation	rx00002	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+ACS	ACC	activation	TRUE	catalysis	activation	rx00002	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+ACC	ET	activation	TRUE	catalysis	activation	rx00003	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+ACC	ACO	activation	TRUE	catalysis	activation	rx00003	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+ACO	ET	activation	TRUE	catalysis	activation	rx00003	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+Thr	Ile	activation	TRUE	catalysis	activation	rx00020	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+Thr	OMR1	activation	TRUE	catalysis	activation	rx00020	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+OMR1	Ile	activation	TRUE	catalysis	activation	rx00020	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+LOX	13-HPOT	activation	TRUE	catalysis	activation	rx00026	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+13-HPOT	12,13-EOT	activation	TRUE	catalysis	activation	rx00029	PRODUCT	chloroplast	metabolite	PRODUCT	chloroplast	metabolite
+13-HPOT	AOS	activation	TRUE	catalysis	activation	rx00029	PRODUCT	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+AOS	12,13-EOT	activation	TRUE	catalysis	activation	rx00029	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+12,13-EOT	OPDA	activation	TRUE	catalysis	activation	rx00030	PRODUCT	chloroplast	metabolite	PRODUCT	chloroplast	metabolite
+12,13-EOT	AOC	activation	TRUE	catalysis	activation	rx00030	PRODUCT	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+AOC	OPDA	activation	TRUE	catalysis	activation	rx00030	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+OPDA	OPC8	activation	TRUE	catalysis	activation	rx00033	PRODUCT	chloroplast	metabolite	PRODUCT	peroxisome	metabolite
+OPDA	OPR	activation	TRUE	catalysis	activation	rx00033	PRODUCT	chloroplast	metabolite	ACTIVATES	peroxisome	protein_active
+OPR	OPC8	activation	TRUE	catalysis	activation	rx00033	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+potyvirus	R-gene|potyvirus	activation	TRUE	binding/oligomerisation	activation	rx00107	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+ASK	RBX	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+ASK	CUL	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+RBX	ASK	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+RBX	CUL	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+CUL	ASK	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+CUL	RBX	binding	FALSE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+ASK	SCF	activation	TRUE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+RBX	SCF	activation	TRUE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	complex_active
+CUL	SCF	activation	TRUE	binding/oligomerisation	activation	rx00110	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	complex_active
+OPC8	OPC8-CoA	activation	TRUE	catalysis	activation	rx00034	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+OPC8	OPCL1	activation	TRUE	catalysis	activation	rx00034	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+OPCL1	OPC8-CoA	activation	TRUE	catalysis	activation	rx00034	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+OPC8-CoA	OPC6-CoA	activation	TRUE	catalysis	activation	rx00035	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+OPC8-CoA	ACX	activation	TRUE	catalysis	activation	rx00035	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	protein_active
+ACX	OPC6-CoA	activation	TRUE	catalysis	activation	rx00035	PRODUCT	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+OPC6-CoA	OPC4-CoA	activation	TRUE	catalysis	activation	rx00036	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+OPC6-CoA	MFP	activation	TRUE	catalysis	activation	rx00036	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+MFP	OPC4-CoA	activation	TRUE	catalysis	activation	rx00036	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+OPC4-CoA	JA-CoA	activation	TRUE	catalysis	activation	rx00037	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+OPC4-CoA	KAT	activation	TRUE	catalysis	activation	rx00037	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+KAT	JA-CoA	activation	TRUE	catalysis	activation	rx00037	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+JA-CoA	JA	activation	TRUE	catalysis	activation	rx00038	PRODUCT	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+JA-CoA	ACH	activation	TRUE	catalysis	activation	rx00038	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+ACH	JA	activation	TRUE	catalysis	activation	rx00038	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+JA	MeJA	activation	TRUE	catalysis	activation	rx00040	PRODUCT	peroxisome	metabolite	PRODUCT	cytoplasm	metabolite
+JA	JMT	activation	TRUE	catalysis	activation	rx00040	PRODUCT	peroxisome	metabolite	ACTIVATES	cytoplasm	protein_active
+JMT	MeJA	activation	TRUE	catalysis	activation	rx00040	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+JA	JA-Ile	activation	TRUE	catalysis	activation	rx00041	PRODUCT	peroxisome	metabolite	PRODUCT	cytoplasm	metabolite
+Ile	JA-Ile	activation	TRUE	catalysis	activation	rx00041	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+JA	JAR	activation	TRUE	catalysis	activation	rx00041	PRODUCT	peroxisome	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+Ile	JAR	activation	TRUE	catalysis	activation	rx00041	PRODUCT	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+JAR	JA-Ile	activation	TRUE	catalysis	activation	rx00041	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+JA-Ile	12-OH-JA-Ile	activation	TRUE	catalysis	activation	rx00042	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+JA-Ile	CYP94	activation	TRUE	catalysis	activation	rx00042	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+CYP94	12-OH-JA-Ile	activation	TRUE	catalysis	activation	rx00042	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+MeSA	SA	activation	TRUE	catalysis	activation	rx00056	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+MeSA	MES	activation	TRUE	catalysis	activation	rx00056	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+MES	SA	activation	TRUE	catalysis	activation	rx00056	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+Chor	IsoChor	activation	TRUE	catalysis	activation	rx00069	SUBSTRATE	chloroplast	metabolite	PRODUCT	chloroplast	metabolite
+Chor	ICS	activation	TRUE	catalysis	activation	rx00069	SUBSTRATE	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+ICS	IsoChor	activation	TRUE	catalysis	activation	rx00069	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+Chor	Prep	activation	TRUE	catalysis	activation	rx00073	SUBSTRATE	chloroplast	metabolite	PRODUCT	chloroplast	metabolite
+Chor	CM	activation	TRUE	catalysis	activation	rx00073	SUBSTRATE	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+CM	Prep	activation	TRUE	catalysis	activation	rx00073	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+Phe	CA	activation	TRUE	catalysis	activation	rx00076	SUBSTRATE	chloroplast	metabolite	SUBSTRATE	peroxisome	metabolite
+Phe	PAL	activation	TRUE	catalysis	activation	rx00076	SUBSTRATE	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+PAL	CA	activation	TRUE	catalysis	activation	rx00076	ACTIVATES	chloroplast	protein_active	SUBSTRATE	peroxisome	metabolite
+CA	BA	activation	TRUE	catalysis	activation	rx00077	SUBSTRATE	peroxisome	metabolite	PRODUCT	chloroplast	metabolite
+CA	AAO	activation	TRUE	catalysis	activation	rx00077	SUBSTRATE	peroxisome	metabolite	ACTIVATES	chloroplast	protein_active
+AAO	BA	activation	TRUE	catalysis	activation	rx00077	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+BA	SA	activation	TRUE	catalysis	activation	rx00078	PRODUCT	chloroplast	metabolite	PRODUCT	cytoplasm	metabolite
+BA	BA2H	activation	TRUE	catalysis	activation	rx00078	PRODUCT	chloroplast	metabolite	ACTIVATES	chloroplast	protein_active
+BA2H	SA	activation	TRUE	catalysis	activation	rx00078	ACTIVATES	chloroplast	protein_active	PRODUCT	cytoplasm	metabolite
+MYC2	PYL	inhibition	FALSE	binding/oligomerisation	inhibition	rx00459	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+PYL	MYC2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00459	SUBSTRATE	cytoplasm	protein	SUBSTRATE	nucleus	protein_active
+SA	MeSA	activation	TRUE	catalysis	activation	rx00083	PRODUCT	cytoplasm	metabolite	SUBSTRATE	cytoplasm	metabolite
+SA	SAMC	activation	TRUE	catalysis	activation	rx00083	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+SAMC	MeSA	activation	TRUE	catalysis	activation	rx00083	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	metabolite
+SA	SAG	activation	TRUE	catalysis	activation	rx00086	PRODUCT	cytoplasm	metabolite	PRODUCT	vacuole	metabolite
+SA	SAGT	activation	TRUE	catalysis	activation	rx00086	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+SAGT	SAG	activation	TRUE	catalysis	activation	rx00086	ACTIVATES	cytoplasm	protein_active	PRODUCT	vacuole	metabolite
+SOD	ROS	activation	TRUE	catalysis	activation	rx00131	ACTIVATES	putative:mitochondrion	protein_active	SUBSTRATE	chloroplast	metabolite
+O2	ROS	activation	TRUE	catalysis	activation	rx00132	SUBSTRATE	extracellular	metabolite	SUBSTRATE	chloroplast	metabolite
+O2	RBOH	activation	TRUE	catalysis	activation	rx00132	SUBSTRATE	extracellular	metabolite	ACTIVATES	apoplast	protein_active
+RBOH	ROS	activation	TRUE	catalysis	activation	rx00132	ACTIVATES	apoplast	protein_active	SUBSTRATE	chloroplast	metabolite
+e-	ROS	activation	TRUE	catalysis	activation	rx00134	SUBSTRATE	chloroplast	metabolite	SUBSTRATE	chloroplast	metabolite
+e-	CO2-deficiency	activation	TRUE	catalysis	activation	rx00134	SUBSTRATE	chloroplast	metabolite	ACTIVATES	chloroplast	process_active
+CO2-deficiency	ROS	activation	TRUE	catalysis	activation	rx00134	ACTIVATES	chloroplast	process_active	SUBSTRATE	chloroplast	metabolite
+Geranylgeranyl-PP	ent-Copalyl-PP	activation	TRUE	catalysis	activation	rx00264	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+Geranylgeranyl-PP	CPS	activation	TRUE	catalysis	activation	rx00264	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+CPS	ent-Copalyl-PP	activation	TRUE	catalysis	activation	rx00264	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+ent-Copalyl-PP	ent-Kaurene	activation	TRUE	catalysis	activation	rx00265	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+ent-Copalyl-PP	KS	activation	TRUE	catalysis	activation	rx00265	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+KS	ent-Kaurene	activation	TRUE	catalysis	activation	rx00265	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+ent-Kaurene	ent-Kaurenoic acid	activation	TRUE	catalysis	activation	rx00266	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+ent-Kaurene	KO	activation	TRUE	catalysis	activation	rx00266	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+KO	ent-Kaurenoic acid	activation	TRUE	catalysis	activation	rx00266	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+ent-Kaurenoic acid	GA12	activation	TRUE	catalysis	activation	rx00267	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+ent-Kaurenoic acid	KAO1,2	activation	TRUE	catalysis	activation	rx00267	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+KAO1,2	GA12	activation	TRUE	catalysis	activation	rx00267	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+GA12	GA9	activation	TRUE	catalysis	activation	rx00268	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+GA12	GA20ox	activation	TRUE	catalysis	activation	rx00268	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GA20ox	GA9	activation	TRUE	catalysis	activation	rx00268	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+GA12	GA20	activation	TRUE	catalysis	activation	rx00269	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+GA12	GA20ox	activation	TRUE	catalysis	activation	rx00269	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GA20ox	GA20	activation	TRUE	catalysis	activation	rx00269	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+GA9	GA	activation	TRUE	catalysis	activation	rx00270	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+GA9	GA3ox	activation	TRUE	catalysis	activation	rx00270	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GA3ox	GA	activation	TRUE	catalysis	activation	rx00270	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+GA20	GA	activation	TRUE	catalysis	activation	rx00271	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+GA20	GA3ox	activation	TRUE	catalysis	activation	rx00271	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GA3ox	GA	activation	TRUE	catalysis	activation	rx00271	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+GA	GA8	activation	TRUE	catalysis	activation	rx00273	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+GA	C19-GA2ox	activation	TRUE	catalysis	activation	rx00273	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+C19-GA2ox	GA8	activation	TRUE	catalysis	activation	rx00273	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+GA	GA34	activation	TRUE	catalysis	activation	rx00274	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+GA	C19-GA2ox	activation	TRUE	catalysis	activation	rx00274	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+C19-GA2ox	GA34	activation	TRUE	catalysis	activation	rx00274	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+GA	GA-methylester	activation	TRUE	catalysis	activation	rx00301	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+GA	GAMT1,2	activation	TRUE	catalysis	activation	rx00301	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GAMT1,2	GA-methylester	activation	TRUE	catalysis	activation	rx00301	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+&beta;-Carotene	9-cis-&beta;-carotene	activation	TRUE	catalysis	activation	rx00314	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+&beta;-Carotene	D27	activation	TRUE	catalysis	activation	rx00314	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+D27	9-cis-&beta;-carotene	activation	TRUE	catalysis	activation	rx00314	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+CL	CLA	activation	TRUE	catalysis	activation	rx00317	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+CL	MAX1	activation	TRUE	catalysis	activation	rx00317	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+MAX1	CLA	activation	TRUE	catalysis	activation	rx00317	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+HMBDP	DMAPP	activation	TRUE	catalysis	activation	rx00321	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+HMBDP	ISPH	activation	TRUE	catalysis	activation	rx00321	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ISPH	DMAPP	activation	TRUE	catalysis	activation	rx00321	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+JAZ	EIN3(like)	binding	FALSE	binding/oligomerisation	activation	rx00018	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+EIN3(like)	JAZ	binding	FALSE	binding/oligomerisation	activation	rx00018	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+JAZ	EIN3(like)|JAZ	activation	TRUE	binding/oligomerisation	activation	rx00018	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+EIN3(like)	EIN3(like)|JAZ	activation	TRUE	binding/oligomerisation	activation	rx00018	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+JA-Ile	SCF	binding	FALSE	binding/oligomerisation	activation	rx00043	PRODUCT	cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	complex_active
+JA-Ile	COI1	binding	FALSE	binding/oligomerisation	activation	rx00043	PRODUCT	cytoplasm	metabolite	SUBSTRATE	nucleus	protein_active
+SCF	JA-Ile	binding	FALSE	binding/oligomerisation	activation	rx00043	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	cytoplasm	metabolite
+SCF	COI1	binding	FALSE	binding/oligomerisation	activation	rx00043	SUBSTRATE	putative:cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+COI1	JA-Ile	binding	FALSE	binding/oligomerisation	activation	rx00043	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	metabolite
+COI1	SCF	binding	FALSE	binding/oligomerisation	activation	rx00043	SUBSTRATE	nucleus	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+JA-Ile	COI1|JA-Ile|SCF	activation	TRUE	binding/oligomerisation	activation	rx00043	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	complex_active
+SCF	COI1|JA-Ile|SCF	activation	TRUE	binding/oligomerisation	activation	rx00043	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	cytoplasm	complex_active
+COI1	COI1|JA-Ile|SCF	activation	TRUE	binding/oligomerisation	activation	rx00043	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	complex_active
+CI	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00636	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+VPg	CI	inhibition	FALSE	binding/oligomerisation	inhibition	rx00636	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+miR168	AGO1	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00653	INHIBITS	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein_active
+NPR1|NPR1	NPR1	activation	TRUE	dissociation	activation	rx00096	SUBSTRATE	cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+TRX-H	NPR1	activation	TRUE	dissociation	activation	rx00096	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+EBF|SCF	EIN3(like)	inhibition	TRUE	degradation/secretion	inhibition	rx00017	ACTIVATES	cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+COI1|JA-Ile|SCF	JAZ	inhibition	TRUE	degradation/secretion	inhibition	rx00044	PRODUCT	cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+Trichome-initiation	potyvirus	inhibition	TRUE	degradation/secretion	inhibition	rx00080	ACTIVATES	putative:cytoplasm	process_active	SUBSTRATE	cytoplasm	protein_active
+TAS3	ARF	inhibition	TRUE	degradation/secretion	inhibition	rx00112	ACTIVATES	cytoplasm	ncrna	SUBSTRATE	nucleus	protein
+UPL5	WRKY53	inhibition	TRUE	degradation/secretion	inhibition	rx00123	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+AOX	ROS	inhibition	TRUE	degradation/secretion	inhibition	rx00133	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	chloroplast	metabolite
+SR1IP1	CAMTA3	inhibition	TRUE	degradation/secretion	inhibition	rx00150	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+CAT	ROS	inhibition	TRUE	degradation/secretion	inhibition	rx00260	SUBSTRATE	peroxisome	protein_active	SUBSTRATE	chloroplast	metabolite
+APX	ROS	inhibition	TRUE	degradation/secretion	inhibition	rx00261	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	chloroplast	metabolite
+GPX	ROS	inhibition	TRUE	degradation/secretion	inhibition	rx00262	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	chloroplast	metabolite
+Waterlogging	CO2-deficiency	activation	TRUE	protein activation	activation	rx00614	ACTIVATES	cytoplasm	abiotic	ACTIVATES	chloroplast	process_active
+Waterlogging	O2-deficiency	activation	TRUE	protein activation	activation	rx00615	ACTIVATES	cytoplasm	abiotic	PRODUCT	cytoplasm	process
+GID|SCF	DELLA|GA|GID1	inhibition	TRUE	degradation/secretion	inhibition	rx00297	PRODUCT	putative:cytoplasm	complex_active	PRODUCT	putative:cytoplasm	complex_active
+miR159AB	MYB33,44,65	inhibition	TRUE	degradation/secretion	inhibition	rx00305	ACTIVATES	putative:cytoplasm	ncrna	SUBSTRATE	putative:cytoplasm	protein
+D14|MAX2|SCF	D53	inhibition	TRUE	degradation/secretion	inhibition	rx00320	PRODUCT	putative:cytoplasm	complex_active	SUBSTRATE	putative:cytoplasm	protein_active
+HMA	Cu2+	translocation	TRUE	translocation	activation	rx00004	ACTIVATES	endoplasmic reticulum	protein_active	TRANSLOCATE_TO	endoplasmic reticulum	metabolite
+CTS	OPDA	translocation	TRUE	translocation	activation	rx00031	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+JAT2	JA	translocation	TRUE	translocation	activation	rx00039	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+SNRK2	NPR1	translocation	TRUE	translocation	activation	rx00097	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+MOS	NPR1	translocation	TRUE	translocation	activation	rx00097	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+Cu2+	ETR	activation	TRUE	protein activation	activation	rx00005	TRANSLOCATE_TO	endoplasmic reticulum	metabolite	SUBSTRATE	endoplasmic reticulum	protein
+RTE1	CTR|ETR	activation	TRUE	protein activation	activation	rx00007	ACTIVATES	golgi apparatus	protein_active	PRODUCT	endoplasmic reticulum	complex_active
+ETP|SCF	EIN2	activation	TRUE	protein activation	activation	rx00009	ACTIVATES	cytoplasm	complex_active	PRODUCT	endoplasmic reticulum	protein_active
+EIN2	EIN3(like)	activation	TRUE	protein activation	activation	rx00015	PRODUCT	endoplasmic reticulum	protein_active	SUBSTRATE	nucleus	protein_active
+MPK4	LOX	activation	TRUE	protein activation	activation	rx00027	ACTIVATES	cytoplasm	protein_active	ACTIVATES	chloroplast	protein_active
+ROS	TRX-H	activation	TRUE	protein activation	activation	rx00095	SUBSTRATE	chloroplast	metabolite	ACTIVATES	cytoplasm	protein_active
+Violaxanthin	9-cis-Violaxanthin	activation	TRUE	catalysis	activation	rx00549	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+SA low	NPR1	activation	TRUE	protein activation	activation	rx00114	ACTIVATES		condition	SUBSTRATE	nucleus	protein_active
+SA	NPR1	activation	TRUE	protein activation	activation	rx00114	PRODUCT	cytoplasm	metabolite	SUBSTRATE	nucleus	protein_active
+MPK3,6	ERF6	activation	TRUE	protein activation	activation	rx00136	SUBSTRATE	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+Waterlogging	ET	activation	TRUE	unknown	activation	rx00616	ACTIVATES	cytoplasm	abiotic	PRODUCT	cytoplasm	metabolite
+Geranylgeranyl-PP	Phytoene	activation	TRUE	catalysis	activation	rx00550	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+MPK3,6	WRKY33	activation	TRUE	protein activation	activation	rx00138	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	nucleus	protein
+CL	SL	activation	TRUE	catalysis	activation	rx00551	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+MPK3,6	ACS	activation	TRUE	protein activation	activation	rx00140	SUBSTRATE	cytoplasm	protein_active	ACTIVATES	cytoplasm	protein_active
+Abscisic aldehyde	ABA	activation	TRUE	catalysis	activation	rx00552	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+Abscisic aldehyde	AAO	activation	TRUE	catalysis	activation	rx00552	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	chloroplast	protein_active
+AAO	ABA	activation	TRUE	catalysis	activation	rx00552	ACTIVATES	chloroplast	protein_active	PRODUCT	putative:cytoplasm	metabolite
+MPK3,6	ERF5	activation	TRUE	protein activation	activation	rx00142	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+Xanthoxin	Abscisic aldehyde	activation	TRUE	catalysis	activation	rx00553	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+Xanthoxin	ABA2	activation	TRUE	catalysis	activation	rx00553	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ABA2	Abscisic aldehyde	activation	TRUE	catalysis	activation	rx00553	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+MPK3,6	ERF104	activation	TRUE	protein activation	activation	rx00144	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+9-cis-Violaxanthin	Xanthoxin	activation	TRUE	catalysis	activation	rx00554	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+9-cis-Violaxanthin	NCED	activation	TRUE	catalysis	activation	rx00554	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+NCED	Xanthoxin	activation	TRUE	catalysis	activation	rx00554	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+MPK3,6	ERF105	activation	TRUE	protein activation	activation	rx00146	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+Violaxanthin	Antheraxanthin	activation	TRUE	catalysis	activation	rx00555	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+Violaxanthin	VDE1	activation	TRUE	catalysis	activation	rx00555	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+VDE1	Antheraxanthin	activation	TRUE	catalysis	activation	rx00555	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+ROS	GRX480	activation	TRUE	protein activation	activation	rx00164	SUBSTRATE	chloroplast	metabolite	PRODUCT	putative:nucleus	protein_active
+OG	WAK1	activation	TRUE	protein activation	activation	rx00165	ACTIVATES	cytoplasm	metabolite	PRODUCT	cytoplasm	protein_active
+MPK3,6	WAK1	activation	TRUE	protein activation	activation	rx00166	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+L-arogenate	Tyr	activation	TRUE	catalysis	activation	rx00542	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+L-arogenate	TYRAAT1,2	activation	TRUE	catalysis	activation	rx00542	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+TYRAAT1,2	Tyr	activation	TRUE	catalysis	activation	rx00542	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+Ca2+	CDPK	activation	TRUE	protein activation	activation	rx00169	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	protein_active
+Ca2+	CRT	activation	TRUE	protein activation	activation	rx00170	SUBSTRATE	cytoplasm	metabolite	SUBSTRATE	cytoplasm	protein_active
+Antheraxanthin	Zeaxanthin	activation	TRUE	catalysis	activation	rx00556	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+Antheraxanthin	VDE1	activation	TRUE	catalysis	activation	rx00556	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+VDE1	Zeaxanthin	activation	TRUE	catalysis	activation	rx00556	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+Antheraxanthin	Violaxanthin	activation	TRUE	catalysis	activation	rx00557	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+Antheraxanthin	ZEP	activation	TRUE	catalysis	activation	rx00557	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ZEP	Violaxanthin	activation	TRUE	catalysis	activation	rx00557	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+CML	Ca2+	binding	FALSE	binding/oligomerisation	activation	rx00173	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	metabolite
+Ca2+	CML	binding	FALSE	binding/oligomerisation	activation	rx00173	SUBSTRATE	cytoplasm	metabolite	SUBSTRATE	cytoplasm	protein_active
+CML	CML|Ca2+	activation	TRUE	binding/oligomerisation	activation	rx00173	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	complex_active
+Ca2+	CML|Ca2+	activation	TRUE	binding/oligomerisation	activation	rx00173	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	complex_active
+CDPK	RBOH	activation	TRUE	protein activation	activation	rx00174	PRODUCT	cytoplasm	protein_active	ACTIVATES	apoplast	protein_active
+Zeaxanthin	Antheraxanthin	activation	TRUE	catalysis	activation	rx00558	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+Zeaxanthin	ZEP	activation	TRUE	catalysis	activation	rx00558	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ZEP	Antheraxanthin	activation	TRUE	catalysis	activation	rx00558	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+&beta;-Cryptoxanthin	Zeaxanthin	activation	TRUE	catalysis	activation	rx00559	SUBSTRATE	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+&beta;-Cryptoxanthin	BETA-OHASE	activation	TRUE	catalysis	activation	rx00559	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+BETA-OHASE	Zeaxanthin	activation	TRUE	catalysis	activation	rx00559	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+&beta;-Carotene	&beta;-Cryptoxanthin	activation	TRUE	catalysis	activation	rx00560	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+&beta;-Carotene	BETA-OHASE	activation	TRUE	catalysis	activation	rx00560	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+BETA-OHASE	&beta;-Cryptoxanthin	activation	TRUE	catalysis	activation	rx00560	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+&gamma;-Carotene	&beta;-Carotene	activation	TRUE	catalysis	activation	rx00561	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+&gamma;-Carotene	LCY1	activation	TRUE	catalysis	activation	rx00561	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+LCY1	&beta;-Carotene	activation	TRUE	catalysis	activation	rx00561	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+CDPK	WRKY8	activation	TRUE	protein activation	activation	rx00180	PRODUCT	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+CDPK	WRKY28	activation	TRUE	protein activation	activation	rx00181	PRODUCT	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+CDPK	WRKY48	activation	TRUE	protein activation	activation	rx00182	PRODUCT	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+CML|Ca2+	CBP60G	activation	TRUE	protein activation	activation	rx00183	PRODUCT	cytoplasm	complex_active	PRODUCT	nucleus	protein_active
+CML|Ca2+	CAMTA3	activation	TRUE	protein activation	activation	rx00184	PRODUCT	cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+Lycopene	&gamma;-Carotene	activation	TRUE	catalysis	activation	rx00562	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+Lycopene	LCY1	activation	TRUE	catalysis	activation	rx00562	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+LCY1	&gamma;-Carotene	activation	TRUE	catalysis	activation	rx00562	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+all-trans-Neurosporene	Lycopene	activation	TRUE	catalysis	activation	rx00563	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+all-trans-Neurosporene	ZDS1	activation	TRUE	catalysis	activation	rx00563	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ZDS1	Lycopene	activation	TRUE	catalysis	activation	rx00563	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+MPK3,6	EIN3(like)	activation	TRUE	protein activation	activation	rx00235	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+all-trans-zeta-Carotene	all-trans-Neurosporene	activation	TRUE	catalysis	activation	rx00564	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+all-trans-zeta-Carotene	ZDS1	activation	TRUE	catalysis	activation	rx00564	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ZDS1	all-trans-Neurosporene	activation	TRUE	catalysis	activation	rx00564	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+BAK1|FLS2|flg22	BIK1	activation	TRUE	protein activation	activation	rx00238	PRODUCT	extracellular	complex_active	PRODUCT	cytoplasm	protein_active
+Ca2+	RBOH	activation	TRUE	protein activation	activation	rx00239	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	apoplast	protein_active
+MPK3,6	MYB33,44,65	activation	TRUE	protein activation	activation	rx00243	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	protein
+AHK2,3,4	AHP	activation	TRUE	protein activation	activation	rx00389	PRODUCT	endoplasmic reticulum	protein_active	PRODUCT	cytoplasm	protein_active
+AHP	ARR-A	activation	TRUE	protein activation	activation	rx00392	PRODUCT	cytoplasm	protein_active	SUBSTRATE	nucleus	protein
+AHP	ARR-B	activation	TRUE	protein activation	activation	rx00393	PRODUCT	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+CTR|ETR	EIN2	inhibition	TRUE	protein deactivation	inhibition	rx00010	PRODUCT	endoplasmic reticulum	complex_active	PRODUCT	endoplasmic reticulum	protein_active
+JAZ	WD/bHLH/MYB	inhibition	TRUE	protein deactivation	inhibition	rx00062	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex
+AHP	AHK2,3,4	inhibition	TRUE	protein deactivation	inhibition	rx00388	PRODUCT	cytoplasm	protein_active	PRODUCT	endoplasmic reticulum	protein_active
+ARR-A	ARR-B	inhibition	TRUE	protein deactivation	inhibition	rx00390	SUBSTRATE	nucleus	protein	PRODUCT	nucleus	protein_active
+EIN5	EBF	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00012	INHIBITS	nucleus	protein_active	PRODUCT	nucleus	protein_active
+EIN3(like)	EBF	activation	TRUE	transcriptional/translational activation	activation	rx00013	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	protein_active
+EIN3(like)	ERF/EDF	activation	TRUE	transcriptional/translational activation	activation	rx00019	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	protein_active
+ERF/EDF	PDF1.2	activation	TRUE	transcriptional/translational activation	activation	rx00025	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	LOX	activation	TRUE	transcriptional/translational activation	activation	rx00028	ACTIVATES		condition	ACTIVATES	chloroplast	protein_active
+MYC2	LOX	activation	TRUE	transcriptional/translational activation	activation	rx00028	SUBSTRATE	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+NPR1 low & JAZ low	JAZ	activation	TRUE	transcriptional/translational activation	activation	rx00046	ACTIVATES		condition	SUBSTRATE	nucleus	protein_active
+MYC2	JAZ	activation	TRUE	transcriptional/translational activation	activation	rx00046	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+MYC2	CLH	activation	TRUE	transcriptional/translational activation	activation	rx00049	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	CLH	activation	TRUE	transcriptional/translational activation	activation	rx00049	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	JR1	activation	TRUE	transcriptional/translational activation	activation	rx00050	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+MYC2	JR1	activation	TRUE	transcriptional/translational activation	activation	rx00050	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 high & JAZ low	JR1	activation	TRUE	transcriptional/translational activation	activation	rx00050	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	PR13	activation	TRUE	transcriptional/translational activation	activation	rx00051	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+MYC2	PR13	activation	TRUE	transcriptional/translational activation	activation	rx00051	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 high & JAZ low	PR13	activation	TRUE	transcriptional/translational activation	activation	rx00051	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+MYC2	VSP	activation	TRUE	transcriptional/translational activation	activation	rx00052	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	VSP	activation	TRUE	transcriptional/translational activation	activation	rx00052	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+NPR1 high & JAZ low	VSP	activation	TRUE	transcriptional/translational activation	activation	rx00052	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+ETR	CTR	binding	FALSE	binding/oligomerisation	activation	rx00006	SUBSTRATE	endoplasmic reticulum	protein	SUBSTRATE	cytoplasm	protein_active
+CTR	ETR	binding	FALSE	binding/oligomerisation	activation	rx00006	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	endoplasmic reticulum	protein
+ETR	CTR|ETR	activation	TRUE	binding/oligomerisation	activation	rx00006	SUBSTRATE	endoplasmic reticulum	protein	PRODUCT	endoplasmic reticulum	complex_active
+CTR	CTR|ETR	activation	TRUE	binding/oligomerisation	activation	rx00006	SUBSTRATE	cytoplasm	protein_active	PRODUCT	endoplasmic reticulum	complex_active
+WD/bHLH/MYB	Anthocyanin-accumulation	activation	TRUE	transcriptional/translational activation	activation	rx00063	PRODUCT	nucleus	complex	PRODUCT	cytoplasm	process_active
+WD/bHLH/MYB	Trichome-initiation	activation	TRUE	transcriptional/translational activation	activation	rx00064	PRODUCT	nucleus	complex	ACTIVATES	putative:cytoplasm	process_active
+NPR1|TGA2,5,6	WRKY70	activation	TRUE	transcriptional/translational activation	activation	rx00098	PRODUCT	nucleus	complex	PRODUCT	cytoplasm	protein_active
+NPR1|TGA2,5,6	PR1	activation	TRUE	transcriptional/translational activation	activation	rx00101	PRODUCT	nucleus	complex	PRODUCT	cytoplasm	protein_active
+NPR1|TGA2,5,6	PR2	activation	TRUE	transcriptional/translational activation	activation	rx00102	PRODUCT	nucleus	complex	PRODUCT	cytoplasm	protein_active
+NPR1|TGA2,5,6	PR5	activation	TRUE	transcriptional/translational activation	activation	rx00103	PRODUCT	nucleus	complex	SUBSTRATE	putative:cytoplasm	protein
+MIR390	TAS3	activation	TRUE	transcriptional/translational activation	activation	rx00111	ACTIVATES	cytoplasm	ncrna	ACTIVATES	cytoplasm	ncrna
+all-trans-Phytofluene	all-trans-zeta-Carotene	activation	TRUE	catalysis	activation	rx00565	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+all-trans-Phytofluene	PDS	activation	TRUE	catalysis	activation	rx00565	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+PDS	all-trans-zeta-Carotene	activation	TRUE	catalysis	activation	rx00565	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+MAPKKK8	WRKY53	activation	TRUE	transcriptional/translational activation	activation	rx00124	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+WRKY57	SEN4	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00126	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+WRKY57	SAGs	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00127	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+ERF6	PDF1.2	activation	TRUE	transcriptional/translational activation	activation	rx00135	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+CAMTA3	EDS1	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00148	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+ROS	GST	activation	TRUE	protein activation	activation	rx00149	SUBSTRATE	chloroplast	metabolite	PRODUCT	cytoplasm	protein
+NPR1 low & JAZ low	MYB113	activation	TRUE	transcriptional/translational activation	activation	rx00153	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+ORA59	MYB113	activation	TRUE	transcriptional/translational activation	activation	rx00153	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	ERF096	activation	TRUE	transcriptional/translational activation	activation	rx00154	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+ORA59	ERF096	activation	TRUE	transcriptional/translational activation	activation	rx00154	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	PDF1.2	activation	TRUE	transcriptional/translational activation	activation	rx00155	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+ORA59	PDF1.2	activation	TRUE	transcriptional/translational activation	activation	rx00155	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+NPR1 low & JAZ low	ERF1	activation	TRUE	transcriptional/translational activation	activation	rx00158	ACTIVATES		condition	PRODUCT	cytoplasm	protein_active
+EIN3(like)	ERF1	activation	TRUE	transcriptional/translational activation	activation	rx00158	SUBSTRATE	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+WRKY33	WRKY33	activation	TRUE	transcriptional/translational activation	activation	rx00160	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein
+WRKY33	PAD4	activation	TRUE	transcriptional/translational activation	activation	rx00161	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+MYC2	DELLA	activation	TRUE	transcriptional/translational activation	activation	rx00163	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+Phytoene	all-trans-Phytofluene	activation	TRUE	catalysis	activation	rx00566	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+Phytoene	PDS	activation	TRUE	catalysis	activation	rx00566	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+PDS	all-trans-Phytofluene	activation	TRUE	catalysis	activation	rx00566	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+CAMTA3	EIN3(like)	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00186	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+WRKY8	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00187	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+WRKY28	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00188	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+WRKY48	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00189	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+CBP60G	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00190	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+CA	CA-CoA	activation	TRUE	catalysis	activation	rx00533	SUBSTRATE	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+CA	4CL	activation	TRUE	catalysis	activation	rx00533	SUBSTRATE	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+4CL	CA-CoA	activation	TRUE	catalysis	activation	rx00533	ACTIVATES	peroxisome	protein_active	PRODUCT	peroxisome	metabolite
+ERF/ORA59	ACO	activation	TRUE	transcriptional/translational activation	activation	rx00193	ACTIVATES	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+3H3PP-CoA	3O3PP-CoA	activation	TRUE	catalysis	activation	rx00534	SUBSTRATE	peroxisome	metabolite	PRODUCT	peroxisome	metabolite
+CML|Ca2+	COI1	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00196	PRODUCT	cytoplasm	complex_active	SUBSTRATE	nucleus	protein_active
+JAM	ERF1	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00206	INHIBITS	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+TGA2,5,6	OPR	activation	TRUE	transcriptional/translational activation	activation	rx00209	SUBSTRATE	nucleus	protein_active	ACTIVATES	peroxisome	protein_active
+EIN3(like)	ICS	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00240	SUBSTRATE	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+MYB33,44,65	WRKY70	activation	TRUE	transcriptional/translational activation	activation	rx00244	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	cytoplasm	protein_active
+WRKY8	WRKY46	activation	TRUE	transcriptional/translational activation	activation	rx00245	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	protein_active
+WRKY28	WRKY46	activation	TRUE	transcriptional/translational activation	activation	rx00246	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	protein_active
+WRKY48	WRKY46	activation	TRUE	transcriptional/translational activation	activation	rx00247	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	protein_active
+WRKY33	ACS	activation	TRUE	transcriptional/translational activation	activation	rx00248	SUBSTRATE	nucleus	protein	ACTIVATES	cytoplasm	protein_active
+MYC2	ORA59	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00250	SUBSTRATE	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+MYC2	NAC019	activation	TRUE	transcriptional/translational activation	activation	rx00251	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	protein_active
+MYC2	NAC055	activation	TRUE	transcriptional/translational activation	activation	rx00252	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	gene
+MYC2	NAC072	activation	TRUE	transcriptional/translational activation	activation	rx00253	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:nucleus	protein_active
+NAC019	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00254	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+NAC055	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00255	SUBSTRATE	nucleus	gene	ACTIVATES	chloroplast	protein_active
+NAC072	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00256	PRODUCT	putative:nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+NAC019	SAGT	activation	TRUE	transcriptional/translational activation	activation	rx00257	PRODUCT	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+NAC055	SAGT	activation	TRUE	transcriptional/translational activation	activation	rx00258	SUBSTRATE	nucleus	gene	ACTIVATES	cytoplasm	protein_active
+NAC072	SAGT	activation	TRUE	transcriptional/translational activation	activation	rx00259	PRODUCT	putative:nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+GA	MYB33,44,65	activation	TRUE	transcriptional/translational activation	activation	rx00302	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	protein
+ARR-B	ARR-A	activation	TRUE	transcriptional/translational activation	activation	rx00391	PRODUCT	nucleus	protein_active	SUBSTRATE	nucleus	protein
+ARR-B	PR1	activation	TRUE	transcriptional/translational activation	activation	rx00394	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+ORA59	NAC032	activation	TRUE	transcriptional/translational activation	activation	rx00157	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+SCL14|TGA2,5,6	NAC032	activation	TRUE	transcriptional/translational activation	activation	rx00157	PRODUCT	nucleus	complex_active	PRODUCT	cytoplasm	protein_active
+9-cis-&beta;-carotene	9-cis-10&prime;-apo-&beta;-carotenal	activation	TRUE	catalysis	activation	rx00315	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+9-cis-&beta;-carotene	CCD	activation	TRUE	catalysis	activation	rx00315	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+CCD	9-cis-10&prime;-apo-&beta;-carotenal	activation	TRUE	catalysis	activation	rx00315	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+9-cis-10&prime;-apo-&beta;-carotenal	CL	activation	TRUE	catalysis	activation	rx00316	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+9-cis-10&prime;-apo-&beta;-carotenal	CCD	activation	TRUE	catalysis	activation	rx00316	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+CCD	CL	activation	TRUE	catalysis	activation	rx00316	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+SL	D14	activation	TRUE	protein activation	activation	rx00318	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	protein_active
+prenyl-tRNA	cis-prenyl-tRNA	activation	TRUE	catalysis	activation	rx00328	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+LOG	cZ	activation	TRUE	catalysis	activation	rx00331	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+CKX	cZ	inhibition	TRUE	degradation/secretion	inhibition	rx00334	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+DZ	APT	activation	TRUE	catalysis	activation	rx00342	ACTIVATES	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+LOG	DZ	activation	TRUE	catalysis	activation	rx00343	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+tZ	APT	activation	TRUE	catalysis	activation	rx00354	ACTIVATES	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+3O3PP-CoA	BA-CoA	activation	TRUE	catalysis	activation	rx00535	PRODUCT	peroxisome	metabolite	PRODUCT	putative:cytoplasm	metabolite
+3O3PP-CoA	KAT	activation	TRUE	catalysis	activation	rx00535	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+KAT	BA-CoA	activation	TRUE	catalysis	activation	rx00535	ACTIVATES	peroxisome	protein_active	PRODUCT	putative:cytoplasm	metabolite
+LOG	tZ	activation	TRUE	catalysis	activation	rx00355	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+BA-CoA	BA	activation	TRUE	catalysis	activation	rx00536	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	chloroplast	metabolite
+BA-CoA	DHNAT2	activation	TRUE	catalysis	activation	rx00536	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	peroxisome	protein_active
+DHNAT2	BA	activation	TRUE	catalysis	activation	rx00536	ACTIVATES	peroxisome	protein_active	PRODUCT	chloroplast	metabolite
+ETP	SCF	binding	FALSE	binding/oligomerisation	activation	rx00011	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	complex_active
+SCF	ETP	binding	FALSE	binding/oligomerisation	activation	rx00011	SUBSTRATE	putative:cytoplasm	complex_active	SUBSTRATE	cytoplasm	protein
+ETP	ETP|SCF	activation	TRUE	binding/oligomerisation	activation	rx00011	SUBSTRATE	cytoplasm	protein	ACTIVATES	cytoplasm	complex_active
+SCF	ETP|SCF	activation	TRUE	binding/oligomerisation	activation	rx00011	SUBSTRATE	putative:cytoplasm	complex_active	ACTIVATES	cytoplasm	complex_active
+CKX	tZ	inhibition	TRUE	degradation/secretion	inhibition	rx00358	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+iP	APT	activation	TRUE	catalysis	activation	rx00366	ACTIVATES	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+LOG	iP	activation	TRUE	catalysis	activation	rx00367	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+EBF	SCF	inhibition	FALSE	binding/oligomerisation	inhibition	rx00016	PRODUCT	nucleus	protein_active	SUBSTRATE	putative:cytoplasm	complex_active
+SCF	EBF	inhibition	FALSE	binding/oligomerisation	inhibition	rx00016	SUBSTRATE	putative:cytoplasm	complex_active	PRODUCT	nucleus	protein_active
+CKX	iP	inhibition	TRUE	degradation/secretion	inhibition	rx00370	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+NPR1	EDS1|PAD4	inhibition	TRUE	unknown	inhibition	rx00088	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	complex_active
+MPK4	EDS1|PAD4	inhibition	TRUE	unknown	inhibition	rx00089	ACTIVATES	cytoplasm	protein_active	PRODUCT	nucleus	complex_active
+NPR1 high & JAZ low	ORA59	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00151	ACTIVATES		condition	ACTIVATES	nucleus	protein_active
+TGA2,5,6	ORA59	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00151	SUBSTRATE	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+ERF1	ORA59	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00151	PRODUCT	cytoplasm	protein_active	ACTIVATES	nucleus	protein_active
+GRX480	ORA59	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00151	PRODUCT	putative:nucleus	protein_active	ACTIVATES	nucleus	protein_active
+EIN2	PR1	inhibition	TRUE	unknown	inhibition	rx00210	PRODUCT	endoplasmic reticulum	protein_active	PRODUCT	cytoplasm	protein_active
+SA	CAT	inhibition	TRUE	unknown	inhibition	rx00311	PRODUCT	cytoplasm	metabolite	SUBSTRATE	peroxisome	protein_active
+CA-CoA	BD	activation	TRUE	catalysis	activation	rx00539	PRODUCT	peroxisome	metabolite	PRODUCT	cytoplasm	metabolite
+CA-CoA	CHY1	activation	TRUE	catalysis	activation	rx00539	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+CHY1	BD	activation	TRUE	catalysis	activation	rx00539	ACTIVATES	peroxisome	protein_active	PRODUCT	cytoplasm	metabolite
+REM12	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00520	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+VPg	REM12	inhibition	FALSE	binding/oligomerisation	inhibition	rx00520	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+EIF4E1	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00521	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+VPg	EIF4E1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00521	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+MYC2	YUC	activation	TRUE	transcriptional/translational activation	activation	rx00410	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+ERF11	BT4	activation	TRUE	transcriptional/translational activation	activation	rx00411	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+EIF4E1	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00522	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+HC-Pro	EIF4E1	inhibition	FALSE	binding/oligomerisation	inhibition	rx00522	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+EIJP1	EDS1	inhibition	TRUE	protein deactivation	inhibition	rx00524	TRANSLOCATE_TO	cytoplasm	protein_active	SUBSTRATE	nucleus	protein_active
+TOR	EIN2	inhibition	TRUE	protein deactivation	inhibition	rx00525	ACTIVATES	cytoplasm	protein_active	PRODUCT	endoplasmic reticulum	protein_active
+NPR1|TGA2,5,6	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00526	PRODUCT	nucleus	complex	ACTIVATES	chloroplast	protein_active
+SA	SA-Asp	activation	TRUE	catalysis	activation	rx00419	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+SA	GH3	activation	TRUE	catalysis	activation	rx00419	PRODUCT	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GH3	SA-Asp	activation	TRUE	catalysis	activation	rx00419	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+TOR	RAPTOR2	binding	FALSE	binding/oligomerisation	activation	rx00420	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+RAPTOR2	TOR	binding	FALSE	binding/oligomerisation	activation	rx00420	SUBSTRATE	cytoplasm	protein	ACTIVATES	cytoplasm	protein_active
+trichous-bacteria	flg22	activation	TRUE	transcriptional/translational activation	activation	rx00528	ACTIVATES	putative:cytoplasm	foreign_entity	SUBSTRATE	cytoplasm	protein_active
+SNRK2	RAPTOR2	inhibition	TRUE	protein deactivation	inhibition	rx00421	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+NPR3	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00422	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SA low	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00422	ACTIVATES		condition	SUBSTRATE	nucleus	protein_active
+SA	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00422	PRODUCT	cytoplasm	metabolite	SUBSTRATE	nucleus	protein_active
+SA high	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00423	ACTIVATES		condition	SUBSTRATE	nucleus	protein_active
+NPR4	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00423	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SA	NPR1	inhibition	TRUE	degradation/secretion	inhibition	rx00423	PRODUCT	cytoplasm	metabolite	SUBSTRATE	nucleus	protein_active
+MKD1	MKK1	activation	TRUE	protein activation	activation	rx00424	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+Trp	IAM	activation	TRUE	catalysis	activation	rx00425	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+Trp	iaaM	activation	TRUE	catalysis	activation	rx00425	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+iaaM	IAM	activation	TRUE	catalysis	activation	rx00425	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+BIK1	RBOH	activation	TRUE	protein activation	activation	rx00427	PRODUCT	cytoplasm	protein_active	ACTIVATES	apoplast	protein_active
+SARD1	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00428	ACTIVATES	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+S-alkyl-thiohydroximate	Thiohydroximate	activation	TRUE	catalysis	activation	rx00429	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+S-alkyl-thiohydroximate	SUR1	activation	TRUE	catalysis	activation	rx00429	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+SUR1	Thiohydroximate	activation	TRUE	catalysis	activation	rx00429	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+MVA	5-phosphomevalonate	activation	TRUE	catalysis	activation	rx00431	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+MVA	MVK	activation	TRUE	catalysis	activation	rx00431	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+MVK	5-phosphomevalonate	activation	TRUE	catalysis	activation	rx00431	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+NPR1	MYC2	inhibition	TRUE	protein deactivation	inhibition	rx00432	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+TCP8	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00433	ACTIVATES	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+IAA-Ala	IAA	activation	TRUE	catalysis	activation	rx00434	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IAA-Ala	IAR	activation	TRUE	catalysis	activation	rx00434	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+IAR	IAA	activation	TRUE	catalysis	activation	rx00434	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+Trp	IPA	activation	TRUE	catalysis	activation	rx00413	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+Trp	TAA1	activation	TRUE	catalysis	activation	rx00413	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+TAA1	IPA	activation	TRUE	catalysis	activation	rx00413	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+BAK1	BRI1	binding	FALSE	binding/oligomerisation	activation	rx00529	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+BRI1	BAK1	binding	FALSE	binding/oligomerisation	activation	rx00529	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+BAK1	BAK1|BRI1	activation	TRUE	binding/oligomerisation	activation	rx00529	SUBSTRATE	cytoplasm	protein	PRODUCT	putative:cytoplasm	complex_active
+BRI1	BAK1|BRI1	activation	TRUE	binding/oligomerisation	activation	rx00529	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	complex_active
+Brassinolide	BAK1|BRI1	activation	TRUE	binding/oligomerisation	activation	rx00529	ACTIVATES	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	complex_active
+IPA	IAA	activation	TRUE	catalysis	activation	rx00414	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IPA	YUC	activation	TRUE	catalysis	activation	rx00414	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	protein_active
+YUC	IAA	activation	TRUE	catalysis	activation	rx00414	PRODUCT	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+Trp	IAOx	activation	TRUE	catalysis	activation	rx00415	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+Trp	CYP79B2	activation	TRUE	catalysis	activation	rx00415	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+CYP79B2	IAOx	activation	TRUE	catalysis	activation	rx00415	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+IAOx	IAOx N-oxide	activation	TRUE	catalysis	activation	rx00416	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IAOx	CYP83B1	activation	TRUE	catalysis	activation	rx00416	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+CYP83B1	IAOx N-oxide	activation	TRUE	catalysis	activation	rx00416	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+IAN	IAA	activation	TRUE	catalysis	activation	rx00417	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IAN	NIT1	activation	TRUE	catalysis	activation	rx00417	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+NIT1	IAA	activation	TRUE	catalysis	activation	rx00417	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+IAM	IAA	activation	TRUE	catalysis	activation	rx00418	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IAM	AMI1	activation	TRUE	catalysis	activation	rx00418	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+AMI1	IAA	activation	TRUE	catalysis	activation	rx00418	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+LECRK19	MVK	activation	TRUE	protein activation	activation	rx00435	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	cytoplasm	protein_active
+ORA59	ERF1	activation	TRUE	transcriptional/translational activation	activation	rx00436	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+TCP8	SARD1	binding	FALSE	binding/oligomerisation	activation	rx00437	ACTIVATES	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+SARD1	TCP8	binding	FALSE	binding/oligomerisation	activation	rx00437	ACTIVATES	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+TCP8	SARD1|TCP8	activation	TRUE	binding/oligomerisation	activation	rx00437	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	complex
+SARD1	SARD1|TCP8	activation	TRUE	binding/oligomerisation	activation	rx00437	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	complex
+TCP8	WRKY28	binding	FALSE	binding/oligomerisation	activation	rx00438	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	protein_active
+WRKY28	TCP8	binding	FALSE	binding/oligomerisation	activation	rx00438	PRODUCT	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+TCP8	TCP8|WRKY28	activation	TRUE	binding/oligomerisation	activation	rx00438	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	complex
+WRKY28	TCP8|WRKY28	activation	TRUE	binding/oligomerisation	activation	rx00438	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	complex
+TCP8	NAC019	binding	FALSE	binding/oligomerisation	activation	rx00439	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	protein_active
+NAC019	TCP8	binding	FALSE	binding/oligomerisation	activation	rx00439	PRODUCT	nucleus	protein_active	ACTIVATES	nucleus	protein_active
+TCP8	NAC019|TCP8	activation	TRUE	binding/oligomerisation	activation	rx00439	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	complex
+NAC019	NAC019|TCP8	activation	TRUE	binding/oligomerisation	activation	rx00439	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	complex
+ORA59	FKBP65	activation	TRUE	transcriptional/translational activation	activation	rx00441	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+IAA-Leu	IAA	activation	TRUE	catalysis	activation	rx00442	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IAA-Leu	ILR1	activation	TRUE	catalysis	activation	rx00442	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+ILR1	IAA	activation	TRUE	catalysis	activation	rx00442	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+ORA59	UTR1	activation	TRUE	transcriptional/translational activation	activation	rx00443	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+SIK1	BIK1	activation	TRUE	protein activation	activation	rx00445	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+CAMTA3	RDR1,6	activation	TRUE	transcriptional/translational activation	activation	rx00447	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	gene
+MeIAA	IAA	activation	TRUE	catalysis	activation	rx00448	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+MeIAA	IAMT1	activation	TRUE	catalysis	activation	rx00448	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+IAMT1	IAA	activation	TRUE	catalysis	activation	rx00448	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+LECRK19	RBOH	activation	TRUE	protein activation	activation	rx00449	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	apoplast	protein_active
+ORA59	BGLU30	activation	TRUE	transcriptional/translational activation	activation	rx00450	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein
+SIK1	RBOH	activation	TRUE	protein activation	activation	rx00451	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	apoplast	protein_active
+ORA59	CYP81F4	activation	TRUE	transcriptional/translational activation	activation	rx00452	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+ORA59	DR4	activation	TRUE	transcriptional/translational activation	activation	rx00453	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+ORA59	ERF016	activation	TRUE	transcriptional/translational activation	activation	rx00454	ACTIVATES	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein_active
+eATP	LECRK19	activation	TRUE	protein activation	activation	rx00455	ACTIVATES	extracellular	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+IAA	IAA-Glu	activation	TRUE	catalysis	activation	rx00457	PRODUCT	cytoplasm	metabolite	PRODUCT	chloroplast	metabolite
+IAA	UGT84B1	activation	TRUE	catalysis	activation	rx00457	PRODUCT	cytoplasm	metabolite	ACTIVATES	chloroplast	protein_active
+UGT84B1	IAA-Glu	activation	TRUE	catalysis	activation	rx00457	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+IAA	IAA-Asp	activation	TRUE	catalysis	activation	rx00458	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+IAA	GH3	activation	TRUE	catalysis	activation	rx00458	PRODUCT	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+GH3	IAA-Asp	activation	TRUE	catalysis	activation	rx00458	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	putative:cytoplasm	metabolite
+L-Dopa	DOPAL	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+L-Dopa	PAA	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+Phe	DOPAL	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	chloroplast	metabolite	PRODUCT	cytoplasm	metabolite
+Phe	PAA	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	chloroplast	metabolite	PRODUCT	cytoplasm	metabolite
+L-Dopa	ELI5	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+Phe	ELI5	activation	TRUE	catalysis	activation	rx00460	SUBSTRATE	chloroplast	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+ELI5	DOPAL	activation	TRUE	catalysis	activation	rx00460	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+ELI5	PAA	activation	TRUE	catalysis	activation	rx00460	ACTIVATES	putative:cytoplasm	protein_active	PRODUCT	cytoplasm	metabolite
+EDS1|PAD4|SAG	NPR1|TGA2,5,6	activation	TRUE	protein activation	activation	rx00544	PRODUCT	nucleus	complex_active	PRODUCT	nucleus	complex
+IAA	TIR1	activation	TRUE	protein activation	activation	rx00462	PRODUCT	cytoplasm	metabolite	PRODUCT	nucleus	protein_active
+TIR1	AUX/IAA	inhibition	TRUE	degradation/secretion	inhibition	rx00463	PRODUCT	nucleus	protein_active	SUBSTRATE	putative:nucleus	protein_active
+ARF	GH3.7	activation	TRUE	transcriptional/translational activation	activation	rx00465	SUBSTRATE	nucleus	protein	PRODUCT	nucleus	protein
+ARF	SAUR41	activation	TRUE	transcriptional/translational activation	activation	rx00466	SUBSTRATE	nucleus	protein	PRODUCT	cytoplasm	protein_active
+ABA	PYL	activation	TRUE	protein activation	activation	rx00474	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	cytoplasm	protein
+PYL	PP2C	inhibition	TRUE	protein deactivation	inhibition	rx00475	SUBSTRATE	cytoplasm	protein	PRODUCT	cytoplasm	protein
+PP2C	SNRK2	inhibition	TRUE	protein deactivation	inhibition	rx00476	PRODUCT	cytoplasm	protein	ACTIVATES	cytoplasm	protein_active
+SNRK2	GBF4	activation	TRUE	protein activation	activation	rx00477	ACTIVATES	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+NPR1	bZIP21	activation	TRUE	protein activation	activation	rx00478	SUBSTRATE	nucleus	protein_active	PRODUCT	nucleus	protein_active
+bZIP21	PR1	activation	TRUE	transcriptional/translational activation	activation	rx00479	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+SNRK2	Stomatal closure	activation	TRUE	protein activation	activation	rx00599	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	process_active
+Stomatal closure	CO2-deficiency	activation	TRUE	protein activation	activation	rx00600	PRODUCT	cytoplasm	process_active	ACTIVATES	chloroplast	process_active
+BIK1	MAPKKK8	activation	TRUE	protein activation	activation	rx00604	PRODUCT	cytoplasm	protein_active	ACTIVATES	cytoplasm	protein_active
+BAK1|BRI1	BSK	activation	TRUE	protein activation	activation	rx00491	PRODUCT	putative:cytoplasm	complex_active	PRODUCT	cytoplasm	protein_active
+BSK	BSU1	activation	TRUE	protein activation	activation	rx00492	PRODUCT	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+CA-CoA	3H3PP-CoA	activation	TRUE	catalysis	activation	rx00530	PRODUCT	peroxisome	metabolite	SUBSTRATE	peroxisome	metabolite
+CA-CoA	MFP	activation	TRUE	catalysis	activation	rx00530	PRODUCT	peroxisome	metabolite	ACTIVATES	peroxisome	protein_active
+MFP	3H3PP-CoA	activation	TRUE	catalysis	activation	rx00530	ACTIVATES	peroxisome	protein_active	SUBSTRATE	peroxisome	metabolite
+BSU1	ASK	inhibition	TRUE	degradation/secretion	inhibition	rx00493	PRODUCT	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein_active
+ASK	BZR2	activation	TRUE	protein activation	activation	rx00494	SUBSTRATE	cytoplasm	protein_active	PRODUCT	nucleus	protein_active
+BZR2	XTH	activation	TRUE	transcriptional/translational activation	activation	rx00495	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	protein
+BZR2	CYCD3-3	activation	TRUE	transcriptional/translational activation	activation	rx00496	PRODUCT	nucleus	protein_active	PRODUCT	nucleus	protein
+NPR1	NPR1|WRKY18	activation	TRUE	binding/oligomerisation	activation	rx00500	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:cytoplasm	complex
+SA	NPR1|WRKY18	activation	TRUE	binding/oligomerisation	activation	rx00500	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	complex
+CDK	NPR1	binding	FALSE	binding/oligomerisation	activation	rx00501	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+NPR1	CDK	binding	FALSE	binding/oligomerisation	activation	rx00501	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+CTS	CA	translocation	TRUE	translocation	activation	rx00531	ACTIVATES	chloroplast	protein_active	SUBSTRATE	peroxisome	metabolite
+TGA2,5,6	CDK	binding	FALSE	binding/oligomerisation	activation	rx00504	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein
+CDK	TGA2,5,6	binding	FALSE	binding/oligomerisation	activation	rx00504	SUBSTRATE	nucleus	protein	SUBSTRATE	nucleus	protein_active
+DELLA	PIF3,4	inhibition	TRUE	protein deactivation	inhibition	rx00505	SUBSTRATE	nucleus	protein	ACTIVATES	cytoplasm	protein_active
+BD	BA	activation	TRUE	catalysis	activation	rx00538	PRODUCT	cytoplasm	metabolite	PRODUCT	chloroplast	metabolite
+BD	AAO	activation	TRUE	catalysis	activation	rx00538	PRODUCT	cytoplasm	metabolite	ACTIVATES	chloroplast	protein_active
+AAO	BA	activation	TRUE	catalysis	activation	rx00538	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+MYC2	RIN4	activation	TRUE	transcriptional/translational activation	activation	rx00508	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+MYC2	ICS	activation	TRUE	transcriptional/translational activation	activation	rx00509	SUBSTRATE	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+MYC2	PEPR	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00510	SUBSTRATE	nucleus	protein_active	PRODUCT	putative:cytoplasm	protein
+TCP8,14,15	NPR1	activation	TRUE	protein activation	activation	rx00511	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+PEPR	PEP	binding	FALSE	binding/oligomerisation	activation	rx00512	PRODUCT	putative:cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+PEP	PEPR	binding	FALSE	binding/oligomerisation	activation	rx00512	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	protein
+PEPR	PEPR1|PEP1	activation	TRUE	binding/oligomerisation	activation	rx00512	PRODUCT	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	complex
+PEP	PEPR1|PEP1	activation	TRUE	binding/oligomerisation	activation	rx00512	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	complex
+PEPR1|PEP1	BIK1	binding	FALSE	binding/oligomerisation	activation	rx00513	PRODUCT	putative:cytoplasm	complex	PRODUCT	cytoplasm	protein_active
+BIK1	PEPR1|PEP1	binding	FALSE	binding/oligomerisation	activation	rx00513	PRODUCT	cytoplasm	protein_active	PRODUCT	putative:cytoplasm	complex
+PEPR1|PEP1	BIK1|PEPR1|PEP1	activation	TRUE	binding/oligomerisation	activation	rx00513	PRODUCT	putative:cytoplasm	complex	PRODUCT	putative:cytoplasm	complex
+BIK1	BIK1|PEPR1|PEP1	activation	TRUE	binding/oligomerisation	activation	rx00513	PRODUCT	cytoplasm	protein_active	PRODUCT	putative:cytoplasm	complex
+Prep	L-arogenate	activation	TRUE	catalysis	activation	rx00540	PRODUCT	chloroplast	metabolite	SUBSTRATE	putative:cytoplasm	metabolite
+Prep	PA	activation	TRUE	catalysis	activation	rx00540	PRODUCT	chloroplast	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+PA	L-arogenate	activation	TRUE	catalysis	activation	rx00540	ACTIVATES	putative:cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	metabolite
+L-arogenate	Phe	activation	TRUE	catalysis	activation	rx00541	SUBSTRATE	putative:cytoplasm	metabolite	SUBSTRATE	chloroplast	metabolite
+L-arogenate	ADT	activation	TRUE	catalysis	activation	rx00541	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	chloroplast	protein_active
+ADT	Phe	activation	TRUE	catalysis	activation	rx00541	ACTIVATES	chloroplast	protein_active	SUBSTRATE	chloroplast	metabolite
+CA	p-Coumaric acid	activation	TRUE	catalysis	activation	rx00543	SUBSTRATE	peroxisome	metabolite	ACTIVATES	putative:cytoplasm	metabolite
+CA	CYP73A5	activation	TRUE	catalysis	activation	rx00543	SUBSTRATE	peroxisome	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+CYP73A5	p-Coumaric acid	activation	TRUE	catalysis	activation	rx00543	ACTIVATES	putative:cytoplasm	protein_active	ACTIVATES	putative:cytoplasm	metabolite
+potyvirus	HC-Pro	activation	TRUE	transcriptional/translational activation	activation	rx00582	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+potyvirus	P3	activation	TRUE	transcriptional/translational activation	activation	rx00583	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+potyvirus	CP	activation	TRUE	transcriptional/translational activation	activation	rx00584	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+potyvirus	CI	activation	TRUE	transcriptional/translational activation	activation	rx00585	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein
+potyvirus	VPg	activation	TRUE	transcriptional/translational activation	activation	rx00586	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	protein
+HC-Pro	miR168	activation	TRUE	transcriptional/translational activation	activation	rx00588	SUBSTRATE	cytoplasm	protein	INHIBITS	cytoplasm	protein_active
+miR168	AGO1	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00589	INHIBITS	cytoplasm	protein_active	SUBSTRATE	cytoplasm	protein_active
+potyvirus	viral dsRNA	activation	TRUE	transcriptional/translational activation	activation	rx00590	SUBSTRATE	cytoplasm	protein_active	PRODUCT	cytoplasm	mrna
+viral dsRNA	vsiRNA	activation	TRUE	catalysis	activation	rx00591	PRODUCT	cytoplasm	mrna	PRODUCT	putative:cytoplasm	mrna
+viral dsRNA	DCL2,4	activation	TRUE	catalysis	activation	rx00591	PRODUCT	cytoplasm	mrna	ACTIVATES	cytoplasm	protein_active
+DCL2,4	vsiRNA	activation	TRUE	catalysis	activation	rx00591	ACTIVATES	cytoplasm	protein_active	PRODUCT	putative:cytoplasm	mrna
+SAMe	me-vsiRNA	activation	TRUE	catalysis	activation	rx00592	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	mrna
+SAMe	SAH	activation	TRUE	catalysis	activation	rx00592	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+vsiRNA	me-vsiRNA	activation	TRUE	catalysis	activation	rx00592	PRODUCT	putative:cytoplasm	mrna	PRODUCT	putative:cytoplasm	mrna
+vsiRNA	SAH	activation	TRUE	catalysis	activation	rx00592	PRODUCT	putative:cytoplasm	mrna	PRODUCT	putative:cytoplasm	metabolite
+SAMe	HEN1	activation	TRUE	catalysis	activation	rx00592	PRODUCT	cytoplasm	metabolite	PRODUCT	putative:cytoplasm	protein
+vsiRNA	HEN1	activation	TRUE	catalysis	activation	rx00592	PRODUCT	putative:cytoplasm	mrna	PRODUCT	putative:cytoplasm	protein
+HEN1	me-vsiRNA	activation	TRUE	catalysis	activation	rx00592	PRODUCT	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	mrna
+HEN1	SAH	activation	TRUE	catalysis	activation	rx00592	PRODUCT	putative:cytoplasm	protein	PRODUCT	putative:cytoplasm	metabolite
+me-vsiRNA	AGO1	binding	FALSE	binding/oligomerisation	activation	rx00593	PRODUCT	putative:cytoplasm	mrna	SUBSTRATE	cytoplasm	protein_active
+AGO1	me-vsiRNA	binding	FALSE	binding/oligomerisation	activation	rx00593	SUBSTRATE	cytoplasm	protein_active	PRODUCT	putative:cytoplasm	mrna
+HC-Pro	me-vsiRNA	inhibition	FALSE	binding/oligomerisation	inhibition	rx00581	SUBSTRATE	cytoplasm	protein	PRODUCT	putative:cytoplasm	mrna
+me-vsiRNA	HC-Pro	inhibition	FALSE	binding/oligomerisation	inhibition	rx00581	PRODUCT	putative:cytoplasm	mrna	SUBSTRATE	cytoplasm	protein
+SAH	L-homo-cys	activation	TRUE	catalysis	activation	rx00594	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	putative:cytoplasm	metabolite
+SAH	SAHH	activation	TRUE	catalysis	activation	rx00594	PRODUCT	putative:cytoplasm	metabolite	PRODUCT	endoplasmic reticulum	protein
+SAHH	L-homo-cys	activation	TRUE	catalysis	activation	rx00594	PRODUCT	endoplasmic reticulum	protein	PRODUCT	putative:cytoplasm	metabolite
+L-homo-cys	L-Met	activation	TRUE	catalysis	activation	rx00595	PRODUCT	putative:cytoplasm	metabolite	SUBSTRATE	cytoplasm	metabolite
+L-homo-cys	MS	activation	TRUE	catalysis	activation	rx00595	PRODUCT	putative:cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+MS	L-Met	activation	TRUE	catalysis	activation	rx00595	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	metabolite
+vsiRNA	viral dsRNA	activation	TRUE	transcriptional/translational activation	activation	rx00596	PRODUCT	putative:cytoplasm	mrna	PRODUCT	cytoplasm	mrna
+RDR1,6	viral dsRNA	activation	TRUE	transcriptional/translational activation	activation	rx00596	SUBSTRATE	nucleus	gene	PRODUCT	cytoplasm	mrna
+ETR	ET	binding	FALSE	binding/oligomerisation	activation	rx00008	SUBSTRATE	endoplasmic reticulum	protein	PRODUCT	cytoplasm	metabolite
+ET	ETR	binding	FALSE	binding/oligomerisation	activation	rx00008	PRODUCT	cytoplasm	metabolite	SUBSTRATE	endoplasmic reticulum	protein
+ETR	ET|ETR	activation	TRUE	binding/oligomerisation	activation	rx00008	SUBSTRATE	endoplasmic reticulum	protein	PRODUCT	cytoplasm	complex_active
+ET	ET|ETR	activation	TRUE	binding/oligomerisation	activation	rx00008	PRODUCT	cytoplasm	metabolite	PRODUCT	cytoplasm	complex_active
+IsoChor-9-Glu	N-pyruvoyl-L-Glu	activation	TRUE	catalysis	activation	rx00516	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+IsoChor-9-Glu	SA	activation	TRUE	catalysis	activation	rx00516	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	metabolite
+AUX/IAA	ARF	inhibition	TRUE	protein deactivation	inhibition	rx00518	SUBSTRATE	putative:nucleus	protein_active	SUBSTRATE	nucleus	protein
+NPR1	NPR1|NPR1	activation	TRUE	binding/oligomerisation	activation	rx00094	SUBSTRATE	nucleus	protein_active	SUBSTRATE	cytoplasm	complex_active
+GSNO	NPR1|NPR1	activation	TRUE	binding/oligomerisation	activation	rx00094	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	complex_active
+IsoChor	IsoChor-9-Glu	activation	TRUE	catalysis	activation	rx00514	PRODUCT	chloroplast	metabolite	SUBSTRATE	cytoplasm	metabolite
+Glu	IsoChor-9-Glu	activation	TRUE	catalysis	activation	rx00514	SUBSTRATE	cytoplasm	metabolite	SUBSTRATE	cytoplasm	metabolite
+IsoChor	PBS3	activation	TRUE	catalysis	activation	rx00514	PRODUCT	chloroplast	metabolite	ACTIVATES	cytoplasm	protein_active
+Glu	PBS3	activation	TRUE	catalysis	activation	rx00514	SUBSTRATE	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+PBS3	IsoChor-9-Glu	activation	TRUE	catalysis	activation	rx00514	ACTIVATES	cytoplasm	protein_active	SUBSTRATE	cytoplasm	metabolite
+EDS5	IsoChor	translocation	TRUE	translocation	activation	rx00517	ACTIVATES	chloroplast	protein_active	PRODUCT	chloroplast	metabolite
+LOX	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00634	ACTIVATES	chloroplast	protein_active	SUBSTRATE	putative:cytoplasm	protein
+VPg	LOX	inhibition	FALSE	binding/oligomerisation	inhibition	rx00634	SUBSTRATE	putative:cytoplasm	protein	ACTIVATES	chloroplast	protein_active
+MYC2	JAZ	inhibition	FALSE	binding/oligomerisation	inhibition	rx00047	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+JAZ	MYC2	inhibition	FALSE	binding/oligomerisation	inhibition	rx00047	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+VPg	CP	inhibition	FALSE	binding/oligomerisation	inhibition	rx00641	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+CP	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00641	SUBSTRATE	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+cZ	APT	activation	TRUE	catalysis	activation	rx00642	SUBSTRATE	putative:cytoplasm	metabolite	ACTIVATES	putative:cytoplasm	protein_active
+RBC	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00677	SUBSTRATE	cytoplasm	protein_active	SUBSTRATE	putative:cytoplasm	protein
+VPg	RBC	inhibition	FALSE	binding/oligomerisation	inhibition	rx00677	SUBSTRATE	putative:cytoplasm	protein	SUBSTRATE	cytoplasm	protein_active
+MeJA	JA	activation	TRUE	catalysis	activation	rx00696	PRODUCT	cytoplasm	metabolite	PRODUCT	peroxisome	metabolite
+VPg	GST	inhibition	FALSE	binding/oligomerisation	inhibition	rx00690	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	cytoplasm	protein
+GST	VPg	inhibition	FALSE	binding/oligomerisation	inhibition	rx00690	PRODUCT	cytoplasm	protein	SUBSTRATE	putative:cytoplasm	protein
+CML|Ca2+	CAT	activation	TRUE	protein activation	activation	rx00701	PRODUCT	cytoplasm	complex_active	SUBSTRATE	peroxisome	protein_active
+EIN3(like)	NPR1	binding	FALSE	binding/oligomerisation	activation	rx00711	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+NPR1	EIN3(like)	binding	FALSE	binding/oligomerisation	activation	rx00711	SUBSTRATE	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+MKK1	MPK4	activation	TRUE	protein activation	activation	rx00714	PRODUCT	cytoplasm	protein_active	ACTIVATES	cytoplasm	protein_active
+ERF11	ACS	inhibition	TRUE	transcriptional/translational repression	inhibition	rx00716	ACTIVATES	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+BSU1	MAPKKK8	activation	TRUE	protein activation	activation	rx00737	PRODUCT	cytoplasm	protein_active	ACTIVATES	cytoplasm	protein_active
+HSP90	SGT1	binding	FALSE	binding/oligomerisation	activation	rx00729	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+SGT1	HSP90	binding	FALSE	binding/oligomerisation	activation	rx00729	SUBSTRATE	cytoplasm	protein	SUBSTRATE	cytoplasm	protein
+SGT1	TIR1	activation	TRUE	protein activation	activation	rx00731	SUBSTRATE	cytoplasm	protein	PRODUCT	nucleus	protein_active
+Ca2+	CDPK	activation	TRUE	protein activation	activation	rx00732	SUBSTRATE	cytoplasm	metabolite	PRODUCT	cytoplasm	protein_active
+BIK1	BSU1	activation	TRUE	protein activation	activation	rx00735	PRODUCT	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active
+BRI1	BSU1	activation	TRUE	protein activation	activation	rx00744	SUBSTRATE	putative:cytoplasm	protein	PRODUCT	cytoplasm	protein_active
+12-OH-JA-Ile	IAR	activation	TRUE	catalysis	activation	rx00757	PRODUCT	cytoplasm	metabolite	ACTIVATES	cytoplasm	protein_active
+SARD1	WRKY70	activation	TRUE	transcriptional/translational activation	activation	rx00758	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+CBP60G	WRKY70	activation	TRUE	transcriptional/translational activation	activation	rx00759	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+SARD1	EDS5	activation	TRUE	transcriptional/translational activation	activation	rx00760	ACTIVATES	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+CBP60G	EDS5	activation	TRUE	transcriptional/translational activation	activation	rx00761	PRODUCT	nucleus	protein_active	ACTIVATES	chloroplast	protein_active
+SARD1	NPR1	activation	TRUE	transcriptional/translational activation	activation	rx00762	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+CBP60G	NPR1	activation	TRUE	transcriptional/translational activation	activation	rx00763	PRODUCT	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SARD1	PBS3	activation	TRUE	transcriptional/translational activation	activation	rx00767	ACTIVATES	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+CBP60G	PBS3	activation	TRUE	transcriptional/translational activation	activation	rx00770	PRODUCT	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+SARD1	EDS1	activation	TRUE	transcriptional/translational activation	activation	rx00771	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SARD1	PAD4	activation	TRUE	transcriptional/translational activation	activation	rx00772	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+CBP60G	EDS1	activation	TRUE	transcriptional/translational activation	activation	rx00773	PRODUCT	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+CBP60G	PAD4	activation	TRUE	transcriptional/translational activation	activation	rx00774	PRODUCT	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+SARD1	BAK1	activation	TRUE	transcriptional/translational activation	activation	rx00784	ACTIVATES	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+SARD1	BIK1	activation	TRUE	transcriptional/translational activation	activation	rx00793	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+SARD1	MAPKKK8	activation	TRUE	transcriptional/translational activation	activation	rx00794	ACTIVATES	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+SARD1	MPK3,6	activation	TRUE	transcriptional/translational activation	activation	rx00796	ACTIVATES	nucleus	protein_active	SUBSTRATE	cytoplasm	protein_active
+SARD1	CDPK	activation	TRUE	transcriptional/translational activation	activation	rx00797	ACTIVATES	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+CBP60G	BAK1	activation	TRUE	transcriptional/translational activation	activation	rx00798	PRODUCT	nucleus	protein_active	SUBSTRATE	cytoplasm	protein
+CBP60G	BIK1	activation	TRUE	transcriptional/translational activation	activation	rx00801	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+CBP60G	MAPKKK8	activation	TRUE	transcriptional/translational activation	activation	rx00802	PRODUCT	nucleus	protein_active	ACTIVATES	cytoplasm	protein_active
+CBP60G	MPK3,6	activation	TRUE	transcriptional/translational activation	activation	rx00804	PRODUCT	nucleus	protein_active	SUBSTRATE	cytoplasm	protein_active
+CBP60G	CDPK	activation	TRUE	transcriptional/translational activation	activation	rx00805	PRODUCT	nucleus	protein_active	PRODUCT	cytoplasm	protein_active
+ORA59	NAC055	activation	TRUE	transcriptional/translational activation	activation	rx00857	ACTIVATES	nucleus	protein_active	SUBSTRATE	nucleus	gene
+ORA59	NAC019	activation	TRUE	transcriptional/translational activation	activation	rx00858	ACTIVATES	nucleus	protein_active	PRODUCT	nucleus	protein_active
+ORA59	NAC072	activation	TRUE	transcriptional/translational activation	activation	rx00859	ACTIVATES	nucleus	protein_active	PRODUCT	putative:nucleus	protein_active
+JAM	JAZ	inhibition	TRUE	protein deactivation	inhibition	rx00872	INHIBITS	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+JAM	JAZ	inhibition	TRUE	protein deactivation	inhibition	rx00873	INHIBITS	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+JAM	JAZ	inhibition	TRUE	protein deactivation	inhibition	rx00874	INHIBITS	nucleus	protein_active	SUBSTRATE	nucleus	protein_active
+MYC2	JAM	inhibition	TRUE	protein deactivation	inhibition	rx00877	SUBSTRATE	nucleus	protein_active	INHIBITS	nucleus	protein_active
+MAPKKK8	MKK1	activation	TRUE	protein activation	activation	rx00906	ACTIVATES	cytoplasm	protein_active	PRODUCT	cytoplasm	protein_active

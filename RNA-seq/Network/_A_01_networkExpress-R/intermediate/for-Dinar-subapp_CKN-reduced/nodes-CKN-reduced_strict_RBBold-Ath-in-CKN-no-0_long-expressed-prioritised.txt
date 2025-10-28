@@ -1,0 +1,1892 @@
+geneID	shortName	shortDescription	MapManBin	cyto.geneID
+AT4G01900	GLB1	Nitrogen regulatory protein P-II	30.01.2001	AT4G01900
+AT2G32800	LECRKS2	Receptor-like kinase	30.2.19	AT2G32800
+AT2G02220	PSKR1	Receptor kinase	30.2.10	AT2G02220
+AT4G26270	PFK3	Phosphofructokinase family protein	4.03.2004	AT4G26270
+AT5G54580	-	RNA binding protein	27.4	AT5G54580
+AT3G12830	SAUR72	Auxin responsive SAUR protein	17.02.2003	AT3G12830
+AT5G58110	-	Activator of 90 kDa heat shock protein ATPase homolog 1	35.2	AT5G58110
+AT2G31880	SOBIR1	Receptor-like serine/threonine-protein kinase At1g78530	30.2.11	AT2G31880
+AT2G38610	T6A23.19	Nucleic acid binding protein	27.4	AT2G38610
+AT5G17020	XPO1	Exportin-1	29.03.2001	AT5G17020
+AT4G31860	F11C18.60	Serine/threonine protein phosphatase	29.4	AT4G31860
+AT1G09660	F21M12.5	Nucleic acid binding protein	27.4	AT1G09660
+AT4G17720	dl4895c	Nucleic acid binding protein	27.4	AT4G17720
+AT2G26730	LRR-RLK	G-type lectin S-receptor-like serine/threonine-protein kinase At2g19130	30.2.3	AT2G26730
+AT4G25630	MED36A	rRNA 2&apos-O-methyltransferase fibrillarin	27.1	AT4G25630
+AT2G23420	NAPRT2	Nicotinate phosphoribosyltransferase-like protein	23.03.2001	AT2G23420
+AT1G09630	RABA2A	Ras-related protein Rab-25	30.5	AT1G09630
+AT5G57040	-	Glyoxalase	24.2	AT5G57040
+AT4G25500	RS40	Arginine/serine-rich splicing factor	27.01.2001	AT4G25500
+AT2G44360	-	Os09g0553800 protein (Fragment)	35.2	AT2G44360
+AT3G52590	RPL40B	Ubiquitin	29.5.11.1	AT3G52590
+AT5G52970	MNB8_3	Thylakoid lumen 15.0-kDa protein (Fragment)	35.1	AT5G52970
+AT2G24230	F27D4.14	Receptor-like serine/threonine-protein kinase At1g78530	30.2.7	AT2G24230
+AT2G24220	PUP5	Purine permease family protein	34.1	AT2G24220
+AT4G22220	ISU1	Iron-sulfur cluster assembly scaffold protein IscU	18.7	AT4G22220
+AT3G58730	VHA-D	V-type ATP synthase subunit D	34.1.1.3	AT3G58730
+AT3G55260	HEXO1	Beta-hexosaminidase 2	29.7	AT3G55260
+AT2G47710	-	Universal stress protein family protein	20	AT2G47710
+AT4G08920	CRY1	Cryptochrome 1	30.11	AT4G08920
+AT3G26420	RZ1A	RNA-binding protein RZ-1	27.4	AT3G26420
+AT3G22170	FHY3	Protein FAR1-RELATED SEQUENCE 4	30.11	AT3G22170
+AT3G19980	FYPP3	Serine/threonine-protein phosphatase	29.4	AT3G19980
+AT2G42810	PAPP5	Serine/threonine-protein phosphatase 5	29.4	AT2G42810
+AT5G53540	-	26S protease regulatory subunit 7	35.1	AT5G53540
+AT2G37680	-	Vacuolar import and degradation protein	30.11	AT2G37680
+AT1G68010	HPR	Glyoxylate/hydroxypyruvate reductase B	1.02.2006	AT1G68010
+AT1G80300	AATP1	ADP ATP carrier protein	34.9	AT1G80300
+AT5G51230	EMF2	Polycomb group protein EMBRYONIC FLOWER 2	27.03.1965	AT5G51230
+AT3G53120	VPS37-1	Vacuolar protein-sorting-associated protein 37 homolog 1	35.2	AT3G53120
+AT1G67560	LOX6	Lipoxygenase	17.7.1.2	AT1G67560
+AT3G52190	PHF1	Guanine nucleotide-binding protein subunit beta-like protein	29.2.2.3.4	AT3G52190
+AT4G26220	CCoAOMT7	Caffeoyl CoA O-methyltransferase 1	29.2.2.3.3	AT4G26220
+AT4G24350	T22A6.180	5&apos-methylthioadenosine/S-adenosylhomocysteine nucleosidase	35.1	AT4G24350
+AT5G50920	CLPC1	ATP-dependent Clp protease ATP-binding subunit clpA homolog CD4B, chloroplastic	29.05.2005	AT5G50920
+AT1G72180	LRR-RLK	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61500	30.2.11	AT1G72180
+AT5G50900	-	Armadillo/beta-catenin repeat family protein	35.1.3	AT5G50900
+AT1G71900	F17M19.5	DUF803 domain membrane protein	34.1	AT1G71900
+AT5G50460	SEC61G2	Protein transport protein SEC61 subunit gamma	29.3.4.99	AT5G50460
+AT1G71190	SAG18	Hypothetical membrane spanning protein	35.2	AT1G71190
+AT2G43950	OEP37	Outer envelope protein	35.2	AT2G43950
+AT1G68680	-	Unknown Protein	35.2	AT1G68680
+AT5G56000	HSP90-4	Heat shock protein 90	20.02.2001	AT5G56000
+AT5G35840	PHYC	Phytochrome F	30.11	AT5G35840
+AT4G24190	HSP90-7	Chaperone protein htpG	20.02.2001	AT4G24190
+AT1G07040	F10K1.25	mRNA clone RTFL01-15-D07	35.2	AT1G07040
+AT3G07770	HSP90-6	Chaperone protein htpG	20.02.2001	AT3G07770
+AT1G63900	SP1	Zinc finger family protein	29.5.11.4.2	AT1G63900
+AT3G12260	F28J15.12	NADH ubiquinone oxidoreductase B14 subunit	9.01.2001	AT3G12260
+AT5G08680	T2K12.16	ATP synthase subunit beta	1.1.4.2	AT5G08680
+AT1G68070	T23K23.8	Cleavage and polyadenylation specificity factor	29.5.11.4.2	AT1G68070
+AT4G23630	RTNLB1	Reticulon family protein	31	AT4G23630
+AT4G15090	FAR1	Protein FAR1-RELATED SEQUENCE 4	30.11	AT4G15090
+AT1G64970	VTE4	Gamma-tocopherol methyltransferase	16.1.3.5	AT1G64970
+AT3G21220	MKK5	Likely protein kinase	30.6	AT3G21220
+AT3G55120	CHI1	Chalcone--flavonone isomerase	16.8.2.2	AT3G55120
+AT3G51240	F3H	Flavanone 3-hydroxylase	16.8.3.2	AT3G51240
+AT3G46060	RABE1C	Ras-related protein Rab-8A	30.5	AT3G46060
+AT2G26300	GPA1	Guanine nucleotide-binding protein alpha-1 subunit	30.5	AT2G26300
+AT1G33490	F10C21.22	Cytoplasmic membrane protein	35.2	AT1G33490
+AT2G15280	RTNLB10	Reticulon family protein	31	AT2G15280
+AT1G29930	LHCB1.3	Chlorophyll a-b binding protein 1B, chloroplastic	1.1.1.1	AT1G29930
+AT1G63500	BSK7	Receptor-like kinase	29.4.1.52	AT1G63500
+AT5G39950	TRX2	Thioredoxin	21.1	AT5G39950
+AT1G14920	GAI	GAI-like protein 1 (Fragment)	27.03.2021	AT1G14920
+AT1G32410	F5D14.32	Vacuolar protein sorting 55 containing protein	29.3.4.3	AT1G32410
+AT1G29390	COR413IM2	Cold acclimation protein COR413-like	35.1	AT1G29390
+AT4G22730	LRR-RLK	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61420	30.2.4	AT4G22730
+AT1G62660	BFRUCT3	1 2-beta-fructan 1F-fructosyltransferase (Fragment)	2.2.1.3	AT1G62660
+AT5G38200	F4N21_3	Glutamine amidotransferase	35.1	AT5G38200
+AT4G26550	-	Transport protein SFT2	35.2	AT4G26550
+AT1G17840	ABCG11	ABC transporter G family member 11	34.16	AT1G17840
+AT3G12390	T2E22.29	Nascent polypeptide-associated complex alpha subunit-like protein	29.2	AT3G12390
+AT2G38280	AMPD	AMP deaminase	23.2	AT2G38280
+AT1G54350	ABCC2	ATP-binding protein of ABC transporter	34.16	AT1G54350
+AT1G17230	F20D23.7	Receptor-like kinase	30.2.11	AT1G17230
+AT5G26220	"GGCT2;1"	Cation transport regulator-like protein 2	34.14	AT5G26220
+AT3G22800	LRX6	Leucine-rich repeat family protein	10.05.2003	AT3G22800
+AT1G60940	SRK2B	Serine/threonine protein kinase	29.04.2001	AT1G60940
+AT5G25560	-	CHY zinc finger family protein expressed	29.5.11.4.2	AT5G25560
+AT1G47240	NRAMP2	Natural resistance associated macrophage protein	34.12	AT1G47240
+AT1G34350	-	Transmembrane protein 18	35.2	AT1G34350
+AT2G29420	GSTU7	Glutathione S-transferase-like protein	26.9	AT2G29420
+AT1G17180	GSTU25	Glutathione S-transferase	26.9	AT1G17180
+AT5G24760	T4C12_30	Alcohol dehydrogenase 1	5.3	AT5G24760
+AT4G03020	T4I9.10	Transcription initiation factor TFIID subunit 5	33.99	AT4G03020
+AT5G09650	PPA6	Inorganic pyrophosphatase	23.04.1999	AT5G09650
+AT1G09340	CSP41B	NAD-dependent epimerase/dehydratase	35.2	AT1G09340
+AT4G29040	RPT2A	26S protease regulatory subunit 4	29.5.11.20	AT4G29040
+AT4G11220	RTNLB2	Reticulon family protein	31	AT4G11220
+AT1G09330	ECH	Golgi apparatus membrane protein TVP23	35.2	AT1G09330
+AT1G17100	HBP1	Heme-binding protein 2	19.99	AT1G17100
+AT1G28520	VOZ1	One zinc finger protein	35.2	AT1G28520
+AT5G10710	-	Centromere protein O	35.2	AT5G10710
+AT5G22300	NIT4	Bifunctional nitrilase/nitrile hydratase NIT4	16.5.1.3.3	AT5G22300
+AT1G79590	SYP52	Syntaxin-52	31.4	AT1G79590
+AT1G09270	IMPA4	Importin alpha-1b subunit	29.03.2001	AT1G09270
+AT5G10480	PAS2	PASTICCINO 2	29.4	AT5G10480
+AT5G20820	SAUR76	SAUR33-auxin-responsive SAUR family member	17.02.2003	AT5G20820
+AT1G72880	-	5&apos-nucleotidase surE 2	26.13	AT1G72880
+AT1G48050	KU80	ATP-dependent DNA helicase 2 subunit KU80	30.8	AT1G48050
+AT1G55270	F7A10.5	Kelch-like protein 21	29.5.11.4.3.2	AT1G55270
+AT3G63120	CYCU3-1	Cyclin-like	31.3	AT3G63120
+AT1G47260	GAMMACA2	2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase	9.1.1.5	AT1G47260
+AT5G18650	MIEL1	CHY zinc finger family protein expressed	29.5.11.4.2	AT5G18650
+AT1G55110	IDD7	Zinc finger protein	27.03.2011	AT1G55110
+AT4G19420	PAE8	PAE	10.08.2002	AT4G19420
+AT5G58800	MZN1.26	Flavoprotein wrbA	11.8	AT5G58800
+AT5G17640	ASG1	Unknown Protein	35.2	AT5G17640
+AT5G15790	F14F8_170	Zinc finger family protein	29.5.11.4.2	AT5G15790
+AT5G17330	GAD1	Glutamate decarboxylase	13.1.1.1.1	AT5G17330
+AT4G19120	ERD3	Dehydration-responsive family protein-like	29.2.2.3.3	AT4G19120
+AT4G19110	T18B16.80	Cyclin-dependent kinase F-4	29.04.2001	AT4G19110
+AT1G78870	UBC35	Ubiquitin-conjugating enzyme E2 N	29.5.11.3	AT1G78870
+AT1G70660	UEV1B	Ubiquitin-conjugating enzyme E2 variant 1	29.5.11.3	AT1G70660
+AT2G37990	T8P21.10	Ribosome biogenesis regulatory protein homolog	29.2.6	AT2G37990
+AT5G15260	-	Structural constituent of ribosome	29.2.1.2.2.34	AT5G15260
+AT2G24590	RSZ22A	Arginine/serine-rich splicing factor	27.01.2001	AT2G24590
+AT1G53580	GLY3	Hydroxyacylglutathione hydrolase	24.1	AT1G53580
+AT4G18950	T20N10_110	Protein kinase	29.4	AT4G18950
+AT1G53310	PPC1	Phosphoenolpyruvate carboxylase 1	4.01.2015	AT1G53310
+AT1G30825	ARPC2A	Actin related protein 2/3 complex subunit 2	31.1	AT1G30825
+AT4G18800	RABA1D	Ras-related protein Rab-25	30.5	AT4G18800
+AT1G09140	SR30	Arginine/serine-rich splicing factor	27.01.2001	AT1G09140
+AT4G18700	CIPK12	CBL-interacting protein kinase 01	29.4	AT4G18700
+AT4G29130	HXK1	Hexokinase 7	2.2.1.4	AT4G29130
+AT3G12580	MED37C	heat shock protein	20.02.2001	AT3G12580
+AT5G13390	NEF1	No exine formation-1	35.2	AT5G13390
+AT1G45000	RPT4B	26S protease regulatory subunit	29.5.11.20	AT1G45000
+AT2G31260	ATG9	Autophagy-related protein 9	29.05.2002	AT2G31260
+AT1G16740	-	50S ribosomal protein L20	29.2.1.1.3.2.20	AT1G16740
+AT4G18130	PHYE	Phytochrome E	30.11	AT4G18130
+AT3G25780	AOC3	Allene oxide cyclase	17.7.1.4	AT3G25780
+AT1G80910	CCZ1b	Vacuolar fusion protein CCZ1 homolog	35.2	AT1G80910
+AT5G58060	YKT61	Synaptobrevin homolog YKT6	31.4	AT5G58060
+AT5G21170	KINB1	5-amp-activated protein kinase beta subunit	29.4	AT5G21170
+AT4G16360	KINB2	5-AMP-activated protein kinase subunit beta-1	30.01.2001	AT4G16360
+AT4G17870	PYR1	Abscisic acid receptor PYR1	20.1	AT4G17870
+AT4G17830	AtNAOD	Succinyl-diaminopimelate desuccinylase	29.5	AT4G17830
+AT5G09760	PME51	Pectinesterase family protein	10.08.2001	AT5G09760
+AT4G32960	-	BRISC and BRCA1-A complex member 1	35.1	AT4G32960
+AT2G28060	KINB3	5&apos-AMP-activated protein kinase subunit beta-2	29.4	AT2G28060
+AT5G08650	T2K12.1	Elongation factor 4	30.5	AT5G08650
+AT3G18060	AIP1-2	WD repeat-containing protein 1	33.99	AT3G18060
+AT1G73500	MKK9	Mitogen-activated protein kinase kinase	30.6	AT1G73500
+AT1G09020	SNF4	5&apos-AMP-activated protein kinase gamma-1 subunit	29.4	AT1G09020
+AT1G50420	SCL3	GAI-like protein 1 (Fragment)	33.99	AT1G50420
+AT3G19260	LAG2	LAG1 longevity assurance homolog 5	11.08.2001	AT3G19260
+AT4G35470	PIRL4	Leucine-rich repeat family protein	30.2	AT4G35470
+AT5G22360	VAMP714	Vesicle-associated membrane protein 7C	31.4	AT5G22360
+AT5G35630	GLN2	Glutamine synthetase	12.02.2002	AT5G35630
+AT5G54160	OMT1	O-methyltransferase	26.6	AT5G54160
+AT1G32210	DAD1	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit DAD1-like protein	31.05.2002	AT1G32210
+AT1G49140	F27J15.9	NADH-ubiquinone oxidoreductase subunit	9.01.2002	AT1G49140
+AT5G13190	GILP	Conserved gene of unknown function	35.2	AT5G13190
+AT1G08960	CCX5	Sodium/calcium exchanger protein	34.14	AT1G08960
+AT1G48630	RACK1B	Guanine nucleotide-binding protein beta subunit-like protein	29.2.2.3.4	AT1G48630
+AT5G03530	RABC2A	Ras-related protein Rab-18	30.5	AT5G03530
+AT1G48480	RKL1	Receptor-like protein kinase 1-like	30.2.3	AT1G48480
+AT1G48320	DHNAT1	ComA operon protein 2	11.9.4.5	AT1G48320
+AT4G34670	RPS3AB	40S ribosomal protein S3	29.2.1.2.1.53	AT4G34670
+AT4G16520	ATG8F	Autophagy-related protein 8	29.05.2002	AT4G16520
+AT5G03415	DPB	Transcription factor Dp-1	27.03.2018	AT5G03415
+AT2G37220	CP29B	RNA-binding protein	27.4	AT2G37220
+AT4G34450	T4L20.30	Coatomer subunit gamma	31.4	AT4G34450
+AT4G31480	F3L17.50	Coatomer subunit beta-1	31.4	AT4G31480
+AT4G15480	UGT84A1	UDP-glucosyltransferase 1	26.2	AT4G15480
+AT5G46860	SYP22	Syntaxin-like protein	31.4	AT5G46860
+AT4G36650	PBRP1	Transcription initiation factor IIB	27.2	AT4G36650
+AT3G60620	CDS5	Phosphatidate cytidylyltransferase	11.03.2003	AT3G60620
+AT4G01850	SAM2	S-adenosylmethionine synthase	13.1.3.4.11	AT4G01850
+AT4G14930	dl3505w	5&apos-nucleotidase surE	26.13	AT4G14930
+AT4G14880	OASA1	Cysteine synthase	13.1.5.3.1	AT4G14880
+AT1G28250	F3H9.10	Conserved gene of unknown function	35.2	AT1G28250
+AT5G52840	MXC20.6	NADH dehydrogenase	9.01.2002	AT5G52840
+AT4G31985	RPL39C	60S ribosomal protein L39	29.2.1.2.2.39	AT4G31985
+AT5G37510	EMB1467	NADH-ubiquinone oxidoreductase subunit	9.01.2002	AT5G37510
+AT5G11770	T22P22_160	NADH-quinone oxidoreductase subunit B	9.01.2002	AT5G11770
+AT4G14740	dl3410c	Os12g0604200 protein (Fragment)	35.2	AT4G14740
+AT4G02580	T10P11.14	NADH-quinone oxidoreductase E subunit	9.01.2002	AT4G02580
+AT3G57785	-	NADH ubiquinone oxidoreductase kD subunit	35.2	AT3G57785
+AT4G29820	CFIS1	Cleavage and polyadenylation specificity factor subunit 5	27.1.3.13	AT4G29820
+AT5G06140	SNX1	Sorting nexin 1	29.3.4.3	AT5G06140
+AT1G71480	F26A9.14	Nuclear transport factor 2 (NTF2)-like protein	29.03.2001	AT1G71480
+AT4G14130	XTH15	Xyloglucan endotransglucosylase/hydrolase 8	10.06.2002	AT4G14130
+AT4G28706	-	Ribokinase	3.5	AT4G28706
+AT1G30620	MUR4	UDP-glucose 4-epimerase	10.01.2009	AT1G30620
+AT1G80670	RAE1	mRNA export factor	35.1	AT1G80670
+AT2G22400	T5J17.170	Ribosomal RNA small subunit methyltransferase F	29.2.2.3.3	AT2G22400
+AT3G02130	RPK2	LRR receptor-like serine/threonine-protein kinase RPK2	30.2.99	AT3G02130
+AT3G53340	NFYB10	Nuclear transcription factor Y subunit B-3	27.03.2015	AT3G53340
+AT3G48590	NFYC1	Nuclear transcription factor Y subunit C-1	27.03.2016	AT3G48590
+AT5G47910	RBOHD	Respiratory burst oxidase-like protein	20.01.2001	AT5G47910
+AT4G13020	MHK	Protein kinase	29.04.2001	AT4G13020
+AT5G40640	C7A10.330	Uncharacterized membrane protein At3g27390	35.2	AT5G40640
+AT4G11260	SGT1B	SGT1	29.4	AT4G11260
+AT3G07630	ADT2	Prephenate dehydratase	13.1.6.3.1	AT3G07630
+AT5G04740	ACR12	Unknown protein DS12 from 2D-PAGE of leaf, chloroplastic	13	AT5G04740
+AT3G24500	MBF1C	Multiprotein bridging factor 1	17.05.2003	AT3G24500
+AT4G23940	FTSHI1	ATP-dependent zinc metalloprotease FtsH 3	29.05.2007	AT4G23940
+AT4G12730	FLA2	Fasciclin-like arabinogalactan protein 19	10.5.1.1	AT4G12730
+AT5G47040	LON2	Lon protease	29.05.2005	AT5G47040
+AT5G53310	-	Myosin IE	31.1	AT5G53310
+AT2G16250	F16F14.25	Receptor-like serine/threonine-protein kinase At1g78530	30.2.14	AT2G16250
+AT4G12420	SKU5	Laccase-22	26.7	AT4G12420
+AT1G70520	CRK2	Receptor-like protein kinase At5g59670	30.2.17	AT1G70520
+AT5G44440	ATSEC1A	FAD-binding domain-containing protein	26.8	AT5G44440
+AT3G12400	ELC	Tumor susceptibility protein 101 (Fragment)	35.1	AT3G12400
+AT2G43850	APK1	Tyrosine-protein kinase CSK	29.4	AT2G43850
+AT1G80270	PPR596	Pentatricopeptide repeat-containing protein	35.1.27	AT1G80270
+AT5G49010	SLD5	DNA replication complex GINS protein SLD5	28.1	AT5G49010
+AT5G41190	AtNOB1	RNA-binding protein nob1	35.2	AT5G41190
+AT4G16150	CMTA5	Calmodulin-binding transcription activator (Camta), plants	27.03.1939	AT4G16150
+AT4G16146	-	Negatively light-regulated protein	35.2	AT4G16146
+AT4G15800	RALFL33	Rapid alkalinization factor 2	30.8	AT4G15800
+AT3G11397	PRA1A3	Prenylated rab acceptor family protein	30.5	AT3G11397
+AT2G21870	MGP1	Mitochondrial ATP synthase	9.9	AT2G21870
+AT5G16290	VAT1	Acetolactate synthase small subunit	13.1.4.1.1	AT5G16290
+AT4G39860	T5J17.30	mRNA clone RTFL01-43-H20	35.2	AT4G39860
+AT5G28050	GSDA	Deaminase	23.05.2003	AT5G28050
+AT5G56950	"NAP1;3"	Nucleosome assembly protein 1-like protein 4	28.1	AT5G56950
+AT1G27910	PUB45	U-box domain-containing protein	29.5.11.4.2	AT1G27910
+AT4G14030	SBP1	Selenium binding protein	15	AT4G14030
+AT4G19150	T18B16.120	Ankyrin repeat domain protein	31.1	AT4G19150
+AT4G12110	SMO1-1	Sterol 4-alpha-methyl-oxidase 2	11.08.2002	AT4G12110
+AT5G48300	APS1	Glucose-1-phosphate adenylyltransferase	2.1.2.1	AT5G48300
+AT4G08950	EXO	Os06g0220000 protein (Fragment)	30.01.2001	AT4G08950
+AT4G11640	SR	Serine/threonine dehydratase	13.1.4.5	AT4G11640
+AT5G24030	SLAH3	C4-dicarboxylate transporter/malic acid transport family protein	34.9	AT5G24030
+AT1G14340	-	RNA recognition motif containing protein	27.4	AT1G14340
+AT1G08480	SDH6	Unknown Protein	35.2	AT1G08480
+AT4G10380	NIP5-1	Aquaporin	34.19.3	AT4G10380
+AT1G24530	-	WD-40 repeat family protein	30.5	AT1G24530
+AT4G04960	LECRK71	G-type lectin S-receptor-like serine/threonine-protein kinase At4g27290	29.4	AT4G04960
+AT3G17440	NPSN13	Novel plant SNARE 11	31.4	AT3G17440
+AT3G02830	ZFN1	Zinc finger CCCH domain-containing protein 66	27.03.2011	AT3G02830
+AT2G12400	-	Unknown Protein	35.2	AT2G12400
+AT4G09800	RPS18C	40S ribosomal protein S18	29.2.1.2.1.18	AT4G09800
+AT4G03560	TPC1	Two-pore calcium channel 2	34.21	AT4G03560
+AT1G79750	NADP-ME4	Malic enzyme	8.02.2010	AT1G79750
+AT4G03390	SRF3	G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080	30.2.5	AT4G03390
+AT4G01870	T7B11.13	Protein tolB	35.1	AT4G01870
+AT3G55950	CCR3	Serine/threonine-protein kinase CCR3	30.2.26	AT3G55950
+AT1G79730	VIP2	RNA polymerase II-associated factor 1 homolog	27.3	AT1G79730
+AT1G08360	RPL10AA	Ribosomal protein	29.2.1	AT1G08360
+AT5G06839	AtbZIP65	BZIP transcription factor	27.03.1935	AT5G06839
+AT4G14640	CML8	Calmodulin	30.3	AT4G14640
+AT5G58300	LRR-RLK	Receptor-like serine/threonine-protein kinase At1g78530	30.2.3	AT5G58300
+AT4G02930	TUFA	Elongation factor Tu	29.02.2004	AT4G02930
+AT5G13200	GER5	GEM 5	17.01.2003	AT5G13200
+AT1G27400	RPL17A	Ribosomal protein	29.2.1.2.2.17	AT1G27400
+AT3G61440	CYSC1	Cysteine synthase	13.1.5.3.1	AT3G61440
+AT5G14780	FDH1	Formate dehydrogenase	25.1	AT5G14780
+AT4G33920	APD5	Phosphatase 2C family protein	29.4	AT4G33920
+AT1G08320	AtbZIP21	BZIP transcription factor	27.03.1935	AT1G08320
+AT3G18940	-	Proteasome assembly chaperone 2	35.1	AT3G18940
+AT1G08315	-	U-box domain-containing protein 4	35.1.3	AT1G08315
+AT2G36100	CASP1	UPF0497 membrane protein 1	35.1	AT2G36100
+AT4G27280	KRP1	Calcium-binding EF hand family protein (Fragment)	30.3	AT4G27280
+AT3G53260	PAL2	Phenylalanine ammonia-lyase	16.2.1.1	AT3G53260
+AT3G57180	BPG2	GTP-binding protein YqeH	26.03.2005	AT3G57180
+AT2G37040	PAL1	Phenylalanine ammonia-lyase	16.2.1.1	AT2G37040
+AT5G04920	VPS36	Vacuolar protein sorting 36 family protein	29.3.4.3	AT5G04920
+AT1G08250	ADT6	Prephenate dehydratase	13.1.6.3.1	AT1G08250
+AT3G56230	F18O21_190	SKIP interacting protein 19	29.5.11.4.5.2	AT3G56230
+AT3G05590	RPL18B	Ribosomal protein L18	29.2.1.2.2.18	AT3G05590
+AT5G11520	ASP3	Aspartate aminotransferase	13.1.1.2.1	AT5G11520
+AT3G59080	F17J16_130	Basic 7S globulin 2 small subunit	27.03.1999	AT3G59080
+AT5G14600	-	tRNA adenine-N1 methyltransferase catalytic subunit TRM61	29.2.2.3.3	AT5G14600
+AT1G70780	F5A18.4	mRNA clone RTFL01-48-C04	35.2	AT1G70780
+AT3G53480	ABCG37	Pleiotropic drug resistance protein 3	34.16	AT3G53480
+AT1G79430	APL	Myb family transcription factor-like	27.03.2025	AT1G79430
+AT3G52890	KIPK	Protein kinase	29.04.2001	AT3G52890
+AT3G57880	T10K17.90	Phosphoribosylanthranilate transferase (Fragment)	13.1.6.5.3	AT3G57880
+AT1G79390	T8K14.19	Unknown Protein	35.2	AT1G79390
+AT2G39390	RPL35B	60S ribosomal protein L35	29.2.1.2.2.35	AT2G39390
+AT4G35860	RABB1B	Ras-related protein Rab-2-A	30.5	AT4G35860
+AT3G52870	IQM3	Calmodulin binding protein	30.3	AT3G52870
+AT3G50260	ERF011	AP2 domain class transcription factor	27.03.2003	AT3G50260
+AT2G40890	CYP98A3	Cytochrome P450	26.1	AT2G40890
+AT5G44790	RAN1	Copper-transporting ATPase	34.12	AT5G44790
+AT4G01070	UGT72B1	UDP-glucosyltransferase	26.2	AT4G01070
+AT3G58560	CCR4-1	Glucose-repressible alcohol dehydrogenase transcriptional effector	28.1	AT3G58560
+AT2G20580	RPN1A	26S proteasome regulatory subunit	29.5.11.20	AT2G20580
+AT3G09640	APX2	Ascorbate peroxidase	21.02.2001	AT3G09640
+AT5G40670	MNF13.23	Cystine transporter Cystinosin	35.1	AT5G40670
+AT3G04240	SEC	TPR repeat protein	29.7	AT3G04240
+AT5G27740	RFC3	Replication factor C subunit 5	35.2	AT5G27740
+AT1G66150	TMK1	Receptor-like serine/threonine-protein kinase At3g01300	30.2.9	AT1G66150
+AT2G17820	AHK1	Cold inducible histidine kinase 1	17.04.2002	AT2G17820
+AT4G14540	NFYB3	Nuclear transcription factor Y subunit B-3	27.03.2015	AT4G14540
+AT4G00370	"PHT4;4"	Vesicular glutamate transporter	34.7	AT4G00370
+AT5G56760	SAT5	Serine acetyltransferase	13.1.5.3.2	AT5G56760
+AT4G23470	F16G20.170:F16G20.180	MRNA clone RAFL21-79-C21	35.1.41	AT4G23470
+AT3G63460	SEC31B	Protein transport protein sec31	33.99	AT3G63460
+AT2G22500	PUMP5	Mitochondrial 2-oxoglutarate/malate carrier protein	9.8	AT2G22500
+AT1G65930	CICDH	Isocitrate dehydrogenase	8.01.2004	AT1G65930
+AT3G63220	SKIP30	Kelch-like protein 14	29.5.11.4.3.2	AT3G63220
+AT5G13120	PNSL5	Peptidyl-prolyl cis-trans isomerase	31.03.2001	AT5G13120
+AT1G15820	LHCB6	Chlorophyll a-b binding protein, chloroplastic	1.1.1.1	AT1G15820
+AT1G07880	MPK13	Mitogen-activated protein kinase	29.4	AT1G07880
+AT1G76690	OPR2	NADH flavin oxidoreductase/NADH oxidase	17.7.1.5	AT1G76690
+AT1G76650	CML38	Calmodulin-like protein	30.3	AT1G76650
+AT1G79010	YUP8H12R.37	NADH-quinone oxidoreductase subunit I	9.01.2002	AT1G79010
+AT4G14950	KMS1	Transmembrane protein 49	35.2	AT4G14950
+AT3G20320	TGD2	ABC-type transport system-like	29.03.2003	AT3G20320
+AT4G09580	T25P22.20	Transmembrane protein 41-like protein	35.2	AT4G09580
+AT5G58560	FOLK	Phytol kinase 1, chloroplast	11.03.2003	AT5G58560
+AT3G62830	UXS2	UDP-glucuronate decarboxylase 3	10.01.2005	AT3G62830
+AT5G57940	CNGC5	Cyclic nucleotide gated channel	34.22	AT5G57940
+AT1G28480	GRXC9	Glutaredoxin	21.4	AT1G28480
+AT1G28380	NSL1	Necrotic spotted lesions 1 (Fragment)	35.2	AT1G28380
+AT4G38620	MYB4	Myb-like transcription factor 1	27.03.2025	AT4G38620
+AT5G55630	TPK1	Calcium-activated outward-rectifying potassium channel 1	34.15	AT5G55630
+AT5G55290	VHA-e1	Vacuolar ATPase subunit e-like	34.1	AT5G55290
+AT5G54800	GPT1	Glucose-6-phosphate/phosphate-translocator	34.8	AT5G54800
+AT3G24480	LRX4	Leucine-rich repeat extensin 3	10.05.2003	AT3G24480
+AT1G14720	XTH28	Xyloglucan endotransglucosylase/hydrolase 13	10.7	AT1G14720
+AT4G31870	GPX7	Glutathione peroxidase	21.02.2002	AT4G31870
+AT5G47530	MNJ7.12	Auxin induced-like protein	17.02.2003	AT5G47530
+AT3G15880	TPR4	WD-40 repeat protein-like (Fragment)	33.99	AT3G15880
+AT1G78900	VHA-A	V-type ATP synthase alpha chain	34.1	AT1G78900
+AT2G45660	SOC1	MADS box transcription factor	27.03.2024	AT2G45660
+AT1G47740	-	PPPDE peptidase domain-containing protein 1	35.2	AT1G47740
+AT5G20650	COPT5	High affinity copper uptake protein	34.12	AT5G20650
+AT3G22890	APS1	Sulfate adenylyltransferase	14.1	AT3G22890
+AT1G78680	GGH2	Gamma-glutamyl hydrolase 2	29.5	AT1G78680
+AT3G22750	ATMRK1	Kinase-like protein	29.04.2001	AT3G22750
+AT3G22370	AOX1A	Alternative oxidase	9.4	AT3G22370
+AT5G14210	LRR-RLK	Receptor-like serine/threonine-protein kinase At3g01300	30.2.6	AT5G14210
+AT4G39820	-	Tetratricopeptide repeat protein 15	35.1.27	AT4G39820
+AT4G32250	F10M6.110	Protein kinase	28.99	AT4G32250
+AT3G20830	UCNL	Ribosomal protein S6 kinase alpha-5	29.04.2001	AT3G20830
+AT5G10840	TMN8	Transmembrane 9 superfamily protein member 4	28.99	AT5G10840
+AT1G51740	SYP81	Syntaxin 81	31.4	AT1G51740
+AT2G20450	RPL14A	60 ribosomal protein L14	29.2.1.2.2.14	AT2G20450
+AT4G22720	T12H17.110	O-sialoglycoprotein endopeptidase	29.5	AT4G22720
+AT3G20300	F11F12.5	Extracellular ligand-gated ion channel	27.03.2003	AT3G20300
+AT5G01960	-	Ring finger and transmembrane domain-containing protein 2	29.5.11.4.2	AT5G01960
+AT1G66430	F28G11.11	5-dehydro-2-deoxygluconokinase 2	2.2.1.1	AT1G66430
+AT1G15710	TYRAAT2	Prephenate dehydrogenase family protein	13.1.6.4	AT1G15710
+AT2G20360	F11A3.9	NADH dehydrogenase (Ubiquinone)	9.01.2002	AT2G20360
+AT2G39805	-	Yip1 domain family	35.1	AT2G39805
+AT3G19000	-	1-aminocyclopropane-1-carboxylate oxidase	21.2	AT3G19000
+AT4G32600	F4D11.200	Ring finger protein	29.5.11.4.2	AT4G32600
+AT3G60690	SAUR59	Auxin-responsive family protein	17.02.2003	AT3G60690
+AT4G31330	F12B17_70	Uncharacterized conserved protein	35.2	AT4G31330
+AT5G43670	dl3120w	Protein transport protein SEC23	29.3.4.2	AT5G43670
+AT1G27480	LCAT1	Lecithin cholesterol acyltransferase (Fragment)	11.08.2010	AT1G27480
+AT4G32070	Phox4	At1g62390-like protein (Fragment)	27.1	AT4G32070
+AT4G36480	LCB1	8-amino-7-oxononanoate synthase	11.08.2001	AT4G36480
+AT5G41610	CHX18	Cation/H(+) antiporter 18	34.12	AT5G41610
+AT4G01150	CURT1A	Threonine endopeptidase	29.5	AT4G01150
+AT4G19645	-	Transmembrane protein 56	35.2	AT4G19645
+AT3G03330	-	Dehydrogenase/reductase SDR family member 7	26.22	AT3G03330
+AT4G14420	dl3250c	Nicotiana lesion-inducing like	35.1	AT4G14420
+AT3G20000	TOM40-1	Mitochondrial import receptor subunit TOM40	35.1	AT3G20000
+AT4G04860	DER2.2	Derlin-2	29.5	AT4G04860
+AT3G63380	ACA12	Calcium-transporting ATPase 1	30.3	AT3G63380
+AT3G61460	BRH1	RING-H2 finger protein	29.5.11.4.2	AT3G61460
+AT3G60720	CRRSP15	Kinase	30.2.17	AT3G60720
+AT1G27340	FBX6	F-box family protein (Fragment)	29.5.11.4.3.2	AT1G27340
+AT3G55740	PROT2	Proline transporter 1	34.3	AT3G55740
+AT3G54140	NPF8.1	Peptide transporter	34.13	AT3G54140
+AT3G09270	GSTU8	Glutathione S-transferase-like protein	26.9	AT3G09270
+AT3G53510	ABCG20	ABC transporter G family member 20	34.16	AT3G53510
+AT5G49060	ATJ49	Chaperone protein dnaJ	35.2	AT5G49060
+AT3G52850	VSR1	Vacuolar sorting receptor	29.3.4.3	AT3G52850
+AT3G52640	NCT	Nicastrin	34.99	AT3G52640
+AT1G08510	FATB	Acyl-ACP thioesterase	11.01.2007	AT1G08510
+AT5G58510	-	Conserved gene of unknown function	35.2	AT5G58510
+AT5G35790	APG1	Glucose-6-phosphate 1-dehydrogenase	7.01.2001	AT5G35790
+AT5G53560	CYTB5-E	Cytochrome b5	21.2	AT5G53560
+AT5G33280	CBSCLC6	Voltage-gated chloride channel	34.18	AT5G33280
+AT3G42640	AHA8	H-ATPase	34.1.2	AT3G42640
+AT5G26860	LON1	Lon protease	29.05.2005	AT5G26860
+AT5G23860	TUBB8	Tubulin beta chain	31.1	AT5G23860
+AT3G45620	F9K21.200	DDB1- and CUL4-associated factor 8	29.5.11.4.99	AT3G45620
+AT3G21690	DTX40	Multidrug resistance protein mdtK	34.99	AT3G21690
+AT3G57870	SCE1	Ubiquitin-conjugating enzyme E2 I	29.5.11.3	AT3G57870
+AT5G13490	AAC2	Mitochondrial ADP/ATP carrier proteins	34.8	AT5G13490
+AT3G21640	FKBP42	Peptidyl-prolyl cis-trans isomerase D	29.6	AT3G21640
+AT3G02910	F13E7.14	Gamma-glutamylaminecyclotransferase	20.01.2003	AT3G02910
+AT5G19750	-	Mpv17 protein	35.1	AT5G19750
+AT3G20570	ENODL9	Early nodulin-like protein 3	26.19	AT3G20570
+AT3G20510	FAX6	Unknown Protein	35.2	AT3G20510
+AT3G57550	GK-2	Guanylate kinase	23.04.2002	AT3G57550
+AT5G05340	PER52	Peroxidase	26.12	AT5G05340
+AT5G04930	ALA1	Phospholipid-transporting ATPase	34.1	AT5G04930
+AT5G04870	CPK1	Calcium-dependent protein kinase 2	30.3	AT5G04870
+AT5G03940	FFC	Signal recognition particle protein	29.03.2003	AT5G03940
+AT1G15390	PDF1A	Peptide deformylase	26.1	AT1G15390
+AT5G58350	WNK4	Serine/threonine protein kinase	29.04.2001	AT5G58350
+AT4G38250	F22I13.20	Amino acid transporter family protein	34.3	AT4G38250
+AT1G65030	-	p21-activated protein kinase-interacting protein 1-like	33.99	AT1G65030
+AT3G06170	T24D18.26	Serine incorporator 1	35.1	AT3G06170
+AT3G57230	AGL16	Mads box protein	27.03.2024	AT3G57230
+AT4G32140	F10N7.50	Solute carrier family 35 member F5 (Predicted)	35.2	AT4G32140
+AT4G35090	CAT2	Catalase	21.6	AT4G35090
+AT4G17486	dl4780c	PPPDE peptidase domain-containing protein 1	35.2	AT4G17486
+AT4G33010	GLDP1	Glycine dehydrogenase P protein	1.2.4.1	AT4G33010
+AT4G32180	PANK2	Pantothenate kinase 4	18.04.2005	AT4G32180
+AT5G18110	NCBP	Eukaryotic translation initiation factor 4E	29.2.3	AT5G18110
+AT4G10430	F7L13.10	Transmembrane protein 120a	35.2	AT4G10430
+AT4G18040	EIF4E1	Eukaryotic translation initiation factor 4E	29.2.3	AT4G18040
+AT3G57030	SSL10	Strictosidine synthase family protein	16.04.2001	AT3G57030
+AT4G14960	TUBA6	Tubulin alpha-7 chain	31.1	AT4G14960
+AT1G64880	-	30S ribosomal protein S5	29.2.1.1.3.1.5	AT1G64880
+AT2G39510	UMAMIT14	Nodulin-like protein	33.99	AT2G39510
+AT2G39290	PGPS1	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase	11.03.2003	AT2G39290
+AT3G09520	EXO70H4	Exocyst complex protein EXO70	31.4	AT3G09520
+AT4G04910	NSF	ATPase	29.05.2009	AT4G04910
+AT2G38120	AUX1	Auxin transporter-like protein 1	17.02.2002	AT2G38120
+AT4G03080	BSL1	Serine/threonine-protein phosphatase	17.3.2.1	AT4G03080
+AT2G41380	-	S-adenosylmethionine-dependent methyltransferase (Fragment)	29.2.2.3.3	AT2G41380
+AT5G49690	UGT91C1	UDP-glucosyltransferase	16.8.1.12	AT5G49690
+AT4G02680	EOL1	Os11g0585900 protein (Fragment)	35.1.27	AT4G02680
+AT3G56200	F18O21_160	Amino acid transporter	34.3	AT3G56200
+AT4G02020	EZA1	Histone-lysine N-methyltransferase MEDEA	27.03.1969	AT4G02020
+AT3G59760	OASC	Cysteine synthase	13.1.5.3.1	AT3G59760
+AT3G58040	SINAT2	Ubiquitin ligase SINAT2	33.99	AT3G58040
+AT3G53570	AFC1	Serine/threonine kinase	29.04.2001	AT3G53570
+AT3G03800	SYP131	Syntaxin	31.4	AT3G03800
+AT2G26900	BASS2	Bile acid sodium symporter	34.14	AT2G26900
+AT2G25310	F10N7.60	C15orf24 homolog	35.2	AT2G25310
+AT2G39000	-	GCN5-related N-acetyltransferase	26.24	AT2G39000
+AT1G04220	KCS2	3-ketoacyl-CoA synthase	11.1	AT1G04220
+AT1G64550	ABCF3	Uncharacterized ABC transporter ATP-binding protein C29A3.09c	34.16	AT1G64550
+AT2G37980	FRB1	Os03g0169000 protein (Fragment)	17.2	AT2G37980
+AT2G47510	FUM1	Fumarate hydratase class II	8.01.2008	AT2G47510
+AT4G24310	T22A6.140	Genomic DNA chromosome 5 P1 clone MCL19	35.2	AT4G24310
+AT2G31040	AtCGL160	ATP synthase I-like protein	1.01.2004	AT2G31040
+AT2G02040	NPF8.3	Peptide transporter	34.13	AT2G02040
+AT1G64520	RPN12A	26S proteasome non-ATPase regulatory subunit 8	29.5.11.20	AT1G64520
+AT2G30390	FC2	Ferrochelatase	19.2	AT2G30390
+AT2G42010	PLDBETA1	Phospholipase D	11.9.3.1	AT2G42010
+AT3G55000	TON1A	FGFR1 oncogene partner	31.1	AT3G55000
+AT2G41620	NUP93A	Nuclear pore complex protein Nup93	29.03.2001	AT2G41620
+AT3G11660	NHL1	NHL1 (Fragment)	20.1	AT3G11660
+AT2G16800	M4E13.135	AT4G35080-like protein (Fragment)	34.12	AT2G16800
+AT1G77380	AAP3	Amino acid permease	34.3	AT1G77380
+AT2G14835	-	Zinc finger protein-like 1	29.5.11.4.2	AT2G14835
+AT5G13760	MXE10.3	Choline transporter-like protein 5-A (Fragment)	35.2	AT5G13760
+AT1G75500	WAT1	Nodulin-like protein	33.99	AT1G75500
+AT1G02850	BGLU11	Beta glucosidase like protein	26.3	AT1G02850
+AT4G35790	PLDDELTA	Phospholipase D delta	11.9.3.1	AT4G35790
+AT2G03120	SPP	Signal peptide peptidase family protein	29.5	AT2G03120
+AT2G31900	XI-F	Myosin XI-F	31.1	AT2G31900
+AT5G13700	PAO1	Polyamine oxidase	22.02.2001	AT5G13700
+AT1G79040	PSBR	photosystem II polypeptide	1.1.1.2	AT1G79040
+AT1G71110	-	Unknown Protein	35.2	AT1G71110
+AT2G22240	IPS2	Inositol-3-phosphate synthase	3.04.2003	AT2G22240
+AT1G15130	-	pH-response regulator protein palA/RIM20	35.1.41	AT1G15130
+AT3G54660	EMB2360	Glutathione reductase	21.02.2002	AT3G54660
+AT1G69850	NPF4.6	Nitrate transporter	34.4	AT1G69850
+AT3G54480	SKIP5	F-box protein SKIP5	29.5.11.4.3.2	AT3G54480
+AT2G18170	MPK7	Mitogen-activated protein kinase 7	29.4	AT2G18170
+AT1G69640	SBH1	Sphingosine hydroxylase	11.08.2001	AT1G69640
+AT1G61250	SCAMP3	Secretory carrier membrane protein	34.99	AT1G61250
+AT1G58340	DTX48	Multidrug resistance protein mdtK	34.16	AT1G58340
+AT1G01650	SPPL4	Signal peptide peptidase	29.05.2004	AT1G01650
+AT1G15080	LPP2	ER Phosphatidate Phosphatase	26.13	AT1G15080
+AT1G55230	F7A10.19	Plant viral-response family protein	20.1.7.6	AT1G55230
+AT1G52600	F6D8.18	Signal peptidase complex catalytic subunit SEC11A	29.3.4.99	AT1G52600
+AT1G52290	PERK15	Receptor-like protein kinase At3g21340	30.2.22	AT1G52290
+AT1G54730	T22H22.15	Solute carrier family 2 facilitated glucose transporter member 8	34.2	AT1G54730
+AT4G05180	PSBQ2	Oxygen-evolving enhancer protein 3	1.1.1.2	AT4G05180
+AT3G62720	XXT1	Alpha-1 6-xylosyltransferase (Fragment)	26.2	AT3G62720
+AT2G26660	SPX2	SPX domain-containing protein 2	20.02.2003	AT2G26660
+AT3G53420	PIP2-1	Aquaporin	34.19.1	AT3G53420
+AT3G53380	LECRK81	Receptor-like kinase	29.4	AT3G53380
+AT5G03340	CDC48E	Cell division control protein	31.2	AT5G03340
+AT2G25737	-	Os01g0786800 protein (Fragment)	35.2	AT2G25737
+AT1G47670	AATL1	Lysine/histidine transporter	34.3	AT1G47670
+AT5G04590	SIR			AT5G04590
+AT3G03740	BPM4	BTB/POZ domain containing protein expressed	29.5.11.4.5.2	AT3G03740
+AT1G36050	T22A15.3	Endoplasmic reticulum-Golgi intermediate compartment protein 3	35.2	AT1G36050
+AT5G50180	ATN1	Protein kinase	29.04.2001	AT5G50180
+AT1G31130	F28K20.6	Unknown Protein	35.2	AT1G31130
+AT4G38130	HDA19	Histone deacetylase	27.03.1955	AT4G38130
+AT4G01690	PPOX1	Protoporphyrinogen oxidase	19.9	AT4G01690
+AT5G57860	-	Ubiquitin	29.5.11.1	AT5G57860
+AT4G28440	F20O9.120	OB-fold nucleic acid binding domain containing protein	28.99	AT4G28440
+AT1G22710	SUC2	Sucrose transporter	34.2.1	AT1G22710
+AT5G27320	GID1C	GID1-like gibberellin receptor	17.06.2002	AT5G27320
+AT5G58590	RANBP1C	Ran GTPase binding protein	30.5	AT5G58590
+AT4G30330	-	Small nuclear ribonucleoprotein polypeptide	27.1	AT4G30330
+AT1G16560	F19K19.12	Post-GPI attachment to protein factor 3	35.1	AT1G16560
+AT3G63010	GID1B	GID1-like gibberellin receptor	17.06.2002	AT3G63010
+AT4G37460	SRFR1	TPR repeat protein	20.1	AT4G37460
+AT1G15690	AVP1	K(+)-insensitive pyrophosphate-energized proton pump	34.3	AT1G15690
+AT3G51260	PAD1	Proteasome subunit alpha type	29.5.11.20	AT3G51260
+AT5G54510	GH3.6	Indole-3-acetic acid-amido synthetase GH3.8	17.02.2003	AT5G54510
+AT2G34040	-	Apoptosis inhibitor 5	33.99	AT2G34040
+AT4G36670	PLT6	Solute carrier family 2, facilitated glucose transporter member 1	34.2	AT4G36670
+AT1G09380	UMAMIT25	MtN21 nodulin protein-like	33.99	AT1G09380
+AT1G27200	T7N9.26	Glycosyl transferase family 2	29.5.11.4.2	AT1G27200
+AT1G63660	F24D7.15	GMP synthase	23.1.2.31	AT1G63660
+AT1G77710	CCP2	Ubiquitin-fold modifier 1	35.2	AT1G77710
+AT5G50100	MPF21.11	Potential redox protein	35.2	AT5G50100
+AT5G02280	T1E22_40	Trafficking protein particle complex subunit 4	29.03.1999	AT5G02280
+AT1G55190	PRA1F2	Prenylated rab acceptor PRA1	31.4	AT1G55190
+AT5G02270	ABCI20	Cobalt import ATP-binding protein CbiO 1	34.16	AT5G02270
+AT1G07840	F24B9.6	Neuroguidin (Fragment)	27.03.1999	AT1G07840
+AT5G16880	F2K13_30	Vacuolar protein sorting-associated protein 27	31.4	AT5G16880
+AT2G14260	PIP	Proline iminopeptidase	29.5	AT2G14260
+AT2G35040	-	Bifunctional purine biosynthesis protein purH	23.1.2.9	AT2G35040
+AT2G14170	ALDH6B2	Methylmalonate-semialdehyde dehydrogenase	13.2.4.3	AT2G14170
+AT5G53120	SPMS	Spermidine synthase 1	22.01.2006	AT5G53120
+AT5G05000	TOC34	Translocase of chloroplast 34	29.03.2003	AT5G05000
+AT1G14860	NUDT18	Nudix hydrolase 17, mitochondrial	23.03.2003	AT1G14860
+AT1G70310	SPDSYN2	Spermidine synthase	22.01.2006	AT1G70310
+AT2G34970	F14P3.8	Translation initiation factor eIF-2B subunit epsilon	29.2.3	AT2G34970
+AT1G23820	SPDSYN1	Spermidine synthase	22.01.2006	AT1G23820
+AT1G59610	DRP2B	Dynamin-2A	26.17	AT1G59610
+AT2G34900	GTE1	Bromodomain containing 2 (Fragment)	27.03.1952	AT2G34900
+AT4G33350	TIC22	Tic22	29.03.2003	AT4G33350
+AT1G23750	F5O8.30	Conserved gene of unknown function	28.99	AT1G23750
+AT4G16143	IMPA2	Importin alpha-1b subunit	29.03.2001	AT4G16143
+AT3G54120	RTNLB12	Reticulon family protein	31	AT3G54120
+AT4G31120	PMRT15	Protein arginine N-methyltransferase	25	AT4G31120
+AT3G48680	GAMMACAL2	Carnitine operon protein CaiE	9.1.1.5	AT3G48680
+AT1G65060	4CL3	4-coumarate CoA ligase	16.2.1.3	AT1G65060
+AT3G47930	GLDH	L-galactono-1 4-lactone dehydrogenase protein	21.2.1.5	AT3G47930
+AT3G20970	NIFU4	Fe/S biogenesis protein nfuA	29.8	AT3G20970
+AT3G42830	RBX1B	RING-box protein	29.5.11.4.2	AT3G42830
+AT3G50530	CRK5	Calcium-dependent protein kinase-like	29.4	AT3G50530
+AT2G07180	-	ATP binding / serine-threonine kinase	29.4.1.57	AT2G07180
+AT3G07480	F21O3.19	Ferredoxin	35.2	AT3G07480
+AT5G53130	CNGC1	Cyclic nucleotide gated channel	34.22	AT5G53130
+AT1G47250	PAF2	Proteasome subunit alpha type	29.5.11.20	AT1G47250
+AT1G34470	F12K21.21	DUF803 domain membrane protein	34.1	AT1G34470
+AT5G39040	ABCB27	Lipid a export ATP-binding/permease protein msba	34.16	AT5G39040
+AT2G34660	ABCC2	ABC transporter C family member 2	34.16	AT2G34660
+AT5G24010	MZF18.11	Receptor-like serine/threonine-protein kinase At3g01300	30.2.16	AT5G24010
+AT5G38470	RAD23D	UV excision repair protein RAD23-like protein A	28.2	AT5G38470
+AT5G14570	NRT2.7	High affinity nitrate transporter	34.4	AT5G14570
+AT4G16490	dl4270c	U-box domain-containing protein 4	35.1.3	AT4G16490
+AT5G58950	T6H20.40	Protein-tyrosine kinase 6	29.04.2001	AT5G58950
+AT5G53890	PSKR2	Receptor kinase	30.2.10	AT5G53890
+AT1G67580	F12B7.13	Cyclin-dependent kinase 10	29.04.2001	AT1G67580
+AT5G08160	PK3	Serine/threonine protein kinase	29.4	AT5G08160
+AT4G32650	KAT3	Potassium channel NtKC1	34.15	AT4G32650
+AT4G08455	T15F16.14	BTB/POZ domain-containing protein	29.5.11.4.5	AT4G08455
+AT3G51770	ETO1	Ethylene-overproduction protein 1	35.1.27	AT3G51770
+AT1G77670	T5M16.26	Aminotransferase	16.2	AT1G77670
+AT3G56240	CCH	Copper chaperone	15.2	AT3G56240
+AT3G03210	AXY9	Unknown Protein	35.2	AT3G03210
+AT3G48520	CYP94B3	Cytochrome P450 A	26.1	AT3G48520
+AT3G04580	EIN4	Ethylene receptor	17.05.2002	AT3G04580
+AT1G23280	-	Mak16 protein	27.03.1999	AT1G23280
+AT2G40940	ERS1	Ethylene receptor	17.05.2002	AT2G40940
+AT1G76490	HMG1	3-hydroxy-3-methylglutaryl coenzyme A reductase	16.1.2.3	AT1G76490
+AT1G76410	ATL8	Ring finger protein	29.5.11.4.2	AT1G76410
+AT1G47710	SERPIN1	Serpin (Serine protease inhibitor)	20.1.7.6	AT1G47710
+AT1G23190	PGM3	Phosphoglucomutase	4.03.2002	AT1G23190
+AT1G63440	HMA5	Copper transporting ATPase 1	34.12	AT1G63440
+AT1G76160	sks5	Laccase-22	26.7	AT1G76160
+AT3G58060	MTPC3	Cation-efflux pump FieF	34.12	AT3G58060
+AT1G63430	F2K11.19	Leucine-rich repeat receptor-like serine/threonine-protein kinase At1g17230	30.2.6	AT1G63430
+AT3G47420	G3Pp1	Glycerol-3-phosphate transporter	34.9	AT3G47420
+AT2G19520	MSI4	WD-repeat protein	33.99	AT2G19520
+AT3G27170	CLC-B	Voltage-gated chloride channel	34.18	AT3G27170
+AT3G06470	F24P17.3	GNS1/SUR4 membrane family protein	20.1.7.5	AT3G06470
+AT1G23090	"SULTR3;3"	High affinity sulfate transporter 1	34.6	AT1G23090
+AT1G74640	-	Alpha/beta hydrolase fold protein	26.03.2005	AT1G74640
+AT4G22790	DTX56	Mate efflux family protein	34.99	AT4G22790
+AT1G63250	RH48	ATP-dependent RNA helicase	27.01.2002	AT1G63250
+AT1G77180	SKIP	GAMYB-binding protein	28.1	AT1G77180
+AT1G63160	RFC2	Replication factor C subunit 4	28.1	AT1G63160
+AT1G72510	T10D10.2	Unknown Protein	35.2	AT1G72510
+AT2G43330	INT1	Transporter	34.2	AT2G43330
+AT2G39480	ABCB6	Lipid A export ATP-binding/permease protein MsbA	34.16	AT2G39480
+AT1G71980	RMR2	RING finger protein 13	29.5.11.4.2	AT1G71980
+AT2G36830	TIP1-1	Aquaporin	34.19.2	AT2G36830
+AT3G07550	FBL12	F-box/LRR-repeat protein 20	29.5.11.4.3.2	AT3G07550
+AT2G29080	FTSH3	ATP-dependent zinc metalloprotease FtsH	29.5	AT2G29080
+AT2G01275	-	E3 ubiquitin-protein ligase MARCH3	29.5.11.4.2	AT2G01275
+AT5G47450	TIP2-3	Membrane channel protein	34.19.2	AT5G47450
+AT1G67620	F12B7.17	Iojap-like protein	35.2	AT1G67620
+AT1G70300	POT6	Potassium transporter	34.15	AT1G70300
+AT3G06610	F5E6.6	Huntingtin interacting protein K	35.1	AT3G06610
+AT5G49820	RUS6	DUF647 domain-containing protein	35.2	AT5G49820
+AT2G26650	AKT1	Potassium channel	34.15	AT2G26650
+AT1G30270	CIPK23	CBL-interacting protein kinase 04	29.04.2001	AT1G30270
+AT3G44990	XTH31	Xyloglucan endotransglucosylase/hydrolase 9	10.7	AT3G44990
+AT1G61560	MLO6	MLO-like protein 3	20.1.3.1	AT1G61560
+AT5G55640	MDF20.8	Unknown Protein	35.2	AT5G55640
+AT5G53300	UBC10	Ubiquitin-conjugating enzyme	29.5.11.3	AT5G53300
+AT5G53400	BOB1	Nuclear movement protein nudc	20.02.2001	AT5G53400
+AT5G45390	CLPP4	ATP-dependent Clp protease proteolytic subunit	29.05.2005	AT5G45390
+AT5G26980	SYP41	Syntaxin	31.4	AT5G26980
+AT5G52210	GB1	ADP-ribosylation factor	30.5	AT5G52210
+AT1G66180	F15E12.7	Aspartic proteinase nepenthesin-1	29.05.2004	AT1G66180
+AT1G66080	F15E12.12	C11orf73 homolog	35.2	AT1G66080
+AT1G57680	Cand1	Unknown Protein	35.2	AT1G57680
+AT3G61060	PP2A13	F-box protein PP2-B1	31.1	AT3G61060
+AT1G77140	VPS45	Vacuolar protein-sorting protein 45	29.3.4.3	AT1G77140
+AT2G32040	F22D22.21	Folate/biopterin transporter family protein expressed	34.99	AT2G32040
+AT1G64940	CYP89A6	Cytochrome P450	26.1	AT1G64940
+AT1G26670	VTI12	Vesicle transport v-SNARE 11-like	31.4	AT1G26670
+AT1G45170	OEP24A	Pore protein of (OEP24)	35.1	AT1G45170
+AT1G07400	HSP17.8	class I heat shock protein	20.02.2001	AT1G07400
+AT3G21540	-	WD-repeat-containing protein	29.2.2.3.4	AT3G21540
+AT5G42300	UBL5	Ubiquitin family protein	29.5.11.1	AT5G42300
+AT1G30360	ERD4	Early-responsive to dehydration 4	20.02.2003	AT1G30360
+AT1G22150	"SULTR1;3"	High affinity sulfate transporter 2	34.6	AT1G22150
+AT1G18720	F6A14.17	DUF962 domain protein	35.1	AT1G18720
+AT1G07360	MAC5A	Pre-mRNA splicing factor	27.4	AT1G07360
+AT5G42820	U2AF35B	Splicing factor U2af subunit	27.01.2001	AT5G42820
+AT5G20920	EMB1401	Eukaryotic translation initiation factor 2 beta subunit	29.2.3	AT5G20920
+AT4G36690	U2AF65A	Splicing factor U2AF subunit	27.01.2001	AT4G36690
+AT5G20060	-	Acyl-protein thioesterase 2	11.01.2007	AT5G20060
+AT4G03150	-	Conserved gene of unknown function	35.2	AT4G03150
+AT1G26480	GRF12	14-3-3-like protein GF14 Epsilon	30.7	AT1G26480
+AT3G48530	KING1	AKIN gamma	10.5	AT3G48530
+AT2G02560	CAND1	Cullin-associated NEDD8-dissociated protein 1	29.5.11.4.3.3	AT2G02560
+AT4G35850	PPR	Pentatricopeptide repeat-containing protein	35.1.5	AT4G35850
+AT1G26460	T1K7.17	Pentatricopeptide repeat-containing protein	35.1.27	AT1G26460
+AT3G17510	CIPK1	CBL-interacting protein kinase 1	29.04.2001	AT3G17510
+AT3G28860	ABCB19	Uncharacterized ABC transporter ATP-binding protein/permease C9B6.09c	34.16	AT3G28860
+AT5G13080	WRKY75	WRKY transcription factor-b	27.03.1932	AT5G13080
+AT1G54130	RSH3	(P)ppGpp synthetase I (GTP pyrophosphokinase) SpoT/RelA	20.02.2004	AT1G54130
+AT3G07050	NSN1	Nucleolar GTP-binding protein 2	30.5	AT3G07050
+AT5G01750	T20L15.20	Protein LURP-one-related 15	35.2	AT5G01750
+AT2G16710	T24I21.12	Iron-sulfur cluster insertion protein erpA	18.7	AT2G16710
+AT4G20270	BAM3	Receptor-like serine/threonine-protein kinase At1g78530	30.2.11	AT4G20270
+AT4G01370	MPK4	Mitogen-activated protein kinase 4	29.4	AT4G01370
+AT3G28050	UMAMIT41	Nodulin-like protein	33.99	AT3G28050
+AT4G37790	HAT22	Homeobox-leucine zipper protein 9	27.03.2022	AT4G37790
+AT3G10410	SCPL49	Serine carboxypeptidase	29.05.2005	AT3G10410
+AT1G07160	AP2C2	Integrin-linked kinase-associated serine/threonine phosphatase 2C	29.4	AT1G07160
+AT5G46110	TPT	Glucose-6-phosphate/phosphate translocator 2	2.2.2.6	AT5G46110
+AT5G55190	RAN3	GTP-binding nuclear protein Ran-A1	30.5	AT5G55190
+AT3G09010	-	Receptor-like protein kinase At3g21340	30.2.8.2	AT3G09010
+AT5G45300	BAM8	Beta-amylase	2.2.2.1.2	AT5G45300
+AT3G29100	VTI13	Vesicle transport v-SNARE 11-like	31.4	AT3G29100
+AT4G26540	M3E9.30	Receptor-like serine/threonine-protein kinase At1g78530	30.2.11	AT4G26540
+AT4G25740	RPS10A	40S ribosomal protein S10-like	29.2.1.2.1.10	AT4G25740
+AT1G14650	T5E21.13	Splicing factor 3a subunit 1	27.1	AT1G14650
+AT3G62940	OTU5	OTU domain-containing protein 6B	29.05.2003	AT3G62940
+AT4G10040	CYTC-2	Cytochrome c	9.6	AT4G10040
+AT4G17030	EXLB1	Expansin-like protein	10.7	AT4G17030
+AT1G14610	TWN2	Valyl-tRNA synthetase	29.01.2009	AT1G14610
+AT1G07010	SLP1	Serine-threonine protein phosphatase	26.27	AT1G07010
+AT3G26990	-	Regulation of nuclear pre-mRNA domain containing 1B	35.2	AT3G26990
+AT3G07680	p24beta2	Transmembrane emp24 domain-containing protein 3	31.4	AT3G07680
+AT3G62790	F26K9_220	NADH ubiquinone oxidoreductase subunit	9.01.2002	AT3G62790
+AT3G59840	F24G16.11	Allyl alcohol dehydrogenase-like protein	35.2	AT3G59840
+AT1G33260	T16O9.6	Receptor protein kinase-like protein	30.2.99	AT1G33260
+AT3G60590	T8B10_250	Unknown Protein	26.1	AT3G60590
+AT4G23430	TIC32	Short-chain dehydrogenase/reductase family protein	26.22	AT4G23430
+AT4G38510	VHA-B2	V-type ATP synthase beta chain	34.1.1.1	AT4G38510
+AT3G23710	TIC22L	Tic22	29.03.2003	AT3G23710
+AT3G16620	TOC120	Translocase of chloroplast 90, chloroplastic	20.01.2003	AT3G16620
+AT3G48240	T29H11_240	Octicosapeptide/Phox/Bem1p domain-containing protein	35.1	AT3G48240
+AT2G16640	TOC132	Translocase of chloroplast 34	20.01.2003	AT2G16640
+AT5G40480	GB210	Nuclear pore membrane glycoprotein 210	29.03.2001	AT5G40480
+AT3G45210	T14D3.150	Conserved gene of unknown function	35.2	AT3G45210
+AT3G08610	F17O14.8	Conserved gene of unknown function	35.2	AT3G08610
+AT4G29510	PRMT11	Protein arginine n-methyltransferase 1	26.6	AT4G29510
+AT3G25545	-	Expressed protein (Fragment)	35.2	AT3G25545
+AT4G37930	SHM1	Serine hydroxymethyltransferase	1.02.2005	AT4G37930
+AT1G62990	KNAT7	Homeobox protein knotted-1-like 3	27.03.2022	AT1G62990
+AT3G20420	RTL2	Ribonuclease 3	27.01.2019	AT3G20420
+AT3G13550	COP10	Ubiquitin-conjugating enzyme E2 E3	29.5.11.3	AT3G13550
+AT5G40690	-	Genomic DNA chromosome 3 TAC clone K1G2	35.2	AT5G40690
+AT3G18210	MRC8.20	2-oxoglutarate and iron-dependent oxygenase domain-containing protein 2	16.5.1.1.1.13	AT3G18210
+AT1G28240	F3H9.11	Os11g0198100 protein (Fragment)	35.2	AT1G28240
+AT3G43810	CAM7	Calmodulin 2	30.3	AT3G43810
+AT3G05890	RCI2B	Plasma membrane protein 3	20.02.2003	AT3G05890
+AT4G38890	F19H22.4	tRNA-dihydrouridine synthase 3-like	27.03.2012	AT4G38890
+AT2G42610	LSH10	Light-dependent short hypocotyls 1	30.11	AT2G42610
+AT3G24550	PERK1	Receptor-like protein kinase At5g59670	30.2.22	AT3G24550
+AT2G45640	SAP18	Histone deacetylase complex subunit SAP18	27.03.1999	AT2G45640
+AT1G06890	F4H5.5	Solute carrier family 35 member E3	34	AT1G06890
+AT3G24503	ALDH2C4	Aldehyde dehydrogenase	5.1	AT3G24503
+AT1G06840	F4H5.8	Receptor-like serine/threonine-protein kinase At3g01300	30.2.8.1	AT1G06840
+AT1G70210	CYCD1-1	Cyclin D1	31.3	AT1G70210
+AT2G30950	FTSH2	Chloroplast protease	29.05.2007	AT2G30950
+AT2G30050	SEC13B	Protein transport SEC13-like protein	29.3.4.4	AT2G30050
+AT2G26990	CSN2	COP9 signalosome complex subunit 2	30.11.2001	AT2G26990
+AT2G26800	HMGCL	Hydroxymethylglutaryl-CoA lyase	13.2.4.4	AT2G26800
+AT1G59870	ABCG36	ATP-binding cassette transporter	34.16	AT1G59870
+AT1G21920	T5M16.25	MORN repeat protein	30.04.2001	AT1G21920
+AT1G43890	RABC1	Ras-related protein Rab-18	30.5	AT1G43890
+AT4G00100	RPS13B	40S ribosomal protein S13	29.2.1.2.1.13	AT4G00100
+AT2G03870	LSM7	U6 snRNA-associated Sm-like protein LSm7	27.1	AT2G03870
+AT1G27770	ACA1	Calcium-transporting ATPase 1	30.3	AT1G27770
+AT2G02050	F14H20.12	NADH dehydrogenase (Ubiquinone) 1 beta subcomplex 7	9.01.2002	AT2G02050
+AT1G76405	OEP21B	Chloroplast channel forming outer membrane protein	35.2	AT1G76405
+AT5G14390	F18O22_180	Abhydrolase domain-containing protein FAM108B1	26.03.2005	AT5G14390
+AT1G19440	KCS4	3-ketoacyl-CoA synthase	11.1	AT1G19440
+AT3G28210	SAP12	AN1-type zinc finger protein 2B	27.03.2011	AT3G28210
+AT3G23410	FAO3	Long chain fatty alcohol oxidase	11.9	AT3G23410
+AT3G01400	T13O15.4	U-box domain-containing protein 4	35.1.3	AT3G01400
+AT3G47370	RPS20B	30S ribosomal protein S10	29.2.1.2.1.20	AT3G47370
+AT1G61590	T25B24.6	ATP binding / serine-threonine kinase	29.4.1.57	AT1G61590
+AT1G25540	MED25	Mediator of RNA polymerase II transcription subunit 25	30.11	AT1G25540
+AT1G53000	KDSB	3-deoxy-manno-octulosonate cytidylyltransferase	10.1.12.4	AT1G53000
+AT2G33220	F25I18.4	NADH dehydrogenase (Ubiquinone) 1 alpha subcomplex subunit 13	35.2	AT2G33220
+AT1G52540	MVC8.1	G-type lectin S-receptor-like serine/threonine-protein kinase At2g19130	30.2.99	AT1G52540
+AT2G36330	CASPL4A3	UPF0497 membrane protein At2g36330	35.1	AT2G36330
+AT3G15360	TRX-M4	Thioredoxin	21.1	AT3G15360
+AT1G52510	-	Hydrolase alpha/beta fold family protein	26.03.2005	AT1G52510
+AT3G22400	LOX5	Lipoxygenase	17.7.1.2	AT3G22400
+AT1G51560	F5D21.3	FMN binding protein	35.2	AT1G51560
+AT2G35500	SKL2	Shikimate kinase-like protein	13.1.6.1.5	AT2G35500
+AT1G29050	TBL38	Os06g0207500 protein (Fragment)	35.2	AT1G29050
+AT2G21520	SFH8	Phosphatidylinositol transporter	29.3.4.99	AT2G21520
+AT1G30070	T1P2.12	Calcyclin-binding protein	29.5.11.4.3.3	AT1G30070
+AT3G11510	RPS14B	30S ribosomal protein S11	29.2.1.2.1.14	AT3G11510
+AT1G64850	F13O11.15	Calcium-binding EF hand family protein	30.3	AT1G64850
+AT3G06930	PRMT13	Arginine N-methyltransferase family protein	26.6	AT3G06930
+AT1G10740	T16B5.12	Lipase	31.2	AT1G10740
+AT4G35250	HCF244	NmrA family protein	35.1	AT4G35250
+AT3G13670	T11I18.5	Casein kinase	29.4	AT3G13670
+AT5G09770	-	50S ribosomal protein L17	29.2.1.1.3.2.17	AT5G09770
+AT1G09560	GLP4	Germin-like protein	15.2	AT1G09560
+AT4G34700	CIB22	NADH dehydrogenase	9	AT4G34700
+AT2G33040	ATPC	ATP synthase gamma chain	9.9	AT2G33040
+AT2G24860	-	Tsi1-interacting protein TSIP1	29.6	AT2G24860
+AT3G24570	-	Mpv17 protein	29.03.2005	AT3G24570
+AT1G04770	F13M7.24	Male sterility MS5 family protein	33.99	AT1G04770
+AT2G23070	CKA4	Protein serine/threonine kinase	29.04.2001	AT2G23070
+AT1G06400	RABA1A	Ras-related protein Rab-25	30.5	AT1G06400
+AT5G45360	SKIP31	F-box protein	29.5.11.4.3.2	AT5G45360
+AT2G35930	PUB23	U-box domain-containing protein	27.03.1964	AT2G35930
+AT5G43190	MNL12.1	F-box family protein	29.5.11.4.3.2	AT5G43190
+AT3G07090	T1B9.26	PPPDE peptidase domain containing 2a	35.2	AT3G07090
+AT1G62390	Phox2	At1g62390-like protein (Fragment)	27.1	AT1G62390
+AT5G23340	-	F-box/LRR-repeat protein 20	35.2	AT5G23340
+AT4G29010	AIM1	Fatty acid oxidation complex subunit alpha 1	11.9.4.9	AT4G29010
+AT3G20050	CCT1	T-complex protein 1 subunit alpha	29.6	AT3G20050
+AT3G49160	PKP4	Pyruvate kinase family protein	4.01.2014	AT3G49160
+AT3G15290	-	Fatty acid oxidation complex subunit alpha	24.3	AT3G15290
+AT3G06860	MFP2	Fatty acid oxidation complex subunit alpha 1	11.9.4.9	AT3G06860
+AT1G06290	ACX3	Acyl-CoA oxidase 6	11.9.4.2	AT1G06290
+AT1G25280	TULP10	TUBBY protein	29.5.11.4.3.2	AT1G25280
+AT1G60770	F8A5.28	Pentatricopeptide repeat-containing protein	27.03.1967	AT1G60770
+AT1G25260	-	mRNA turnover protein 4 homolog	29.2.1.2.2.80	AT1G25260
+AT5G13450	ATP5	F1-ATP synthase delta subunit	9.9	AT5G13450
+AT3G11540	SPY	TPR repeat-containing protein	17.06.2002	AT3G11540
+AT3G59910	SKIP35	F-box/ankyrin repeat protein SKIP35	35.2	AT3G59910
+AT4G17900	-	Zinc-binding family protein	27.03.1999	AT4G17900
+AT2G35260	-	Unknown Protein	35.2	AT2G35260
+AT1G20430	-	Unknown Protein	35.2	AT1G20430
+AT1G20960	BRR2A	Related to ATP dependent RNA helicase	27.01.2002	AT1G20960
+AT1G06220	CLO	Elongation factor like protein	29.02.2004	AT1G06220
+AT1G80070	PRP8A	Pre-mRNA-processing-splicing factor 8	27.01.2001	AT1G80070
+AT5G48930	HST	Hydroxycinnamoyl CoA shikimate/quinate hydroxycinnamoyltransferase	16.2.1.4	AT5G48930
+AT2G21950	SKIP6	Kelch repeat-containing F-box family protein	29.5.11.4.3.2	AT2G21950
+AT1G51680	4CL1	AMP dependent CoA ligase	16.2.1.3	AT1G51680
+AT5G50120	F3I6.5	WD-40 repeat family protein	30.5	AT5G50120
+AT2G32720	CYTB5-B	Cytochrome b5	21.2	AT2G32720
+AT2G02870	SKIP11	Kelch-like protein 17	29.5.11.4.3.2	AT2G02870
+AT3G17100	BHLH147	Transcription factor	27.03.2006	AT3G17100
+AT2G27150	AAO3	Xanthine dehydrogenase/oxidase	17.1.1.1.12	AT2G27150
+AT3G16910	AAE7	AMP-dependent synthetase and ligase family protein	11.01.2008	AT3G16910
+AT1G06130	GLX2-4	Hydroxyacylglutathione hydrolase 2	24.1	AT1G06130
+AT5G08560	-	WD-repeat protein-like	33.99	AT5G08560
+AT4G32520	SHM3	Serine hydroxymethyltransferase	1.02.2005	AT4G32520
+AT1G06110	SKIP16	Protein ApaG	29.5.11.4.3.2	AT1G06110
+AT3G47810	VPS29	Vacuolar protein sorting 29	26.27	AT3G47810
+AT1G67980	CCOAMT	Caffeoyl-CoA O-methyltransferase	29.2.2.3.3	AT1G67980
+AT1G75850	VPS35B	Vacuolar protein sorting 35	29.3.4.3	AT1G75850
+AT2G42590	GRF9	14-3-3-like protein GF14 Epsilon	30.7	AT2G42590
+AT3G15820	ROD1	Genomic DNA chromosome 3 P1 clone MSJ11	26.13	AT3G15820
+AT1G37130	NIA2	Nitrate reductase	12.01.2001	AT1G37130
+AT3G11530	F24K9.21	Vacuolar protein sorting 55 containing protein	29.3.4.3	AT3G11530
+AT5G20890	CCT2	T-complex protein 1 subunit beta	29.6	AT5G20890
+AT3G03960	CCT8	T-complex protein theta subunit	29.6	AT3G03960
+AT1G24510	CCT5	T-complex protein 1 subunit epsilon	29.6	AT1G24510
+AT2G24765	ARF3	ADP-ribosylation factor 3	29.4	AT2G24765
+AT4G32750	F4D11.50	Unknown Protein	35.2	AT4G32750
+AT1G24440	-	Zinc finger family protein	29.5.11.4.2	AT1G24440
+AT3G15354	SPA3	WD-40 repeat protein	30.11	AT3G15354
+AT1G62020	F8K4.21	Coatomer alpha subunit-like protein	31.4	AT1G62020
+AT4G12590	-	Protein pob	35.2	AT4G12590
+AT3G26590	DTX29	Multidrug resistance protein mdtK	34.99	AT3G26590
+AT1G61870	PPR336	Pentatricopeptide repeat-containing protein	35.1.27	AT1G61870
+AT1G27980	DPL1	Sphingosine-1-phosphate lyase	11.08.2001	AT1G27980
+AT3G15090	-	Zinc-containing alcohol dehydrogenase	35.1	AT3G15090
+AT3G48360	BT2	BTB/POZ and TAZ domain-containing protein 2	29.5.11.4.5.2	AT3G48360
+AT3G15010	UBA2C	Heterogeneous nuclear ribonucleoprotein A2/B1	27.4	AT3G15010
+AT2G32415	RRP6L3	Exosome component 10 protein	28.99	AT2G32415
+AT2G16430	PAP10	Purple acid phosphatase	26.27	AT2G16430
+AT3G21630	CERK1	Receptor-like protein kinase At5g59670	20.1.7.3	AT3G21630
+AT2G26690	NPF6.2	Oligopeptide transporter	34.4	AT2G26690
+AT3G14680	CYP72A14	Cytochrome P450	26.1	AT3G14680
+AT5G05170	CESA3	Cellulose synthase	10.02.2001	AT5G05170
+AT2G37050	LRR-RLK	Receptor-like kinase	30.2.1	AT2G37050
+AT5G41670	MBK23.20	6-phosphogluconate dehydrogenase decarboxylating	7.01.2003	AT5G41670
+AT2G32060	RPS12C	40S ribosomal protein S12	29.2.1.2.1.12	AT2G32060
+AT3G48890	MSBP2	Membrane-associated progesterone receptor component 2	21.2	AT3G48890
+AT1G61620	CSU1	Nitric oxide synthase interacting protein	29.5.11.4.2	AT1G61620
+AT1G74470	CHLP	Geranylgeranyl reductase	16.01.2001	AT1G74470
+AT1G65650	UCH2	Ubiquitin carboxyl-terminal hydrolase family 1 protein	29.05.2011	AT1G65650
+AT2G23150	NRAMP3	Natural resistance associated macrophage protein	34.12	AT2G23150
+AT1G65290	MTACP2	Acyl carrier protein	11.01.2012	AT1G65290
+AT3G57560	NAGK	Acetylglutamate kinase-like protein	23.04.1999	AT3G57560
+AT2G24940	MP3	Membrane steroid-binding protein 1	21.2	AT2G24940
+AT1G68820	-	Baculoviral IAP repeat-containing 8	29.5.11.4.2	AT1G68820
+AT2G01680	T8O11.15	Ankyrin repeat family protein	31.1	AT2G01680
+AT1G78380	GSTU19	Glutathione transferase	26.9	AT1G78380
+AT1G77920	TGA7	BZIP transcription factor	27.03.1935	AT1G77920
+AT1G35620	PDIL5-2	Protein disulfide isomerase	21.01.2001	AT1G35620
+AT1G68220	T22E19.15	COSII_At1g13380 (Fragment)	35.2	AT1G68220
+AT5G09260	VPS20.2	Charged multivesicular body protein 6	27.03.1971	AT5G09260
+AT5G38480	GRF3	14-3-3-like protein GF14 epsilon	30.7	AT5G38480
+AT4G19003	VPS25	Vacuolar protein sorting protein	29.3.4.3	AT4G19003
+AT2G05070	LHCB2.2	Chlorophyll a-b binding protein 37, chloroplastic	1.1.1.1	AT2G05070
+AT1G35720	ANN1	Annexin	31.1	AT1G35720
+AT5G56600	PRO5	Profilin	31.1	AT5G56600
+AT1G27290	F17L21.8	Conserved gene of unknown function	35.2	AT1G27290
+AT3G23000	CIPK7	CBL-interacting protein kinase 20	29.4	AT3G23000
+AT1G21870	GONST5	Organic anion transporter	34.8	AT1G21870
+AT1G21980	PIP5K1	Phosphatidylinositol-4-phosphate 5-kinase family protein	30.04.2001	AT1G21980
+AT1G16010	MRS2-1	Magnesium transporter MRS2-1	34.14	AT1G16010
+AT4G22540	ORP2A	Oxysterol-binding family protein	31.4	AT4G22540
+AT1G75380	BBD1	Nicotiana tabacum wound inducive mRNA , complete cds	20.02.2004	AT1G75380
+AT2G31440	APH-1	Gamma-secretase subunit APH-1B	35.1	AT2G31440
+AT3G12280	RBR1	Retinoblastoma-related protein 1	31.2	AT3G12280
+AT4G23650	CPK3	Calcium dependent protein kinase 3	30.3	AT4G23650
+AT3G02520	GRF7	14-3-3-like protein GF14 epsilon	30.7	AT3G02520
+AT3G12110	ACT11	Actin	31.1	AT3G12110
+AT5G54910	RH32	ATP-dependent RNA helicase dbp4	29.2.2.3.5	AT5G54910
+AT3G06040	F24F17.2	50S ribosomal protein L12-2	29.2.1.1	AT3G06040
+AT5G25220	KNAT3	Homeobox protein knotted-1-like 3	27.03.2022	AT5G25220
+AT5G53770	-	Poly(A) RNA polymerase protein 2	27.1	AT5G53770
+AT5G11060	KNAT4	Homeobox protein knotted-1-like 3	27.03.2022	AT5G11060
+AT5G52820	NLE1	WD repeat-containing protein 5 homolog	33.99	AT5G52820
+AT3G03490	PEX19-1	Peroxisomal biogenesis factor 19	31.1	AT3G03490
+AT5G50310	-	Kelch domain-containing protein 4	35.1	AT5G50310
+AT1G58520	RXW8	Early-responsive to dehydration protein-like	20.02.2003	AT1G58520
+AT1G75140	22H5.14	Uncharacterized membrane protein At1g75140	35.2	AT1G75140
+AT1G34780	APRL4	"5&apos;-adenylylsulfate reductase-like 4"	21.1	AT1G34780
+AT5G41970	T1G12.2	MYG1 protein	35.2	AT5G41970
+AT4G21990	apr.03	Phosphoadenosine phosphosulfate reductase	14.2	AT4G21990
+AT2G04030	HSP90-5	Chaperone protein htpG	20.02.2001	AT2G04030
+AT5G39840	K13H13.20	ATP-dependent RNA helicase SUV3-like protein mitochondrial	27	AT5G39840
+AT5G01430	T9C5.20	Protein transport protein GOT1	31.4	AT5G01430
+AT1G34760	GRF11	14-3-3-like protein GF14 Epsilon	30.7	AT1G34760
+AT3G06720	IMPA1	Importin alpha-1b subunit	29.03.2001	AT3G06720
+AT5G39600	MIJ24.9	Genomic DNA chromosome 5 P1 clone MIJ24	35.2	AT5G39600
+AT4G10760	MTA	Methyltransferase like 3	25	AT4G10760
+AT3G58460	RBL15	Rhomboid protease GlpG	29.5.11.3	AT3G58460
+AT5G27470	F21A20_180	Seryl-tRNA synthetase	29.01.2011	AT5G27470
+AT2G31240	-	Kinesin light chain-like	35.1.27	AT2G31240
+AT1G50300	TAF15	RNA binding protein	30.5	AT1G50300
+AT3G10970	-	Beta-phosphoglucomutase family hydrolase	35.1	AT3G10970
+AT5G22330	RIN1	Holliday junction ATP-dependent DNA helicase ruvB	33.99	AT5G22330
+AT5G22320	-	Leucine-rich repeat family protein-like	30.2	AT5G22320
+AT4G30480	TPR1	Tetratricopeptide repeat protein 4 homolog	35.1.27	AT4G30480
+AT2G31200	ADF6	Actin depolymerizing factor 6	31.1	AT2G31200
+AT1G44960	T12C22.23	SNARE associated Golgi protein	35.2	AT1G44960
+AT5G19690	STT3A	Oligosaccharyl transferase STT3 subunit family protein	20.02.2003	AT5G19690
+AT5G19320	RANGAP2	Ran GTPase-activating protein 2	30.5	AT5G19320
+AT5G19680	-	Phosphatase 1 regulatory subunit 7	30.2	AT5G19680
+AT3G05580	TOPP9	Serine/threonine-protein phosphatase	29.4	AT3G05580
+AT5G16750	TOZ	WD repeat-containing protein 3 homolog	29.2.2.3.4	AT5G16750
+AT3G01090	KIN10	5&apos-AMP-activated protein kinase catalytic subunit alpha-2	29.04.2001	AT3G01090
+AT5G16040	F1N13_180	Regulator of chromosome condensation (RCC1)-like protein	31.2	AT5G16040
+AT5G15750	-	U3 small nucleolar ribonucleoprotein protein IMP3	29.2.1.99.1.4	AT5G15750
+AT1G05200	GLR3.4	Glutamate-gated kainate-type ion channel receptor subunit glur5	30.01.2001	AT1G05200
+AT5G19180	ECR1	NEDD8-activating enzyme E1 catalytic subunit	29.5.11.2	AT5G19180
+AT4G36800	RCE1	Ubiquitin-conjugating enzyme	29.5.11.3	AT4G36800
+AT3G09980	ACIP1	cDNA clone J033118E13 full insert sequence	35.1	AT3G09980
+AT5G06460	UBA2	Ubiquitin-activating enzyme E1	29.5.11.2	AT5G06460
+AT2G19830	VPS32.1	Charged multivesicular body protein 4b	27.03.1971	AT2G19830
+AT2G36910	ABCB1	Lipid A export ATP-binding/permease protein MsbA	34.16	AT2G36910
+AT5G06160	ATO	Splicing factor 3a subunit 3	27.01.2001	AT5G06160
+AT1G05180	AXR1	NEDD8 activating enzyme E1 subunit 1	17.02.2002	AT1G05180
+AT3G09920	PIP5K9	Phosphatidylinositol-4-phosphate 5-kinase 9	30.04.2001	AT3G09920
+AT1G61010	CPSF73-I	Cleavage and polyadenylation specificity factor subunit 3-I	27.1.3.4	AT1G61010
+AT3G09150	HY2	Ferredoxin oxidoreductase	1.1.5.4	AT3G09150
+AT1G31780	-	Component of oligomeric golgi complex	35.1	AT1G31780
+AT5G42270	FTSH5	ATP-dependent zinc metalloprotease FtsH 1	29.05.2007	AT5G42270
+AT2G05620	PGR5	Proton gradient regulation 5	1.01.1940	AT2G05620
+AT4G35630	PSAT1	Phosphoserine aminotransferase	13.1.5.1.2	AT4G35630
+AT3G11130	CHC1	Clathrin heavy chain	31.4	AT3G11130
+AT3G08720	ATPK2	Ribosomal protein S6 kinase	29.2.2	AT3G08720
+AT4G31460	F3L17.30	50S ribosomal protein L28	29.2.1.1.3.2.28	AT4G31460
+AT4G30080	ARF16	Auxin response factor 10	27.03.2004	AT4G30080
+AT2G18160	BZIP2	BZIP transcription factor	27.03.1935	AT2G18160
+AT5G10190	UNE2	Major facilitator superfamily transporter	34.99	AT5G10190
+AT3G07760	F17A17.10	Downward leaf curling protein	35.2	AT3G07760
+AT1G60900	U2AF65B	Splicing factor U2AF subunit	27.01.2001	AT1G60900
+AT4G26900	HISN4	Imidazole glycerol phosphate synthase subunit hisF	13.1.7.5	AT4G26900
+AT3G54300	VAMP727	Vesicle-associated membrane protein 7B	31.4	AT3G54300
+AT5G43060	RD21B	Cysteine protease	29.05.2003	AT5G43060
+AT1G34750	F21H2.4	Serine/threonine phosphatase family protein	29.4	AT1G34750
+AT1G04960	F13M7.5	BZIP transcription factor bZIP108 (Fragment)	27.03.1935	AT1G04960
+AT1G54140	TAF9	Transcription initiation factor TFIID subunit 9B	27.2	AT1G54140
+AT4G21800	QQT2	Gpn-loop GTPase 1	31.2	AT4G21800
+AT1G04950	TAF6	Transcription initiation factor TFIID subunit 6	27.03.1967	AT1G04950
+AT4G20980	TIF3D1	Eukaryotic translation initiation factor 3 subunit 7	29.2.3	AT4G20980
+AT3G05350	-	Xaa-Pro aminopeptidase	29.5	AT3G05350
+AT1G47128	RD21A	Cathepsin B-like cysteine proteinase	29.05.2003	AT1G47128
+AT4G11120	EFTS	Elongation factor Ts	29.02.2004	AT4G11120
+AT1G21750	PDIL1-1	Protein disulfide isomerase	21.01.2001	AT1G21750
+AT4G24840	F6I7.50	Conserved oligomeric Golgi complex subunit 2	35.2	AT4G24840
+AT1G04870	PRMT10	Arginine N-methyltransferase family protein	26.6	AT1G04870
+AT3G62840	F26K9_270	Small nuclear ribonucleoprotein-like protein	27.1	AT3G62840
+AT3G29090	PME31	Pectinesterase	10.08.2001	AT3G29090
+AT1G21690	RFC4	Replication factor C subunit 2	28.1	AT1G21690
+AT3G58660	T20N10_10	Ribosomal L1 domain-containing protein 1	29.2.1.2.2.1	AT3G58660
+AT2G19560	EER5	PCI domain-containing protein 2 homolog	29.5.11.20	AT2G19560
+AT3G58610	F14P22.200	Ketol-acid reductoisomerase	13.1.4.1.2	AT3G58610
+AT5G48370	-	Acyl-CoA thioesterase 9	35.1	AT5G48370
+AT2G30720	-	Acyl-CoA thioesterase	35.1	AT2G30720
+AT1G04690	KAB1	Voltage-gated potassium channel beta subunit	34.15	AT1G04690
+AT5G42920	THO5B	THO complex subunit 5 homolog	35.2	AT5G42920
+AT1G21460	SWEET1	Bidirectional sugar transporter N3	33.99	AT1G21460
+AT1G04580	AAO4	Xanthine dehydrogenase/oxidase	17.1.1.1.12	AT1G04580
+AT3G06500	INVC	Neutral invertase	2.2.1.3.1	AT3G06500
+AT5G37070	T16O11.17	Os03g0210500 protein (Fragment)	35.2	AT5G37070
+AT5G51180	-	Conserved gene of unknown function	26.03.2005	AT5G51180
+AT5G02800	CDL1	G-type lectin S-receptor-like serine/threonine-protein kinase At1g11330	29.4.1.57	AT5G02800
+AT3G06190	BPM2	BTB/POZ domain containing protein expressed	29.5.11.4.5.2	AT3G06190
+AT5G47310	dl4780c	PPPDE peptidase domain-containing protein 1	35.2	AT5G47310
+AT5G37680	ARLA1A	ADP-ribosylation factor-like protein	29.3.4.99	AT5G37680
+AT5G27970	-	Protein MON2 homolog	35.2	AT5G27970
+AT3G18165	MOS4	Pre-mRNA-splicing factor SPF27	20.1	AT3G18165
+AT5G06370	HDA8	NC domain-containing protein	35.1	AT5G06370
+AT3G06080	TBL10	Conserved gene of unknown function	35.2	AT3G06080
+AT1G09770	CDC5	Pre-mRNA-splicing factor cef1	27.03.2026	AT1G09770
+AT3G05060	NOP5-2	Nucleolar protein 5	29.2.2.3.1	AT3G05060
+AT1G04510	PRP19A	Pre-mRNA-processing factor 19 homolog 1	27.01.2001	AT1G04510
+AT1G21450	SCL1	GRAS family transcription factor	33.99	AT1G21450
+AT4G02080	SAR1A	ADP-ribosylation factor family protein	30.5	AT4G02080
+AT1G60140	TPS10	Alpha alpha-trehalose-phosphate synthase (UDP-forming)	3.02.2003	AT1G60140
+AT3G59920	GDI2	Rab GDP dissociation inhibitor	30.5	AT3G59920
+AT1G21410	SKP2A	F-box/LRR-repeat protein 2	29.5.11.4.3.2	AT1G21410
+AT5G09420	OM64	Amidase	29.03.2003	AT5G09420
+AT1G21400	F24J8.4	2-oxoisovalerate dehydrogenase alpha subunit	18.2	AT1G21400
+AT3G11730	RABD1	Ras-related protein Rab-1A	30.5	AT3G11730
+AT3G07670	F17A17.1	SET domain-containing protein	27.03.1969	AT3G07670
+AT1G32200	ATS1	Glycerol-3-phosphate acyltransferase	11.03.2001	AT1G32200
+AT1G32170	XTH30	Xyloglucan endotransglucosylase/hydrolase 14	10.7	AT1G32170
+AT2G18960	AHA1	Plasma membrane ATPase 4	34.1.2	AT2G18960
+AT3G44110	ATJ3	DNAJ chaperone	20.02.2001	AT3G44110
+AT3G23240	ERF1B	Ethylene-responsive transcription factor 1A	17.05.2002	AT3G23240
+AT3G54190	-	Conserved Plasmodium protein	30.5	AT3G54190
+AT5G16000	NIK1	Receptor-like serine/threonine-protein kinase At1g78530	20.01.2002	AT5G16000
+AT1G60010	T2K10.6	Genomic DNA chromosome 5 P1 clone MQB2	27.03.1935	AT1G60010
+AT5G19930	F28I16.80	Transmembrane protein 19	35.1	AT5G19930
+AT3G48260	WNK3	Serine/threonine protein kinase	29.04.2001	AT3G48260
+AT5G09400	POT7	Potassium transporter family protein	34.15	AT5G09400
+AT2G26560	PLP2	Patatin-like protein 3	33.1	AT2G26560
+AT3G45640	MPK3	MAP kinase	29.4	AT3G45640
+AT2G43790	MPK6	Mitogen-activated protein kinase	29.4	AT2G43790
+AT4G22130	SRF8	Receptor-like kinase	30.2.5	AT4G22130
+AT4G32900	-	Peptidyl-tRNA hydrolase 2	35.2	AT4G32900
+AT3G12740	ALIS1	LEM3 (Ligand-effect modulator 3) family protein	34.1	AT3G12740
+AT5G03730	CTR1	Protein kinase	29.4	AT5G03730
+AT1G59820	ALA3	Phospholipid-transporting ATPase	34.1	AT1G59820
+AT1G66340	ETR1	Ethylene receptor	17.05.2002	AT1G66340
+AT3G18190	CCT4	T-complex protein 1 subunit delta	29.6	AT3G18190
+AT3G46230	HSP17.4A	class I heat shock protein	20.02.2001	AT3G46230
+AT3G62150	ABCB21	Multidrug/pheromone exporter, MDR family, ABC transporter family	34.16	AT3G62150
+AT1G74310	CLPB1	ClpB chaperone	20.02.2001	AT1G74310
+AT3G50950	RPP13L4	Disease resistance protein (CC-NBS-LRR)	20.1.2.1	AT3G50950
+AT5G41770	F24M12.150	Pre-mRNA-splicing factor CLF1	31.3	AT5G41770
+AT5G28740	T32B20.g	Pre-mRNA-splicing factor SYF1	28.2	AT5G28740
+AT3G58970	MRS2-4	Magnesium transporter MRS2-4	34.14	AT3G58970
+AT5G13300	AGD3	Arf-GAP with GTPase, ANK repeat and PH domain-containing protein 3	30.5	AT5G13300
+AT3G03270	T17B22.4	Universal stress protein family protein	20	AT3G03270
+AT3G60190	DRP1E	Dynamin	26.17	AT3G60190
+AT2G17350	-	Unknown Protein	35.2	AT2G17350
+AT3G18790	-	Pre-mRNA-splicing factor isy-1	35.2	AT3G18790
+AT2G18710	SCY1	Preprotein translocase secY subunit	29.03.2003	AT2G18710
+AT1G73640	RABA6A	RAB11F	30.5	AT1G73640
+AT3G15660	GRXS15	Glutaredoxin family protein	21.4	AT3G15660
+AT3G04730	IAA16	Auxin responsive protein	27.03.1940	AT3G04730
+AT3G25860	LTA2	Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex	8.1.1.2	AT3G25860
+AT3G18140	LST8-1	WD repeat-containing protein 5 homolog	33.99	AT3G18140
+AT5G06530	ABCG22	ABC transporter G family member 22	34.16	AT5G06530
+AT3G18040	MPK9	Big map kinase/bmk	29.4	AT3G18040
+AT5G57330	-	Aldose 1-epimerase family protein	3.5	AT5G57330
+AT5G58220	TTL	5-hydroxyisourate hydrolase	35.2	AT5G58220
+AT4G30660	T10C21.10	Plasma membrane protein 3	20.02.2003	AT4G30660
+AT5G57123	-	Conserved gene of unknown function	35.2	AT5G57123
+AT1G04190	TPR3	Heat shock protein 70 (HSP70)-interacting protein	35.1.27	AT1G04190
+AT1G14780	F10B6.18	Necrotic spotted lesions 1 (Fragment)	35.2	AT1G14780
+AT1G04130	TPR2	Tetratricopeptide repeat protein 4	29.4	AT1G04130
+AT4G15545	dl3810w	Os05g0406000 protein (Fragment)	35.2	AT4G15545
+AT5G56890	ALE2	Receptor-like kinase	30.2.18	AT5G56890
+AT3G56010	F27K19_190	Unknown Protein	29.2.1.99.99	AT3G56010
+AT1G14700	PAP3	Acid phosphatase	26.13	AT1G14700
+AT1G04120	ABCC5	Multidrug resistance protein ABC transporter family	34.16	AT1G04120
+AT3G01370	CFM2	CFM2	27.01.2001	AT3G01370
+AT5G43700	IAA4	Auxin responsive protein	27.03.1940	AT5G43700
+AT5G56220	F16G20.140	ATP/GTP-binding protein	20.1.2.2	AT5G56220
+AT5G35330	MBD2	Methyl-CpG-binding domain 12	27.03.1959	AT5G35330
+AT3G22845	MWI23.22	Transmembrane emp24 domain-containing protein 3	31.4	AT3G22845
+AT3G23050	IAA7	Auxin responsive protein	27.03.1940	AT3G23050
+AT4G24400	CIPK8	CBL-interacting protein kinase 17	29.04.2001	AT4G24400
+AT3G19895	T16L1.30	U-box domain-containing protein 62	29.5.11.4.2	AT3G19895
+AT2G39760	BPM3	BTB/POZ domain containing protein expressed	29.5.11.4.5.2	AT2G39760
+AT2G42770	-	Peroxisomal membrane protein 2	35.1	AT2G42770
+AT2G48010	RKF3	G-type lectin S-receptor-like serine/threonine-protein kinase At4g11900	30.2.23	AT2G48010
+AT2G44050	COS1	6 7-dimethyl-8-ribityllumazine synthase	18.03.2002	AT2G44050
+AT2G32700	LUH	WD repeat-containing protein 5 homolog	27.03.1958	AT2G32700
+AT1G15750	TPL	WD-40 repeat protein-like	33.99	AT1G15750
+AT1G44920	T12C22.21	Os03g0729100 protein (Fragment)	35.2	AT1G44920
+AT4G21105	-	Conserved gene of unknown function	35.2	AT4G21105
+AT3G56990	EDA7	Nucleolar protein 10	33.99	AT3G56990
+AT5G42080	DRP1A	Dynamin	26.17	AT5G42080
+AT5G26040	HDA2	Histone deacetylase 11	27.03.1955	AT5G26040
+AT2G47450	CAO	Ankyrin repeat-containing protein	28.1	AT2G47450
+AT5G07440	GDH2	Glutamate dehydrogenase	12.03.2001	AT5G07440
+AT1G52155	F5F19.22	F5F19.22 protein (Fragment)	35.2	AT1G52155
+AT3G22200	POP2	Aminotransferase	13.1.1.1.2	AT3G22200
+AT5G48810	CYTB5-D	Cytochrome b5	21.2	AT5G48810
+AT3G60820	PBF1	Proteasome subunit beta type	29.5.11.20	AT3G60820
+AT1G73920	-	Lipase family protein	11.9.2.1	AT1G73920
+AT1G19800	TGD1	ABC transporter permease protein	34.99	AT1G19800
+AT1G34370	STOP1	C2-H2 zinc finger protein	27.03.2011	AT1G34370
+AT5G17210	-	Fiber protein Fb34	35.2	AT5G17210
+AT2G18040	PIN1	Peptidyl-prolyl cis-trans isomerase 1	31.03.2001	AT2G18040
+AT5G11260	HY5	Transcription factor HY5	27.03.1935	AT5G11260
+AT5G08050	F13G24.250	Unknown Protein	35.2	AT5G08050
+AT2G29960	CYP19-4	Peptidyl-prolyl cis-trans isomerase	31.03.2001	AT2G29960
+AT4G31340	-	BRI1-KD interacting protein 129 (Fragment)	28.2	AT4G31340
+AT1G13980	GN	PH and SEC7 domain-containing protein 1	33.99	AT1G13980
+AT1G34320	PSI1	Os01g0873900 protein (Fragment)	35.2	AT1G34320
+AT5G53450	PAP14	mRNA clone RTFL01-02-P20	29.4	AT5G53450
+AT5G12010	F14F18_180	Os07g0175100 protein (Fragment)	35.2	AT5G12010
+AT2G34250	F9K20.24	Transport protein Sec61 alpha subunit	29.3.4.99	AT2G34250
+AT5G53370	PME61	Pectinesterase	10.08.2001	AT5G53370
+AT2G29410	MTPB	Zinc-transporter-like protein	34.12	AT2G29410
+AT2G46660	CYP78A6	Cytochrome P450	26.1	AT2G46660
+AT1G68090	ANN5	Annexin	31.1	AT1G68090
+AT5G04140	GLU1	Glutamate synthase (Ferredoxin)	12.2.1.1	AT5G04140
+AT5G02160	-	Unknown Protein	35.2	AT5G02160
+AT1G03950	VPS2.3	Charged multivesicular body protein 2a	27.03.1971	AT1G03950
+AT4G33330	GUX2	Glycosyl transferase family 8 glycogenin	2.01.2002	AT4G33330
+AT3G56510	-	Pre-rRNA-processing protein ESF2	29.2.2.3.99	AT3G56510
+AT5G48380	BIR1	G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080	30.2.10	AT5G48380
+AT5G38660	APE1	Uncharacterized conserved membrane protein	1	AT5G38660
+AT1G03900	ABCI18	Adaptin ear-binding coat-associated protein 2	35.2	AT1G03900
+AT3G55800	SBPASE	Fructose-1 6-bisphosphatase class 1	1.03.2009	AT3G55800
+AT5G40770	PHB3	Prohibitin	31.2	AT5G40770
+AT2G46370	JAR1	Indole-3-acetic acid-amido synthetase GH3.8	17.02.2003	AT2G46370
+AT2G17790	VPS35A	Vacuolar protein sorting 35	29.3.4.3	AT2G17790
+AT1G07510	FTSH10	ATP-dependent zinc metalloprotease FtsH	29.5	AT1G07510
+AT1G03860	PHB2	Prohibitin 1-like protein	9.01.2001	AT1G03860
+AT3G27925	DEGP1	Serine protease	29.05.2005	AT3G27925
+AT3G17465	RPL3B	50S ribosomal protein l3	29.2.1.1.1.2.3	AT3G17465
+AT1G76500	AHL29	AT-hook DNA-binding protein (Fragment)	28.99	AT1G76500
+AT5G51545	LPA2	Unknown Protein	1.1.1.2	AT5G51545
+AT5G51070	CLPD	Chaperone protein ClpB 1	29.05.2005	AT5G51070
+AT4G16450	dl4250w	NADH-ubiquinone oxidoreductase 21 kDa subunit	35.2	AT4G16450
+AT2G20890	THF1	Protein thf1	29.3	AT2G20890
+AT2G45790	PMM	Phosphomannomutase A1	10.01.2021	AT2G45790
+AT4G21380	SD18	G-type lectin S-receptor-like serine/threonine-protein kinase At4g27290	29.4	AT4G21380
+AT1G03730	T5L23.9	Conserved gene of unknown function	35.2	AT1G03730
+AT3G21200	GLUTRBP	Pyridoxamine 5&apos-phosphate oxidase-related FMN-binding	35.2	AT3G21200
+AT5G14260	F18O22_50	SET domain-containing protein	27.03.1969	AT5G14260
+AT3G14110	FLU	Chloroplast FLU-like protein (Fragment)	19.4	AT3G14110
+AT3G62420	BZIP53	BZIP transcription factor (Fragment)	27.03.1935	AT3G62420
+AT3G09250	F3L24.12	3-dehydroquinate dehydratase	35.2	AT3G09250
+AT1G58290	HEMA1	Glutamyl-tRNA reductase	19.2	AT1G58290
+AT5G49720	KOR	Endo-1 4-beta-glucanase	10.06.2001	AT5G49720
+AT5G43400	T31B5_30	Genomic DNA chromosome 3 TAC clone K7P8	35.2	AT5G43400
+AT2G17390	AKR2B	Ankyrin repeat domain-containing protein 2	27.03.1999	AT2G17390
+AT3G51040	RTH	Transmembrane protein 222	35.2	AT3G51040
+AT5G44200	CBP20	Nuclear cap-binding protein subunit 2	27.01.2001	AT5G44200
+AT3G03100	T17B22.21	NADH ubiquinone oxidoreductase subunit	9.01.2002	AT3G03100
+AT2G01970	TMN3	Transmembrane 9 superfamily protein member 1	28.99	AT2G01970
+AT2G13540	ABH1	Nuclear cap-binding protein subunit 1	29.2.3	AT2G13540
+AT3G03050	CSLD3	Cellulose synthase-like protein	10.02.2001	AT3G03050
+AT4G27440	PORB	Protochlorophyllide reductase	19.14	AT4G27440
+AT1G48270	GCR1	Cyclic AMP receptor	30.5	AT1G48270
+AT3G60600	PVA11	Vesicle-associated membrane protein-associated protein A	20.1.2.2	AT3G60600
+AT1G13580	LAG13	LAG1 longevity assurance homolog 2	11.08.2001	AT1G13580
+AT3G16310	NUP35	Nucleoporin NUP53	35.1	AT3G16310
+AT1G34210	SERK2	G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080	20.01.2002	AT1G34210
+AT1G13560	AAPT1	CDP-alcohol phosphatidyltransferase	26.1	AT1G13560
+AT2G17200	DSK2B	Ubiquitin-like protein	29.5.11.1	AT2G17200
+AT1G04340	F19P19.23	Nicotiana lesion-inducing like	35.1	AT1G04340
+AT4G35230	BSK1	Receptor protein kinase-like protein	29.4.1.52	AT4G35230
+AT4G02550	T10P11.16	Genomic DNA chromosome 5 P1 clone MJJ3	35.2	AT4G02550
+AT3G01180	SS2	Glycogen synthase	2.1.2.2	AT3G01180
+AT4G09320	NDK1	Nucleoside diphosphate kinase	23.04.2010	AT4G09320
+AT1G70410	BCA4	Carbonic anhydrase	8.3	AT1G70410
+AT3G57150	CBF5	tRNA pseudouridine synthase B	35.1	AT3G57150
+AT4G38800	MTN1	5&apos-methylthioadenosine/S-adenosylhomocysteine nucleosidase	13.1.3.4	AT4G38800
+AT5G48150	PAT1	GRAS family transcription factor	27.03.2021	AT5G48150
+AT2G42910	PRS4	Ribose-phosphate pyrophosphokinase 4	23.01.2003	AT2G42910
+AT1G13440	GAPC2	Glyceraldehyde 3-phosphate dehydrogenase	4.03.2008	AT1G13440
+AT3G55270	MKP1	Dual specificity phosphatase 1	29.4	AT3G55270
+AT1G33810	-	Chromosome 06 contig 1 DNA sequence	35.2	AT1G33810
+AT1G20510	4CLL5	4-coumarate-coa ligase	16.2.1.3	AT1G20510
+AT5G47520	RABA5A	Ras-related protein Rab-25	30.5	AT5G47520
+AT3G57040	ARR9	Two-component response regulator ARR3	27.03.2005	AT3G57040
+AT2G44500	F17A17.24	Os03g0169000 protein (Fragment)	17.02.2003	AT2G44500
+AT4G16760	ACX1	Acyl-coenzyme A oxidase	11.9.4.2	AT4G16760
+AT3G07370	CHIP	U-box domain-containing protein	29.5.11.4.2	AT3G07370
+AT5G47840	AMK2	Adenylate kinase	23.04.2001	AT5G47840
+AT2G01830	AHK4	Histidine kinase 2	17.04.2002	AT2G01830
+AT5G22830	MRS2-11	Magnesium transporter MRS2-7	34.14	AT5G22830
+AT5G47120	BI-1	Bax inhibitor	31.05.2002	AT5G47120
+AT5G16710	DHAR3	Chloride intracellular channel 6	21.02.2001	AT5G16710
+AT1G20370	F14O10.3	tRNA pseudouridine synthase family protein	29.01.1930	AT1G20370
+AT5G13410	FKBP19	Peptidyl-prolyl cis-trans isomerase	29.6	AT5G13410
+AT1G27320	AHK3	Histidine kinase 3B	17.04.2002	AT1G27320
+AT2G43820	UGT74F2	UDP-glucose glucosyltransferase	26.2	AT2G43820
+AT1G10470	ARR4	Two-component response regulator ARR3	27.03.2005	AT1G10470
+AT2G43770	-	WD repeat-containing protein 5 homolog	33.99	AT2G43770
+AT4G23890	ndhS	Genome sequencing data contig C313	35.2	AT4G23890
+AT4G27490	RRP41L	Exosome complex exonuclease 1	29.1	AT4G27490
+AT3G61620	RRP41	Ribonuclease PH	28.99	AT3G61620
+AT3G60500	RRP45B	Exosome complex exonuclease RRP45	27.01.2019	AT3G60500
+AT3G25690	CHUP1	Chloroplast unusual positioning 1A	35.1.41	AT3G25690
+AT5G46570	BSK2	Receptor-like kinase	29.4.1.52	AT5G46570
+AT3G46210	RRP46	Polyribonucleotide nucleotidyltransferase	27.01.2019	AT3G46210
+AT3G07750	-	Exosome complex exonuclease rrp42	27.01.2019	AT3G07750
+AT1G20200	RPN3A	26S proteasome non-ATPase regulatory subunit 3	29.5.11.20	AT1G20200
+AT2G43320	-	UPF0558 protein C1orf156 homolog	29.2.2.3.3	AT2G43320
+AT5G46330	FLS2	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61490	30.2.12	AT5G46330
+AT1G60080	T2K10.14	3'-5'-exoribonuclease/RNA binding	27.01.2019	AT1G60080
+AT1G03360	RRP4	Exosome complex exonuclease RRP4	27.01.2019	AT1G03360
+AT5G46170	MCL19.23	F-box protein	29.5.11.4.3.2	AT5G46170
+AT1G59740	NPF4.3	Nitrate transporter	34.13	AT1G59740
+AT5G56750	NDL1	N-myc downstream regulated	34.23.1	AT5G56750
+AT3G01410	-	Phosphoglycerate mutase	27.01.2019	AT3G01410
+AT2G16880	F12A24.6	Pentatricopeptide repeat-containing protein	35.1.5	AT2G16880
+AT1G68540	TKPR2	Dihydroflavonol 4-reductase family	16.8.3.1	AT1G68540
+AT3G23600	-	Dienelactone hydrolase family protein	26.03.2005	AT3G23600
+AT2G24130	F27D4.4	G-type lectin S-receptor-like serine/threonine-protein kinase At1g11410	30.2.12	AT2G24130
+AT1G03250	-	R3H domain-containing protein C19orf22 homolog	35.2	AT1G03250
+AT2G42880	MPK20	Mitogen-activated protein kinase 20	29.4	AT2G42880
+AT5G45340	CYP707A3	Cytochrome P450	26.1	AT5G45340
+AT3G19860	BHLH121	Transcription factor (Fragment)	27.03.2006	AT3G19860
+AT1G33470	-	RNA-binding protein 68390-68829	27.4	AT1G33470
+AT3G02760	F13E7.30	Histidyl-tRNA synthetase	29.01.2021	AT3G02760
+AT2G42620	MAX2	SCF E3 ubiquitin ligase complex F-box protein grrA	29.5.11.4.3.2	AT2G42620
+AT1G33410	NUP160	Nuclear pore complex protein Nup160-like protein	35.2	AT1G33410
+AT3G48880	T21J18.150	F-box family protein	29.5.11.4.3.2	AT3G48880
+AT1G63110	AMT2	GPI-anchor transamidase component	31.2	AT1G63110
+AT2G28900	OEP161	Amino acid selective channel protein	29.3	AT2G28900
+AT3G15430	MJK13.9	Regulator of chromosome condensation (RCC1)-like protein	31.2	AT3G15430
+AT1G76920	SKIP15	F-box family protein	29.5.11.4.3.2	AT1G76920
+AT2G42500	PP2A4	Serine/threonine-protein phosphatase	29.4	AT2G42500
+AT1G67340	F1N21.16	F-box family protein	27.03.1999	AT1G67340
+AT5G13810	F24I3.150	Glutaredoxin family protein	21.4	AT5G13810
+AT5G10020	LRR-RLK	Receptor-like serine/threonine-protein kinase At1g78530	30.2.3	AT5G10020
+AT1G55610	BRL1	Receptor-like serine/threonine-protein kinase At1g78530	17.3.2.1	AT1G55610
+AT3G02530	CCT6A	T-complex protein 1 subunit zeta	29.6	AT3G02530
+AT2G38310	PYL4	Abscisic acid receptor PYL6	20.1	AT2G38310
+AT1G21760	SKIP32	F-box family protein	29.5.11.4.3.2	AT1G21760
+AT5G43810	AGO10	ARGONAUTE 1	27.03.1936	AT5G43810
+AT4G21670	CPL1	Double-stranded RNA binding protein	27.4	AT4G21670
+AT1G03140	F10O3.3	Pre-mRNA-splicing factor 18	27.01.2001	AT1G03140
+AT1G20110	FREE1	Vacuolar protein sorting-associated protein 27	27.03.1999	AT1G20110
+AT5G37670	HSP15.7	heat shock protein	20.02.2001	AT5G37670
+AT3G16950	LPD1	Dihydrolipoyl dehydrogenase	11.01.1931	AT3G16950
+AT5G32440	-	CUE domain containing protein	28.1	AT5G32440
+AT5G57870	EIF(ISO)4G1	Eukaryotic translation initiation factor 4G	29.2.3	AT5G57870
+AT5G43260	-	Drought-induced protein 1	29.6	AT5G43260
+AT3G46740	TOC75-3	Outer envelope membrane protein	29.03.2003	AT3G46740
+AT2G41870	AtREM4.2	Remorin	27.03.1967	AT2G41870
+AT5G19010	MPK16	Mitogen-activated protein kinase 16	29.4	AT5G19010
+AT1G72470	EXO70D1	Exocyst complex protein EXO70	31.4	AT1G72470
+AT1G03130	PSAD2	Photosystem I reaction center subunit II	1.1.2.2	AT1G03130
+AT3G18890	TIC62	NAD dependent epimerase/dehydratase family protein	30.11	AT3G18890
+AT2G41740	VLN2	Gelsolin	31.1	AT2G41740
+AT1G60950	FD2	Ferredoxin I	1.1.5.2	AT1G60950
+AT5G56940	-	30S ribosomal protein S16	29.2.1.1.3.1.16	AT5G56940
+AT3G22950	ARFC1	ADP-ribosylation factor C1	29.3.4.99	AT3G22950
+AT1G20020	LFNR2	Ferredoxin--NADP reductase	1.1.5.3	AT1G20020
+AT4G33000	CBL10	Calcineurin B-like protein 06	30.3	AT4G33000
+AT1G56450	PBG1	Proteasome subunit beta type	29.5.11.20	AT1G56450
+AT5G11680	T22P22_70	WW domain binding protein	35.2	AT5G11680
+AT4G14660	NRPE7	DNA-directed RNA polymerase II subunit	27.2	AT4G14660
+AT4G39850	ABCC1	Uncharacterized ABC transporter ATP-binding protein sll0182	34.16	AT4G39850
+AT3G57080	NRPE5A	DNA-directed RNA polymerases I	27.2	AT3G57080
+AT5G48760	RPL13AD	60S ribosomal protein L13a-like protein	29.2.1.2.2.513	AT5G48760
+AT4G25360	TBL18	Yellow-leaf-specific gene 7	33.99	AT4G25360
+AT3G22680	RDM1	Protein RDM1	35.2	AT3G22680
+AT2G41540	GPDHC1	Glycerol-3-phosphate dehydrogenase	11.05.2002	AT2G41540
+AT2G42520	RH37	ATP dependent RNA helicase	27.01.2002	AT2G42520
+AT4G01410	-	NHL1 (Fragment)	20.1	AT4G01410
+AT2G32980	AUG2	HAUS augmin-like complex subunit 2	35.2	AT2G32980
+AT3G10640	VPS60.1	Charged multivesicular body protein 5	27.03.1971	AT3G10640
+AT5G40890	CLC-A	Voltage-gated chloride channel	34.18	AT5G40890
+AT1G72370	RPSaA	40S ribosomal protein SA	29.2.1.2.1.31	AT1G72370
+AT1G53430	T3F20.25	Leucine-rich repeat family protein / protein kinase family protein	30.2.8.2	AT1G53430
+AT5G44710	-	Genomic DNA chromosome 5 TAC clone K23L20	29.2.1.1.2.1.27	AT5G44710
+AT1G03070	AtLFG4	Transmembrane BAX inhibitor motif-containing protein 4	35.1	AT1G03070
+AT1G13260	RAV1	Ethylene-responsive transcription factor 4	27.03.2003	AT1G13260
+AT1G13195	F3F19.22	Zinc finger family protein	29.5.11.4.2	AT1G13195
+AT1G72320	APUM23	Pumilio domain-containing protein C14orf21	35.1.12	AT1G72320
+AT3G17020	-	Universal stress protein	20	AT3G17020
+AT3G27090	-	N-rich protein (Fragment)	31.5	AT3G27090
+AT5G15330	SPX4	SPX domain-containing protein	20.02.2003	AT5G15330
+AT5G11980	-	Conserved oligomeric Golgi complex subunit 8	3.5	AT5G11980
+AT4G02590	UNE12	BHLH transcription factor	27.03.2006	AT4G02590
+AT5G26710	F21E10.12	Glutaminyl-tRNA synthetase	29.01.2017	AT5G26710
+AT2G16595	F26H11.8	Translocon-associated protein, alpha subunit	35.1	AT2G16595
+AT3G63130	RANGAP1	Ran GTPase-activating protein 1	30.5	AT3G63130
+AT3G01435	MED11	Unknown Protein	35.2	AT3G01435
+AT1G13160	-	SDA1 family protein	35.1.3	AT1G13160
+AT5G38520	-	Alpha/beta hydrolase fold	26.03.2005	AT5G38520
+AT1G73590	PIN1	Auxin efflux carrier	17.02.2002	AT1G73590
+AT5G37020	ARF8	Auxin response factor 8	27.03.2004	AT5G37020
+AT5G14050	MUA22.5	U3 small nucleolar RNA-associated protein 18	29.2.2.3.4	AT5G14050
+AT1G73730	EIL3	Ethylene insensitive 3 class transcription factor	27.03.2019	AT1G73730
+AT5G18400	AtDRE2	Anamorsin homolog	35.2	AT5G18400
+AT5G10360	RPS6B	Ribosomal protein S6	29.2.1.2.1.6	AT5G10360
+AT3G02280	ATR3	NADPH-cytochrome P450 reductase	19.99	AT3G02280
+AT5G42190	SKP1B	S-phase kinase associated protein 1-like protein	29.5.11.4.3.1	AT5G42190
+AT2G06050	OPR3	12-oxophytodienoate reductase 3	17.7.1.5	AT2G06050
+AT4G36960	C7A10.400	RNA-binding like protein	27.4	AT4G36960
+AT2G15480	UGT73B5	UDP glucosyltransferase	26.2	AT2G15480
+AT1G75950	SKP1A	SKP1	29.5.11.4.3.1	AT1G75950
+AT3G48750	CDKA-1	Cyclin dependent kinase A	31.3	AT3G48750
+AT5G35180	-	Os10g0479800 protein (Fragment)	20.01.2002	AT5G35180
+AT5G06550	JMJ22	Bifunctional arginine demethylase and lysyl-hydroxylase JMJD6	27.03.1957	AT5G06550
+AT3G54170	FIP37	Pre-mRNA-splicing regulator WTAP	31.1	AT3G54170
+AT1G56110	NOP56	Nucleolar protein	27.03.1967	AT1G56110
+AT1G12950	DTX31	Multidrug resistance protein mdtK	34.99	AT1G12950
+AT5G42470	-	BRCA1-A complex subunit BRE	35.1	AT5G42470
+AT3G58750	CSY2	Citrate synthase	6.1	AT3G58750
+AT2G41680	NTRC	Thioredoxin reductase	21.1	AT2G41680
+AT4G36680	AP22.65	Pentatricopeptide repeat-containing protein	35.1.27	AT4G36680
+AT1G02870	-	Nucleolar protein (NOP16) involved in 60S ribosomal subunit biogenesis (ISS)	35.2	AT1G02870
+AT1G02860	BAH1	RING-finger-containing E3 ubiquitin ligase	29.5.11.4.2	AT1G02860
+AT5G26340	STP13	Solute carrier family 2, facilitated glucose transporter member 3	34.2	AT5G26340
+AT2G39980	F7J8_190	Hydroxycinnamoyl transferase	16	AT2G39980
+AT4G34740	ASE2	Amidophosphoribosyltransferase	23.1.2.1	AT4G34740
+AT4G33430	BAK1	Receptor-like serine/threonine-protein kinase At1g78530	20.01.2002	AT4G33430
+AT2G39800	P5CSA	Delta 1-pyrroline-5-carboxylate synthetase	13.1.2.2.1	AT2G39800
+AT4G28200	-	U3 small nucleolar RNA-associated protein 6	35.2	AT4G28200
+AT3G61860	RS31	Arginine/serine-rich splicing factor	27.01.2001	AT3G61860
+AT2G28000	CPN60A1	chaperonin 2	29.6	AT2G28000
+AT4G34660	SH3P2	Rho guanine nucleotide exchange factor 6	31.4	AT4G34660
+AT2G38140	RPS31	30S ribosomal protein S31, chloroplastic	29.2.1.1.1.1.31	AT2G38140
+AT3G13110	SAT3	Serine acetyltransferase	13.1.5.3.2	AT3G13110
+AT2G39630	-	Undecaprenyl-phosphate 4-deoxy-4-formamido-L-arabinose transferase	26.2	AT2G39630
+AT1G55900	TIM50	Import inner membrane translocase subunit TIM50	34.9	AT1G55900
+AT2G39450	MTP11	Cation diffusion facilitator 9	34.12	AT2G39450
+AT1G02840	SR34	Arginine/serine-rich splicing factor	27.01.2001	AT1G02840
+AT1G55880	-	Cysteine synthase	13.1.5.3.1	AT1G55880
+AT1G79070	-	Unknown Protein	31.4	AT1G79070
+AT1G12840	VHA-C	V-type proton ATPase subunit C	34.1	AT1G12840
+AT1G15520	ABCG40	ATP-binding cassette transporter	34.16	AT1G15520
+AT4G02400	T14P8.20	U3 small nucleolar RNA-associated protein	27.01.2001	AT4G02400
+AT4G00620	FOLD4	FolD bifunctional protein	25.5	AT4G00620
+AT5G51110	pdl1	Pterin-4-alpha-carbinolamine dehydratase	35.1	AT5G51110
+AT1G55740	RFS1	Alkaline alpha galactosidase I	3.1.2.2	AT1G55740
+AT5G45030	-	Peptidase trypsin-like serine and cysteine proteases (Fragment)	35.2	AT5G45030
+AT1G19580	GAMMACA1	2,3,4,5-tetrahydropyridine-2,6-dicarboxylate N-acetyltransferase	9.1.1.5	AT1G19580
+AT1G55520	TBP2	TATA-box binding protein	27.2	AT1G55520
+AT5G20720	CPN21	chaperonin	29.6	AT5G20720
+AT2G41720	EMB2654	Pentatricopeptide repeat-containing protein	33.99	AT2G41720
+AT5G23870	PAE9	Pectinacetylesterase	10.08.2002	AT5G23870
+AT5G09250	KIWI	Activated RNA polymerase II transcriptional coactivator p15	27.03.1950	AT5G09250
+AT4G30220	RUXF	Small nuclear ribonucleoprotein F	27.4	AT4G30220
+AT5G16150	PGLCT	Solute carrier family 2, facilitated glucose transporter member 3	34.2	AT5G16150
+AT2G15430	NRPB3	DNA-directed RNA polymerase II subunit 3	27.2	AT2G15430
+AT4G29160	VPS32.2	Charged multivesicular body protein 4b	27.03.1971	AT4G29160
+AT3G52090	NRPB11	DNA-directed RNA polymerase II subunit J	27.2	AT3G52090
+AT4G25660	L73G19.40	PPPDE peptidase domain-containing protein 1	35.2	AT4G25660
+AT2G16390	DRD1	Chromodomain-helicase-DNA-binding protein 8	28.2	AT2G16390
+AT2G38170	CAX1	Vacuolar cation/proton exchanger 2	34.14	AT2G38170
+AT3G55010	PUR5	Phosphoribosylformylglycinamidine cyclo-ligase	23.1.2.5	AT3G55010
+AT4G16444	-	Conserved gene of unknown function	35.2	AT4G16444
+AT5G23290	PFD5	Prefoldin subunit 5	27.03.1999	AT5G23290
+AT4G04020	PAP1	Plastid-lipid-associated protein, chloroplastic	31.1	AT4G04020
+AT1G12680	PEPKR2	Calcium-dependent protein kinase	4.01.2016	AT1G12680
+AT3G51010	F24M12.50	Unknown Protein	35.2	AT3G51010
+AT5G23080	TGH	G patch domain-containing protein 1-like protein	27.1	AT5G23080
+AT5G23250	MKD15.11	Succinyl-CoA ligase	8.01.2006	AT5G23250
+AT3G54230	SUA	RNA-binding protein 5	27.4	AT3G54230
+AT4G27410	NAC072	NAC domain protein IPR003441	27.03.2027	AT4G27410
+AT2G37940	IPCS2	Phosphatidylcholine:ceramide cholinephosphotransferase 1	26.13	AT2G37940
+AT5G23090	DR1	Nuclear transcription factor Y subunit B-1	27.03.2013	AT5G23090
+AT2G27710	RPP2B	60S acidic ribosomal protein	29.2.1.2.2.82	AT2G27710
+AT1G12650	-	Testis intracellular mediator protein	35.1	AT1G12650
+AT4G19640	RABF2B	Ras-related protein Rab-5C	30.5	AT4G19640
+AT3G23830	RBG4	RNA binding protein-like protein	27.4	AT3G23830
+AT2G27600	SKD1	ATP-dependent zinc metalloprotease FtsH 1	29.3.4.3	AT2G27600
+AT3G23620	MDB19.11	Brix domain containing protein	29.2.2.50	AT3G23620
+AT2G41350	AUG1	HAUS augmin-like complex subunit 1	27.03.1967	AT2G41350
+AT2G15240	-	Conserved gene of unknown function	35.1	AT2G15240
+AT2G31410	-	Unknown Protein	35.2	AT2G31410
+AT3G04720	HEL	Chitinase (Fragment)	20.01.2007	AT3G04720
+AT3G18600	RH51	ATP-dependent RNA helicase	29.2.2.3.5	AT3G18600
+AT5G14140	C2H2	Zinc finger protein 511	27.03.2011	AT5G14140
+AT1G71860	PTP1	Protein tyrosine phosphatase non-receptor type 6	29.4	AT1G71860
+AT1G34430	EMB3003	Dihydrolipoyllysine-residue acetyltransferase component of pyruvate dehydrogenase complex	8.1.1.2	AT1G34430
+AT3G01910	SOX	Sulfite oxidase-like	14.5	AT3G01910
+AT3G54840	RABF1	Ras-related protein Rab-5C	30.5	AT3G54840
+AT5G21090	-	Leucine-rich repeat receptor-like kinase	30.2	AT5G21090
+AT5G45600	TAF14B	YEATS domain-containing protein	27.03.1951	AT5G45600
+AT2G36880	METK3	S-adenosylmethionine synthase	13.1.3.4.11	AT2G36880
+AT2G36840	ACR10	Amino acid binding protein	35.1	AT2G36840
+AT1G55020	LOX1	Lipoxygenase	17.7.1.2	AT1G55020
+AT5G35410	CIPK24	CBL-interacting protein kinase 09	29.04.2001	AT5G35410
+AT4G32410	CESA1	Cellulose synthase	10.02.2001	AT4G32410
+AT5G25150	TAF5	Transcription initiation factor TFIID subunit 5	27.03.1951	AT5G25150
+AT1G71697	CK1	Choline/ethanolamine kinase	11.03.2002	AT1G71697
+AT4G18710	ASK7	Glycogen synthase kinase	29.04.2001	AT4G18710
+AT5G20250	RFS6	Hydrolase, hydrolyzing O-glycosyl compounds	3.1.2.2	AT5G20250
+AT5G20280	SPS1	Sucrose-phosphate-synthase	2.1.1.1	AT5G20280
+AT4G31720	TAF10	Transcription initiation factor TFIID subunit 10	27.2	AT4G31720
+AT4G04950	GRXS17	Thioredoxin family protein	21.1	AT4G04950
+AT1G75080	BZR1	Mature anther-specific protein LAT61	17.3.2.2	AT1G75080
+AT4G30960	CIPK6	CBL-interacting protein kinase 9	29.4	AT4G30960
+AT5G10730	-	NAD-binding domain 4	35.1	AT5G10730
+AT4G20280	TAF11	Transcription initiation factor TFIID subunit 11	27.2	AT4G20280
+AT4G14340	CKI1	Serine/threonine kinase	29.04.2001	AT4G14340
+AT5G19440	-	Cinnamoyl CoA reductase-like protein	16.8.3.1	AT5G19440
+AT4G08980	FBW2	F-box protein-like	29.5.11.4.3.2	AT4G08980
+AT4G38150	F20D10.270	Pentatricopeptide repeat-containing protein	35.1.5	AT4G38150
+AT4G27960	UBC9	Ubiquitin-conjugating enzyme	29.5.11.3	AT4G27960
+AT5G44030	CESA4	Cellulose synthase	30.2.12	AT5G44030
+AT5G19140	AILP1	Asparagine synthetase B	15	AT5G19140
+AT5G10695	-	Unknown Protein	35.2	AT5G10695
+AT2G34690	ACD11	Glycolipid transfer protein domain-containing protein 1	31.05.2001	AT2G34690
+AT4G34050	CCOAOMT1	Caffeoyl-CoA O-methyltransferase	29.2.2.3.3	AT4G34050
+AT1G32470	GDH3	Glycine cleavage system H protein 1	1.2.4.4	AT1G32470
+AT2G30880	SWAP70	PH domain containing protein	35.1	AT2G30880
+AT1G32450	NPF7.3	Peptide transporter	34.13	AT1G32450
+AT2G21280	GC1	NAD-dependent epimerase/dehydratase family	31.2.5	AT2G21280
+AT3G19450	CAD4	Cinnamyl alcohol dehydrogenase	16.2.1.10	AT3G19450
+AT1G54610	T22H22.5	Cyclin-dependent protein kinase-like	29.04.2001	AT1G54610
+AT5G18670	BAM9	Beta-amylase	2.2.2.1.2	AT5G18670
+AT1G34300	F23M19.5	Receptor-like protein kinase	30.2.24	AT1G34300
+AT2G41700	ABCA1	ATP-binding cassette 1	34.16	AT2G41700
+AT1G10210	MPK1	Mitogen-activated protein kinase 9	29.4	AT1G10210
+AT1G61820	BGLU46	Beta-glucosidase	26.3	AT1G61820
+AT1G02680	TAF13	Transcription initiation factor TFIID subunit	27	AT1G02680
+AT5G58230	MSI1	Histone-binding protein RBBP7	33.99	AT5G58230
+AT2G19385	-	Cell growth-regulating nucleolar protein	27.03.2011	AT2G19385
+AT2G12550	NUB1	NEDD8 ultimate buster 1	29.05.2011	AT2G12550
+AT3G20740	FIE	Fertilization-independent endosperm protein	27.03.1965	AT3G20740
+AT2G23380	CLF	EZ2	27.03.1969	AT2G23380
+AT1G32350	AOX3	Alternative oxidase	35.2	AT1G32350
+AT5G18100	CSD3	Superoxide dismutase [Cu-Zn]	21.6	AT5G18100
+AT1G55000	F14C21.53	LysM domain containing protein	29.5.11.4.3.2	AT1G55000
+AT2G34770	FAH1	Fatty acid hydroxylase family protein expressed	11.02.2002	AT2G34770
+AT2G26150	HSFA2	Heat stress transcription factor A3	20.02.2001	AT2G26150
+AT2G31955	CNX2	Molybdenum cofactor biosynthesis protein A	18.6	AT2G31955
+AT1G12520	CCS	Cu/Zn-superoxide dismutase copper chaperone	15.2	AT1G12520
+AT4G37770	ACS8	1-aminocyclopropane-1-carboxylate synthase	17.5.1.1	AT4G37770
+AT1G71270	VPS52	Vacuolar protein sorting 52	31.4	AT1G71270
+AT3G14080	LSM1B	U6 snRNA-associated Sm-like protein LSm1	27.1	AT3G14080
+AT3G11830	CCT7	T-complex protein eta subunit	29.6	AT3G11830
+AT4G11280	ACS6	1-aminocyclopropane-1-carboxylate synthase	17.5.1.1	AT4G11280
+AT3G61510	ACS1	1-aminocyclopropane-1-carboxylate synthase	17.5.1.1	AT3G61510
+AT1G71260	WHY2	Why2 protein	27.03.1982	AT1G71260
+AT5G46210	CUL4	Cullin 4	29.5.11.4.3.3	AT5G46210
+AT2G34480	RPL18AB	60S ribosomal protein L18a	29.2.1.2.2.518	AT2G34480
+AT5G45110	NPR3	NPR1-2 protein (Fragment)	27.03.1961	AT5G45110
+AT5G54680	ILR3	Transcription factor (Fragment)	27.03.2006	AT5G54680
+AT5G25080	-	NAC domain protein IPR003441	35.2	AT5G25080
+AT5G20570	RBX1A	RING-box protein	29.5.11.4.2	AT5G20570
+AT5G06950	TGA2	BZIP transcription factor	27.03.1935	AT5G06950
+AT3G01390	VHA-G1	V-type proton ATPase subunit G 1	34.1	AT3G01390
+AT2G27040	AGO4	Argonaute 4-like protein	27.03.1936	AT2G27040
+AT1G64280	NPR1	NPR1 protein (Fragment)	27.03.1961	AT1G64280
+AT1G21780	F8K7.22	BTB/POZ domain-containing protein	29.5.11.4.5.2	AT1G21780
+AT5G48570	FKBP65	Peptidyl-prolyl cis-trans isomerase	31.03.2001	AT5G48570
+AT2G27080	-	Harpin-induced protein-like (Fragment)	17.08.2003	AT2G27080
+AT1G12370	PHR1	Deoxyribodipyrimidine photo-lyase	28.2	AT1G12370
+AT3G53030	SRPK4	Serine/threonine protein kinase	29.04.2001	AT3G53030
+AT5G53160	PYL8	Abscisic acid receptor PYL8	35.2	AT5G53160
+AT1G54490	XRN4	5&apos-3&apos exoribonuclease 4	27.01.2019	AT1G54490
+AT3G02090	MPPBETA	Mitochondrial processing peptidase beta subunit	29.03.2002	AT3G02090
+AT4G16780	HAT4	Homeobox-leucine zipper protein	27.03.2022	AT4G16780
+AT3G52300	ATPQ	Mitochondrial F0 ATP synthase D chain	9.9	AT3G52300
+AT1G12310	CML13	Calmodulin	29.4	AT1G12310
+AT2G32950	COP1	Ubiquitin ligase protein COP1	33.99	AT2G32950
+AT2G18790	PHYB	Phytochrome B	30.11	AT2G18790
+AT4G21470	FHY	Riboflavin kinase	18.3	AT4G21470
+AT5G14880	POT8	Potassium transporter	34.15	AT5G14880
+AT5G14760	AO	L-aspartate oxidase	13.2.1.2	AT5G14760
+AT1G09570	PHYA	Phytochrome A	30.11	AT1G09570
+AT2G33150	PED1	3-ketoacyl CoA thiolase 2	13.02.2004	AT2G33150
+AT2G35530	BZIP16	BZIP transcription factor 3	27.03.1935	AT2G35530
+AT2G07050	CAS1	Cycloartenol synthase	16.01.2005	AT2G07050
+AT2G42490	-	Primary amine oxidase	26.7	AT2G42490
+AT2G32560	T26B15.12	F-box family protein	29.5.11.4.3.2	AT2G32560
+AT5G54190	PORA	Protochlorophyllide reductase	19.14	AT5G54190
+AT5G14420	RGLG2	Copine-like protein	29.5.11.4.2	AT5G14420
+AT5G35620	EIF(ISO)4E	Eukaryotic translation initiation factor 4E-2	29.2.3	AT5G35620
+AT4G34460	GB1	Guanine nucleotide-binding protein beta subunit	30.5	AT4G34460
+AT5G35100	CYP28	Peptidyl-prolyl cis-trans isomerase	31.03.2001	AT5G35100
+AT3G19820	DIM	FAD binding domain-containing protein	17.3.1.2.8	AT3G19820
+AT4G02510	TOC159	Translocase of chloroplast 34	20.01.2003	AT4G02510
+AT2G06990	HEN2	ATP-dependent RNA helicase DOB1	29.2.2.3.5	AT2G06990
+AT2G32150	-	Pyrimidine 5&apos-nucleotidase	35.1	AT2G32150
+AT5G13160	PBS1	G-type lectin S-receptor-like serine/threonine-protein kinase At1g11330	29.4.1.57	AT5G13160
+AT3G62980	TIR1	Auxin signaling F-box 1 (Fragment)	17.02.2002	AT3G62980
+AT1G31970	RH5	ATP dependent RNA helicase	29.2.2.3.5	AT1G31970
+AT3G15730	PLDALPHA1	Phospholipase D	11.9.3.1	AT3G15730
+AT1G35670	CPK11	Calcium dependent protein kinase	30.3	AT1G35670
+AT1G06950	TIC110	Tic110 family transporter chloroplast inner envelope protein Tic110	29.03.2003	AT1G06950
+AT1G31930	XLG3	Guanine nucleotide-binding protein alpha-1 subunit	30.5	AT1G31930
+AT5G10870	CM2	Chorismate mutase 2	13.1.6.2.1	AT5G10870
+AT1G54290	F20D21.53	Translation initiation factor SUI1	29.2.3	AT1G54290
+AT3G12500	CHI-B	Endochitinase 4	20.1.7.3	AT3G12500
+AT3G29200	CM1	Chorismate mutase 1	13.1.6.2.1	AT3G29200
+AT5G23120	HCF136	Ycf48-like protein	1.1.1.3	AT5G23120
+AT1G02205	CER1	CER1	16.7	AT1G02205
+AT2G40540	POT2	KUP2	34.15	AT2G40540
+AT1G71140	DTX14	TRANSPARENT TESTA 12 protein	34.99	AT1G71140
+AT5G56290	PEX5	Peroxisomal targeting signal 1 receptor	29.03.2005	AT5G56290
+AT3G28715	VHA-d2	V-type proton ATPase subunit d	34.1.1	AT3G28715
+AT4G35600	CONNEXIN32	G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080	29.4.1.57	AT4G35600
+AT1G25510	F2J7.6	Aspartic proteinase nepenthesin I	29.05.2004	AT1G25510
+AT3G01280	VDAC1	Porin/voltage-dependent anion-selective channel protein	34.2	AT3G01280
+AT3G16840	RH13	ATP-dependent RNA helicase	29.2.2.3.5	AT3G16840
+AT4G25200	HSP23.6	Heat shock protein 22	20.02.2001	AT4G25200
+AT1G12110	NPF6.3	Nitrate transporter	34.4	AT1G12110
+AT3G11400	EIF3G1	Eukaryotic translation initiation factor 3 subunit G	29.2.3	AT3G11400
+AT5G13280	AK1	Aspartokinase	13.1.3.6.1.1	AT5G13280
+AT1G51510	Y14	Polyadenylate-binding protein	27.4	AT1G51510
+AT5G13180	NAC083	NAC domain protein	27.03.2027	AT5G13180
+AT1G11400	PYM	Partner of Y14 and mago	35.2	AT1G11400
+AT5G02500	MED37E	Heat shock cognate 70 kDa protein 1	20.02.2001	AT5G02500
+AT1G02140	MAGO	Mago nashi-like protein 2	33.99	AT1G02140
+AT1G71020	PUB10	U-box domain-containing protein 10	29.5.11.4.2	AT1G71020
+AT2G30980	ASK6	Glycogen synthase kinase	29.04.2001	AT2G30980
+AT5G56280	CSN6A	COP9 signalosome subunit 6	30.11.2001	AT5G56280
+AT5G42970	CSN4	COP9 signalosome complex subunit 4	30.11.2001	AT5G42970
+AT3G27430	PBB1	Proteasome subunit beta type	29.5.11.20	AT3G27430
+AT2G26350	PEX10	Peroxisome biogenesis factor 10	29.5.11.4.2	AT2G26350
+AT2G05840	PAA2	Proteasome subunit alpha type	29.5.11.20	AT2G05840
+AT5G25780	EIF3B-2	Eukaryotic translation initiation factor 3 subunit B	29.2.3	AT5G25780
+AT5G14250	CSN3	COP9 signalosome complex subunit 3	30.11.2001	AT5G14250
+AT3G19640	MRS2-3	Magnesium transporter MRS2-3	34.14	AT3G19640
+AT4G14110	CSN8	COP9 signalosome complex subunit 8	30.11.2001	AT4G14110
+AT5G12170	CLT3	Crt homolog 1	35.2	AT5G12170
+AT3G61140	CSN1	COP9 signalosome complex subunit 1	30.11.2001	AT3G61140
+AT3G57290	TIF3E1	Eukaryotic translation initiation factor 3 subunit 6	29.2.3	AT3G57290
+AT3G56150	TIF3C1	Eukaryotic translation initiation factor 3 subunit 8-like protein	29.2.3	AT3G56150
+AT5G58430	EXO70B1	Exocyst complex protein EXO70	31.4	AT5G58430
+AT1G10840	TIF3H1	Eukaryotic translation initiation factor 3 subunit 3	29.2.3	AT1G10840
+AT1G18740	F6A14.15	Exocyst subunit Exo70-interacting protein Roh1 (Fragment)	35.2	AT1G18740
+AT2G30360	CIPK11	CBL-interacting protein kinase 16	29.4	AT2G30360
+AT1G02090	CSN7	COP9 signalosome complex subunit 7	30.11.2001	AT1G02090
+AT4G17770	TPS5	Alpha,alpha-trehalose-phosphate synthase [UDP-forming] 5	3.02.2003	AT4G17770
+AT5G11950	LOG8	"Cytokinin riboside 5&apos;-monophosphate phosphoribohydrolase LOG"	13.2.3.5.1	AT5G11950
+AT3G05010	Cand2	Transmembrane protein adipocyte-associated 1 homolog	30.5	AT3G05010
+AT3G24315	AtSec20	Sec20 family protein	29.3.4.2	AT3G24315
+AT1G19310	-	RING finger protein 5	29.5.11.4.2	AT1G19310
+AT5G53470	ACBP1	Acyl-CoA-binding domain-containing protein 6	11.01.2013	AT5G53470
+AT2G26210	-	Ankyrin repeat family protein	31.1	AT2G26210
+AT5G52240	MSBP1	Membrane-associated progesterone receptor component 2	21.2	AT5G52240
+AT5G43900	XI-2	Myosin XI-2	31.1	AT5G43900
+AT5G55970	-	RING finger family protein	29.5.11.4.2	AT5G55970
+AT4G32175	-	Exosome complex exonuclease RRP40	28.99	AT4G32175
+AT5G05670	-	Signal recognition particle receptor subunit beta	29.3.4.99	AT5G05670
+AT5G10920	T30N20.190	Argininosuccinate lyase	13.1.2.3.23	AT5G10920
+AT3G63000	NPL41	Nuclear protein localization 4	35.1	AT3G63000
+AT2G28840	XBAT31	Ankyrin repeat-rich protein	31.1	AT2G28840
+AT3G58170	BET11	BET1	29.3.4.2	AT3G58170
+AT2G28800	ALB3	Inner membrane protein oxaA	35.1	AT2G28800
+AT1G67720	F12A21.30	G-type lectin S-receptor-like serine/threonine-protein kinase At5g24080	30.2.1	AT1G67720
+AT2G37190	RPL12A	60S ribosomal protein L12	29.2.1.2.2.12	AT2G37190
+AT3G51390	PAT10	Palmitoyltransferase	26.32	AT3G51390
+AT4G19810	ChiC	Chitinase-like protein	20.1.7.3	AT4G19810
+AT5G20510	AL5	PHD finger family protein	27.03.2002	AT5G20510
+AT1G18660	-	LON peptidase N-terminal domain and ring finger 2	29.5.11.4.2	AT1G18660
+AT4G07990	F1K3.7	Chaperone protein dnaJ	20.02.2001	AT4G07990
+AT5G10100	TPPI	Trehalose-6-phosphate phosphatase-like protein	3.02.2002	AT5G10100
+AT4G00585	-	Unknown Protein	35.2	AT4G00585
+AT3G44280	T10D17_70	Unknown Protein	35.1	AT3G44280
+AT3G25220	FKBP15-1	Fk506-binding protein	31.03.2001	AT3G25220
+AT5G09810	ACT7	Actin	31.1	AT5G09810
+AT2G30490	CYP73A5	Cytochrome P450 cinnamate 4-hydroxylase	16.2.1.2	AT2G30490
+AT3G28580	MZN14.5	AAA ATPase	29.05.2009	AT3G28580
+AT2G20000	CDC27B	Cell division cycle protein 27/anaphase promoting complex subunit 3	31.2	AT2G20000
+AT5G08640	FLS1	Anthocyanidin synthase	16.8.4.1	AT5G08640
+AT1G75750	GASA1	Gibberellin-regulated protein 2	17.06.2003	AT1G75750
+AT2G18290	APC10	Anaphase-promoting complex subunit 10 family	31.2	AT2G18290
+AT5G08530	CI51	NADH oxidoreductase F subunit	9.01.2002	AT5G08530
+AT5G20520	WAV2	Abhydrolase domain-containing protein 13	33.99	AT5G20520
+AT1G71950	F17M19.10	Subtilase family protein	20.1.7.6	AT1G71950
+AT3G23990	CPN60	chaperonin	29.6	AT3G23990
+AT3G08690	UBC11	Ubiquitin conjugating enzyme	29.5.11.3	AT3G08690
+AT1G01910	-	Arsenite-transporting ATPase	34.18.1	AT1G01910
+AT5G25930	LRR-RLK	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61500	30.2.11	AT5G25930
+AT5G22250	CAF1-11	CCR4-NOT transcription complex subunit 7	27.01.2019	AT5G22250
+AT2G27690	CYP94C1	Cytochrome P450	26.1	AT2G27690
+AT5G52650	RPS10C	40S ribosomal protein S10-like	29.2.1.2.1.10	AT5G52650
+AT4G39980	DHS1	Phospho-2-dehydro-3-deoxyheptonate aldolase 1	13.1.6.1.1	AT4G39980
+AT1G53730	SRF6	Receptor protein kinase-like protein	30.2.5	AT1G53730
+AT4G34150	SRC2	Elicitor-responsive protein 3	30.3	AT4G34150
+AT4G33050	IQM1	Calmodulin-binding protein	30.3	AT4G33050
+AT2G40700	RH17	Dead box ATP-dependent RNA helicase	27.01.2002	AT2G40700
+AT5G04430	BTR1	Poly(RC) binding protein 3	27.4	AT5G04430
+AT1G53750	RPT1A	26S protease regulatory subunit 7	29.5.11.20	AT1G53750
+AT5G15880	F1N13_20	Unknown Protein	35.2	AT5G15880
+AT5G54940	F20D21.11	Translation initiation factor SUI1	29.2.3	AT5G54940
+AT3G62260	T17J13.220	Serine/threonine phosphatase family protein	29.4	AT3G62260
+AT2G40650	PRP38	Pre-mRNA-splicing factor 38A	27.1	AT2G40650
+AT3G57530	CPK32	Calcium-dependent protein kinase 4	30.3	AT3G57530
+AT2G47490	NDT1	Mitochondrial carrier like protein	34.9	AT2G47490
+AT4G13510	AMT1-1	Ammonium transporter	34.5	AT4G13510
+AT3G47780	ABCA7	ATP-binding cassette (ABC) transporter 17	34.16	AT3G47780
+AT5G54770	THI1	Thiazole biosynthetic enzyme	18.2	AT5G54770
+AT3G50930	HSR4	ATP-dependent zinc metalloprotease FtsH 2	29.05.2009	AT3G50930
+AT5G53530	VPS26A	Vacuolar protein sorting-associated protein 26-like protein	29.3.4.3	AT5G53530
+AT3G11410	PP2CA	Integrin-linked kinase-associated serine/threonine phosphatase 2C	17.01.2002	AT3G11410
+AT4G35800	NRPB1	DNA-directed RNA polymerase	27.2	AT4G35800
+AT3G02800	PFA-DSP3	Protein tyrosine phosphatase	29.4	AT3G02800
+AT3G44260	CAF1-9	CCR4-NOT transcription complex subunit 7	27.01.2019	AT3G44260
+AT2G47580	U1A	U1 small nuclear ribonucleoprotein A	27.01.2001	AT2G47580
+AT3G28340	GATL10	Glycosyltransferase	26.2	AT3G28340
+AT3G54900	GRXS14	Glutaredoxin-like protein 4	21.4	AT3G54900
+AT3G25600	CML16	Calmodulin	30.3	AT3G25600
+AT2G33700	PP2CG1	Serine/threonine phosphatase family protein	29.4	AT2G33700
+AT2G20560	F20O9.160	Chaperone protein dnaJ 3	20.02.2001	AT2G20560
+AT1G70590	F24J13.16	Sel1 domain protein repeat-containing protein	29.5.11.4.3.2	AT1G70590
+AT5G05690	CYP90A1	Cytochrome P450	26.1	AT5G05690
+AT2G01210	ZAR1	Receptor-like serine/threonine-protein kinase At1g78530	30.2.3	AT2G01210
+AT5G05600	JRG21	1-aminocyclopropane-1-carboxylate oxidase 1	16.08.2001	AT5G05600
+AT1G01720	NAC002	NAC domain protein	27.03.2027	AT1G01720
+AT3G09830	PCRK1	ATP binding / serine-threonine kinase	29.4.1.57	AT3G09830
+AT3G51300	ARAC11	Ras-like GTP-binding protein RHO	30.5	AT3G51300
+AT3G53610	RABE1A	Ras-related protein Rab-8A	30.5	AT3G53610
+AT4G02570	CUL1	Ubiquitin-protein ligase Cullin 4	29.5.11.4.3.3	AT4G02570
+AT2G41640	T32G6.16	Glycosyltransferase	35.2	AT2G41640
+AT3G52560	UEV1D	Ubiquitin-conjugating enzyme family protein-like	29.5.11.3	AT3G52560
+AT2G40270	T3G21	Receptor-like protein kinase	30.2.6	AT2G40270
+AT1G26830	CUL3A	Ubiquitin-protein ligase cullin 4	29.5.11.4.5.1	AT1G26830
+AT2G40360	AtPEIP1	Ribosome biogenesis protein BOP1	29.2.2.3.4	AT2G40360
+AT2G32030	-	Acetyltransferase GNAT family protein expressed	26.24	AT2G32030
+AT2G23810	TET8	Senescence-associated protein	33.99	AT2G23810
+AT4G21570	F18E5.190	Transmembrane protein 34	35.2	AT4G21570
+AT2G40290	EIF2 ALPHA	Eukaryotic translation initiation factor 2 alpha subunit family protein expressed	29.2.3	AT2G40290
+AT3G54850	PUB14	U-box domain-containing protein 14	29.5.11.4.2	AT3G54850
+AT2G23790	F27L4.3	Coiled-coil domain-containing protein 109A	35.2	AT2G23790
+AT1G75020	LPAT4	1-acyl-sn-glycerol-3-phosphate acyltransferase 4	11.03.2001	AT1G75020
+AT5G35460	-	Uncharacterized membrane protein YGR149W	35.2	AT5G35460
+AT1G53300	TTL1	DnaJ homolog subfamily C member 7	21.1	AT1G53300
+AT5G27490	-	Yip1 domain-containing protein	35.1	AT5G27490
+AT5G19570	-	Novel protein similar to H.sapiens C1orf91 chromosome 1 open reading frame 91 (C1orf91)	35.2	AT5G19570
+AT5G16530	PIN5	Auxin Efflux Carrier	17.02.2002	AT5G16530
+AT1G11910	APA1	Aspartic proteinase	29.05.2004	AT1G11910
+AT5G51700	RAR1	Cysteine and histidine-rich domain-containing protein 1	20.01.2007	AT5G51700
+AT5G03370	F12E4_110	Acylphosphatase	35.1	AT5G03370
+AT1G29340	PUB17	U-box domain-containing protein 17	29.5.11.4.2	AT1G29340
+AT4G35100	PIP2-7	Aquaporin	34.19.1	AT4G35100
+AT4G24090	-	Homology to unknown gene (Fragment)	35.2	AT4G24090
+AT4G10840	KLCR1	Kinesin light chain	31.1	AT4G10840
+AT1G11890	SEC22	Protein transport protein SEC22	29.3.4.99	AT1G11890
+AT1G24140	3MMP	Matrix metalloprotease 1	29.05.2007	AT1G24140
+AT2G22910	NAGS1	Amino-acid N-acetyltransferase	26.24	AT2G22910
+AT1G31340	RUB1	Bi-ubiquitin	29.5.11.1	AT1G31340
+AT4G00430	PIP1.4	Aquaporin	34.19.1	AT4G00430
+AT2G18740	-	Small nuclear ribonucleoprotein E	27.1	AT2G18740
+AT1G31300	-	Transmembrane protein 56	35.2	AT1G31300
+AT3G53130	CYP97C1	Cytochrome P450	26.1	AT3G53130
+AT2G22540	SVP	MADS box transcription factor	27.03.2024	AT2G22540
+AT4G13010	F25G13_100	Oxidoreductase	26.7	AT4G13010
+AT1G62780	-	Homology to unknown gene	35.2	AT1G62780
+AT3G02410	ICMEL2	Alpha/beta hydrolase fold	26.03.2005	AT3G02410
+AT5G02230	T7H20_280	Conserved gene of unknown function	35.1	AT5G02230
+AT5G40660	-	ATP12 ATPase	27.03.1999	AT5G40660
+AT2G41490	GPT	UDP-N-acetylglucosamine--dolichyl-phosphate N-acetylglucosaminephosphotransferase	29.7	AT2G41490
+AT1G11790	ADT1	Prephenate dehydratase family protein	13.1.6.3.1	AT1G11790
+AT2G39990	TIF3F1	Eukaryotic translation initiation factor 3 subunit 5	29.5.11.20	AT2G39990
+AT5G03220	MED7A	Mediator of RNA polymerase II transcription subunit 7	27.03.1999	AT5G03220
+AT2G22250	PAT	Aspartate aminotransferase	13.1.1.2.1	AT2G22250
+AT2G37170	PIP2-2	Aquaporin	34.19.1	AT2G37170
+AT4G20150	F1C12.70	Unknown Protein	35.2	AT4G20150
+AT5G01830	PUB16	U-box domain-containing protein	29.5.11.4.2	AT5G01830
+AT1G11760	MED32	Unknown Protein	35.1	AT1G11760
+AT5G01720	FBL3	F-box/LRR-repeat protein 7	29.5.11.4.3.2	AT5G01720
+AT1G11680	CYP51G1	Cytochrome P450-like protein	26.1	AT1G11680
+AT5G01520	AIRP2	Ring finger protein 141	29.5.11.4.2	AT5G01520
+AT5G44500	MFC16.13	Small nuclear ribonucleoprotein-associated protein B	27.1	AT5G44500
+AT4G39400	BRI1	Receptor-like kinase	17.3.2.1	AT4G39400
+AT4G17230	SCL13	GRAS family transcription factor	27.03.2021	AT4G17230
+AT1G65690	NHL25	Harpin-induced protein-like (Fragment)	17.08.2003	AT1G65690
+AT1G63120	RBL2	Rhomboid family protein	29.05.2005	AT1G63120
+AT5G58290	RPT3	26S protease regulatory subunit 6B	29.5.11.20	AT5G58290
+AT2G46690	SAUR32	Auxin responsive SAUR protein	17.02.2003	AT2G46690
+AT1G11650	RBP45B	RNA Binding Protein 45	27.03.1999	AT1G11650
+AT4G40042	F14M13.3	Signal peptidase complex subunit 1	29.03.1999	AT4G40042
+AT4G29810	MKK2	Protein kinase	29.04.2001	AT4G29810
+AT4G15930	dl4005w	Dynein light chain 2 cytoplasmic	31.1	AT4G15930
+AT5G15170	TDP1	Tyrosyl-DNA phosphodiesterase	28.99	AT5G15170
+AT1G01510	AN	Glyoxylate/hydroxypyruvate reductase B	27.03.1934	AT1G01510
+AT1G59520	CW7	Chromosome 22 open reading frame 9 (Fragment)	35.2	AT1G59520
+AT1G01500	F22L4.17	2-hydroxyacid dehydrongenase (Fragment)	35.2	AT1G01500
+AT2G19590	ACO1	1-aminocyclopropane-1-carboxylate oxidase	17.5.1.2	AT2G19590
+AT5G52640	HSP90-1	Heat shock protein 90	20.02.2001	AT5G52640
+AT5G41800	K16L22.8	Proline transporter	34.3	AT5G41800
+AT5G14660	PDF1B	Peptide deformylase-like	26.1	AT5G14660
+AT1G52870	F14G24.14	Mpv17 protein	35.1	AT1G52870
+AT1G05010	ACO4	1-aminocyclopropane-1-carboxylate oxidase	17.5.1.2	AT1G05010
+AT3G25230	FKBP62	Peptidylprolyl isomerase	31.03.2001	AT3G25230
+AT3G19120	-	LOC100127800 protein (Fragment)	35.2	AT3G19120
+AT3G06980	RH50	ATP-dependent RNA helicase	28.1	AT3G06980
+AT5G48385	FRL3	FRIGIDA-LIKE 2	35.2	AT5G48385
+AT2G47610	RPL7AA	60S ribosomal protein L7A-like protein	29.2.1.2.2.57	AT2G47610
+AT5G38640	-	Translation initiation factor eIF-2B delta subunit	29.2.3	AT5G38640
+AT5G38420	RBCS-2B	Ribulose bisphosphate carboxylase small chain	1.03.2002	AT5G38420
+AT4G28980	CDKF-1	Cyclin dependent kinase	31.3	AT4G28980
+AT1G53540	HSP17.6C	class I heat shock protein 3	20.02.2001	AT1G53540
+AT2G01250	RPL7B	60S ribosomal protein L7-like protein	29.2.1.2.2.7	AT2G01250
+AT3G61790	SINAT3	Ubiquitin ligase	33.99	AT3G61790
+AT4G38470	STY46	Tyrosine-protein kinase transforming protein Src	29.4	AT4G38470
+AT3G22440	FRL4A	FRIGIDA (Fragment)	10.05.2004	AT3G22440
+AT2G17730	NIP2	RING finger protein 38	29.5.11.4.2	AT2G17730
+AT3G21215	-	RNA binding protein with multiple splicing 2 (Fragment)	27.4	AT3G21215
+AT2G27960	CKS1	Cyclin-dependent kinases regulatory subunit	31.3	AT2G27960
+AT1G47230	CYCA3-4	Cyclin-dependent protein kinase regulator-like protein	31.3	AT1G47230
+AT1G76760	TY1	Thioredoxin y	21.1	AT1G76760
+AT4G37940	AGL21	MADS-box transcription factor-like protein	27.03.2024	AT4G37940
+AT4G37870	PCKA	Phosphoenolpyruvate carboxykinase	6.4	AT4G37870
+AT4G32850	PAPS4	Poly(A) polymerase	27.1.3.1	AT4G32850
+AT3G26900	SKL1	Shikimate kinase	13.1.6.1.5	AT3G26900
+AT1G17980	PAPS1	Poly(A) polymerase alpha	27.1.3.1	AT1G17980
+AT3G62310	T12C14_10	Pre-mRNA-splicing factor ATP-dependent RNA helicase	27.01.2002	AT3G62310
+AT3G25410	BASS3	Bile acid sodium symporter family protein	34.14	AT3G25410
+AT1G11380	-	Uncharacterized Cys-rich domain	35.2	AT1G11380
+AT3G09630	RPL4A	60S ribosomal protein L4/L1	29.2.1.2.2.141	AT3G09630
+AT5G57050	ABI2	Protein phosphatase 2c	17.01.2002	AT5G57050
+AT2G36930	-	Zinc finger protein 593 (Fragment)	27.03.1999	AT2G36930
+AT3G46510	PUB13	U-box domain-containing protein 13	29.5.11.4.2	AT3G46510
+AT4G37530	PER51	Peroxidase	26.12	AT4G37530
+AT4G05420	DDB1A	DNA damage-binding protein 1	20.02.2005	AT4G05420
+AT1G72770	HAB1	Protein phosphatase 2c	17.01.2002	AT1G72770
+AT1G01360	PYL9	Abscisic acid receptor PYL9	35.2	AT1G01360
+AT2G20790	AP5M	MHD domain-containing death-inducing protein	31.4	AT2G20790
+AT2G16370	THY-1	Thymidylate synthase	25	AT2G16370
+AT3G51270	F24M12.310	Serine/threonine-protein kinase RIO2	29.4	AT3G51270
+AT1G60990	T7P1.13	Aminomethyltransferase	35.1	AT1G60990
+AT2G20900	DGK5	Diacylglycerol kinase	11.03.2005	AT2G20900
+AT1G52340	ABA2	Alcohol dehydrogenase (Fragment)	26.22	AT1G52340
+AT4G10920	KELP	Activated RNA polymerase II transcriptional coactivator p15	27.03.1950	AT4G10920
+AT1G48450	MEB5.2	mRNA clone RTFL01-13-K15	35.2	AT1G48450
+AT3G18480	CASP	Protein CASP	29.3.4.2	AT3G18480
+AT1G11260	STP1	Solute carrier family 2, facilitated glucose transporter member 3	34.2	AT1G11260
+AT5G24020	MIND1	Septum site-determining protein MinD	31.2.5	AT5G24020
+AT1G69390	MINE1	Plastid division regulator MinE	31.2.5	AT1G69390
+AT4G27600	NARA5	Kinase pfkB family protein	3.5	AT4G27600
+AT5G23880	CPSF100	Cleavage and polyadenylation specificity factor subunit 2	27.1.3.3	AT5G23880
+AT4G25550	CFIS2	Cleavage and polyadenylation specificity factor subunit 5	27.1.3.13	AT4G25550
+AT1G30460	CPSF30	mRNA 3&apos-end-processing protein YTH1	27.1.3.6	AT1G30460
+AT2G46290	TIF3I1	Eukaryotic translation initiation factor 3 subunit 2	35.1	AT2G46290
+AT1G28200	FIP1	FIP1	17.01.2003	AT1G28200
+AT4G36470	C7A10.890	Carboxyl methyltransferase 4	17.8.1.1.7	AT4G36470
+AT3G06560	PAPS3	Poly(A) polymerase	27.1.3.1	AT3G06560
+AT5G41340	UBC4	Ubiquitin-conjugating enzyme h	29.5.11.3	AT5G41340
+AT1G17760	CSTF77	mRNA 3&apos-end-processing protein rna14	27.1.3.8	AT1G17760
+AT4G34640	SQS1	Squalene synthase	11.08.2008	AT4G34640
+AT2G45770	CPFTSY	Signal recognition particle-docking protein FtsY	29.03.2003	AT2G45770
+AT1G52280	RABG3D	Ras-related protein Rab-7	30.5	AT1G52280
+AT5G01820	CIPK14	CBL-interacting protein kinase 08	29.4	AT5G01820
+AT4G34200	PGDH1	Phosphoglycerate dehydrogenase	13.1.5.1.1	AT4G34200
+AT4G38920	VHA-c3	V-type proton ATPase 16 kDa proteolipid subunit	35.2	AT4G38920
+AT5G14030	-	Translocon-associated protein subunit beta	35.1	AT5G14030
+AT2G04550	IBR5	Dual specificity protein phosphatase 4	29.4	AT2G04550
+AT1G17745	PGDH2	Phosphoglycerate dehydrogenase	13.1.5.1.1	AT1G17745
+AT4G36220	CYP84A1	Cytochrome P450	26.1	AT4G36220
+AT3G60360	EDA14	U3 small nucleolar RNA-associated protein Utp11	35.2	AT3G60360
+AT3G27080	TOM20-3	Mitochondrial import receptor subunit TOM20	29.03.2002	AT3G27080
+AT5G11090	T5K6_80	Serine-rich protein	35.1	AT5G11090
+AT4G34370	ARI1	Ariadne-like ubiquitin ligase	29.5.11.4.2	AT4G34370
+AT1G17720	PP2AB2	Serine/threonine protein phosphatase 2A 55 kDa regulatory subunit B beta isoform	29.4	AT1G17720
+AT2G03890	PI4KG7	Inositol or phosphatidylinositol kinase	30.4	AT2G03890
+AT5G23060	CAS	Extracellular calcium sensing receptor	35.2	AT5G23060
+AT1G69220	SIK1	Serine/threonine kinase 24	29.04.2001	AT1G69220
+AT4G36040	ATJ11	Chaperone protein dnaJ 11	20.02.2001	AT4G36040
+AT5G45620	RPN9A	26S proteasome subunit	29.5.11.20	AT5G45620
+AT3G14450	CID9	Polyadenylate-binding protein	27.4	AT3G14450
+AT1G52190	NPF1.2	Nitrate transporter	34.13	AT1G52190
+AT5G42790	PAF1	Proteasome subunit alpha type	29.5.11.20	AT5G42790
+AT2G38770	EMB2765	Embryo defective 2765 (Fragment)	26.03.2005	AT2G38770
+AT3G22960	PKP1	Pyruvate kinase	4.02.2014	AT3G22960
+AT3G14420	GLO1	L-lactate dehydrogenase	1.02.2002	AT3G14420
+AT5G23540	RPN11	26S proteasome regulatory subunit	29.5.11.20	AT5G23540
+AT4G35840	NIP1	RING finger protein 38	29.5.11.4.2	AT4G35840
+AT2G35680	DSP8	Dual specificity protein phosphatase family protein	35.2	AT2G35680
+AT5G19990	RPT6A	26S protease regulatory subunit 8	29.5.11.20	AT5G19990
+AT4G35750	F8D20.260	Cellular retinaldehyde-binding/triple function C-terminal	30.5	AT4G35750
+AT2G38660	FOLD1	Methylenetetrahydrofolate dehydrogenase	25.5	AT2G38660
+AT5G03345	F12E4	Membrane magnesium transporter 1	35.2	AT5G03345
+AT2G41370	NPR5	NPR1-like protein (Fragment)	31.1	AT2G41370
+AT4G37680	HHP4	Adiponectin receptor 2	35.2	AT4G37680
+AT1G07230	NPC1	Hydrolase, acting on ester bonds	11.9.3.5	AT1G07230
+AT4G21270	ATK1	Kinesin-like protein	31.1	AT4G21270
+AT4G31300	PBA1	Proteasome subunit beta type	29.5.11.20	AT4G31300
+AT4G29330	DER1	Derlin-3	29.5	AT4G29330
+AT2G46230	-	rRNA-processing protein FCF1 homolog	35.2	AT2G46230
+AT5G01210	F7J8_190	Hydroxycinnamoyl transferase	16	AT5G01210
+AT3G22630	PBD1	Proteasome subunit beta type	29.5.11.20	AT3G22630
+AT2G01980	NHX7	Sodium/hydrogen exchanger Na+ H+ antiporter	34.14	AT2G01980
+AT3G22110	PAC1	Proteasome subunit alpha type	29.5.11.20	AT3G22110
+AT3G66654	CYP21-4	Peptidyl-prolyl cis-trans isomerase	31.03.2001	AT3G66654
+AT1G11050	T19D16.6	Receptor-like kinase	30.2.23	AT1G11050
+AT3G62560	SAR1A	ADP-ribosylation factor family protein	30.5	AT3G62560
+AT3G14290	PAE2	Proteasome subunit alpha type-5	29.5.11.20	AT3G14290
+AT4G34980	SBT1.6	Subtilisin-like protease	29.05.2001	AT4G34980
+AT3G51790	AtG1	Cytochrome c-type biogenesis protein ccmE	9.6	AT3G51790
+AT2G27020	PAG1	Proteasome subunit alpha type	29.5.11.20	AT2G27020
+AT3G29270	-	RING zinc finger protein-like	29.5.11.4.2	AT3G29270
+AT5G42650	CYP74A	Allene oxide synthase	17.7.1.3	AT5G42650
+AT1G17420	LOX3	Lipoxygenase	17.7.1.2	AT1G17420
+AT3G26370	-	Auxin-independent growth protein (Fragment)	17.02.2003	AT3G26370
+AT2G01670	NUDT17	Diphosphoinositol polyphosphate phosphohydrolase 1	23.03.2003	AT2G01670
+AT3G17611	RBL14	Rhomboid domain-containing protein 1	27.03.1999	AT3G17611
+AT3G17210	HS1	Stress responsive A/B barrel domain family protein	20.1.7.1	AT3G17210
+AT3G17000	UBC32	Ubiquitin-conjugating enzyme 31	29.5.11.3	AT3G17000
+AT3G14120	NUP107	Nuclear pore complex protein Nup107	35.1	AT3G14120
+AT3G08510	PLC2	Phosphoinositide-specific phospholipase C	30.04.2004	AT3G08510
+AT3G48990	AAE3	2-succinylbenzoate-CoA ligase	11.01.2008	AT3G48990
+AT4G34710	SPE2	Arginine decarboxylase	22.01.2003	AT4G34710
+AT5G14620	DRM2	DNA (Cytosine-5-)-methyltransferase 3	29.2.2.3.3	AT5G14620
+AT3G20770	EIN3	Ethylene insensitive 3 class transcription factor	27.03.2019	AT3G20770
+AT5G57360	ADO1	Flavin-binding kelch repeat F-box 1 (Fragment)	29.5.11.4.3.2	AT5G57360
+AT2G01140	FBA3	Fructose-bisphosphate aldolase	1.03.2006	AT2G01140
+AT2G27290	-	Transmembrane protein C20orf108	35.2	AT2G27290
+AT4G38810	-	Calcium-binding EF hand family protein	30.3	AT4G38810
+AT1G76185	-	Unknown Protein	35.2	AT1G76185
+AT4G02440	EID1	F-box family protein	29.5.11.4.3.2	AT4G02440
+AT1G62330	F12F1.14	Os03g0169000 protein (Fragment)	35.1	AT1G62330
+AT1G80500	T21F11.17	TRAPP subunit	35.1	AT1G80500
+AT2G25280	-	Protein MEMO1	35.2	AT2G25280
+AT1G47640	F16N3.6	Transmembrane protein 147	35.2	AT1G47640
+AT2G39940	COI1	Auxin signaling F-box 1 (Fragment)	29.5.11.4.3.2	AT2G39940
+AT1G17370	UBP1B	mRNA 3-UTR binding protein	27.4	AT1G17370
+AT1G17280	UBC34	Ubiquitin conjugating enzyme 2	29.05.2011	AT1G17280
+AT1G68050	ADO3	Flavin-binding kelch domain F box protein	29.5.11.4.3.2	AT1G68050
+AT1G13770	RUS3	DUF647 domain-containing protein	35.2	AT1G13770
+AT3G13600	IQM2	Calmodulin binding protein	30.3	AT3G13600
+AT1G68990	RPOT1	DNA-directed RNA polymerase	27.2	AT1G68990
+AT1G01230	-	ORM1-like protein 2	29.6	AT1G01230
+AT1G22920	CSN5B	COP9 signalosome complex subunit 5b	30.11.2001	AT1G22920
+AT4G34120	CBSX2	CBS domain-containing protein-like	35.1	AT4G34120
+AT4G11420	TIF3A1	Eukaryotic translation initiation factor 3 subunit A	29.2.3	AT4G11420
+AT2G38360	PRA1B4	Prenylated rab acceptor PRA1	31.4	AT2G38360
+AT3G50780	F18B3.60	Os12g0596600 protein (Fragment)	27.03.1967	AT3G50780
+AT4G33950	SRK2E	Serine-threonine protein kinase	29.04.2001	AT4G33950
+AT5G54860	MBG8.12	Folate/biopterin transporter family protein	34.99	AT5G54860
+AT1G79120	YUP8H12R.26	Os03g0667400 protein (Fragment)	35.2	AT1G79120
+AT3G22330	RH53	ATP-dependent RNA helicase	27.01.2002	AT3G22330
+AT3G02540	RAD23C	UV excision repair protein RAD23	28.2	AT3G02540
+AT1G78300	GRF2	14-3-3-like protein GF14 epsilon	30.7	AT1G78300
+AT1G10760	GWD1	R1 protein alpha-glucan water dikinase	2.2.2.3	AT1G10760
+AT5G55990	CBL2	Calcineurin B-like calcium binding protein	30.3	AT5G55990
+AT5G47100	CBL9	Calcineurin B-like calcium binding protein	30.3	AT5G47100
+AT5G24270	CBL4	Calcineurin B-like calcium binding protein	30.3	AT5G24270
+AT3G47700	MAG2	RAD50-interacting protein 1	29.3.4.3	AT3G47700
+AT4G39050	KIN7D	Kinesin like protein	31.1	AT4G39050
+AT4G32940	GAMMA-VPE	Legumain/vacuolar processing enzyme	29.3.4.3	AT4G32940
+AT5G38970	CYP85A1	Cytochrome P450	17.3.1.1.4	AT5G38970
+AT1G78080	RAP2-4	Ethylene responsive transcription factor 2b	27.03.2003	AT1G78080
+AT1G78070	-	WD-40 repeat family protein	33.99	AT1G78070
+AT2G19080	MTX1	Metaxin 1b	29.03.2002	AT2G19080
+AT2G28780	-	Unknown Protein	35.2	AT2G28780
+AT5G04600	T32M21_200	MKI67 FHA domain-interacting nucleolar phosphoprotein-like	27.4	AT5G04600
+AT3G13050	OCT7	Major facilitator family transporter	34.99	AT3G13050
+AT4G32551	LUG	WD repeat-containing protein 5 homolog	27.03.1958	AT4G32551
+AT1G63970	ISPF	2-C-methyl-D-erythritol 2 4-cyclodiphosphate synthase	16.1.1.5	AT1G63970
+AT3G49180	RID3	WD repeat protein 18	30.5	AT3G49180
+AT1G77740	PIP5K2	Phosphatidylinositol-4-phosphate 5-kinase family protein	30.04.2001	AT1G77740
+AT1G10580	-	Pre-mRNA splicing factor	27.1	AT1G10580
+AT4G32300	SD25	Receptor-like protein kinase like protein	29.4	AT4G32300
+AT3G26340	PBE2	Proteasome subunit beta type	29.5.11.20	AT3G26340
+AT5G19410	ABCG23	ABC transporter G family member 23	34.16	AT5G19410
+AT5G17010	F2K13.160	Sugar transporter family protein	34.2	AT5G17010
+AT3G11820	SYP121	Syntaxin	31.4	AT3G11820
+AT4G38690	F20M13.250	Phosphatidylinositol-specific phospholipase c	11.09.2003	AT4G38690
+AT2G34710	ATHB-14	PHAVOLUTA-like HD-ZIPIII protein	27.03.2022	AT2G34710
+AT3G55440	CTIMC	Triosephosphate isomerase	1.03.2005	AT3G55440
+AT3G27740	CARA	Carbamoyl-phosphate synthase small chain	23.1.1.1	AT3G27740
+AT1G29900	CARB	Carbamoyl phosphate synthase large subunit	23.1.1.1	AT1G29900
+AT1G31812	ACBP6	Acyl-CoA-binding protein	11.01.2013	AT1G31812
+AT2G02410	-	YacP	35.2	AT2G02410
+AT5G11650	T22P22_40	Hydrolase alpha/beta fold family protein	26.03.2005	AT5G11650
+AT1G76900	TULP1	TUBBY protein	29.5.11.4.3.2	AT1G76900
+AT1G29850	F1N18.11	Double-stranded DNA-binding protein	35.1	AT1G29850
+AT5G10290	F18D22.60	G-type lectin S-receptor-like serine/threonine-protein kinase At1g67520	20.01.2002	AT5G10290
+AT3G21510	AHP1	Histidine-containing phosphotransfer protein	30.1	AT3G21510
+AT3G12620	MMF12.6	Serine/threonine protein phosphatase 2C	29.4	AT3G12620
+AT3G07360	PUB9	U-box domain-containing protein	29.5.11.4.2	AT3G07360
+AT1G57770	F12K22.18	Carotenoid isomerase 1	16.01.2004	AT1G57770
+AT5G58380	CIPK10	CBL-interacting protein kinase 13	29.4	AT5G58380
+AT5G47030	MQD22.17	ATP synthase subunit delta', mitochondrial	29.5.11.4.2	AT5G47030
+AT3G10620	NUDT26	RNA pyrophosphohydrolase	30.04.2003	AT3G10620
+AT2G40080	ELF4	ELF4-like protein	30.11	AT2G40080
+AT1G51650	F19C24.25	ATP synthase subunit epsilon mitochondrial	9.9	AT1G51650
+AT1G29750	RKF1	Kinase	30.2.8.2	AT1G29750
+AT1G76360	-	G-type lectin S-receptor-like serine/threonine-protein kinase At4g11900	29.4.1.57	AT1G76360
+AT4G37250	AP22.22	G-type lectin S-receptor-like serine/threonine-protein kinase At1g34300	30.2.3	AT4G37250
+AT3G55250	PDE329	Calcium homeostasis regulator CHoR1	35.2	AT3G55250
+AT1G22770	GI	Protein GIGANTEA	33.99	AT1G22770
+AT3G21175	GATA24	Pseudo response regulator	27.03.2009	AT3G21175
+AT1G04400	CRY2	Cryptochrome 2	30.11	AT1G04400
+AT4G30010	F6G3.40	Fiber protein Fb15 (Fragment)	35.2	AT4G30010
+AT1G75710	C2H2	Transcription factor (Fragment)	27.03.2011	AT1G75710
+AT1G10270	GRP23	Pentatricopeptide repeat-containing protein	35.1.5	AT1G10270
+AT4G30360	CNGC17	Cyclic nucleotide-gated ion channel 18	34.22	AT4G30360
+AT3G55290	SDRd	3-oxoacyl-reductase	26.22	AT3G55290
+AT3G13580	RPL7D	Thaliana 60S ribosomal protein L7	30.5	AT3G13580
+AT5G19280	KAPP	Protein phosphatase 2C	29.4	AT5G19280
+AT3G03300	DCL2	Ribonuclease 3-like protein 3	27.01.2020	AT3G03300
+AT4G28370	FLY1	Zinc finger (C3HC4 RING finger) protein	29.5.11.4.2	AT4G28370
+AT2G28380	DRB2	Double-stranded RNA binding protein	27.4	AT2G28380
+AT2G27100	SE	Serrate RNA effector molecule homolog	27.03.2011	AT2G27100
+AT4G23740	LRR-RLK	G-type lectin S-receptor-like serine/threonine-protein kinase At2g19130	30.2.3	AT4G23740
+AT1G01040	DCL1	Ribonuclease 3-like protein 3	27.01.2020	AT1G01040
+AT5G51010	-	Rubredoxin-like protein	21.1	AT5G51010
+AT3G63060	EDL3	Circadian clock coupling factor ZGT	35.1	AT3G63060
+AT3G61590	HWS	F-box family protein	29.5.11.4.3.2	AT3G61590
+AT3G54650	FBL17	F-box/LRR-repeat protein 17	29.5.11.4.3.2	AT3G54650
+AT4G22890	PGRL1A	PGR5-like protein 1A, chloroplastic	1.01.1940	AT4G22890
+AT2G25490	EBF1	SCF E3 ubiquitin ligase complex F-box protein grrA	29.5.11.4.3.2	AT2G25490
+AT3G57090	FIS1A	Mitochondria fission 1 protein	31.2	AT3G57090
+AT1G75180	F22H5.9	2-hydroxyacid dehydrongenase (Fragment)	35.2	AT1G75180
+AT5G40440	MKK3	MAP kinase	30.6	AT5G40440
+AT4G20140	GSO1	Receptor-like serine/threonine-protein kinase At1g78530	30.2.11	AT4G20140
+AT5G50680	SAE1B-2	Sumo activating enzyme 1b	29.5.11.2	AT5G50680
+AT3G10260	RTNLB8	Reticulon family protein	31	AT3G10260
+AT3G07950	RBL19	Transmembrane protein 115	29.05.2005	AT3G07950
+AT2G31490	-	Unknown Protein	35.2	AT2G31490
+AT2G02990	RNS1	Ribonuclease T2	27.01.2019	AT2G02990
+AT4G08300	UMAMIT17	Nodulin family protein	33.99	AT4G08300
+AT1G77350	F2P24.6	Keratinocytes-associated protein 2	35.2	AT1G77350
+AT1G76670	UDP-GALT2	Integral membrane protein like	34.2	AT1G76670
+AT2G24270	ALDH11A3	NADP-dependent glyceraldehyde-3-phosphate dehydrogenase	4.01.2009	AT2G24270
+AT5G46190	F28J12.2	KH domain-containing protein	27.4	AT5G46190
+AT4G00350	DTX34	Multidrug resistance protein mdtK	34.99	AT4G00350
+AT1G21790	F8K7.23	Conserved gene of unknown function	35.2	AT1G21790
+AT1G16240	SYP51	Syntaxin-51	31.4	AT1G16240
+AT3G04460	PEX12	Peroxisome assembly protein 12	29.03.2005	AT3G04460
+AT1G14360	UTR3	UDP-galactose transporter 3	34.11	AT1G14360
+AT1G29260	PEX7	Peroxisomal targeting signal 2 receptor	29.03.2005	AT1G29260
+AT1G12390	F5O11.11	ER-derived vesicles protein ERV14	35.1	AT1G12390
+AT4G33510	DHS2	2-dehydro-3-deoxyphosphoheptonate aldolase/ 3-deoxy-d-arabino-heptulosonate 7-phosphate synthetase	13.1.6.1.1	AT4G33510
+AT1G10030	ERG28	Erg28 like protein expressed	11.8	AT1G10030
+AT1G73390	T9L24.40	Genomic DNA chromosome 5 P1 clone MAC12	35.2	AT1G73390
+AT4G33210	FBL15	F-box/LRR-repeat protein 20	29.5.11.4.3.2	AT4G33210
+AT2G44970	RDM4	Os11g0109966 protein (Fragment)	11.09.2002	AT2G44970
+AT5G41560	DDA1	Unknown Protein	35.2	AT5G41560
+AT4G29830	VIP3	WD repeat-containing protein 61	30.5	AT4G29830
+AT4G28450	F20O9.130	WD repeat and SOF1 domain-containing protein	27.1	AT4G28450
+AT3G30390	-	Amino acid transporter	34.3	AT3G30390
+AT3G21720	ICL			AT3G21720
+AT3G05530	RPT5A	26S protease regulatory subunit 6A	29.5.11.20	AT3G05530
+AT1G29150	RPN6	26S proteasome regulatory subunit	29.5.11.20	AT1G29150
+AT1G09970	LRR-XI-23	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61480	30.2.11	AT1G09970
+AT5G53060	MNB8.12	Nucleic acid binding protein	27.4	AT5G53060
+AT1G09960	SUC4	Sucrose transporter 4	34.2.1	AT1G09960
+AT2G44860	T13E15.13	60S ribosomal protein L24	29.2.1.2.2.24	AT2G44860
+AT3G18215	-	DUF599 family protein	35.2	AT3G18215
+AT3G49810	PUB30	U-box domain-containing protein	35.1	AT3G49810
+AT3G28450	BIR2	G-type lectin S-receptor-like serine/threonine-protein kinase At1g61370	30.2.10	AT3G28450
+AT4G27450	F27G19.50	Aluminum-induced protein (Fragment)	15	AT4G27450
+AT1G09840	ASK10	Glycogen synthase kinase	29.04.2001	AT1G09840
+AT1G50640	ERF3	Ethylene responsive transcription factor 3a	27.03.2003	AT1G50640
+AT3G09770	LOG2	RING finger protein B	29.5.11.4.2	AT3G09770
+AT5G58090	K21L19.12	Glucan endo-1 3-beta-glucosidase 6	26.04.2001	AT5G58090
+AT3G09740	SYP71	Syntaxin-71	31.4	AT3G09740
+AT3G08710	TRX9	Thioredoxin h-like protein	21.1	AT3G08710
+AT4G15900	PRL1	Pre-mRNA-splicing factor prp46	35.1	AT4G15900
+AT4G27270	FQR1	Flavoprotein wrbA	11.8	AT4G27270
+AT2G31730	bHLH-beta	BHLH transcription factor	27.03.2006	AT2G31730
+AT5G10940	ASG2	Wd and tetratricopeptide repeat protein	27.03.1967	AT5G10940
+AT4G15630	CASPL1E1	UPF0497 membrane protein 4	35.1	AT4G15630
+AT3G02420	F16B3.5	cDNA clone 001-043-A08 full insert sequence	35.2	AT3G02420
+AT3G51630	WNK5	Serine/threonine protein kinase	29.04.2001	AT3G51630
+AT1G75820	CLV1	Receptor-like serine/threonine-protein kinase At1g78530	30.2.11	AT1G75820
+AT2G23930	SNRNP-G	Small nuclear ribonucleoprotein G	27.1	AT2G23930
+AT5G04760	T1E3_120	I-box binding factor	35.2	AT5G04760
+AT2G23910	-	Cinnamoyl-CoA reductase	16.2.1.7	AT2G23910
+AT2G30260	U2B''	U2 small nuclear ribonucleoprotein B	27.01.2001	AT2G30260
+AT1G09760	U2A'	U2 small nuclear ribonucleoprotein a&apos	27.1	AT1G09760
+AT1G70280	F17O7.19	NHL repeat-containing protein-like	35.1	AT1G70280
+AT2G45200	GOS12	Golgi SNAP receptor complex member 1	31.4	AT2G45200
+AT1G70230	AXY4	Leaf senescence protein-like	35.2	AT1G70230

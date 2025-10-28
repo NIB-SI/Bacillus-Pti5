@@ -71,14 +71,14 @@ measurement	noninoculated	inoculated	-1.6767944	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-RBOHD	noninoculated	inoculated	0.62857143	0.6285714	ns
-PR1B	noninoculated	inoculated	0.32857143	0.5257143	ns
-CPI8	noninoculated	inoculated	0.12857143	0.2571429	ns
-CAB	noninoculated	inoculated	0.54285714	0.6204082	ns
-BGLU2	noninoculated	inoculated	0.12857143	0.2571429	ns
-HSP70	noninoculated	inoculated	0.54285714	0.6204082	ns
-PTI5	noninoculated	inoculated	0.01428571	0.1142857	ns
-13-LOX	noninoculated	inoculated	0.04285714	0.1714286	ns
+RBOHD	noninoculated	inoculated	0.708661417	0.70866142	ns
+PR1B	noninoculated	inoculated	0.425196850	0.68031496	ns
+CPI8	noninoculated	inoculated	0.145669291	0.29133858	ns
+CAB	noninoculated	inoculated	0.602362205	0.68841395	ns
+BGLU2	noninoculated	inoculated	0.082677165	0.22047244	ns
+HSP70	noninoculated	inoculated	0.566929134	0.68841395	ns
+PTI5	noninoculated	inoculated	0.003937008	0.03149606	*
+13-LOX	noninoculated	inoculated	0.023622047	0.09448819	ns
 
 
 roots 216
@@ -152,14 +152,14 @@ measurement	noninoculated	inoculated	-3.0914966	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-RBOHD	noninoculated	inoculated	0.54285714	0.62040816	ns
-PR1B	noninoculated	inoculated	0.47142857	0.62040816	ns
-CPI8	noninoculated	inoculated	0.24285714	0.38857143	ns
-CAB	noninoculated	inoculated	0.15714286	0.31428571	ns
-BGLU2	noninoculated	inoculated	0.95714286	0.95714286	ns
-HSP70	noninoculated	inoculated	0.01428571	0.03809524	*
-PTI5	noninoculated	inoculated	0.01428571	0.03809524	*
-13-LOX	noninoculated	inoculated	0.01428571	0.03809524	*
+RBOHD	noninoculated	inoculated	0.578740157	0.66141732	ns
+PR1B	noninoculated	inoculated	0.551181102	0.66141732	ns
+CPI8	noninoculated	inoculated	0.220472441	0.35275591	ns
+CAB	noninoculated	inoculated	0.133858268	0.26771654	ns
+BGLU2	noninoculated	inoculated	0.929133858	0.92913386	ns
+HSP70	noninoculated	inoculated	0.003937008	0.01049869	*
+PTI5	noninoculated	inoculated	0.003937008	0.01049869	*
+13-LOX	noninoculated	inoculated	0.003937008	0.01049869	*
 
 
 shoots 218
@@ -233,14 +233,14 @@ measurement	noninoculated	inoculated	-1.3701361	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-RBOHD	noninoculated	inoculated	0.15714286	0.2514286	ns
-PR1B	noninoculated	inoculated	0.44285714	0.5061224	ns
-CPI8	noninoculated	inoculated	0.70000000	0.7000000	ns
-CAB	noninoculated	inoculated	0.42857143	0.5061224	ns
-BGLU2	noninoculated	inoculated	0.02857143	0.1142857	ns
-HSP70	noninoculated	inoculated	0.05714286	0.1142857	ns
-PTI5	noninoculated	inoculated	0.02857143	0.1142857	ns
-13-LOX	noninoculated	inoculated	0.04285714	0.1142857	ns
+RBOHD	noninoculated	inoculated	0.17716535	0.2834646	ns
+PR1B	noninoculated	inoculated	0.37007874	0.4499438	ns
+CPI8	noninoculated	inoculated	0.71653543	0.7165354	ns
+CAB	noninoculated	inoculated	0.39370079	0.4499438	ns
+BGLU2	noninoculated	inoculated	0.05511811	0.1889764	ns
+HSP70	noninoculated	inoculated	0.07086614	0.1889764	ns
+PTI5	noninoculated	inoculated	0.01968504	0.1574803	ns
+13-LOX	noninoculated	inoculated	0.09448819	0.1889764	ns
 
 
 roots 218
@@ -314,14 +314,14 @@ measurement	noninoculated	inoculated	-2.8100430	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-RBOHD	noninoculated	inoculated	0.20000000	0.28571429	ns
-PR1B	noninoculated	inoculated	0.27142857	0.31020408	ns
-CPI8	noninoculated	inoculated	0.12857143	0.25714286	ns
-CAB	noninoculated	inoculated	0.01428571	0.03809524	*
-BGLU2	noninoculated	inoculated	0.21428571	0.28571429	ns
-HSP70	noninoculated	inoculated	0.45714286	0.45714286	ns
-PTI5	noninoculated	inoculated	0.01428571	0.03809524	*
-13-LOX	noninoculated	inoculated	0.01428571	0.03809524	*
+RBOHD	noninoculated	inoculated	0.251968504	0.33595801	ns
+PR1B	noninoculated	inoculated	0.326771654	0.37345332	ns
+CPI8	noninoculated	inoculated	0.074803150	0.14960630	ns
+CAB	noninoculated	inoculated	0.003937008	0.01049869	*
+BGLU2	noninoculated	inoculated	0.208661417	0.33385827	ns
+HSP70	noninoculated	inoculated	0.456692913	0.45669291	ns
+PTI5	noninoculated	inoculated	0.003937008	0.01049869	*
+13-LOX	noninoculated	inoculated	0.003937008	0.01049869	*
 
 
 EXP1
@@ -373,10 +373,10 @@ measurement	noninoculated	inoculated	 0.04351864	13-LOX	4	4	negligible
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.2142857	0.4285714	ns
-HSP70	noninoculated	inoculated	0.8142857	0.9285714	ns
-PTI5	noninoculated	inoculated	0.1000000	0.4000000	ns
-13-LOX	noninoculated	inoculated	0.9285714	0.9285714	ns
+BGLU2	noninoculated	inoculated	0.20078740	0.4015748	ns
+HSP70	noninoculated	inoculated	0.83464567	0.9527559	ns
+PTI5	noninoculated	inoculated	0.07874016	0.3149606	ns
+13-LOX	noninoculated	inoculated	0.95275591	0.9527559	ns
 
 
 roots 2 h
@@ -426,10 +426,10 @@ measurement	noninoculated	inoculated	-11.6877657	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.35714286	0.40000000	ns
-HSP70	noninoculated	inoculated	0.40000000	0.40000000	ns
-PTI5	noninoculated	inoculated	0.01428571	0.02857143	*
-13-LOX	noninoculated	inoculated	0.01428571	0.02857143	*
+BGLU2	noninoculated	inoculated	0.437007874	0.437007874	ns
+HSP70	noninoculated	inoculated	0.342519685	0.437007874	ns
+PTI5	noninoculated	inoculated	0.003937008	0.007874016	*
+13-LOX	noninoculated	inoculated	0.003937008	0.007874016	*
 
 
 shoots 4 h
@@ -479,10 +479,10 @@ measurement	noninoculated	inoculated	-0.80168873	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.1285714	0.2571429	ns
-HSP70	noninoculated	inoculated	0.9285714	0.9285714	ns
-PTI5	noninoculated	inoculated	0.1000000	0.2571429	ns
-13-LOX	noninoculated	inoculated	0.2428571	0.3238095	ns
+BGLU2	noninoculated	inoculated	0.14566929	0.2913386	ns
+HSP70	noninoculated	inoculated	0.96850394	0.9685039	ns
+PTI5	noninoculated	inoculated	0.09448819	0.2913386	ns
+13-LOX	noninoculated	inoculated	0.24803150	0.3307087	ns
 
 
 roots 4 h
@@ -532,10 +532,10 @@ measurement	noninoculated	inoculated	-2.652463	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.82857143	0.82857143	ns
-HSP70	noninoculated	inoculated	0.05714286	0.07619048	ns
-PTI5	noninoculated	inoculated	0.02857143	0.05714286	ns
-13-LOX	noninoculated	inoculated	0.01428571	0.05714286	ns
+BGLU2	noninoculated	inoculated	0.803149606	0.80314961	ns
+HSP70	noninoculated	inoculated	0.035433071	0.04724409	*
+PTI5	noninoculated	inoculated	0.023622047	0.04724409	*
+13-LOX	noninoculated	inoculated	0.003937008	0.01574803	*
 
 
 shoots 6 h
@@ -585,10 +585,10 @@ measurement	noninoculated	inoculated	-1.0107767	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.37142857	0.4952381	ns
-HSP70	noninoculated	inoculated	0.78571429	0.7857143	ns
-PTI5	noninoculated	inoculated	0.02857143	0.1142857	ns
-13-LOX	noninoculated	inoculated	0.11428571	0.2285714	ns
+BGLU2	noninoculated	inoculated	0.32283465	0.4304462	ns
+HSP70	noninoculated	inoculated	0.79921260	0.7992126	ns
+PTI5	noninoculated	inoculated	0.03543307	0.1417323	ns
+13-LOX	noninoculated	inoculated	0.14173228	0.2834646	ns
 
 
 roots 6 h
@@ -638,10 +638,10 @@ measurement	noninoculated	inoculated	-2.6391944	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.04285714	0.05714286	ns
-HSP70	noninoculated	inoculated	0.27142857	0.27142857	ns
-PTI5	noninoculated	inoculated	0.01428571	0.02857143	*
-13-LOX	noninoculated	inoculated	0.01428571	0.02857143	*
+BGLU2	noninoculated	inoculated	0.023622047	0.031496063	*
+HSP70	noninoculated	inoculated	0.303149606	0.303149606	ns
+PTI5	noninoculated	inoculated	0.003937008	0.007874016	*
+13-LOX	noninoculated	inoculated	0.003937008	0.007874016	*
 
 
 EXP2
@@ -693,10 +693,10 @@ measurement	noninoculated	inoculated	 0.1370478	13-LOX	4	4	negligible
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.1000000	0.4000000	ns
-HSP70	noninoculated	inoculated	0.3142857	0.6285714	ns
-PTI5	noninoculated	inoculated	0.6142857	0.8190476	ns
-13-LOX	noninoculated	inoculated	0.8285714	0.8285714	ns
+BGLU2	noninoculated	inoculated	0.1732283	0.6614173	ns
+HSP70	noninoculated	inoculated	0.3307087	0.6614173	ns
+PTI5	noninoculated	inoculated	0.5118110	0.6824147	ns
+13-LOX	noninoculated	inoculated	0.7874016	0.7874016	ns
 
 
 roots 15 min
@@ -746,10 +746,10 @@ measurement	noninoculated	inoculated	 0.6228802	13-LOX	4	4	moderate
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.32857143	0.32857143	ns
-HSP70	noninoculated	inoculated	0.01428571	0.05714286	ns
-PTI5	noninoculated	inoculated	0.20000000	0.32857143	ns
-13-LOX	noninoculated	inoculated	0.25714286	0.32857143	ns
+BGLU2	noninoculated	inoculated	0.452755906	0.45275591	ns
+HSP70	noninoculated	inoculated	0.003937008	0.01574803	*
+PTI5	noninoculated	inoculated	0.263779528	0.45275591	ns
+13-LOX	noninoculated	inoculated	0.374015748	0.45275591	ns
 
 
 roots 30 min
@@ -799,10 +799,10 @@ measurement	noninoculated	inoculated	-0.49668312	13-LOX	4	4	small
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.9714286	0.9714286	ns
-HSP70	noninoculated	inoculated	0.2571429	0.5142857	ns
-PTI5	noninoculated	inoculated	0.1285714	0.5142857	ns
-13-LOX	noninoculated	inoculated	0.6142857	0.8190476	ns
+BGLU2	noninoculated	inoculated	0.9566929	0.9566929	ns
+HSP70	noninoculated	inoculated	0.2440945	0.4881890	ns
+PTI5	noninoculated	inoculated	0.1338583	0.4881890	ns
+13-LOX	noninoculated	inoculated	0.4488189	0.5984252	ns
 
 
 roots 1 h
@@ -852,10 +852,10 @@ measurement	noninoculated	inoculated	-3.0857290	13-LOX	3	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.57142857	0.57142857	ns
-HSP70	noninoculated	inoculated	0.28571429	0.38095238	ns
-PTI5	noninoculated	inoculated	0.18571429	0.37142857	ns
-13-LOX	noninoculated	inoculated	0.01428571	0.05714286	ns
+BGLU2	noninoculated	inoculated	0.43307087	0.43307087	ns
+HSP70	noninoculated	inoculated	0.26377953	0.35170604	ns
+PTI5	noninoculated	inoculated	0.06299213	0.12598425	ns
+13-LOX	noninoculated	inoculated	0.01968504	0.07874016	ns
 
 
 roots 2 h
@@ -905,9 +905,9 @@ measurement	noninoculated	inoculated	-12.6051313	13-LOX	4	4	large
 
 permutational t-test
 transcript	group1	group2	p	p.adj	p.adj.signif
-BGLU2	noninoculated	inoculated	0.60000000	0.74285714	ns
-HSP70	noninoculated	inoculated	0.74285714	0.74285714	ns
-PTI5	noninoculated	inoculated	0.01428571	0.02857143	*
-13-LOX	noninoculated	inoculated	0.01428571	0.02857143	*
+BGLU2	noninoculated	inoculated	0.622047244	0.78740157	ns
+HSP70	noninoculated	inoculated	0.787401575	0.78740157	ns
+PTI5	noninoculated	inoculated	0.003937008	0.01574803	*
+13-LOX	noninoculated	inoculated	0.023622047	0.04724409	*
 
 

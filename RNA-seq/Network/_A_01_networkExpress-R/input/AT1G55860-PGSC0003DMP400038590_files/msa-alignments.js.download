@@ -1,0 +1,58 @@
+/*
+ * #%L
+ * jdispatcher-resources
+ * %%
+ * Copyright (C) 2007 - 2021 EMBL - European Bioinformatics Institute
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+if (this.$ != null)
+{
+  $(document).ready(function()
+  {
+      if ($("#colors").length != 0)
+      {
+          // load blockUI JS
+          $.getScript('../../common/assets/js/lib/jquery.blockUI.js', function()
+          {
+              $.blockUI.defaults.pageMessage = '<div class="loading"><img src="images/loading.gif" />Please wait, showing colors on large alignments might be slow...</div>';
+              $("#colors").click(function() {
+                  $.blockUI();
+                  document.location.href = this.href;
+              });
+          });
+      }
+
+
+      // for the case when the phylo/tree result tab clicked
+      $("#leftandmaincontent").on("resulttabclick", readTreeFileCall);
+
+      readTreeFileCall();
+
+	});
+}
+
+
+/**
+ * Calls readTreeFile() in visualBiojsTree.js if the page has the required
+ * 'ctree' section
+ *
+ */
+function readTreeFileCall()
+{
+    if (document.getElementById('ctree') === null)
+        return;
+    treefileeurl = document.forms["locateTree"].elements["treefileurl"].value;
+    readTreeFile(treefileeurl);
+}

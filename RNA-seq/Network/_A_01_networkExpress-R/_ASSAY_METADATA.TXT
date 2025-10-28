@@ -1,0 +1,12 @@
+Assay:	_A_01_networkExpress-R
+Short Name:	01_networkExpress-R
+Assay Class:	DRY
+Assay Type:	R
+Title:	01_networkExpress
+Description:	01_networkExpress
+pISA Assay creation date:	2021-11-18
+pISA Assay creator:	Maja Zagorscak
+Analyst:	Maja Zagorscak
+Phenodata:	None
+Featuredata:	
+Data:	

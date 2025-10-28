@@ -1,0 +1,755 @@
+geneID1	geneID2	reactionType	clusterID_geneID1	clusterID_geneID2	clusterSimplifiedNodeDegree_geneID1	clusterSimplifiedNodeDegree_geneID2	exists
+ETR	CTR	binding/oligomerisation	1	1	5	2	1
+ETR	CTR|ETR	binding/oligomerisation	1	1	5	4	1
+CTR	CTR|ETR	binding/oligomerisation	1	1	2	4	1
+ETR	ET	binding/oligomerisation	1	1	5	3	1
+ETR	ET|ETR	binding/oligomerisation	1	1	5	2	1
+ET	ET|ETR	binding/oligomerisation	1	1	3	2	1
+ETP	SCF	binding/oligomerisation	1	1	2	15	1
+ETP	ETP|SCF	binding/oligomerisation	1	1	2	3	1
+SCF	ETP|SCF	binding/oligomerisation	1	1	15	3	1
+EBF	SCF	binding/oligomerisation	1	1	4	15	1
+EBF	EBF|SCF	binding/oligomerisation	1	1	4	3	1
+SCF	EBF|SCF	binding/oligomerisation	1	1	15	3	1
+JAZ	EIN3(like)	binding/oligomerisation	1	1	9	6	1
+JAZ	EIN3(like)|JAZ	binding/oligomerisation	1	1	9	2	1
+EIN3(like)	EIN3(like)|JAZ	binding/oligomerisation	1	1	6	2	1
+JA-Ile	SCF	binding/oligomerisation	1	1	7	15	1
+JA-Ile	COI1	binding/oligomerisation	1	1	7	7	1
+SCF	COI1	binding/oligomerisation	1	1	15	7	1
+JA-Ile	COI1|JA-Ile|SCF	binding/oligomerisation	1	1	7	4	1
+SCF	COI1|JA-Ile|SCF	binding/oligomerisation	1	1	15	4	1
+COI1	COI1|JA-Ile|SCF	binding/oligomerisation	1	1	7	4	1
+MYC	JAZ	binding/oligomerisation	1	1	11	9	1
+MYC	JAZ|MYC	binding/oligomerisation	1	1	11	2	1
+JAZ	JAZ|MYC	binding/oligomerisation	1	1	9	2	1
+HSP90	SGT1	binding/oligomerisation	1	1	3	3	1
+HSP90	RAR1	binding/oligomerisation	1	1	3	3	1
+SGT1	RAR1	binding/oligomerisation	1	1	3	3	1
+HSP90	HSP90|RAR1|SGT1	binding/oligomerisation	1	1	3	3	1
+SGT1	HSP90|RAR1|SGT1	binding/oligomerisation	1	1	3	3	1
+RAR1	HSP90|RAR1|SGT1	binding/oligomerisation	1	1	3	3	1
+SAG101	EDS1|PAD4	binding/oligomerisation	1	1	2	11	1
+SAG101	EDS1|PAD4|SAG101	binding/oligomerisation	1	1	2	2	1
+EDS1|PAD4	EDS1|PAD4|SAG101	binding/oligomerisation	1	1	11	2	1
+NDR1	RIN4	binding/oligomerisation	1	1	2	2	1
+NDR1	NDR1|RIN4	binding/oligomerisation	1	1	2	2	1
+RIN4	NDR1|RIN4	binding/oligomerisation	1	1	2	2	1
+RANGAP	Rx1	binding/oligomerisation	1	1	6	2	1
+RANGAP	RANGAP|Rx1	binding/oligomerisation	1	1	6	2	1
+Rx1	RANGAP|Rx1	binding/oligomerisation	1	1	2	2	1
+Rx2	RANGAP	binding/oligomerisation	1	1	2	6	1
+Rx2	RANGAP|Rx2	binding/oligomerisation	1	1	2	2	1
+RANGAP	RANGAP|Rx2	binding/oligomerisation	1	1	6	2	1
+GPAphid2	RANGAP	binding/oligomerisation	1	1	2	6	1
+GPAphid2	GPAphid2|RANGAP	binding/oligomerisation	1	1	2	2	1
+RANGAP	GPAphid2|RANGAP	binding/oligomerisation	1	1	6	2	1
+RTM3	RTM1	binding/oligomerisation	1	1	3	3	1
+RTM3	RTM2	binding/oligomerisation	1	1	3	3	1
+RTM1	RTM2	binding/oligomerisation	1	1	3	3	1
+RTM3	RTM1|RTM2|RTM3	binding/oligomerisation	1	1	3	4	1
+RTM1	RTM1|RTM2|RTM3	binding/oligomerisation	1	1	3	4	1
+RTM2	RTM1|RTM2|RTM3	binding/oligomerisation	1	1	3	4	1
+PAD4	EDS1	binding/oligomerisation	1	1	7	6	1
+PAD4	EDS1|PAD4	binding/oligomerisation	1	1	7	11	1
+EDS1	EDS1|PAD4	binding/oligomerisation	1	1	6	11	1
+MPK3	EDS1|PAD4	binding/oligomerisation	1	1	14	11	1
+MPK3	EDS1|MPK3|PAD4	binding/oligomerisation	1	1	14	2	1
+EDS1|PAD4	EDS1|MPK3|PAD4	binding/oligomerisation	1	1	11	2	1
+MPK6	EDS1|PAD4	binding/oligomerisation	1	1	10	11	1
+MPK6	EDS1|MPK6|PAD4	binding/oligomerisation	1	1	10	2	1
+EDS1|PAD4	EDS1|MPK6|PAD4	binding/oligomerisation	1	1	11	2	1
+NPR1	NPR1|NPR1	binding/oligomerisation	1	1	11	3	1
+GSNO	NPR1	binding/oligomerisation	1	1	1	11	1
+NPR1	TGA2,5,6	binding/oligomerisation	1	1	11	7	1
+NPR1	NPR1|TGA2,5,6	binding/oligomerisation	1	1	11	10	1
+TGA2,5,6	NPR1|TGA2,5,6	binding/oligomerisation	1	1	7	10	1
+NIMIN	NPR1	binding/oligomerisation	1	1	2	11	1
+NIMIN	NIMIN|NPR1	binding/oligomerisation	1	1	2	2	1
+NPR1	NIMIN|NPR1	binding/oligomerisation	1	1	11	2	1
+R-gene	potyvirus	binding/oligomerisation	1	1	5	5	1
+R-gene	R-gene|potyvirus	binding/oligomerisation	1	1	5	2	1
+potyvirus	R-gene|potyvirus	binding/oligomerisation	1	1	5	2	1
+RBX	CUL	binding/oligomerisation	1	1	3	3	1
+RBX	ASK	binding/oligomerisation	1	1	3	3	1
+CUL	ASK	binding/oligomerisation	1	1	3	3	1
+RBX	SCF	binding/oligomerisation	1	1	3	15	1
+CUL	SCF	binding/oligomerisation	1	1	3	15	1
+ASK	SCF	binding/oligomerisation	1	1	3	15	1
+WRKY53	ESP	binding/oligomerisation	1	1	6	2	1
+WRKY53	ESP|WRKY53	binding/oligomerisation	1	1	6	2	1
+ESP	ESP|WRKY53	binding/oligomerisation	1	1	2	2	1
+WRKY53	WRKY30	binding/oligomerisation	1	1	6	2	1
+WRKY53	WRKY30|WRKY53	binding/oligomerisation	1	1	6	2	1
+WRKY30	WRKY30|WRKY53	binding/oligomerisation	1	1	2	2	1
+WRKY57	JAZ4	binding/oligomerisation	1	1	8	2	1
+WRKY57	JAZ4|WRKY57	binding/oligomerisation	1	1	8	2	1
+JAZ4	JAZ4|WRKY57	binding/oligomerisation	1	1	2	2	1
+JAZ8	WRKY57	binding/oligomerisation	1	1	2	8	1
+JAZ8	JAZ8|WRKY57	binding/oligomerisation	1	1	2	2	1
+WRKY57	JAZ8|WRKY57	binding/oligomerisation	1	1	8	2	1
+IAA29	WRKY57	binding/oligomerisation	1	1	2	8	1
+IAA29	IAA29|WRKY57	binding/oligomerisation	1	1	2	2	1
+WRKY57	IAA29|WRKY57	binding/oligomerisation	1	1	8	2	1
+TGA2,5,6	SCL14	binding/oligomerisation	1	1	7	2	1
+TGA2,5,6	SCL14|TGA2,5,6	binding/oligomerisation	1	1	7	3	1
+SCL14	SCL14|TGA2,5,6	binding/oligomerisation	1	1	2	3	1
+DELLA	JAZ	binding/oligomerisation	1	1	11	9	1
+DELLA	DELLA|JAZ	binding/oligomerisation	1	1	11	2	1
+JAZ	DELLA|JAZ	binding/oligomerisation	1	1	9	2	1
+MYC2	DELLA	binding/oligomerisation	1	1	9	11	1
+MYC2	DELLA|MYC2	binding/oligomerisation	1	1	9	2	1
+DELLA	DELLA|MYC2	binding/oligomerisation	1	1	11	2	1
+Ca2+	BIK1	binding/oligomerisation	1	1	11	3	1
+Ca2+	BIK1|Ca2+	binding/oligomerisation	1	1	11	2	1
+BIK1	BIK1|Ca2+	binding/oligomerisation	1	1	3	2	1
+Ca2+	CML42	binding/oligomerisation	1	1	11	2	1
+Ca2+	CML42|Ca2+	binding/oligomerisation	1	1	11	3	1
+CML42	CML42|Ca2+	binding/oligomerisation	1	1	2	3	1
+SAM3	HC-Pro	binding/oligomerisation	1	1	2	32	1
+SAM3	HC-Pro|SAM3	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|SAM3	binding/oligomerisation	1	1	32	2	1
+SAHH	HC-Pro	binding/oligomerisation	1	1	2	32	1
+SAHH	HC-Pro|SAHH	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|SAHH	binding/oligomerisation	1	1	32	2	1
+AGO1,5,7,10	HC-Pro	binding/oligomerisation	1	1	4	32	1
+AGO1,5,7,10	AGO1,5,7,10|HC-Pro	binding/oligomerisation	1	1	4	2	1
+HC-Pro	AGO1,5,7,10|HC-Pro	binding/oligomerisation	1	1	32	2	1
+CI	AGO1,5,7,10	binding/oligomerisation	1	1	4	4	1
+CI	AGO1,5,7,10|CI	binding/oligomerisation	1	1	4	2	1
+AGO1,5,7,10	AGO1,5,7,10|CI	binding/oligomerisation	1	1	4	2	1
+CPIP1,2b	CP	binding/oligomerisation	1	1	4	6	1
+CPIP1,2b	CP|CPIP1,2b	binding/oligomerisation	1	1	4	4	1
+CP	CP|CPIP1,2b	binding/oligomerisation	1	1	6	4	1
+CPIP2a	CP	binding/oligomerisation	1	1	2	6	1
+CPIP2a	CP|CPIP2a	binding/oligomerisation	1	1	2	2	1
+CP	CP|CPIP2a	binding/oligomerisation	1	1	6	2	1
+CPIP1,2b	CP	binding/oligomerisation	1	1	4	6	1
+CPIP1,2b	CP|CPIP1,2b	binding/oligomerisation	1	1	4	4	1
+CP	CP|CPIP1,2b	binding/oligomerisation	1	1	6	4	1
+DXPS2	HC-Pro	binding/oligomerisation	1	1	2	32	1
+DXPS2	DXPS2|HC-Pro	binding/oligomerisation	1	1	2	2	1
+HC-Pro	DXPS2|HC-Pro	binding/oligomerisation	1	1	32	2	1
+ATPB	HC-Pro	binding/oligomerisation	1	1	2	32	1
+ATPB	ATPB|HC-Pro	binding/oligomerisation	1	1	2	2	1
+HC-Pro	ATPB|HC-Pro	binding/oligomerisation	1	1	32	2	1
+MIND1	HC-Pro	binding/oligomerisation	1	1	2	32	1
+MIND1	HC-Pro|MIND1	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|MIND1	binding/oligomerisation	1	1	32	2	1
+ribosome	HC-Pro	binding/oligomerisation	1	1	2	32	1
+ribosome	HC-Pro|ribosome	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|ribosome	binding/oligomerisation	1	1	32	2	1
+PAA2	HC-Pro	binding/oligomerisation	1	1	2	32	1
+PAA2	HC-Pro|PAA2	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|PAA2	binding/oligomerisation	1	1	32	2	1
+PBB2	HC-Pro	binding/oligomerisation	1	1	2	32	1
+PBB2	HC-Pro|PBB2	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|PBB2	binding/oligomerisation	1	1	32	2	1
+PBE1	HC-Pro	binding/oligomerisation	1	1	2	32	1
+PBE1	HC-Pro|PBE1	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|PBE1	binding/oligomerisation	1	1	32	2	1
+PSAK	CI	binding/oligomerisation	1	1	2	4	1
+PSAK	CI|PSAK	binding/oligomerisation	1	1	2	2	1
+CI	CI|PSAK	binding/oligomerisation	1	1	4	2	1
+CRT3	HC-Pro	binding/oligomerisation	1	1	3	32	1
+CRT3	CRT3|HC-Pro	binding/oligomerisation	1	1	3	2	1
+HC-Pro	CRT3|HC-Pro	binding/oligomerisation	1	1	32	2	1
+CRT2	HC-Pro	binding/oligomerisation	1	1	3	32	1
+CRT2	CRT2|HC-Pro	binding/oligomerisation	1	1	3	2	1
+HC-Pro	CRT2|HC-Pro	binding/oligomerisation	1	1	32	2	1
+CRT1	HC-Pro	binding/oligomerisation	1	1	5	32	1
+CRT1	CRT1|HC-Pro	binding/oligomerisation	1	1	5	2	1
+HC-Pro	CRT1|HC-Pro	binding/oligomerisation	1	1	32	2	1
+EDF2	HC-Pro	binding/oligomerisation	1	1	2	32	1
+EDF2	EDF2|HC-Pro	binding/oligomerisation	1	1	2	2	1
+HC-Pro	EDF2|HC-Pro	binding/oligomerisation	1	1	32	2	1
+CML40	HC-Pro	binding/oligomerisation	1	1	2	32	1
+CML40	CML40|HC-Pro	binding/oligomerisation	1	1	2	2	1
+HC-Pro	CML40|HC-Pro	binding/oligomerisation	1	1	32	2	1
+TDX	HC-Pro	binding/oligomerisation	1	1	2	32	1
+TDX	HC-Pro|TDX	binding/oligomerisation	1	1	2	2	1
+HC-Pro	HC-Pro|TDX	binding/oligomerisation	1	1	32	2	1
+RBCS-1A	P3	binding/oligomerisation	1	1	2	10	1
+RBCS-1A	P3|RBCS-1A	binding/oligomerisation	1	1	2	2	1
+P3	P3|RBCS-1A	binding/oligomerisation	1	1	10	2	1
+P3	RBCS-3B	binding/oligomerisation	1	1	10	4	1
+P3	P3|RBCS-3B	binding/oligomerisation	1	1	10	2	1
+RBCS-3B	P3|RBCS-3B	binding/oligomerisation	1	1	4	2	1
+P3	RBCS-2B	binding/oligomerisation	1	1	10	4	1
+P3	P3|RBCS-2B	binding/oligomerisation	1	1	10	2	1
+RBCS-2B	P3|RBCS-2B	binding/oligomerisation	1	1	4	2	1
+RBCS-1B	P3	binding/oligomerisation	1	1	2	10	1
+RBCS-1B	P3|RBCS-1B	binding/oligomerisation	1	1	2	2	1
+P3	P3|RBCS-1B	binding/oligomerisation	1	1	10	2	1
+P3	RBCL	binding/oligomerisation	1	1	10	2	1
+P3	P3|RBCL	binding/oligomerisation	1	1	10	2	1
+RBCL	P3|RBCL	binding/oligomerisation	1	1	2	2	1
+OBE1	VPg	binding/oligomerisation	1	1	8	4	1
+OBE1	OBE1|VPg	binding/oligomerisation	1	1	8	2	1
+VPg	OBE1|VPg	binding/oligomerisation	1	1	4	2	1
+RH8	VPg	binding/oligomerisation	1	1	2	4	1
+RH8	RH8|VPg	binding/oligomerisation	1	1	2	2	1
+VPg	RH8|VPg	binding/oligomerisation	1	1	4	2	1
+CRT1	ETR1	binding/oligomerisation	1	1	5	2	1
+CRT1	CRT1|ETR1	binding/oligomerisation	1	1	5	2	1
+ETR1	CRT1|ETR1	binding/oligomerisation	1	1	2	2	1
+OBE1	WRKY17	binding/oligomerisation	1	1	8	2	1
+OBE1	OBE1|WRKY17	binding/oligomerisation	1	1	8	2	1
+WRKY17	OBE1|WRKY17	binding/oligomerisation	1	1	2	2	1
+OBE1	WRKY11	binding/oligomerisation	1	1	8	2	1
+OBE1	OBE1|WRKY11	binding/oligomerisation	1	1	8	2	1
+WRKY11	OBE1|WRKY11	binding/oligomerisation	1	1	2	2	1
+CO	OBE1	binding/oligomerisation	1	1	2	8	1
+CO	CO|OBE1	binding/oligomerisation	1	1	2	2	1
+OBE1	CO|OBE1	binding/oligomerisation	1	1	8	2	1
+RBCS-3B	COI1	binding/oligomerisation	1	1	4	7	1
+RBCS-3B	COI1|RBCS-3B	binding/oligomerisation	1	1	4	2	1
+COI1	COI1|RBCS-3B	binding/oligomerisation	1	1	7	2	1
+RBCS-2B	JAZ3	binding/oligomerisation	1	1	4	2	1
+RBCS-2B	JAZ3|RBCS-2B	binding/oligomerisation	1	1	4	2	1
+JAZ3	JAZ3|RBCS-2B	binding/oligomerisation	1	1	2	2	1
+GST	SA	binding/oligomerisation	1	1	2	16	1
+GST	GST|SA	binding/oligomerisation	1	1	2	2	1
+SA	GST|SA	binding/oligomerisation	1	1	16	2	1
+BAK1	FLS2	binding/oligomerisation	1	1	3	3	1
+BAK1	flg22	binding/oligomerisation	1	1	3	3	1
+FLS2	flg22	binding/oligomerisation	1	1	3	3	1
+BAK1	BAK1|FLS2|flg22	binding/oligomerisation	1	1	3	4	1
+FLS2	BAK1|FLS2|flg22	binding/oligomerisation	1	1	3	4	1
+flg22	BAK1|FLS2|flg22	binding/oligomerisation	1	1	3	4	1
+MKS1	WRKY33	binding/oligomerisation	1	1	2	7	1
+MKS1	MKS1|WRKY33	binding/oligomerisation	1	1	2	2	1
+WRKY33	MKS1|WRKY33	binding/oligomerisation	1	1	7	2	1
+GA1	GID1	binding/oligomerisation	1	1	8	6	1
+GA1	GA1|GID1	binding/oligomerisation	1	1	8	4	1
+GID1	GA1|GID1	binding/oligomerisation	1	1	6	4	1
+GA3	GID1	binding/oligomerisation	1	1	6	6	1
+GA3	GA3|GID1	binding/oligomerisation	1	1	6	4	1
+GID1	GA3|GID1	binding/oligomerisation	1	1	6	4	1
+GID1	GA4	binding/oligomerisation	1	1	6	8	1
+GID1	GA4|GID1	binding/oligomerisation	1	1	6	4	1
+GA4	GA4|GID1	binding/oligomerisation	1	1	8	4	1
+GA1|GID1	DELLA	binding/oligomerisation	1	1	4	11	1
+GA1|GID1	DELLA|GA1|GID1	binding/oligomerisation	1	1	4	3	1
+DELLA	DELLA|GA1|GID1	binding/oligomerisation	1	1	11	3	1
+GA3|GID1	DELLA	binding/oligomerisation	1	1	4	11	1
+GA3|GID1	DELLA|GA3|GID1	binding/oligomerisation	1	1	4	2	1
+DELLA	DELLA|GA3|GID1	binding/oligomerisation	1	1	11	2	1
+GA4|GID1	DELLA	binding/oligomerisation	1	1	4	11	1
+GA4|GID1	DELLA|GA4|GID1	binding/oligomerisation	1	1	4	2	1
+DELLA	DELLA|GA4|GID1	binding/oligomerisation	1	1	11	2	1
+SCF	SLY1	binding/oligomerisation	1	1	15	2	1
+SCF	SCF|SLY1	binding/oligomerisation	1	1	15	3	1
+SLY1	SCF|SLY1	binding/oligomerisation	1	1	2	3	1
+CAT	LSD1	binding/oligomerisation	1	1	3	2	1
+CAT	CAT|LSD1	binding/oligomerisation	1	1	3	2	1
+LSD1	CAT|LSD1	binding/oligomerisation	1	1	2	2	1
+CAT2	ACX2	binding/oligomerisation	1	1	5	2	1
+CAT2	ACX2|CAT2	binding/oligomerisation	1	1	5	2	1
+ACX2	ACX2|CAT2	binding/oligomerisation	1	1	2	2	1
+ACX3	CAT2	binding/oligomerisation	1	1	2	5	1
+ACX3	ACX3|CAT2	binding/oligomerisation	1	1	2	2	1
+CAT2	ACX3|CAT2	binding/oligomerisation	1	1	5	2	1
+D14	MAX2	binding/oligomerisation	1	1	5	3	1
+D14	SCF	binding/oligomerisation	1	1	5	15	1
+MAX2	SCF	binding/oligomerisation	1	1	3	15	1
+D14	D14|MAX2|SCF	binding/oligomerisation	1	1	5	4	1
+MAX2	D14|MAX2|SCF	binding/oligomerisation	1	1	3	4	1
+SCF	D14|MAX2|SCF	binding/oligomerisation	1	1	15	4	1
+DMAPP	tRNA	binding/oligomerisation	1	1	19	3	1
+DMAPP	IPT2,9	binding/oligomerisation	1	1	19	3	1
+tRNA	IPT2,9	binding/oligomerisation	1	1	3	3	1
+DMAPP	prenyl-tRNA	binding/oligomerisation	1	1	19	4	1
+tRNA	prenyl-tRNA	binding/oligomerisation	1	1	3	4	1
+IPT2,9	prenyl-tRNA	binding/oligomerisation	1	1	3	4	1
+cZR	ADK	binding/oligomerisation	1	1	4	6	1
+cZR	cZRMP	binding/oligomerisation	1	1	4	7	1
+ADK	cZRMP	binding/oligomerisation	1	1	6	7	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+cZ	UGT76C1,C2	binding/oligomerisation	1	1	26	24	1
+Glu	UGT76C1,C2	binding/oligomerisation	1	1	50	24	1
+cZ	cZ7G	binding/oligomerisation	1	1	26	3	1
+Glu	cZ7G	binding/oligomerisation	1	1	50	3	1
+UGT76C1,C2	cZ7G	binding/oligomerisation	1	1	24	3	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+cZ	UGT76C1,C2	binding/oligomerisation	1	1	26	24	1
+Glu	UGT76C1,C2	binding/oligomerisation	1	1	50	24	1
+cZ	cZ9G	binding/oligomerisation	1	1	26	3	1
+Glu	cZ9G	binding/oligomerisation	1	1	50	3	1
+UGT76C1,C2	cZ9G	binding/oligomerisation	1	1	24	3	1
+cZ	UGT85A1	binding/oligomerisation	1	1	26	24	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+UGT85A1	Glu	binding/oligomerisation	1	1	24	50	1
+cZ	cZOG	binding/oligomerisation	1	1	26	6	1
+UGT85A1	cZOG	binding/oligomerisation	1	1	24	6	1
+Glu	cZOG	binding/oligomerisation	1	1	50	6	1
+cZ	UGT85A1	binding/oligomerisation	1	1	26	24	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+UGT85A1	Glu	binding/oligomerisation	1	1	24	50	1
+cZ	cZROG	binding/oligomerisation	1	1	26	6	1
+UGT85A1	cZROG	binding/oligomerisation	1	1	24	6	1
+Glu	cZROG	binding/oligomerisation	1	1	50	6	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+cZ	UGT73C1,C5	binding/oligomerisation	1	1	26	18	1
+Glu	UGT73C1,C5	binding/oligomerisation	1	1	50	18	1
+cZ	cZROG	binding/oligomerisation	1	1	26	6	1
+Glu	cZROG	binding/oligomerisation	1	1	50	6	1
+UGT73C1,C5	cZROG	binding/oligomerisation	1	1	18	6	1
+cZ	Glu	binding/oligomerisation	1	1	26	50	1
+cZ	UGT73C1,C5	binding/oligomerisation	1	1	26	18	1
+Glu	UGT73C1,C5	binding/oligomerisation	1	1	50	18	1
+cZ	cZOG	binding/oligomerisation	1	1	26	6	1
+Glu	cZOG	binding/oligomerisation	1	1	50	6	1
+UGT73C1,C5	cZOG	binding/oligomerisation	1	1	18	6	1
+DZR	ADK	binding/oligomerisation	1	1	3	6	1
+DZR	DZRMP	binding/oligomerisation	1	1	3	6	1
+ADK	DZRMP	binding/oligomerisation	1	1	6	6	1
+AHK2,3,4	tZ	binding/oligomerisation	1	1	10	28	1
+tZ	AHK2,3,4	binding/oligomerisation	1	1	28	10	1
+AHK2,3,4	cZ	binding/oligomerisation	1	1	10	26	1
+cZ	AHK2,3,4	binding/oligomerisation	1	1	26	10	1
+DZ	AHK2,3,4	binding/oligomerisation	1	1	28	10	1
+DZ	AHK2,3,4	binding/oligomerisation	1	1	28	10	1
+iP	AHK2,3,4	binding/oligomerisation	1	1	22	10	1
+iP	AHK2,3,4	binding/oligomerisation	1	1	22	10	1
+L-Met	SAMe	catalysis	1	1	2	3	1
+SAMS	L-Met	catalysis	1	1	1	2	1
+SAMe	ACC	catalysis	1	1	3	3	1
+ACS	SAMe	catalysis	1	1	1	3	1
+ACC	ET	catalysis	1	1	3	3	1
+ACO	ACC	catalysis	1	1	2	3	1
+alpha-linolenic-acid	13-HPOT	catalysis	1	1	2	4	1
+ROS	alpha-linolenic-acid	catalysis	1	1	4	2	1
+Thr	Ile	catalysis	1	1	2	4	1
+OMR1	Thr	catalysis	1	1	3	2	1
+PUFA:LA	13-HPOT	catalysis	1	1	2	4	1
+LOX	PUFA:LA	catalysis	1	1	3	2	1
+13-HPOT	12,13-EOT	catalysis	1	1	4	3	1
+AOS	13-HPOT	catalysis	1	1	1	4	1
+12,13-EOT	OPDA	catalysis	1	1	3	6	1
+AOC	12,13-EOT	catalysis	1	1	1	3	1
+OPDA	OPC8	catalysis	1	1	6	3	1
+OPR	OPDA	catalysis	1	1	1	6	1
+OPC8	OPC8-CoA	catalysis	1	1	3	3	1
+OPCL1	OPC8	catalysis	1	1	1	3	1
+OPC8-CoA	OPC6-CoA	catalysis	1	1	3	3	1
+ACX	OPC8-CoA	catalysis	1	1	1	3	1
+OPC6-CoA	OPC4-CoA	catalysis	1	1	3	3	1
+MFP	OPC6-CoA	catalysis	1	1	1	3	1
+OPC4-CoA	JA-CoA	catalysis	1	1	3	3	1
+KAT	OPC4-CoA	catalysis	1	1	1	3	1
+JA-CoA	JA	catalysis	1	1	3	6	1
+ACH	JA-CoA	catalysis	1	1	1	3	1
+JA	MeJA	catalysis	1	1	6	1	1
+JMT	JA	catalysis	1	1	1	6	1
+Ile	JA	catalysis	1	1	4	6	1
+Ile	JA-Ile	catalysis	1	1	4	7	1
+JA	JA-Ile	catalysis	1	1	6	7	1
+JAR	Ile	catalysis	1	1	2	4	1
+JAR	JA	catalysis	1	1	2	6	1
+JA-Ile	12-OH-JA-Ile	catalysis	1	1	7	1	1
+CYP94	JA-Ile	catalysis	1	1	1	7	1
+MeSA	SA	catalysis	1	1	5	16	1
+MES9	MeSA	catalysis	1	1	1	5	1
+Chor	IsoChor	catalysis	1	1	4	3	1
+ICS	Chor	catalysis	1	1	2	4	1
+IsoChor	SA	catalysis	1	1	3	16	1
+IPL	IsoChor	catalysis	1	1	1	3	1
+Chor	Prep	catalysis	1	1	4	3	1
+CM	Chor	catalysis	1	1	1	4	1
+Prep	PhePyr	catalysis	1	1	3	3	1
+PA	Prep	catalysis	1	1	1	3	1
+PhePyr	PheAla	catalysis	1	1	3	3	1
+ADT	PhePyr	catalysis	1	1	1	3	1
+PheAla	TransCA	catalysis	1	1	3	5	1
+PAL	PheAla	catalysis	1	1	1	3	1
+TransCA	BA	catalysis	1	1	5	3	1
+AAO	TransCA	catalysis	1	1	2	5	1
+BA	SA	catalysis	1	1	3	16	1
+BA2H	BA	catalysis	1	1	1	3	1
+TransCA	OrthoCA	catalysis	1	1	5	1	1
+AAO	TransCA	catalysis	1	1	2	5	1
+SA	MeSA	catalysis	1	1	16	5	1
+SAMC	SA	catalysis	1	1	1	16	1
+MeSA	SA	catalysis	1	1	5	16	1
+MES	MeSA	catalysis	1	1	1	5	1
+SA	SGE	catalysis	1	1	16	1	1
+SAGT	SA	catalysis	1	1	5	16	1
+SA	SAG	catalysis	1	1	16	1	1
+SAGT	SA	catalysis	1	1	5	16	1
+O2.-	H2O2	catalysis	1	1	6	4	1
+SOD	O2.-	catalysis	1	1	1	6	1
+O2	O2.-	catalysis	1	1	2	6	1
+NADPH-oxidase	O2	catalysis	1	1	2	2	1
+e-	O2.-	catalysis	1	1	2	6	1
+CO2-deficiency	e-	catalysis	1	1	1	2	1
+Geranylgeranyl-PP	ent-Copalyl-PP	catalysis	1	1	2	3	1
+CPS	Geranylgeranyl-PP	catalysis	1	1	1	2	1
+ent-Copalyl-PP	ent-Kaurene	catalysis	1	1	3	3	1
+KS	ent-Copalyl-PP	catalysis	1	1	1	3	1
+ent-Kaurene	ent-Kaurenoic acid	catalysis	1	1	3	3	1
+KO	ent-Kaurene	catalysis	1	1	1	3	1
+ent-Kaurenoic acid	GA12	catalysis	1	1	3	5	1
+KAO1,2	ent-Kaurenoic acid	catalysis	1	1	1	3	1
+GA12	GA9	catalysis	1	1	5	3	1
+GA20ox	GA12	catalysis	1	1	2	5	1
+GA12	GA20	catalysis	1	1	5	5	1
+GA20ox	GA12	catalysis	1	1	2	5	1
+GA9	GA4	catalysis	1	1	3	8	1
+GA3ox	GA9	catalysis	1	1	3	3	1
+GA20	GA3	catalysis	1	1	5	6	1
+GA3ox	GA20	catalysis	1	1	3	5	1
+GA20	GA1	catalysis	1	1	5	8	1
+GA3ox	GA20	catalysis	1	1	3	5	1
+GA1	GA8	catalysis	1	1	8	1	1
+C19-GA2ox	GA1	catalysis	1	1	2	8	1
+GA4	GA34	catalysis	1	1	8	1	1
+C19-GA2ox	GA4	catalysis	1	1	2	8	1
+GA4	GA4-methylester	catalysis	1	1	8	1	1
+GAMT1,2	GA4	catalysis	1	1	3	8	1
+GA3	GA3-methylester	catalysis	1	1	6	1	1
+GAMT1,2	GA3	catalysis	1	1	3	6	1
+GA1	GA1-methylester	catalysis	1	1	8	1	1
+GAMT1,2	GA1	catalysis	1	1	3	8	1
+"all-trans-&beta;-carotene"	"9-cis-&beta;-carotene"	catalysis	1	1	2	3	1
+D27	"all-trans-&beta;-carotene"	catalysis	1	1	1	2	1
+CL	CLA	catalysis	1	1	3	1	1
+MAX1	CL	catalysis	1	1	1	3	1
+HMBDP	DMAPP	catalysis	1	1	2	19	1
+ISPH	HMBDP	catalysis	1	1	1	2	1
+DMAPP	IPT4,6	catalysis	1	1	19	6	1
+DMAPP	iPRTP	catalysis	1	1	19	7	1
+IPT4,6	iPRTP	catalysis	1	1	6	7	1
+ATP	DMAPP	catalysis	1	1	4	19	1
+ATP	IPT4,6	catalysis	1	1	4	6	1
+DMAPP	IPT1,3,5,7,8	catalysis	1	1	19	9	1
+DMAPP	iPRTP	catalysis	1	1	19	7	1
+IPT1,3,5,7,8	iPRTP	catalysis	1	1	9	7	1
+ATP	DMAPP	catalysis	1	1	4	19	1
+ATP	IPT1,3,5,7,8	catalysis	1	1	4	9	1
+DMAPP	IPT4,6	catalysis	1	1	19	6	1
+DMAPP	iPRDP	catalysis	1	1	19	8	1
+IPT4,6	iPRDP	catalysis	1	1	6	8	1
+ADP	DMAPP	catalysis	1	1	4	19	1
+ADP	IPT4,6	catalysis	1	1	4	6	1
+DMAPP	IPT1,3,5,7,8	catalysis	1	1	19	9	1
+DMAPP	iPRDP	catalysis	1	1	19	8	1
+IPT1,3,5,7,8	iPRDP	catalysis	1	1	9	8	1
+ADP	DMAPP	catalysis	1	1	4	19	1
+ADP	IPT1,3,5,7,8	catalysis	1	1	4	9	1
+DMAPP	IPT1,3,5,7,8	catalysis	1	1	19	9	1
+DMAPP	iPRMP	catalysis	1	1	19	9	1
+IPT1,3,5,7,8	iPRMP	catalysis	1	1	9	9	1
+AMP	DMAPP	catalysis	1	1	2	19	1
+AMP	IPT1,3,5,7,8	catalysis	1	1	2	9	1
+DZ	UGT76C1,C2	catalysis	1	1	28	24	1
+DZ	DZ7G	catalysis	1	1	28	2	1
+UGT76C1,C2	DZ7G	catalysis	1	1	24	2	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+DZ	UGT76C1,C2	catalysis	1	1	28	24	1
+DZ	DZ9G	catalysis	1	1	28	2	1
+UGT76C1,C2	DZ9G	catalysis	1	1	24	2	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+DZ	UGT85A1	catalysis	1	1	28	24	1
+DZ	DZOG	catalysis	1	1	28	4	1
+UGT85A1	DZOG	catalysis	1	1	24	4	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+DZ	UGT85A1	catalysis	1	1	28	24	1
+DZ	DZROG	catalysis	1	1	28	4	1
+UGT85A1	DZROG	catalysis	1	1	24	4	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+DZ	UGT73C1,C5	catalysis	1	1	28	18	1
+DZ	DZROG	catalysis	1	1	28	4	1
+UGT73C1,C5	DZROG	catalysis	1	1	18	4	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT73C1,C5	catalysis	1	1	50	18	1
+DZ	UGT73C1,C5	catalysis	1	1	28	18	1
+DZ	DZOG	catalysis	1	1	28	4	1
+UGT73C1,C5	DZOG	catalysis	1	1	18	4	1
+Glu	DZ	catalysis	1	1	50	28	1
+Glu	UGT73C1,C5	catalysis	1	1	50	18	1
+tZR	tZRMP	catalysis	1	1	3	7	1
+ADK	tZR	catalysis	1	1	6	3	1
+tZ	UGT76C1,C2	catalysis	1	1	28	24	1
+tZ	tZ7G	catalysis	1	1	28	2	1
+UGT76C1,C2	tZ7G	catalysis	1	1	24	2	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+tZ	UGT76C1,C2	catalysis	1	1	28	24	1
+tZ	tZ9G	catalysis	1	1	28	2	1
+UGT76C1,C2	tZ9G	catalysis	1	1	24	2	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+tZ	UGT85A1	catalysis	1	1	28	24	1
+tZ	tZOG	catalysis	1	1	28	4	1
+UGT85A1	tZOG	catalysis	1	1	24	4	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+tZ	UGT85A1	catalysis	1	1	28	24	1
+tZ	tZROG	catalysis	1	1	28	4	1
+UGT85A1	tZROG	catalysis	1	1	24	4	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+tZ	UGT73C1,C5	catalysis	1	1	28	18	1
+tZ	tZROG	catalysis	1	1	28	4	1
+UGT73C1,C5	tZROG	catalysis	1	1	18	4	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT73C1,C5	catalysis	1	1	50	18	1
+tZ	UGT73C1,C5	catalysis	1	1	28	18	1
+tZ	tZOG	catalysis	1	1	28	4	1
+UGT73C1,C5	tZOG	catalysis	1	1	18	4	1
+Glu	tZ	catalysis	1	1	50	28	1
+Glu	UGT73C1,C5	catalysis	1	1	50	18	1
+iPR	iPRMP	catalysis	1	1	3	9	1
+ADK	iPR	catalysis	1	1	6	3	1
+iP	UGT76C1,C2	catalysis	1	1	22	24	1
+iP	iP7G	catalysis	1	1	22	2	1
+UGT76C1,C2	iP7G	catalysis	1	1	24	2	1
+Glu	iP	catalysis	1	1	50	22	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+iP	UGT76C1,C2	catalysis	1	1	22	24	1
+iP	iP9G	catalysis	1	1	22	2	1
+UGT76C1,C2	iP9G	catalysis	1	1	24	2	1
+Glu	iP	catalysis	1	1	50	22	1
+Glu	UGT76C1,C2	catalysis	1	1	50	24	1
+iP	UGT85A1	catalysis	1	1	22	24	1
+iP	iPOG	catalysis	1	1	22	2	1
+UGT85A1	iPOG	catalysis	1	1	24	2	1
+Glu	iP	catalysis	1	1	50	22	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+iP	UGT85A1	catalysis	1	1	22	24	1
+iP	iPROG	catalysis	1	1	22	2	1
+UGT85A1	iPROG	catalysis	1	1	24	2	1
+Glu	iP	catalysis	1	1	50	22	1
+Glu	UGT85A1	catalysis	1	1	50	24	1
+iPRTP	tZRTP	catalysis	1	1	7	2	1
+CYP735A1,A2	iPRTP	catalysis	1	1	3	7	1
+iPRDP	tZRDP	catalysis	1	1	8	3	1
+CYP735A1,A2	iPRDP	catalysis	1	1	3	8	1
+iPRMP	tZRMP	catalysis	1	1	9	7	1
+CYP735A1,A2	iPRMP	catalysis	1	1	3	9	1
+tZRMP	DZRMP	catalysis	1	1	7	6	1
+NPR1|NPR1	NPR1	dissociation	1	1	3	11	1
+TRX-H	NPR1|NPR1	dissociation	1	1	2	3	1
+EBF|SCF	EIN3(like)	degradation/secretion	1	1	3	6	1
+COI1|JA-Ile|SCF	JAZ	degradation/secretion	1	1	4	9	1
+Anthocyanin-accumulation	potyvirus	degradation/secretion	1	1	2	5	1
+Trichome-initiation	potyvirus	degradation/secretion	1	1	2	5	1
+TAS3	ARF3	degradation/secretion	1	1	3	1	1
+TAS3	ARF4	degradation/secretion	1	1	3	1	1
+UPL5	WRKY53	degradation/secretion	1	1	1	6	1
+AOX	O2.-	degradation/secretion	1	1	1	6	1
+CAMTA3	SR1IP1	degradation/secretion	1	1	5	1	1
+R-gene	Ca2+	degradation/secretion	1	1	5	11	1
+CAT	H2O2	degradation/secretion	1	1	3	4	1
+APX	H2O2	degradation/secretion	1	1	1	4	1
+GPX	H2O2	degradation/secretion	1	1	1	4	1
+NADPH-dehydrogenase	O2.-	degradation/secretion	1	1	1	6	1
+SCF|SLY1	DELLA|GA1|GID1	degradation/secretion	1	1	3	3	1
+miR159a	MYB33	degradation/secretion	1	1	1	1	1
+miR159b	MYB65	degradation/secretion	1	1	1	1	1
+D14|MAX2|SCF	D53	degradation/secretion	1	1	4	1	1
+HMA	Cu2+	translocation	1	1	1	2	1
+CTS	OPDA	translocation	1	1	1	6	1
+EDS5	SA	translocation	1	1	5	16	1
+MOS	NPR1	translocation	1	1	1	11	1
+Cu2+	ETR	protein activation	1	1	2	5	1
+RTE1	CTR|ETR	protein activation	1	1	1	4	1
+ETP|SCF	EIN2	protein activation	1	1	3	4	1
+EIN2	EIN3(like)	protein activation	1	1	4	6	1
+MPK4	LOX	protein activation	1	1	2	3	1
+EDS5	ICS	protein activation	1	1	5	2	1
+ROS	TRX-H	protein activation	1	1	4	2	1
+MPK3	R-gene	protein activation	1	1	14	5	1
+MPK6	R-gene	protein activation	1	1	10	5	1
+SA	NPR1	protein activation	1	1	16	11	1
+MPK3	ERF6	protein activation	1	1	14	3	1
+MPK6	ERF6	protein activation	1	1	10	3	1
+MPK3	WRKY33	protein activation	1	1	14	7	1
+MPK6	WRKY33	protein activation	1	1	10	7	1
+MPK3	ACS2	protein activation	1	1	14	3	1
+MPK6	ACS6	protein activation	1	1	10	3	1
+MPK3	ERF5	protein activation	1	1	14	2	1
+MPK6	ERF5	protein activation	1	1	10	2	1
+MPK3	ERF104	protein activation	1	1	14	2	1
+MPK6	ERF104	protein activation	1	1	10	2	1
+MPK3	ERF105	protein activation	1	1	14	2	1
+MPK6	ERF105	protein activation	1	1	10	2	1
+ROS	GRX480	protein activation	1	1	4	2	1
+OG	WAK1	protein activation	1	1	1	2	1
+MPK3	WAK1	protein activation	1	1	14	2	1
+Ca2+	CDPK	protein activation	1	1	11	1	1
+Ca2+	CRT3	protein activation	1	1	11	3	1
+Ca2+	CRT2	protein activation	1	1	11	3	1
+Ca2+	CRT1	protein activation	1	1	11	5	1
+Ca2+	CAM	protein activation	1	1	11	3	1
+CPK1	RBOHD	protein activation	1	1	1	4	1
+CPK2	RBOHD	protein activation	1	1	1	4	1
+CPK4	RBOHD	protein activation	1	1	1	4	1
+CPK11	RBOHD	protein activation	1	1	1	4	1
+CPK4,5,6,11	WRKY8	protein activation	1	1	3	3	1
+CPK4,5,6,11	WRKY28	protein activation	1	1	3	3	1
+CPK4,5,6,11	WRKY48	protein activation	1	1	3	3	1
+CAM	CBP60G	protein activation	1	1	3	3	1
+CAM	CAMTA3	protein activation	1	1	3	5	1
+MPK3	ACS2	protein activation	1	1	14	3	1
+MPK3	ACS6	protein activation	1	1	14	3	1
+MPK3	EIN3	protein activation	1	1	14	5	1
+MPK6	EIN3	protein activation	1	1	10	5	1
+BAK1|FLS2|flg22	BIK1	protein activation	1	1	4	3	1
+Ca2+	NADPH-oxidase	protein activation	1	1	11	2	1
+CAM|Ca2+	CBP60G	protein activation	1	1	1	3	1
+MPK3	MYB44	protein activation	1	1	14	2	1
+AHK2,3,4	AHP1,2,3,4,5	protein activation	1	1	10	3	1
+AHP1,2,3,4,5	ARR-A	protein activation	1	1	3	3	1
+AHP1,2,3,4,5	ARR-B	protein activation	1	1	3	4	1
+CTR|ETR	EIN2	protein deactivation	1	1	4	4	1
+JAZ	WD/bHLH/MYB	protein deactivation	1	1	9	3	1
+AHP6	AHK2,3,4	protein deactivation	1	1	1	10	1
+ARR-A	ARR-B	protein deactivation	1	1	3	4	1
+EIN5	EBF	transcriptional/translational repression	1	1	1	4	1
+EIN3(like)	EBF	transcriptional/translational activation	1	1	6	4	1
+EIN3(like)	ERF/EDF	transcriptional/translational activation	1	1	6	2	1
+MYC	PR3	transcriptional/translational repression	1	1	11	1	1
+MYC	PR4	transcriptional/translational repression	1	1	11	1	1
+ERF/EDF	PDF1.2	transcriptional/translational activation	1	1	2	3	1
+MYC	LOX	transcriptional/translational activation	1	1	11	3	1
+OMR1	COI1|OMR1	transcriptional/translational activation	1	1	3	1	1
+COI1	OMR1	transcriptional/translational activation	1	1	7	3	1
+MYC	JAZ	transcriptional/translational activation	1	1	11	9	1
+JAM	MYC	transcriptional/translational repression	1	1	2	11	1
+MYC	CLH	transcriptional/translational activation	1	1	11	1	1
+MYC	JR1	transcriptional/translational activation	1	1	11	1	1
+MYC	PR13	transcriptional/translational activation	1	1	11	1	1
+MYC	VSP	transcriptional/translational activation	1	1	11	1	1
+WD/bHLH/MYB	Anthocyanin-accumulation	transcriptional/translational activation	1	1	3	2	1
+WD/bHLH/MYB	Trichome-initiation	transcriptional/translational activation	1	1	3	2	1
+PAD4	NPR1|PAD4|TGA2,5,6	transcriptional/translational activation	1	1	7	2	1
+NPR1|TGA2,5,6	PAD4	transcriptional/translational activation	1	1	10	7	1
+NPR1|TGA2,5,6	WRKY70	transcriptional/translational activation	1	1	10	2	1
+NPR1|TGA2,5,6	PR1	transcriptional/translational activation	1	1	10	3	1
+NPR1|TGA2,5,6	PR2	transcriptional/translational activation	1	1	10	1	1
+NPR1|TGA2,5,6	PR5	transcriptional/translational activation	1	1	10	1	1
+MIR390	TAS3	transcriptional/translational activation	1	1	1	3	1
+EDS5	EDS5|NPR1|TGA2,5,6	transcriptional/translational activation	1	1	5	1	1
+NPR1|TGA2,5,6	EDS5	transcriptional/translational activation	1	1	10	5	1
+EDS1	EDS1|NPR1|TGA2,5,6	transcriptional/translational activation	1	1	6	1	1
+NPR1|TGA2,5,6	EDS1	transcriptional/translational activation	1	1	10	6	1
+PAD4	NPR1|PAD4|TGA2,5,6	transcriptional/translational activation	1	1	7	2	1
+NPR1|TGA2,5,6	PAD4	transcriptional/translational activation	1	1	10	7	1
+MAPKKK8	WRKY53	transcriptional/translational activation	1	1	1	6	1
+WRKY57	SEN4	transcriptional/translational repression	1	1	8	1	1
+WRKY57	SAG12	transcriptional/translational repression	1	1	8	1	1
+ERF6	PDF1.2	transcriptional/translational activation	1	1	3	3	1
+CAMTA3	EDS1	transcriptional/translational repression	1	1	5	6	1
+GSTU24	GSTU24|ROS	transcriptional/translational activation	1	1	2	1	1
+ROS	GSTU24	transcriptional/translational activation	1	1	4	2	1
+ORA59	MYB113	transcriptional/translational activation	1	1	7	1	1
+ORA59	ERF096	transcriptional/translational activation	1	1	7	1	1
+ORA59	PDF1.2	transcriptional/translational activation	1	1	7	3	1
+EIN3	ERF1	transcriptional/translational activation	1	1	5	3	1
+WRKY33	WRKY33	transcriptional/translational activation	1	1	7	7	1
+WRKY33	PAD4	transcriptional/translational activation	1	1	7	7	1
+MYC2	DELLA	transcriptional/translational activation	1	1	9	11	1
+CAMTA3	EDS1	transcriptional/translational repression	1	1	5	6	1
+CAMTA3	EIN3	transcriptional/translational repression	1	1	5	5	1
+WRKY8	ICS1	transcriptional/translational activation	1	1	3	8	1
+WRKY28	ICS1	transcriptional/translational activation	1	1	3	8	1
+WRKY48	ICS1	transcriptional/translational activation	1	1	3	8	1
+CBP60G	ICS1	transcriptional/translational activation	1	1	3	8	1
+ERF	ACO	transcriptional/translational activation	1	1	1	2	1
+CML42|Ca2+	COI1	transcriptional/translational repression	1	1	3	7	1
+JAM	ERF1	transcriptional/translational repression	1	1	2	3	1
+TGA2,5,6	OPR1	transcriptional/translational activation	1	1	7	1	1
+EIN3	ICS1	transcriptional/translational repression	1	1	5	8	1
+MYB44	WRKY70	transcriptional/translational activation	1	1	2	2	1
+WRKY8	WRKY46	transcriptional/translational activation	1	1	3	3	1
+WRKY28	WRKY46	transcriptional/translational activation	1	1	3	3	1
+WRKY48	WRKY46	transcriptional/translational activation	1	1	3	3	1
+WRKY33	ACS2	transcriptional/translational activation	1	1	7	3	1
+WRKY33	ACS6	transcriptional/translational activation	1	1	7	3	1
+MYC2	ORA59	transcriptional/translational repression	1	1	9	7	1
+MYC2	NAC019	transcriptional/translational activation	1	1	9	3	1
+MYC2	NAC055	transcriptional/translational activation	1	1	9	3	1
+MYC2	NAC072	transcriptional/translational activation	1	1	9	3	1
+NAC019	ICS1	transcriptional/translational activation	1	1	3	8	1
+NAC055	ICS1	transcriptional/translational activation	1	1	3	8	1
+NAC072	ICS1	transcriptional/translational activation	1	1	3	8	1
+NAC019	SAGT	transcriptional/translational activation	1	1	3	5	1
+NAC055	SAGT	transcriptional/translational activation	1	1	3	5	1
+NAC072	SAGT	transcriptional/translational activation	1	1	3	5	1
+GA4	MYB33,65	transcriptional/translational activation	1	1	8	3	1
+GA3	MYB33,65	transcriptional/translational activation	1	1	6	3	1
+GA1	MYB33,65	transcriptional/translational activation	1	1	8	3	1
+ARR-B	ARR-A	transcriptional/translational activation	1	1	4	3	1
+ARR-B	PR1	transcriptional/translational activation	1	1	4	3	1
+TGA2,5,6	ORA59	transcriptional/translational activation	1	1	7	7	1
+ERF1	ORA59	transcriptional/translational activation	1	1	3	7	1
+ORA59	NAC032	transcriptional/translational activation	1	1	7	2	1
+SCL14|TGA2,5,6	NAC032	transcriptional/translational activation	1	1	3	2	1
+"9-cis-&beta;-carotene"	"9-cis-10&prime;-apo-&beta;-carotenal"	cleavage/auto-cleavage	1	1	3	3	1
+CCD7	"9-cis-&beta;-carotene"	cleavage/auto-cleavage	1	1	1	3	1
+"9-cis-10&prime;-apo-&beta;-carotenal"	CL	cleavage/auto-cleavage	1	1	3	3	1
+CCD8	"9-cis-10&prime;-apo-&beta;-carotenal"	cleavage/auto-cleavage	1	1	1	3	1
+SLs	D14	cleavage/auto-cleavage	1	1	2	5	1
+D14	SLs	cleavage/auto-cleavage	1	1	5	2	1
+prenyl-tRNA	cis-prenyl-tRNA	cleavage/auto-cleavage	1	1	4	2	1
+cis-prenyl-tRNA	cZRMP	cleavage/auto-cleavage	1	1	2	7	1
+cZRMP	cZR	cleavage/auto-cleavage	1	1	7	4	1
+APT	cZRMP	cleavage/auto-cleavage	1	1	4	7	1
+cZRMP	cZ	cleavage/auto-cleavage	1	1	7	26	1
+LOG	cZRMP	cleavage/auto-cleavage	1	1	4	7	1
+cZR	cZ	cleavage/auto-cleavage	1	1	4	26	1
+cZ	Ade	cleavage/auto-cleavage	1	1	26	4	1
+CKX	cZ	cleavage/auto-cleavage	1	1	8	26	1
+cZ	Ado	cleavage/auto-cleavage	1	1	26	4	1
+CKX	cZ	cleavage/auto-cleavage	1	1	8	26	1
+DZ	DZRMP	cleavage/auto-cleavage	1	1	28	6	1
+APT	DZ	cleavage/auto-cleavage	1	1	4	28	1
+DZRMP	DZ	cleavage/auto-cleavage	1	1	6	28	1
+LOG	DZRMP	cleavage/auto-cleavage	1	1	4	6	1
+DZR	DZ	cleavage/auto-cleavage	1	1	3	28	1
+DZ	Ade	cleavage/auto-cleavage	1	1	28	4	1
+CKX	DZ	cleavage/auto-cleavage	1	1	8	28	1
+DZ	Ado	cleavage/auto-cleavage	1	1	28	4	1
+CKX	DZ	cleavage/auto-cleavage	1	1	8	28	1
+tZ	tZRMP	cleavage/auto-cleavage	1	1	28	7	1
+APT	tZ	cleavage/auto-cleavage	1	1	4	28	1
+tZRMP	tZ	cleavage/auto-cleavage	1	1	7	28	1
+LOG	tZRMP	cleavage/auto-cleavage	1	1	4	7	1
+tZR	tZ	cleavage/auto-cleavage	1	1	3	28	1
+tZ	Ade	cleavage/auto-cleavage	1	1	28	4	1
+CKX	tZ	cleavage/auto-cleavage	1	1	8	28	1
+tZ	Ado	cleavage/auto-cleavage	1	1	28	4	1
+CKX	tZ	cleavage/auto-cleavage	1	1	8	28	1
+iP	iPRMP	cleavage/auto-cleavage	1	1	22	9	1
+APT	iP	cleavage/auto-cleavage	1	1	4	22	1
+iPRMP	iP	cleavage/auto-cleavage	1	1	9	22	1
+LOG	iPRMP	cleavage/auto-cleavage	1	1	4	9	1
+iPR	iP	cleavage/auto-cleavage	1	1	3	22	1
+iP	Ade	cleavage/auto-cleavage	1	1	22	4	1
+CKX	iP	cleavage/auto-cleavage	1	1	8	22	1
+iP	Ado	cleavage/auto-cleavage	1	1	22	4	1
+CKX	iP	cleavage/auto-cleavage	1	1	8	22	1
+iPRTP	iPRDP	cleavage/auto-cleavage	1	1	7	8	1
+iPRDP	iPRMP	cleavage/auto-cleavage	1	1	8	9	1
+tZRTP	tZRDP	cleavage/auto-cleavage	1	1	2	3	1
+tZRDP	tZRMP	cleavage/auto-cleavage	1	1	3	7	1
+SA	OPDA	undefined	1	1	16	6	1
+RTM1|RTM2|RTM3	potyvirus	undefined	1	1	4	5	1
+NPR1	EDS1|PAD4	undefined	1	1	11	11	1
+MPK4	EDS1|PAD4	undefined	1	1	2	11	1
+EDS1|PAD4	EDS5	undefined	1	1	11	5	1
+ARF2	AUX-signalling	undefined	1	1	1	1	1
+GRX480	TGA2,5,6	undefined	1	1	2	7	1
+EIN2	PR1	undefined	1	1	4	3	1
+SA	CAT2	undefined	1	1	16	5	1
+JASSY	OPDA	translocation	1	1	1	6	1
+SnRK2.8	NPR1	protein activation	1	1	1	11	1
+MYC2	YUC8	transcriptional/translational activation	1	1	9	1	1
+ERF11	BT4	transcriptional/translational activation	1	1	1	1	1
+MYC2	YUC9	transcriptional/translational activation	1	1	9	1	1

@@ -1,0 +1,998 @@
+athID	nodeID	athDescription	geneID
+AT5G56970	CKX	cytokinin oxidase 3	PGSC0003DMG400000277
+AT4G32810	CCD	carotenoid cleavage dioxygenase 8	PGSC0003DMG400002234
+AT4G37770	ACS	1-amino-cyclopropane-1-carboxylate synthase 8	PGSC0003DMG400003331
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	PGSC0003DMG400003405
+AT4G29010	AIM1	Enoyl-CoA hydratase/isomerase family	PGSC0003DMG400003906
+AT4G29010	MFP	Enoyl-CoA hydratase/isomerase family	PGSC0003DMG400003906
+AT1G50030	TOR	target of rapamycin	PGSC0003DMG400004508
+AT4G22570	APT	adenine phosphoribosyl transferase 3	PGSC0003DMG400004744
+AT1G43140	CUL	Cullin family protein	PGSC0003DMG400005332
+AT2G30720	ACH	Thioesterase/thiol ester dehydrase-isomerase superfamily protein	PGSC0003DMG400005371
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	PGSC0003DMG400005443
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	PGSC0003DMG400005444
+AT4G37770	ACS	1-amino-cyclopropane-1-carboxylate synthase 8	PGSC0003DMG400005479
+AT5G35750	AHK2,3,4	histidine kinase 2	PGSC0003DMG400006145
+AT1G13260	ERF/EDF	related to ABI3/VP1 1	PGSC0003DMG400007458
+AT2G23620	MES	methyl esterase 1	PGSC0003DMG400007654
+AT3G12500	PR3	basic chitinase	PGSC0003DMG400008796
+AT3G12500	PR3	basic chitinase	PGSC0003DMG400008797
+AT1G64060	RBOH	respiratory burst oxidase protein F	PGSC0003DMG400012316
+AT1G63440	HMA	heavy metal atpase 5	PGSC0003DMG400012348
+AT2G41510	CKX	cytokinin oxidase/dehydrogenase 1	PGSC0003DMG400012718
+AT2G23600	MES	acetone-cyanohydrin lyase	PGSC0003DMG400013101
+AT5G40580	PBB2	20S proteasome beta subunit PBB2	PGSC0003DMG400013210
+AT1G04240	AUX/IAA	AUX/IAA transcriptional regulator family protein	PGSC0003DMG400013445
+AT4G02570	CUL	cullin 1	PGSC0003DMG400014708
+AT1G30100	NCED	nine-cis-epoxycarotenoid dioxygenase 5	PGSC0003DMG400015100
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	PGSC0003DMG400015184
+AT3G03300	DCL2,4	dicer-like 2	PGSC0003DMG400016641
+AT4G33430	BAK1	BRI1-associated receptor kinase	PGSC0003DMG400017690
+AT3G06860	MFP	multifunctional protein 2	PGSC0003DMG400017930
+AT1G22400	UGT85A1	UDP-Glycosyltransferase superfamily protein	PGSC0003DMG400018063
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	PGSC0003DMG400018359
+AT2G46370	JAR	Auxin-responsive GH3 family protein	PGSC0003DMG400019881
+AT4G02780	CPS	Terpenoid cyclases/Protein prenyltransferases superfamily protein	PGSC0003DMG400020053
+AT4G32280	AUX/IAA	indole-3-acetic acid inducible 29	PGSC0003DMG400020478
+AT1G30380	PSAK	photosystem I subunit K	PGSC0003DMG400020505
+AT4G39460	SAMC	S-adenosylmethionine carrier 1	PGSC0003DMG400020962
+AT4G22570	APT	adenine phosphoribosyl transferase 3	PGSC0003DMG400021527
+AT1G79460	KS	Terpenoid cyclases/Protein prenyltransferases superfamily protein	PGSC0003DMG400022114
+AT5G18100	SOD	copper/zinc superoxide dismutase 3	PGSC0003DMG400023086
+AT1G55020	LOX	lipoxygenase 1	PGSC0003DMG400024689
+AT1G55020	LOX	lipoxygenase 1	PGSC0003DMG400024690
+AT1G55020	LOX	lipoxygenase 1	PGSC0003DMG400024693
+AT5G04870	CDPK	calcium dependent protein kinase 1	PGSC0003DMG400025435
+AT3G12500	PR3	basic chitinase	PGSC0003DMG400026853
+AT3G12500	PR3	basic chitinase	PGSC0003DMG400026854
+AT3G12500	PR3	basic chitinase	PGSC0003DMG400026855
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	PGSC0003DMG400027898
+AT1G76690	OPR	12-oxophytodienoate reductase 2	PGSC0003DMG400028018
+AT3G22400	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	PGSC0003DMG400028887
+AT2G41510	CKX	cytokinin oxidase/dehydrogenase 1	PGSC0003DMG400029845
+AT1G07890	APX	ascorbate peroxidase 1	PGSC0003DMG400030056
+AT3G45640	MPK3,6	mitogen-activated protein kinase 3	PGSC0003DMG400030058
+AT1G07890	APX	ascorbate peroxidase 1	PGSC0003DMG400030063
+AT1G78290	SNRK2	Protein kinase superfamily protein	PGSC0003DMG400030830
+AT3G49500	RDR6	RNA-dependent RNA polymerase 6	PGSC0003DMG400030859
+AT3G49500	RDR1,6	RNA-dependent RNA polymerase 6	PGSC0003DMG400030859
+AT2G06050	OPR	oxophytodienoate-reductase 3	PGSC0003DMG400030890
+AT5G03300	ADK	adenosine kinase 2	PGSC0003DMG400031364
+AT2G37040	PAL	PHE ammonia lyase 1	PGSC0003DMG400031365
+AT5G21482	CKX	cytokinin oxidase 7	PGSC0003DMG400031420
+AT5G21482	CKX	cytokinin oxidase 7	PGSC0003DMG400031421
+AT3G45140	LOX	lipoxygenase 2	PGSC0003DMG400032207
+AT4G39950	CYP79B2	cytochrome P450%2C family 79%2C subfamily B%2C polypeptide 2	PGSC0003DMG400033617
+AT3G61510	ACS	ACC synthase 1	PGSC0003DMG400033885
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400034585
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400034593
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400035116
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400035908
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	PGSC0003DMG400036003
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400036132
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400036946
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400037610
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400038123
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400038521
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	PGSC0003DMG400039968
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400040027
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400040894
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400040970
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	PGSC0003DMG400042787
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400042932
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400043341
+AT1G77450	NAC032	NAC domain containing protein 32	PGSC0003DMG400043393
+AT3G16360	AHP	HPT phosphotransmitter 4	PGSC0003DMG400043646
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400044260
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400044693
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400044956
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400045199
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400046627
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG400046681
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG400046752
+AT3G03990	D14	alpha/beta-Hydrolases superfamily protein	PGSC0003DMG400046851
+AT4G03400	JAR	Auxin-responsive GH3 family protein	PGSC0003DMG401018368
+AT1G76690	OPR	12-oxophytodienoate reductase 2	PGSC0003DMG401018777
+AT1G51680	4CL	4-coumarate:CoA ligase 1	PGSC0003DMG401019891
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	PGSC0003DMG401021057
+AT3G53260	PAL	phenylalanine ammonia-lyase 2	PGSC0003DMG401021564
+AT1G55020	LOX	lipoxygenase 1	PGSC0003DMG401024691
+AT1G21250	WAK1	cell wall-associated kinase	PGSC0003DMG402011794
+AT4G03400	JAR	Auxin-responsive GH3 family protein	PGSC0003DMG402018368
+AT1G76690	OPR	12-oxophytodienoate reductase 2	PGSC0003DMG402018777
+AT2G37040	PAL	PHE ammonia lyase 1	PGSC0003DMG402021549
+AT3G22400	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	PGSC0003DMG402024691
+AT5G52640	HSP90	heat shock-like protein	PGSC0003DMG402028907
+AT3G02875	ILR1	Peptidase M20/M25/M40 family protein	PGSC0003DMG402032161
+AT2G27150	AAO	abscisic aldehyde oxidase 3	PGSC0003DMG403006826
+AT1G55020	LOX	lipoxygenase 1	PGSC0003DMG406000070
+AT3G53260	PAL	phenylalanine ammonia-lyase 2	PGSC0003DMG406000072
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG406000076
+AT2G37040	PAL	PHE ammonia lyase 1	PGSC0003DMG406000097
+AT3G63110	IPT	isopentenyltransferase 3	PGSC0003DMG406000110
+AT1G66410	CML	calmodulin 4	PGSC0003DMG406000122
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	PGSC0003DMG406000187
+AT4G12570	UPL5	ubiquitin protein ligase 5	PGSC0003DMG406000258
+AT2G37040	PAL	PHE ammonia lyase 1	PGSC0003DMG406000271
+AT2G23620	MES	methyl esterase 1	PGSC0003DMG406000285
+AT2G23620	MES	methyl esterase 1	PGSC0003DMG406000290
+AT5G19040	IPT	isopentenyltransferase 5	PGSC0003DMG406000337
+AT3G12500	PR3	basic chitinase	PGSC0003DMG406000376
+AT5G11950	LOG	Putative lysine decarboxylase family protein	Sotub01g006060
+AT3G45140	LOX	lipoxygenase 2	Sotub01g007030
+AT3G45140	LOX	lipoxygenase 2	Sotub01g007060
+AT3G10660	CDPK	calmodulin-domain protein kinase cdpk isoform 2	Sotub01g007410
+AT5G06300	LOG	Putative lysine decarboxylase family protein	Sotub01g007950
+AT5G06300	LOG	Putative lysine decarboxylase family protein	Sotub01g007960
+AT3G57260	PR2	beta-1%2C3-glucanase 2	Sotub01g009330
+AT3G57260	PR2	beta-1%2C3-glucanase 2	Sotub01g009360
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub01g009430
+AT3G11440	MYB33,44,65	myb domain protein 65	Sotub01g009900
+AT3G20770	EIN3(like)	Ethylene insensitive 3 family protein	Sotub01g010040
+AT5G17920	MS	Cobalamin-independent synthase family protein	Sotub01g010050
+AT2G27150	AAO	abscisic aldehyde oxidase 3	Sotub01g010090
+AT1G50030	TOR	target of rapamycin	Sotub01g011810
+AT2G26170	MAX1	cytochrome P450%2C family 711%2C subfamily A%2C polypeptide 1	Sotub01g012610
+AT2G32440	KAO1,2	ent-kaurenoic acid hydroxylase 2	Sotub01g012740
+AT1G02400	C19-GA2ox	gibberellin 2-oxidase 6	Sotub01g013010
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub01g013450
+AT1G30040	C19-GA2ox	gibberellin 2-oxidase	Sotub01g014050
+AT3G63110	IPT	isopentenyltransferase 3	Sotub01g014560
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub01g015200
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub01g015210
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub01g015230
+AT3G63110	IPT	isopentenyltransferase 3	Sotub01g017540
+AT3G63110	IPT	isopentenyltransferase 3	Sotub01g018400
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub01g020650
+AT3G06860	MFP	multifunctional protein 2	Sotub01g020690
+AT4G02570	CUL	cullin 1	Sotub01g021180
+AT4G02570	CUL	cullin 1	Sotub01g021190
+AT4G02570	CUL	cullin 1	Sotub01g021200
+AT4G02570	CUL	cullin 1	Sotub01g021230
+AT4G02570	CUL	cullin 1	Sotub01g021250
+AT4G02570	CUL	cullin 1	Sotub01g021260
+AT4G02570	CUL	cullin 1	Sotub01g021280
+AT4G02570	CUL	cullin 1	Sotub01g021290
+AT4G02570	CUL	cullin 1	Sotub01g021330
+AT1G08830	SOD	copper/zinc superoxide dismutase 1	Sotub01g021760
+AT4G15560	DXPS2	Deoxyxylulose-5-phosphate synthase	Sotub01g021980
+AT3G21510	AHP	histidine-containing phosphotransmitter 1	Sotub01g022470
+AT5G19040	IPT	isopentenyltransferase 5	Sotub01g022880
+AT2G27150	AAO	abscisic aldehyde oxidase 3	Sotub01g025220
+AT3G63440	CKX	cytokinin oxidase/dehydrogenase 6	Sotub01g025230
+AT1G05160	KAO1,2	cytochrome P450%2C family 88%2C subfamily A%2C polypeptide 3	Sotub01g028290
+AT5G46570	BSK	BR-signaling kinase 2	Sotub01g028310
+AT2G44990	CCD	carotenoid cleavage dioxygenase 7	Sotub01g029800
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub01g031210
+-	GA20ox	-	Sotub01g031210
+AT4G00660	RH8	RNAhelicase-like 8	Sotub01g031710
+AT4G01370	MPK4	MAP kinase 4	Sotub01g032370
+AT3G61510	ACS	ACC synthase 1	Sotub01g032520
+AT2G46370	JAR	Auxin-responsive GH3 family protein	Sotub01g033030
+AT3G20770	EIN3(like)	Ethylene insensitive 3 family protein	Sotub01g034310
+AT3G04720	PR4	pathogenesis-related 4	Sotub01g034730
+AT3G04720	PR4	pathogenesis-related 4	Sotub01g034760
+AT3G04720	PR4	pathogenesis-related 4	Sotub01g034770
+AT3G04730	AUX/IAA	indoleacetic acid-induced protein 16	Sotub01g034780
+AT3G04870	ZDS1	zeta-carotene desaturase	Sotub01g035320
+AT5G27320	GID	alpha/beta-Hydrolases superfamily protein	Sotub01g036020
+AT3G21510	AHP	histidine-containing phosphotransmitter 1	Sotub01g036030
+AT5G27450	MVK	mevalonate kinase	Sotub01g036540
+AT1G55020	LOX	lipoxygenase 1	Sotub01g036960
+AT1G55020	LOX	lipoxygenase 1	Sotub01g036990
+AT1G55020	LOX	lipoxygenase 1	Sotub01g037000
+AT1G55020	LOX	lipoxygenase 1	Sotub01g037010
+AT1G09090	RBOH	respiratory burst oxidase-like protein	Sotub01g037380
+AT1G09210	CRT	calreticulin 1b	Sotub01g038210
+AT4G01850	SAMS	S-adenosylmethionine synthetase 2	Sotub01g038880
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub01g040320
+AT4G33430	BAK1	BRI1-associated receptor kinase	Sotub01g042020
+AT2G14610	PR1	pathogenesis-related protein 1	Sotub01g043780
+AT2G14580	PR1	basic pathogenesis-related protein 1	Sotub01g043900
+AT2G14580	PR1	basic pathogenesis-related protein 1	Sotub01g043910
+AT2G14580	PR1	basic pathogenesis-related protein 1	Sotub01g043920
+AT1G50030	TOR	target of rapamycin	Sotub01g044020
+AT4G33950	SNRK2	Protein kinase superfamily protein	Sotub01g045450
+AT4G34350	ISPH	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	Sotub01g046610
+AT4G35000	APX	ascorbate peroxidase 3	Sotub01g048890
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub01g049050
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub01g049060
+AT2G17290	CDPK	Calcium-dependent protein kinase family protein	Sotub01g049780
+AT1G15710	TYRAAT1,2	prephenate dehydrogenase family protein	Sotub02g006440
+AT4G18040	EIF4E1	eukaryotic translation initiation factor 4E	Sotub02g007310
+AT1G05010	ACO	ethylene-forming enzyme	Sotub02g008310
+AT3G12500	PR3	basic chitinase	Sotub02g009500
+AT4G37770	ACS	1-amino-cyclopropane-1-carboxylate synthase 8	Sotub02g011290
+AT2G23620	MES	methyl esterase 1	Sotub02g012030
+AT2G23620	MES	methyl esterase 1	Sotub02g012040
+-	MES	-	Sotub02g012040
+AT5G44790	HMA	copper-exporting ATPase / responsive-to-antagonist 1 / copper-transporting ATPase (RAN1)	Sotub02g014610
+AT5G45110	NPR3	NPR1-like protein 3	Sotub02g015550
+AT1G30040	C19-GA2ox	gibberellin 2-oxidase	Sotub02g016800
+AT5G46330	FLS2	Leucine-rich receptor-like protein kinase family protein	Sotub02g017300
+AT5G46330	FLS2	Leucine-rich receptor-like protein kinase family protein	Sotub02g017320
+AT3G57040	ARR-A	response regulator 9	Sotub02g017560
+AT5G45890	SAGs	senescence-associated gene 12	Sotub02g019540
+AT5G45890	SAGs	senescence-associated gene 12	Sotub02g019600
+AT5G45890	SAGs	senescence-associated gene 12	Sotub02g019640
+AT3G23240	ERF1	ethylene response factor 1	Sotub02g020180
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub02g020180
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub02g022180
+AT1G11790	ADT	arogenate dehydratase 1	Sotub02g023790
+AT1G05010	ACO	ethylene-forming enzyme	Sotub02g024300
+AT4G35090	CAT	catalase 2	Sotub02g026140
+AT3G12500	PR3	basic chitinase	Sotub02g026290
+AT3G12500	PR3	basic chitinase	Sotub02g026320
+AT4G35000	APX	ascorbate peroxidase 3	Sotub02g026930
+AT3G25780	AOC	allene oxide cyclase 3	Sotub02g028860
+AT5G38450	CYP735A1,A2	cytochrome P450%2C family 735%2C subfamily A%2C polypeptide 1	Sotub02g029040
+AT5G38450	CYP735A1,A2	cytochrome P450%2C family 735%2C subfamily A%2C polypeptide 1	Sotub02g029050
+AT5G38450	CYP735A1,A2	cytochrome P450%2C family 735%2C subfamily A%2C polypeptide 1	Sotub02g029060
+AT4G37770	ACS	1-amino-cyclopropane-1-carboxylate synthase 8	Sotub02g030480
+-	ZEP	-	Sotub02g031970
+-	SNRK2	-	Sotub02g032470
+AT4G33950	SNRK2	Protein kinase superfamily protein	Sotub02g032490
+-	CO	-	Sotub02g033400
+AT1G62940	4CL	acyl-CoA synthetase 5	Sotub02g034170
+AT3G29200	CM	chorismate mutase 1	Sotub02g034450
+-	CML	-	Sotub02g034770
+AT3G23230	ERF/EDF	Integrase-type DNA-binding superfamily protein	Sotub03g005730
+AT3G23230	ERF/EDF	Integrase-type DNA-binding superfamily protein	Sotub03g005740
+AT3G23240	ERF1	ethylene response factor 1	Sotub03g005750
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub03g005750
+AT4G18040	EIF4E1	eukaryotic translation initiation factor 4E	Sotub03g006160
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub03g007160
+-	GA20ox	-	Sotub03g007160
+AT5G38430	RBC	Ribulose bisphosphate carboxylase (small chain) family protein	Sotub03g009830
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub03g010370
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub03g010860
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub03g011600
+AT4G11260	SGT1	phosphatase-like protein	Sotub03g012020
+AT5G52640	HSP90	heat shock-like protein	Sotub03g012220
+AT5G24020	MIND1	septum site-determining protein (MIND)	Sotub03g015790
+AT4G25700	BETA-OHASE	beta-hydroxylase 1	Sotub03g015810
+AT1G65060	4CL	4-coumarate:CoA ligase 3	Sotub03g017690
+AT1G22400	UGT85A1	UDP-Glycosyltransferase superfamily protein	Sotub03g019100
+AT2G23600	MES	acetone-cyanohydrin lyase	Sotub03g019270
+AT2G37040	PAL	PHE ammonia lyase 1	Sotub03g019490
+-	PP2C	-	Sotub03g021270
+AT1G48410	AGO1	Stabilizer of iron transporter SufD / Polynucleotidyl transferase	Sotub03g022990
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	Sotub03g023780
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	Sotub03g023790
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	Sotub03g023800
+AT3G48520	CYP94	cytochrome P450%2C family 94%2C subfamily B%2C polypeptide 3	Sotub03g023820
+AT1G80100	AHP	histidine phosphotransfer protein 6	Sotub03g030170
+AT1G80680	MOS	SUPPRESSOR OF AUXIN RESISTANCE 3	Sotub03g030600
+AT3G23240	ERF1	ethylene response factor 1	Sotub03g030820
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub03g030820
+AT3G21240	4CL	4-coumarate:CoA ligase 2	Sotub03g031330
+AT5G47910	RBOH	respiratory burst oxidase homologue D	Sotub03g031420
+AT3G17880	TDX	tetraticopeptide domain-containing thioredoxin	Sotub03g031990
+AT3G17880	TDX	tetraticopeptide domain-containing thioredoxin	Sotub03g032000
+AT1G15550	GA3ox	gibberellin 3-oxidase 1	Sotub03g033480
+AT4G14210	PDS	phytoene desaturase 3	Sotub03g034210
+AT1G17420	LOX	lipoxygenase 3	Sotub03g034620
+-	LOX	-	Sotub03g034620
+AT3G42830	RBX	RING/U-box superfamily protein	Sotub03g034630
+AT1G66340	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub03g035240
+AT1G51760	IAR	peptidase M20/M25/M40 family protein	Sotub03g035690
+AT3G16360	AHP	HPT phosphotransmitter 4	Sotub03g035960
+AT1G68100	IAR	ZIP metal ion transporter family	Sotub04g007070
+AT2G01830	AHK2,3,4	CHASE domain containing histidine kinase protein	Sotub04g007630
+AT2G39350	JAT2	ABC-2 type transporter family protein	Sotub04g009760
+AT2G39350	JAT2	ABC-2 type transporter family protein	Sotub04g009770
+AT4G33950	SNRK2	Protein kinase superfamily protein	Sotub04g011170
+AT3G49500	RDR6	RNA-dependent RNA polymerase 6	Sotub04g012000
+AT3G49500	RDR1,6	RNA-dependent RNA polymerase 6	Sotub04g012000
+AT2G41310	ARR-A	response regulator 3	Sotub04g014970
+AT2G46370	JAR	Auxin-responsive GH3 family protein	Sotub04g016550
+AT1G35670	CDPK	calcium-dependent protein kinase 2	Sotub04g016760
+AT1G54490	EIN5	exoribonuclease 4	Sotub04g016890
+AT1G08450	CRT	calreticulin 3	Sotub04g016930
+AT3G63110	IPT	isopentenyltransferase 3	Sotub04g017090
+AT5G19040	IPT	isopentenyltransferase 5	Sotub04g017100
+AT3G23630	IPT	isopentenyltransferase 7	Sotub04g017660
+AT3G10230	LCY1	lycopene cyclase	Sotub04g018690
+AT1G08550	VDE1	non-photochemical quenching 1	Sotub04g019450
+AT1G08550	VDE1	non-photochemical quenching 1	Sotub04g019510
+AT1G08550	VDE1	non-photochemical quenching 1	Sotub04g019610
+AT1G31800	BETA-OHASE	cytochrome P450%2C family 97%2C subfamily A%2C polypeptide 3	Sotub04g019700
+-	CAMTA3	-	Sotub04g020530
+AT4G39850	CTS	peroxisomal ABC transporter 1	Sotub04g020700
+AT4G39460	SAMC	S-adenosylmethionine carrier 1	Sotub04g021570
+AT2G22250	PA	aspartate aminotransferase	Sotub04g021940
+AT4G39400	BRI1	Leucine-rich receptor-like protein kinase family protein	Sotub04g025630
+AT1G52340	ABA2	NAD(P)-binding Rossmann-fold superfamily protein	Sotub04g026480
+AT1G52340	ABA2	NAD(P)-binding Rossmann-fold superfamily protein	Sotub04g026490
+AT1G22400	UGT85A1	UDP-Glycosyltransferase superfamily protein	Sotub04g028100
+AT4G09010	APX	ascorbate peroxidase 4	Sotub04g028420
+AT4G37770	ACS	1-amino-cyclopropane-1-carboxylate synthase 8	Sotub04g030350
+AT3G03990	D14	alpha/beta-Hydrolases superfamily protein	Sotub04g030860
+AT5G25900	KO	GA requiring 3	Sotub04g032780
+AT5G25900	KO	GA requiring 3	Sotub04g032790
+AT5G42650	AOS	allene oxide synthase	Sotub04g032980
+AT1G75450	CKX	cytokinin oxidase 5	Sotub04g034220
+AT2G28305	LOG	Putative lysine decarboxylase family protein	Sotub04g034670
+AT4G24190	HSP90	Chaperone protein htpG family protein	Sotub04g034950
+AT4G35230	BSK	BR-signaling kinase 1	Sotub04g035700
+AT4G35090	CAT	catalase 2	Sotub04g035910
+AT1G69220	SIK1	Protein kinase superfamily protein	Sotub05g005910
+AT2G04030	HSP90	Chaperone protein htpG family protein	Sotub05g006510
+AT1G13260	ERF/EDF	related to ABI3/VP1 1	Sotub05g007520
+AT1G68460	IPT	isopentenyltransferase 1	Sotub05g008000
+AT2G01200	AUX/IAA	indole-3-acetic acid inducible 32	Sotub05g008800
+AT1G14790	RDR1,6	RNA-dependent RNA polymerase 1	Sotub05g010490
+AT1G14790	RDR1,6	RNA-dependent RNA polymerase 1	Sotub05g010500
+AT1G10350	CPIP	DNAJ heat shock family protein	Sotub05g011560
+AT1G10470	ARR-A	response regulator 4	Sotub05g012020
+AT1G51760	IAR	peptidase M20/M25/M40 family protein	Sotub05g012310
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub05g014160
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub05g014170
+AT1G67710	ARR-B	response regulator 11	Sotub05g015260
+AT1G67560	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	Sotub05g015810
+AT1G27320	AHK2,3,4	histidine kinase 3	Sotub05g016490
+AT1G19230	RBOH	Riboflavin synthase-like superfamily protein	Sotub05g016960
+AT3G53260	PAL	phenylalanine ammonia-lyase 2	Sotub05g019810
+AT2G30490	CYP73A5	cinnamate-4-hydroxylase	Sotub05g021840
+AT4G00660	RH8	RNAhelicase-like 8	Sotub05g022160
+AT4G00660	RH8	RNAhelicase-like 8	Sotub05g022170
+AT4G01370	MPK4	MAP kinase 4	Sotub05g022310
+AT3G61510	ACS	ACC synthase 1	Sotub05g022360
+AT3G61510	ACS	ACC synthase 1	Sotub05g022370
+AT1G01480	ACS	1-amino-cyclopropane-1-carboxylate synthase 2	Sotub05g022410
+AT2G46370	JAR	Auxin-responsive GH3 family protein	Sotub05g022550
+AT2G46370	JAR	Auxin-responsive GH3 family protein	Sotub05g022560
+AT3G23240	ERF1	ethylene response factor 1	Sotub05g023530
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub05g023530
+AT2G40330	PYL	PYR1-like 6	Sotub05g025080
+AT2G39940	COI1	RNI-like superfamily protein	Sotub05g025280
+AT3G11410	PP2C	protein phosphatase 2CA	Sotub05g025680
+AT3G24220	NCED	nine-cis-epoxycarotenoid dioxygenase 6	Sotub05g026290
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub05g026730
+-	SP5G	-	Sotub05g026730
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub05g026750
+AT2G39350	JAT2	ABC-2 type transporter family protein	Sotub05g027960
+AT3G04580	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub05g028140
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub05g028860
+AT3G53260	PAL	phenylalanine ammonia-lyase 2	Sotub05g029380
+AT1G08450	CRT	calreticulin 3	Sotub05g029430
+AT1G35670	CDPK	calcium-dependent protein kinase 2	Sotub05g029790
+AT1G07530	SCL14	SCARECROW-like 14	Sotub06g005020
+AT2G47730	GST	glutathione S-transferase phi 8	Sotub06g007440
+AT1G02920	GST	glutathione S-transferase 7	Sotub06g007450
+AT5G25350	EBF	EIN3-binding F box protein 2	Sotub06g007800
+AT4G28720	YUC	Flavin-binding monooxygenase family protein	Sotub06g008160
+AT1G04240	AUX/IAA	AUX/IAA transcriptional regulator family protein	Sotub06g008420
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008630
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008640
+AT3G63010	GID	alpha/beta-Hydrolases superfamily protein	Sotub06g008680
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008730
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008780
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008800
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008830
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008880
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008900
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g008940
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub06g009210
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g010850
+AT5G34930	TYRAAT1,2	arogenate dehydrogenase	Sotub06g011080
+AT5G52640	HSP90	heat shock-like protein	Sotub06g012010
+AT5G56010	HSP90	heat shock protein 81-3	Sotub06g012020
+AT3G56380	ARR-A	response regulator 17	Sotub06g012840
+AT2G25490	EBF	EIN3-binding F box protein 1	Sotub06g012850
+AT4G12570	UPL5	ubiquitin protein ligase 5	Sotub06g013400
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub06g013870
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub06g013880
+AT3G56380	ARR-A	response regulator 17	Sotub06g014840
+AT4G25700	BETA-OHASE	beta-hydroxylase 1	Sotub06g016420
+AT5G43700	AUX/IAA	AUX/IAA transcriptional regulator family protein	Sotub06g016970
+AT3G04730	AUX/IAA	indoleacetic acid-induced protein 16	Sotub06g016980
+AT3G04580	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub06g017120
+AT1G77330	ACO	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub06g017930
+AT3G02875	ILR1	Peptidase M20/M25/M40 family protein	Sotub06g018160
+AT1G15710	TYRAAT1,2	prephenate dehydrogenase family protein	Sotub06g020980
+AT3G42830	RBX	RING/U-box superfamily protein	Sotub06g021970
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub06g023200
+AT1G15550	GA3ox	gibberellin 3-oxidase 1	Sotub06g023360
+-	GA3ox	-	Sotub06g023360
+AT4G09570	CDPK	calcium-dependent protein kinase 4	Sotub06g024400
+AT3G21240	4CL	4-coumarate:CoA ligase 2	Sotub06g025530
+AT5G47910	RBOH	respiratory burst oxidase homologue D	Sotub06g025550
+-	RBOH	-	Sotub06g025550
+AT5G47910	RBOH	respiratory burst oxidase homologue D	Sotub06g025580
+-	RBOH	-	Sotub06g025580
+AT1G18870	ICS	isochorismate synthase 2	Sotub06g027020
+AT1G74710	ICS	ADC synthase superfamily protein	Sotub06g027060
+AT1G48410	AGO1	Stabilizer of iron transporter SufD / Polynucleotidyl transferase	Sotub06g028680
+AT3G20770	EIN3(like)	Ethylene insensitive 3 family protein	Sotub06g030440
+AT3G20770	EIN3(like)	Ethylene insensitive 3 family protein	Sotub06g030450
+-	MYB33,44,65	-	Sotub06g030530
+AT1G08250	ADT	arogenate dehydratase 6	Sotub06g031090
+AT2G27690	CYP94	cytochrome P450%2C family 94%2C subfamily C%2C polypeptide 1	Sotub06g031170
+AT1G08320	bZIP21	bZIP transcription factor family protein	Sotub06g031310
+-	PP2C	-	Sotub06g032210
+AT2G30490	CYP73A5	cinnamate-4-hydroxylase	Sotub06g033340
+AT2G30490	CYP73A5	cinnamate-4-hydroxylase	Sotub06g033350
+AT4G28720	YUC	Flavin-binding monooxygenase family protein	Sotub06g034160
+AT4G16430	JAM	basic helix-loop-helix (bHLH) DNA-binding superfamily protein	Sotub06g034420
+-	CPS	-	Sotub06g034690
+AT3G21510	AHP	histidine-containing phosphotransmitter 1	Sotub06g034910
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub06g034990
+AT4G02570	CUL	cullin 1	Sotub06g035020
+AT1G15710	TYRAAT1,2	prephenate dehydrogenase family protein	Sotub07g007310
+AT5G57560	XTH	Xyloglucan endotransglucosylase/hydrolase family protein	Sotub07g008060
+AT2G25490	EBF	EIN3-binding F box protein 1	Sotub07g008210
+AT1G67090	RBC	ribulose bisphosphate carboxylase small chain 1A	Sotub07g010460
+AT5G05680	MOS	nuclear pore complex protein-like protein	Sotub07g010670
+AT5G05680	MOS	nuclear pore complex protein-like protein	Sotub07g010680
+AT5G05680	MOS	nuclear pore complex protein-like protein	Sotub07g010690
+AT1G64280	NPR1	regulatory protein (NPR1)	Sotub07g011600
+AT4G29010	AIM1	Enoyl-CoA hydratase/isomerase family	Sotub07g011920
+AT4G29010	MFP	Enoyl-CoA hydratase/isomerase family	Sotub07g011920
+AT5G57420	AUX/IAA	indole-3-acetic acid inducible 33	Sotub07g012700
+AT5G05680	MOS	nuclear pore complex protein-like protein	Sotub07g013470
+AT5G05680	MOS	nuclear pore complex protein-like protein	Sotub07g013490
+AT2G19590	ACO	ACC oxidase 1	Sotub07g013910
+AT4G26200	ACS	1-amino-cyclopropane-1-carboxylate synthase 7	Sotub07g014010
+AT1G19230	RBOH	Riboflavin synthase-like superfamily protein	Sotub07g016200
+-	PIF3,4	-	Sotub07g016670
+AT5G45110	NPR3	NPR1-like protein 3	Sotub07g016890
+AT3G07770	HSP90	HEAT SHOCK PROTEIN 89.1	Sotub07g017930
+AT1G05010	ACO	ethylene-forming enzyme	Sotub07g018790
+AT1G05010	ACO	ethylene-forming enzyme	Sotub07g018820
+-	ACO	-	Sotub07g018820
+AT4G18040	EIF4E1	eukaryotic translation initiation factor 4E	Sotub07g018920
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub07g019860
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub07g019870
+AT4G08500	MAPKKK8	MAPK/ERK kinase kinase 1	Sotub07g020610
+AT1G28480	GRX480	Thioredoxin superfamily protein	Sotub07g021700
+AT3G15290	MFP	3-hydroxyacyl-CoA dehydrogenase family protein	Sotub07g024210
+AT1G30040	C19-GA2ox	gibberellin 2-oxidase	Sotub07g025590
+AT1G30040	C19-GA2ox	gibberellin 2-oxidase	Sotub07g025600
+AT1G30040	C19-GA2ox	gibberellin 2-oxidase	Sotub07g025610
+AT1G66340	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub07g025670
+AT3G14440	NCED	nine-cis-epoxycarotenoid dioxygenase 3	Sotub07g025690
+AT5G56000	HSP90	HEAT SHOCK PROTEIN 81.4	Sotub07g027990
+AT5G55250	IAMT1	IAA carboxylmethyltransferase 1	Sotub07g028860
+AT5G47220	ERF/EDF	ethylene responsive element binding factor 2	Sotub08g005000
+AT4G31120	CAU1	SHK1 binding protein 1	Sotub08g007070
+AT2G24860	EIJP1	DnaJ/Hsp40 cysteine-rich domain superfamily protein	Sotub08g007860
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g008320
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g008330
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g008340
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g008350
+AT1G55020	LOX	lipoxygenase 1	Sotub08g008740
+AT4G11280	ACS	1-aminocyclopropane-1-carboxylic acid (acc) synthase 6	Sotub08g009730
+AT2G43790	MPK3,6	MAP kinase 6	Sotub08g010260
+AT1G55020	LOX	lipoxygenase 1	Sotub08g010690
+AT3G22400	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	Sotub08g010700
+AT3G22400	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	Sotub08g010710
+AT1G55020	LOX	lipoxygenase 1	Sotub08g010720
+AT1G55020	LOX	lipoxygenase 1	Sotub08g010730
+AT1G55020	LOX	lipoxygenase 1	Sotub08g010740
+AT1G55020	LOX	lipoxygenase 1	Sotub08g011220
+AT4G32320	APX	ascorbate peroxidase 6	Sotub08g011590
+AT4G02570	CUL	cullin 1	Sotub08g011700
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub08g012000
+AT2G25490	EBF	EIN3-binding F box protein 1	Sotub08g012300
+AT2G26170	MAX1	cytochrome P450%2C family 711%2C subfamily A%2C polypeptide 1	Sotub08g012670
+AT5G11950	LOG	Putative lysine decarboxylase family protein	Sotub08g012830
+AT2G43820	SAGT	UDP-glucosyltransferase 74F2	Sotub08g013210
+AT3G16360	AHP	HPT phosphotransmitter 4	Sotub08g015710
+AT4G29010	AIM1	Enoyl-CoA hydratase/isomerase family	Sotub08g019780
+AT4G29010	MFP	Enoyl-CoA hydratase/isomerase family	Sotub08g019780
+AT4G29010	AIM1	Enoyl-CoA hydratase/isomerase family	Sotub08g019790
+AT4G29010	MFP	Enoyl-CoA hydratase/isomerase family	Sotub08g019790
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g020580
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g020590
+AT4G19170	NCED	nine-cis-epoxycarotenoid dioxygenase 4	Sotub08g020600
+AT4G19010	4CL	AMP-dependent synthetase and ligase family protein	Sotub08g022010
+AT4G33950	SNRK2	Protein kinase superfamily protein	Sotub08g023320
+AT4G16760	ACX	acyl-CoA oxidase 1	Sotub08g024120
+AT4G16760	ACX	acyl-CoA oxidase 1	Sotub08g024130
+AT1G12520	SOD	copper chaperone for SOD1	Sotub08g025380
+AT1G01360	PYL	regulatory component of ABA receptor 1	Sotub08g028200
+-	RBOH	-	Sotub08g028720
+AT4G11280	ACS	1-aminocyclopropane-1-carboxylic acid (acc) synthase 6	Sotub08g028870
+AT4G11280	ACS	1-aminocyclopropane-1-carboxylic acid (acc) synthase 6	Sotub08g028890
+AT4G01370	MPK4	MAP kinase 4	Sotub08g028940
+AT1G63440	HMA	heavy metal atpase 5	Sotub08g029580
+AT3G08910	CPIP	DNAJ heat shock family protein	Sotub09g005400
+AT2G14580	PR1	basic pathogenesis-related protein 1	Sotub09g006080
+-	PR1	-	Sotub09g006090
+-	PR1	-	Sotub09g006100
+-	PR1	-	Sotub09g006110
+AT3G09640	APX	ascorbate peroxidase 2	Sotub09g006730
+AT3G53450	LOG	Putative lysine decarboxylase family protein	Sotub09g007380
+AT2G37040	PAL	PHE ammonia lyase 1	Sotub09g007450
+AT2G37040	PAL	PHE ammonia lyase 1	Sotub09g007460
+AT5G03300	ADK	adenosine kinase 2	Sotub09g007480
+AT2G36880	SAMS	methionine adenosyltransferase 3	Sotub09g007810
+AT2G36750	UGT73C1,C5	UDP-glucosyl transferase 73C1	Sotub09g008170
+AT3G10050	OMR1	L-O-methylthreonine resistant 1	Sotub09g008430
+AT4G02570	CUL	cullin 1	Sotub09g009950
+AT4G02570	CUL	cullin 1	Sotub09g010030
+AT4G02570	CUL	cullin 1	Sotub09g010050
+AT2G27690	CYP94	cytochrome P450%2C family 94%2C subfamily C%2C polypeptide 1	Sotub09g010350
+AT2G27690	CYP94	cytochrome P450%2C family 94%2C subfamily C%2C polypeptide 1	Sotub09g010360
+AT5G03730	CTR	Protein kinase superfamily protein	Sotub09g011220
+AT1G15710	TYRAAT1,2	prephenate dehydrogenase family protein	Sotub09g012050
+AT2G40330	PYL	PYR1-like 6	Sotub09g013480
+AT1G50030	TOR	target of rapamycin	Sotub09g014100
+AT3G63110	IPT	isopentenyltransferase 3	Sotub09g015090
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub09g015580
+AT5G43940	GSNO	GroES-like zinc-binding dehydrogenase family protein	Sotub09g015620
+AT5G48370	ACH	Thioesterase/thiol ester dehydrase-isomerase superfamily protein	Sotub09g016300
+-	GA20ox	-	Sotub09g017710
+AT5G51810	GA20ox	gibberellin 20 oxidase 2	Sotub09g017720
+AT4G28720	YUC	Flavin-binding monooxygenase family protein	Sotub09g018350
+AT2G33150	KAT	peroxisomal 3-ketoacyl-CoA thiolase 3	Sotub09g018750
+AT3G23230	ERF/EDF	Integrase-type DNA-binding superfamily protein	Sotub09g019370
+AT3G23240	ERF1	ethylene response factor 1	Sotub09g019380
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub09g019380
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub09g019630
+AT3G63130	RANGAP	RAN GTPase activating protein 1	Sotub09g019890
+AT4G02780	CPS	Terpenoid cyclases/Protein prenyltransferases superfamily protein	Sotub09g019950
+AT4G02780	CPS	Terpenoid cyclases/Protein prenyltransferases superfamily protein	Sotub09g019960
+AT4G02780	CPS	Terpenoid cyclases/Protein prenyltransferases superfamily protein	Sotub09g019970
+AT1G03055	D27	beta-carotene isomerase D27-like protein	Sotub09g020580
+AT5G43700	AUX/IAA	AUX/IAA transcriptional regulator family protein	Sotub09g020670
+AT3G63010	GID	alpha/beta-Hydrolases superfamily protein	Sotub09g021750
+AT1G02920	GST	glutathione S-transferase 7	Sotub09g022260
+AT4G02570	CUL	cullin 1	Sotub09g022430
+AT3G62980	TIR1	F-box/RNI-like superfamily protein	Sotub09g022650
+AT2G40940	ETR	ethylene response sensor 1	Sotub09g022980
+AT3G22400	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	Sotub09g023410
+AT5G43700	AUX/IAA	AUX/IAA transcriptional regulator family protein	Sotub09g025160
+AT3G23050	AUX/IAA	indole-3-acetic acid 7	Sotub09g025170
+AT3G23240	ERF1	ethylene response factor 1	Sotub09g026020
+AT3G23240	ERF/EDF	ethylene response factor 1	Sotub09g026020
+AT2G33150	KAT	peroxisomal 3-ketoacyl-CoA thiolase 3	Sotub09g027790
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	Sotub09g029720
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	Sotub09g029790
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	Sotub09g029830
+AT5G48570	FKBP65	FKBP-type peptidyl-prolyl cis-trans isomerase family protein	Sotub09g029880
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	Sotub09g030410
+AT5G56000	HSP90	HEAT SHOCK PROTEIN 81.4	Sotub10g005730
+AT4G27260	GH3	Auxin-responsive GH3 family protein	Sotub10g006850
+AT1G78440	C19-GA2ox	gibberellin 2-beta-dioxygenase	Sotub10g007590
+AT1G06290	ACX	acyl-CoA oxidase 3	Sotub10g008540
+-	ACX	-	Sotub10g008540
+AT1G06290	ACX	acyl-CoA oxidase 3	Sotub10g008600
+AT1G06290	ACX	acyl-CoA oxidase 3	Sotub10g008610
+AT1G28480	GRX480	Thioredoxin superfamily protein	Sotub10g008640
+AT4G03400	JAR	Auxin-responsive GH3 family protein	Sotub10g008920
+AT1G28480	GRX480	Thioredoxin superfamily protein	Sotub10g009510
+AT2G37040	PAL	PHE ammonia lyase 1	Sotub10g010100
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011410
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011440
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011470
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011500
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011520
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011530
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011550
+-	GA20ox	-	Sotub10g011620
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011690
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub10g011720
+AT5G51810	GA20ox	gibberellin 20 oxidase 2	Sotub10g011730
+AT4G02570	CUL	cullin 1	Sotub10g012280
+AT5G19040	IPT	isopentenyltransferase 5	Sotub10g012560
+AT3G63110	IPT	isopentenyltransferase 3	Sotub10g012570
+AT3G63110	IPT	isopentenyltransferase 3	Sotub10g012580
+AT4G02570	CUL	cullin 1	Sotub10g013690
+AT4G02570	CUL	cullin 1	Sotub10g013700
+AT4G02570	CUL	cullin 1	Sotub10g013710
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub10g015830
+AT1G70560	TAA1	tryptophan aminotransferase of Arabidopsis 1	Sotub10g015880
+AT3G63110	IPT	isopentenyltransferase 3	Sotub10g016150
+AT3G63110	IPT	isopentenyltransferase 3	Sotub10g016200
+AT4G00660	RH8	RNAhelicase-like 8	Sotub10g016280
+AT2G17290	CDPK	Calcium-dependent protein kinase family protein	Sotub10g017440
+AT4G20780	CML	calmodulin like 42	Sotub10g018180
+AT3G12500	PR3	basic chitinase	Sotub10g018960
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub10g019240
+AT5G42190	ASK	E3 ubiquitin ligase SCF complex subunit SKP1/ASK1 family protein	Sotub10g019250
+AT5G48570	FKBP65	FKBP-type peptidyl-prolyl cis-trans isomerase family protein	Sotub10g019710
+AT5G48570	FKBP65	FKBP-type peptidyl-prolyl cis-trans isomerase family protein	Sotub10g019720
+AT3G10230	LCY1	lycopene cyclase	Sotub10g021190
+AT3G57040	ARR-A	response regulator 9	Sotub10g021330
+AT3G57040	ARR-A	response regulator 9	Sotub10g021430
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub10g022550
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub10g022560
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub10g022570
+AT5G03730	CTR	Protein kinase superfamily protein	Sotub10g022900
+AT3G53450	LOG	Putative lysine decarboxylase family protein	Sotub10g024840
+AT2G36880	SAMS	methionine adenosyltransferase 3	Sotub10g025090
+AT3G10050	OMR1	L-O-methylthreonine resistant 1	Sotub10g025360
+AT5G03730	CTR	Protein kinase superfamily protein	Sotub10g025550
+AT3G10050	OMR1	L-O-methylthreonine resistant 1	Sotub10g025630
+AT5G06300	LOG	Putative lysine decarboxylase family protein	Sotub10g026090
+AT5G04870	CDPK	calcium dependent protein kinase 1	Sotub10g026370
+AT5G17920	MS	Cobalamin-independent synthase family protein	Sotub10g026610
+AT1G14920	DELLA	GRAS family transcription factor family protein	Sotub10g028450
+AT2G01570	DELLA	GRAS family transcription factor family protein	Sotub10g028470
+AT1G08980	AMI1	amidase 1	Sotub10g028560
+AT3G10050	OMR1	L-O-methylthreonine resistant 1	Sotub10g028570
+AT2G36800	UGT73C1,C5	don-glucosyltransferase 1	Sotub10g029100
+AT5G04870	CDPK	calcium dependent protein kinase 1	Sotub11g005050
+AT3G04580	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub11g005240
+AT1G67560	LOX	PLAT/LH2 domain-containing lipoxygenase family protein	Sotub11g007820
+AT1G14920	DELLA	GRAS family transcription factor family protein	Sotub11g008520
+AT4G15560	DXPS2	Deoxyxylulose-5-phosphate synthase	Sotub11g008820
+AT4G33950	SNRK2	Protein kinase superfamily protein	Sotub11g009560
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub11g010050
+AT1G65480	SP5G	PEBP (phosphatidylethanolamine-binding protein) family protein	Sotub11g010060
+AT3G03300	DCL2,4	dicer-like 2	Sotub11g010160
+AT3G03300	DCL2,4	dicer-like 2	Sotub11g010200
+AT4G31500	CYP83B1	cytochrome P450%2C family 83%2C subfamily B%2C polypeptide 1	Sotub11g011160
+AT2G27690	CYP94	cytochrome P450%2C family 94%2C subfamily C%2C polypeptide 1	Sotub11g011590
+AT1G75950	ASK	S phase kinase-associated protein 1	Sotub11g012410
+AT1G75950	ASK	S phase kinase-associated protein 1	Sotub11g012420
+AT1G77330	ACO	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub11g013090
+AT5G10870	CM	chorismate mutase 2	Sotub11g013610
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub11g014390
+AT1G35670	CDPK	calcium-dependent protein kinase 2	Sotub11g014830
+AT1G63440	HMA	heavy metal atpase 5	Sotub11g016230
+AT1G63440	HMA	heavy metal atpase 5	Sotub11g016240
+AT1G55020	LOX	lipoxygenase 1	Sotub11g016320
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub11g017730
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub11g017750
+AT1G76690	OPR	12-oxophytodienoate reductase 2	Sotub11g017760
+AT1G75950	ASK	S phase kinase-associated protein 1	Sotub11g019020
+AT1G50030	TOR	target of rapamycin	Sotub11g019930
+AT5G06950	TGA2,5,6	bZIP transcription factor family protein	Sotub11g020650
+AT1G63500	BSK	kinase with tetratricopeptide repeat domain-containing protein	Sotub11g020710
+AT2G28190	SOD	copper/zinc superoxide dismutase 2	Sotub11g024220
+AT1G08250	ADT	arogenate dehydratase 6	Sotub11g024700
+AT2G27760	IPT	tRNAisopentenyltransferase 2	Sotub11g024770
+AT1G08320	bZIP21	bZIP transcription factor family protein	Sotub11g025820
+AT4G05160	4CL	AMP-dependent synthetase and ligase family protein	Sotub11g025890
+AT2G28305	LOG	Putative lysine decarboxylase family protein	Sotub11g026420
+AT5G42650	AOS	allene oxide synthase	Sotub11g026710
+AT1G04580	AAO	aldehyde oxidase 4	Sotub11g027990
+AT2G27150	AAO	abscisic aldehyde oxidase 3	Sotub11g028010
+AT5G20960	AAO	aldehyde oxidase 1	Sotub11g028020
+AT2G27150	AAO	abscisic aldehyde oxidase 3	Sotub11g028030
+AT2G27150	AAO	abscisic aldehyde oxidase 3	Sotub11g028040
+AT5G51700	RAR1	cysteine and histidine-rich domain-containing protein RAR1	Sotub11g029010
+AT4G25420	GA20ox	2-oxoglutarate (2OG) and Fe(II)-dependent oxygenase superfamily protein	Sotub11g029030
+-	GA20ox	-	Sotub11g029030
+AT3G07630	ADT	arogenate dehydratase 2	Sotub11g029450
+AT5G20040	IPT	isopentenyltransferase 9	Sotub12g005220
+AT1G66340	ETR	Signal transduction histidine kinase%2C hybrid-type%2C ethylene sensor	Sotub12g006350
+AT3G45140	LOX	lipoxygenase 2	Sotub12g006600
+AT2G42620	MAX2	RNI-like superfamily protein	Sotub12g006880
+AT2G25490	EBF	EIN3-binding F box protein 1	Sotub12g008360
+AT2G05840	PAA2	20S proteasome subunit PAA2	Sotub12g008860
+AT5G20570	RBX	RING-box 1	Sotub12g008880
+AT4G29010	AIM1	Enoyl-CoA hydratase/isomerase family	Sotub12g009260
+AT4G29010	MFP	Enoyl-CoA hydratase/isomerase family	Sotub12g009260
+AT1G51760	IAR	peptidase M20/M25/M40 family protein	Sotub12g009860
+AT4G26200	ACS	1-amino-cyclopropane-1-carboxylate synthase 7	Sotub12g009910
+AT5G56970	CKX	cytokinin oxidase 3	Sotub12g010100
+AT2G20340	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Sotub12g011020
+AT1G05010	ACO	ethylene-forming enzyme	Sotub12g011800
+AT5G55250	IAMT1	IAA carboxylmethyltransferase 1	Sotub12g013160
+AT5G56000	HSP90	HEAT SHOCK PROTEIN 81.4	Sotub12g013560
+AT5G57560	XTH	Xyloglucan endotransglucosylase/hydrolase family protein	Sotub12g013810
+AT4G12570	UPL5	ubiquitin protein ligase 5	Sotub12g016620
+AT4G12570	UPL5	ubiquitin protein ligase 5	Sotub12g018190
+-	ERF1	-	Sotub12g018730
+AT5G57560	XTH	Xyloglucan endotransglucosylase/hydrolase family protein	Sotub12g019280
+AT4G12570	UPL5	ubiquitin protein ligase 5	Sotub12g020780
+AT3G21240	4CL	4-coumarate:CoA ligase 2	Sotub12g021310
+AT3G61510	ACS	ACC synthase 1	Sotub12g024100
+AT5G45890	SAGs	senescence-associated gene 12	Sotub12g024280
+AT5G45890	SAGs	senescence-associated gene 12	Sotub12g024290
+AT4G39460	SAMC	S-adenosylmethionine carrier 1	Sotub12g025160
+AT1G78290	SNRK2	Protein kinase superfamily protein	Sotub12g025700
+AT1G20510	OPCL1	OPC-8:0 CoA ligase1	Sotub12g027780
+AT4G12570	UPL5	ubiquitin protein ligase 5	Sotub12g027820
+AT4G35090	CAT	catalase 2	Sotub12g027890
+-	CAT	-	Sotub12g027890
+AT4G01850	SAMS	S-adenosylmethionine synthetase 2	Sotub12g030950
+AT3G06860	MFP	multifunctional protein 2	Sotub12g031400
+-	CDPK	-	Sotub12g031760
+AT1G63500	BSK	kinase with tetratricopeptide repeat domain-containing protein	Sotub12g031800
+AT1G01260	JAM	-	-
+AT1G01740	BSK	-	-
+AT1G02450	NIMIN	-	-
+AT1G02500	SAMS	-	-
+AT1G02930	GST	-	-
+AT1G02980	CUL	-	-
+AT1G03430	AHP	-	-
+AT1G03445	BSU1	-	-
+AT1G03970	GBF4	-	-
+AT1G04100	AUX/IAA	-	-
+AT1G04180	YUC	-	-
+AT1G04250	AUX/IAA	-	-
+AT1G04310	ETR	-	-
+AT1G04370	ERF/EDF	-	-
+AT1G04550	AUX/IAA	-	-
+AT1G04710	KAT	-	-
+AT1G06160	ERF/ORA59	-	-
+AT1G06160	ORA59	-	-
+AT1G06390	ASK	-	-
+AT1G09415	NIMIN	-	-
+AT1G09530	PIF3,4	-	-
+AT1G10940	SNRK2	-	-
+AT1G12010	ACO	-	-
+AT1G13060	PBE1	-	-
+AT1G13280	AOC	-	-
+AT1G15050	AUX/IAA	-	-
+AT1G15580	AUX/IAA	-	-
+AT1G16510	SAUR41	-	-
+AT1G17170	GST	-	-
+AT1G17380	JAZ	-	-
+AT1G17750	PEPR	-	-
+AT1G18075	miR159AB	-	-
+AT1G19050	ARR-A	-	-
+AT1G19180	JAZ	-	-
+AT1G19350	BZR2	-	-
+AT1G19640	JMT	-	-
+AT1G19670	CLH	-	-
+AT1G19850	ARF	-	-
+AT1G20620	CAT	-	-
+AT1G20630	CAT	-	-
+AT1G21270	WAK1	-	-
+AT1G23160	GH3.7	-	-
+AT1G25410	IPT	-	-
+AT1G25560	ERF/EDF	-	-
+AT1G27450	APT	-	-
+AT1G28370	ERF11	-	-
+AT1G30135	JAZ	-	-
+AT1G32640	MYC2	-	-
+AT1G34065	SAMC	-	-
+AT1G44090	GA20ox	-	-
+AT1G45145	TRX-H	-	-
+AT1G47990	C19-GA2ox	-	-
+AT1G48500	JAZ	-	-
+AT1G49190	ARR-B	-	-
+AT1G50990	BSK	-	-
+AT1G51660	MKK4	-	-
+AT1G51950	AUX/IAA	-	-
+AT1G52830	AUX/IAA	-	-
+AT1G52890	NAC019	-	-
+AT1G54040	ESP	-	-
+AT1G56340	CRT	-	-
+AT1G58100	TCP8	-	-
+AT1G58100	TCP8,14,15	-	-
+AT1G59940	ARR-A	-	-
+AT1G60980	GA20ox	-	-
+AT1G62300	WRKY6	-	-
+AT1G62380	ACO	-	-
+AT1G65880	BZO1	-	-
+AT1G66350	DELLA	-	-
+AT1G66370	MYB113	-	-
+AT1G67110	CYP735A1,A2	-	-
+AT1G68840	EDF2	-	-
+AT1G68840	ERF/EDF	-	-
+AT1G69310	WRKY57	-	-
+AT1G69370	CM	-	-
+AT1G69690	TCP8,14,15	-	-
+AT1G70700	JAZ	-	-
+AT1G72260	PR13	-	-
+AT1G72450	JAZ	-	-
+AT1G72520	LOX	-	-
+AT1G73080	PEPR	-	-
+AT1G73330	DR4	-	-
+AT1G73687	miR159AB	-	-
+AT1G73805	SARD1	-	-
+AT1G74890	ARR-A	-	-
+AT1G74950	JAZ	-	-
+AT1G75040	PR5	-	-
+AT1G76680	OPR	-	-
+AT1G78390	NCED	-	-
+AT1G80050	APT	-	-
+AT1G80330	GA3ox	-	-
+AT1G80340	GA3ox	-	-
+AT1G80390	AUX/IAA	-	-
+AT2G01760	ARR-B	-	-
+AT2G02810	UTR1	-	-
+AT2G02930	GST	-	-
+AT2G17090	BSK	-	-
+AT2G19500	CKX	-	-
+AT2G20610	SUR1	-	-
+AT2G22000	PEP	-	-
+AT2G22300	CAMTA3	-	-
+AT2G22670	AUX/IAA	-	-
+AT2G22810	ACS	-	-
+AT2G23260	UGT84B1	-	-
+AT2G23560	MES	-	-
+AT2G23580	MES	-	-
+AT2G24570	WRKY17	-	-
+AT2G24680	REM12	-	-
+AT2G25180	ARR-B	-	-
+AT2G26020	PDF1.2	-	-
+AT2G26070	RTE1	-	-
+AT2G27050	EIN3(like)	-	-
+AT2G27070	ARR-B	-	-
+AT2G27820	ADT	-	-
+AT2G33310	AUX/IAA	-	-
+AT2G33860	ARF	-	-
+AT2G34555	C19-GA2ox	-	-
+AT2G34600	JAZ	-	-
+AT2G35690	ACX	-	-
+AT2G35990	LOG	-	-
+AT2G37210	LOG	-	-
+AT2G38325	MIR390	-	-
+AT2G38470	WRKY33	-	-
+AT2G39660	BIK1	-	-
+AT2G40670	ARR-A	-	-
+AT2G43840	SAGT	-	-
+AT2G44840	ERF/EDF	-	-
+AT2G46400	WRKY46	-	-
+AT2G46510	JAM	-	-
+AT2G46990	AUX/IAA	-	-
+AT2G47750	GH3	-	-
+AT3G01830	CML	-	-
+AT3G03450	DELLA	-	-
+AT3G03780	MS	-	-
+AT3G05120	GID	-	-
+AT3G07780	OBE1	-	-
+AT3G09240	BSK	-	-
+AT3G09820	ADK	-	-
+AT3G10340	PAL	-	-
+AT3G12250	TGA2,5,6	-	-
+AT3G15500	NAC055	-	-
+AT3G15540	AUX/IAA	-	-
+AT3G16470	JR1	-	-
+AT3G16500	AUX/IAA	-	-
+AT3G16857	ARR-B	-	-
+AT3G17185	TAS3	-	-
+AT3G17390	SAMS	-	-
+AT3G17600	AUX/IAA	-	-
+AT3G17860	JAZ	-	-
+AT3G18690	MKS1	-	-
+AT3G18910	ETP	-	-
+AT3G18980	ETP	-	-
+AT3G19160	IPT	-	-
+AT3G20600	NDR1	-	-
+AT3G21230	4CL	-	-
+AT3G23030	AUX/IAA	-	-
+AT3G23150	ETR	-	-
+AT3G23220	ERF/EDF	-	-
+AT3G23810	SAHH	-	-
+AT3G25070	RIN4	-	-
+AT3G25730	ERF/EDF	-	-
+AT3G25760	AOC	-	-
+AT3G25770	AOC	-	-
+AT3G25882	NIMIN	-	-
+AT3G29350	AHP	-	-
+AT3G43440	JAZ	-	-
+AT3G44310	NIT1	-	-
+AT3G44720	ADT	-	-
+AT3G45810	RBOH	-	-
+AT3G47620	TCP8,14,15	-	-
+AT3G48090	EDS1	-	-
+AT3G48100	ARR-A	-	-
+AT3G49590	ATG13A	-	-
+AT3G49700	ACS	-	-
+AT3G50070	CYCD3-3	-	-
+AT3G52430	PAD4	-	-
+AT3G54030	BSK	-	-
+AT3G56350	SOD	-	-
+AT3G56400	WRKY70	-	-
+AT3G60140	BGLU30	-	-
+AT3G61960	ATG1A	-	-
+AT3G62100	AUX/IAA	-	-
+AT3G62670	ARR-B	-	-
+AT4G00710	BSK	-	-
+AT4G02150	MOS	-	-
+AT4G02520	GST	-	-
+AT4G08040	ACS	-	-
+AT4G11230	RBOH	-	-
+AT4G12440	APT	-	-
+AT4G13260	YUC	-	-
+AT4G14550	AUX/IAA	-	-
+AT4G14560	AUX/IAA	-	-
+AT4G16110	ARR-B	-	-
+AT4G17490	ERF6	-	-
+AT4G17490	ERF/ORA59	-	-
+AT4G17500	ERF1	-	-
+AT4G17500	ERF/EDF	-	-
+AT4G18170	WRKY28	-	-
+AT4G18350	NCED	-	-
+AT4G19395	miR168	-	-
+AT4G19660	NPR4	-	-
+AT4G20380	LSD1	-	-
+AT4G20910	HEN1	-	-
+AT4G21690	GA3ox	-	-
+AT4G23570	SGT1	-	-
+AT4G23810	WRKY53	-	-
+AT4G24210	GID	-	-
+AT4G24650	IPT	-	-
+AT4G25090	RBOH	-	-
+AT4G26070	MKK1	-	-
+AT4G26420	GAMT1,2	-	-
+AT4G28640	AUX/IAA	-	-
+AT4G29080	AUX/IAA	-	-
+AT4G29740	CKX	-	-
+AT4G30270	SEN4	-	-
+AT4G31550	WRKY11	-	-
+AT4G31800	WRKY18	-	-
+AT4G31920	ARR-B	-	-
+AT4G35190	LOG	-	-
+AT4G35310	CDPK	-	-
+AT4G35970	APX	-	-
+AT4G37150	MES	-	-
+AT4G37410	CYP81F4	-	-
+AT4G39030	EDS5	-	-
+AT5G01060	BSK	-	-
+AT5G01770	RAPTOR2	-	-
+AT5G03280	EIN2	-	-
+AT5G04230	PAL	-	-
+AT5G05860	UGT76C1,C2	-	-
+AT5G05870	UGT76C1,C2	-	-
+AT5G06100	MYB33,44,65	-	-
+AT5G06960	TGA2,5,6	-	-
+AT5G07200	GA20ox	-	-
+AT5G07210	ARR-B	-	-
+AT5G07390	RBOH	-	-
+AT5G09976	PEP	-	-
+AT5G09978	PEP	-	-
+AT5G09980	PEP	-	-
+AT5G09990	PEP	-	-
+AT5G11160	APT	-	-
+AT5G11850	MKD1	-	-
+AT5G13220	JAZ	-	-
+AT5G13320	PBS3	-	-
+AT5G14930	SAGs	-	-
+AT5G15840	CO	-	-
+AT5G17490	DELLA	-	-
+AT5G20320	DCL2,4	-	-
+AT5G20900	JAZ	-	-
+AT5G21960	ERF016	-	-
+AT5G22630	ADT	-	-
+AT5G24110	WRKY30	-	-
+AT5G24770	VSP	-	-
+AT5G24780	VSP	-	-
+AT5G25890	AUX/IAA	-	-
+AT5G26140	LOG	-	-
+AT5G26920	CBP60G	-	-
+AT5G39340	AHP	-	-
+AT5G41260	BSK	-	-
+AT5G42980	TRX-H	-	-
+AT5G43410	ERF096	-	-
+AT5G43410	ERF/EDF	-	-
+AT5G44420	PDF1.2	-	-
+AT5G44430	PDF1.2	-	-
+AT5G46350	WRKY8	-	-
+AT5G47230	ERF5	-	-
+AT5G47230	ERF/ORA59	-	-
+AT5G48880	KAT	-	-
+AT5G48950	DHNAT2	-	-
+AT5G49520	WRKY48	-	-
+AT5G49615	TAS3	-	-
+AT5G51060	RBOH	-	-
+AT5G51190	ERF105	-	-
+AT5G51190	ERF/ORA59	-	-
+AT5G52570	BETA-OHASE	-	-
+AT5G56030	HSP90	-	-
+AT5G56300	GAMT1,2	-	-
+AT5G58080	ARR-B	-	-
+AT5G58465	MIR390	-	-
+AT5G59010	BSK	-	-
+AT5G60010	RBOH	-	-
+AT5G60300	LECRK19	-	-
+AT5G60450	ARF	-	-
+AT5G61600	ERF104	-	-
+AT5G61600	ERF/EDF	-	-
+AT5G62000	ARF	-	-
+AT5G62920	ARR-A	-	-
+AT5G63380	4CL	-	-
+AT5G63610	CDK	-	-
+AT5G64890	PEP	-	-
+AT5G64900	PEP	-	-
+AT5G64905	PEP	-	-
+AT5G65110	ACX	-	-
+AT5G65670	AUX/IAA	-	-
+AT5G65800	ACS	-	-
+AT5G65940	CHY1	-	-
+AT5G67030	ZEP	-	-
+AT5G67160	EPS1	-	-
+AT5G67300	MYB33,44,65	-	-
+AT5G67385	SR1IP1	-	-
+AT5G67480	BT4	-	-
+ATCG00480	ATPB	-	-
+ATCG00490	RBC	-	-

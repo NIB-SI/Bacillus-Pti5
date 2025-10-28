@@ -1,0 +1,351 @@
+---
+title: "00_prettyNet"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+library(crayon)
+
+```
+
+
+```{r}
+
+fp = file.path('..', 'input')
+(fl = list.files(fp, pattern = '2022-10-26'))
+
+nodes = data.table::fread(file.path(fp, fl[2]), header = TRUE)
+data.table::setDF(nodes)
+head(nodes)
+
+edges = data.table::fread(file.path(fp, fl[1]), header = TRUE)
+data.table::setDF(edges)
+head(edges)
+
+
+
+```
+
+```{r}
+
+(m = max(stringr::str_count(nodes$name, pattern = '\\['))+1)
+
+tmp = stringr::str_split_fixed(nodes$name, '\\[', m)
+tmp[, 2] = gsub('\\]', '', tmp[,2])
+
+nodes$name = tmp[, 1]
+ind = which(nodes$short_name == '')
+nodes$short_name[ind] = nodes$name[ind]
+
+max(stringr::str_count(tmp[, 2], pattern = '\\['))
+max(stringr::str_count(tmp[, 2], pattern = '\\]'))
+max(stringr::str_count(tmp[, 1], pattern = '\\['))
+max(stringr::str_count(tmp[, 1], pattern = '\\]'))
+
+(m = max(stringr::str_count(tmp[, 2], pattern = ',')) + 1)
+
+temp = stringr::str_split_fixed(tmp[,2], ',', m)
+
+translate = as.data.frame(cbind(tmp, temp))
+translate[translate == ''] = NA
+colnames(translate)
+
+translate.long = tidyr::gather(translate, 
+                               group, athID, 
+                               colnames(translate)[3]:colnames(translate)[ncol(translate)], 
+                               factor_key=FALSE)
+
+colnames(translate.long)[1:2] = c('nodeID', 'genesID')
+translate.long = translate.long[, -3]
+translate.long = translate.long[!is.na(translate.long$athID), ]
+translate.long = translate.long[, -2]
+translate.long$athID = gsub('\\.1\\.1', '', translate.long$athID)
+translate.long = translate.long[translate.long$athID != 'unknown', ]
+head(translate.long)
+tail(translate.long)
+ind = grep('^AT', translate.long$athID)
+translate.long.ath = translate.long[ind,]
+ind = grep('^SOTUB', translate.long$athID)
+translate.long.stu = translate.long[ind,]
+
+
+translate.long.stu$athID = tolower(translate.long.stu$athID)
+translate.long.stu$athID = gsub('s', 'S', translate.long.stu$athID)
+
+
+
+```
+
+
+```{r}
+
+fp = file.path('..', '..', '_A_01_networkExpress-R', 'input')
+list.files(fp)
+fn = 'rbb_ath-vs-stuGFF_5_rbb-translation_filtered-long.txt'
+
+rbb = data.table::fread(file.path(fp, fn), header = TRUE)
+data.table::setDF(rbb)
+head(rbb)
+
+fn = 'Solanum_tuberosum_PGSC_DM_v3.4_converterWithDescriptions.txt'
+pgsc = data.table::fread(file.path(fp, fn), header = FALSE)
+data.table::setDF(pgsc)
+head(pgsc)
+colnames(pgsc)[4] = colnames(rbb)[4]
+colnames(pgsc)[1] = 'geneID'
+
+
+rbb = merge(rbb, pgsc[, c(4, 1)], by = colnames(pgsc)[4], all.x = TRUE, all.y = FALSE)
+ind = which(is.na(rbb$geneID))
+rbb$geneID[ind] = rbb$tarID[ind]
+
+patterns = c("athID", "geneID", "athDescription") 
+ind = which(grepl(paste(patterns, collapse = "|"), colnames(rbb)))
+rbb = rbb[, ind]
+head(rbb)
+
+
+```
+
+Chr Un
+
+PGSC0003DMT402...
+
+PGSC0003DMG406...
+
+PGSC0003DMC402...
+
+
+```{r}
+
+rbb[grep('DMP402', rbb$geneID), ]
+
+rbb$geneID = gsub('DMP402', 'DMG406', rbb$geneID)
+
+
+```
+
+
+
+```{r}
+
+translate.long.ath = merge(translate.long.ath, rbb, by = 'athID', all.x = TRUE, all.y = FALSE)
+colnames(translate.long.stu)[2] = 'geneID'
+translate.long.stu$athID = NA
+translate.long.stu$athDescription = NA
+
+ind = match(colnames(translate.long.ath), colnames(translate.long.stu))
+translate.long.stu = translate.long.stu[, ind]
+
+translate.long = rbind(translate.long.ath, translate.long.stu)
+
+translate.long = translate.long[order(translate.long$geneID), ]
+
+translate.long[grep('Sotub12g027890', translate.long$geneID, ignore.case = TRUE), ]
+table(duplicated(translate.long$geneID))
+dup = translate.long$geneID[intersect(setdiff(which(duplicated(translate.long$geneID)),
+                                              which(is.na(translate.long$geneID))),
+                                    which(duplicated(translate.long$nodeID)))]
+translate.long[translate.long$geneID %in% dup, c(1:2, 4)]
+
+
+
+fp = file.path('..', 'intermediate')
+dir.create(fp)
+fn = 'FC_Ath_Stu_combo-redundant.txt'
+
+write.table(x = translate.long, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "-", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+```
+
+
+```{r}
+
+translate.long = translate.long[, c(2:4)]
+translate.long = translate.long[!is.na(translate.long$geneID), ]
+
+dup = translate.long$geneID[intersect(setdiff(which(duplicated(translate.long$geneID)),
+                                              which(is.na(translate.long$geneID))),
+                                    which(duplicated(translate.long$nodeID)))]
+translate.long[translate.long$geneID %in% dup, ]
+
+translate.long$athDescription = zoo::na.locf(translate.long$athDescription)
+
+translate.long[translate.long$geneID %in% dup, ]
+
+translate.long = translate.long[!duplicated(translate.long), ]
+
+
+table(duplicated(translate.long$geneID))
+dup = translate.long[which(duplicated(translate.long$geneID)), ]$geneID
+translate.long[translate.long$geneID %in%  dup, ]
+
+fn = 'FC_Stu_combo.txt'
+
+write.table(x = translate.long, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "-", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+```
+
+
+
+```{r}
+
+
+tmp = stringr::str_split_fixed(edges$source, '\\[', m)
+edges$source = tmp[, 1]
+
+tmp = stringr::str_split_fixed(edges$target, '\\[', m)
+edges$target = tmp[, 1]
+
+eid = sort(unique(c(edges$source, edges$target)))
+
+table(eid %in% nodes$name)
+table(nodes$name %in% eid)
+nodes[which(!nodes$name %in% eid),]
+
+```
+
+
+
+for <https://nib-si.shinyapps.io/pre-processing/>
+
+need cols:
+
+geneID 	shortName 	shortDescription 	MapManBin
+
+geneID1 	geneID2 	reactionType
+
+
+```{r}
+
+
+table(duplicated(nodes$name))
+dup = nodes$name[which(duplicated(nodes$name))]
+nodes[nodes$name %in% dup, ]
+
+
+tmp = translate.long[, 1:2]
+colnames(tmp)[1] = 'name'
+nodes = merge(nodes, tmp, by = 'name', all.x = TRUE, all.y = FALSE)
+
+ind = which(nodes$description == '')
+nodes$description[ind] = nodes$athDescription[ind]
+
+
+nodes = nodes[, c(1, 2, 4, 5)]
+colnames(nodes)
+colnames(nodes) = c('geneID', 'shortName', 'shortDescription', 'MapManBin')
+
+nodes = nodes[!duplicated(nodes), ]
+
+cat(red('due to translation description'))
+table(duplicated(nodes$geneID))
+dup = nodes$geneID[which(duplicated(nodes$geneID))]
+nodes[nodes$geneID %in% dup, ]
+
+nodes[nodes$geneID %in% dup, ]$shortDescription = '4-coumarate:CoA ligase'
+
+nodes = nodes[!duplicated(nodes), ]
+
+table(duplicated(nodes$geneID))
+dup = nodes$geneID[which(duplicated(nodes$geneID))]
+nodes[nodes$geneID %in% dup, ]
+
+fn = 'nodes_to_preprocess.txt'
+write.table(x = nodes, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "NA", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+
+
+```
+
+
+<!-- to be continued -->
+
+
+```{r}
+
+myedges = data.frame(matrix(ncol = 3, nrow = nrow(edges)))
+colnames(myedges) = c('geneID1', 'geneID2', 'reactionType')
+table(edges$reaction_effect)
+
+myedges$geneID1 = edges$source
+myedges$geneID2 = edges$target
+ind = which(edges$reaction_effect == '')
+myedges$reactionType = paste(edges$reaction_effect, edges$reaction_type, sep = '_')
+myedges$reactionType[ind] = edges$reaction_type[ind]
+
+table(myedges$reactionType)
+
+
+fn = 'edges_to_preprocess.txt'
+write.table(x = myedges, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "NA", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+```
+
+
+
+```{r}
+
+devtools::session_info()
+
+```
+
+

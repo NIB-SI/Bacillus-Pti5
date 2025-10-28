@@ -1,0 +1,224 @@
+AMF
+
+Rywal
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+8	RBOHD	0.6241626	0.5798104	0.6283350	0.7349079	0.9955734
+7	PR1B	0.6241626	NA	0.6283350	0.7349079	NA
+8	CPI8	0.6241626	0.5798104	0.6283350	0.7349079	0.9955734
+8	BGLU2	0.6241626	0.5798104	0.6283350	0.7349079	0.8598195
+8	HSP70	0.6241626	0.5798104	0.6283350	0.7349079	0.6042226
+8	PTI5	0.6241626	0.5798104	0.6283350	0.7349079	0.8598195
+8	13-LOX	0.1152086	0.1142597	0.3704412	0.7349079	0.2870778
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+RBOHD	1	6	3.76712400	0.1003155
+PR1B	1	5	0.69809858	0.4415076
+CPI8	1	6	0.01530179	0.9055924
+BGLU2	1	6	2.75585199	0.1479675
+HSP70	1	6	0.92485065	0.3733427
+PTI5	1	6	0.14378692	0.7176019
+13-LOX	1	6	3.32232884	0.1181732
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+RBOHD	1	6	3.76712400	0.1003155
+PR1B	1	5	0.69809858	0.4415076
+CPI8	1	6	0.01530179	0.9055924
+BGLU2	1	6	2.75585199	0.1479675
+HSP70	1	6	0.92485065	0.3733427
+PTI5	1	6	0.14378692	0.7176019
+13-LOX	1	6	3.32232884	0.1181732
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+RBOHD	2.2737492433	0.1315812	1	Fligner-Killeen test of homogeneity of variances
+PR1B	1.4089434908	0.2352319	1	Fligner-Killeen test of homogeneity of variances
+CPI8	0.0002558532	0.9872381	1	Fligner-Killeen test of homogeneity of variances
+BGLU2	1.5560430181	0.2122455	1	Fligner-Killeen test of homogeneity of variances
+HSP70	1.5560430181	0.2122455	1	Fligner-Killeen test of homogeneity of variances
+PTI5	0.2022498512	0.6529109	1	Fligner-Killeen test of homogeneity of variances
+13-LOX	1.3410984571	0.2468403	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	0.7905694	RBOHD	3	5	large
+measurement	noninoculated	inoculated	0.5855400	PR1B	2	5	large
+measurement	noninoculated	inoculated	0.4743416	CPI8	3	5	moderate
+measurement	noninoculated	inoculated	0.7905694	BGLU2	3	5	large
+measurement	noninoculated	inoculated	0.4743416	HSP70	3	5	moderate
+measurement	noninoculated	inoculated	0.4743416	PTI5	3	5	moderate
+measurement	noninoculated	inoculated	0.3689324	13-LOX	3	5	moderate
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	-3.9886790	RBOHD	3	5	large
+measurement	noninoculated	inoculated	-1.6265825	PR1B	2	5	large
+measurement	noninoculated	inoculated	-0.7934974	CPI8	3	5	moderate
+measurement	noninoculated	inoculated	-2.9260896	BGLU2	3	5	large
+measurement	noninoculated	inoculated	-0.4434554	HSP70	3	5	small
+measurement	noninoculated	inoculated	-1.0351640	PTI5	3	5	large
+measurement	noninoculated	inoculated	 1.2376677	13-LOX	3	5	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+RBOHD	noninoculated	inoculated	0.001960784	0.006862745	*
+PR1B	noninoculated	inoculated	0.052941176	0.123529412	ns
+CPI8	noninoculated	inoculated	0.252941176	0.340849673	ns
+BGLU2	noninoculated	inoculated	0.001960784	0.006862745	*
+HSP70	noninoculated	inoculated	0.539215686	0.539215686	ns
+PTI5	noninoculated	inoculated	0.176470588	0.308823529	ns
+13-LOX	noninoculated	inoculated	0.292156863	0.340849673	ns
+
+
+shPTI5-Rywal L6
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+9	RBOHD	0.7166911	0.6937274	0.4685303	0.8689146	0.3731768
+8	PR1B	0.2740305	0.2783892	0.4685303	0.8689146	0.3731768
+7	CPI8	0.7166911	NA	0.4685303	0.8689146	NA
+9	BGLU2	0.7166911	0.6937274	0.7737140	0.8689146	0.3731768
+9	HSP70	0.9956548	0.9456827	0.9556352	0.9588039	0.9547681
+9	PTI5	0.7166911	0.8412397	0.9076811	0.8689146	0.9547681
+8	13-LOX	0.2740305	0.2783892	0.4685303	0.8689146	0.3731768
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+RBOHD	1	7	0.24293648	0.63717684
+PR1B	1	6	5.47561845	0.05784363
+CPI8	1	5	0.08966241	0.77665437
+BGLU2	1	7	1.45577478	0.26679263
+HSP70	1	7	0.69318314	0.43256770
+PTI5	1	7	0.26421058	0.62306607
+13-LOX	1	6	0.88976511	0.38195536
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+RBOHD	1	7	0.24293648	0.63717684
+PR1B	1	6	5.47561845	0.05784363
+CPI8	1	5	0.08966241	0.77665437
+BGLU2	1	7	1.45577478	0.26679263
+HSP70	1	7	0.69318314	0.43256770
+PTI5	1	7	0.26421058	0.62306607
+13-LOX	1	6	0.88976511	0.38195536
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+RBOHD	0.004629841	0.94575146	1	Fligner-Killeen test of homogeneity of variances
+PR1B	4.991577591	0.02547098	1	Fligner-Killeen test of homogeneity of variances
+CPI8	0.157021516	0.69191367	1	Fligner-Killeen test of homogeneity of variances
+BGLU2	0.784834205	0.37566673	1	Fligner-Killeen test of homogeneity of variances
+HSP70	1.370997156	0.24164063	1	Fligner-Killeen test of homogeneity of variances
+PTI5	0.784834205	0.37566673	1	Fligner-Killeen test of homogeneity of variances
+13-LOX	0.611050434	0.43439258	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	0.65319726	RBOHD	4	5	large
+measurement	noninoculated	inoculated	0.51031036	PR1B	4	4	large
+measurement	noninoculated	inoculated	0.26726124	CPI8	3	4	small
+measurement	noninoculated	inoculated	0.65319726	BGLU2	4	5	large
+measurement	noninoculated	inoculated	0.08164966	HSP70	4	5	small
+measurement	noninoculated	inoculated	0.81649658	PTI5	4	5	large
+measurement	noninoculated	inoculated	0.79056942	13-LOX	3	5	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	-1.5058966	RBOHD	4	5	large
+measurement	noninoculated	inoculated	 1.6787328	PR1B	4	4	large
+measurement	noninoculated	inoculated	 0.6265603	CPI8	3	4	moderate
+measurement	noninoculated	inoculated	-1.6402507	BGLU2	4	5	large
+measurement	noninoculated	inoculated	 0.4883573	HSP70	4	5	small
+measurement	noninoculated	inoculated	 2.8394056	PTI5	4	5	large
+measurement	noninoculated	inoculated	 3.5882645	13-LOX	3	5	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+RBOHD	noninoculated	inoculated	0.056862745	0.09950980	ns
+PR1B	noninoculated	inoculated	0.101960784	0.14274510	ns
+CPI8	noninoculated	inoculated	0.437254902	0.45294118	ns
+BGLU2	noninoculated	inoculated	0.033333333	0.07777778	ns
+HSP70	noninoculated	inoculated	0.452941176	0.45294118	ns
+PTI5	noninoculated	inoculated	0.001960784	0.01372549	*
+13-LOX	noninoculated	inoculated	0.013725490	0.04803922	*
+
+
+shPTI5-Rywal L2
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+9	RBOHD	0.64808	0.6945039	0.8749369	0.7848204	0.9587603
+8	PR1B	0.64808	0.6713999	0.6435370	0.7848204	0.9587603
+9	CPI8	0.64808	0.6713999	0.6644432	0.7848204	0.9587603
+9	BGLU2	0.64808	0.6713999	0.7203407	0.7848204	0.9587603
+9	HSP70	0.64808	0.6713999	0.6435370	0.7848204	0.9587603
+9	PTI5	0.64808	0.6713999	0.6435370	0.7848204	0.9587603
+9	13-LOX	0.64808	0.6713999	0.7612417	0.7848204	0.9970599
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+RBOHD	1	7	0.581359684	0.4706869
+PR1B	1	6	0.001691046	0.9685326
+CPI8	1	7	1.385461225	0.2776408
+BGLU2	1	7	0.448778931	0.5243909
+HSP70	1	7	0.176081715	0.6873410
+PTI5	1	7	0.076721280	0.7897917
+13-LOX	1	7	0.001489969	0.9702870
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+RBOHD	1	7	0.581359684	0.4706869
+PR1B	1	6	0.001691046	0.9685326
+CPI8	1	7	1.385461225	0.2776408
+BGLU2	1	7	0.448778931	0.5243909
+HSP70	1	7	0.176081715	0.6873410
+PTI5	1	7	0.076721280	0.7897917
+13-LOX	1	7	0.001489969	0.9702870
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+RBOHD	0.07279183	0.7873144	1	Fligner-Killeen test of homogeneity of variances
+PR1B	0.09371527	0.7595061	1	Fligner-Killeen test of homogeneity of variances
+CPI8	0.78005862	0.3771232	1	Fligner-Killeen test of homogeneity of variances
+BGLU2	0.30728108	0.5793534	1	Fligner-Killeen test of homogeneity of variances
+HSP70	0.60982806	0.4348526	1	Fligner-Killeen test of homogeneity of variances
+PTI5	0.27091375	0.6027195	1	Fligner-Killeen test of homogeneity of variances
+13-LOX	0.07279183	0.7873144	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	0.6531973	RBOHD	4	5	large
+measurement	noninoculated	inoculated	0.5103104	PR1B	4	4	large
+measurement	noninoculated	inoculated	0.8164966	CPI8	4	5	large
+measurement	noninoculated	inoculated	0.7348469	BGLU2	4	5	large
+measurement	noninoculated	inoculated	0.4898979	HSP70	4	5	moderate
+measurement	noninoculated	inoculated	0.6531973	PTI5	4	5	large
+measurement	noninoculated	inoculated	0.5715476	13-LOX	4	5	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	-1.647998	RBOHD	4	5	large
+measurement	noninoculated	inoculated	-1.009918	PR1B	4	4	large
+measurement	noninoculated	inoculated	-4.246555	CPI8	4	5	large
+measurement	noninoculated	inoculated	-2.349855	BGLU2	4	5	large
+measurement	noninoculated	inoculated	-1.614042	HSP70	4	5	large
+measurement	noninoculated	inoculated	-2.096909	PTI5	4	5	large
+measurement	noninoculated	inoculated	-1.563051	13-LOX	4	5	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+RBOHD	noninoculated	inoculated	0.031372549	0.05490196	ns
+PR1B	noninoculated	inoculated	0.207843137	0.20784314	ns
+CPI8	noninoculated	inoculated	0.001960784	0.01372549	*
+BGLU2	noninoculated	inoculated	0.027450980	0.05490196	ns
+HSP70	noninoculated	inoculated	0.068627451	0.08006536	ns
+PTI5	noninoculated	inoculated	0.017647059	0.05490196	ns
+13-LOX	noninoculated	inoculated	0.066666667	0.08006536	ns
+
+

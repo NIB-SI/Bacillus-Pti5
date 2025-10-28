@@ -1,0 +1,15 @@
+Assay:	_A_02_networkExpress-R
+Assay Class:	DRY
+Assay Type:	R
+Title:	02_networkExpress
+Description:	PSS 2022-10-25
+pISA Assay creation date:	2022-10-25
+pISA Assay creator:	MZ
+Analyst:	MZ
+Phenodata:	None
+Featuredata:	
+Data:	
+Principal investigator:	*
+License:	CC BY 4.0
+Sharing permission:	Private
+Upload to FAIRDOMHub:	Yes

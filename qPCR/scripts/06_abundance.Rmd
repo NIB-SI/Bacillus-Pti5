@@ -1,0 +1,359 @@
+---
+title: "06_abundance"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 9
+    fig_height: 6
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+editor_options: 
+  chunk_output_type: console
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(#dev = c('pdf', 'png'),
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 6, 
+                      fig.width = 9,
+                      warning = FALSE, message = FALSE, echo = TRUE
+                      )
+
+
+```
+
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+
+```
+
+
+# Notes
+
+- Multiple genotypes and unequal group sizes
+- Each plant contributes multiple observations -> complex tissue structure
+
+
+- Binary outcome
+- Fixed effects: Genotype, Tissue (Genotype * leaf (interaction))
+- Random effects: Plant nested within Genotype (1 | Genotype/plant)
+- Binomial outcome
+
+
+# Bayesian generalized linear model1s with group-specific terms via Stan
+- [rstanarm GitHub](https://github.com/stan-dev/rstanarm)
+- [vignette](https://mc-stan.org/rstanarm/articles/rstanarm.html)
+
+## MCMC diagnostics
+- random effect-level variation : Sigma
+- large and positive effect -> strongly increases the probability of output = 1 (mean, sd, ... cols)
+- Rhat ≈ 1.0 : Chains converged perfectly, Rhat ≈ 1.0; Rhat > 1.1: problematic
+- n_eff - higher is better (ideally > 1000); >1500 : Effective sample size is strong
+- mcse ~ 0.0	: Monte Carlo error is negligible
+
+##  indices relevant to describe and characterize the posterior distribution
+- pd: Probability of Direction — the probability the effect is strictly positive or negative
+- ROPE	Region of Practical Equivalence — a range around zero considered 'negligible'
+- % in ROPE	- Percentage of the posterior within the ROPE — higher means the effect is likely trivial
+
+
+
+
+# packages
+
+```{r}
+
+library(magrittr)
+library(data.table)
+library(ggplot2)
+
+```
+
+
+# Table S3
+
+```{r}
+
+fp = file.path('..', 'input')
+fn = 'Table S3.xlsx'
+
+dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = 'qPCR-PTI5')
+setDT(dt)
+dt[, Sample.ID := NULL]
+table(dt$Strain)
+table(dt$Treatment)
+
+
+```
+
+## inoculated
+
+```{r}
+
+inn = dt[dt$Treatment == 'inoculated', ]
+table(inn$Genotype)
+table(inn$Tissue)
+table(inn$Plant.No)
+
+inn$output = NA
+inn$`Positive/Negative.sample` = trimws(inn$`Positive/Negative.sample`)
+inn$output[inn$`Positive/Negative.sample` == '+'] = 1
+inn$output[inn$`Positive/Negative.sample` == '-'] = 0
+
+
+
+table(inn$Plant.No, inn$Genotype)
+table(inn$Plant.No, inn$Tissue)
+
+table(inn$Tissue, inn$output)
+inn$leaf = gsub(' .*', '', inn$Tissue)
+table(inn$leaf, inn$output, inn$Genotype)
+inn$plant = sub('P', '', inn$Plant.No)
+
+inn[, c("Treatment", "Strain", "comQ", "Positive/Negative.sample", "Tissue", "Plant.No") := NULL]
+
+inn$Genotype = as.factor(inn$Genotype)
+inn$leaf = as.factor(inn$leaf)
+inn$plant = as.factor(inn$plant)
+
+inn = inn[!is.na(inn$output), ]
+
+
+```
+
+
+## plot counts
+
+```{r}
+
+plot_data <- inn %>%
+  dplyr::filter(!is.na(output)) %>%
+  dplyr::group_by(Genotype, leaf, output) %>%
+  dplyr::summarise(count = dplyr::n(), .groups = "drop")
+
+plot_data$output <- factor(plot_data$output, levels = c(0, 1), labels = c("-", "+"))
+
+ggplot(plot_data, aes(x = leaf, y = count, fill = output)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~ Genotype, ncol = 1) +
+  labs(title = "",
+       x = "Leaf position",
+       y = "+/- counts",
+       fill = "Presence") +
+  theme_minimal() +
+  scale_fill_manual(values = c('grey', 'darkgreen'))
+
+
+
+```
+
+
+
+# Table S4
+
+```{r}
+
+fp = file.path('..', 'input')
+fn = 'Table S4.xlsx'
+
+dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = 'qPCR-PTI5')
+setDT(dt)
+dt[, Sample.ID := NULL]
+table(dt$Strain)
+table(dt$Treatment)
+
+
+```
+
+## inoculated
+
+```{r}
+
+inn = dt[dt$Treatment == 'inoculated', ]
+table(inn$Genotype)
+table(inn$Tissue)
+table(inn$Plant.No)
+
+inn$output = NA
+inn$`Positive/Negative.sample` = trimws(inn$`Positive/Negative.sample`)
+inn$output[inn$`Positive/Negative.sample` == '+'] = 1
+inn$output[inn$`Positive/Negative.sample` == '-'] = 0
+
+
+
+table(inn$Plant.No, inn$Genotype)
+table(inn$Plant.No, inn$Tissue)
+table(inn$Tissue, inn$output)
+
+inn$leaf = gsub(' .*', '', inn$Tissue)
+table(inn$leaf, inn$output, inn$Genotype)
+inn$plant = sub('P', '', inn$Plant.No)
+
+inn[, c("Treatment", "Strain", "comQ", "Positive/Negative.sample", "Tissue", "Plant.No") := NULL]
+
+
+inn$Genotype = as.factor(inn$Genotype)
+inn$leaf = as.factor(inn$leaf)
+inn$plant = as.factor(inn$plant)
+
+inn = inn[!is.na(inn$output), ]
+
+
+```
+
+
+
+## plot data
+
+```{r}
+
+plot_data <- inn %>%
+  dplyr::filter(!is.na(output)) %>%
+  dplyr::group_by(Genotype, leaf, output) %>%
+  dplyr::summarise(count = dplyr::n(), .groups = "drop")
+
+plot_data$output <- factor(plot_data$output, levels = c(0, 1), labels = c("-", "+"))
+
+ggplot(plot_data, aes(x = leaf, y = count, fill = output)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~ Genotype, ncol = 1) +
+  labs(title = "",
+       x = "Tissue and leaf position",
+       y = "+/- counts",
+       fill = "Presence") +
+  theme_minimal() +
+  scale_fill_manual(values = c('grey', 'darkgreen'))
+
+
+
+```
+
+
+
+## Bayesian generalized linear model1s with group-specific terms via Stan
+
+
+```{r}
+
+
+set.seed(123456)
+
+inn$leaf = relevel(inn$leaf, ref = "1st")  # changes reference level
+
+
+
+model1 = rstanarm::stan_glmer(
+  output ~ 0 + Genotype * leaf + (1 | Genotype/plant),
+  data = inn,
+  family = binomial(),
+  chains = 10,  # default is 4
+  iter = 1000,
+  seed = 123456,
+  control = list(adapt_delta = 0.99, max_treedepth = 15)
+)
+
+rstanarm::pp_check(model1)   
+
+# Compares the distribution of observed outcomes (y) to the distribution of simulated outcomes (yrep)
+yrep = rstanarm::posterior_predict(model1)
+
+# Uses bar plots to show how often each outcome (0 or 1) occurs
+bayesplot::ppc_bars(y = inn$output, yrep = yrep) # Bar plot of observed vs predicted
+# bayesplot::ppc_dens_overlay(y = inn$output, yrep = yrep)  # Density overlay
+
+# Compute a Bayesian version of R-squared for regression model1s
+r2_samples = rstanarm::bayes_R2(model1)
+# On average,  model1 explains about XY% of the variance in the binary outcome
+mean(r2_samples)  # Average R² across posterior
+# 95% Credible Interval
+quantile(r2_samples, probs = c(0.025, 0.975))  # 95% credible interval
+
+
+
+# Cross-Validation
+# Pareto k diagnostics measure how well the importance sampling works for each observation
+# Values: 
+#   k < 0.5 : good
+#   0.5 < k < 0.7 : okay 
+#   k > 0.7 : problematic 
+#   k > 1 : very problematic
+# observations with Pareto k>0.7 are influential and may distort the reliability of your Leave-One-Out (LOO) cross-validation estimates
+loo_result = loo::loo(model1)
+# print(loo_result)
+plot(loo_result)
+pk = loo::pareto_k_values(loo_result)
+inn[which(pk > 0.7), ]
+
+# extracting the combined posterior samples across all chains
+posterior = as.matrix(model1)
+# all
+posterior_array = as.array(model1)
+
+# colnames(posterior)
+bayesplot::mcmc_pairs(
+  posterior_array,
+  pars = c(
+    "GenotypeRywal",
+    "leafapex",
+    "GenotypeshPTI5-Rywal L2",
+    "GenotypeshPTI5-Rywal L2:leafapex"
+  )
+)
+
+
+bayesplot::mcmc_trace(posterior, pars = c("GenotypeRywal","leafapex",
+                                          "GenotypeshPTI5-Rywal L2", "GenotypeshPTI5-Rywal L2:leafapex"))
+
+
+
+# Each line represents one MCMC chain sampling a parameter
+# The x-axis is the iteration number; the y-axis is the sampled value
+plot(model1, plotfun = "trace")
+summary(model1)  # Should be close to 1
+
+
+
+# Marginal means 
+# higher prob -> higher chance of output = 1
+emm_genotype = emmeans::emmeans(model1, ~ Genotype | leaf, type = "response")
+# Pairwise comparisons
+summary(pairs(emm_genotype, adjust = "BH"))
+
+emmeans::emmip(model1, Genotype ~ leaf, CIs = TRUE, type = "response")
+
+
+bayestestR::describe_posterior(model1)
+# e.g. Very strong evidence that apex leaves strongly reduce the probability of output
+
+
+
+
+```
+
+
+
+# session info
+
+```{r, sessionInfo}
+
+sessionInfo()
+
+```
+
+
+
+

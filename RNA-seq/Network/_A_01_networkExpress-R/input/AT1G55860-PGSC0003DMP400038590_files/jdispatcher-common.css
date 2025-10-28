@@ -1,0 +1,740 @@
+/*
+ * #%L
+ * jdispatcher-resources
+ * %%
+ * Copyright (C) 2007 - 2021 EMBL - European Bioinformatics Institute
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+/**
+ * temporary style to adapt breadcrumbs
+**/
+#breadcrumbs
+{
+  margin-bottom: 8px;
+  margin-top:-6px;
+  margin-left: 2px;
+}
+
+
+/* tool lists in tool category pages */
+.toollist dd p:first-child
+{
+  margin-bottom: 8px;
+}
+
+.toollist dd
+{
+  margin-left: 30px;
+}
+
+
+form[class="actionBox"] input
+{
+  margin-left: 0px;
+}
+
+form[class="actionBox"] select
+{
+  margin-left: 0px;
+}
+
+h2 {
+	margin: 10px 0px 0px 0px;
+}
+
+#ebi_mainContent
+{
+  padding-left: 4px;
+}
+
+/* Forms */ /* Description Panel */
+#jd_descriptionPanel {
+	width: auto;
+	position: relative;
+}
+
+#jd_description {
+	margin-right: 15.1em;
+	padding-right: 5px;
+}
+
+#jd_descriptionRightBox {
+	width: 15em;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	zoom: 1;
+}
+
+.jd_ftpDownload {
+	display: block;
+	position: relative;
+	line-height: 35px;
+	vertical-align: middle;
+	padding-left: 32px;
+	margin-left: 5px;
+	background: url('../images/ftp_small.gif') no-repeat center left;
+}
+
+.jd_httpDownload {
+	display: block;
+	position: relative;
+	line-height: 35px;
+	vertical-align: middle;
+	padding-left: 32px;
+	margin-left: 5px;
+	background: url('../images/ftp_small.gif') no-repeat center left;
+}
+
+#jd_formErrors {
+	margin: 5px;
+	border: 1px solid red;
+	color: red;
+}
+
+/* Tool Form */
+#jd_toolSubmissionForm {
+}
+
+.jd_toolParameterBox {
+}
+
+.jd_toolParameterBox p {
+ 	margin: 3px 0px 0px 0px;
+	padding: 0;
+}
+
+/* forms */
+.jd_toolParameterBox textarea {
+  	width: 99%;
+}
+
+.jd_toolParameterBox fieldset {
+    background-color: #f7f7f7;
+    border: 2px solid #eee;
+    padding: 0.5em 0.5em 0.5em 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: inherit;
+}
+
+.jd_toolParameterBox fieldset legend {
+    font-size: 100%;
+    background-color: #e5e5e5;
+    color: #222;
+    padding: 0.1em 0.5em;
+    border: 2px solid #d8d8d8;
+}
+
+.jd_parameterGroup {
+	padding: 0;
+	margin: 0px;
+	width: 100%;
+	position: relative;
+}
+
+.jd_parameterGroup .jd_parameterCell,.jd_parameterGroup .jd_parameterCellUp
+	{
+	float: left;
+	display: block;
+	margin: 5px 0 0 0;
+	padding: 0;
+	width: auto;
+	height: auto !important;
+	height: 3.5em;
+	min-height: 3.5em;
+	line-height: 100%;
+	position: relative;
+	clear: none;
+	max-height: 60em;
+}
+
+.jd_singleLineParameter {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.jd_singleLineParameter div {
+	display: inline;
+	margin-left: 5px;
+}
+
+.jd_parameterGroup .jd_parameterCellUp.single {
+	height: auto;
+}
+
+.jd_parameterGroup .jd_parameterCell label {
+	margin: 3px 3px 5px 0px;
+	position: relative;
+	bottom: 1.7em;
+}
+
+.jd_parameterGroup .jd_parameterCell div {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 20px;
+}
+
+.jd_parameterGroup .jd_parameterCell dl {
+	padding: 0;
+	margin: 0;
+}
+
+.jd_parameterGroup .jd_parameterCell dt {
+	padding: 0 0 0 0;
+	margin-bottom: 0px;
+}
+
+.jd_parameterGroup .jd_parameterCell dd {
+	padding: 0;
+	margin: 0;
+}
+
+.jd_parameterGroup .jd_parameterCell select,.jd_parameterGroup .jd_parameterCell input
+	{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.jd_parameterGroup .jd_parameterCellUp label {
+	margin-bottom: 3px;
+	display: block;
+	vertical-align: top;
+}
+
+.jd_parameterGroup .jd_parameterCellUp div {
+	display: block;
+	width: 100%;
+	vertical-align: top;
+}
+
+.jd_parameterGroup .jd_parameterCellUp select,.jd_parameterGroup .jd_parameterCellUp input,.jd_parameterGroup .jd_parameterCellUp ul.jd_groupSelect
+	{
+	display: block;
+	vertical-align: top;
+}
+
+.jd_parameterCell select,.jd_parameterCellUp select {
+	width: 99%;
+}
+
+select.disabled,select option.disabled,select.disabled option.disabled {
+	font-style: italic;
+	color: #BFBFBF;
+}
+
+select.disabled option {
+	font-style: normal;
+	color: #000;
+}
+
+.jd_parameterCell input[type=text],.jd_parameterCellUp input[type=text]
+	{
+	width: 96%;
+}
+
+.textfield { /* Needed by IE6 */
+	width: 96%;
+}
+
+.optionalSet legend {
+	font-size: 8pt;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/* Selection list */
+.jd_selectionBox, .jd_listSelectionBox {
+	width: 100%;
+	display: block;
+	position: relative;
+	bottom: auto;
+	left: auto;
+}
+
+.jd_selectionInfo {
+	width: 100%;
+	padding: 4px 0px;
+	border: 1px solid #7F9DB9;
+	border-bottom: 0;
+	background-color: #EEE;
+	display: block;
+	position: relative;
+	bottom: auto;
+	left: auto;
+}
+
+#jd_nbSelected {
+	color: #066;
+	font-weight: bold;
+	margin-left: 3px;
+}
+
+#jd_clearSelection {
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	float: right;
+	margin-right: 3px;
+}
+
+.jd_listSelectionBox #jd_clearSelection {
+	float: none;
+	padding: 2px 3px;
+	margin-left: 5px;
+	display: inline-block;
+	border: 1px solid transparent;
+}
+
+.jd_listSelectionBox #jd_allSelection {
+	float: none;
+	padding: 2px 3px;
+	margin-left: 5px;
+	display: inline-block;
+	border: 1px solid transparent;
+}
+
+.jd_listSelectionBox #jd_clearSelection:hover, .jd_listSelectionBox #jd_allSelection:hover {
+	border: 1px solid #7f9db9;
+	background: #a1c7c7;
+}
+
+.jd_groupSelect {
+	width: 100%;
+	background-color: #FFF;
+	margin: 0;
+	padding: 0 0 3px 0;
+	overflow: auto;
+	border: 1px solid #7F9DB9;
+	max-height: 54em;
+	height: auto;
+	display: block;
+	position: relative;
+	bottom: auto;
+	left: auto;;
+	display: block;
+	resize: vertical;
+	overflow: auto;
+}
+
+.jd_groupSelect ul,.jd_groupSelect li {
+	list-style: none;
+	margin: 2px 0 2px 2px;
+	padding: 0;
+}
+
+li span.jd_groupTitle {
+	display: block;
+	font-weight: bold;
+	padding: 0px 3px 0px 16px;
+	margin-left: 2px;
+	list-style: none;
+	background: url('../images/minus.png') no-repeat center left;
+}
+
+.jd_groupSelect li label {
+	vertical-align: middle;
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.jd_groupSelect li label.nogroup {
+	background: url("../images/point.png") no-repeat scroll 2px center transparent;
+    padding-left: 18px;
+}
+
+.jd_listSelectionBox .jd_groupSelect li label.nogroup {
+	background: none;
+    padding-left: 2px;
+}
+
+.jd_groupSelect li input.checkbox,input.checkbox {
+	vertical-align: middle;
+	display: inline;
+	/*position: none;*/
+	bottom: auto;
+	left: auto;
+	margin: 1px 4px 0 0;
+	padding: 0;
+}
+
+.jd_groupSelect label:hover {
+	background-color: #DEDEDE;
+}
+
+.columns4 .jd_groupSelect {
+	padding: 4px 0px;
+}
+
+.columns4 .jd_groupSelect li {
+	display: inline-block;
+    width: 24%;
+    margin: 1px 3px;
+}
+
+.columns5 .jd_groupSelect {
+	padding: 4px 0px;
+}
+	
+.columns5 .jd_groupSelect li {
+	display: inline-block;
+    width: 18%;
+    margin: 1px 3px;
+}
+
+ul.jd_groupContent {
+	display: block;
+	padding-left: 14px;
+}
+
+.jd_button {
+	border: 1px solid #525250;
+	background-color: #F2F2ED;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	display: block;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+.jd_button_2 {
+	border: 1px solid #ccc;	
+	background-color: #F2F2ED;
+	padding: 2px 5px;
+	text-align: center;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 1px 1px 2px #ccc;
+}
+
+.jd_button:hover {
+	background-color: #BFBFBF;
+}
+
+.jd_button:hover input:disabled {
+	background-color: #F2F2ED;
+}
+
+.jd_button.selected,.jd_button.selected:hover {
+	background-color: #5E9E9E;
+	color: #FFF;
+	cursor: default;
+}
+
+.jd_button input {
+	border: 0;
+	background: transparent;
+	margin: 0;
+	text-align: center;
+	display: inline;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+a.jd_button,.jd_button a {
+	color: #000;
+	padding: 2px 5px;
+}
+
+.shadow { /*border-width: 1px 2px 2px 1px;*/
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+#jd_helpButton {
+	width: 4em;
+	float: right;
+	margin: 0px 5px 5px 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#submission {
+	padding: 5px;
+	margin: 0 0 0 25px;
+}
+
+#submission .line {
+	padding: 2px 0;
+}
+
+#submission .line label {
+	width: 3.6em;
+	float: left;
+	padding: 3px 0px;
+	margin: 0;
+}
+
+#submission .line em {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+#email {
+	width: 45%;
+}
+
+#title {
+	width: 91% !important;
+	width: 90%;
+}
+
+#jd_submitButtonPanel {
+	width: 100%;
+	padding: 10px 0 5px 0;
+	clear: left;
+}
+
+#jd_submitButtonPanel input {
+}
+
+/* Action panel */
+ul.actionPanel {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	display: block;
+	position: relative;
+	width: 100%;
+	float: left;
+}
+
+ul.actionPanel li {
+	list-style: none;
+	text-decoration: none;
+	display: block;
+	padding: 0 0 0 2px;
+	margin: 0 2px 0px 0;
+	border: 0;
+	display: block;
+	position: relative;
+	float: left;
+}
+
+ul.actionPanel.right li {
+	float: right;
+}
+
+ul.actionPanel li.divider {
+	border-left: 2px solid #AAA;
+	margin-left: 2px;
+	padding-left: 4px;
+}
+
+ul.actionPanel li .jd_button {
+	border-color: #BFBFBF;
+	float: left;
+}
+
+ul.actionPanel.menu li .jd_button,ul#actions li .jd_button {
+	-moz-border-radius-bottomLeft: 0;
+	-moz-border-radius-bottomRight: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+ul.actionPanel li span.jd_button {
+	vertical-align: middle;
+	height: 100%;
+	line-height: 100%;
+}
+
+.singleActionPanel {
+	position: relative;
+	width: 75%;
+	margin: 10px auto 5px auto;
+}
+
+.singleActionPanel .jd_button {
+	border-color: #BFBFBF;
+}
+
+.singleActionPanel .jd_button input {
+	width: 100%;
+}
+
+/* rounded corners */
+br.corners {
+	display: none;
+}
+
+/* Summary pages */
+.helpIcon {
+	border: 0px none;
+	width: 14px;
+	height: 14px;
+	vertical-align: bottom;
+	text-decoration: none;
+}
+
+dl.definition {
+	padding: 0px 0px 5px 7px;
+}
+
+dl.definition a {
+	font-weight: bold;
+}
+
+dl.definition dd {
+	margin: 0;
+}
+
+dl.definition dd p {
+	padding-left: 0;
+}
+
+dl.level2 {
+  width: 100%;
+  overflow: hidden;
+	padding-top: 3px;
+}
+
+dl.level2 dt {
+	font-weight: bold;
+	float: left;
+	width: 14%;
+  clear: both;
+  margin-top: 5px;
+}
+
+dl.level2 dd {
+	float: left;
+  width:80%;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+dt.level1
+{
+    margin-bottom: 3px;
+    margin-top: 20px;
+    border-bottom: 1px solid #207A7A;
+    color: #207A7A;
+    font-size: 10pt;
+}
+
+dl.definition a:link,dl.definition a:visited,dl.definition a:hover,dl.definition a:active
+{
+	text-decoration: underline;
+}
+
+dl.level2 ul.actionPanel a:link,dl.level2 ul.actionPanel a:visited,dl.level2 ul.actionPanel
+a:hover,dl.level2 ul.actionPanel a:active
+{
+	text-decoration: none;
+}
+
+dl.level2 ul.actionPanel a.jd_button:hover {
+	background-color: #BFBFBF;
+}
+
+dl.level2 ul.actionPanel a {
+	padding-left: 18px;
+	height: 15px;
+	line-height: 15px;
+	vertical-align: middle;
+	background: url('../../../common/assets/images/search-green.png')
+		no-repeat center left #F2F2ED;
+	background-position: 3px;
+	font-weight: normal;
+	margin-top: 2px;
+	color: #207A7A;
+	font-size: 8pt;
+}
+
+dl.level2 ul.actionPanel {
+	padding-bottom: 3px;
+}
+
+.blockUI {
+	-moz-border-radius: 6px;
+	-webkkit-border-radius: 6px;
+	border-radius: 6px;
+}
+
+pre {	
+	display: block;
+	background-color: transparent;
+	border-style:none;
+	font-size: 90%;
+	line-height: 1.2;
+	margein:5em 0;
+	padding:4em 0;
+}
+
+pre a img {
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.grid_4, .grid_20 {
+	float: left;
+  	margin: 10px;
+}
+
+ .grid_4 {
+  	width: 25%;
+}
+
+.grid_20 {
+  	width: 70%;
+}
+
+ul#local-nav li.functional {
+	    float: right;
+}
+
+#local-masthead ul.menu.dropdown.float-right > li {
+	margin-bottom:0;
+}   
+
+label {
+	display:inline;
+}
+
+[type='file'] {
+	width: auto;
+}

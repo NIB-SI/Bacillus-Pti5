@@ -1,0 +1,168 @@
+---
+title: "02_AtCKN-prioritisation"
+author: "zagor"
+date: "20 12 2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+fp = file.path('..', 'intermediate')
+fn = 'GFFmerged-in-OCD-all_in-Networks_long.txt'
+
+# mylen = count.fields(file.path(fp,fn), sep = "\t")
+# no_col <- max(mylen)
+translate = read.table(file.path(fp,fn),
+                    sep="\t",
+                    fill=TRUE,
+                    header = TRUE,
+                    # col.names=paste0("col", 1:no_col),
+                    stringsAsFactors = FALSE,
+                    comment.char = "@")
+
+fp = file.path('..', 'input')
+fn = 'mixedEXP2_AND_monoEXP1_logFC_padj_TMMcpm_narrow.txt'
+
+mylen = count.fields(file.path(fp,fn), sep = "\t")
+no_col <- max(mylen, na.rm = TRUE)
+exp.values = read.table(file.path(fp,fn),
+                    sep="\t",
+                    skip = 1,
+                    fill=TRUE,
+                    header = TRUE,
+                    # col.names=paste0("col", 1:no_col),
+                    stringsAsFactors = FALSE,
+                    comment.char = "@",
+                    na.strings = '#N/A',
+                    quote = NULL)
+
+rownames(exp.values) = exp.values$GeneID
+names(exp.values) = colnames(exp.values)
+
+logFC = (exp.values[, grep('logFC', colnames(exp.values))])
+logFC = as.matrix(logFC)
+pval = (exp.values[, grep('adj\\.P\\.Val', colnames(exp.values))])
+pval = as.matrix(pval)
+pval[is.na(pval)] = 1
+pval[pval >= 0.05] = 1
+
+logFC[is.na(logFC)] = 0
+logFC[which(pval == 1)] = 0
+
+
+```
+
+```{r}
+
+tmp = translate[!grepl('^AT', translate$geneID), 1:2]
+table(grepl('^AT', translate$geneID))
+logFC = as.data.frame(logFC)
+logFC$geneID = rownames(logFC)
+
+organism.NGS.files = merge(tmp, logFC, by = "geneID", all.x = TRUE, sort = FALSE)
+
+tmp = translate[grepl('^AT', translate$geneID), ]
+organism.NGS.files.x = merge(organism.NGS.files, tmp, by = "OCD", all.x = TRUE, sort = FALSE)
+i = ncol(organism.NGS.files.x)
+organism.NGS.files.x = organism.NGS.files.x[, c(1,2, i-2, i-1, i, 
+                                                setdiff(seq(1, i,1),
+                                                        c(1,2,i-2, i-1, i)))]
+
+write.table(organism.NGS.files.x, 
+            file = file.path("..", 'intermediate', 'GFFmerged-Ath-in-Networks_long-withExpression-duplicatedPotatoes.txt'), 
+            append = FALSE, quote = FALSE, sep = "\t",
+            eol = "\n", na = "", dec = ".", row.names = FALSE,
+            col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+translate.at = translate[grepl('^AT', translate$geneID),]
+translate.at = translate.at[translate.at$AthCKN.clusterID != '-',]
+
+
+organism.NGS.files.CKN = merge(organism.NGS.files, translate.at[,1:2], by = "OCD", 
+                               all.x = FALSE,  all.y = TRUE, sort = FALSE)
+
+i = c(1,2,ncol(organism.NGS.files.CKN))
+organism.NGS.files.CKN = organism.NGS.files.CKN[, c(i, setdiff(seq(1, ncol(organism.NGS.files.CKN), 1), i))]
+
+organism.NGS.files.CKN$rs = rowSums(organism.NGS.files.CKN[, 4:ncol(organism.NGS.files.CKN)])
+
+organism.NGS.files.CKN = organism.NGS.files.CKN[organism.NGS.files.CKN$rs != 0,]
+organism.NGS.files = organism.NGS.files.CKN[, -ncol(organism.NGS.files.CKN)]
+
+write.table(organism.NGS.files, 
+            file = file.path("..", 'intermediate', 'GFFmerged-Ath-in-CKN_long-expressed-multiplePotatoes.txt'), 
+            append = FALSE, quote = FALSE, sep = "\t",
+            eol = "\n", na = "", dec = ".", row.names = FALSE,
+            col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+```
+
+
+```{r}
+
+rm(list=ls()[! ls() %in% c("organism.NGS.files")])
+gc()
+
+logFC.starts.from.col = 4
+
+```
+
+
+```{r}
+
+lapply(organism.NGS.files, class)
+athGenes = sort(unique(organism.NGS.files$geneID.y))
+tmp = NULL
+
+for (i in athGenes) {
+  ind = which(organism.NGS.files$geneID.y == i)
+  if (length(ind) > 1) { # (length(ind > 1)) for found, not length(ind) > 1 for multiple (1 or more, doesnt matter here)
+    mysubset = organism.NGS.files[ind, ]
+    e = sapply(1:nrow(mysubset), function(x) sum(!is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])))
+    f1 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                mean(colMeans(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE), na.rm = TRUE)))
+    f2 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                max(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE)))
+    g = which(e == max(e))
+    h1 = which(f1[g] == max(f1[g]))
+    h2 = which(f2[g] == max(f2[g]))
+    k2 = ifelse(length(h1) > 1, h2, h1)
+    k = ifelse(length(g) > 1, g[k2], g)
+    
+    tmp = rbind(tmp, mysubset[k,])
+  } else { # no match
+    tmp = rbind(tmp, organism.NGS.files[ind,]) # take first
+  }
+}
+nrow(tmp) == length(athGenes)
+athGenes.organism.NGS =  tmp
+
+```
+
+```{r}
+
+gc()
+
+write.table(athGenes.organism.NGS, 
+            file = file.path("..", 'intermediate', 'GFFmerged-Ath-in-CKN_long-expressed-prioritised.txt'), 
+            append = FALSE, quote = FALSE, sep = "\t",
+            eol = "\n", na = "", dec = ".", row.names = FALSE,
+            col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+```
+

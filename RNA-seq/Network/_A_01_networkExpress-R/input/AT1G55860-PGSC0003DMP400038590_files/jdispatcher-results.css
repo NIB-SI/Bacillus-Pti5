@@ -1,0 +1,473 @@
+/*
+ * #%L
+ * jdispatcher-resources
+ * %%
+ * Copyright (C) 2007 - 2021 EMBL - European Bioinformatics Institute
+ * %%
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * #L%
+ */
+
+
+#applyToSelection {
+	padding: 5px;
+	border: 1px solid #CDCDCD;
+	-moz-box-shadow: 0px 1px 3px #aaa;
+	-webkit-box-shadow: 0px 1px 3px #aaa;
+	box-shadow: 0px 1px 3px #aaa;
+}
+
+#tabsandheaders .actionPanel
+{
+  border-bottom: 1px solid  #CCCCCC;
+}
+
+#tabsandheaders h2
+{
+  font-size: 154%;
+  margin-bottom: 6px;
+  margin-top: 0px;
+  padding-left: 5px;
+}
+
+#tabsandheaders h2 a
+{
+  font-size: 82%;
+  padding-right: 4px;
+  padding-left: 4px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-bottom: 1px;
+  background-color: #eee;
+  -moz-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#tabsandheaders h3
+{
+  border-bottom: none;
+  margin-bottom: 1px;
+}
+
+#alignments
+{
+  float: left;
+}
+
+#alignments dl dt[style*="width: 60px;"]
+{
+  width: 70px !important;
+}
+
+#alignments dl dd[style*="margin-left: 67px;"]
+{
+  margin-left: 77px !important;
+}
+
+/* clustalw2 summary-results, score tables */
+#scoreTable
+{
+    border: 0;
+}
+
+/* sss summary tables, numeric columns */
+#alignmentTable tbody tr td:nth-child(4),
+#alignmentTable tbody tr td:nth-child(5),
+#alignmentTable tbody tr td:nth-child(6),
+#alignmentTable tbody tr td:nth-child(7)
+{
+    text-align: right;
+}
+
+/* sss summary tables, e-value column */
+#alignmentTable tbody tr td:nth-child(8)
+{
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Results */
+.resultSummary {
+	float: left;
+	width: 100%;
+	display: block;
+	position: relative;
+	margin: 3px 0 10px 0;
+}
+
+#ebi_mainContent h3 {
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.resultSummary dl {
+	float: left;
+	border: 1px solid #BFBFBF;
+	-moz-box-shadow: 0 1px 3px #aaa;
+	-webkit-box-shadow: 0 1px 3px #aaa;
+	box-shadow: 0 1px 3px #aaa;
+	list-style: none;
+	padding: 5px 5px;
+	margin: 5px 10px 5px 0;
+	min-width: 15em;
+}
+
+.resultSummary dl.doubleSize {
+	min-width: 32em;
+}
+
+.resultSummary dt {
+	border-bottom: 1px solid #BFBFBF;
+	color: #000;
+}
+
+.resultSummary dd {
+	margin: 5px 0 7px 10px;
+	padding: 5px 10px 5px 0px;
+	display: inline;
+}
+
+a.gotop {
+	float: right;
+}
+
+a.gotop:link,a.gotop:visited {
+	font-size: 8pt;
+	padding: 1px 16px 1px 5px;
+	font-weight: bold;
+	text-decoration: none;
+	background-image: url("../images/top.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+a.gotop:hover {
+	font-size: 8pt;
+	padding: 1px 16px 1px 5px;
+	font-weight: bold;
+	text-decoration: none;
+	background-image: url("../images/top_hover.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
+#cmd {
+	padding: 5px;
+	border: 1px solid #CDCDCD;
+-moz-box-shadow: 0px 1px 3px #aaa;
+-webkit-box-shadow: 0px 1px 3px #aaa;
+box-shadow: 0px 1px 3px #aaa;
+	font-family: courier, serif;
+}
+
+.summaryTable {
+	width: auto;
+	border-collapse: collapse;
+	margin-top: 10px;
+	display: block;
+}
+
+.summaryTable th {
+	font-size: 8pt;
+	padding: 4px 20px 4px 4px;
+	color: #FFFFFF;
+	background-color: #5E9E9E;
+	border: 1px solid #CDCDCD;
+}
+
+.summaryTable td {
+	border: 1px solid #CDCDCD;
+}
+
+applet {
+	margin: 5px;
+	border: 0;
+	z-index: 0;
+}
+
+.loading img {
+	margin-right: 5px;
+	vertical-align: top;
+}
+
+.loading {
+	padding: 10px;
+}
+
+
+table.tablesorter {
+	font-family: arial;
+	margin: 10px 0 15px 0;
+	font-size: 9pt;
+	text-align: left;
+	border-collapse: collapse;
+	display: block;
+
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+table.tablesorter thead tr th,table.tablesorter tfoot tr th {
+  border: 1px solid #CDCDCD;
+  font-size: 9pt;
+  padding: 4px 18px 4px 4px;
+}
+
+table.tablesorter th {
+    filter: none;
+}
+
+
+table.tablesorter thead tr input {
+	padding: 1px;
+	font-size: 8pt;
+}
+
+table.tablesorter thead tr .header {
+	background-image: url("../images/bg.gif");
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	border: 1px solid #CDCDCD;
+}
+
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+	border: 1px solid #CDCDCD;
+}
+
+
+
+table.tablesorter tbody tr.odd td {
+	background-color: #F0F0F6;
+}
+
+table.tablesorter thead tr .headerSortUp {
+	background-image: url("../images/asc.gif");
+}
+
+table.tablesorter thead tr .headerSortDown {
+	background-image: url("../images/desc.gif");
+}
+
+
+.actionBox {
+	margin: 10px 0;
+	width: 100%;
+	display: block;
+}
+
+.actionBox select {
+	cursor: pointer;
+	float: none;
+	display: inline;
+	clear: none;
+}
+
+
+
+dl#parameters dt {
+	margin-bottom: 5px;
+}
+
+
+dl#parameters dd {
+	margin: 0px 0px 5px 20px;
+}
+
+#overbox {
+	border: 5px solid grey;
+	opacity: 0.65;
+	width: 796px;
+	left: 125px;
+	height: 9px;
+	position: absolute;
+	z-index: 50;
+}
+
+/* PSI-Search */
+table.tablesorter tbody tr td div.selectAln {
+	margin: 0px;
+	padding: 0px;
+}
+
+table.tablesorter tbody tr td div.selectAln label {
+	min-height: 24px;
+	margin: 0px;
+	padding: 5px 0px 0px 0px;
+	display: block;
+}
+
+table.tablesorter tbody tr td div.selectAln label span {
+	margin: 0px;
+	height: 15px;
+	line-height: 15px;
+	padding: 0px;
+	vertical-align: top;
+}
+
+table.tablesorter tbody tr td div.selectAln label input {
+	padding: 0px;
+	margin: 0px 5px 0px 5px;
+	width: 15px;
+	height: 15px;
+}
+
+table.tablesorter tbody tr.aboveThreshold td div.selectAln {
+	background-image: url("../images/redcircle.png");
+	background-repeat: no-repeat;
+}
+
+table.tablesorter tbody tr.belowThreshold td div.selectAln {
+	background-image: url("../images/greencircle.png");
+	background-repeat: no-repeat;
+}
+
+table.tablesorter tbody tr td span.oldHit {
+	text-align: right;
+	font-style: italic;
+	margin: 2px auto 2px auto;
+	font-size: 8pt;
+	display: block;
+}
+
+table.tablesorter tbody tr td span.newHit {
+	color: red;
+	text-align: right;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 8pt;
+	display: block;
+}
+
+dl.xref {
+	list-style: none;
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+
+dl.xref dt {
+	padding: 0;
+	margin: 0;
+	font-style: italic;
+  font-size: 108%;
+}
+
+dl.xref dd {
+	padding: 0;
+	margin: 0;
+	margin-bottom:0px;
+}
+
+dl.xref dd ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+dl.xref dd ul li {
+	float: left;
+	padding: 0px 0px 0 12px;
+	margin: 0 0 0 5px;
+	font-size: 8pt;
+	background-image: url("../images/plus.png");
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+/* Progress bar in summary page */ /* progress bar container */
+.progressbar {
+	border: 1px solid #5E9E9E;
+	width: 200px;
+	height: 12px;
+	position: relative;
+	color: black;
+}
+
+/* color bar */
+.progressbar div.progress {
+	position: absolute;
+	width: 0;
+	height: 100%;
+	overflow: hidden;
+	background-color: #5E9E9E;
+}
+
+/* text on bar */
+.progressbar div.progress .text {
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+}
+
+/* text off bar */
+.progressbar div.text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.progressBarContainer {
+	margin: 3px;
+	font-size: 7pt;
+	float: left;
+	padding: 0;
+	height: 14px;
+	width: 214px;
+}
+
+.cancelProgress {
+	border: 1px solid #5E9E9E;
+	width: 12px;
+	height: 12px;
+	position: relative;
+	left: 201px;
+	top: -14px;
+	color: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+
+@media print
+{
+    ul.actionPanel
+    {
+        display:none;
+    }
+    
+    form#summarytableactions
+    {
+        display:none;
+    }
+}
+
+.zoomcontrol{
+	
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	
+}
+
+.psisvg{
+	cursor:move;
+}

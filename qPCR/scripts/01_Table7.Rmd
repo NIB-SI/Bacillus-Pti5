@@ -157,6 +157,8 @@ process_data <- function(df, groupvars, measurevar, scale_treatment = "noninocul
 
 perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", groupvar = "Treatment") {
   
+  set.seed(123456)
+  
   temp = data.frame()
   transcript_levels = levels(mydata.long$transcript)
   treatment_levels = levels(mydata.long[[groupvar]])
@@ -164,7 +166,7 @@ perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", gro
   
   for(i in transcript_levels) {
     data = mydata.long[mydata.long$transcript == i, ]
-    k = 8 # nrow(data); an exact permutation test, assuming the groups are balanced (i.e., 4 observations in each group)
+    k = 8 # nrow(data)
     pvalues = purrr::map_dbl(treatment_pairs, function(x) {
       subset_data = base::subset(data, data[[groupvar]] %in% x)
       res = MKinfer::perm.t.test(
@@ -177,13 +179,16 @@ perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", gro
         conf.level = 0.95,
         perm.conf.int = 0.95,
         symmetric = TRUE,
-        p.adjust.method = "holm",
+        p.adjust.method = "BH",
         detailed = TRUE,
-        R = choose(k, k/2), # choose(k, k/2) for balanced groups, # sum(choose(k, 1:(k-1))) for unbalanced groups
+        # split k observations into two nontrivial groups
+        R = sum(choose(k, 1:(k-1))), # alternative (k, k/2)
         set.seed = 123456
       )
       res$perm.p.value
     })
+
+
     
     tmp = base::as.data.frame(base::t(pvalues))
     colnames(tmp) = purrr::map_chr(treatment_pairs, ~base::paste(.x, collapse = ' vs '))
@@ -192,7 +197,8 @@ perm_test_by_transcript <- function(mydata.long, measurevar = "measurement", gro
     temp <- base::rbind(temp, tmp)
   }
   
-  return(temp)
+  
+    return(temp)
 }
 
 
@@ -1452,7 +1458,7 @@ results_2h = run_analysis_for_time(data = PS218
 
 ```
 
-
+# sessionInfo
 
 ```{r}
 

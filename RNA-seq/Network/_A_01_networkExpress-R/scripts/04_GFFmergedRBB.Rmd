@@ -1,0 +1,335 @@
+---
+title: "04_GFFmergedRBB"
+author: "zagor"
+date: "20 12 2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+
+fp = file.path('..', 'input')
+fn = 'rbb_ath-vs-stuGFF_5_rbb-translation_filtered-long.txt'
+RBBnew.GFFmerged.long <- read.table(file.path(fp, fn),
+                     sep="\t", 
+                     fill=TRUE, 
+                     header = TRUE,
+                     stringsAsFactors = FALSE,
+                     comment.char = "~",
+                     quote = NULL,
+                     strip.white = TRUE,
+                     allowEscapes = TRUE)
+
+hist(RBBnew.GFFmerged.long$X1, breaks = seq(1, max(RBBnew.GFFmerged.long$X1), 1))
+
+names(RBBnew.GFFmerged.long) = colnames(RBBnew.GFFmerged.long)
+
+length(unique(RBBnew.GFFmerged.long$athID))
+
+```
+
+
+
+```{r}
+
+fp = file.path('..', 'input')
+fn = 'Solanum_tuberosum_PGSC_DM_v3.4_converterWithDescriptions.txt'
+
+PGSC = read.table(file.path(fp,fn),
+                  sep="\t",
+                  fill=FALSE,
+                  header = FALSE,
+                  quote = NULL,
+                  stringsAsFactors = FALSE,
+                  comment.char = "@",
+                  )
+
+PGSC = PGSC[, c(1,4)]
+colnames(PGSC) = c('geneID', 'potatoeID')
+
+
+```
+
+```{r}
+
+rm(list=ls()[! ls() %in% c("PGSC", 'RBBnew.GFFmerged.long')])
+gc()
+
+
+```
+
+```{r}
+
+colnames(RBBnew.GFFmerged.long)[4] = 'potatoeID'
+
+RBBnew.GFFmerged.long.X = merge(RBBnew.GFFmerged.long, PGSC, by = 'potatoeID', all.x = TRUE, all.y = FALSE)
+RBBnew.GFFmerged.long.X$geneID[is.na(RBBnew.GFFmerged.long.X$geneID)] = RBBnew.GFFmerged.long.X$potatoeID[is.na(RBBnew.GFFmerged.long.X$geneID)]
+
+RBBnew.GFFmerged.long.X$geneID = gsub('\\.1\\.1', '', RBBnew.GFFmerged.long.X$geneID)
+length(unique(RBBnew.GFFmerged.long.X$rbbID)) == length(unique(RBBnew.GFFmerged.long.X$athID))
+
+hist(RBBnew.GFFmerged.long.X$positives)
+hist(RBBnew.GFFmerged.long.X$athCoverage)
+hist(RBBnew.GFFmerged.long.X$tarCoverage)
+plot(RBBnew.GFFmerged.long.X$tarCoverage, RBBnew.GFFmerged.long.X$athCoverage)
+
+# RBBnew.GFFmerged.long.X = RBBnew.GFFmerged.long.X[,-c(1,2, 4)]
+
+RBBnew.GFFmerged.long.Y = RBBnew.GFFmerged.long.X[(RBBnew.GFFmerged.long.X$athCoverage < 50) |  (RBBnew.GFFmerged.long.X$tarCoverage < 50),]
+
+hist(RBBnew.GFFmerged.long.Y$X1)
+table(RBBnew.GFFmerged.long.Y$X1)
+table(duplicated(RBBnew.GFFmerged.long.Y$athID))
+table(RBBnew.GFFmerged.long.Y$X1[duplicated(RBBnew.GFFmerged.long.Y$athID)])
+
+RBBnew.GFFmerged.long.X = RBBnew.GFFmerged.long.X[(RBBnew.GFFmerged.long.X$athCoverage >= 50) &  (RBBnew.GFFmerged.long.X$tarCoverage >= 50),]
+
+RBBnew.GFFmerged.long.X = RBBnew.GFFmerged.long.X[,-c(1,2, 4)]
+
+length(unique(RBBnew.GFFmerged.long.X$athID))
+
+
+```
+
+```{r}
+
+rm(list=ls()[! ls() %in% c('RBBnew.GFFmerged.long.X')])
+gc()
+
+```
+
+
+```{r}
+
+# PGSC0003DMG400007237 to check BIN formatting
+
+fp = file.path('..', 'input')
+fn = 'mixedEXP2_AND_monoEXP1_logFC_padj_TMMcpm_narrow.txt'
+
+mylen = count.fields(file.path(fp,fn), sep = "\t")
+no_col <- max(mylen, na.rm = TRUE)
+exp.values = read.table(file.path(fp,fn),
+                    sep="\t",
+                    skip = 1,
+                    fill=TRUE,
+                    header = TRUE,
+                    # col.names=paste0("col", 1:no_col),
+                    stringsAsFactors = FALSE,
+                    comment.char = "@",
+                    na.strings = '#N/A',
+                    quote = NULL)
+exp.values[grep('PGSC0003DMG400007237', exp.values[,1]), 1:4]
+
+rownames(exp.values) = exp.values$GeneID
+colnames(exp.values)[1] = 'geneID'
+names(exp.values) = colnames(exp.values)
+
+
+```
+
+```{r}
+
+logFC = (exp.values[, grep('logFC', colnames(exp.values))])
+logFC = as.matrix(logFC)
+pval = (exp.values[, grep('adj\\.P\\.Val', colnames(exp.values))])
+pval = as.matrix(pval)
+
+pval[is.na(pval)] = 1
+pval[pval >= 0.05] = 1
+
+
+logFC[is.na(logFC)] = 0
+logFC[which(pval == 1)] = 0
+
+
+RBBnew.GFFmerged.long.X = merge(RBBnew.GFFmerged.long.X, exp.values[, 1:4], by = 'geneID', all.x = TRUE, all.y = FALSE)
+
+# RBBnew.GFFmerged.long.X[grep('PGSC0003DMG400007237', RBBnew.GFFmerged.long.X[,1]), 1:4]
+
+logFC = as.data.frame(logFC)
+logFC$geneID = rownames(logFC)
+
+```
+
+```{r}
+
+fp = file.path('..', 'intermediate')
+
+write.table(RBBnew.GFFmerged.long.X, 
+            file = file.path(fp, "strict_RBBnew-all-possible-GFF-Ath-matches.txt"), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "-", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+```
+
+
+
+```{r}
+
+
+nn = ncol(RBBnew.GFFmerged.long.X)
+
+RBBnew.GFFmerged.long.X = merge(RBBnew.GFFmerged.long.X, logFC, by = 'geneID', all.x = FALSE, all.y = FALSE)
+
+length(unique(RBBnew.GFFmerged.long.X$athID))
+
+
+```
+
+```{r}
+
+fp = file.path('..', 'intermediate')
+
+
+write.table(RBBnew.GFFmerged.long.X, 
+            file = file.path(fp, "strict_RBBnew-GFF-Ath-matches-withExpression.txt"), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "-", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+
+```
+
+```{r}
+
+
+rm(list=ls()[! ls() %in% c("RBBnew.GFFmerged.long.X", 'nn')])
+gc()
+
+logFC.starts.from.col = nn + 1
+
+```
+
+
+
+```{r}
+
+lapply(RBBnew.GFFmerged.long.X, class)
+athGenes = sort(unique(RBBnew.GFFmerged.long.X$athID))
+tmp = NULL
+
+for (i in athGenes) {
+  ind = which(RBBnew.GFFmerged.long.X$athID == i)
+  if (length(ind) > 1) { # (length(ind > 1)) for found, not length(ind) > 1 for multiple (1 or more, doesnt matter here)
+    mysubset = RBBnew.GFFmerged.long.X[ind, ]
+    e = sapply(1:nrow(mysubset), function(x) sum(!is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])))
+    f1 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                mean(colMeans(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE), na.rm = TRUE)))
+    f2 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                max(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE)))
+    g = which(e == max(e))
+    h1 = which(f1[g] == max(f1[g]))
+    h2 = which(f2[g] == max(f2[g]))
+    k2 = ifelse(length(h1) > 1, h2, h1)
+    k = ifelse(length(g) > 1, g[k2], g)
+    
+    tmp = rbind(tmp, mysubset[k,])
+  } else { # no match
+    tmp = rbind(tmp, RBBnew.GFFmerged.long.X[ind,]) # take first
+  }
+}
+
+nrow(tmp) == length(athGenes)
+newRBB.organism.NGS =  tmp
+
+length(unique(newRBB.organism.NGS$athID))
+
+```
+
+
+```{r}
+
+fp = curl::curl("https://raw.githubusercontent.com/NIB-SI/DiNAR/master/CKNs/GeI639CK5z5o7ynu")
+CKN <- read.table(fp,
+                  sep="\t", 
+                  fill=TRUE, 
+                  header = TRUE,
+                  stringsAsFactors = FALSE,
+                  comment.char = "~",
+                  quote = NULL,
+                  strip.white = TRUE,
+                  allowEscapes = TRUE)
+
+i = grep('nodeID', colnames(CKN))
+j = grep('clusterID', colnames(CKN))
+CKN = CKN[, sort(c(i, j, 3:5))]
+
+```
+
+
+```{r}
+
+newRBB.organism.NGS$nodeID = newRBB.organism.NGS$athID
+
+newRBB.organism.NGS = merge(newRBB.organism.NGS, CKN, by = 'nodeID', all.y = FALSE, all.x = FALSE)
+
+table(newRBB.organism.NGS$clusterID)
+
+length(unique(newRBB.organism.NGS$athID))
+
+```
+
+
+```{r}
+
+gc()
+
+write.table(newRBB.organism.NGS, 
+            file = file.path("..", 'intermediate', 'strict_RBBold-Ath-in-CKN-with-0_long-expressed-prioritised.txt'), 
+            append = FALSE, quote = FALSE, sep = "\t",
+            eol = "\n", na = "", dec = ".", row.names = FALSE,
+            col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+
+newRBB.organism.NGS = newRBB.organism.NGS[newRBB.organism.NGS$clusterID != 0,]
+
+
+```
+
+```{r}
+
+gc()
+
+write.table(newRBB.organism.NGS, 
+            file = file.path("..", 'intermediate', 'strict_RBBold-Ath-in-CKN-no-0_long-expressed-prioritised.txt'), 
+            append = FALSE, quote = FALSE, sep = "\t",
+            eol = "\n", na = "", dec = ".", row.names = FALSE,
+            col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+```
+
+
+
+
+

@@ -1,0 +1,256 @@
+AMF
+
+Distribution tests
+n	Genotype	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+8	Rywal	RBOHD	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+7	Rywal	PR1B	0.6804841	NA	0.7612417	0.8240614	NA
+8	Rywal	CPI8	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+8	Rywal	BGLU2	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+8	Rywal	HSP70	0.6804841	0.6885249	0.7612417	0.8240614	0.7878177
+8	Rywal	PTI5	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+8	Rywal	13-LOX	0.3456258	0.3618225	0.7239791	0.8240614	0.7878177
+9	shPTI5-Rywal L2	RBOHD	0.6804841	0.7399793	0.9186838	0.8240614	0.9970599
+8	shPTI5-Rywal L2	PR1B	0.6804841	0.6885249	0.7239791	0.8240614	0.9970599
+9	shPTI5-Rywal L2	CPI8	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+9	shPTI5-Rywal L2	BGLU2	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+9	shPTI5-Rywal L2	HSP70	0.6804841	0.6885249	0.7239791	0.8240614	0.9970599
+9	shPTI5-Rywal L2	PTI5	0.6804841	0.6885249	0.7239791	0.8240614	0.9970599
+9	shPTI5-Rywal L2	13-LOX	0.6804841	0.6885249	0.7612417	0.8240614	0.9970599
+9	shPTI5-Rywal L6	RBOHD	0.6804841	0.6885249	0.7239791	0.8240614	0.7878177
+8	shPTI5-Rywal L6	PR1B	0.5045251	0.5093533	0.7239791	0.8240614	0.7878177
+7	shPTI5-Rywal L6	CPI8	0.6804841	NA	0.7239791	0.8240614	NA
+9	shPTI5-Rywal L6	BGLU2	0.6804841	0.6885249	0.7612417	0.8240614	0.7878177
+9	shPTI5-Rywal L6	HSP70	0.9956548	0.9456827	0.9556352	0.9588039	0.9970599
+9	shPTI5-Rywal L6	PTI5	0.6804841	0.7399793	0.8599084	0.8240614	0.9970599
+8	shPTI5-Rywal L6	13-LOX	0.5480609	0.5877105	0.7239791	0.8240614	0.7878177
+
+Levene's test for homogeneity of variance across groups
+Genotype	transcript	df1	df2	statistic	p
+Rywal	RBOHD	1	6	3.767124004	0.10031553
+Rywal	PR1B	1	5	0.698098585	0.44150761
+Rywal	CPI8	1	6	0.015301793	0.90559236
+Rywal	BGLU2	1	6	2.755851988	0.14796754
+Rywal	HSP70	1	6	0.924850651	0.37334274
+Rywal	PTI5	1	6	0.143786919	0.71760191
+Rywal	13-LOX	1	6	3.322328844	0.11817322
+shPTI5-Rywal L2	RBOHD	1	7	0.581359684	0.47068692
+shPTI5-Rywal L2	PR1B	1	6	0.001691046	0.96853262
+shPTI5-Rywal L2	CPI8	1	7	1.385461225	0.27764079
+shPTI5-Rywal L2	BGLU2	1	7	0.448778931	0.52439092
+shPTI5-Rywal L2	HSP70	1	7	0.176081715	0.68734099
+shPTI5-Rywal L2	PTI5	1	7	0.076721280	0.78979172
+shPTI5-Rywal L2	13-LOX	1	7	0.001489969	0.97028701
+shPTI5-Rywal L6	RBOHD	1	7	0.242936481	0.63717684
+shPTI5-Rywal L6	PR1B	1	6	5.475618453	0.05784363
+shPTI5-Rywal L6	CPI8	1	5	0.089662409	0.77665437
+shPTI5-Rywal L6	BGLU2	1	7	1.455774781	0.26679263
+shPTI5-Rywal L6	HSP70	1	7	0.693183143	0.43256770
+shPTI5-Rywal L6	PTI5	1	7	0.264210580	0.62306607
+shPTI5-Rywal L6	13-LOX	1	6	0.889765110	0.38195536
+
+Brown-Forsythe (Levene with median)
+Genotype	transcript	df1	df2	statistic	p
+Rywal	RBOHD	1	6	3.767124004	0.10031553
+Rywal	PR1B	1	5	0.698098585	0.44150761
+Rywal	CPI8	1	6	0.015301793	0.90559236
+Rywal	BGLU2	1	6	2.755851988	0.14796754
+Rywal	HSP70	1	6	0.924850651	0.37334274
+Rywal	PTI5	1	6	0.143786919	0.71760191
+Rywal	13-LOX	1	6	3.322328844	0.11817322
+shPTI5-Rywal L2	RBOHD	1	7	0.581359684	0.47068692
+shPTI5-Rywal L2	PR1B	1	6	0.001691046	0.96853262
+shPTI5-Rywal L2	CPI8	1	7	1.385461225	0.27764079
+shPTI5-Rywal L2	BGLU2	1	7	0.448778931	0.52439092
+shPTI5-Rywal L2	HSP70	1	7	0.176081715	0.68734099
+shPTI5-Rywal L2	PTI5	1	7	0.076721280	0.78979172
+shPTI5-Rywal L2	13-LOX	1	7	0.001489969	0.97028701
+shPTI5-Rywal L6	RBOHD	1	7	0.242936481	0.63717684
+shPTI5-Rywal L6	PR1B	1	6	5.475618453	0.05784363
+shPTI5-Rywal L6	CPI8	1	5	0.089662409	0.77665437
+shPTI5-Rywal L6	BGLU2	1	7	1.455774781	0.26679263
+shPTI5-Rywal L6	HSP70	1	7	0.693183143	0.43256770
+shPTI5-Rywal L6	PTI5	1	7	0.264210580	0.62306607
+shPTI5-Rywal L6	13-LOX	1	6	0.889765110	0.38195536
+
+Fligner-Killeen test of homogeneity of variances
+Genotype	transcript	statistic	p.value	parameter	method
+Rywal	RBOHD	2.2737492433	0.13158124	1	Fligner-Killeen test of homogeneity of variances
+Rywal	PR1B	1.4089434908	0.23523186	1	Fligner-Killeen test of homogeneity of variances
+Rywal	CPI8	0.0002558532	0.98723805	1	Fligner-Killeen test of homogeneity of variances
+Rywal	BGLU2	1.5560430181	0.21224554	1	Fligner-Killeen test of homogeneity of variances
+Rywal	HSP70	1.5560430181	0.21224554	1	Fligner-Killeen test of homogeneity of variances
+Rywal	PTI5	0.2022498512	0.65291093	1	Fligner-Killeen test of homogeneity of variances
+Rywal	13-LOX	1.3410984571	0.24684035	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	RBOHD	0.0727918324	0.78731442	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	PR1B	0.0937152651	0.75950605	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	CPI8	0.7800586239	0.37712321	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	BGLU2	0.3072810801	0.57935344	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	HSP70	0.6098280584	0.43485256	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	PTI5	0.2709137543	0.60271948	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L2	13-LOX	0.0727918324	0.78731442	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	RBOHD	0.0046298410	0.94575146	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	PR1B	4.9915775907	0.02547098	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	CPI8	0.1570215159	0.69191367	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	BGLU2	0.7848342052	0.37566673	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	HSP70	1.3709971563	0.24164063	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	PTI5	0.7848342052	0.37566673	1	Fligner-Killeen test of homogeneity of variances
+shPTI5-Rywal L6	13-LOX	0.6110504341	0.43439258	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	Genotype	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	0.79056942	Rywal	RBOHD	3	5	large
+measurement	noninoculated	inoculated	0.58554004	Rywal	PR1B	2	5	large
+measurement	noninoculated	inoculated	0.47434165	Rywal	CPI8	3	5	moderate
+measurement	noninoculated	inoculated	0.79056942	Rywal	BGLU2	3	5	large
+measurement	noninoculated	inoculated	0.47434165	Rywal	HSP70	3	5	moderate
+measurement	noninoculated	inoculated	0.47434165	Rywal	PTI5	3	5	moderate
+measurement	noninoculated	inoculated	0.36893239	Rywal	13-LOX	3	5	moderate
+measurement	noninoculated	inoculated	0.65319726	shPTI5-Rywal L2	RBOHD	4	5	large
+measurement	noninoculated	inoculated	0.51031036	shPTI5-Rywal L2	PR1B	4	4	large
+measurement	noninoculated	inoculated	0.81649658	shPTI5-Rywal L2	CPI8	4	5	large
+measurement	noninoculated	inoculated	0.73484692	shPTI5-Rywal L2	BGLU2	4	5	large
+measurement	noninoculated	inoculated	0.48989795	shPTI5-Rywal L2	HSP70	4	5	moderate
+measurement	noninoculated	inoculated	0.65319726	shPTI5-Rywal L2	PTI5	4	5	large
+measurement	noninoculated	inoculated	0.57154761	shPTI5-Rywal L2	13-LOX	4	5	large
+measurement	noninoculated	inoculated	0.65319726	shPTI5-Rywal L6	RBOHD	4	5	large
+measurement	noninoculated	inoculated	0.51031036	shPTI5-Rywal L6	PR1B	4	4	large
+measurement	noninoculated	inoculated	0.26726124	shPTI5-Rywal L6	CPI8	3	4	small
+measurement	noninoculated	inoculated	0.65319726	shPTI5-Rywal L6	BGLU2	4	5	large
+measurement	noninoculated	inoculated	0.08164966	shPTI5-Rywal L6	HSP70	4	5	small
+measurement	noninoculated	inoculated	0.81649658	shPTI5-Rywal L6	PTI5	4	5	large
+measurement	noninoculated	inoculated	0.79056942	shPTI5-Rywal L6	13-LOX	3	5	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	Genotype	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	-3.9886790	Rywal	RBOHD	3	5	large
+measurement	noninoculated	inoculated	-1.6265825	Rywal	PR1B	2	5	large
+measurement	noninoculated	inoculated	-0.7934974	Rywal	CPI8	3	5	moderate
+measurement	noninoculated	inoculated	-2.9260896	Rywal	BGLU2	3	5	large
+measurement	noninoculated	inoculated	-0.4434554	Rywal	HSP70	3	5	small
+measurement	noninoculated	inoculated	-1.0351640	Rywal	PTI5	3	5	large
+measurement	noninoculated	inoculated	 1.2376677	Rywal	13-LOX	3	5	large
+measurement	noninoculated	inoculated	-1.6479978	shPTI5-Rywal L2	RBOHD	4	5	large
+measurement	noninoculated	inoculated	-1.0099179	shPTI5-Rywal L2	PR1B	4	4	large
+measurement	noninoculated	inoculated	-4.2465551	shPTI5-Rywal L2	CPI8	4	5	large
+measurement	noninoculated	inoculated	-2.3498549	shPTI5-Rywal L2	BGLU2	4	5	large
+measurement	noninoculated	inoculated	-1.6140422	shPTI5-Rywal L2	HSP70	4	5	large
+measurement	noninoculated	inoculated	-2.0969089	shPTI5-Rywal L2	PTI5	4	5	large
+measurement	noninoculated	inoculated	-1.5630510	shPTI5-Rywal L2	13-LOX	4	5	large
+measurement	noninoculated	inoculated	-1.5058966	shPTI5-Rywal L6	RBOHD	4	5	large
+measurement	noninoculated	inoculated	 1.6787328	shPTI5-Rywal L6	PR1B	4	4	large
+measurement	noninoculated	inoculated	 0.6265603	shPTI5-Rywal L6	CPI8	3	4	moderate
+measurement	noninoculated	inoculated	-1.6402507	shPTI5-Rywal L6	BGLU2	4	5	large
+measurement	noninoculated	inoculated	 0.4883573	shPTI5-Rywal L6	HSP70	4	5	small
+measurement	noninoculated	inoculated	 2.8394056	shPTI5-Rywal L6	PTI5	4	5	large
+measurement	noninoculated	inoculated	 3.5882645	shPTI5-Rywal L6	13-LOX	3	5	large
+
+
+EMM
+transcript	group1	group2	p.adj	p.adj.signif
+RBOHD	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	9.617478e-01	ns
+RBOHD	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	9.999997e-01	ns
+RBOHD	Rywal noninoculated	Rywal inoculated	3.771809e-05	***
+RBOHD	Rywal noninoculated	shPTI5-Rywal L2 inoculated	1.483129e-01	ns
+RBOHD	Rywal noninoculated	shPTI5-Rywal L6 inoculated	2.235826e-03	**
+RBOHD	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	9.865656e-01	ns
+RBOHD	shPTI5-Rywal L2 noninoculated	Rywal inoculated	1.066548e-01	ns
+RBOHD	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	3.989037e-01	ns
+RBOHD	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	1.842161e-01	ns
+RBOHD	shPTI5-Rywal L6 noninoculated	Rywal inoculated	4.287655e-01	ns
+RBOHD	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	8.515355e-01	ns
+RBOHD	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	5.961177e-01	ns
+RBOHD	Rywal inoculated	shPTI5-Rywal L2 inoculated	7.996420e-01	ns
+RBOHD	Rywal inoculated	shPTI5-Rywal L6 inoculated	9.867892e-01	ns
+RBOHD	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	9.757970e-01	ns
+PR1B	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	7.527392e-01	ns
+PR1B	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	1.404260e-02	*
+PR1B	Rywal noninoculated	Rywal inoculated	4.719547e-01	ns
+PR1B	Rywal noninoculated	shPTI5-Rywal L2 inoculated	1.353637e-01	ns
+PR1B	Rywal noninoculated	shPTI5-Rywal L6 inoculated	8.917624e-02	ns
+PR1B	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	2.176143e-01	ns
+PR1B	shPTI5-Rywal L2 noninoculated	Rywal inoculated	9.999454e-01	ns
+PR1B	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	8.714661e-01	ns
+PR1B	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	8.035768e-01	ns
+PR1B	shPTI5-Rywal L6 noninoculated	Rywal inoculated	2.489116e-02	*
+PR1B	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	3.163787e-01	ns
+PR1B	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	1.152294e-01	ns
+PR1B	Rywal inoculated	shPTI5-Rywal L2 inoculated	7.069131e-01	ns
+PR1B	Rywal inoculated	shPTI5-Rywal L6 inoculated	4.261993e-01	ns
+PR1B	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	9.999975e-01	ns
+CPI8	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	1.219982e-01	ns
+CPI8	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	9.849358e-01	ns
+CPI8	Rywal noninoculated	Rywal inoculated	9.683199e-01	ns
+CPI8	Rywal noninoculated	shPTI5-Rywal L2 inoculated	9.999315e-01	ns
+CPI8	Rywal noninoculated	shPTI5-Rywal L6 inoculated	9.999672e-01	ns
+CPI8	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	1.432768e-04	***
+CPI8	shPTI5-Rywal L2 noninoculated	Rywal inoculated	4.786884e-05	***
+CPI8	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	1.219902e-04	***
+CPI8	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	4.555075e-03	**
+CPI8	shPTI5-Rywal L6 noninoculated	Rywal inoculated	9.999344e-01	ns
+CPI8	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	9.114077e-01	ns
+CPI8	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	9.788051e-01	ns
+CPI8	Rywal inoculated	shPTI5-Rywal L2 inoculated	7.257066e-01	ns
+CPI8	Rywal inoculated	shPTI5-Rywal L6 inoculated	9.370296e-01	ns
+CPI8	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	1.000000e+00	ns
+BGLU2	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	8.599464e-01	ns
+BGLU2	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	4.980582e-06	***
+BGLU2	Rywal noninoculated	Rywal inoculated	7.654036e-05	***
+BGLU2	Rywal noninoculated	shPTI5-Rywal L2 inoculated	2.946553e-06	***
+BGLU2	Rywal noninoculated	shPTI5-Rywal L6 inoculated	1.051099e-06	***
+BGLU2	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	6.022041e-01	ns
+BGLU2	shPTI5-Rywal L2 noninoculated	Rywal inoculated	4.463012e-01	ns
+BGLU2	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	2.312749e-01	ns
+BGLU2	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	2.992392e-01	ns
+BGLU2	shPTI5-Rywal L6 noninoculated	Rywal inoculated	9.245687e-01	ns
+BGLU2	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	2.236517e-01	ns
+BGLU2	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	1.860355e-01	ns
+BGLU2	Rywal inoculated	shPTI5-Rywal L2 inoculated	9.104384e-01	ns
+BGLU2	Rywal inoculated	shPTI5-Rywal L6 inoculated	9.915834e-01	ns
+BGLU2	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	9.830149e-01	ns
+HSP70	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	2.230500e-02	*
+HSP70	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	3.457963e-01	ns
+HSP70	Rywal noninoculated	Rywal inoculated	9.868086e-01	ns
+HSP70	Rywal noninoculated	shPTI5-Rywal L2 inoculated	9.642704e-01	ns
+HSP70	Rywal noninoculated	shPTI5-Rywal L6 inoculated	3.015898e-02	*
+HSP70	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	5.026856e-01	ns
+HSP70	shPTI5-Rywal L2 noninoculated	Rywal inoculated	5.479296e-02	ns
+HSP70	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	2.746249e-01	ns
+HSP70	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	7.016438e-01	ns
+HSP70	shPTI5-Rywal L6 noninoculated	Rywal inoculated	4.407433e-01	ns
+HSP70	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	9.728582e-01	ns
+HSP70	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	9.857524e-01	ns
+HSP70	Rywal inoculated	shPTI5-Rywal L2 inoculated	8.791503e-01	ns
+HSP70	Rywal inoculated	shPTI5-Rywal L6 inoculated	1.745030e-01	ns
+HSP70	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	7.566213e-01	ns
+PTI5	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	5.463622e-02	ns
+PTI5	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	0.000000e+00	***
+PTI5	Rywal noninoculated	Rywal inoculated	7.469652e-01	ns
+PTI5	Rywal noninoculated	shPTI5-Rywal L2 inoculated	2.765750e-08	***
+PTI5	Rywal noninoculated	shPTI5-Rywal L6 inoculated	2.084999e-13	***
+PTI5	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	9.824717e-05	***
+PTI5	shPTI5-Rywal L2 noninoculated	Rywal inoculated	2.457947e-01	ns
+PTI5	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	2.699748e-01	ns
+PTI5	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	1.656699e-03	**
+PTI5	shPTI5-Rywal L6 noninoculated	Rywal inoculated	1.110223e-16	***
+PTI5	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	4.357849e-09	***
+PTI5	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	1.601735e-02	*
+PTI5	Rywal inoculated	shPTI5-Rywal L2 inoculated	5.334261e-07	***
+PTI5	Rywal inoculated	shPTI5-Rywal L6 inoculated	4.390188e-10	***
+PTI5	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	1.156575e-04	***
+13-LOX	Rywal noninoculated	shPTI5-Rywal L2 noninoculated	2.312510e-01	ns
+13-LOX	Rywal noninoculated	shPTI5-Rywal L6 noninoculated	9.997090e-01	ns
+13-LOX	Rywal noninoculated	Rywal inoculated	4.753586e-01	ns
+13-LOX	Rywal noninoculated	shPTI5-Rywal L2 inoculated	6.380944e-01	ns
+13-LOX	Rywal noninoculated	shPTI5-Rywal L6 inoculated	6.099158e-01	ns
+13-LOX	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 noninoculated	2.455384e-03	**
+13-LOX	shPTI5-Rywal L2 noninoculated	Rywal inoculated	8.243236e-01	ns
+13-LOX	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L2 inoculated	4.882538e-01	ns
+13-LOX	shPTI5-Rywal L2 noninoculated	shPTI5-Rywal L6 inoculated	5.314545e-01	ns
+13-LOX	shPTI5-Rywal L6 noninoculated	Rywal inoculated	1.270704e-03	**
+13-LOX	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L2 inoculated	1.962652e-03	**
+13-LOX	shPTI5-Rywal L6 noninoculated	shPTI5-Rywal L6 inoculated	1.426963e-03	**
+13-LOX	Rywal inoculated	shPTI5-Rywal L2 inoculated	9.580293e-01	ns
+13-LOX	Rywal inoculated	shPTI5-Rywal L6 inoculated	9.781487e-01	ns
+13-LOX	shPTI5-Rywal L2 inoculated	shPTI5-Rywal L6 inoculated	9.999895e-01	ns
+
+

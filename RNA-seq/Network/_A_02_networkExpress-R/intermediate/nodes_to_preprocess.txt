@@ -1,0 +1,511 @@
+geneID	shortName	shortDescription	MapManBin
+&beta;-Carotene	&beta;-Carotene	all-trans-&beta;-carotene	Hormone - Strigolactones (SL)
+&beta;-Cryptoxanthin	&beta;-Cryptoxanthin	&beta;-Cryptoxanthin	Hormone - Abscisic acid (ABA)
+&gamma;-Carotene	&gamma;-Carotene	&gamma;-Carotene	Hormone - Strigolactones (SL)
+12-OH-JA-Ile	12-OH-JA-Ile	12-hydroxyjasmonic acid 12-O-&beta;-D-glucoside	Hormone - Jasmonate (JA)
+12,13-EOT	12,13-EOT	12,13(S)-epoxylinolenic acid	Hormone - Jasmonate (JA)
+13-HPOT	13-HPOT	13(S)-hydroperoxylinolenic acid	Hormone - Jasmonate (JA)
+3H3PP-CoA	3H3PP-CoA	3-hydroxy-3-phenylpropanoyl-CoA	Hormone - Salicylic acid (SA)
+3O3PP-CoA	3O3PP-CoA	3-oxo-3-phenylpropanoyl-CoA	Hormone - Salicylic acid (SA)
+4CL	4CL	4-coumarate:CoA ligase	Hormone - Salicylic acid (SA)
+5-phosphomevalonate	5-phosphomevalonate	mevalonic acid-5-phosphate	Secondary metabolism - Isoprenoids
+9-cis-&beta;-carotene	9-cis-&beta;-carotene	9-cis-&beta;-carotene	Hormone - Strigolactones (SL)
+9-cis-10&prime;-apo-&beta;-carotenal	9-cis-10&prime;-apo-&beta;-carotenal	9-cis-10&prime;-apo-&beta;-carotenal	Hormone - Strigolactones (SL)
+9-cis-Violaxanthin	9-cis-Violaxanthin	9-cis-Violaxanthin	Hormone - Abscisic acid (ABA)
+AAO	AAO	aldehyde oxidase	Hormone - Salicylic acid (SA)
+ABA	ABA	Abscisic acid	Signalling - MAP kinases (MAPKs)
+ABA2	ABA2	NAD(P)-binding Rossmann-fold superfamily protein	
+Abscisic aldehyde	Abscisic aldehyde	Abscisic aldehyde	Hormone - Abscisic acid (ABA)
+ACC	ACC	1-aminocyclopropane-1-carboxylate	Hormone - Ethylene (ET)
+ACH	ACH	thioesterase/thiol ester dehydrase-isomerase superfamily protein	Hormone - Jasmonate (JA)
+ACO	ACO	1-aminocyclopropane-1-carboxylic acid (ACC) oxidase	Hormone - Ethylene (ET)
+ACS	ACS	1-aminocyclopropane-1-carboxylic acid (ACC) synthase	Hormone - Ethylene (ET)
+ACX	ACX	acyl-CoA oxidase	Hormone - Jasmonate (JA)
+Ade	Ade	Adenine	Hormone - Cytokinins (CK)
+ADK	ADK	adenosine kinase 1,2	Hormone - Cytokinins (CK)
+Ado	Ado	Adenosine	Hormone - Cytokinins (CK)
+ADP	ADP	adenosine 5&prime;-diphosphate	Hormone - Cytokinins (CK)
+ADT	ADT	arogenate dehydratase 1,2,3,4,5,6	Hormone - Salicylic acid (SA)
+AGO1	AGO1	argonaute, stabilizer of iron transporter SufD / Polynucleotidyl transferase	Regulation - Silencing
+AGO1,5,7,10|CI	AGO1,5,7,10|CI	NA	Regulation - Silencing
+AGO1,5,7,10|HC-Pro	AGO1,5,7,10|HC-Pro	NA	Regulation - Silencing
+AHK2,3,4	AHK2,3,4	histidine kinase 2,3,4	Hormone - Cytokinins (CK)
+AHP	AHP	histidine-containing phosphotransfer protein	Hormone - Cytokinins (CK)
+AIM1	AIM1	Enoyl-CoA hydratase/isomerase family	Hormone - Salicylic acid (SA)
+all-trans-Neurosporene	all-trans-Neurosporene	all-trans-Neurosporene	
+all-trans-Phytofluene	all-trans-Phytofluene	all-trans-Phytofluene	
+all-trans-zeta-Carotene	all-trans-zeta-Carotene	all-trans-zeta-Carotene	
+alpha-linolenic-acid	alpha-linolenic-acid	Essential fatty acid processes.	Hormone - Jasmonate (JA)
+AMI1	AMI1	amidase 1	Hormone - Auxins (AUX)
+AMP	AMP	adenosine 5&prime;-monophosphate	Hormone - Cytokinins (CK)
+Antheraxanthin	Antheraxanthin	Antheraxanthin	Hormone - Abscisic acid (ABA)
+Anthocyanin-accumulation	Anthocyanin-accumulation	Accumulation of anthocynanins.	Secondary metabolism - Anthocyanins
+AOC	AOC	allene oxide cyclase 1,2,3,4	Hormone - Jasmonate (JA)
+AOS	AOS	hydroperoxide dehydratase	Hormone - Jasmonate (JA)
+AOX	AOX	NA	Primary metabolism - Respiration
+APT	APT	adenosine phosphoribosyltransferase 1,2,3,4,5	Hormone - Cytokinins (CK)
+APX	APX	ascorbate peroxidase 1,2,3,4,5,6	Signalling - Reactive oxygen species (ROS)
+ARF	ARF	auxin response transcription factor	Hormone - Auxins (AUX)
+ARR-A	ARR-A	type-A Arabidopsis Response Regulators	Hormone - Cytokinins (CK)
+ARR-B	ARR-B	type-B Arabidopsis Response Regulators	Hormone - Cytokinins (CK)
+ASK	ASK	S phase kinase-associated protein	Degradation - Ubiquitination
+ATG13A	ATG13A	Protein kinase superfamily protein	Degradation - Autophagy
+ATG1A	ATG1A	Protein kinase superfamily protein	Degradation - Autophagy
+ATP	ATP	adenosine 5&prime;-triphosphate	Hormone - Cytokinins (CK)
+ATPB	ATPB	ATP synthase subunit beta	Secondary metabolism - Terpenoids
+ATPB|HC-Pro	ATPB|HC-Pro	NA	Secondary metabolism - Terpenoids
+AUX/IAA	AUX/IAA	indole-3-acetic acid inducible	Hormone - Auxins (AUX)
+AUX/IAA|WRKY57	AUX/IAA|WRKY57	NA	Hormone - Auxins (AUX)
+BA	BA	Benzoic acid	Hormone - Salicylic acid (SA)
+BA-CoA	BA-CoA	benzoyl-CoA	Hormone - Salicylic acid (SA)
+BA2H	BA2H	NA	Hormone - Salicylic acid (SA)
+BAK1	BAK1	BRI1-associated receptor kinase; somatic embryogenesis receptor-like kinase 3	Hormone - Brassinosteroids (BS)
+BAK1|BRI1	BAK1|BRI1	BRASSINOSTEROID-INSENSITIVE1 and BRI1-ASSOCIATED KINASE1(SERK3)	Hormone - Brassinosteroids (BS)
+BAK1|FLS2|flg22	BAK1|FLS2|flg22	NA	Hormone - Brassinosteroids (BS)
+BD	BD	Benzaldehyde	Hormone - Salicylic acid (SA)
+BETA-OHASE	BETA-OHASE	beta-carotene hydroxylase	
+BGLU30	BGLU30	Glycosyl hydrolase superfamily protein	Hormone - Salicylic acid (SA)
+BIK1	BIK1	botrytis-induced kinase1	Signalling - Perception and resistance genes
+BIK1|Ca2+	BIK1|Ca2+	NA	Signalling - Calcium
+BIK1|PEPR1|PEP1	BIK1|PEPR1|PEP1	NA	
+Brassinolide	Brassinolide	Brassinosteroid	Hormone - Brassinosteroids (BS)
+BRI1	BRI1	Leucine-rich receptor-like protein kinase family protein	Hormone - Brassinosteroids (BS)
+BSK	BSK	BR-signaling kinase	Hormone - Brassinosteroids (BS)
+BSU1	BSU1	Serine/threonine protein phosphatase family protein	Hormone - Brassinosteroids (BS)
+BT4	BT4	BTB and TAZ domain protein 4	Regulation - Transcription & Translation
+bZIP21	bZIP21	bZIP transcription factor family protein	Hormone - Salicylic acid (SA)
+BZO1	BZO1	benzoyloxyglucosinolate 1	
+BZR2	BZR2	Brassinosteroid signaling positive regulator (BZR1) family protein	Hormone - Brassinosteroids (BS)
+C19-GA2ox	C19-GA2ox	gibberellin 2-oxidase 1,2,3,4,6	Hormone - Gibberellin (GA)
+CA	CA	Cinnamate	Hormone - Salicylic acid (SA)
+CA-CoA	CA-CoA	Cinnamoyl-CoA	Hormone - Salicylic acid (SA)
+Ca2+	Ca2+	Calcium	Signalling - Calcium
+CAMTA3	CAMTA3	calmodulin-binding transcription activator 3	Signalling - Calcium
+CAT	CAT	catalase	Signalling - Reactive oxygen species (ROS)
+CAT|LSD1	CAT|LSD1	NA	
+CAU1	CAU1	Calcium Underaccumulation 1	
+CBP60G	CBP60G	CAM-binding protein 60-like G; calmodulin binding	Signalling - Calcium
+CCD	CCD	Carotenoid cleavage dioxygenase	Hormone - Strigolactones (SL)
+CDK	CDK	cyclin-dependent kinase E-1	Regulation - Transcription & Translation
+CDKE|NPR1	CDKE|NPR1	NA	
+CDKE|TGA2,5,6	CDKE|TGA2,5,6	NA	
+CDKE|WRKY18	CDKE|WRKY18	NA	
+CDKE|WRKY6	CDKE|WRKY6	NA	
+CDPK	CDPK	calmodulin-domain protein kinase	Signalling - Calcium
+Chor	Chor	Chorismate	Hormone - Salicylic acid (SA)
+CHY1	CHY1	beta-hydroxyisobutyryl-CoA hydrolase 1	
+CI	CI	RNA helicase with ATPase activity	Stress - Biotic
+CI|PSAK	CI|PSAK	NA	Primary metabolism - Photosynthesis
+cis-prenyl-tRNA	cis-prenyl-tRNA	tRNA containing N6-(cis-hydroxy)isopentenyladenosine	Hormone - Cytokinins (CK)
+CKX	CKX	cytokinin oxidase/dehydrogenase	Hormone - Cytokinins (CK)
+CL	CL	Carlactone	Hormone - Strigolactones (SL)
+CLA	CLA	Carlactonoic acid	Hormone - Strigolactones (SL)
+CLH	CLH	chlorophyllase 1	Hormone - Jasmonate (JA)
+CM	CM	chorismate mutase 1,2,3	Hormone - Salicylic acid (SA)
+CML	CML	calmodulin related	Signalling - Calcium
+CML|Ca2+	CML|Ca2+	NA	Signalling - Calcium
+CML|HC-Pro	CML|HC-Pro	NA	Signalling - Calcium
+CO	CO	B-box type zinc finger protein with CCT domain-containing protein	Primary metabolism - Photosynthesis
+CO|OBE1	CO|OBE1	NA	Primary metabolism - Photosynthesis
+CO2-deficiency	CO2-deficiency	ROS processes.	Signalling - Reactive oxygen species (ROS)
+COI1	COI1	Coronatine insensitive 1	Hormone - Jasmonate (JA)
+COI1|JA-Ile|SCF	COI1|JA-Ile|SCF	NA	Hormone - Jasmonate (JA)
+COI1|RBC	COI1|RBC	NA	
+CP	CP	capsid/coat protein	Stress - Biotic
+CP|CPIP	CP|CPIP	NA	Signalling - Heat-shock proteins (HSPs)
+CPIP	CPIP	DNAJ heat shock family protein	Signalling - Heat-shock proteins (HSPs)
+CPS	CPS	ent-copalyl diphosphate synthase	Hormone - Gibberellin (GA)
+CRT	CRT	calreticulin 1,2,3	Signalling - Calcium
+CRT|Ca2+	CRT|Ca2+	NA	Signalling - Calcium
+CRT|ETR	CRT|ETR	NA	
+CRT|HC-Pro	CRT|HC-Pro	NA	Signalling - Calcium
+CTR	CTR	Protein kinase superfamily protein	Hormone - Ethylene (ET)
+CTR|ETR	CTR|ETR	NA	Hormone - Ethylene (ET)
+CTS	CTS	ATP-binding cassette D1	Hormone - Jasmonate (JA)
+Cu2+	Cu2+	Copper	Hormone - Ethylene (ET)
+CUL	CUL	cullin	Degradation - Ubiquitination
+CYCD3-3	CYCD3-3	CYCLIN D3;3	Hormone - Brassinosteroids (BS)
+CYP735A1,A2	CYP735A1,A2	cytochrome P450, family 735, subfamily A, polypeptide 1,2	Hormone - Cytokinins (CK)
+CYP73A5	CYP73A5	cinnamate-4-hydroxylase	
+CYP79B2	CYP79B2	cytochrome P450, family 79, subfamily B, polypeptide 2	Hormone - Auxins (AUX)
+CYP81F4	CYP81F4	cytochrome P450, family 81, subfamily F, polypeptide 4	Secondary metabolism - Alkaloids
+CYP83B1	CYP83B1	cytochrome P450, family 83, subfamily B, polypeptide 1	Hormone - Auxins (AUX)
+CYP94	CYP94	cytochrome P450, family 94, subfamily C, polypeptide 1,3	Hormone - Jasmonate (JA)
+cZ	cZ	cis-zeatin	Hormone - Cytokinins (CK)
+cZ7G	cZ7G	7-(&beta;-D-glucosyl)-cis-zeatin	Hormone - Cytokinins (CK)
+cZ9G	cZ9G	9-(&beta;-D-glucosyl)-cis-zeatin	Hormone - Cytokinins (CK)
+cZOG	cZOG	O-&beta;-D-glucosyl-cis-zeatin	Hormone - Cytokinins (CK)
+cZR	cZR	cis-zeatin riboside	Hormone - Cytokinins (CK)
+cZRMP	cZRMP	cis-zeatin riboside monophosphate	Hormone - Cytokinins (CK)
+cZROG	cZROG	cis-Zeatin-o-glucoside riboside	Hormone - Cytokinins (CK)
+D14	D14	alpha/beta-Hydrolases superfamily protein	Hormone - Strigolactones (SL)
+D14|MAX2|SCF	D14|MAX2|SCF	NA	Hormone - Strigolactones (SL)
+D27	D27	beta-carotene isomerase D27-like protein	Hormone - Strigolactones (SL)
+D53	D53	Protein DWARF 53	Hormone - Strigolactones (SL)
+DCL2,4	DCL2,4	Dicer-like proteins	Regulation - Silencing
+DELLA	DELLA	GRAS transcription factor family protein	Hormone - Gibberellin (GA)
+DELLA|GA|GID1	DELLA|GA|GID1	NA	Hormone - Gibberellin (GA)
+DELLA|JAZ	DELLA|JAZ	NA	
+DELLA|MYC	DELLA|MYC	NA	
+DHNAT2	DHNAT2	Thioesterase superfamily protein	
+DMAPP	DMAPP	dimethylallyl diphosphate	Hormone - Cytokinins (CK)
+DOPAL	DOPAL	3,4-dihydroxyphenylacetaldehyde	
+DR4	DR4	drought-repressed 4	Hormone - Abscisic acid (ABA)
+Drought	Drought	NA	
+DXPS2	DXPS2	1-deoxy-D-xylulose-5-phosphate synthase	Secondary metabolism - Terpenoids
+DXPS2|HC-Pro	DXPS2|HC-Pro	NA	Secondary metabolism - Terpenoids
+DZ	DZ	dihydrozeatin	Hormone - Cytokinins (CK)
+DZ7G	DZ7G	7-(&alpha;-D-glucosyl)dihydrozeatin	Hormone - Cytokinins (CK)
+DZ9G	DZ9G	9-(&alpha;-D-glucosyl)dihydrozeatin	Hormone - Cytokinins (CK)
+DZOG	DZOG	dihydrozeatin-O-glucoside	Hormone - Cytokinins (CK)
+DZR	DZR	dihydrozeatin riboside	Hormone - Cytokinins (CK)
+DZRMP	DZRMP	dihydrozeatin riboside monophosphate	Hormone - Cytokinins (CK)
+DZROG	DZROG	dihydrozeatin-9-N-glucoside-O-glucoside	Hormone - Cytokinins (CK)
+e-	e-	electron	Primary metabolism - Photosynthesis
+eATP	eATP	extracellular ATP	Signalling - Other
+EBF	EBF	EIN3-binding F box protein 1,2	Hormone - Ethylene (ET)
+EBF|SCF	EBF|SCF	NA	Hormone - Ethylene (ET)
+EDF2	EDF2	related to ABI3/VP1 2	Hormone - Ethylene (ET)
+EDF2|HC-Pro	EDF2|HC-Pro	NA	Hormone - Ethylene (ET)
+EDS1	EDS1	enhanced disease susceptibility, alpha/beta-Hydrolases superfamily protein	Hormone - Salicylic acid (SA)
+EDS1|MPK3|PAD4	EDS1|MPK3|PAD4	NA	Signalling - MAP kinases (MAPKs)
+EDS1|PAD4	EDS1|PAD4	NA	Hormone - Salicylic acid (SA)
+EDS1|PAD4|SAG	EDS1|PAD4|SAG	NA	Hormone - Salicylic acid (SA)
+EDS5	EDS5	MATE efflux family protein	Hormone - Salicylic acid (SA)
+EIF4E|HC-Pro	EIF4E|HC-Pro	NA	
+EIF4E|VPg	EIF4E|VPg	NA	
+EIF4E1	EIF4E1	eukaryotic translation initiation factor 4E	Regulation - Transcription & Translation
+EIJP1	EIJP1	EDS1 INTERACTING J PROTEIN 1	Signalling - Heat-shock proteins (HSPs)
+EIN2	EIN2	EIN2 transporter, NRAMP metal ion transporter family protein	Hormone - Ethylene (ET)
+EIN3(like)	EIN3(like)	EIN3 and EIN3-like transcription factors	Hormone - Ethylene (ET)
+EIN3(like)|JAZ	EIN3(like)|JAZ	NA	
+EIN5	EIN5	exoribonuclease 4	Hormone - Ethylene (ET)
+ELI5	ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	Primary metabolism - Amino-acids
+ent-Copalyl-PP	ent-Copalyl-PP	ent-Copalyl diphosphate	Hormone - Gibberellin (GA)
+ent-Kaurene	ent-Kaurene	ent-Kaurene	Hormone - Gibberellin (GA)
+ent-Kaurenoic acid	ent-Kaurenoic acid	ent-Kaurenoic acid	Hormone - Gibberellin (GA)
+EPS1	EPS1	HXXXD-type acyl-transferase family protein	Hormone - Salicylic acid (SA)
+ERF/EDF	ERF/EDF	ERF/EDF family, RAV/TEM related	Hormone - Ethylene (ET)
+ERF/ORA59	ERF/ORA59	ERF family, ORA59 related	Hormone - Ethylene (ET)
+ERF016	ERF016	ethylene response factor 16	Hormone - Ethylene (ET)
+ERF096	ERF096	ethylene response factor 96	Hormone - Ethylene (ET)
+ERF1	ERF1	ethylene response factor 1 (1A and 1B)	Hormone - Ethylene (ET)
+ERF104	ERF104	ethylene response factor 104	Hormone - Ethylene (ET)
+ERF105	ERF105	ethylene response factor 105	Hormone - Ethylene (ET)
+ERF11	ERF11	ethylene response factor 11	Regulation - Transcription & Translation
+ERF5	ERF5	ethylene response factor 5	Hormone - Ethylene (ET)
+ERF6	ERF6	ethylene response factor 6	Hormone - Ethylene (ET)
+ESP	ESP	enzyme regulator (epithiospecifier protein)	Signalling - Perception and resistance genes
+ESP|WRKY53	ESP|WRKY53	NA	Regulation - Transcription & Translation
+ET	ET	Ethylene	Hormone - Ethylene (ET)
+ET|ETR	ET|ETR	NA	Hormone - Ethylene (ET)
+ETP	ETP	EIN2-targeting F-box protein	Hormone - Ethylene (ET)
+ETP|SCF	ETP|SCF	NA	Hormone - Ethylene (ET)
+ETR	ETR	ethylene receptor	Hormone - Ethylene (ET)
+FKBP65	FKBP65	FKBP-type peptidyl-prolyl cis-trans isomerase family protein	Signalling - Heat-shock proteins (HSPs)
+flg22	flg22	flagellin fragment	Stress - Biotic
+FLS2	FLS2	Leucine-rich receptor-like protein kinase family protein; PRR protein flagellin sensing 2	Signalling - Perception and resistance genes
+GA	GA	Gibberellins	Hormone - Gibberellin (GA)
+GA-methylester	GA-methylester	Gibberellin A1, A3, A4 methyl ester	Hormone - Gibberellin (GA)
+GA|GID1	GA|GID1	NA	Hormone - Gibberellin (GA)
+GA12	GA12	gibberellin A12	Hormone - Gibberellin (GA)
+GA20	GA20	gibberellin A20	Hormone - Gibberellin (GA)
+GA20ox	GA20ox	gibberellin 20-oxidase	Hormone - Gibberellin (GA)
+GA34	GA34	gibberellin A34	Hormone - Gibberellin (GA)
+GA3ox	GA3ox	gibberellin 3-oxidase 1,2,3,4	Hormone - Gibberellin (GA)
+GA8	GA8	gibberellin A8	Hormone - Gibberellin (GA)
+GA9	GA9	gibberellin A9	Hormone - Gibberellin (GA)
+GAMT1,2	GAMT1,2	gibberellic acid (GA) methyltransferase 1,2	Hormone - Gibberellin (GA)
+GBF4	GBF4	G-box binding factor 4	Signalling - MAP kinases (MAPKs)
+Geranylgeranyl-PP	Geranylgeranyl-PP	Geranylgeranyl diphosphate	Hormone - Gibberellin (GA)
+GH3	GH3	Auxin-responsive GH3 family protein	Hormone - Salicylic acid (SA)
+GH3.7	GH3.7	auxin-responsive GH3 family protein	Hormone - Auxins (AUX)
+GID	GID	gibberellin (GA) receptor	Hormone - Gibberellin (GA)
+GID|SCF	GID|SCF	NA	Hormone - Gibberellin (GA)
+Glu	Glu	UDP-&alpha;-D-glucose	Hormone - Cytokinins (CK)
+GPAphid2	GPAphid2	NA	Signalling - Perception and resistance genes
+GPAphid2|RANGAP	GPAphid2|RANGAP	NA	Signalling - Perception and resistance genes
+GPX	GPX	NA	Signalling - Reactive oxygen species (ROS)
+Growth	Growth	NA	
+GRX480	GRX480	glutaredoxin	Signalling - Reactive oxygen species (ROS)
+GSNO	GSNO	GroES-like zinc-binding dehydrogenase family protein	Hormone - Salicylic acid (SA)
+GST	GST	glutathione S-transferase	Signalling - Reactive oxygen species (ROS)
+GST|SA	GST|SA	NA	
+HC-Pro	HC-Pro	Helper Component PROteinase	Stress - Biotic
+HC-Pro|MIND1	HC-Pro|MIND1	NA	Secondary metabolism - Terpenoids
+HC-Pro|PAA2	HC-Pro|PAA2	NA	Degradation - Ubiquitination
+HC-Pro|PBB2	HC-Pro|PBB2	NA	Degradation - Ubiquitination
+HC-Pro|PBE1	HC-Pro|PBE1	NA	Degradation - Ubiquitination
+HC-Pro|ribosome	HC-Pro|ribosome	NA	Regulation - Transcription & Translation
+HC-Pro|TDX	HC-Pro|TDX	NA	Signalling - Reactive oxygen species (ROS)
+HC-Pro|vsiRNA	HC-Pro|vsiRNA	In viral suppression of RNA-Silencing, Hc-Pro binds to vsiRNAs.	Regulation - Silencing
+HEN1	HEN1	HUA ENHANCER 1	
+HMA	HMA	copper-exporting ATPase	Hormone - Ethylene (ET)
+HMBDP	HMBDP	(2E)-4-hydroxy-3-metylbut-2-enyl diphosphate	Hormone - Cytokinins (CK)
+HSP90	HSP90	heat shock protein 90	Signalling - Heat-shock proteins (HSPs)
+HSP90|RAR1|SGT1	HSP90|RAR1|SGT1	NA	Signalling - Heat-shock proteins (HSPs)
+IAA	IAA	Indole-3-acetic acid	Hormone - Auxins (AUX)
+IAA-Ala	IAA-Ala	N-(indole-3-acetyl)-L-alanine	Hormone - Auxins (AUX)
+IAA-Asp	IAA-Asp	(indol-3-yl)acetyl-L-aspartate	Hormone - Auxins (AUX)
+IAA-Glu	IAA-Glu	1-O-(indol-3-ylacetyl)-&beta;-D-glucose	Hormone - Auxins (AUX)
+IAA-Leu	IAA-Leu	N-(indole-3-acetyl)-L-leucine	Hormone - Auxins (AUX)
+iaaM	iaaM	unknown enzyme	Hormone - Auxins (AUX)
+IAM	IAM	indole-3-acetamide	Hormone - Auxins (AUX)
+IAMT1	IAMT1	IAA carboxylmethyltransferase 1	Hormone - Auxins (AUX)
+IAN	IAN	indole-3-acetonitrile	Hormone - Auxins (AUX)
+IAOx	IAOx	(E)-(indol-3-yl)acetaldehyde oxime	Hormone - Auxins (AUX)
+IAOx N-oxide	IAOx N-oxide	1-aci-nitro-2-(1H-indol-3-yl)ethane	Hormone - Auxins (AUX)
+IAR	IAR	IAA-alanine resistance protein	Hormone - Auxins (AUX)
+ICS	ICS	isochorismate synthase	Hormone - Salicylic acid (SA)
+Ile	Ile	Isoleucine	Hormone - Jasmonate (JA)
+ILR1	ILR1	Peptidase M20/M25/M40 family protein	Hormone - Auxins (AUX)
+iP	iP	N6-isopentenyladenine	Hormone - Cytokinins (CK)
+iP7G	iP7G	isopentenyladenine-7-N-glucoside	Hormone - Cytokinins (CK)
+iP9G	iP9G	isopentenyladenine-9-N-glucoside	Hormone - Cytokinins (CK)
+IPA	IPA	Indole-3-pyruvate	Hormone - Auxins (AUX)
+iPOG	iPOG	N6-isopentenyladenine-O-glucoside; UGT85A1,UGT73C5, and UGT73C1 recognized trans-zeatin and dihydrozeatin, which have an available hydroxyl group for glucosylation and formed the O-glucosides.	Hormone - Cytokinins (CK)
+iPR	iPR	N6-isopentenyladenosine	Hormone - Cytokinins (CK)
+iPRDP	iPRDP	N6-(dimethyallyl)adenosine 5&prime;-diphosphate	Hormone - Cytokinins (CK)
+iPRMP	iPRMP	N6-(dimethyallyl)adenosine 5&prime;-monophosphate	Hormone - Cytokinins (CK)
+iPROG	iPROG	N6-isopentenyladenosine-O-glucoside; UGT85A1,UGT73C5, and UGT73C1 recognized trans-zeatin and dihydrozeatin, which have an available hydroxyl group for glucosylation and formed the O-glucosides.	Hormone - Cytokinins (CK)
+iPRTP	iPRTP	N6-(dimethyallyl)adenosine 5&prime;-triphosphate	Hormone - Cytokinins (CK)
+IPT	IPT	isopentenyltransferase	Hormone - Cytokinins (CK)
+IsoChor	IsoChor	Isochorismate	Hormone - Salicylic acid (SA)
+IsoChor-9-Glu	IsoChor-9-Glu	Isochorismoyl-L-glutamate	Hormone - Salicylic acid (SA)
+ISPH	ISPH	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	Hormone - Cytokinins (CK)
+JA	JA	Jasmonic acid	Hormone - Jasmonate (JA)
+JA-CoA	JA-CoA	jasmonoyl-CoA	Hormone - Jasmonate (JA)
+JA-Ile	JA-Ile	Jasmonoyl-isoleucine	Hormone - Jasmonate (JA)
+JAM	JAM	jasmonate associated MYC2 like	Hormone - Jasmonate (JA)
+JAR	JAR	Auxin-responsive GH3 family protein	Hormone - Jasmonate (JA)
+JAT2	JAT2	ABC-2 type transporter family protein	Hormone - Jasmonate (JA)
+JAZ	JAZ	jasmonate-zim-domain protein	Hormone - Jasmonate (JA)
+JAZ|MYC	JAZ|MYC	NA	Hormone - Jasmonate (JA)
+JAZ|RBC	JAZ|RBC	NA	
+JAZ|WRKY57	JAZ|WRKY57	NA	Hormone - Jasmonate (JA)
+JMT	JMT	jasmonate O-methyltransferase	Hormone - Jasmonate (JA)
+JR1	JR1	jacalin-related lectin 35	Hormone - Jasmonate (JA)
+KAO1,2	KAO1,2	ent-kaurenoic acid oxidase 1,2	Hormone - Gibberellin (GA)
+KAT	KAT	acetyl-CoA acyltransferase	Hormone - Jasmonate (JA)
+KO	KO	ent-kaurene oxidase	Hormone - Gibberellin (GA)
+KS	KS	ent-kaurene synthase	Hormone - Gibberellin (GA)
+L-arogenate	L-arogenate	L-arogenate	
+L-Dopa	L-Dopa	3,4-dihydroxy-L-phenylalanine	Primary metabolism - Amino-acids
+L-homo-cys	L-homo-cys	L-homocysteine	Hormone - Ethylene (ET)
+L-Met	L-Met	L-methionine	Hormone - Ethylene (ET)
+LA	LA	Linoleic acid	Hormone - Jasmonate (JA)
+LCY1	LCY1	lycopene cyclase	
+LECRK19	LECRK19	Concanavalin A-like lectin protein kinase family protein	Signalling - Other
+LOG	LOG	cytokinin riboside 5'-monophosphate phosphoribohydrolase	Hormone - Cytokinins (CK)
+LOX	LOX	lipoxygenase	Hormone - Jasmonate (JA)
+LSD1	LSD1	LSD1 zinc finger family protein	Regulation - Transcription & Translation
+Lycopene	Lycopene	Lycopene	Secondary metabolism - Terpenoids
+MAPKKK8	MAPKKK8	MAP kinase kinase kinase MAPKKK8/MEKK1	Signalling - MAP kinases (MAPKs)
+MAX1	MAX1	cytochrome P450, family 711, subfamily A, polypeptide 1; more axillary branches 1	Hormone - Strigolactones (SL)
+MAX2	MAX2	E3 ubiquitin ligase SCF complex F-box subunit; more axillary branches 2	Signalling - Perception and resistance genes
+me-vsiRNA	me-vsiRNA	methylated viral-derived small interfering RNAs	Regulation - Silencing
+MeIAA	MeIAA	methyl (indol-3-yl)acetate	Hormone - Auxins (AUX)
+MeJA	MeJA	methyl jasmonic acid	Hormone - Jasmonate (JA)
+MES	MES	methyl esterase 1,2,4,7,9	Hormone - Salicylic acid (SA)
+MeSA	MeSA	methyl salicylate	Hormone - Salicylic acid (SA)
+MFP	MFP	enoyl-CoA hydratase/3-hydroxyacyl-CoA dehydrogenase	Hormone - Jasmonate (JA)
+MIND1	MIND1	division-related factor MinD	Secondary metabolism - Terpenoids
+miR159AB	miR159AB	microRNA 159AB	Regulation - Silencing
+miR168	miR168	microRNA 168A	Regulation - Silencing
+MIR390	MIR390	microRNA 390	Regulation - Silencing
+MKD1	MKD1	Protein kinase superfamily protein	Signalling - MAP kinases (MAPKs)
+MKK1	MKK1	mitogen-activated protein (MAP) kinase/ ERK kinase 1	Signalling - MAP kinases (MAPKs)
+MKK4	MKK4	mitogen-activated protein (MAP) kinase kinase 4	Hormone - Ethylene (ET)
+MKS1	MKS1	mitogen-activated protein (MAP) kinase substrate 1	Signalling - MAP kinases (MAPKs)
+MKS1|WRKY33	MKS1|WRKY33	NA	Signalling - MAP kinases (MAPKs)
+MOS	MOS	importin-alpha isoform (IMPA/MOS)	Hormone - Salicylic acid (SA)
+MPK3,6	MPK3,6	mitogen-activated protein (MAP) kinase 3,6	Signalling - MAP kinases (MAPKs)
+MPK4	MPK4	mitogen-activated protein (MAP) kinase 4	Signalling - MAP kinases (MAPKs)
+MS	MS	Methionine Synthase	Hormone - Ethylene (ET)
+MVA	MVA	Mevalonic acid	Secondary metabolism - Isoprenoids
+MVK	MVK	mevalonate kinase	Secondary metabolism - Isoprenoids
+MYB113	MYB113	MYB domain containing transcription factor	Secondary metabolism - Anthocyanins
+MYB33,44,65	MYB33,44,65	MYB transcription factors 33,44,65	Secondary metabolism - Anthocyanins
+MYC|PYL	MYC|PYL	NA	
+MYC2	MYC2	basic helix-loop-helix (bHLH) DNA-binding superfamily protein	Hormone - Jasmonate (JA)
+N-pyruvoyl-L-Glu	N-pyruvoyl-L-Glu	N-pyruvoyl-L-glutamate	Hormone - Salicylic acid (SA)
+NAC019	NAC019	NAC domain containing protein 19	Regulation - Transcription & Translation
+NAC019|TCP8	NAC019|TCP8	NA	
+NAC032	NAC032	NAC domain containing protein 32	Regulation - Transcription & Translation
+NAC055	NAC055	ATAF-like NAC-domain transcription factor	Regulation - Transcription & Translation
+NAC072	NAC072	NA	Regulation - Transcription & Translation
+NCED	NCED	nine-cis-epoxycarotenoid dioxygenase 2,3,4,5,6,9	
+NDR1	NDR1	non race-specific disease resistance 1	Signalling - Perception and resistance genes
+NDR1|RIN4	NDR1|RIN4	NA	Signalling - Perception and resistance genes
+NIMIN	NIMIN	NIM1-interacting	Hormone - Salicylic acid (SA)
+NIMIN|NPR1	NIMIN|NPR1	NA	Hormone - Salicylic acid (SA)
+NIT1	NIT1	nitrilase 1	Hormone - Auxins (AUX)
+NPR1	NPR1	nonexpresser of PR genes	Hormone - Salicylic acid (SA)
+NPR1 high & JAZ high	NPR1 high & JAZ high	High NPR1 activity, high JAZ activity	
+NPR1 high & JAZ low	NPR1 high & JAZ low	High NPR1 activity, low JAZ activity	
+NPR1 low & JAZ low	NPR1 low & JAZ low	Low NPR1 activity, low JAZ activity	
+NPR1|NPR1	NPR1|NPR1	NA	Hormone - Salicylic acid (SA)
+NPR1|TGA2,5,6	NPR1|TGA2,5,6	NA	Hormone - Salicylic acid (SA)
+NPR1|WRKY18	NPR1|WRKY18	NA	
+NPR3	NPR3	NPR1-like protein 3	Hormone - Salicylic acid (SA)
+NPR4	NPR4	NPR1-like protein 4	Hormone - Salicylic acid (SA)
+O2	O2	Oxygen	Signalling - Reactive oxygen species (ROS)
+O2-deficiency	O2-deficiency	NA	
+OBE1	OBE1	oberon 1	Signalling - Perception and resistance genes
+OBE1|VPg	OBE1|VPg	NA	Signalling - Perception and resistance genes
+OBE1|WRKY11	OBE1|WRKY11	NA	Regulation - Transcription & Translation
+OBE1|WRKY17	OBE1|WRKY17	NA	Regulation - Transcription & Translation
+OG	OG	Oligogalacturonides	Signalling - Perception and resistance genes
+OMR1	OMR1	threonine ammonia-lyase	Hormone - Jasmonate (JA)
+OPC4-CoA	OPC4-CoA	OPC4-CoA	Hormone - Jasmonate (JA)
+OPC6-CoA	OPC6-CoA	OPC6-CoA	Hormone - Jasmonate (JA)
+OPC8	OPC8	oxopentenyl-cyclopentane-octanoic acid	Hormone - Jasmonate (JA)
+OPC8-CoA	OPC8-CoA	oxopentenyl-cyclopentane-octanoyl-CoA	Hormone - Jasmonate (JA)
+OPCL1	OPCL1	OPC-8:0 CoA ligase1	Hormone - Jasmonate (JA)
+OPDA	OPDA	12-oxophytodienoic acid	Hormone - Jasmonate (JA)
+OPR	OPR	12-oxophytodienoic acid reductase	Hormone - Jasmonate (JA)
+ORA59	ORA59	octadecanoid-responsive AP2/ERF 59	Hormone - Ethylene (ET)
+p-Coumaric acid	p-Coumaric acid	Hydroxycinnamic acid isonomer	
+P3	P3	cell-to-cell movement	Stress - Biotic
+P3|RBC	P3|RBC	NA	Primary metabolism - Photosynthesis
+PA	PA	aspartate aminotransferase	Hormone - Salicylic acid (SA)
+PAA	PAA	Phenylacetaldehyde	Primary metabolism - Amino-acids
+PAA2	PAA2	20S proteasome alpha subunit A	Degradation - Ubiquitination
+PAD4	PAD4	phytoalexin deficient, InterPro Lipase, class 3	Hormone - Salicylic acid (SA)
+PAL	PAL	phenylalanine ammonia-lyase 1,2,3,4	Hormone - Salicylic acid (SA)
+PBB2	PBB2	20S proteasome beta subunit B	Degradation - Ubiquitination
+PBE1	PBE1	20S proteasome beta subunit E	Degradation - Ubiquitination
+PBS3	PBS3	Auxin-responsive GH3 family protein	Hormone - Salicylic acid (SA)
+PDF1.2	PDF1.2	plant defensin 1.2a,b,c	Hormone - Ethylene (ET)
+PDS	PDS	phytoene desaturase 3	
+PEP	PEP	Precursos of elicitor peptide	Hormone - Peptides
+PEPR	PEPR	PEP receptor	Hormone - Peptides
+PEPR1|PEP1	PEPR1|PEP1	NA	
+Phe	Phe	Phenylalanine	Hormone - Salicylic acid (SA)
+Phytoene	Phytoene	15-cis-Phytoene	Hormone - Strigolactones (SL)
+PIF3,4	PIF3,4	BHLH transcription factor, phytochrome interacting factor 3	Signalling - Senescence
+potyvirus	potyvirus	NA	Stress - Biotic
+PP2C	PP2C	protein phosphatase 2C	Stress - Waterlogging
+PR1	PR1	pathogenesis-related protein 1	Hormone - Salicylic acid (SA)
+PR13	PR13	thionin	Hormone - Jasmonate (JA)
+PR2	PR2	pathogenesis-related protein 2; beta 1,3-glucanase	Hormone - Salicylic acid (SA)
+PR3	PR3	basic chitinase	Hormone - Ethylene (ET)
+PR4	PR4	pathogenesis-related 4	Hormone - Ethylene (ET)
+PR5	PR5	pathogenesis-related protein 5; thaumatin-like protein	Hormone - Salicylic acid (SA)
+prenyl-tRNA	prenyl-tRNA	tRNA containing 6-isopentenyladenosine	Hormone - Cytokinins (CK)
+Prep	Prep	prephenate	Hormone - Salicylic acid (SA)
+PSAK	PSAK	photosystem I subunit K	Primary metabolism - Photosynthesis
+PYL	PYL	regulatory components of ABA receptor family protein	Signalling - Other
+R-gene	R-gene	NA	Signalling - Perception and resistance genes
+R-gene|potyvirus	R-gene|potyvirus	NA	Signalling - Perception and resistance genes
+RANGAP	RANGAP	RAN GTPase activating protein	Signalling - Perception and resistance genes
+RANGAP|Rx	RANGAP|Rx	NA	Signalling - Perception and resistance genes
+RAPTOR2	RAPTOR2	regulatory-associated protein of TOR 2 (RAPTOR2)	Primary metabolism - Photosynthesis
+RAPTOR2|TOR	RAPTOR2|TOR	NA	Primary metabolism - Photosynthesis
+RAR1	RAR1	resistance signalling protein, cysteine and histidine-rich domain-containing protein	Signalling - Perception and resistance genes
+RBC	RBC	ribulose-bisphosphate carboxylase	Primary metabolism - Photosynthesis
+RBOH	RBOH	NADPH oxidase	Signalling - Reactive oxygen species (ROS)
+RBX	RBX	RING-box	Degradation - Ubiquitination
+RDR1,6	RDR1,6	RNA-dependent RNA polymerases	Regulation - Silencing
+RDR6	RDR6	RNA-dependent RNA polymerase 6	Regulation - Silencing
+REM12	REM12	transcriptional factor B3 family protein	Regulation - Transcription & Translation
+REM12|VPg	REM12|VPg	NA	
+RH8	RH8	RNAhelicase-like 8 (DEAD/DEAH box helicase)	Regulation - Silencing
+RH8|VPg	RH8|VPg	NA	Regulation - Silencing
+ribosome	ribosome	ribosome	Regulation - Transcription & Translation
+RIN4	RIN4	RPM1 interacting protein 4	Signalling - Perception and resistance genes
+RISC	RISC	RNA-induced silencing complex	Regulation - Silencing
+ROS	ROS	Reactive oxygen species	Signalling - Reactive oxygen species (ROS)
+RTE1	RTE1	protein REVERSION-TO-ETHYLENE SENSITIVITY-like protein (DUF778)	Hormone - Ethylene (ET)
+Rx	Rx	NA	Signalling - Perception and resistance genes
+S-alkyl-thiohydroximate	S-alkyl-thiohydroximate	S-(Indolylmethylthiohydroximoyl)-L-cysteine	Hormone - Auxins (AUX)
+SA	SA	Salicylic acid	Hormone - Salicylic acid (SA)
+SA-Asp	SA-Asp	Salicyloyl-aspartate	Hormone - Salicylic acid (SA)
+SA high	SA high	High SA concentration	
+SA low	SA low	Low SA concentration	
+SAG	SAG	salicylic acid 2-O-&beta;-D-glucoside	Hormone - Salicylic acid (SA)
+SAGs	SAGs	Senescence Associated Genes	Hormone - Salicylic acid (SA)
+SAGT	SAGT	UDP-glucosyltransferase	Hormone - Salicylic acid (SA)
+SAH	SAH	S-adenosyl-l-homocysteine	Hormone - Ethylene (ET)
+SAHH	SAHH	S-adenosyl-l-homocysteine (SAH) hydrolase 2	Hormone - Jasmonate (JA)
+SAMC	SAMC	S-adenosylmethionine carrier 1,2	Hormone - Salicylic acid (SA)
+SAMe	SAMe	S-adenosyl-L-methionine	Hormone - Ethylene (ET)
+SAMS	SAMS	S-adenosylmethionine (SAM) synthetase	Hormone - Ethylene (ET)
+SARD1	SARD1	Calmodulin binding protein-like protein	Hormone - Salicylic acid (SA)
+SARD1|TCP8	SARD1|TCP8	NA	Hormone - Salicylic acid (SA)
+SAUR41	SAUR41	SAUR-like auxin-responsive protein family	Hormone - Auxins (AUX)
+SCF	SCF	SCF	Degradation - Ubiquitination
+SCL14	SCL14	scarecrow-like 14; GRAS family transcription factor	Regulation - Transcription & Translation
+SCL14|TGA2,5,6	SCL14|TGA2,5,6	NA	Hormone - Salicylic acid (SA)
+SEN4	SEN4	senescence 4 / meristem 5; similar to endo xyloglucan transferase in sequence	Hormone - Brassinosteroids (BS)
+SGT1	SGT1	SGT1 protein binding; suppressor of the g2 allelle of SKP1	Signalling - Perception and resistance genes
+SIK1	SIK1	Protein kinase superfamily protein	Signalling - Growth
+SL	SL	Biologically active strigolactones (strigol and orobanchol)	Hormone - Strigolactones (SL)
+SNRK2	SNRK2	Protein kinase superfamily protein, SNF1-RELATED PROTEIN KINASE 2.8	Hormone - Abscisic acid (ABA)
+SOD	SOD	superoxide dismutase	Signalling - Reactive oxygen species (ROS)
+SP5G	SP5G	Flowering locus T-like protein	Signalling - Tuberisation
+SR1IP1	SR1IP1	SR1/CAMPTA3 interacting protein	Degradation - Ubiquitination
+Stomatal closure	Stomatal closure	Phenotype response to water deficit	
+SUR1	SUR1	Tyrosine transaminase family protein	Hormone - Auxins (AUX)
+TAA1	TAA1	tryptophan aminotransferase of Arabidopsis 1	Hormone - Auxins (AUX)
+TAS3	TAS3	trans-acting siRNA3	Regulation - Silencing
+TCP8	TCP8	TCP family transcription factor	Hormone - Salicylic acid (SA)
+TCP8,14,15	TCP8,14,15	TCP family transcription factor	Hormone - Salicylic acid (SA)
+TCP8|WRKY28	TCP8|WRKY28	NA	
+TDX	TDX	tetracopeptide domain-containing thioredoxin	Signalling - Reactive oxygen species (ROS)
+TGA2,5,6	TGA2,5,6	TGACG sequence-specific binding protein	Hormone - Salicylic acid (SA)
+Thiohydroximate	Thiohydroximate	Indolylmethylthiohydroximate	Hormone - Auxins (AUX)
+Thr	Thr	Threonine	Hormone - Jasmonate (JA)
+TIR1	TIR1	F-box/RNI-like superfamily protein	Hormone - Auxins (AUX)
+TOR	TOR	Target Of Rapamycin	Primary metabolism - Photosynthesis
+Trichome-initiation	Trichome-initiation	Initiation of trichome growth.	Secondary metabolism - Terpenoids
+trichous-bacteria	trichous-bacteria	NA	Stress - Biotic
+tRNA-adenine	tRNA-adenine	Adenosine in tRNA	Hormone - Cytokinins (CK)
+Trp	Trp	Tryptophan	Hormone - Auxins (AUX)
+TRX-H	TRX-H	thioredoxin	Hormone - Salicylic acid (SA)
+Tyr	Tyr	L-tyrosine	Primary metabolism - Amino-acids
+TYRAAT1,2	TYRAAT1,2	arogenate dehydrogenase	
+tZ	tZ	trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)purine]	Hormone - Cytokinins (CK)
+tZ7G	tZ7G	trans-zeatin-7-beta-D-glucoside; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-7-b-D-glucopyranosylpurine]	Hormone - Cytokinins (CK)
+tZ9G	tZ9G	9-(&alpha;-D-glucosyl)-trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-9-&beta;-D-glucopyranosylpurine]	Hormone - Cytokinins (CK)
+tZOG	tZOG	O-&beta;-D-glucosyl-trans-zeatin; [6-((E)-4-&beta;-D-glucopyranosyloxy-3-methylbut-2-enylamino)purine]	Hormone - Cytokinins (CK)
+tZR	tZR	9-ribosyl-trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-9-&beta;-D-ribofuranosylpurine]	Hormone - Cytokinins (CK)
+tZRDP	tZRDP	9-ribosyl-trans-zeatin-5&prime;-diphosphate	Hormone - Cytokinins (CK)
+tZRMP	tZRMP	9-ribosyl-trans-zeatin-5&prime;-monophosphate	Hormone - Cytokinins (CK)
+tZROG	tZROG	O-glucosyl-trans-zeatin riboside; [6-((Z)-4-&beta;-D-glucopyranosyloxy-3-methylbut-2-enylamino)-9-&beta;-D-ribofuranosylpurine]; trans-ZEATIN-O-GLUCOSIDE RIBOSIDE	Hormone - Cytokinins (CK)
+tZRTP	tZRTP	9-ribosyl-trans-zeatin-5&prime;-triphosphate	Hormone - Cytokinins (CK)
+UGT73C1,C5	UGT73C1,C5	zeatin O-glucosyltransferase	Hormone - Cytokinins (CK)
+UGT76C1,C2	UGT76C1,C2	UDP-glucosyl transferase	Hormone - Cytokinins (CK)
+UGT84B1	UGT84B1	UDP-glucosyl transferase 84B1	Hormone - Auxins (AUX)
+UGT85A1	UGT85A1	UDP-Glycosyltransferase superfamily protein	Hormone - Cytokinins (CK)
+UPL5	UPL5	ubiquitin protein ligase, HECT E3 class	Degradation - Ubiquitination
+UTR1	UTR1	UDP-galactose transporter 1	Regulation - Transport
+VDE1	VDE1	non-photochemical quenching 1	
+Violaxanthin	Violaxanthin	Violaxanthin	Hormone - Abscisic acid (ABA)
+viral dsRNA	viral dsRNA	viral double stranded RNA (siRNAs precursor)	Regulation - Silencing
+VPg	VPg	viral protein genome-linked	Stress - Biotic
+vsiRNA	vsiRNA	viral-derived small interfering RNAs	Regulation - Silencing
+VSP	VSP	vegetative storage protein	Hormone - Jasmonate (JA)
+WAK1	WAK1	cell wall-associated kinase 1	Signalling - Perception and resistance genes
+Waterlogging	Waterlogging	NA	
+WD/bHLH/MYB	WD/bHLH/MYB	WD/bHLH/MYB	Regulation - Transcription & Translation
+WRKY11	WRKY11	WRKY family transcription factor 11	Regulation - Transcription & Translation
+WRKY17	WRKY17	WRKY family transcription factor 17	Regulation - Transcription & Translation
+WRKY18	WRKY18	WRKY family transcription factor 18	Regulation - Transcription & Translation
+WRKY28	WRKY28	WRKY family transcription factor 28	Regulation - Transcription & Translation
+WRKY30	WRKY30	WRKY family transcription factor 30	Regulation - Transcription & Translation
+WRKY30|WRKY53	WRKY30|WRKY53	NA	Regulation - Transcription & Translation
+WRKY33	WRKY33	WRKY family transcription factor 33	Regulation - Transcription & Translation
+WRKY46	WRKY46	WRKY family transcription factor 46	Regulation - Transcription & Translation
+WRKY48	WRKY48	WRKY family transcription factor 48	Regulation - Transcription & Translation
+WRKY53	WRKY53	WRKY family transcription factor 53	Regulation - Transcription & Translation
+WRKY57	WRKY57	WRKY family transcription factor 57	Regulation - Transcription & Translation
+WRKY6	WRKY6	WRKY family transcription factor 8	Regulation - Transcription & Translation
+WRKY70	WRKY70	WRKY family transcription factor 70	Regulation - Transcription & Translation
+WRKY8	WRKY8	WRKY family transcription factor 8	Regulation - Transcription & Translation
+Xanthoxin	Xanthoxin	Xanthoxin	Secondary metabolism - Terpenoids
+XTH	XTH	xyloglucan endotransglucosylase	Hormone - Brassinosteroids (BS)
+YUC	YUC	flavin-binding monooxygenase family protein	Hormone - Auxins (AUX)
+ZDS1	ZDS1	zeta-carotene desaturase	
+Zeaxanthin	Zeaxanthin	Zeaxanthin	Secondary metabolism - Terpenoids
+ZEP	ZEP	zeaxanthin epoxidase	
