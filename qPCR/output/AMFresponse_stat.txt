@@ -1,0 +1,76 @@
+AMF
+
+Rywal
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+8	StRBOHD	0.6241626	0.5798104	0.6283350	0.7349079	0.9955734
+7	StPR1B	0.6241626	NA	0.6283350	0.7349079	NA
+8	StCPI8	0.6241626	0.5798104	0.6283350	0.7349079	0.9955734
+8	StBGLU2	0.6241626	0.5798104	0.6283350	0.7349079	0.8598195
+8	StHSP70	0.6241626	0.5798104	0.6283350	0.7349079	0.6042226
+8	StPti5	0.6241626	0.5798104	0.6283350	0.7349079	0.8598195
+8	St13-LOX	0.1152086	0.1142597	0.3704412	0.7349079	0.2870778
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+StRBOHD	1	6	3.76712400	0.1003155
+StPR1B	1	5	0.69809858	0.4415076
+StCPI8	1	6	0.01530179	0.9055924
+StBGLU2	1	6	2.75585199	0.1479675
+StHSP70	1	6	0.92485065	0.3733427
+StPti5	1	6	0.14378692	0.7176019
+St13-LOX	1	6	3.32232884	0.1181732
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+StRBOHD	1	6	3.76712400	0.1003155
+StPR1B	1	5	0.69809858	0.4415076
+StCPI8	1	6	0.01530179	0.9055924
+StBGLU2	1	6	2.75585199	0.1479675
+StHSP70	1	6	0.92485065	0.3733427
+StPti5	1	6	0.14378692	0.7176019
+St13-LOX	1	6	3.32232884	0.1181732
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+StRBOHD	2.2737492433	0.1315812	1	Fligner-Killeen test of homogeneity of variances
+StPR1B	1.4089434908	0.2352319	1	Fligner-Killeen test of homogeneity of variances
+StCPI8	0.0002558532	0.9872381	1	Fligner-Killeen test of homogeneity of variances
+StBGLU2	1.5560430181	0.2122455	1	Fligner-Killeen test of homogeneity of variances
+StHSP70	1.5560430181	0.2122455	1	Fligner-Killeen test of homogeneity of variances
+StPti5	0.2022498512	0.6529109	1	Fligner-Killeen test of homogeneity of variances
+St13-LOX	1.3410984571	0.2468403	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	0.7905694	StRBOHD	3	5	large
+measurement	noninoculated	inoculated	0.5855400	StPR1B	2	5	large
+measurement	noninoculated	inoculated	0.4743416	StCPI8	3	5	moderate
+measurement	noninoculated	inoculated	0.7905694	StBGLU2	3	5	large
+measurement	noninoculated	inoculated	0.4743416	StHSP70	3	5	moderate
+measurement	noninoculated	inoculated	0.4743416	StPti5	3	5	moderate
+measurement	noninoculated	inoculated	0.3689324	St13-LOX	3	5	moderate
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	inoculated	-3.9886790	StRBOHD	3	5	large
+measurement	noninoculated	inoculated	-1.6265825	StPR1B	2	5	large
+measurement	noninoculated	inoculated	-0.7934974	StCPI8	3	5	moderate
+measurement	noninoculated	inoculated	-2.9260896	StBGLU2	3	5	large
+measurement	noninoculated	inoculated	-0.4434554	StHSP70	3	5	small
+measurement	noninoculated	inoculated	-1.0351640	StPti5	3	5	large
+measurement	noninoculated	inoculated	 1.2376677	St13-LOX	3	5	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+StRBOHD	noninoculated	inoculated	0.001960784	0.006862745	*
+StPR1B	noninoculated	inoculated	0.052941176	0.123529412	ns
+StCPI8	noninoculated	inoculated	0.252941176	0.340849673	ns
+StBGLU2	noninoculated	inoculated	0.001960784	0.006862745	*
+StHSP70	noninoculated	inoculated	0.539215686	0.539215686	ns
+StPti5	noninoculated	inoculated	0.176470588	0.308823529	ns
+St13-LOX	noninoculated	inoculated	0.292156863	0.340849673	ns
+
+

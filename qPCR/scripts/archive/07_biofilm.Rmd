@@ -1,0 +1,538 @@
+---
+title: "07_biofilm"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 9
+    fig_height: 6
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+editor_options: 
+  chunk_output_type: console
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(#dev = c('pdf', 'png'),
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 6, 
+                      fig.width = 9,
+                      warning = FALSE, message = FALSE, echo = TRUE
+                      )
+
+
+```
+
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+
+```
+
+
+
+# packages
+
+```{r}
+
+library(magrittr)
+library(data.table)
+library(ggplot2)
+
+```
+
+
+# palette
+
+```{r}
+
+pal = rev(RColorBrewer::brewer.pal(8, 'Paired')[c(1,5,7)])
+
+```
+
+
+# Table S10
+
+```{r}
+
+fp = file.path('..', 'input')
+fn = 'Table S10.xlsx'
+
+dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = 'Mean Intensity')
+setDT(dt)
+
+dt$Strain = as.factor(dt$Strain)
+dt$Plant = as.factor(sub('P', '', dt$Plant))
+dt$Root = as.factor(sub('ROI', '', dt$Region))
+dt$Time = ordered(as.numeric(sub('h', '', dt$Time)))
+
+table(dt$Plant, dt$Region, dt$Strain)
+
+
+
+```
+
+## plot
+
+```{r}
+
+
+strains = levels(dt$Strain)
+time_levels = levels(dt$Time)                              
+group_levels = unlist(lapply(strains, function(s) paste0(s, "\n", time_levels)))
+
+dt = dt %>%
+  dplyr::mutate(
+    Group = paste0(as.character(Strain), "\n", as.character(Time)),
+    Group = factor(Group, levels = group_levels)
+  )
+
+sum_grp = dt %>%
+  dplyr::group_by(Group, Strain, Time) %>%
+  dplyr::summarise(
+    n = dplyr::n(),
+    mean = mean(Mean.intensity, na.rm = TRUE),
+    sd = stats::sd(Mean.intensity, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+pd = ggplot2::position_dodge(width = 0.75)
+pd = ggplot2::position_jitter(width = 0.15, height = 0)
+
+p = ggplot2::ggplot(dt, ggplot2::aes(x = Group, y = Mean.intensity, fill = Strain)) +
+  # boxplots and points
+  ggplot2::geom_boxplot(outlier.shape = NA, width = 0.7, alpha = 0.25) +
+  ggplot2::geom_jitter(position = pd, ggplot2::aes(color = Strain), size = 1.6, alpha = 0.8) +
+  # connect mean points within each Strain (use numeric Group positions)
+  ggplot2::geom_line(
+    data = sum_grp,
+    ggplot2::aes(x = as.numeric(Group), y = mean, group = Strain, color = Strain),
+    inherit.aes = FALSE,
+    size = 0.8,
+    show.legend = FALSE  ) +
+
+  # overlay mean points and SD errorbars (use sum_grp)
+  ggplot2::geom_errorbar(
+    data = sum_grp,
+    ggplot2::aes(x = Group, ymin = mean - sd, ymax = mean + sd),
+    width = 0.15, size = 0.6, color = "black", inherit.aes = FALSE
+  ) +
+  ggplot2::geom_point(
+    data = sum_grp,
+    ggplot2::aes(x = Group, y = mean, fill = Strain),
+    shape = 21, size = 2.5, color = "black", inherit.aes = FALSE
+  ) +
+  # scales, colors and theme
+  ggplot2::labs(x = "", y = "Mean intensity", title = "") +
+  ggplot2::scale_x_discrete(labels = function(x) x) +
+  ggplot2::scale_fill_manual(values = pal) +
+  ggplot2::scale_colour_manual(values = pal) +
+  # remove grid lines and top/right border
+  ggplot2::theme_bw() +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(size = 10, angle = 90, hjust = 1),
+    legend.position = "none",
+    panel.grid.major.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
+    panel.border = ggplot2::element_blank(),          # remove full panel border
+    axis.line = ggplot2::element_line(color = "black") # draw bottom and left axes
+  ) +
+  ggtitle("Amount of biofilm on potato roots")
+
+print(p)
+
+```
+
+
+```{r}
+
+dt = dt %>%
+  dplyr::mutate(
+    Strain  = factor(Strain),
+    Plant   = factor(Plant),
+    Region  = factor(Region),
+    TimeF   = factor(Time, ordered = TRUE),
+    TimeNum = as.numeric(as.character(Time)),
+    TimeNumC = TimeNum - mean(TimeNum, na.rm = TRUE)
+  )
+
+
+
+
+
+
+ggplot(dt, aes(x = Mean.intensity, color = Strain, fill = Strain)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = Mean.intensity), inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_brewer(palette = "Dark2") +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Density of Mean.intensity by Time (faceted) and Strain (color)",
+       x = "Mean.intensity", y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+ggplot(dt, aes(x = log2(Mean.intensity), color = Strain, fill = Strain)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = log2(Mean.intensity)), inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_brewer(palette = "Dark2") +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Density of log2(Mean.intensity) by Time (faceted) and Strain (color)",
+       x = "log2(Mean.intensity)", y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+```
+
+
+
+## Linear Mixed-Effects Models
+
+```{r}
+
+
+# remove correlation between intercept and slope -> uncorrelated slope + Plant:Region
+mod1 = lme4::lmer(log2(Mean.intensity) ~ 0 + Strain * TimeF + (1 + TimeNumC || Plant) + (1 | Plant:Region),
+                  data = dt, REML = FALSE, control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 200000)))
+# drop random slope (keep intercepts) -> intercept for Plant + Plant:Region
+mod2 = lme4::lmer(log2(Mean.intensity) ~ 0 + Strain * TimeF + (1 | Plant) + (1 | Plant:Region),
+                  data = dt, REML = FALSE, control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 200000)))
+# drop Plant:Region if variance negligible -> intercept only for Plant
+mod3 = lme4::lmer(log2(Mean.intensity) ~ 0 + Strain * TimeF + (1 | Plant),
+                  data = dt, REML = FALSE, control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 200000)))
+
+
+print("isSingular:")
+print(c(mod1 = lme4::isSingular(mod1), mod2 = lme4::isSingular(mod2), mod3 = lme4::isSingular(mod3)))
+
+print("VarCorr (compact):")
+print(list(mod1 = as.data.frame(lme4::VarCorr(mod1)), mod2 = as.data.frame(lme4::VarCorr(mod2)), mod3 = as.data.frame(lme4::VarCorr(mod3))))
+
+# likelihood ratio tests (REML = FALSE models)
+cat("LRT mod1 vs mod2:\n"); print(stats::anova(mod1, mod2))
+cat("LRT mod2 vs mod3:\n"); print(stats::anova(mod2, mod3))
+
+
+
+final_mod = mod3
+print(summary(final_mod))
+
+# diagnostics
+graphics::plot(final_mod)
+stats::qqnorm(residuals(final_mod)); stats::qqline(residuals(final_mod))
+print(lme4::ranef(final_mod))
+
+# Type III Anova using car::Anova (set sum contrasts)
+contrasts(dt$Strain) = "contr.sum"
+contrasts(dt$TimeF)  = "contr.sum"
+car3 = car::Anova(final_mod, type = 3)
+print(car3)
+
+
+emm = emmeans::emmeans(final_mod, ~ TimeF | Strain, type = "response")
+pairs = pairs(emm, adjust = "BH")
+print(summary(pairs))
+plot(emm, comparison = TRUE, adjust = "BH",
+     main = "Estimated Marginal Means",
+     xlab = "", ylab = "Response (back-transformed)")
+
+# emmeans: Strain | TimeF and pairwise comparisons
+emm = emmeans::emmeans(final_mod, ~ Strain | TimeF, type = "response")
+pairs = pairs(emm, adjust = "BH")
+print(summary(pairs))
+plot(emm, comparison = TRUE, adjust = "BH",
+     main = "Estimated Marginal Means",
+     xlab = "", ylab = "Response (back-transformed)")
+
+# compact letter display per Time for quick annotation
+cld_df = multcomp::cld(emm, Letters = letters, adjust = "BH", alpha = 0.05, hide.ns = FALSE) %>%
+  as.data.frame() %>%
+  dplyr::rename(cld = .group)
+
+# prepare emmeans dataframe for plotting
+emm_df = as.data.frame(emm) %>%
+  dplyr::left_join(cld_df %>% dplyr::select(TimeF, Strain, cld), by = c("TimeF","Strain"))
+
+# plot emmeans: lines + points + CLD letters
+p_emm <- ggplot(emm_df, aes(x = TimeF, y = response, color = Strain, group = Strain)) +
+  geom_line(size = 0.9, position = position_dodge(width = 0.25)) +
+  geom_point(size = 3, position = position_dodge(width = 0.25)) +
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                width = 0.12, size = 0.7, position = position_dodge(width = 0.25)) +
+  geom_text(aes(label = cld), vjust = -1.2, position = position_dodge(width = 0.25), show.legend = FALSE) +
+  scale_color_viridis_d() +
+  labs(x = "Time", y = "Estimated marginal mean (back-transformed)", title = "EMMs: Strain by Time with CLD") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+print(p_emm)
+
+
+```
+
+
+# Table S10
+
+```{r}
+
+fp = file.path('..', 'input')
+fn = 'Table S12.xlsx'
+
+dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = 'Mean Intensity')
+setDT(dt)
+
+dt$Genotype = as.factor(dt$Genotype)
+dt$RootFixed = as.factor(paste(sub('P', '', dt$Plant), dt$Root, sep = '_'))
+dt$Plant = as.factor(sub('P', '', dt$Plant))
+dt$Region = as.factor(sub('ROI', '', dt$ROI))
+dt$Root = as.factor(dt$Root)
+dt$Time = ordered(as.numeric(sub('h', '', dt$Time)))
+
+
+table(dt$Plant, dt$Region, dt$Genotype)
+table(dt$Plant, dt$Root, dt$Genotype)
+
+
+
+```
+
+## plot
+
+```{r}
+
+
+Genotypes = levels(dt$Genotype)
+time_levels = levels(dt$Time)                              
+group_levels = unlist(lapply(Genotypes, function(s) paste0(s, "\n", time_levels)))
+
+dt = dt %>%
+  dplyr::mutate(
+    Group = paste0(as.character(Genotype), "\n", as.character(Time)),
+    Group = factor(Group, levels = group_levels)
+  )
+
+sum_grp = dt %>%
+  dplyr::group_by(Group, Genotype, Time) %>%
+  dplyr::summarise(
+    n = dplyr::n(),
+    mean = mean(Mean.intensity, na.rm = TRUE),
+    sd = stats::sd(Mean.intensity, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+pd = ggplot2::position_dodge(width = 0.75)
+pd = ggplot2::position_jitter(width = 0.15, height = 0)
+
+dt = dt %>%
+  dplyr::mutate(
+    Genotype  = factor(Genotype),
+    Plant   = factor(Plant),
+    Region  = factor(Region),
+    Root  = factor(Root),
+    RootFixed = factor(RootFixed), 
+    TimeF   = factor(Time, ordered = TRUE),
+    TimeNum = as.numeric(as.character(Time)),
+    TimeNumC = TimeNum - mean(TimeNum, na.rm = TRUE)
+  )
+
+
+
+p = ggplot2::ggplot(dt, ggplot2::aes(x = Group, y = Mean.intensity, fill = Genotype)) +
+  # boxplots and points
+  ggplot2::geom_boxplot(outlier.shape = NA, width = 0.7, alpha = 0.25) +
+  ggplot2::geom_jitter(position = pd, ggplot2::aes(color = Genotype), size = 1.6, alpha = 0.8) +
+  # connect mean points within each Genotype (use numeric Group positions)
+  ggplot2::geom_line(
+    data = sum_grp,
+    ggplot2::aes(x = as.numeric(Group), y = mean, group = Genotype, color = Genotype),
+    inherit.aes = FALSE,
+    size = 0.8,
+    show.legend = FALSE  ) +
+
+  # overlay mean points and SD errorbars (use sum_grp)
+  ggplot2::geom_errorbar(
+    data = sum_grp,
+    ggplot2::aes(x = Group, ymin = mean - sd, ymax = mean + sd),
+    width = 0.15, size = 0.6, color = "black", inherit.aes = FALSE
+  ) +
+  ggplot2::geom_point(
+    data = sum_grp,
+    ggplot2::aes(x = Group, y = mean, fill = Genotype),
+    shape = 21, size = 2.5, color = "black", inherit.aes = FALSE
+  ) +
+  # scales, colors and theme
+  ggplot2::labs(x = "", y = "Mean intensity", title = "") +
+  ggplot2::scale_x_discrete(labels = function(x) x) +
+  ggplot2::scale_fill_manual(values = pal) +
+  ggplot2::scale_colour_manual(values = pal) +
+  # remove grid lines and top/right border
+  ggplot2::theme_bw() +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(size = 10, angle = 90, hjust = 1),
+    legend.position = "none",
+    panel.grid.major.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
+    panel.border = ggplot2::element_blank(),          # remove full panel border
+    axis.line = ggplot2::element_line(color = "black") # draw bottom and left axes
+  ) +
+  ggtitle("Amount of biofilm on potato roots")
+
+print(p)
+
+```
+
+
+
+```{r}
+
+
+
+
+
+ggplot(dt, aes(x = Mean.intensity, color = Genotype, fill = Genotype)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = Mean.intensity), inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_brewer(palette = "Dark2") +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Density of Mean.intensity by Time (faceted) and Genotype (color)",
+       x = "Mean.intensity", y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+ggplot(dt, aes(x = log2(Mean.intensity), color = Genotype, fill = Genotype)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = log2(Mean.intensity)), inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_brewer(palette = "Dark2") +
+  scale_fill_brewer(palette = "Dark2") +
+  labs(title = "Density of log2(Mean.intensity) by Time (faceted) and Genotype (color)",
+       x = "log2(Mean.intensity)", y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+```
+
+
+## Linear Mixed-Effects Models
+
+```{r}
+
+
+
+
+
+mod1 = lme4::lmer(log2(Mean.intensity) ~ 0 + Genotype * TimeF + (1 | RootFixed),
+                  data = dt, REML = FALSE, control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 200000)))
+mod2 = lme4::lmer(log2(Mean.intensity) ~ 0 + Genotype + TimeF + (1 | RootFixed),
+                  data = dt, REML = FALSE, control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 200000)))
+
+
+
+print("isSingular:")
+print(c(mod1 = lme4::isSingular(mod1), mod2 = lme4::isSingular(mod2)))
+
+print("VarCorr (compact):")
+print(list(mod1 = as.data.frame(lme4::VarCorr(mod1)), mod2 = as.data.frame(lme4::VarCorr(mod2))))
+
+# likelihood ratio tests (REML = FALSE models)
+cat("LRT mod1 vs mod2:\n"); print(stats::anova(mod1, mod2))
+
+
+
+
+final_mod = mod1
+print(summary(final_mod))
+
+# diagnostics
+graphics::plot(final_mod)
+stats::qqnorm(residuals(final_mod)); stats::qqline(residuals(final_mod))
+print(lme4::ranef(final_mod))
+
+# Type III Anova using car::Anova (set sum contrasts)
+contrasts(dt$Genotype) = "contr.sum"
+contrasts(dt$TimeF)  = "contr.sum"
+car3 = car::Anova(final_mod, type = 3)
+print(car3)
+
+
+# Genotype | TimeF
+emm = emmeans::emmeans(final_mod, ~ Genotype | TimeF, type = "response")
+plot(emm, comparison = TRUE, adjust = "BH",
+     main = "Estimated Marginal Means of Genotype within TimeF",
+     xlab = "Genotype", ylab = "Response (back-transformed)")
+pairs = pairs(emm, adjust = "BH")
+print(summary(pairs))
+
+# TimeF | Genotype
+emm = emmeans::emmeans(final_mod, ~ TimeF | Genotype, type = "response")
+plot(emm, comparison = TRUE, adjust = "BH",
+     main = "Estimated Marginal Means of TimeF within Genotype",
+     xlab = "TimeF", ylab = "Response (back-transformed)")
+pairs = pairs(emm, adjust = "BH")
+print(summary(pairs))
+
+
+
+# compact letter display per Time for quick annotation
+cld_df = multcomp::cld(emm, Letters = letters, adjust = "BH", alpha = 0.05, hide.ns = FALSE) %>%
+  as.data.frame() %>%
+  dplyr::rename(cld = .group)
+
+# prepare emmeans dataframe for plotting
+emm_df = as.data.frame(emm) %>%
+  dplyr::left_join(cld_df %>% dplyr::select(TimeF, Genotype, cld), by = c("TimeF","Genotype"))
+
+# plot emmeans: lines + points + CLD letters
+p_emm <- ggplot(emm_df, aes(x = TimeF, y = response, color = Genotype, group = Genotype)) +
+  geom_line(size = 0.9, position = position_dodge(width = 0.25)) +
+  geom_point(size = 3, position = position_dodge(width = 0.25)) +
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+                width = 0.12, size = 0.7, position = position_dodge(width = 0.25)) +
+  geom_text(aes(label = cld), vjust = -1.2, position = position_dodge(width = 0.25), show.legend = FALSE) +
+  scale_color_viridis_d() +
+  labs(x = "Time", y = "Estimated marginal mean (back-transformed)", title = "EMMs: Genotype by Time with CLD") +
+  theme_bw() +
+  theme(legend.position = "bottom")
+
+print(p_emm)
+
+
+
+
+```
+
+
+
+
+
+# session info
+
+```{r, sessionInfo}
+
+sessionInfo()
+
+```
+
+
+
+

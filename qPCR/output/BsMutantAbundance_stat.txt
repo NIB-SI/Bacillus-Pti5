@@ -1,0 +1,66 @@
+BsMutantAbundance
+
+shoots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+12	BsGyrB	0.7729617	0.8180675	0.942605	0.804978	0.7062575
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+BsGyrB	1	10	0.4676952	0.5095857
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+BsGyrB	1	10	0.4359519	0.5239994
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+BsGyrB	0.4713498	0.4923669	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	PS-216	PS-216 srfA	0.04622502	BsGyrB	6	6	small
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	PS-216	PS-216 srfA	0.03793191	BsGyrB	6	6	negligible
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+BsGyrB	PS-216	PS-216 srfA	0.9286761	0.9286761	ns
+
+
+roots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+12	BsGyrB	0.0003082208	4.887846e-05	0.001183349	0.01679273	0.002827395
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+BsGyrB	1	10	15.88834	0.002575803
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+BsGyrB	1	10	1.826356	0.2063372
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+BsGyrB	0.3553563	0.5510966	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	PS-216	PS-216 srfA	0	BsGyrB	6	6	small
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	PS-216	PS-216 srfA	-0.6923316	BsGyrB	6	6	moderate
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+BsGyrB	PS-216	PS-216 srfA	0.3942355	0.3942355	ns
+
+

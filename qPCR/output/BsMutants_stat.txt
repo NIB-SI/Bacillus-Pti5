@@ -1,0 +1,424 @@
+shoots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+16	StRBOHD	0.01490089	0.007346671	0.002800883	0.6102214	0.09947802
+16	StPR1B	0.12534148	0.189031730	0.358369765	0.6582877	0.59817719
+16	StCPI8	0.13525736	0.219364637	0.545724619	0.6582877	0.23513088
+16	StCAB	0.02614784	0.018081297	0.296568376	0.6582877	0.22027736
+15	StBGLU2	0.12534148	0.189031730	0.545724619	0.6582877	0.46855967
+16	StHSP70	0.87634493	0.869551403	0.900796117	0.8596713	0.75462603
+16	StPti5	0.01940652	0.015117744	0.127201663	0.6102214	0.09953737
+16	St13-LOX	0.62851231	0.755920618	0.900796117	0.7419465	0.46855967
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+StRBOHD	3	12	26.2598545	1.473273e-05
+StPR1B	3	12	 1.3395667	3.077275e-01
+StCPI8	3	12	 4.3625237	2.694648e-02
+StCAB	3	12	 0.8692418	4.838141e-01
+StBGLU2	3	11	 1.2261732	3.463972e-01
+StHSP70	3	12	 0.7462578	5.450224e-01
+StPti5	3	12	 3.5248000	4.873545e-02
+St13-LOX	3	12	 0.3653115	7.793276e-01
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+StRBOHD	3	12	15.9865433	0.0001715048
+StPR1B	3	12	 1.0694673	0.3985385148
+StCPI8	3	12	 1.5558132	0.2511854777
+StCAB	3	12	 0.7589917	0.5383540522
+StBGLU2	3	11	 0.7211507	0.5600012969
+StHSP70	3	12	 0.1130206	0.9508024555
+StPti5	3	12	 2.8918928	0.0792734207
+St13-LOX	3	12	 0.2606433	0.8523695846
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+StRBOHD	11.5395030	0.009139225	3	Fligner-Killeen test of homogeneity of variances
+StPR1B	 3.4578620	0.326268540	3	Fligner-Killeen test of homogeneity of variances
+StCPI8	 5.6023494	0.132643549	3	Fligner-Killeen test of homogeneity of variances
+StCAB	 1.7603622	0.623598302	3	Fligner-Killeen test of homogeneity of variances
+StBGLU2	 1.5607386	0.668324466	3	Fligner-Killeen test of homogeneity of variances
+StHSP70	 0.2451004	0.969999706	3	Fligner-Killeen test of homogeneity of variances
+StPti5	 9.1596681	0.027241638	3	Fligner-Killeen test of homogeneity of variances
+St13-LOX	 0.8804677	0.830138652	3	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	0.8164966	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	StRBOHD	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.8164966	StRBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	0.2041241	StRBOHD	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.8164966	StRBOHD	4	4	large
+measurement	noninoculated	PS-216	0.7144345	StPR1B	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.5103104	StPR1B	4	4	large
+measurement	noninoculated	PS-216 srfA	0.6123724	StPR1B	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.4082483	StPR1B	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.2041241	StPR1B	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.3061862	StPR1B	4	4	moderate
+measurement	noninoculated	PS-216	0.7144345	StCPI8	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StCPI8	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	StCPI8	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.5103104	StCPI8	4	4	large
+measurement	PS-216	PS-216 srfA	0.4082483	StCPI8	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.2041241	StCPI8	4	4	small
+measurement	noninoculated	PS-216	0.8164966	StCAB	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StCAB	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	StCAB	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.3061862	StCAB	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.4082483	StCAB	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.7144345	StCAB	4	4	large
+measurement	noninoculated	PS-216	0.6123724	StBGLU2	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.4008919	StBGLU2	4	3	moderate
+measurement	noninoculated	PS-216 srfA	0.5103104	StBGLU2	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.5345225	StBGLU2	4	3	large
+measurement	PS-216	PS-216 srfA	0.4082483	StBGLU2	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.1336306	StBGLU2	3	4	small
+measurement	noninoculated	PS-216	0.6123724	StHSP70	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.5103104	StHSP70	4	4	large
+measurement	noninoculated	PS-216 srfA	0.4082483	StHSP70	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	0.1020621	StHSP70	4	4	small
+measurement	PS-216	PS-216 srfA	0.5103104	StHSP70	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.6123724	StHSP70	4	4	large
+measurement	noninoculated	PS-216	0.8164966	StPti5	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.6123724	StPti5	4	4	large
+measurement	noninoculated	PS-216 srfA	0.6123724	StPti5	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.5103104	StPti5	4	4	large
+measurement	PS-216	PS-216 srfA	0.3061862	StPti5	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.2041241	StPti5	4	4	small
+measurement	noninoculated	PS-216	0.8164966	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.7144345	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 srfA	0.2041241	St13-LOX	4	4	small
+measurement	PS-216	PS-216 ΔcomQXP	0.2041241	St13-LOX	4	4	small
+measurement	PS-216	PS-216 srfA	0.5103104	St13-LOX	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.5103104	St13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	 3.54548564	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	 2.91596663	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 srfA	 3.68828504	StRBOHD	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-2.54339464	StRBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	 0.19967754	StRBOHD	4	4	negligible
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 3.73762118	StRBOHD	4	4	large
+measurement	noninoculated	PS-216	-2.18244950	StPR1B	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.26425279	StPR1B	4	4	large
+measurement	noninoculated	PS-216 srfA	-1.55640317	StPR1B	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	 0.71662244	StPR1B	4	4	moderate
+measurement	PS-216	PS-216 srfA	-0.04557702	StPR1B	4	4	negligible
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-0.59303920	StPR1B	4	4	moderate
+measurement	noninoculated	PS-216	-1.39406687	StCPI8	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-2.53150704	StCPI8	4	4	large
+measurement	noninoculated	PS-216 srfA	-1.99848731	StCPI8	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-1.16241550	StCPI8	4	4	large
+measurement	PS-216	PS-216 srfA	-0.74680197	StCPI8	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 0.36529067	StCPI8	4	4	small
+measurement	noninoculated	PS-216	 5.20842392	StCAB	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	 4.66766723	StCAB	4	4	large
+measurement	noninoculated	PS-216 srfA	 7.67712521	StCAB	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-0.60797801	StCAB	4	4	moderate
+measurement	PS-216	PS-216 srfA	 0.84289594	StCAB	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 1.63388025	StCAB	4	4	large
+measurement	noninoculated	PS-216	-1.33058119	StBGLU2	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-0.44822930	StBGLU2	4	3	small
+measurement	noninoculated	PS-216 srfA	-0.52617423	StBGLU2	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	 1.11461428	StBGLU2	4	3	large
+measurement	PS-216	PS-216 srfA	 0.79025842	StBGLU2	4	4	moderate
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-0.18024385	StBGLU2	3	4	negligible
+measurement	noninoculated	PS-216	-1.30236806	StHSP70	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.07546557	StHSP70	4	4	large
+measurement	noninoculated	PS-216 srfA	 0.62094367	StHSP70	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	 0.24639854	StHSP70	4	4	small
+measurement	PS-216	PS-216 srfA	 1.46017442	StHSP70	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 1.28822416	StHSP70	4	4	large
+measurement	noninoculated	PS-216	-1.92624434	StPti5	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.68402493	StPti5	4	4	large
+measurement	noninoculated	PS-216 srfA	-1.14623641	StPti5	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	 1.25988573	StPti5	4	4	large
+measurement	PS-216	PS-216 srfA	 0.43863622	StPti5	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-0.57070991	StPti5	4	4	moderate
+measurement	noninoculated	PS-216	-2.02638710	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-2.02653832	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 srfA	-0.70011484	St13-LOX	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	-0.17814889	St13-LOX	4	4	negligible
+measurement	PS-216	PS-216 srfA	 1.24786479	St13-LOX	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 1.33087114	St13-LOX	4	4	large
+
+
+Permutational ANOVA
+transcript	statistic	p.value	permANOVA_BH
+StRBOHD	12.699602	0.00000000	0.00000000
+StPR1B	 5.655199	0.08571429	0.09795918
+StCPI8	 7.343962	0.05714286	0.09795918
+StCAB	13.421423	0.00000000	0.00000000
+StBGLU2	 3.842761	0.27142857	0.27142857
+StHSP70	 5.733976	0.08571429	0.09795918
+StPti5	 5.605994	0.08571429	0.09795918
+St13-LOX	 7.328935	0.04285714	0.09795918
+
+Games Howell
+transcript	group1	group2	p.adj	p.adj.signif
+StRBOHD	noninoculated	PS-216	0.032000	*
+StRBOHD	noninoculated	PS-216 ΔcomQXP	0.074000	ns
+StRBOHD	noninoculated	PS-216 srfA	0.034000	*
+StRBOHD	PS-216	PS-216 ΔcomQXP	0.096000	ns
+StRBOHD	PS-216	PS-216 srfA	0.991000	ns
+StRBOHD	PS-216 ΔcomQXP	PS-216 srfA	0.029000	*
+StPR1B	noninoculated	PS-216	0.097000	ns
+StPR1B	noninoculated	PS-216 ΔcomQXP	0.381000	ns
+StPR1B	noninoculated	PS-216 srfA	0.271000	ns
+StPR1B	PS-216	PS-216 ΔcomQXP	0.748000	ns
+StPR1B	PS-216	PS-216 srfA	1.000000	ns
+StPR1B	PS-216 ΔcomQXP	PS-216 srfA	0.835000	ns
+StCPI8	noninoculated	PS-216	0.358000	ns
+StCPI8	noninoculated	PS-216 ΔcomQXP	0.104000	ns
+StCPI8	noninoculated	PS-216 srfA	0.180000	ns
+StCPI8	PS-216	PS-216 ΔcomQXP	0.428000	ns
+StCPI8	PS-216	PS-216 srfA	0.727000	ns
+StCPI8	PS-216 ΔcomQXP	PS-216 srfA	0.952000	ns
+StCAB	noninoculated	PS-216	0.001000	***
+StCAB	noninoculated	PS-216 ΔcomQXP	0.002000	**
+StCAB	noninoculated	PS-216 srfA	0.000479	***
+StCAB	PS-216	PS-216 ΔcomQXP	0.825000	ns
+StCAB	PS-216	PS-216 srfA	0.659000	ns
+StCAB	PS-216 ΔcomQXP	PS-216 srfA	0.221000	ns
+StBGLU2	noninoculated	PS-216	0.327000	ns
+StBGLU2	noninoculated	PS-216 ΔcomQXP	0.927000	ns
+StBGLU2	noninoculated	PS-216 srfA	0.876000	ns
+StBGLU2	PS-216	PS-216 ΔcomQXP	0.498000	ns
+StBGLU2	PS-216	PS-216 srfA	0.693000	ns
+StBGLU2	PS-216 ΔcomQXP	PS-216 srfA	0.994000	ns
+StHSP70	noninoculated	PS-216	0.365000	ns
+StHSP70	noninoculated	PS-216 ΔcomQXP	0.494000	ns
+StHSP70	noninoculated	PS-216 srfA	0.817000	ns
+StHSP70	PS-216	PS-216 ΔcomQXP	0.984000	ns
+StHSP70	PS-216	PS-216 srfA	0.266000	ns
+StHSP70	PS-216 ΔcomQXP	PS-216 srfA	0.354000	ns
+StPti5	noninoculated	PS-216	0.188000	ns
+StPti5	noninoculated	PS-216 ΔcomQXP	0.200000	ns
+StPti5	noninoculated	PS-216 srfA	0.478000	ns
+StPti5	PS-216	PS-216 ΔcomQXP	0.405000	ns
+StPti5	PS-216	PS-216 srfA	0.922000	ns
+StPti5	PS-216 ΔcomQXP	PS-216 srfA	0.849000	ns
+St13-LOX	noninoculated	PS-216	0.114000	ns
+St13-LOX	noninoculated	PS-216 ΔcomQXP	0.123000	ns
+St13-LOX	noninoculated	PS-216 srfA	0.761000	ns
+St13-LOX	PS-216	PS-216 ΔcomQXP	0.994000	ns
+St13-LOX	PS-216	PS-216 srfA	0.373000	ns
+St13-LOX	PS-216 ΔcomQXP	PS-216 srfA	0.332000	ns
+
+
+roots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+16	StRBOHD	2.241278e-01	1.438866e-01	8.013499e-02	0.6029606228	3.457291e-01
+16	StPR1B	9.900992e-07	1.633780e-11	6.828535e-07	0.0000000000	9.100138e-06
+15	StCPI8	1.389909e-02	9.857360e-03	1.166788e-01	0.5387165962	1.183509e-01
+16	StCAB	1.505920e-01	1.465907e-01	2.397973e-01	0.5649572256	3.285595e-01
+16	StBGLU2	4.996964e-03	9.633971e-03	8.888867e-02	0.0006131761	4.652591e-03
+16	StHSP70	4.996964e-03	4.579752e-03	2.208257e-02	0.0297149068	1.075947e-02
+16	StPti5	5.293769e-02	5.835246e-02	8.013499e-02	0.5649572256	2.113262e-01
+16	St13-LOX	1.389909e-02	9.633971e-03	2.525537e-02	0.5387165962	1.718101e-01
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+StRBOHD	3	12	4.617788	0.022731295
+StPR1B	3	12	8.595271	0.002565781
+StCPI8	3	11	4.805480	0.022420798
+StCAB	3	12	1.398139	0.291147297
+StBGLU2	3	12	2.332695	0.125701516
+StHSP70	3	12	2.193689	0.141644041
+StPti5	3	12	3.379023	0.054343329
+St13-LOX	3	12	3.808923	0.039616291
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+StRBOHD	3	12	4.1041639	0.03216287
+StPR1B	3	12	1.3639815	0.30069436
+StCPI8	3	11	1.9970955	0.17293053
+StCAB	3	12	1.1089550	0.38364728
+StBGLU2	3	12	1.9951484	0.16855447
+StHSP70	3	12	0.3824216	0.76755503
+StPti5	3	12	1.5118779	0.26167622
+St13-LOX	3	12	0.7162814	0.56102739
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+StRBOHD	 6.735639	0.08081864	3	Fligner-Killeen test of homogeneity of variances
+StPR1B	10.883511	0.01237274	3	Fligner-Killeen test of homogeneity of variances
+StCPI8	 7.902198	0.04807682	3	Fligner-Killeen test of homogeneity of variances
+StCAB	 3.663474	0.30017071	3	Fligner-Killeen test of homogeneity of variances
+StBGLU2	 5.067577	0.16691517	3	Fligner-Killeen test of homogeneity of variances
+StHSP70	 2.248143	0.52252797	3	Fligner-Killeen test of homogeneity of variances
+StPti5	 6.113266	0.10622777	3	Fligner-Killeen test of homogeneity of variances
+St13-LOX	 5.272021	0.15292823	3	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	0.8214005	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 srfA	0.7144345	StRBOHD	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.6160504	StRBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	0.7187254	StRBOHD	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.4082483	StRBOHD	4	4	moderate
+measurement	noninoculated	PS-216	0.3061862	StPR1B	4	4	moderate
+measurement	noninoculated	PS-216 ΔcomQXP	0.3061862	StPR1B	4	4	moderate
+measurement	noninoculated	PS-216 srfA	0.7144345	StPR1B	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.4082483	StPR1B	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.8164966	StPR1B	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.6123724	StPR1B	4	4	large
+measurement	noninoculated	PS-216	0.8017837	StCPI8	4	3	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StCPI8	4	4	large
+measurement	noninoculated	PS-216 srfA	0.6123724	StCPI8	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.2672612	StCPI8	3	4	small
+measurement	PS-216	PS-216 srfA	0.8017837	StCPI8	3	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.6123724	StCPI8	4	4	large
+measurement	noninoculated	PS-216	0.8164966	StCAB	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StCAB	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	StCAB	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.1020621	StCAB	4	4	small
+measurement	PS-216	PS-216 srfA	0.6123724	StCAB	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.6123724	StCAB	4	4	large
+measurement	noninoculated	PS-216	0.2041241	StBGLU2	4	4	small
+measurement	noninoculated	PS-216 ΔcomQXP	0.3061862	StBGLU2	4	4	moderate
+measurement	noninoculated	PS-216 srfA	0.4082483	StBGLU2	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	0.4082483	StBGLU2	4	4	moderate
+measurement	PS-216	PS-216 srfA	0.2041241	StBGLU2	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.2041241	StBGLU2	4	4	small
+measurement	noninoculated	PS-216	0.6123724	StHSP70	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StHSP70	4	4	large
+measurement	noninoculated	PS-216 srfA	0.7144345	StHSP70	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.1020621	StHSP70	4	4	small
+measurement	PS-216	PS-216 srfA	0.1020621	StHSP70	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.0000000	StHSP70	4	4	small
+measurement	noninoculated	PS-216	0.8164966	StPti5	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	StPti5	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	StPti5	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.8164966	StPti5	4	4	large
+measurement	PS-216	PS-216 srfA	0.8164966	StPti5	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.1020621	StPti5	4	4	small
+measurement	noninoculated	PS-216	0.8164966	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	0.8164966	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 srfA	0.8164966	St13-LOX	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	0.7144345	St13-LOX	4	4	large
+measurement	PS-216	PS-216 srfA	0.8164966	St13-LOX	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	0.4082483	St13-LOX	4	4	moderate
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	noninoculated	PS-216	 4.7601286497	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	 4.3632908141	StRBOHD	4	4	large
+measurement	noninoculated	PS-216 srfA	 1.7599882308	StRBOHD	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-1.7421200257	StRBOHD	4	4	large
+measurement	PS-216	PS-216 srfA	-2.0594749152	StRBOHD	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-1.2329881585	StRBOHD	4	4	large
+measurement	noninoculated	PS-216	 0.0002939159	StPR1B	4	4	negligible
+measurement	noninoculated	PS-216 ΔcomQXP	-0.5569301099	StPR1B	4	4	moderate
+measurement	noninoculated	PS-216 srfA	-0.8605660434	StPR1B	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-0.5570669971	StPR1B	4	4	moderate
+measurement	PS-216	PS-216 srfA	-0.8605682996	StPR1B	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-0.8511402990	StPR1B	4	4	large
+measurement	noninoculated	PS-216	 3.1804204814	StCPI8	4	3	large
+measurement	noninoculated	PS-216 ΔcomQXP	 2.7658278552	StCPI8	4	4	large
+measurement	noninoculated	PS-216 srfA	 1.0992443200	StCPI8	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-0.7428075907	StCPI8	3	4	moderate
+measurement	PS-216	PS-216 srfA	-1.3784434523	StCPI8	3	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-1.0907199197	StCPI8	4	4	large
+measurement	noninoculated	PS-216	 4.4569836025	StCAB	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	 5.5439687713	StCAB	4	4	large
+measurement	noninoculated	PS-216 srfA	 2.3949300508	StCAB	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	 0.1045079788	StCAB	4	4	negligible
+measurement	PS-216	PS-216 srfA	-1.4158563476	StCAB	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-1.6913765162	StCAB	4	4	large
+measurement	noninoculated	PS-216	-0.5350923978	StBGLU2	4	4	moderate
+measurement	noninoculated	PS-216 ΔcomQXP	-1.0210705408	StBGLU2	4	4	large
+measurement	noninoculated	PS-216 srfA	-0.7607376486	StBGLU2	4	4	moderate
+measurement	PS-216	PS-216 ΔcomQXP	-0.7810513086	StBGLU2	4	4	moderate
+measurement	PS-216	PS-216 srfA	-0.2577278769	StBGLU2	4	4	small
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 0.6384318762	StBGLU2	4	4	moderate
+measurement	noninoculated	PS-216	-1.3200475667	StHSP70	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.0279839343	StHSP70	4	4	large
+measurement	noninoculated	PS-216 srfA	-1.3592364683	StHSP70	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	-0.2615204047	StHSP70	4	4	small
+measurement	PS-216	PS-216 srfA	-0.1014640316	StHSP70	4	4	negligible
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 0.1865783495	StHSP70	4	4	negligible
+measurement	noninoculated	PS-216	-6.0367889259	StPti5	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.5660076812	StPti5	4	4	large
+measurement	noninoculated	PS-216 srfA	-3.2980417828	StPti5	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	 2.4416871452	StPti5	4	4	large
+measurement	PS-216	PS-216 srfA	 3.2916479765	StPti5	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	-0.0621286170	StPti5	4	4	negligible
+measurement	noninoculated	PS-216	-6.7127116425	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 ΔcomQXP	-1.3601094370	St13-LOX	4	4	large
+measurement	noninoculated	PS-216 srfA	-3.7676684211	St13-LOX	4	4	large
+measurement	PS-216	PS-216 ΔcomQXP	 2.3199466557	St13-LOX	4	4	large
+measurement	PS-216	PS-216 srfA	 4.5105821431	St13-LOX	4	4	large
+measurement	PS-216 ΔcomQXP	PS-216 srfA	 0.2905648499	St13-LOX	4	4	small
+
+
+Permutational ANOVA
+transcript	statistic	p.value	permANOVA_BH
+StRBOHD	11.946972	0.00000000	0.00000000
+StPR1B	 4.031489	0.01428571	0.01904762
+StCPI8	 8.770273	0.00000000	0.00000000
+StCAB	12.107203	0.00000000	0.00000000
+StBGLU2	 3.513253	0.32857143	0.37551020
+StHSP70	 2.956869	0.50000000	0.50000000
+StPti5	12.063007	0.00000000	0.00000000
+St13-LOX	12.092685	0.00000000	0.00000000
+
+Games Howell
+transcript	group1	group2	p.adj	p.adj.signif
+StRBOHD	noninoculated	PS-216	0.003	**
+StRBOHD	noninoculated	PS-216 ΔcomQXP	0.016	*
+StRBOHD	noninoculated	PS-216 srfA	0.166	ns
+StRBOHD	PS-216	PS-216 ΔcomQXP	0.207	ns
+StRBOHD	PS-216	PS-216 srfA	0.113	ns
+StRBOHD	PS-216 ΔcomQXP	PS-216 srfA	0.426	ns
+StPR1B	noninoculated	PS-216	1.000	ns
+StPR1B	noninoculated	PS-216 ΔcomQXP	0.857	ns
+StPR1B	noninoculated	PS-216 srfA	0.659	ns
+StPR1B	PS-216	PS-216 ΔcomQXP	0.857	ns
+StPR1B	PS-216	PS-216 srfA	0.659	ns
+StPR1B	PS-216 ΔcomQXP	PS-216 srfA	0.665	ns
+StCPI8	noninoculated	PS-216	0.057	ns
+StCPI8	noninoculated	PS-216 ΔcomQXP	0.063	ns
+StCPI8	noninoculated	PS-216 srfA	0.466	ns
+StCPI8	PS-216	PS-216 ΔcomQXP	0.742	ns
+StCPI8	PS-216	PS-216 srfA	0.367	ns
+StCPI8	PS-216 ΔcomQXP	PS-216 srfA	0.501	ns
+StCAB	noninoculated	PS-216	0.003	**
+StCAB	noninoculated	PS-216 ΔcomQXP	0.001	***
+StCAB	noninoculated	PS-216 srfA	0.064	ns
+StCAB	PS-216	PS-216 ΔcomQXP	0.999	ns
+StCAB	PS-216	PS-216 srfA	0.287	ns
+StCAB	PS-216 ΔcomQXP	PS-216 srfA	0.203	ns
+StBGLU2	noninoculated	PS-216	0.871	ns
+StBGLU2	noninoculated	PS-216 ΔcomQXP	0.548	ns
+StBGLU2	noninoculated	PS-216 srfA	0.717	ns
+StBGLU2	PS-216	PS-216 ΔcomQXP	0.708	ns
+StBGLU2	PS-216	PS-216 srfA	0.982	ns
+StBGLU2	PS-216 ΔcomQXP	PS-216 srfA	0.805	ns
+StHSP70	noninoculated	PS-216	0.381	ns
+StHSP70	noninoculated	PS-216 ΔcomQXP	0.549	ns
+StHSP70	noninoculated	PS-216 srfA	0.365	ns
+StHSP70	PS-216	PS-216 ΔcomQXP	0.981	ns
+StHSP70	PS-216	PS-216 srfA	0.999	ns
+StHSP70	PS-216 ΔcomQXP	PS-216 srfA	0.993	ns
+StPti5	noninoculated	PS-216	0.010	**
+StPti5	noninoculated	PS-216 ΔcomQXP	0.296	ns
+StPti5	noninoculated	PS-216 srfA	0.054	ns
+StPti5	PS-216	PS-216 ΔcomQXP	0.055	ns
+StPti5	PS-216	PS-216 srfA	0.019	*
+StPti5	PS-216 ΔcomQXP	PS-216 srfA	1.000	ns
+St13-LOX	noninoculated	PS-216	0.008	**
+St13-LOX	noninoculated	PS-216 ΔcomQXP	0.377	ns
+St13-LOX	noninoculated	PS-216 srfA	0.038	*
+St13-LOX	PS-216	PS-216 ΔcomQXP	0.077	ns
+St13-LOX	PS-216	PS-216 srfA	0.009	**
+St13-LOX	PS-216 ΔcomQXP	PS-216 srfA	0.973	ns
+
+

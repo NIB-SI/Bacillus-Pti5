@@ -1,0 +1,900 @@
+---
+title: "Conditioned Medium "
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 5
+    toc_float:
+      collapsed: true
+      smooth_scroll: true
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 9
+    fig_height: 8
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+editor_options: 
+  chunk_output_type: console
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(#dev = c('pdf', 'png'),
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 8, 
+                      fig.width = 9,
+                      warning = FALSE, message = FALSE, echo = TRUE
+                      )
+
+
+```
+
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+
+```
+
+
+# packages
+
+```{r, libs}
+
+
+# %>% 
+library(magrittr)
+library(ggplot2)
+
+
+`%!in%` = Negate(`%in%`)
+
+
+
+```
+
+
+# palette
+
+```{r, palette}
+
+
+pal = rev(RColorBrewer::brewer.pal(8, 'Paired')[c(3,1,2,7,8)])
+
+
+
+```
+
+
+
+```{r, reports}
+
+my_dir = file.path("..", "reports", "ConditionedMedium")
+if (!dir.exists(my_dir)) {
+  dir.create(my_dir)
+}
+fr = file.path('..', 'output',  'ConditionedMedium_stat.txt')
+file.create(fr)
+
+```
+
+
+# f-ctions
+
+## summary stat
+
+```{r, summary_stats}
+
+summary_stats <- function(df, measurevar, groupvars, conf.level = 0.95) {
+  df %>%
+    dplyr::group_by(across(all_of(groupvars))) %>%
+    dplyr::summarise(
+      N = sum(!is.na(.data[[measurevar]])),
+      mean = mean(.data[[measurevar]], na.rm = TRUE),
+      sd = sd(.data[[measurevar]], na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    dplyr::mutate(
+      se = sd / sqrt(N),
+      ci = se * qt(conf.level/2 + 0.5, N - 1)
+    )
+}
+
+
+```
+
+
+## scale to the average of the reference group
+
+```{r, scale_PS}
+
+
+process_data <- function(df, groupvars, measurevar, scale_treatment = "noninoculated") {
+
+  df.long = df %>%
+    tidyr::pivot_longer(cols = 3:ncol(df), names_to = "transcript",
+                        values_to = measurevar, values_drop_na = TRUE)
+  data.SE = summary_stats(df.long, measurevar, groupvars)
+  scale_reference = data.SE %>%
+    dplyr::filter(Treatment == scale_treatment) %>%
+    dplyr::select(Tissue, transcript, mean) %>%
+    dplyr::rename(scale_mean = mean)
+  df.scaled <- dplyr::left_join(df.long, scale_reference, by = c("Tissue", "transcript")) %>%
+    dplyr::mutate(scaled = .data[[measurevar]] / scale_mean) %>%
+    dplyr::select(-scale_mean)
+  df.scaled = df.scaled %>% 
+    dplyr::arrange(dplyr::desc(transcript), dplyr::desc(Treatment))
+  shoots = df.scaled %>% dplyr::filter(Tissue == "shoots")
+  roots = df.scaled %>% dplyr::filter(Tissue == "roots")
+  
+  return(list(
+    shoots = shoots,
+    roots = roots
+  ))
+}
+
+
+
+
+```
+
+
+## permutation ANOVA & Games Howell Post-hoc Tests
+
+- compare all possible combinations of group differences when the assumption of homogeneity of variances is violated
+- provides confidence intervals for the differences between group means and shows whether the differences are statistically significant
+- based on Welch’s degrees of freedom correction and uses Tukey’s studentized range distribution for computing the p-values
+- compares the difference between each pair of means with appropriate adjustment for the multiple testing, so there is no need to apply additional p-value corrections
+- assumes approximate normality of *residuals*
+
+
+
+```{r, perm_t}
+
+games_howell_by_transcript <- function(mydata.long, measurevar = "measurement", groupvar = "Treatment") {
+  
+  temp = data.frame()
+  
+  set.seed(123456)
+  # Transcripts with significant treatment effects BH < 0.05
+  pA = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_modify(~ {
+      test = coin::oneway_test(measurement ~ Treatment, data = .x,
+                               distribution = coin::approximate(nresample = 70)) # the smallest nonzero p one can observe is 1 / nresample
+      tibble::tibble(
+        statistic = as.numeric(coin::statistic(test)),
+        p.value = as.numeric(coin::pvalue(test))
+      )
+    }) %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(permANOVA_BH = stats::p.adjust(p.value, method = "BH")) # If none of the resamples is as extreme, the raw estimate is 0
+  
+  
+  cat(crayon::red("####  ####  \npermutational ANOVA\n####  ####  \n"))
+  print(pA)
+  
+  cat("\nPermutational ANOVA", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(as.data.frame(pA)), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(as.data.frame(pA), 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
+
+
+ 
+  temp = mydata.long %>%
+  dplyr::group_by(transcript) %>%
+  rstatix::games_howell_test(measurement ~ Treatment, detailed = TRUE)
+
+    
+  
+  return(temp)
+  
+}
+
+
+
+```
+
+## plot
+
+```{r, plot}
+
+plot_gene_expression <- function(  data.SE
+                                 , data.long
+                                 , stat.test.sig
+                                 , transcripts_excl = c('St13-LOX', 'StPti5')
+                                 , color_values
+                                 , facet_cols = 6
+                                 , y_scales = NULL
+                                 , dodge_width = 0.8,
+                                 plot_title = ""
+                                 ) {
+  
+  dodge = position_dodge(width = dodge_width)
+  
+  data.SE.filtered = dplyr::filter(data.SE, !transcript %in% transcripts_excl)
+  data.long.filtered = dplyr::filter(data.long, !transcript %in% transcripts_excl)
+  
+  stat.test.filtered = NULL
+  if (nrow(stat.test.sig) > 0) stat.test.filtered = dplyr::filter(stat.test.sig, !transcript %in% transcripts_excl)
+  
+  p = ggplot(data.SE.filtered, aes(x = Treatment, y = mean)) +
+    geom_point(size=3.5, shape = 22, position = dodge, aes(fill = Treatment), colour = "black") +
+    geom_point(data = data.long.filtered, aes(x = Treatment, y = scaled, fill = Treatment), colour = "black",
+               size = 2.0, shape = 21,
+               position = dodge) +
+    geom_errorbar(aes(ymin = mean - se, ymax = mean + se), width = 0.3, lwd = 0.5,
+                  position = dodge) +
+    facet_wrap(~ transcript, ncol = facet_cols, scales = "free", drop = TRUE)
+  
+  if (!is.null(y_scales)) {
+    p = p + ggh4x::facetted_pos_scales(y = y_scales)
+  }
+  
+  p = p +
+    # geom_hline(yintercept = 2.5, alpha = 0.0) +
+    geom_hline(yintercept = 0, alpha = 0.0) +
+    geom_hline(yintercept = 1, alpha = 0.5, linetype = "dotted", col = "gray45") +
+    ggtitle(plot_title) +
+    theme_bw() +
+    scale_colour_manual(name = "", values = rev(color_values)) +
+    scale_fill_manual(name = "", values = rev(color_values)) +
+    labs(x = "", y = "Relative gene expression (+/- SE)"
+         # , subtitle = "Permutation t-test measurements"
+         ) +
+    theme(plot.subtitle = element_text(size = 10),
+          axis.text = element_text(size = 12.5),
+          axis.text.x = element_text(size = 12.5, angle = 90),
+          axis.title = element_text(size = 12.5, face = "bold"),
+          strip.text = element_text(size = 12.5),
+          title = element_text(size = 15, face = "bold"),
+          # axis.ticks.x = element_blank(),
+          legend.key.height = unit(1.5, "cm"),
+          legend.key.width = unit(1.75, "cm"),
+          legend.text = element_text(size = 12.5),
+          legend.title = element_text(size = 12.5),
+          legend.background = element_rect(fill = "transparent", size = 0.5, linetype = "dotted"),
+          legend.position = "top",
+          legend.justification = "right",
+          plot.background = element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.title.y.right = element_blank(),
+          axis.text.y.right = element_blank(),
+          # axis.ticks.y = element_blank(),
+          axis.text.y = element_text(size = 12.5, margin = margin(r = 0)),
+          panel.spacing = unit(1, "lines"),
+          strip.background = element_rect(size = 0.5, fill = "transparent", color = NA) ,
+          panel.border = element_blank(),
+          axis.line = element_line(color = "black")
+          )
+  
+    p = p + theme(legend.position = "none")
+
+  
+
+
+  
+  if (!is.null(stat.test.filtered) && nrow(stat.test.filtered) > 0) {
+    
+    p = p + ggpubr::stat_pvalue_manual(
+      stat.test.filtered,
+      label = "p.adj.signif",
+      xmin = "xmin",
+      xmax = "xmax",
+      y.position = "y.position",
+      hide.ns = FALSE,
+      tip.length = 0.01,
+      step.increase = 0,
+      inherit.aes = FALSE 
+    )
+    
+  }
+    
+  return(p)
+  
+}
+
+
+
+```
+
+## distribution, variance and effects
+
+- on qPCR data
+  - [quantGenius - quantification of qPCR data using standard curve](http://quantgenius.nib.si/user/login)
+  - [MIQE 2.0: Revision of the Minimum Information for Publication of Quantitative Real-Time PCR Experiments Guidelines](https://academic.oup.com/clinchem/article/71/6/634/8119148)
+  - quantification based on a standard curve inherently involves a log transformation of the input data
+- **Denote:** LOQ values skew distributions
+- **Denote:** distribution tests: low power for small sample size, see QQ of residuals
+  - if most or all points fall inside the shaded confidence band, the sample’s distribution does not show strong evidence of departure from normality at the plotted sample size and confidence level
+  - a few isolated points outside the band at the extremes are common with small samples and do not necessarily indicate a severe problem 
+- **Denote:** heteroscedasticity: some tests are meant to be used with normally distributed data, but can tolerate relatively low deviation from normality; Levene’s test with mean, more robust test Brown-Forsythe with median, Fligner-Killeen when data are non-normally distributed or when problems related to outliers in the dataset cannot be resolved
+- **Denote:** effect size: Cohen’s d - parametric with assumptions, Wilcoxon Effect Size - the non-parametric alternative; different sensitivity to outliers
+
+```{r, effects}
+
+dens_and_effect <- function(mydata.long, p_colors) {
+  
+  # Plot density with x="measurement"
+  p1 = ggpubr::ggdensity(mydata.long, x = "measurement",
+              add = "mean", rug = TRUE,
+              color = "Treatment", fill = "Treatment",
+              facet.by = 'transcript') +
+    scale_fill_manual(name = "", values = rev(p_colors)) +
+    scale_color_manual(name = "", values = rev(p_colors)) +
+    ggtitle("measurement") +
+    facet_wrap(~transcript, ncol = 4, scales = "free")
+  print(p1)
+  
+  # optional: Plot density with x="scaled"- sam e shape wih a shift
+  # p2 = ggpubr::ggdensity(mydata.long, x = "scaled",
+  #             add = "mean", rug = TRUE,
+  #             color = "Treatment", fill = "Treatment",
+  #             facet.by = 'transcript') +
+  #   scale_fill_manual(name = "", values = rev(p_colors)) +
+  #   scale_color_manual(name = "", values = rev(p_colors)) +
+  #   ggtitle("scaled") +
+  #   facet_wrap(~transcript, ncol = 4, scales = "free")
+  # print(p2)
+  
+  
+  cat(crayon::red('####  ####  \nDistribution tests\n####  ####  \n'))
+  
+    distr_tests = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      x = na.omit(.x$measurement)
+      if (length(x) < 3) {
+        return(tibble::tibble(
+          Shapiro_Wilk = NA_real_,
+          Anderson_Darling = NA_real_,
+          Lilliefors_KS = NA_real_,
+          Jarque_Bera = NA_real_,
+          DAgostino_Skewness = NA_real_,
+          n = length(x),
+          transcript = .y$transcript
+        ))
+      }
+      tibble::tibble(
+        Shapiro_Wilk = tryCatch(shapiro.test(x)$p.value, error = function(e) NA_real_),
+        Anderson_Darling = tryCatch(nortest::ad.test(x)$p.value, error = function(e) NA_real_),
+        Lilliefors_KS = tryCatch(nortest::lillie.test(x)$p.value, error = function(e) NA_real_),
+        Jarque_Bera = tryCatch(tseries::jarque.bera.test(x)$p.value, error = function(e) NA_real_),
+        DAgostino_Skewness = tryCatch(moments::agostino.test(x)$p.value, error = function(e) NA_real_),
+        n = length(x),
+        transcript = .y$transcript
+      )
+    }) %>%
+    dplyr::bind_rows() %>%
+    dplyr::ungroup() %>%
+    dplyr::mutate(
+      Shapiro_Wilk_BH = stats::p.adjust(Shapiro_Wilk, method = "BH"),
+      Anderson_Darling_BH = stats::p.adjust(Anderson_Darling, method = "BH"),
+      Lilliefors_KS_BH = stats::p.adjust(Lilliefors_KS, method = "BH"),
+      Jarque_Bera_BH = stats::p.adjust(Jarque_Bera, method = "BH"),
+      DAgostino_Skewness_BH = stats::p.adjust(DAgostino_Skewness, method = "BH")
+    )
+
+  
+
+  combined_results = distr_tests[grep("^n$|transcript|_BH", colnames(distr_tests))]
+  print(combined_results, n = Inf, width = Inf)
+
+  
+  
+
+  cat(crayon::red("####  ####  \nQuantile-Quantile plots\n####  ####  \n"))
+  qq_plot_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      ggpubr::ggqqplot(.x$measurement) +
+        ggplot2::ggtitle(paste("Raw:", .y$transcript))
+    })
+  
+  resid_qq_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      model = lm(measurement ~ Treatment, data = .x)
+      resids = resid(model)
+      ggpubr::ggqqplot(resids) +
+        ggplot2::ggtitle(paste("Residuals:", .y$transcript))
+    })
+  
+
+  resid_density_list = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_map(~ {
+      model = lm(measurement ~ Treatment, data = .x)
+      resids = scale(resid(model))  # standardize residuals
+      df = data.frame(resids = as.numeric(resids))
+      ggplot(df, aes(x = resids)) +
+        geom_density(fill = "steelblue", alpha = 0.6) +
+        stat_function(fun = dnorm, color = "red", linetype = "dashed") +
+        ggtitle(paste("Residuals:", .y$transcript)) +
+        theme_minimal()
+    })
+  
+  # Arrange and print all plots
+  qq_arranged = ggpubr::ggarrange(plotlist = qq_plot_list, ncol = 4, nrow = ceiling(length(qq_plot_list) / 4))
+  resid_qq_arranged = ggpubr::ggarrange(plotlist = resid_qq_list, ncol = 4, nrow = ceiling(length(resid_qq_list) / 4))
+  resid_hist_arranged = ggpubr::ggarrange(plotlist = resid_density_list, ncol = 4, nrow = ceiling(length(resid_density_list) / 4))
+  
+  print(qq_arranged)
+  print(resid_qq_arranged)
+  print(resid_hist_arranged)
+  
+  # Return invisibly
+  invisible(list(qq = qq_arranged, resid_qq = resid_qq_arranged, resid_hist = resid_hist_arranged))
+
+
+
+  
+  cat(crayon::red("####  ####  \nTest for homogeneity of variance across groups\n####  ####  \n"))
+  
+  cat(crayon::red("####  ####  \nLevene\n####  ####  \n"))
+  # Levene's test on measurement
+  lev_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::levene_test(measurement ~ Treatment, center = "mean")
+  print(lev_meas)
+  
+  cat(crayon::red("####  ####  \nBrown-Forsythe\n####  ####  \n"))
+  # center = "median" switches Levene’s test to the Brown-Forsythe variant
+  bf_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::levene_test(measurement ~ Treatment, center = "median")
+  print(bf_meas)
+  
+  cat(crayon::red("####  ####  \nFligner\n####  ####  \n"))
+  fk_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::group_modify(~ broom::tidy(stats::fligner.test(measurement ~ Treatment, data = .x)))
+  print(fk_meas)
+
+
+  
+
+  cat(crayon::red("####  ####  \nWilcoxon effect size\n####  ####  \n"))
+  
+  # Wilcoxon effect size on measurement
+  eff_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::wilcox_effsize(measurement ~ Treatment)
+  print(eff_meas)
+  
+  # Wilcoxon effect size on scaled
+  # eff_scaled = mydata.long %>%
+  #   dplyr::group_by(transcript) %>%
+  #   rstatix::wilcox_effsize(scaled ~ Treatment)
+  # print(eff_scaled)
+  
+  cat(crayon::red("####  ####  \nCohen's d Measure of Effect Size\n####  ####  \n"))
+  
+  # Cohen's d on measurement
+  coh_meas = mydata.long %>%
+    dplyr::group_by(transcript) %>%
+    rstatix::cohens_d(measurement ~ Treatment, paired = FALSE)
+  print(coh_meas)
+  
+
+  invisible(list(
+    p_measurement = p1,
+    distr_measurement = combined_results,
+    levene_measurement = lev_meas,
+    brownforsythe_measurement = bf_meas,
+    fligner_measurement = fk_meas,
+    wilcoxon_measurement = eff_meas,
+    cohensd_measurement = coh_meas
+  ))
+}
+
+```
+
+## ggplot limits
+
+```{r, limits}
+
+make_scale_params <- function(maxval) {
+  upper = ifelse(maxval > 2, maxval + 2, maxval + 0.1) # 0.5
+  step = dplyr::case_when(
+    maxval >= 50 ~ 25,
+    maxval >= 30 ~ 10,
+    maxval >= 15 ~ 5,
+    maxval >= 10 ~ 2,
+    maxval >  2  ~ 1,
+    TRUE         ~ 0.5
+  )
+  upper_round = ceiling(upper / step) * step
+  breaks = seq(0, upper_round, by = step)
+  list(limits = c(0, upper_round), breaks = breaks)
+}
+
+build_y_scales_for <- function(names_vec, max_per_transcript) {
+  max_per_transcript %>%
+    dplyr::filter(transcript %in% names_vec) %>%
+    purrr::pmap(function(transcript, max_scaled) {
+      params = make_scale_params(max_scaled)
+      lhs = rlang::expr(transcript == !!transcript)
+      rhs = rlang::expr(ggplot2::scale_y_continuous(limits = !!params$limits, breaks = !!params$breaks))
+      rlang::new_formula(lhs, rhs)
+    })
+}
+
+```
+
+
+## test and plot
+
+```{r, test_and_plot}
+
+test_and_plot <- function(data_long_raw
+                          , myorder
+                          , pal
+                          , what
+                          , plot_gene_expression_func
+                          , groupvars = c("Treatment", "transcript")
+                          , y_scales1
+                          , y_scales2
+                          ) {
+
+  
+  mydata.long = dplyr::as_tibble(data.table::data.table(data_long_raw))
+  mydata.long$transcript = factor(mydata.long$transcript, levels = myorder)
+  mydata.long = mydata.long %>% dplyr::arrange(factor(transcript, levels = myorder))
+  
+  mydata.long.SE = summary_stats(mydata.long, measurevar = "scaled", groupvars = groupvars)
+  
+  results = dens_and_effect(mydata.long, p_colors = pal)
+  
+  cat(what, file = fr, append = TRUE, sep = "\n")
+
+  cat("\nDistribution tests", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$distr_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$distr_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
+  cat("\nLevene's test for homogeneity of variance across groups", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$levene_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$levene_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("\nBrown-Forsythe (Levene with median)", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$brownforsythe_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$brownforsythe_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("\nFligner-Killeen test of homogeneity of variances", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$fligner_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$fligner_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
+  cat("\nWilcoxon effect size", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$wilcoxon_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$wilcoxon_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  cat("\nCohen's d Measure of Effect Size", file = fr, append = TRUE, sep = "\n")
+  header = paste(colnames(results$cohensd_measurement), collapse = "\t")
+  cat(header, file = fr, append = TRUE, sep = "\n")
+  output_text = apply(results$cohensd_measurement, 1, function(row) paste(row, collapse = "\t"))
+  cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
+  cat("", file = fr, append = TRUE, sep = "\n")
+
+  
+  temp = games_howell_by_transcript(mydata.long, measurevar = "measurement", groupvar = "Treatment")
+  stat.test = temp %>%
+    dplyr::select(transcript, group1, group2, p.adj, p.adj.signif)
+  
+  # y_pos_df computed from (means+se)
+  y_pos_df = mydata.long.SE %>%
+    dplyr::group_by(transcript) %>%
+    dplyr::summarise(
+      max_mean_se = max(mean + se, na.rm = TRUE),
+      min_mean_se = min(mean - se, na.rm = TRUE),
+      .groups = "drop"
+    ) %>%
+    dplyr::left_join(
+      mydata.long %>%
+        dplyr::group_by(transcript) %>%
+        dplyr::summarise(
+          max_scaled = max(scaled, na.rm = TRUE),
+          min_scaled = min(scaled, na.rm = TRUE),
+          .groups = "drop"
+        ),
+      by = "transcript"
+    ) %>%
+    dplyr::mutate(
+      plot_max = pmax(max_mean_se, max_scaled, na.rm = TRUE),
+      plot_min = pmin(min_mean_se, min_scaled, na.rm = TRUE),
+      plot_range = pmax(plot_max - plot_min, 1e-6)
+    ) %>%
+    dplyr::select(transcript, plot_max, plot_range)
+  
+  # map group names to numeric x positions (use existing factor levels as-is)
+  pos_map = mydata.long %>%
+    dplyr::distinct(transcript, Treatment) %>%
+    dplyr::mutate(xpos = as.numeric(factor(Treatment, levels = levels(mydata.long$Treatment))))
+  
+  # attach plot ranges and numeric x positions to stat.test
+  stat.test = stat.test %>%
+    dplyr::left_join(y_pos_df, by = "transcript") %>%
+    dplyr::left_join(pos_map %>% dplyr::rename(group1 = Treatment, xmin = xpos), by = c("transcript", "group1")) %>%
+    dplyr::left_join(pos_map %>% dplyr::rename(group2 = Treatment, xmax = xpos), by = c("transcript", "group2")) %>%
+    dplyr::mutate(
+      xmin = dplyr::if_else(is.na(xmin), as.numeric(factor(group1, levels = levels(mydata.long$Treatment))), xmin),
+      xmax = dplyr::if_else(is.na(xmax), as.numeric(factor(group2, levels = levels(mydata.long$Treatment))), xmax)
+    )
+  
+  # compute distinct y.position per comparison
+  stat.test.sig = stat.test %>%
+    dplyr::filter(!is.na(p.adj) & p.adj <= 0.05) %>% # take care if < 0.05 OR <= 0.05
+    dplyr::group_by(transcript) %>%
+    dplyr::arrange(xmin, xmax, .by_group = TRUE) %>%
+    dplyr::mutate(
+      base_y = plot_max + 0.03 * plot_range,
+      inc = 0.05 * plot_range,
+      y.position = base_y + (dplyr::row_number() - 1) * inc
+    ) %>%
+    dplyr::ungroup() %>%
+    dplyr::select(transcript, group1, group2, p.adj, p.adj.signif, y.position, xmin, xmax)
+  
+  group1 =  sapply(y_scales1, function(x) {
+    s = deparse(x)
+    s_full = paste(s, collapse = " ")
+    sub('.*transcript == *"([^"]+)".*', '\\1', s_full)
+  })
+  group2 =  sapply(y_scales2, function(x) {
+    s = deparse(x)
+    s_full = paste(s, collapse = " ")
+    sub('.*transcript == *"([^"]+)".*', '\\1', s_full)
+  })
+
+
+  p1 = plot_gene_expression_func(
+    data.SE = mydata.long.SE
+    ,
+    data.long = mydata.long
+    ,
+    stat.test.sig = stat.test.sig
+    ,
+    transcripts_excl = group2
+    ,
+    facet_cols = length(group1)
+    ,
+    color_values = pal
+    ,
+    plot_title = what
+    ,
+    y_scales = y_scales1
+    ,
+    dodge_width = 0.8
+  )
+  print(p1)
+  
+  p2 = plot_gene_expression_func(
+    data.SE = mydata.long.SE,
+    data.long = mydata.long,
+    stat.test.sig = stat.test.sig,
+    transcripts_excl = group1,
+    facet_cols = length(group2),
+    color_values = pal,
+    plot_title = what,
+    y_scales = y_scales2,
+    dodge_width = 0.8
+  )
+  print(p2)
+  
+  return(list(plot1 = p1, plot2 = p2, stat.test = stat.test))
+}
+
+
+
+```
+
+
+# input
+
+
+```{r, input_Test}
+
+
+fp = file.path('..', "input")
+# list.files(fp)
+
+
+fn = 'Table_combinedInputs.xlsx'
+wb = openxlsx::loadWorkbook(file.path(fp, fn))
+sheet_names = names(wb)
+sheet_name = grep("ConditionedMedium", sheet_names, value = TRUE)
+
+df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = sheet_name,
+                            startRow = 10,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(df)
+df[, Sample.ID := NULL]
+df[, Genotype := NULL]
+df$Treatment = factor(df$Group, levels = c("noninoculated", "PS-216", "PS-216 medium", "PS-216 srfA", "PS-216 srfA medium"))
+df[, Strain := NULL]
+df[, Group := NULL]
+
+numeric_cols = sapply(df, is.numeric)
+min_vals = sapply(df[, ..numeric_cols], function(x) min(x, na.rm = TRUE))
+LOQs = do.call(rbind, lapply(names(min_vals), function(col) {
+  smallest_val = min_vals[[col]]
+  values = df[[col]]
+  repeated_vals = values[values == smallest_val]
+  if(length(repeated_vals) > 1) {
+    data.frame(
+      Column = col,
+      SmallestRepeatedValue = smallest_val,
+      Count = length(repeated_vals)
+    )
+  } else {
+    NULL
+  }
+}))
+
+LOQs
+
+
+
+```
+
+# params
+
+```{r, params_Test}
+
+groupvars = c("Tissue", "Treatment", "transcript")
+measurevar = 'measurement'
+dodge = position_dodge(width = 0.5)
+
+myorder = c("StRBOHD", "StCPI8", "StCAB", "StBGLU2", "StHSP70", "StPti5", "St13-LOX")
+group1_names = c("StPti5", "St13-LOX")
+
+
+
+```
+
+
+# results
+
+```{r, results_Test}
+
+roots = process_data(df, groupvars, measurevar, scale_treatment = "noninoculated")$roots
+
+```
+
+
+
+## roots
+
+```{r, roots}
+
+max_per_transcript = roots %>%
+  dplyr::group_by(transcript) %>%
+  dplyr::summarise(max_scaled = max(scaled, na.rm = TRUE), .groups = "drop")
+group2_names = setdiff(max_per_transcript$transcript, group1_names)
+y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
+y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+
+result = test_and_plot(  data_long_raw = roots
+                       , myorder = myorder
+                       , pal = pal
+                       , what = "roots"
+                       , plot_gene_expression_func = plot_gene_expression
+                       , groupvars = c("Treatment", "transcript")
+                       , y_scales1
+                       , y_scales2
+                       )
+
+res = result$stat.test[, grep("transcript|group1|group2|^p$|p\\.", colnames(result$stat.test))]
+print(res[res$p.adj.signif != 'ns', ])
+
+cat("", file = fr, append = TRUE, sep = "\n")
+output_text = "Games Howell"
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+header = paste(colnames(res), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(as.data.frame(tibble::as_tibble(res)), 1, function(row) paste(row, collapse = "\t"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+cat("", file = fr, append = TRUE, sep = "\n")
+
+
+
+
+ggsave(
+  filename = file.path(my_dir, "roots_1.pdf"),
+  plot = result$plot1,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "roots_1.svg"),
+  plot = result$plot1,
+  device = svg,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 8,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+ggsave(
+  filename = file.path(my_dir, "roots_2.pdf"),
+  plot = result$plot2,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = c("in"),
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "roots_2.svg"),
+  plot = result$plot2,
+  device = svg,
+  path = NULL,
+  scale = 1,
+  width = 9,
+  height = 8,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+```
+
+
+
+
+
+# sessionInfo
+
+```{r, sessionInfo}
+
+sessionInfo()
+
+```
+
+

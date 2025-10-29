@@ -1,0 +1,136 @@
+FlgResponse
+
+shoots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+8	StRBOHD	0.359947328	0.385633147	0.3776067551	0.7734679	0.357287089
+8	StPR1B	0.009314274	0.004073249	0.0007736797	0.7734679	0.137882563
+8	StBGLU2	0.003564012	0.004073249	0.0418160665	0.1699774	0.009349938
+8	StACO2	0.119309218	0.129567841	0.3298267008	0.7734679	0.357287089
+8	StPti5	0.548942724	0.504442521	0.3606211593	0.7734679	0.500320476
+8	St13-LOX	0.359947328	0.385633147	0.3776067551	0.7734679	0.357287089
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+StRBOHD	1	6	0.2729015	0.62011069
+StPR1B	1	6	0.7609337	0.41657404
+StBGLU2	1	6	5.1773201	0.06319985
+StACO2	1	6	9.3672534	0.02220800
+StPti5	1	6	0.3304141	0.58630667
+St13-LOX	1	6	8.3154079	0.02792440
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+StRBOHD	1	6	0.02222929	0.88636384
+StPR1B	1	6	0.18287509	0.68383656
+StBGLU2	1	6	2.04599616	0.20255417
+StACO2	1	6	5.99703775	0.04986620
+StPti5	1	6	0.46012190	0.52285287
+St13-LOX	1	6	7.32690140	0.03525456
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+StRBOHD	0.0954934	0.75730626	1	Fligner-Killeen test of homogeneity of variances
+StPR1B	0.4858696	0.48577560	1	Fligner-Killeen test of homogeneity of variances
+StBGLU2	2.8511984	0.09130585	1	Fligner-Killeen test of homogeneity of variances
+StACO2	1.7465050	0.18631671	1	Fligner-Killeen test of homogeneity of variances
+StPti5	0.7092867	0.39968071	1	Fligner-Killeen test of homogeneity of variances
+St13-LOX	2.8691415	0.09029302	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	no treatment	flg22	0.2041241	StRBOHD	4	4	small
+measurement	no treatment	flg22	0.1169268	StPR1B	4	4	small
+measurement	no treatment	flg22	0.2041241	StBGLU2	4	4	small
+measurement	no treatment	flg22	0.5103104	StACO2	4	4	large
+measurement	no treatment	flg22	0.3061862	StPti5	4	4	moderate
+measurement	no treatment	flg22	0.7144345	St13-LOX	4	4	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	no treatment	flg22	-0.20189315	StRBOHD	4	4	small
+measurement	no treatment	flg22	-0.07600576	StPR1B	4	4	negligible
+measurement	no treatment	flg22	 0.69224209	StBGLU2	4	4	moderate
+measurement	no treatment	flg22	-1.07390845	StACO2	4	4	large
+measurement	no treatment	flg22	-0.50432947	StPti5	4	4	moderate
+measurement	no treatment	flg22	-1.93139486	St13-LOX	4	4	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+StRBOHD	no treatment	flg22	0.67716535	0.7244094	ns
+StPR1B	no treatment	flg22	0.72440945	0.7244094	ns
+StBGLU2	no treatment	flg22	0.50000000	0.7244094	ns
+StACO2	no treatment	flg22	0.15748031	0.4724409	ns
+StPti5	no treatment	flg22	0.42125984	0.7244094	ns
+St13-LOX	no treatment	flg22	0.04330709	0.2598425	ns
+
+
+roots
+
+Distribution tests
+n	transcript	Shapiro_Wilk_BH	Anderson_Darling_BH	Lilliefors_KS_BH	Jarque_Bera_BH	DAgostino_Skewness_BH
+7	StRBOHD	1.485781e-01	NA	0.1579049139	0.7361465	NA
+7	StPR1B	8.961911e-05	NA	0.0001753333	0.2809047	NA
+7	StBGLU2	4.780412e-03	NA	0.0286311894	0.3609126	NA
+7	StACO2	2.237006e-01	NA	0.6489477050	0.7361465	NA
+7	StPti5	5.544361e-01	NA	0.7383072150	0.7361465	NA
+7	St13-LOX	1.435863e-01	NA	0.2912238374	0.7361465	NA
+
+Levene's test for homogeneity of variance across groups
+transcript	df1	df2	statistic	p
+StRBOHD	1	5	0.3366157	0.58695219
+StPR1B	1	5	5.7436726	0.06188069
+StBGLU2	1	5	5.6315058	0.06370898
+StACO2	1	5	3.4662097	0.12169272
+StPti5	1	5	2.3221260	0.18805087
+St13-LOX	1	5	3.4055337	0.12428018
+
+Brown-Forsythe (Levene with median)
+transcript	df1	df2	statistic	p
+StRBOHD	1	5	0.04962484	0.8325316
+StPR1B	1	5	0.62839282	0.4638810
+StBGLU2	1	5	1.13983201	0.3345005
+StACO2	1	5	0.97503461	0.3687712
+StPti5	1	5	2.17843418	0.1999826
+St13-LOX	1	5	2.10305722	0.2066973
+
+Fligner-Killeen test of homogeneity of variances
+transcript	statistic	p.value	parameter	method
+StRBOHD	0.1570215	0.69191367	1	Fligner-Killeen test of homogeneity of variances
+StPR1B	0.9317171	0.33441713	1	Fligner-Killeen test of homogeneity of variances
+StBGLU2	1.8860157	0.16965199	1	Fligner-Killeen test of homogeneity of variances
+StACO2	0.9175817	0.33811074	1	Fligner-Killeen test of homogeneity of variances
+StPti5	1.8978161	0.16832297	1	Fligner-Killeen test of homogeneity of variances
+St13-LOX	4.0515065	0.04413194	1	Fligner-Killeen test of homogeneity of variances
+
+Wilcoxon effect size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	no treatment	flg22	0.8017837	StRBOHD	3	4	large
+measurement	no treatment	flg22	0.2041241	StPR1B	3	4	small
+measurement	no treatment	flg22	0.8017837	StBGLU2	3	4	large
+measurement	no treatment	flg22	0.8017837	StACO2	3	4	large
+measurement	no treatment	flg22	0.8017837	StPti5	3	4	large
+measurement	no treatment	flg22	0.8017837	St13-LOX	3	4	large
+
+Cohen's d Measure of Effect Size
+.y.	group1	group2	effsize	transcript	n1	n2	magnitude
+measurement	no treatment	flg22	 7.0527917	StRBOHD	3	4	large
+measurement	no treatment	flg22	-0.6197247	StPR1B	3	4	moderate
+measurement	no treatment	flg22	-1.2397697	StBGLU2	3	4	large
+measurement	no treatment	flg22	-2.2122490	StACO2	3	4	large
+measurement	no treatment	flg22	-2.6459306	StPti5	3	4	large
+measurement	no treatment	flg22	-4.8692903	St13-LOX	3	4	large
+
+
+permutational t-test
+transcript	group1	group2	p	p.adj	p.adj.signif
+StRBOHD	no treatment	flg22	0.003937008	0.01181102	*
+StPR1B	no treatment	flg22	0.897637795	0.89763780	ns
+StBGLU2	no treatment	flg22	0.043307087	0.05196850	ns
+StACO2	no treatment	flg22	0.003937008	0.01181102	*
+StPti5	no treatment	flg22	0.027559055	0.05196850	ns
+St13-LOX	no treatment	flg22	0.043307087	0.05196850	ns
+
+
