@@ -54,15 +54,25 @@ library(ggplot2)
 ```
 
 
-# palette
+# Intensity across Lines
+
+
+## params
 
 ```{r}
 
-pal = rev(RColorBrewer::brewer.pal(8, 'Paired')[c(1,5,7)])
+pal = RColorBrewer::brewer.pal(8, 'Paired')[c(3,5,7)]
+
+my_dir = file.path("..", "reports", "Intensity")
+if (!dir.exists(my_dir)) {
+  dir.create(my_dir)
+}
+fr = file.path('..', 'output',  'Intensity_stat.txt')
+file.create(fr)
 
 ```
 
-# input
+## input
 
 ```{r}
 
@@ -71,7 +81,7 @@ fp = file.path('..', 'input')
 fn = 'Table_combinedInputs.xlsx'
 wb = openxlsx::loadWorkbook(file.path(fp, fn))
 sheet_names = names(wb)
-sheet_name = grep("Intensity", sheet_names, value = TRUE)
+sheet_name = grep("IntensityLines", sheet_names, value = TRUE)
 
 
 dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = sheet_name, startRow = 10)
@@ -83,17 +93,12 @@ dt$Plant = as.factor(sub('P', '', dt$Plant))
 dt$Region = as.factor(sub('ROI', '', dt$ROI))
 dt$Root = as.factor(dt$Root)
 dt$Time = ordered(as.numeric(sub('h', '', dt$Time)))
-dt$RootUnique = interaction(dt$Genotype, dt$Root, drop = TRUE)
-dt$ROIUnique  = interaction(dt$Genotype, dt$Root, dt$Region, drop = TRUE)
-
-table(dt$Region, dt$Genotype)
-table(dt$Root, dt$Genotype)
-table(dt$ROI, dt$Genotype)
-table(dt$RootUnique, dt$ROI)
+# dt$RootUnique = interaction(dt$Genotype, dt$Root, drop = TRUE)
+# dt$ROIUnique  = interaction(dt$Genotype, dt$Root, dt$Region, drop = TRUE)
 
 ```
 
-# plot
+## plot raw
 
 ```{r}
 
@@ -112,9 +117,9 @@ sum_grp = dt %>%
   dplyr::group_by(Group, Genotype, Time) %>%
   dplyr::summarise(
     n = dplyr::n(),
-    mean = mean(Mean.intensity, na.rm = TRUE),
-    sd = stats::sd(Mean.intensity, na.rm = TRUE),
-    .groups = "drop"
+    mean = mean(Sum.intensity, na.rm = TRUE),
+    sd = stats::sd(Sum.intensity, na.rm = TRUE),
+        .groups = "drop"
   )
 
 pd = ggplot2::position_dodge(width = 0.75)
@@ -134,19 +139,20 @@ dt = dt %>%
 
 
 
-p = ggplot2::ggplot(dt, ggplot2::aes(x = Genotype, # Group, 
-                                     y = Mean.intensity, fill = Genotype)) +
+p = ggplot2::ggplot(dt, ggplot2::aes(x = Genotype, 
+                                     y = Sum.intensity, 
+                                     fill = Genotype)) +
   # boxplots and points
   ggplot2::geom_boxplot(outlier.shape = NA, width = 0.7, alpha = 0.25) +
   ggplot2::geom_jitter(position = pd, ggplot2::aes(color = Genotype), size = 1.6, alpha = 0.8) +
   # connect mean points within each Genotype (use numeric Group positions)
-  ggplot2::geom_line(
-    data = sum_grp,
-    ggplot2::aes(x = as.numeric(Genotype), # Group), 
-                 y = mean, group = Genotype, color = Genotype),
-    inherit.aes = FALSE,
-    size = 0.8,
-    show.legend = FALSE  ) +
+  # ggplot2::geom_line(
+  #   data = sum_grp,
+  #   ggplot2::aes(x = as.numeric(Genotype), # Group), 
+  #                y = mean, group = Genotype, color = Genotype),
+  #   inherit.aes = FALSE,
+  #   size = 0.8,
+  #   show.legend = FALSE  ) +
   # overlay mean points and SD errorbars (use sum_grp)
   ggplot2::geom_errorbar(
     data = sum_grp,
@@ -175,40 +181,76 @@ p = ggplot2::ggplot(dt, ggplot2::aes(x = Genotype, # Group,
     panel.border = ggplot2::element_blank(),          # remove full panel border
     axis.line = ggplot2::element_line(color = "black") # draw bottom and left axes
   ) +
-  ggtitle("Amount of biofilm on potato roots") +
-  ggplot2::geom_hline(yintercept = 0, alpha = 0)
+  ggtitle("Amount of biofilm on\npotato roots") +
+  ggplot2::geom_hline(yintercept = 0, alpha = 0) +
+  scale_y_continuous(labels = scales::comma)
 
 
 print(p)
 
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Lines_raw.pdf"),
+  plot = p,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 6,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Lines_raw.svg"),
+  plot = p,
+  device = "svg",
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 6,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
 ```
 
-
+## transformation
 
 ```{r}
 
 
 
-ggplot(dt, aes(x = Mean.intensity, color = Genotype, fill = Genotype)) +
+ggplot(dt, aes(x = Sum.intensity, 
+               color = Genotype, fill = Genotype)) +
   geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
-  geom_rug(aes(x = Mean.intensity), inherit.aes = FALSE, alpha = 0.15) +
+  geom_rug(aes(x = Sum.intensity),  
+           inherit.aes = FALSE, alpha = 0.15) +
   facet_wrap(~ TimeF, ncol = 3, scales = "free") +
-  scale_color_brewer(palette = "Dark2") +
-  scale_fill_brewer(palette = "Dark2") +
-  labs(title = "Density of Mean intensity",
-       x = "Mean.intensity", y = "Density") +
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  labs(title = "Density of Sum.intensity", 
+       x = "Sum.intensity", 
+       y = "Density") +
   theme_minimal() +
   theme(legend.position = "bottom")
 
 
-ggplot(dt, aes(x = log2(Mean.intensity), color = Genotype, fill = Genotype)) +
+ggplot(dt, aes(x = log2(Sum.intensity),
+               color = Genotype, fill = Genotype)) +
   geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
-  geom_rug(aes(x = log2(Mean.intensity)), inherit.aes = FALSE, alpha = 0.15) +
+  geom_rug(aes(x = log2(Sum.intensity)), 
+           inherit.aes = FALSE, alpha = 0.15) +
   facet_wrap(~ TimeF, ncol = 3, scales = "free") +
-  scale_color_brewer(palette = "Dark2") +
-  scale_fill_brewer(palette = "Dark2") +
-  labs(title = "Density of log2 (Mean intensity)",
-       x = "log2(Mean.intensity)", y = "Density") +
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  labs(title = "Density of log2 (Sum intensity)",
+       x = "log2(Sum.intensity)", 
+       y = "Density") +
   theme_minimal() +
   theme(legend.position = "bottom")
 
@@ -216,7 +258,7 @@ ggplot(dt, aes(x = log2(Mean.intensity), color = Genotype, fill = Genotype)) +
 ```
 
 
-# Linear Mixed-Effects Models
+## Linear Mixed-Effects Models
 
 - plant is not globally unique
 - plant has only 1 level
@@ -226,14 +268,12 @@ ggplot(dt, aes(x = log2(Mean.intensity), color = Genotype, fill = Genotype)) +
 
 ```{r}
 
-# ROI not nested (random intercept per root)
 mod1 = lme4::lmer(
-  log2(Mean.intensity) ~ 0 + Genotype + (1 | RootUnique),
+  log2(Sum.intensity) ~ 0 + Genotype + (1 | Genotype:Root),
   data = dt,
   REML = FALSE,
   control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
 )
-
 
 
 print("isSingular:")
@@ -241,9 +281,11 @@ print(c(mod1 = lme4::isSingular(mod1))) # not overfitted and the random effects 
 
 print("VarCorr (compact):")
 print(list(mod1 = as.data.frame(lme4::VarCorr(mod1))))
-# RootUnique: meaningful variation between roots within genotypes
+# Genotype:Root meaningful variation between roots within genotypes
 # Residual variance: the within-root (ROI-level) variation not explained by genotype or root
-
+MuMIn::r.squaredGLMM(mod1)
+# R2m = marginal R² - Proportion of variance explained by fixed effects only; a ratio
+# R2c = conditional R² - Proportion of variance explained by fixed + random effects together; a ratio
 
 final_mod = mod1
 print(summary(final_mod))
@@ -251,7 +293,7 @@ print(summary(final_mod))
 # diagnostics
 graphics::plot(final_mod)
 stats::qqnorm(residuals(final_mod)); stats::qqline(residuals(final_mod))
-print(lme4::ranef(final_mod))
+# print(lme4::ranef(final_mod))
 
 
 # Genotype - response
@@ -262,14 +304,39 @@ print(lme4::ranef(final_mod))
 # pairs = pairs(emm, adjust = "BH")
 # print(summary(pairs))
 
-# stay onlog scale
+# stay on log2 scale
 emm = emmeans::emmeans(final_mod, ~ Genotype, type = "link")
 plot(emm, comparison = TRUE, adjust = "BH",
-     main = "Estimated Marginal Means of Genotype within TimeF",
+     main = "Estimated Marginal Means of Genotype",
      xlab = "Genotype", ylab = "Response on log2 scale")
-pairs = pairs(emm, adjust = "BH")
-print(summary(pairs))
+# pairs = pairs(emm, adjust = "BH")
+# print(summary(pairs))
+# Raw p-values
+contr_raw = emmeans::contrast(emm, list(
+  NT_vs_shPTI5L = c(1, -0.5, -0.5),       # NT vs average of shPTI5L2 and shPTI5L6
+  NT_vs_shPTI5L2 = c(1, -1, 0),
+  NT_vs_shPTI5L6 = c(1, 0, -1),
+  shPTI5L2_vs_shPTI5L6 = c(0, 1, -1)
+), adjust = "none")
+# BH-adjusted p-values
+contr_bh = emmeans::contrast(emm, list(
+  NT_vs_shPTI5L = c(1, -0.5, -0.5),
+  NT_vs_shPTI5L2 = c(1, -1, 0),
+  NT_vs_shPTI5L6 = c(1, 0, -1),
+  shPTI5L2_vs_shPTI5L6 = c(0, 1, -1)
+), adjust = "BH")
+# Combine
+df_raw = as.data.frame(contr_raw)
+df_bh  = as.data.frame(contr_bh)
+contrast_table <- df_raw %>%
+  dplyr::mutate(p.value_BH = df_bh$p.value)
+print(contrast_table)
 
+cat("\nLines", file = fr, append = TRUE, sep = "\n")
+header = paste(colnames(contrast_table), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(contrast_table, 1, function(row) paste(row, collapse = "\t"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
 
 
 
@@ -286,29 +353,445 @@ emm_df = as.data.frame(emm) %>%
 p_emm = ggplot(emm_df, aes(x = Genotype, 
                            # y = response,  # (back-transformed)
                            y = emmean, 
-                           color = Genotype, group = Genotype)) +
+                           fill  = Genotype, group = Genotype)) +
   geom_line(size = 0.9, position = position_dodge(width = 0.25)) +
-  geom_point(size = 3, position = position_dodge(width = 0.25)) +
-  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL),
+  geom_point(size = 3, position = position_dodge(width = 0.25), shape = 21) +
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL, colour = Genotype),
                 width = 0.12, size = 0.7, position = position_dodge(width = 0.25)) +
-  geom_text(aes(label = cld), vjust = -1.2, position = position_dodge(width = 0.25), show.legend = FALSE) +
+  geom_text(aes(label = cld), vjust = -1.2, hjust = -0.5, position = position_dodge(width = 0.25), show.legend = FALSE) +
   scale_color_viridis_d() +
-  labs(x = "Time", y = "Estimated marginal mean (back-transformed)", title = "EMMs: Genotype with CLD") +
+  labs(x = "Line", 
+       y = "Estimated marginal mean (log2 scale)", 
+       title = "Estimated Marginal Means\nby Genotype with CLD") +
   theme_bw() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") + 
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  theme(legend.position = "bottom") + 
+  geom_hline(yintercept = 24, alpha = 0) + 
+  geom_hline(yintercept = 27, alpha = 0) +
+  theme(
+    panel.grid.major = element_blank(),  # removes major grid lines
+    panel.grid.minor = element_blank(),  # removes minor grid lines
+    panel.border = element_blank(),      # removes border around plot
+    axis.line = element_line()           # optionally add axis lines back
+  )
+
 
 print(p_emm)
 
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Lines_stat.pdf"),
+  plot = p_emm,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 4,
+  height = 4,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Lines_stat.svg"),
+  plot = p_emm,
+  device = "svg",
+  path = NULL,
+  scale = 1,
+  width = 4,
+  height = 4,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
 
-emmeans::contrast(emm, list(NT_vs_shPTI5L = c(1, -0.5, -0.5)))
-emmeans::contrast(emm, list(shPTI5L2_vs_shPTI5L6 = c(0, 1, -1)))
-emmeans::contrast(emm, list(NT_vs_shPTI5L2 = c(1, -1, 0)))
+
 
 
 
 ```
 
 
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+
+```
+
+
+
+
+```{r}
+
+library(magrittr)
+library(data.table)
+library(ggplot2)
+
+```
+
+
+# Intensity across Strains
+
+## palette
+
+```{r}
+
+pal = RColorBrewer::brewer.pal(8, 'Paired')[c(1,5,7)]
+
+my_dir = file.path("..", "reports", "Intensity")
+fr = file.path('..', 'output',  'Intensity_stat.txt')
+
+
+
+```
+
+## input
+
+```{r}
+
+fp = file.path('..', 'input')
+
+fn = 'Table_combinedInputs.xlsx'
+wb = openxlsx::loadWorkbook(file.path(fp, fn))
+sheet_names = names(wb)
+sheet_name = grep("IntensityStrains", sheet_names, value = TRUE)
+
+
+dt = openxlsx::read.xlsx(file.path(fp, fn), sheet = sheet_name, startRow = 10)
+setDT(dt)
+
+dt$Strain = as.factor(dt$Strain)
+dt$RootFixed = as.factor(paste(sub('P', '', dt$Plant), dt$Root, sep = '_'))
+dt$Plant = as.factor(sub('P', '', dt$Plant))
+dt$Region = as.factor(sub('ROI', '', dt$ROI))
+dt$Root = as.factor(dt$Root)
+dt$Time = ordered(as.numeric(sub('h', '', dt$Time)))
+# dt$RootUnique = interaction(dt$Strain, dt$Root, drop = TRUE)
+# dt$ROIUnique  = interaction(dt$Strain, dt$Root, dt$Region, drop = TRUE)
+
+
+```
+
+## plot raw
+
+```{r}
+
+
+Strains = levels(dt$Strain)
+time_levels = levels(dt$Time)                              
+group_levels = unlist(lapply(Strains, function(s) paste0(s, "\n", time_levels)))
+
+dt = dt %>%
+  dplyr::mutate(
+    Group = paste0(as.character(Strain), "\n", as.character(Time)),
+    Group = factor(Group, levels = group_levels)
+  )
+
+sum_grp = dt %>%
+  dplyr::group_by(Group, Strain, Time) %>%
+  dplyr::summarise(
+    n = dplyr::n(),
+    # mean = mean(Mean.intensity, na.rm = TRUE),
+    # sd = stats::sd(Mean.intensity, na.rm = TRUE),
+    mean = mean(Sum.intensity, na.rm = TRUE),
+    sd = stats::sd(Sum.intensity, na.rm = TRUE),
+        .groups = "drop"
+  )
+
+pd = ggplot2::position_dodge(width = 0.75)
+pd = ggplot2::position_jitter(width = 0.15, height = 0)
+
+dt = dt %>%
+  dplyr::mutate(
+    Strain  = factor(Strain),
+    Plant   = factor(Plant),
+    Region  = factor(Region),
+    Root  = factor(Root),
+    RootFixed = factor(RootFixed), 
+    TimeF   = factor(Time, ordered = TRUE),
+    TimeNum = as.numeric(as.character(Time)),
+    TimeNumC = TimeNum - mean(TimeNum, na.rm = TRUE)
+  )
+
+
+
+p = ggplot2::ggplot(dt, ggplot2::aes(x = Strain, # Group, 
+                                     y = Sum.intensity, # Mean.intensity, 
+                                     fill = Strain)) +
+  # boxplots and points
+  ggplot2::geom_boxplot(outlier.shape = NA, width = 0.7, alpha = 0.25) +
+  ggplot2::geom_jitter(position = pd, ggplot2::aes(color = Strain), size = 1.6, alpha = 0.8) +
+  # connect mean points within each Strain (use numeric Group positions)
+  ggplot2::geom_line(
+    data = sum_grp,
+    ggplot2::aes(x = as.numeric(Strain), # Group), 
+                 y = mean, group = Strain, color = Strain),
+    inherit.aes = FALSE,
+    size = 0.8,
+    show.legend = FALSE  ) +
+  # overlay mean points and SD errorbars (use sum_grp)
+  ggplot2::geom_errorbar(
+    data = sum_grp,
+    ggplot2::aes(x = as.numeric(Strain) # Group) 
+                 + 0.05, ymin = mean - sd, ymax = mean + sd),
+    width = 0.15, size = 0.6, color = "grey60", inherit.aes = FALSE
+  ) +
+  ggplot2::geom_point(
+    data = sum_grp,
+    ggplot2::aes(x = as.numeric(Group) + 0.05, y = mean, fill = Strain),
+    shape = 21, size = 2.5, color = "grey60", inherit.aes = FALSE
+  ) +
+  # scales, colors and theme
+  ggplot2::labs(x = "", y = "Sum intensity", title = "") +
+  ggplot2::scale_x_discrete(labels = function(x) x) +
+  ggplot2::scale_fill_manual(values = pal) +
+  ggplot2::scale_colour_manual(values = pal) +
+  # remove grid lines and top/right border
+  ggplot2::theme_bw() +
+  ggplot2::theme(
+    axis.text.x = ggplot2::element_text(size = 10, angle = 90, hjust = 1),
+    legend.position = "none",
+    panel.grid.major.x = ggplot2::element_blank(),
+    panel.grid.major.y = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
+    panel.border = ggplot2::element_blank(),          # remove full panel border
+    axis.line = ggplot2::element_line(color = "black") # draw bottom and left axes
+  ) +
+  ggtitle("Amount of biofilm on\npotato roots") +
+  ggplot2::geom_hline(yintercept = 0, alpha = 0) +
+  scale_y_continuous(labels = scales::comma)
+
+
+print(p)
+
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Strains_raw.pdf"),
+  plot = p,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 6,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Strains_raw.svg"),
+  plot = p,
+  device = "svg",
+  path = NULL,
+  scale = 1,
+  width = 3,
+  height = 6,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+```
+
+## transformation
+
+```{r}
+
+
+
+ggplot(dt, aes(x = Sum.intensity, 
+               color = Strain, fill = Strain)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = Sum.intensity), 
+           inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  labs(title = "Density of Sum.intensity",
+       x = "Sum.intensity",
+       y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+ggplot(dt, aes(x = log2(Sum.intensity), 
+               color = Strain, fill = Strain)) +
+  geom_density(alpha = 0.35, size = 0.4, adjust = 1) +
+  geom_rug(aes(x = log2(Sum.intensity)), 
+           inherit.aes = FALSE, alpha = 0.15) +
+  facet_wrap(~ TimeF, ncol = 3, scales = "free") +
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  labs(title = "Density of log2 (Sum intensity)", 
+       x = "log2(Sum.intensity)", 
+       y = "Density") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+
+
+```
+
+
+## Linear Mixed-Effects Models
+
+- plant is not globally unique
+- root is not globally unique — it must be disambiguated by Strain (or Plant)
+- ROI is nested within Root, which is nested within Strain
+- not the same number of ROIs across roots (or plants)
+
+```{r}
+
+mod1 = lme4::lmer(
+  log2(Sum.intensity) ~ 0 + Strain + (1 | Strain:Plant),
+  data = dt,
+  REML = FALSE,
+  control = lme4::lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5))
+)
+
+
+print("isSingular:")
+print(c(mod1 = lme4::isSingular(mod1))) # not overfitted and the random effects structure is identifiable
+
+print("VarCorr (compact):")
+print(list(mod1 = as.data.frame(lme4::VarCorr(mod1))))
+# RootUnique: meaningful variation between roots within Strains
+# Residual variance: the within-root (ROI-level) variation not explained by Strain or root
+MuMIn::r.squaredGLMM(mod1)
+# R2m = marginal R² - Proportion of variance explained by fixed effects only; a ratio
+# R2c = conditional R² - Proportion of variance explained by fixed + random effects together; a ratio
+
+final_mod = mod1
+print(summary(final_mod))
+
+
+# diagnostics
+graphics::plot(final_mod)
+stats::qqnorm(residuals(final_mod)); stats::qqline(residuals(final_mod))
+# print(lme4::ranef(final_mod))
+
+
+# Strain - response
+# emm = emmeans::emmeans(final_mod, ~ Strain, type = "response")
+# plot(emm, comparison = TRUE, adjust = "BH",
+#      main = "Estimated Marginal Means of Strain within TimeF",
+#      xlab = "Strain", ylab = "Response (back-transformed)")
+# pairs = pairs(emm, adjust = "BH")
+# print(summary(pairs))
+
+# stay on log2 scale
+emm = emmeans::emmeans(final_mod, ~ Strain, type = "link")
+plot(emm, comparison = TRUE, adjust = "BH",
+     main = "Estimated Marginal Means of Line",
+     xlab = "Strain", ylab = "Response on log2 scale")
+# pairs = pairs(emm, adjust = "BH")
+# print(summary(pairs))
+# contrasts with raw p-values
+contr_raw = emmeans::contrast(emm, list(
+  PS216_vs_mutants = c(1, -0.5, -0.5),
+  PS216_vs_srfA = c(1, -1, 0),
+  PS216_vs_comQXP = c(1, 0, -1),
+  srfA_vs_comQXP = c(0, 1, -1)
+), adjust = "none")
+# contrasts with BH-adjusted p-values
+contr_bh = emmeans::contrast(emm, list(
+  PS216_vs_mutants = c(1, -0.5, -0.5),
+  PS216_vs_srfA = c(1, -1, 0),
+  PS216_vs_comQXP = c(1, 0, -1),
+  srfA_vs_comQXP = c(0, 1, -1)
+), adjust = "BH")
+# combine
+df_raw = as.data.frame(contr_raw)
+df_bh  = as.data.frame(contr_bh)
+contrast_table = df_raw %>%
+  dplyr::mutate(p.value_BH = df_bh$p.value)
+print(contrast_table)
+
+
+cat("\nStrains", file = fr, append = TRUE, sep = "\n")
+header = paste(colnames(contrast_table), collapse = "\t")
+cat(header, file = fr, append = TRUE, sep = "\n")
+output_text = apply(contrast_table, 1, function(row) paste(row, collapse = "\t"))
+cat(output_text, file = fr, append = TRUE, sep = "\n")
+  
+
+# compact letter display per Time for quick annotation
+cld_df = multcomp::cld(emm, Letters = letters, adjust = "BH", alpha = 0.05, hide.ns = FALSE) %>%
+  as.data.frame() %>%
+  dplyr::rename(cld = .group)
+
+# prepare emmeans dataframe for plotting
+emm_df = as.data.frame(emm) %>%
+  dplyr::left_join(cld_df %>% dplyr::select(Strain, cld), by = c("Strain"))
+
+# plot emmeans: lines + points + CLD letters
+p_emm = ggplot(emm_df, aes(x = Strain, 
+                            y = emmean, 
+                            fill = Strain, group = Strain)) +
+  # geom_line(size = 0.9, position = position_dodge(width = 0.25)) +
+  geom_point(size = 3, position = position_dodge(width = 0.25), shape = 21) +
+  geom_errorbar(aes(ymin = lower.CL, ymax = upper.CL, colour = Strain),
+                width = 0.12, size = 0.7, position = position_dodge(width = 0.25)) +
+  geom_text(aes(label = cld), vjust = -1.2, hjust = -0.5, position = position_dodge(width = 0.25), show.legend = FALSE) +
+  scale_color_manual(values = pal) +
+  labs(x = "Strain", 
+       y = "Estimated marginal mean (log2 scale)", 
+       title = "Estimated Marginal Means\nby Strain with CLD") +
+  theme_bw() +
+  theme(legend.position = "bottom") +
+  scale_color_manual(values = pal) +
+  scale_fill_manual(values = pal) +
+  theme_bw() +
+  theme(legend.position = "bottom") + 
+  geom_hline(yintercept = 19, alpha = 0) + 
+  geom_hline(yintercept = 22, alpha = 0) +
+  theme(
+    panel.grid.major = element_blank(),  # removes major grid lines
+    panel.grid.minor = element_blank(),  # removes minor grid lines
+    panel.border = element_blank(),      # removes border around plot
+    axis.line = element_line()           # optionally add axis lines back
+  )
+
+print(p_emm)
+
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Strains_stat.pdf"),
+  plot = p_emm,
+  device = pdf,
+  path = NULL,
+  scale = 1,
+  width = 4,
+  height = 4,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+ggsave(
+  filename = file.path(my_dir, "Intensity_across_Strains_stat.svg"),
+  plot = p_emm,
+  device = "svg",
+  path = NULL,
+  scale = 1,
+  width = 4,
+  height = 4,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+
+
+
+```
 
 
 # session info

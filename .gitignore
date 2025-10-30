@@ -47,3 +47,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+RNA-seq/GSEA/output/**/*.png
+RNA-seq/GSEA/output/**/*.html
+RNA-seq/GSEA/output/**/*.html
+RNA-seq/GSEA/output/**/*.tsv
+!**/gsea_report_*.tsv

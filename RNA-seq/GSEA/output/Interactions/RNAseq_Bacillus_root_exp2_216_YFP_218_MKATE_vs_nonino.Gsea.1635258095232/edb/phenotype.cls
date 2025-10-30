@@ -1,0 +1,4 @@
+8 2 1
+# 216_YFP_218_MKATE nonino
+216_YFP_218_MKATE 216_YFP_218_MKATE 216_YFP_218_MKATE 216_YFP_218_MKATE nonino nonino nonino nonino
+

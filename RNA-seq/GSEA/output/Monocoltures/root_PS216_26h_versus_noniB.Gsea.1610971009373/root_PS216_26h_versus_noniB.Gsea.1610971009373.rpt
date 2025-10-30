@@ -1,0 +1,33 @@
+producer_class	xtools.gsea.Gsea
+producer_timestamp	1610971009373
+param	zip_report	false
+param	num	100
+param	scoring_scheme	weighted
+param	norm	meandiv
+param	out	O:\DEJAVNOSTI\OMIKE\pISA-Projects\_p_Endophytes\_I_Bsubtilis\_S_NGS\_A_RNAseq-GSEA\output
+param	mode	Max_probe
+param	include_only_symbols	true
+param	set_max	500
+param	gmx	O:\DEJAVNOSTI\OMIKE\pISA-Projects\_p_Endophytes\_I_Bsubtilis\_S_NGS\_A_RNAseq-GSEA\input\stu_PGSC-ITAG-merged_2019-05-24_mapping-manual.gmt
+param	plot_top_x	50
+param	nperm	1000
+param	order	descending
+param	rpt_label	root_PS216_26h_versus_noniB
+param	rnd_seed	timestamp
+param	set_min	15
+param	res	O:\DEJAVNOSTI\OMIKE\pISA-Projects\_p_Endophytes\_I_Bsubtilis\_S_NGS\_A_RNAseq-STAR_limma\output\root_TMM_GSEA_noDESC.txt
+param	create_svgs	false
+param	cls	O:\DEJAVNOSTI\OMIKE\pISA-Projects\_p_Endophytes\_I_Bsubtilis\_S_NGS\_A_RNAseq-GSEA\input\phenotype_root.cls#PS216_26h_versus_noniB
+param	sort	real
+param	create_gcts	false
+param	help	false
+param	save_rnd_lists	false
+param	median	false
+param	metric	Signal2Noise
+param	make_sets	true
+param	rnd_type	no_balance
+param	gui	false
+param	permute	gene_set
+param	collapse	No_Collapse
+
+file	O:\DEJAVNOSTI\OMIKE\pISA-Projects\_p_Endophytes\_I_Bsubtilis\_S_NGS\_A_RNAseq-GSEA\output\root_PS216_26h_versus_noniB.Gsea.1610971009373\index.html

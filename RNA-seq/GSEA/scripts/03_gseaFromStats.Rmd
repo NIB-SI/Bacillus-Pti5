@@ -1,0 +1,350 @@
+---
+title: "gseaFromStats"
+author: "zagor"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    fig_caption: yes
+    self_contained: yes
+    fig_width: 8
+    fig_height: 16
+    toc: true
+    toc_float:
+      toc_collapsed: false
+    toc_depth: 5
+    number_sections: yes
+    theme: flatly
+    highlight: tango
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+  word_document:
+    toc: yes
+    toc_depth: '2'
+editor_options:
+  chunk_output_type: console
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(# dev = c('png', 'pdf'),  # this embeds pdf and crates scrolable blocks
+                      dev = c('png', 'svg', 'pdf'), 
+                      fig.align = 'center', 
+                      fig.height = 16, 
+                      fig.width = 8 ,
+                      warning = FALSE, message = FALSE
+                      )
+# options(knitr.table.format = "html")
+```
+
+# Libraries
+
+```{r, warning=FALSE, message=FALSE}
+
+# devtools::install_github(repo = "https://github.com/martingarridorc/biokit")
+library(biokit)
+
+library(magrittr)
+library(ggplot2)
+
+library(RColorBrewer)
+
+```
+
+
+
+
+# Data
+
+```{r}
+
+fp = file.path('..', 'other')
+fn = 'sel-bins.xlsx'
+renaming = openxlsx::read.xlsx(file.path(fp, fn),
+                     sheet = 1,
+                     startRow = 1,
+                     colNames = TRUE,
+                     rowNames = FALSE,
+                     detectDates = FALSE,
+                     skipEmptyRows = TRUE,
+                     skipEmptyCols = TRUE,
+                     rows = NULL,
+                     cols = NULL,
+                     check.names = FALSE,
+                     sep.names = "_",
+                     namedRegion = NULL,
+                     na.strings = "NA",
+                     fillMergedCells = FALSE)
+
+
+```
+
+## Monocoltures
+
+```{r, warning=FALSE, message=FALSE}
+
+fp = file.path('..', 'reports')
+fn = 'GSEA_all-cols_Monocoltures.txt'
+gseaR = data.table::fread(file.path(fp, fn),
+                          header = TRUE,
+                          sep = "\t",
+                          quote = "",
+                          na.strings = "NA",
+                          stringsAsFactors = FALSE,
+                          data.table = FALSE
+                          )
+gseaR = data.frame(lapply(gseaR, function(x) {
+                  gsub('---', NA, x)
+              }))
+
+
+gseaR = gseaR[, c(1:2, grep('^NES|^FDR', colnames(gseaR)))]
+colnames(gseaR)[1:2] = c('pathway', 'size')
+
+i = grep('^NES', colnames(gseaR))
+NES = tidyr::gather(gseaR[, c(1:2, i)], 
+                    comparison, NES, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                    factor_key=TRUE)
+i = grep('^FDR', colnames(gseaR))
+padj = tidyr::gather(gseaR[, c(1:2, i)], 
+                     comparison, padj, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                     factor_key=TRUE)
+NES$comparison = gsub('NES\\.', '', NES$comparison)
+padj$comparison = gsub('FDR\\.q\\.val\\.', '', padj$comparison)
+
+table(is.na(NES$NES))
+table(is.na(padj$padj))
+table((NES$NES == '---'))
+table((padj$padj == '---'))
+table((NES$NES == '-'))
+table((padj$padj == '-'))
+
+gseaRes.1 = merge(NES, padj, by = c('pathway', 'size', 'comparison'), all.x = TRUE, all.y = TRUE)
+typeof(gseaRes.1$NES)
+typeof(gseaRes.1$padj)
+gseaRes.1$NES = as.numeric(gseaRes.1$NES)
+gseaRes.1$padj = as.numeric(gseaRes.1$padj)
+
+
+```
+
+## Interactions
+
+```{r, warning=FALSE, message=FALSE}
+
+fn = 'GSEA_all-cols_Interactions.txt'
+gseaR = data.table::fread(file.path(fp, fn),
+                          header = TRUE,
+                          sep = "\t",
+                          quote = "",
+                          na.strings = "NA",
+                          stringsAsFactors = FALSE,
+                          data.table = FALSE
+                          )
+gseaR = data.frame(lapply(gseaR, function(x) {
+                  gsub('---', NA, x)
+              }))
+
+
+gseaR = gseaR[, c(1:2, grep('^NES|^FDR', colnames(gseaR)))]
+colnames(gseaR)[1:2] = c('pathway', 'size')
+i = grep('^NES', colnames(gseaR))
+NES = tidyr::gather(gseaR[, c(1:2, i)], 
+                    comparison, NES, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                    factor_key=TRUE)
+i = grep('^FDR', colnames(gseaR))
+padj = tidyr::gather(gseaR[, c(1:2, i)], 
+                     comparison, padj, colnames(gseaR)[min(i)]:colnames(gseaR)[max(i)], 
+                     factor_key=TRUE)
+NES$comparison = gsub('NES\\.', '', NES$comparison)
+padj$comparison = gsub('FDR\\.q\\.val\\.', '', padj$comparison)
+
+table(is.na(NES$NES))
+table(is.na(padj$padj))
+table((NES$NES == '---'))
+table((padj$padj == '---'))
+table((NES$NES == '-'))
+table((padj$padj == '-'))
+
+gseaRes.2 = merge(NES, padj, by = c('pathway', 'size', 'comparison'), all.x = TRUE, all.y = TRUE)
+typeof(gseaRes.2$NES)
+typeof(gseaRes.2$padj)
+gseaRes.2$NES = as.numeric(gseaRes.2$NES)
+gseaRes.2$padj = as.numeric(gseaRes.2$padj)
+
+
+```
+
+
+# Combine
+
+```{r}
+
+all(gseaRes.1$pathway == gseaRes.2$pathway)
+all(gseaRes.1$size == gseaRes.2$size)
+gseaRes = rbind(gseaRes.1, gseaRes.2)
+j = grep('rest', gseaRes$comparison)
+gseaRes = gseaRes[-j, ]
+j = grep('root_218_YFP$', gseaRes$comparison)
+gseaRes = gseaRes[-j, ]
+
+gseaRes$comparison = sub("leaf_", "shoots_", gseaRes$comparison)
+gseaRes$comparison = sub("root_", "roots_", gseaRes$comparison)
+gseaRes$comparison = sub("roots_216_YFP_218_MKATE", "Non-kin", gseaRes$comparison)
+gseaRes$comparison = sub("roots_218_YFP_218_MKATE", "Isogenic", gseaRes$comparison)
+gseaRes$comparison = sub("_21", "PS21", gseaRes$comparison)
+gseaRes$comparison = sub("rootsPS", "roots_PS", gseaRes$comparison)
+
+table(gseaRes$comparison)
+
+order = c("roots_PS216_YFP", "roots_PS218_MKATE", "Isogenic", "Non-kin",
+          "shoots_PS216", "shoots_PS218", 
+          "roots_PS216_2h", "roots_PS216_26h", "roots_PS218_2h", "roots_PS218_26h")
+
+gseaRes$comparison = factor(gseaRes$comparison, levels = order)
+
+gseaRes = gseaRes %>%
+  dplyr::inner_join(renaming, by = c("pathway" = "originalName")) %>%
+  dplyr::mutate(pathway = newName) %>%
+  dplyr::select(-newName)
+
+
+```
+
+
+# Threshold
+
+```{r}
+
+thresh = 0.1
+
+```
+
+
+
+# Filter
+
+```{r}
+
+
+tmp = gseaRes
+tmp$NES[tmp$padj >= thresh] = NA
+table(tmp$NES == 0)
+# tmp$NES[tmp$NES < 0] = -1
+# tmp$NES[tmp$NES > 0] = 1
+# table(tmp$NES)
+tmp = tmp[, -ncol(tmp)]
+
+# https://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/
+temp = tidyr::spread(tmp, comparison, NES)
+
+
+
+```
+
+
+# Plot
+
+```{r}
+
+
+r = range(gseaRes$NES, na.rm = TRUE)
+hist(gseaRes$NES, breaks = 100)
+
+
+
+my.gseaRes = function (gseaResDf, pCutoff, mytitle, limits) {
+  
+    outP = gseaResDf %>% 
+      dplyr::mutate(status = ifelse(NES > 0, "Up", "Down")) # %>% 
+      # subset(padj < pCutoff)  %>%
+      
+      p = ggplot(outP,
+             aes(x = comparison, 
+                 y = pathway, 
+                 fill = NES,
+                 size = -log10(padj), 
+                 shape = status
+                 )) + 
+      geom_point(alpha=0.75) + 
+      scale_shape_manual(values = c(Up = 24, #21,
+                                    Down = 25# 21#25
+                                    )
+                         ) +
+      scale_fill_gradient2(high = "darkred",#("darkred"),
+                           mid = "white",
+                           low = "darkblue",#("darkblue"),
+                           midpoint = 0,
+                           limits = limits,
+                           # n.breaks = 10,
+                           breaks = c(-1, 0, 1),
+                           na.value = 'white') +
+      guides(x = guide_axis(angle = 90#,
+                            #n.dodge = 
+                              )) + 
+      theme_bw() + 
+        ggtitle(paste0(mytitle, " (FDR < ",
+                       pCutoff, ")")) +
+      theme(
+            axis.text.x = element_text(size = 12),
+            axis.text.y = element_text(size = 10),
+        plot.title = element_text(hjust = 0.5, size=32)) +
+        xlab('') + 
+        ylab('MapManBin') +
+      theme(legend.position="none") +
+        # geom_vline(xintercept = c(4.5), linetype='longdash', col = 'gray75') +
+        geom_vline(xintercept = c(2.5), linetype='twodash', col = 'gray75') +
+        geom_vline(xintercept = c(6.5), col = 'gray75',linewidth= 1.1) +
+      geom_vline(xintercept = c(4.5), col = 'gray75', linewidth= 1.1)
+      
+    return(p)
+}
+
+
+table(is.na(gseaRes$NES))
+gseaRes$NES[gseaRes$padj >= thresh] = NA
+gseaRes$padj[gseaRes$padj == 0] = min(gseaRes$padj[gseaRes$padj != 0])
+table(is.na(gseaRes$padj))
+table(is.na(gseaRes$NES))
+
+gseaRes$pathway = factor(gseaRes$pathway, levels = rev(renaming$newName))
+
+my.gseaRes(gseaResDf = gseaRes, pCutoff = thresh, mytitle = '', limits = c(-3,3))
+
+
+gseaRes$NES[which(gseaRes$NES < 0)] = -1 # same colour
+gseaRes$NES[which(gseaRes$NES > 0)] = 1 # same colour
+
+gseaRes$padj[gseaRes$padj >= thresh] = 1
+gseaRes$padj[gseaRes$padj < thresh] = 10^-6 # same size
+
+my.gseaRes(gseaResDf = gseaRes, pCutoff = thresh, mytitle = '', limits = c(-1,1))
+
+
+ggplot2::ggsave(
+  filename = file.path(fp, "GSEA_sign.svg"),
+  plot = ggplot2::last_plot(),
+  device = "svg",
+  path = NULL,
+  scale = 1,
+  width = 8,
+  height = 16,
+  units = "in",
+  dpi = 900,
+  limitsize = TRUE,
+  bg = NULL
+)
+
+
+```
+
+
+
+# sessionInfo
+
+```{r}
+
+sessionInfo()
+
+```
+
