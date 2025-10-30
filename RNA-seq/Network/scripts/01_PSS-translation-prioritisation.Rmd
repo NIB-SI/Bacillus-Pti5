@@ -1,0 +1,373 @@
+---
+title: "PSS-translation-prioritisation"
+author: "zagor"
+date: "23 12 2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+
+rm(list = ls(all = TRUE))
+gc()
+
+library(magrittr)
+library(data.table)
+
+```
+
+# RBB: AthID to potatoID
+
+```{r, rbb}
+
+fp = file.path('..', 'input')
+
+fn = 'rbb_ath-vs-stuGFF_5_rbb-translation_filtered-long.txt.gz'
+con = gzfile(file.path(fp, fn), open = "rt")
+RBBnew.GFFmerged.long = read.table(con,
+                     sep = "\t", 
+                     fill = TRUE, 
+                     header = TRUE,
+                     stringsAsFactors = FALSE,
+                     comment.char = "~",
+                     quote = "",
+                     strip.white = TRUE,
+                     allowEscapes = TRUE)
+RBBnew.GFFmerged.long = RBBnew.GFFmerged.long[, grep('athID|tarID|athDescription', colnames(RBBnew.GFFmerged.long))]
+
+# ChrUn
+RBBnew.GFFmerged.long[grep('DMP402', RBBnew.GFFmerged.long$tarID), ]
+RBBnew.GFFmerged.long$tarID = gsub('DMP402', 'DMG406', RBBnew.GFFmerged.long$tarID)
+
+
+fn = 'Solanum_tuberosum_PGSC_DM_v3.4_converterWithDescriptions.txt.zip'
+zip_path = file.path(fp, fn)
+inner = utils::unzip(zip_path, list = TRUE)$Name[1]
+cmd = paste("unzip -p", shQuote(zip_path), shQuote(inner))
+PGSC = data.table::fread(cmd = cmd, sep = "\t", encoding = "UTF-8", header = FALSE)
+
+RBBnew.GFFmerged.long = dplyr::left_join(
+  RBBnew.GFFmerged.long,
+  PGSC %>% dplyr::select(map_from = V4, map_to = V1) %>% dplyr::distinct(),
+  by = c("tarID" = "map_from")
+) %>%
+  dplyr::mutate(
+    potatoID = dplyr::coalesce(map_to, tarID)
+  ) %>%
+  dplyr::select(-map_to)%>%
+  dplyr::select(-tarID)
+rm(PGSC)
+
+```
+
+# PSS: clade-to-AthID
+
+```{r, pss}
+
+
+fp = file.path('..', 'input')
+fn = 'pss-dinar-nodes-public_2022-10-25.tsv'
+PSS.translate = read.table(file.path(fp, fn),
+                     sep="\t", 
+                     fill=TRUE, 
+                     header = TRUE,
+                     stringsAsFactors = FALSE,
+                     comment.char = "~",
+                     quote = NULL,
+                     strip.white = TRUE,
+                     allowEscapes = TRUE)
+setDT(PSS.translate)
+PSS.translate = PSS.translate[PSS.translate$node_type == 'PlantCoding', c(1, 6)]
+
+PSS.translate[grep('ERF1', PSS.translate$name), ]
+PSS.translate$name = mapply(function(nm, ath) {
+  prefix = sub("\\[.*\\]", "", nm)
+  existing = gsub(".*\\[|\\].*", "", nm)
+  ath_ids = tryCatch(jsonlite::fromJSON(ath), error = function(e) character(0))
+  all_ids = unique(c(strsplit(existing, ",")[[1]], ath_ids))
+  paste0(prefix, "[", paste(all_ids, collapse = ","), "]")
+}, PSS.translate$name, PSS.translate$ath_homologues)
+PSS.translate[grep('ERF1', PSS.translate$name), ]
+
+PSS.translate = PSS.translate[, 1]
+
+
+
+PSS.translate = PSS.translate %>%
+  dplyr::mutate(
+    geneID = stringr::str_extract(name, "^[^\\[]+"),
+    genes = stringr::str_extract(name, "(?<=\\[).+(?=\\])")) %>%
+  tidyr::separate_rows(genes, sep = ",") %>%
+  dplyr::rename(athID = genes) %>%
+  dplyr::select(-name)
+
+PSS.translate = PSS.translate[!is.na(PSS.translate$athID), ]
+
+ind = grep('SOTUB', PSS.translate$athID)
+PSS.translate$athID[ind] = sub('\\..*', '', PSS.translate$athID[ind])
+PSS.translate$athID[ind] = tolower(PSS.translate$athID[ind])
+PSS.translate$athID[ind] = sub('s', 'S', PSS.translate$athID[ind])
+ind = grep('Sotub|PGSC', PSS.translate$athID)
+subset = PSS.translate[ind, ] 
+colnames(subset)[2] = 'potatoID'
+
+```
+
+# DE
+
+```{r, de}
+
+fp = file.path('..', '..', 'DE', 'output')
+fn = 'Results.xlsx'
+header_rows = openxlsx::read.xlsx(file.path(fp, fn),
+                                   sheet = "DifferentialGeneExpression",
+                                   rows = c(2, 3, 4, 6),
+                                   colNames = FALSE)
+header_rows[header_rows == ""] = NA
+# fill merged cells within a row left-to-right 
+fill_lr = function(r) {
+  for (j in seq.int(2, length(r))) {
+    if (is.na(r[j])) r[j] = r[j - 1]
+  }
+  r
+}
+header_rows_filled = t(apply(header_rows, 1, fill_lr))
+rm(header_rows)
+
+combined_header = purrr::map_chr(seq_len(ncol(header_rows_filled)), function(i) {
+  pieces = stats::na.omit(header_rows_filled[, i])
+  if (length(pieces) == 0) return(NA_character_)
+  paste(pieces, collapse = "_")
+})
+rm(header_rows_filled)
+combined_header = trimws(gsub("\\s*\\([^)]*\\)", "", combined_header, perl = TRUE))
+
+exp.values = openxlsx::read.xlsx(file.path(fp, fn),
+                                  sheet = "DifferentialGeneExpression",
+                                  startRow = 7,
+                                  colNames = FALSE)
+colnames(exp.values) = combined_header
+
+
+exp.valuesX = exp.values
+
+colnames(exp.values)[1] = 'potatoID'
+exp.values = exp.values[, grep('potatoID|logFC|adj\\.P\\.Val', colnames(exp.values))]
+rownames(exp.values) = exp.values$potatoID
+names(exp.values) = colnames(exp.values)
+
+logFC = (exp.values[, grep('logFC', colnames(exp.values))])
+logFC = as.matrix(logFC)
+pval = (exp.values[, grep('adj\\.P\\.Val', colnames(exp.values))])
+pval = as.matrix(pval)
+
+
+all(sub(' .*', '', colnames(pval)) == sub(' .*', '', colnames(logFC)))
+
+pval[is.na(pval)] = 1
+pval[pval >= 0.05] = 1
+
+logFC[is.na(logFC)] = 0
+logFC[which(pval == 1)] = 0
+
+rm(pval)
+
+```
+
+
+# PSS subset
+
+```{r, subset}
+
+PSS.translate = merge(PSS.translate, RBBnew.GFFmerged.long, all.x = FALSE, all.y = FALSE, by = 'athID')
+subset$athID = '-'
+subset$athDescription = '-'
+subset = subset[, c("athID", "geneID", "athDescription", "potatoID")]
+PSS.translate = rbind(PSS.translate, subset)
+
+
+
+# take care when NA as 0
+# and how priority is calculated
+
+logFC[logFC == 0] = NA
+logFC = as.data.frame(logFC)
+logFC$potatoID = rownames(logFC)
+
+
+PSS.translate = merge(PSS.translate, logFC, all.x = FALSE, all.y = FALSE, by = 'potatoID')
+PSS.translate = PSS.translate[!duplicated(PSS.translate), ]
+
+```
+
+
+```{r}
+
+fp = file.path('..', 'reports')
+fn = 'PSS.translated_all.tsv'
+
+write.table(PSS.translate, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "-", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+
+```
+
+
+# Prioritise
+
+```{r}
+
+rm(list=ls()[! ls() %in% c("PSS.translate")])
+gc()
+
+
+```
+
+
+```{r}
+
+logFC.starts.from.col = min(grep('logFC', colnames(PSS.translate)))
+
+```
+
+treat zero as missing: replace zeros with NA before metrics
+
+
+| Metric | How computed | Zero behavior | NA behavior | Effect on selection / edge case |
+|--------|--------------|---------------|-------------|---------------------------------|
+| e | sum(!is.na(row_values)) | Zero counts as data (contributes to count) | NA not counted | Prefers rows with more non-NA entries; rows of all NAs have e = 0 |
+| f1 | if all NA → 0; else mean(colMeans(abs(row_values), na.rm = TRUE), na.rm = TRUE) | Zero contributes to means (can make f1 = 0 if all non-NA are 0) | NA ignored by na.rm; all-NA gives f1 = 0 via ifelse | Measures typical absolute magnitude across columns; indistinguishable from all-NA when values are all zero |
+| f2 | if all NA → 0; else max(abs(row_values), na.rm = TRUE) | Zero may be the max (f2 = 0) | NA ignored by na.rm; all-NA gives f2 = 0 via ifelse | Measures largest absolute value; ties with zeros/all-NA possible |
+
+
+
+```{r, priority}
+
+
+PSSgenes = sort(unique(PSS.translate$geneID))
+tmp = NULL
+
+for (i in PSSgenes) {
+  ind = which(PSS.translate$geneID == i)
+  if (length(ind) > 1) { # (length(ind > 1)) for found, not length(ind) > 1 for multiple (1 or more, doesn't matter here)
+    mysubset = PSS.translate[ind, ]
+    e = sapply(1:nrow(mysubset), function(x) sum(!is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])))
+    f1 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                mean(colMeans(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE), na.rm = TRUE)))
+    f2 = sapply(1:nrow(mysubset), 
+            function(x) ifelse(all(is.na(mysubset[x, logFC.starts.from.col:ncol(mysubset)])), 
+                                0, 
+                                max(abs(mysubset[x, logFC.starts.from.col:ncol(mysubset)]), na.rm = TRUE)))
+    g = which(e == max(e))
+    h1 = which(f1[g] == max(f1[g]))
+    h2 = which(f2[g] == max(f2[g]))
+    k2 = ifelse(length(h1) > 1, h2, h1)
+    k = ifelse(length(g) > 1, g[k2], g)
+    
+    tmp = rbind(tmp, mysubset[k,])
+  } else { # no match
+    tmp = rbind(tmp, PSS.translate[ind,]) # take first
+  }
+}
+
+nrow(tmp) == length(PSSgenes)
+
+prioritisedPSS =  tmp
+
+```
+
+# File for Cytoscape
+
+```{r, Cytoscape}
+
+fp = file.path('..', 'reports')
+fn = 'cytoscape_prioritisedPSS.txt'
+
+write.table(prioritisedPSS, 
+            file = file.path(fp, fn), 
+            append = FALSE, 
+            quote = FALSE, 
+            sep = "\t",
+            eol = "\n", 
+            na = "0", 
+            dec = ".", 
+            row.names = FALSE,
+            col.names = TRUE, 
+            qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+
+```
+
+# Dummy files for DiNAR-PSS
+
+```{r, DiNAR}
+
+fpo = file.path('..', 'other', 'dummyFilesForDiNAR_PSS')
+
+if (!dir.exists(fpo)) {
+  dir.create(fpo, recursive = TRUE, showWarnings = FALSE)
+}
+
+
+
+combo = prioritisedPSS[, c(grep('geneID', colnames(prioritisedPSS)), grep('logFC', colnames(prioritisedPSS)))]
+
+rs = rowSums(combo[, 2:ncol(combo)], na.rm = TRUE)
+
+hist(rs, breaks = 100)
+
+combo[is.na(combo)] = 0.0
+
+
+```
+
+```{r}
+
+cnt = 1
+
+for (i in 2:ncol(combo)) {
+  print(colnames(combo)[i])
+  tmp = combo[, c(1, i, i)]
+  tmp[,3] = 0
+  colnames(tmp) = c('geneID', 'logFC', 'p.value')
+  
+  tmp$logFC = as.numeric(tmp$logFC)
+  tmp$p.value = as.numeric(tmp$p.value)
+  tmp$logFC = formatC(tmp$logFC, format = "f", digits = 2)
+  tmp$p.value = formatC(tmp$p.value, format = "f", digits = 2)
+  
+  
+  write.table(tmp, 
+              file = file.path(fpo, paste0(cnt, '_', colnames(combo)[i], '.txt')), 
+              append = FALSE, 
+              quote = FALSE, 
+              sep = "\t",
+              eol = "\n", na = "", 
+              dec = ".", row.names = FALSE,
+              col.names = TRUE, qmethod = c("escape"),
+            fileEncoding = "UTF-8")
+  cnt = cnt + 1
+  
+}
+
+
+```
+
