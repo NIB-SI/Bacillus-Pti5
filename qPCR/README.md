@@ -88,7 +88,7 @@ See sessionInfo output for package version.
 - `stats::p.adjust(method = "BH")`
 
 ### 📜 ANOVA 
-- parametric, non-parametric, and permutation-based variants
+- Parametric, non-parametric, and permutation-based variants
 - Running ANOVA assumes you're testing whether group means differ significantly, under the null hypothesis that all groups are equal
 - When experimental design intentionally introduces differences violates the null hypothesis from the start
 - Can obscure meaningful planned contrasts or targeted comparisons
@@ -122,7 +122,7 @@ See sessionInfo output for package version.
 | Dunnettx   | One-vs-control comparisons    | More powerful for targeted contrasts   |
 
 ### 📔 Linear mixed-effects models
-- for nested structures
+- For nested structures
 - ```lme4::lmer```, followed by ```MuMIn::r.squaredGLMM```, diagnostics plots, Estimated marginal means (EMMs) ```emmeans::emmeans```, ```emmeans::contras``` and ```multcomp::cld```
 
 ### 📔 Bayesian mixed-effects logistic regression models
