@@ -1,1 +1,4 @@
-# RNA-seq GSEA
+# GSEA and visualisation
+
+- merge and filter GSEA output
+- visualise GSEA
