@@ -1,1 +1,5 @@
-# Reports for assay 01_networkExpress-R 
+# Network
+
+- figures from DiNAR
+- figures from Cytoscape
+- annotated node table
