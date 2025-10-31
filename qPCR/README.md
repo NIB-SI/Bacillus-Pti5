@@ -37,6 +37,7 @@
 - [ggplubr](https://kassambara.r-universe.dev/ggpubr)
 - [egg](https://baptiste.r-universe.dev/egg)
 - ...
+See sessionInfo output for package version.
 
 ## ⚓ concepts
 ### distribution, variance and effects
