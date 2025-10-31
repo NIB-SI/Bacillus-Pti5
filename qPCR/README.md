@@ -5,13 +5,14 @@
 
 ```text
 ├── input/              # Processed qPCR data and other input tables
-│   └── Table 1         # noninoculated, medium-inoculated and B. subtilis-inoculated
-│   └── Table 2         # noninoculated, PS-216,  ΔcomQXP, PS-216 srfA 
-│   └── Table 7         # noninoculated, PS-216, PS-219; roots/shoots
-│   └── qPCRmycorrhiza  # RiEF, RiMST2, StPT4
-│   └── AMFcolonisation # Percentage root lenght colonized
+│   └── Standardised qPCR gene expression data
+│   └── The amount of biofilm formation on potato roots
+│   └── B. subtilis abundance in potato plants
+│   └── Mycorrhizal colonization
+│   └── Flagellin treatment
+│   └── ...
 ├── other/              # Miscellaneous files
-├── output/             # Output tables
+├── output/             # Output tables from scirpts as .tsv and restructured analogues in .xlsx
 ├── reports/            # Separate `.pdf` and `.svg` plots
 ├── scripts/            # `.Rmd` scripts and `.html` reports
 ├── README.md           # Project overview
