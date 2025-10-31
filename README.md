@@ -23,3 +23,5 @@ We have recently identified an ethylene response factor Pti5 as a susceptibility
 - various qPCR data analysis: roots/shoots, mutants, mycorrhiza
 - but also analysis of bacterial presence and AMF abundance 
 
+
+<img src="https://github.com/NIB-SI/pISA-tree/blob/projects/PISATREE.png" width="100"/> This repository follows [pISA-tree](https://github.com/NIB-SI/pISA-tree) structure.
