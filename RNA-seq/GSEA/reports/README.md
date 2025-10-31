@@ -1,1 +1,3 @@
-# RNA-seq GSEA
+# GSEA and visualisation
+- parsed GSEA files
+- GSEA figure
