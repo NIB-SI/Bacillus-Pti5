@@ -120,5 +120,13 @@ See sessionInfo output for package version.
 |------------|-------------------------------|----------------------------------------|
 | Šidák      | All pairwise comparisons      | Controls family-wise error rate        |
 | Dunnettx   | One-vs-control comparisons    | More powerful for targeted contrasts   |
-  
+
+### 📔 Linear mixed-effects models
+- for nested structures
+- ```lme4::lmer```, followed by ```MuMIn::r.squaredGLMM```, diagnostics plots, Estimated marginal means (EMMs) ```emmeans::emmeans```, ```emmeans::contras``` and ```multcomp::cld```
+
+### 📔 Bayesian mixed-effects logistic regression models
+- ```rstanarm::stan_glmer```, followed by diagnostics (various), and Estimated marginal means (EMMs)
+- Because Bayesian models do not yield traditional p-values (```bayestestR::describe_posterior```), try Fisher’s Exact Test for count data to facilitate interpretation for broader audiences
+
 
