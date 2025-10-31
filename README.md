@@ -31,7 +31,7 @@ We have recently identified an ethylene response factor Pti5 as a susceptibility
 <img src="https://github.com/NIB-SI/pISA-tree/blob/projects/PISATREE.png" width="200"/>
 </td>
 <td style="border: none; vertical-align: top;" width="80%">
-This repository follows [pISA-tree](https://github.com/NIB-SI/pISA-tree) structure.
+This repository follows https://github.com/NIB-SI/pISA-tree structure.
 </td>
 </tr>
 </table>
