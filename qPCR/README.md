@@ -133,3 +133,4 @@ See sessionInfo output for package version.
 ___
 🦘 Suggestions:
 - [DHARMa package](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html)
+- [sandwich](https://cran.r-project.org/web/packages/sandwich/refman/sandwich.html)
