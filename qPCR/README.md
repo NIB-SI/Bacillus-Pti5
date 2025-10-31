@@ -130,3 +130,6 @@ See sessionInfo output for package version.
 - Because Bayesian models do not yield traditional p-values (```bayestestR::describe_posterior```), try Fisher’s Exact Test for count data to facilitate interpretation for broader audiences
 
 
+___
+Suggestions:
+- check [DHARMa package](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html)
