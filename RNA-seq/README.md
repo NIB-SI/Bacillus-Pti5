@@ -1,10 +1,11 @@
-# RNA-seq
+# RNA-seq analysis pipeline
 
-## input
+## input files
 
 - genome fasta
 - general feature format (gff3)
 - gene set file (gmt)
+- fastq
 
 
 ## pipeline
@@ -44,4 +45,13 @@ PHRED basecall quality score > 20
 [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
 
 [biokit](https://github.com/martingarridorc/biokit)
+
+### Network analysis
+[SKM](https://skm.nib.si/)
+
+[SKM tools](https://github.com/NIB-SI/skm-tools)
+
+[DiNAR](https://github.com/NIB-SI/DiNAR)
+
+[Cytoscape](https://cytoscape.org/)
 
