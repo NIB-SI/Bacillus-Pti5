@@ -24,4 +24,14 @@ We have recently identified an ethylene response factor Pti5 as a susceptibility
 - but also analysis of bacterial presence and AMF abundance 
 
 
-<img src="https://github.com/NIB-SI/pISA-tree/blob/projects/PISATREE.png" width="100"/> This repository follows [pISA-tree](https://github.com/NIB-SI/pISA-tree) structure.
+
+<table style="border: none;">
+<tr>
+<td style="border: none; vertical-align: top;" width="20%">
+<img src="https://github.com/NIB-SI/pISA-tree/blob/projects/PISATREE.png" width="200"/>
+</td>
+<td style="border: none; vertical-align: top;" width="80%">
+This repository follows [pISA-tree](https://github.com/NIB-SI/pISA-tree) structure.
+</td>
+</tr>
+</table>
