@@ -8,7 +8,7 @@
 - fastq
 
 
-## pipeline
+## steps and tools
 
 ### QC
 
