@@ -1,0 +1,511 @@
+geneID	shortDescription	shortName	MapManBin	clusterID	x	y	clusterSimplifiedNodeDegree	expressed
+&beta;-Carotene	all-trans-&beta;-carotene	&beta;-Carotene	Hormone - Strigolactones (SL)	1	34.2355814515235	-5.84746792519879	6	1
+&beta;-Cryptoxanthin	&beta;-Cryptoxanthin	&beta;-Cryptoxanthin	Hormone - Abscisic acid (ABA)	1	40.7805154658027	-7.91447219845649	4	1
+&gamma;-Carotene	&gamma;-Carotene	&gamma;-Carotene	Hormone - Strigolactones (SL)	1	30.5989924807412	-10.3667726774898	4	1
+12-OH-JA-Ile	12-hydroxyjasmonic acid 12-O-&beta;-D-glucoside	12-OH-JA-Ile	Hormone - Jasmonate (JA)	1	30.5038816134211	24.5924779177253	2	1
+12,13-EOT	12,13(S)-epoxylinolenic acid	12,13-EOT	Hormone - Jasmonate (JA)	1	47.1149719717107	24.497085572256	4	1
+13-HPOT	13(S)-hydroperoxylinolenic acid	13-HPOT	Hormone - Jasmonate (JA)	1	44.2651270628734	31.2520301555032	6	1
+3H3PP-CoA	3-hydroxy-3-phenylpropanoyl-CoA	3H3PP-CoA	Hormone - Salicylic acid (SA)	1	61.661324397535	13.7585234025531	3	1
+3O3PP-CoA	3-oxo-3-phenylpropanoyl-CoA	3O3PP-CoA	Hormone - Salicylic acid (SA)	1	57.4072377980495	17.5895284772807	3	1
+4CL	4-coumarate:CoA ligase	4CL	Hormone - Salicylic acid (SA)	1	64.6741693088616	20.8260191852104	2	1
+5-phosphomevalonate	mevalonic acid-5-phosphate	5-phosphomevalonate	Secondary metabolism - Isoprenoids	1	16.1497542475102	31.5204513951075	2	1
+9-cis-&beta;-carotene	9-cis-&beta;-carotene	9-cis-&beta;-carotene	Hormone - Strigolactones (SL)	1	32.0495639296043	-0.301784936241789	4	1
+9-cis-10&prime;-apo-&beta;-carotenal	9-cis-10&prime;-apo-&beta;-carotenal	9-cis-10&prime;-apo-&beta;-carotenal	Hormone - Strigolactones (SL)	1	31.771743303889	5.03032729409964	4	1
+9-cis-Violaxanthin	9-cis-Violaxanthin	9-cis-Violaxanthin	Hormone - Abscisic acid (ABA)	1	53.2200005004858	9.22944928120796	3	1
+AAO	aldehyde oxidase	AAO	Hormone - Salicylic acid (SA)	1	57.2005898159449	26.4858284820678	6	1
+ABA	Abscisic acid	ABA	Signalling - MAP kinases (MAPKs)	1	51.4454060189892	28.9510828561068	3	1
+ABA2	NAD(P)-binding Rossmann-fold superfamily protein	ABA2		1	53.776523826389	16.4792339162694	2	1
+Abscisic aldehyde	Abscisic aldehyde	Abscisic aldehyde	Hormone - Abscisic acid (ABA)	1	53.3945610546017	22.3538529178773	4	1
+ACC	1-aminocyclopropane-1-carboxylate	ACC	Hormone - Ethylene (ET)	1	25.543856907505	44.5456327968611	4	1
+ACH	thioesterase/thiol ester dehydrase-isomerase superfamily protein	ACH	Hormone - Jasmonate (JA)	1	40.9706237935928	15.9523200228335	2	1
+ACO	1-aminocyclopropane-1-carboxylic acid (ACC) oxidase	ACO	Hormone - Ethylene (ET)	1	19.2180776087582	42.9863852055343	3	1
+ACS	1-aminocyclopropane-1-carboxylic acid (ACC) synthase	ACS	Hormone - Ethylene (ET)	1	32.2305635560316	44.1006596745919	4	1
+ACX	acyl-CoA oxidase	ACX	Hormone - Jasmonate (JA)	1	50.8733702515223	25.4041126382345	3	1
+Ade	Adenine	Ade	Hormone - Cytokinins (CK)	1	72.8323376851924	40.621597724505	8	1
+ADK	adenosine kinase 1,2	ADK	Hormone - Cytokinins (CK)	1	76.0828535191691	50.2162573743766	8	1
+Ado	Adenosine	Ado	Hormone - Cytokinins (CK)	1	72.5754487660058	43.8359375418332	8	1
+ADP	adenosine 5&prime;-diphosphate	ADP	Hormone - Cytokinins (CK)	1	84.2921066324509	48.5663598842361	3	1
+ADT	arogenate dehydratase 1,2,3,4,5,6	ADT	Hormone - Salicylic acid (SA)	1	69.4996113797018	25.1544059665409	2	1
+AGO1	argonaute, stabilizer of iron transporter SufD / Polynucleotidyl transferase	AGO1	Regulation - Silencing	1	32.609943639854	56.9553504416462	7	1
+AGO1,5,7,10|CI	NA	AGO1,5,7,10|CI	Regulation - Silencing	1	33.3902835719297	61.7304850378269	2	1
+AGO1,5,7,10|HC-Pro	NA	AGO1,5,7,10|HC-Pro	Regulation - Silencing	1	33.1931089273449	57.6524397683601	2	1
+AHK2,3,4	histidine kinase 2,3,4	AHK2,3,4	Hormone - Cytokinins (CK)	1	64.7188140475027	49.9112697635532	6	1
+AHP	histidine-containing phosphotransfer protein	AHP	Hormone - Cytokinins (CK)	1	57.6468142409486	50.4262625259524	4	1
+AIM1	Enoyl-CoA hydratase/isomerase family	AIM1	Hormone - Salicylic acid (SA)	1	65.1707536261671	14.2691248545363	2	1
+all-trans-Neurosporene	all-trans-Neurosporene	all-trans-Neurosporene		1	18.4149940037757	-14.1244608304893	4	1
+all-trans-Phytofluene	all-trans-Phytofluene	all-trans-Phytofluene		1	9.06195234014889	-8.25288341120276	4	1
+all-trans-zeta-Carotene	all-trans-zeta-Carotene	all-trans-zeta-Carotene		1	13.3128974186507	-13.4222604977423	4	1
+alpha-linolenic-acid	Essential fatty acid processes.	alpha-linolenic-acid	Hormone - Jasmonate (JA)	1	41.9857987142406	29.1462114104744	2	1
+AMI1	amidase 1	AMI1	Hormone - Auxins (AUX)	1	57.4616878912926	56.2983997201055	2	1
+AMP	adenosine 5&prime;-monophosphate	AMP	Hormone - Cytokinins (CK)	1	79.3765685529044	42.4799048038015	3	1
+Antheraxanthin	Antheraxanthin	Antheraxanthin	Hormone - Abscisic acid (ABA)	1	49.6139282941531	-2.15018391388567	8	1
+Anthocyanin-accumulation	Accumulation of anthocynanins.	Anthocyanin-accumulation	Secondary metabolism - Anthocyanins	1	36.240609268185	52.1463542426797	2	1
+AOC	allene oxide cyclase 1,2,3,4	AOC	Hormone - Jasmonate (JA)	1	48.5331830259456	19.2229958843956	2	1
+AOS	hydroperoxide dehydratase	AOS	Hormone - Jasmonate (JA)	1	44.0927834275257	23.7568887853356	2	1
+AOX	NA	AOX	Primary metabolism - Respiration	1	42.9973994853094	27.7257137269658	1	1
+APT	adenosine phosphoribosyltransferase 1,2,3,4,5	APT	Hormone - Cytokinins (CK)	1	71.6872816886012	48.1965173526766	8	1
+APX	ascorbate peroxidase 1,2,3,4,5,6	APX	Signalling - Reactive oxygen species (ROS)	1	42.5064566669751	26.6380021308892	1	1
+ARF	auxin response transcription factor	ARF	Hormone - Auxins (AUX)	1	48.2067434887126	63.9224432495195	4	1
+ARR-A	type-A Arabidopsis Response Regulators	ARR-A	Hormone - Cytokinins (CK)	1	54.8317571627276	45.8591719592231	5	1
+ARR-B	type-B Arabidopsis Response Regulators	ARR-B	Hormone - Cytokinins (CK)	1	49.7040382589482	51.035467651469	4	1
+ASK	S phase kinase-associated protein	ASK	Degradation - Ubiquitination	1	29.0042985343136	26.4733202604925	5	1
+ATG13A	Protein kinase superfamily protein	ATG13A	Degradation - Autophagy	1	45.5946830655182	22.3159221369258	1	1
+ATG1A	Protein kinase superfamily protein	ATG1A	Degradation - Autophagy	1	48.1416344594301	23.0255513495084	1	1
+ATP	adenosine 5&prime;-triphosphate	ATP	Hormone - Cytokinins (CK)	1	83.7907621298839	51.4745891647597	3	1
+ATPB	ATP synthase subunit beta	ATPB	Secondary metabolism - Terpenoids	1	30.8320143830233	59.2954570505254	2	1
+ATPB|HC-Pro	NA	ATPB|HC-Pro	Secondary metabolism - Terpenoids	1	27.5769703766195	58.3451420238985	2	1
+AUX/IAA	indole-3-acetic acid inducible	AUX/IAA	Hormone - Auxins (AUX)	1	47.3834802569203	56.6430605144368	4	1
+AUX/IAA|WRKY57	NA	AUX/IAA|WRKY57	Hormone - Auxins (AUX)	1	44.5563816390478	56.424917327951	2	1
+BA	Benzoic acid	BA	Hormone - Salicylic acid (SA)	1	57.8380751969711	29.8246375780305	8	1
+BA-CoA	benzoyl-CoA	BA-CoA	Hormone - Salicylic acid (SA)	1	56.7238438611693	23.6131960133268	4	1
+BA2H	NA	BA2H	Hormone - Salicylic acid (SA)	1	58.1204643963304	32.0082178871041	2	1
+BAK1	BRI1-associated receptor kinase; somatic embryogenesis receptor-like kinase 3	BAK1	Hormone - Brassinosteroids (BS)	1	17.057466190063	34.4261996097685	6	1
+BAK1|BRI1	BRASSINOSTEROID-INSENSITIVE1 and BRI1-ASSOCIATED KINASE1(SERK3)	BAK1|BRI1	Hormone - Brassinosteroids (BS)	1	13.9213298136856	29.410306928949	3	1
+BAK1|FLS2|flg22	NA	BAK1|FLS2|flg22	Hormone - Brassinosteroids (BS)	1	22.7055272198531	37.9073039552542	4	1
+BD	Benzaldehyde	BD	Hormone - Salicylic acid (SA)	1	61.5826498196354	26.5075805203911	4	1
+BETA-OHASE	beta-carotene hydroxylase	BETA-OHASE		1	39.6863261336809	-7.69881770891501	4	1
+BGLU30	Glycosyl hydrolase superfamily protein	BGLU30	Hormone - Salicylic acid (SA)	1	50.7611422297472	51.08703574615	1	1
+BIK1	botrytis-induced kinase1	BIK1	Signalling - Perception and resistance genes	1	29.6296568110911	39.8089748185555	8	1
+BIK1|Ca2+	NA	BIK1|Ca2+	Signalling - Calcium	1	27.119056853079	41.896767713051	2	1
+BIK1|PEPR1|PEP1	NA	BIK1|PEPR1|PEP1		1	28.6329178753371	42.7505474954861	2	1
+Brassinolide	Brassinosteroid	Brassinolide	Hormone - Brassinosteroids (BS)	1	11.5774810962359	32.0735138173307	2	1
+BRI1	Leucine-rich receptor-like protein kinase family protein	BRI1	Hormone - Brassinosteroids (BS)	1	11.2739439657322	34.2700819834795	3	1
+BSK	BR-signaling kinase	BSK	Hormone - Brassinosteroids (BS)	1	16.8454226038599	24.454361291401	2	1
+BSU1	Serine/threonine protein phosphatase family protein	BSU1	Hormone - Brassinosteroids (BS)	1	23.051722515755	24.3740679610884	2	1
+BT4	BTB and TAZ domain protein 4	BT4	Regulation - Transcription & Translation	1	13.2247124890262	35.2306573200234	1	1
+bZIP21	bZIP transcription factor family protein	bZIP21	Hormone - Salicylic acid (SA)	1	46.7209743517637	43.6992349245617	2	1
+BZO1	benzoyloxyglucosinolate 1	BZO1		1	61.2656400495183	18.7159724943408	2	1
+BZR2	Brassinosteroid signaling positive regulator (BZR1) family protein	BZR2	Hormone - Brassinosteroids (BS)	1	25.7844731440554	21.2761520733922	3	1
+C19-GA2ox	gibberellin 2-oxidase 1,2,3,4,6	C19-GA2ox	Hormone - Gibberellin (GA)	1	26.0895998405603	28.3324374458335	4	1
+CA	Cinnamate	CA	Hormone - Salicylic acid (SA)	1	61.433618486217	24.840337888098	11	1
+CA-CoA	Cinnamoyl-CoA	CA-CoA	Hormone - Salicylic acid (SA)	1	63.0719754727523	19.8817663832544	8	1
+Ca2+	Calcium	Ca2+	Signalling - Calcium	1	32.5993279331524	43.2659345433195	10	1
+CAMTA3	calmodulin-binding transcription activator 3	CAMTA3	Signalling - Calcium	1	38.4557300422343	42.2708726529708	5	1
+CAT	catalase	CAT	Signalling - Reactive oxygen species (ROS)	1	50.4078346950177	31.7503927600511	6	1
+CAT|LSD1	NA	CAT|LSD1		1	52.1459538980739	26.4515274763995	2	1
+CAU1	Calcium Underaccumulation 1	CAU1		1	79.9291948568076	-40.1761576037005	0	1
+CBP60G	CAM-binding protein 60-like G; calmodulin binding	CBP60G	Signalling - Calcium	1	44.0035123680204	40.7231045255808	2	1
+CCD	Carotenoid cleavage dioxygenase	CCD	Hormone - Strigolactones (SL)	1	29.9040504869087	5.40536744971387	4	1
+CDK	cyclin-dependent kinase E-1	CDK	Regulation - Transcription & Translation	1	54.575531306401	38.200812079183	9	1
+CDKE|NPR1	NA	CDKE|NPR1		1	51.9581548085116	38.3627473152022	2	1
+CDKE|TGA2,5,6	NA	CDKE|TGA2,5,6		1	55.2255353428811	34.6922822396484	2	1
+CDKE|WRKY18	NA	CDKE|WRKY18		1	60.5063411529117	36.5249053385703	2	1
+CDKE|WRKY6	NA	CDKE|WRKY6		1	59.932397512551	34.9247088314238	2	1
+CDPK	calmodulin-domain protein kinase	CDPK	Signalling - Calcium	1	39.0550618880951	43.8055447420498	5	1
+Chor	Chorismate	Chor	Hormone - Salicylic acid (SA)	1	55.5271467470184	38.8665847853707	4	1
+CHY1	beta-hydroxyisobutyryl-CoA hydrolase 1	CHY1		1	66.9423123651523	22.9585172723487	2	1
+CI	RNA helicase with ATPase activity	CI	Stress - Biotic	1	38.0270714660609	56.1993768023443	5	1
+CI|PSAK	NA	CI|PSAK	Primary metabolism - Photosynthesis	1	35.9751770306574	63.2520076297274	2	1
+cis-prenyl-tRNA	tRNA containing N6-(cis-hydroxy)isopentenyladenosine	cis-prenyl-tRNA	Hormone - Cytokinins (CK)	1	79.0539395476967	40.0176963744702	2	1
+CKX	cytokinin oxidase/dehydrogenase	CKX	Hormone - Cytokinins (CK)	1	72.8883357004775	41.8877883405255	16	1
+CL	Carlactone	CL	Hormone - Strigolactones (SL)	1	29.4186962505212	10.9845749543667	5	1
+CLA	Carlactonoic acid	CLA	Hormone - Strigolactones (SL)	1	25.7270150941587	7.83191464021754	2	1
+CLH	chlorophyllase 1	CLH	Hormone - Jasmonate (JA)	1	41.524257835025	47.7935592517126	3	1
+CM	chorismate mutase 1,2,3	CM	Hormone - Salicylic acid (SA)	1	58.7082293723839	32.384222705029	2	1
+CML	calmodulin related	CML	Signalling - Calcium	1	31.7899047388673	47.2183458330444	4	1
+CML|Ca2+	NA	CML|Ca2+	Signalling - Calcium	1	35.0798546903996	41.1830804528856	5	1
+CML|HC-Pro	NA	CML|HC-Pro	Signalling - Calcium	1	29.7386151976317	50.0138667548171	2	1
+CO	B-box type zinc finger protein with CCT domain-containing protein	CO	Primary metabolism - Photosynthesis	1	40.6028592582271	66.1026516526418	3	1
+CO|OBE1	NA	CO|OBE1	Primary metabolism - Photosynthesis	1	34.5692960653715	68.7665574861434	2	1
+CO2-deficiency	ROS processes.	CO2-deficiency	Signalling - Reactive oxygen species (ROS)	1	38.5158794788062	30.2457208011349	4	1
+COI1	Coronatine insensitive 1	COI1	Hormone - Jasmonate (JA)	1	33.8092258105614	34.6700423342185	6	1
+COI1|JA-Ile|SCF	NA	COI1|JA-Ile|SCF	Hormone - Jasmonate (JA)	1	37.7101054435145	33.7862570502879	4	1
+COI1|RBC	NA	COI1|RBC		1	30.665091848488	37.0340123356408	2	1
+CP	capsid/coat protein	CP	Stress - Biotic	1	39.7371819326935	56.27029617868	3	1
+CP|CPIP	NA	CP|CPIP	Signalling - Heat-shock proteins (HSPs)	1	42.3436017739983	63.4712621449813	2	1
+CPIP	DNAJ heat shock family protein	CPIP	Signalling - Heat-shock proteins (HSPs)	1	39.5902354888963	63.4484247507346	2	1
+CPS	ent-copalyl diphosphate synthase	CPS	Hormone - Gibberellin (GA)	1	5.83908895857176	6.49596488208549	2	1
+CRT	calreticulin 1,2,3	CRT	Signalling - Calcium	1	29.0770519014999	47.6195922810919	7	1
+CRT|Ca2+	NA	CRT|Ca2+	Signalling - Calcium	1	27.3762269380354	44.8414935818926	2	1
+CRT|ETR	NA	CRT|ETR		1	22.3001667328305	47.6925913348348	2	1
+CRT|HC-Pro	NA	CRT|HC-Pro	Signalling - Calcium	1	27.2403221656565	50.0684860440589	2	1
+CTR	Protein kinase superfamily protein	CTR	Hormone - Ethylene (ET)	1	24.0828354447167	41.6926538872718	2	1
+CTR|ETR	NA	CTR|ETR	Hormone - Ethylene (ET)	1	30.4172918069567	41.01231394553	4	1
+CTS	ATP-binding cassette D1	CTS	Hormone - Jasmonate (JA)	1	58.7578968419948	22.0093521729899	2	1
+Cu2+	Copper	Cu2+	Hormone - Ethylene (ET)	1	18.4330656849734	47.204843595854	2	1
+CUL	cullin	CUL	Degradation - Ubiquitination	1	30.1174655042681	27.4404653343131	3	1
+CYCD3-3	CYCLIN D3;3	CYCD3-3	Hormone - Brassinosteroids (BS)	1	23.2120552981435	16.0796114583132	1	1
+CYP735A1,A2	cytochrome P450, family 735, subfamily A, polypeptide 1,2	CYP735A1,A2	Hormone - Cytokinins (CK)	1	77.0517359487108	52.4214971209476	6	1
+CYP73A5	cinnamate-4-hydroxylase	CYP73A5		1	65.4789823062694	21.6269230718489	2	1
+CYP79B2	cytochrome P450, family 79, subfamily B, polypeptide 2	CYP79B2	Hormone - Auxins (AUX)	1	58.6010967664686	65.647579022787	2	1
+CYP81F4	cytochrome P450, family 81, subfamily F, polypeptide 4	CYP81F4	Secondary metabolism - Alkaloids	1	53.3279624670977	47.3489542823834	1	1
+CYP83B1	cytochrome P450, family 83, subfamily B, polypeptide 1	CYP83B1	Hormone - Auxins (AUX)	1	57.8360921026893	72.2886952194305	2	1
+CYP94	cytochrome P450, family 94, subfamily C, polypeptide 1,3	CYP94	Hormone - Jasmonate (JA)	1	34.5593352463083	23.1070234067252	2	1
+cZ	cis-zeatin	cZ	Hormone - Cytokinins (CK)	1	67.9773361768498	43.4900141948819	26	1
+cZ7G	7-(&beta;-D-glucosyl)-cis-zeatin	cZ7G	Hormone - Cytokinins (CK)	1	67.3753629073172	37.0470847771671	3	1
+cZ9G	9-(&beta;-D-glucosyl)-cis-zeatin	cZ9G	Hormone - Cytokinins (CK)	1	68.124270975873	36.822384229377	3	1
+cZOG	O-&beta;-D-glucosyl-cis-zeatin	cZOG	Hormone - Cytokinins (CK)	1	65.217854089616	45.1170497667041	6	1
+cZR	cis-zeatin riboside	cZR	Hormone - Cytokinins (CK)	1	73.3089826351261	45.4280636463984	5	1
+cZRMP	cis-zeatin riboside monophosphate	cZRMP	Hormone - Cytokinins (CK)	1	73.5552412809094	47.0803550173489	7	1
+cZROG	cis-Zeatin-o-glucoside riboside	cZROG	Hormone - Cytokinins (CK)	1	66.6613775738684	47.0789542484086	6	1
+D14	alpha/beta-Hydrolases superfamily protein	D14	Hormone - Strigolactones (SL)	1	33.8814131658566	23.2079138481252	4	1
+D14|MAX2|SCF	NA	D14|MAX2|SCF	Hormone - Strigolactones (SL)	1	31.2415010707321	25.6833407026562	4	1
+D27	beta-carotene isomerase D27-like protein	D27	Hormone - Strigolactones (SL)	1	30.591284337567	-4.47164333668799	2	1
+D53	Protein DWARF 53	D53	Hormone - Strigolactones (SL)	1	28.4994342637978	20.0224423070373	1	1
+DCL2,4	Dicer-like proteins	DCL2,4	Regulation - Silencing	1	31.9755187953889	61.2701507155318	2	1
+DELLA	GRAS transcription factor family protein	DELLA	Hormone - Gibberellin (GA)	1	41.8320224408652	39.9645363548704	8	1
+DELLA|GA|GID1	NA	DELLA|GA|GID1	Hormone - Gibberellin (GA)	1	38.7118425321507	33.6528516869293	3	1
+DELLA|JAZ	NA	DELLA|JAZ		1	39.1427359373507	37.0955217060145	2	1
+DELLA|MYC	NA	DELLA|MYC		1	45.0508357025782	40.6300646059871	2	1
+DHNAT2	Thioesterase superfamily protein	DHNAT2		1	59.9290192188711	26.3536416983684	2	1
+DMAPP	dimethylallyl diphosphate	DMAPP	Hormone - Cytokinins (CK)	1	80.3215013996574	45.6127745234766	14	1
+DOPAL	3,4-dihydroxyphenylacetaldehyde	DOPAL		1	71.5296745280426	20.6456021614455	3	1
+DR4	drought-repressed 4	DR4	Hormone - Abscisic acid (ABA)	1	52.6178015612031	48.1027645981047	1	1
+Drought	NA	Drought		1	61.4514996723235	6.08830277451692	1	1
+DXPS2	1-deoxy-D-xylulose-5-phosphate synthase	DXPS2	Secondary metabolism - Terpenoids	1	29.9944734796416	55.8310944315546	2	1
+DXPS2|HC-Pro	NA	DXPS2|HC-Pro	Secondary metabolism - Terpenoids	1	30.01859737943	58.4822480107096	2	1
+DZ	dihydrozeatin	DZ	Hormone - Cytokinins (CK)	1	67.4549626425037	45.1543929398973	28	1
+DZ7G	7-(&alpha;-D-glucosyl)dihydrozeatin	DZ7G	Hormone - Cytokinins (CK)	1	66.391826578861	38.9532218861467	3	1
+DZ9G	9-(&alpha;-D-glucosyl)dihydrozeatin	DZ9G	Hormone - Cytokinins (CK)	1	67.9870299345207	38.2136957536625	3	1
+DZOG	dihydrozeatin-O-glucoside	DZOG	Hormone - Cytokinins (CK)	1	66.24833783104	41.8845548111136	6	1
+DZR	dihydrozeatin riboside	DZR	Hormone - Cytokinins (CK)	1	69.847252285851	52.3509215286923	3	1
+DZRMP	dihydrozeatin riboside monophosphate	DZRMP	Hormone - Cytokinins (CK)	1	70.8207676171805	50.8357667692987	7	1
+DZROG	dihydrozeatin-9-N-glucoside-O-glucoside	DZROG	Hormone - Cytokinins (CK)	1	64.8392999317508	47.8967158842832	6	1
+e-	electron	e-	Primary metabolism - Photosynthesis	1	39.5820710627535	28.0899156438576	2	1
+eATP	extracellular ATP	eATP	Signalling - Other	1	25.2655487944941	30.2962669272516	1	1
+EBF	EIN3-binding F box protein 1,2	EBF	Hormone - Ethylene (ET)	1	39.4231975528699	31.8557748030241	4	1
+EBF|SCF	NA	EBF|SCF	Hormone - Ethylene (ET)	1	40.2513851868803	31.8770395910316	3	1
+EDF2	related to ABI3/VP1 2	EDF2	Hormone - Ethylene (ET)	1	25.4488340143903	54.6569777061347	2	1
+EDF2|HC-Pro	NA	EDF2|HC-Pro	Hormone - Ethylene (ET)	1	26.6881919614489	57.2808003203067	2	1
+EDS1	enhanced disease susceptibility, alpha/beta-Hydrolases superfamily protein	EDS1	Hormone - Salicylic acid (SA)	1	40.3380206286015	34.7206251740196	4	1
+EDS1|MPK3|PAD4	NA	EDS1|MPK3|PAD4	Signalling - MAP kinases (MAPKs)	1	38.3456916916768	38.0119174084973	2	1
+EDS1|PAD4	NA	EDS1|PAD4	Hormone - Salicylic acid (SA)	1	43.3529025913109	39.0295398443801	10	1
+EDS1|PAD4|SAG	NA	EDS1|PAD4|SAG	Hormone - Salicylic acid (SA)	1	45.0012594758711	45.0214806394401	3	1
+EDS5	MATE efflux family protein	EDS5	Hormone - Salicylic acid (SA)	1	59.6893903969665	46.6294165842773	1	1
+EIF4E|HC-Pro	NA	EIF4E|HC-Pro		1	31.8935758425367	58.6359925263774	2	1
+EIF4E|VPg	NA	EIF4E|VPg		1	34.5261390465862	62.2161791972248	2	1
+EIF4E1	eukaryotic translation initiation factor 4E	EIF4E1	Regulation - Transcription & Translation	1	33.6945354745211	58.6142581507809	4	1
+EIJP1	EDS1 INTERACTING J PROTEIN 1	EIJP1	Signalling - Heat-shock proteins (HSPs)	1	38.6984645432832	26.5205788528423	1	1
+EIN2	EIN2 transporter, NRAMP metal ion transporter family protein	EIN2	Hormone - Ethylene (ET)	1	38.2089173485692	39.5642400695373	6	1
+EIN3(like)	EIN3 and EIN3-like transcription factors	EIN3(like)	Hormone - Ethylene (ET)	1	42.0311864059901	38.9186688141041	10	1
+EIN3(like)|JAZ	NA	EIN3(like)|JAZ		1	43.001138953802	37.0259663502541	2	1
+EIN5	exoribonuclease 4	EIN5	Hormone - Ethylene (ET)	1	40.9712074896881	24.874059389585	1	1
+ELI5	Pyridoxal phosphate (PLP)-dependent transferases superfamily protein	ELI5	Primary metabolism - Amino-acids	1	70.6551254692893	19.3740323487005	4	1
+ent-Copalyl-PP	ent-Copalyl diphosphate	ent-Copalyl-PP	Hormone - Gibberellin (GA)	1	9.95725742160718	9.18349115636027	4	1
+ent-Kaurene	ent-Kaurene	ent-Kaurene	Hormone - Gibberellin (GA)	1	11.2554346348221	15.4365807892759	4	1
+ent-Kaurenoic acid	ent-Kaurenoic acid	ent-Kaurenoic acid	Hormone - Gibberellin (GA)	1	15.6261678934939	19.0829235832409	4	1
+EPS1	HXXXD-type acyl-transferase family protein	EPS1	Hormone - Salicylic acid (SA)	1	60.097991790786	36.693159255098	3	1
+ERF/EDF	ERF/EDF family, RAV/TEM related	ERF/EDF	Hormone - Ethylene (ET)	1	43.1603952139232	35.4859118777427	2	1
+ERF/ORA59	ERF family, ORA59 related	ERF/ORA59	Hormone - Ethylene (ET)	1	13.4360965404412	44.4013747846008	1	1
+ERF016	ethylene response factor 16	ERF016	Hormone - Ethylene (ET)	1	49.7362004218598	50.9993185694722	1	1
+ERF096	ethylene response factor 96	ERF096	Hormone - Ethylene (ET)	1	45.9823508835417	48.758567880055	2	1
+ERF1	ethylene response factor 1 (1A and 1B)	ERF1	Hormone - Ethylene (ET)	1	43.4420020231184	41.6861682414147	5	1
+ERF104	ethylene response factor 104	ERF104	Hormone - Ethylene (ET)	1	33.849497626306	38.6908605932179	1	1
+ERF105	ethylene response factor 105	ERF105	Hormone - Ethylene (ET)	1	34.0297578002124	37.870683540838	1	1
+ERF11	ethylene response factor 11	ERF11	Regulation - Transcription & Translation	1	76.6454618735464	45.4042524841748	1	1
+ERF5	ethylene response factor 5	ERF5	Hormone - Ethylene (ET)	1	33.3505924328722	38.7787229121625	1	1
+ERF6	ethylene response factor 6	ERF6	Hormone - Ethylene (ET)	1	36.2828733616723	40.3544353125401	2	1
+ESP	enzyme regulator (epithiospecifier protein)	ESP	Signalling - Perception and resistance genes	1	10.2155421081008	44.5057660599775	2	1
+ESP|WRKY53	NA	ESP|WRKY53	Regulation - Transcription & Translation	1	10.5295772598818	46.9889424699147	2	1
+ET	Ethylene	ET	Hormone - Ethylene (ET)	1	23.5350396578603	39.6779690355368	5	1
+ET|ETR	NA	ET|ETR	Hormone - Ethylene (ET)	1	19.8282484859776	42.1809859436442	2	1
+ETP	EIN2-targeting F-box protein	ETP	Hormone - Ethylene (ET)	1	30.5699396328151	29.3970266175481	2	1
+ETP|SCF	NA	ETP|SCF	Hormone - Ethylene (ET)	1	34.1451132030991	33.0102103309513	3	1
+ETR	ethylene receptor	ETR	Hormone - Ethylene (ET)	1	24.7739156021933	44.7259910663908	7	1
+FKBP65	FKBP-type peptidyl-prolyl cis-trans isomerase family protein	FKBP65	Signalling - Heat-shock proteins (HSPs)	1	48.0654658726407	51.2656299253856	1	1
+flg22	flagellin fragment	flg22	Stress - Biotic	1	16.3172411668238	39.3612027754696	4	1
+FLS2	Leucine-rich receptor-like protein kinase family protein; PRR protein flagellin sensing 2	FLS2	Signalling - Perception and resistance genes	1	17.1290621470978	37.2814104133787	3	1
+GA	Gibberellins	GA	Hormone - Gibberellin (GA)	1	28.738487951757	32.7552564154825	13	1
+GA-methylester	Gibberellin A1, A3, A4 methyl ester	GA-methylester	Hormone - Gibberellin (GA)	1	23.1848404171216	32.2463176356673	2	1
+GA|GID1	NA	GA|GID1	Hormone - Gibberellin (GA)	1	35.7255146770849	34.488014045318	4	1
+GA12	gibberellin A12	GA12	Hormone - Gibberellin (GA)	1	19.4084062837897	23.6166931822845	6	1
+GA20	gibberellin A20	GA20	Hormone - Gibberellin (GA)	1	24.5251701251812	27.3122260991094	4	1
+GA20ox	gibberellin 20-oxidase	GA20ox	Hormone - Gibberellin (GA)	1	18.0642711741638	26.9710044531356	4	1
+GA34	gibberellin A34	GA34	Hormone - Gibberellin (GA)	1	23.9593972471233	32.0902905495735	2	1
+GA3ox	gibberellin 3-oxidase 1,2,3,4	GA3ox	Hormone - Gibberellin (GA)	1	23.4332881214348	30.2491252836605	4	1
+GA8	gibberellin A8	GA8	Hormone - Gibberellin (GA)	1	22.3723272412012	32.1819029319802	2	1
+GA9	gibberellin A9	GA9	Hormone - Gibberellin (GA)	1	24.3189965539298	27.2712529056657	4	1
+GAMT1,2	gibberellic acid (GA) methyltransferase 1,2	GAMT1,2	Hormone - Gibberellin (GA)	1	22.3356620642504	34.862504565006	2	1
+GBF4	G-box binding factor 4	GBF4	Signalling - MAP kinases (MAPKs)	1	55.580661901639	29.7762453533699	1	1
+Geranylgeranyl-PP	Geranylgeranyl diphosphate	Geranylgeranyl-PP	Hormone - Gibberellin (GA)	1	9.05295925604132	3.33340357507794	3	1
+GH3	Auxin-responsive GH3 family protein	GH3	Hormone - Salicylic acid (SA)	1	58.2686277536709	43.6958279261574	4	1
+GH3.7	auxin-responsive GH3 family protein	GH3.7	Hormone - Auxins (AUX)	1	46.8108626260607	70.2958688528376	1	1
+GID	gibberellin (GA) receptor	GID	Hormone - Gibberellin (GA)	1	32.2628907072199	30.3034957193212	4	1
+GID|SCF	NA	GID|SCF	Hormone - Gibberellin (GA)	1	36.1270149061407	27.4802932067704	3	1
+Glu	UDP-&alpha;-D-glucose	Glu	Hormone - Cytokinins (CK)	1	63.6869971047188	41.9789867230334	69	1
+GPAphid2	NA	GPAphid2	Signalling - Perception and resistance genes	1	-10.3376800886622	105.683102243162	2	1
+GPAphid2|RANGAP	NA	GPAphid2|RANGAP	Signalling - Perception and resistance genes	1	-12.8688891919425	107.029243207428	2	1
+GPX	NA	GPX	Signalling - Reactive oxygen species (ROS)	1	41.6398970303225	26.3728079916849	1	1
+Growth	NA	Growth		1	45.229135619698	22.918465688476	1	1
+GRX480	glutaredoxin	GRX480	Signalling - Reactive oxygen species (ROS)	1	44.9088106893924	36.8763864918445	2	1
+GSNO	GroES-like zinc-binding dehydrogenase family protein	GSNO	Hormone - Salicylic acid (SA)	1	52.9635904619274	42.4861689725867	1	1
+GST	glutathione S-transferase	GST	Signalling - Reactive oxygen species (ROS)	1	50.332125301578	32.9816981701352	3	1
+GST|SA	NA	GST|SA		1	55.1313625271708	32.7093111809209	2	1
+HC-Pro	Helper Component PROteinase	HC-Pro	Stress - Biotic	1	31.4429811940833	52.5754792307241	33	1
+HC-Pro|MIND1	NA	HC-Pro|MIND1	Secondary metabolism - Terpenoids	1	25.1433910824984	50.9402356201746	2	1
+HC-Pro|PAA2	NA	HC-Pro|PAA2	Degradation - Ubiquitination	1	24.9364113329573	52.3318322753825	2	1
+HC-Pro|PBB2	NA	HC-Pro|PBB2	Degradation - Ubiquitination	1	28.1955057876913	58.2553544396439	2	1
+HC-Pro|PBE1	NA	HC-Pro|PBE1	Degradation - Ubiquitination	1	31.6358100252602	56.4901832621867	2	1
+HC-Pro|ribosome	NA	HC-Pro|ribosome	Regulation - Transcription & Translation	1	25.4352575782253	55.5073941575501	2	1
+HC-Pro|TDX	NA	HC-Pro|TDX	Signalling - Reactive oxygen species (ROS)	1	27.0229766148543	55.7668153266672	2	1
+HC-Pro|vsiRNA	In viral suppression of RNA-Silencing, Hc-Pro binds to vsiRNAs.	HC-Pro|vsiRNA	Regulation - Silencing	1	30.5971062587201	55.0064807905072	2	1
+HEN1	HUA ENHANCER 1	HEN1		1	27.3815905980623	52.3608913741131	5	1
+HMA	copper-exporting ATPase	HMA	Hormone - Ethylene (ET)	1	13.3613320592203	50.6244403729542	1	1
+HMBDP	(2E)-4-hydroxy-3-metylbut-2-enyl diphosphate	HMBDP	Hormone - Cytokinins (CK)	1	85.114188234311	42.4616614519455	2	1
+HSP90	heat shock protein 90	HSP90	Signalling - Heat-shock proteins (HSPs)	1	-36.3461556553775	70.1932132371247	3	1
+HSP90|RAR1|SGT1	NA	HSP90|RAR1|SGT1	Signalling - Heat-shock proteins (HSPs)	1	-39.3542237977463	66.6858789442066	3	1
+IAA	Indole-3-acetic acid	IAA	Hormone - Auxins (AUX)	1	55.8540320439741	51.0709364375105	17	1
+IAA-Ala	N-(indole-3-acetyl)-L-alanine	IAA-Ala	Hormone - Auxins (AUX)	1	58.9375493693907	55.8202776905073	2	1
+IAA-Asp	(indol-3-yl)acetyl-L-aspartate	IAA-Asp	Hormone - Auxins (AUX)	1	59.8681532462816	48.3117927514607	2	1
+IAA-Glu	1-O-(indol-3-ylacetyl)-&beta;-D-glucose	IAA-Glu	Hormone - Auxins (AUX)	1	57.4600431735216	57.1130193629228	2	1
+IAA-Leu	N-(indole-3-acetyl)-L-leucine	IAA-Leu	Hormone - Auxins (AUX)	1	59.7219259024529	55.6877665478525	2	1
+iaaM	unknown enzyme	iaaM	Hormone - Auxins (AUX)	1	61.1456265263473	62.5504374969341	2	1
+IAM	indole-3-acetamide	IAM	Hormone - Auxins (AUX)	1	57.0973362371995	58.1956717022067	4	1
+IAMT1	IAA carboxylmethyltransferase 1	IAMT1	Hormone - Auxins (AUX)	1	59.8290845713815	52.2689400274936	2	1
+IAN	indole-3-acetonitrile	IAN	Hormone - Auxins (AUX)	1	60.5962684013829	54.8875034743143	2	1
+IAOx	(E)-(indol-3-yl)acetaldehyde oxime	IAOx	Hormone - Auxins (AUX)	1	56.1982085473791	67.1775422378507	4	1
+IAOx N-oxide	1-aci-nitro-2-(1H-indol-3-yl)ethane	IAOx N-oxide	Hormone - Auxins (AUX)	1	60.7298836302531	71.2936052783522	2	1
+IAR	IAA-alanine resistance protein	IAR	Hormone - Auxins (AUX)	1	60.0617065627961	53.8437025083841	2	1
+ICS	isochorismate synthase	ICS	Hormone - Salicylic acid (SA)	1	49.3279841006066	42.1279209410214	14	1
+Ile	Isoleucine	Ile	Hormone - Jasmonate (JA)	1	34.5833321229944	21.6644287840755	5	1
+ILR1	Peptidase M20/M25/M40 family protein	ILR1	Hormone - Auxins (AUX)	1	60.8339744916168	52.3120844526394	2	1
+iP	N6-isopentenyladenine	iP	Hormone - Cytokinins (CK)	1	68.8528805201944	44.2088801886275	22	1
+iP7G	isopentenyladenine-7-N-glucoside	iP7G	Hormone - Cytokinins (CK)	1	67.5252333435499	39.8638784910671	3	1
+iP9G	isopentenyladenine-9-N-glucoside	iP9G	Hormone - Cytokinins (CK)	1	66.964582175053	46.1184992120783	3	1
+IPA	Indole-3-pyruvate	IPA	Hormone - Auxins (AUX)	1	52.7373500304487	53.9369760403562	4	1
+iPOG	N6-isopentenyladenine-O-glucoside; UGT85A1,UGT73C5, and UGT73C1 recognized trans-zeatin and dihydrozeatin, which have an available hydroxyl group for glucosylation and formed the O-glucosides.	iPOG	Hormone - Cytokinins (CK)	1	68.8627822474728	39.8028952046441	3	1
+iPR	N6-isopentenyladenosine	iPR	Hormone - Cytokinins (CK)	1	74.4020054330787	43.4352351503727	3	1
+iPRDP	N6-(dimethyallyl)adenosine 5&prime;-diphosphate	iPRDP	Hormone - Cytokinins (CK)	1	78.7485516152866	49.6438917591465	7	1
+iPRMP	N6-(dimethyallyl)adenosine 5&prime;-monophosphate	iPRMP	Hormone - Cytokinins (CK)	1	74.9010635947742	46.2395990134095	12	1
+iPROG	N6-isopentenyladenosine-O-glucoside; UGT85A1,UGT73C5, and UGT73C1 recognized trans-zeatin and dihydrozeatin, which have an available hydroxyl group for glucosylation and formed the O-glucosides.	iPROG	Hormone - Cytokinins (CK)	1	68.2709586134643	40.307571979688	3	1
+iPRTP	N6-(dimethyallyl)adenosine 5&prime;-triphosphate	iPRTP	Hormone - Cytokinins (CK)	1	82.0645136683128	51.7042870285256	6	1
+IPT	isopentenyltransferase	IPT	Hormone - Cytokinins (CK)	1	79.7838400227909	47.3090704671261	12	1
+IsoChor	Isochorismate	IsoChor	Hormone - Salicylic acid (SA)	1	57.2192071596436	42.0237492230252	6	1
+IsoChor-9-Glu	Isochorismoyl-L-glutamate	IsoChor-9-Glu	Hormone - Salicylic acid (SA)	1	60.3088983641362	39.033978565603	8	1
+ISPH	4-hydroxy-3-methylbut-2-enyl diphosphate reductase	ISPH	Hormone - Cytokinins (CK)	1	84.3845658365904	39.8622571030555	2	1
+JA	Jasmonic acid	JA	Hormone - Jasmonate (JA)	1	38.9654376153087	20.9542661570101	8	1
+JA-CoA	jasmonoyl-CoA	JA-CoA	Hormone - Jasmonate (JA)	1	44.5855932241129	17.4951208677359	4	1
+JA-Ile	Jasmonoyl-isoleucine	JA-Ile	Hormone - Jasmonate (JA)	1	35.9377883424392	28.1319883939524	8	1
+JAM	jasmonate associated MYC2 like	JAM	Hormone - Jasmonate (JA)	1	46.4605148020166	44.7681664034414	2	1
+JAR	Auxin-responsive GH3 family protein	JAR	Hormone - Jasmonate (JA)	1	36.8733923395161	22.4124361497949	3	1
+JAT2	ABC-2 type transporter family protein	JAT2	Hormone - Jasmonate (JA)	1	36.8508479602164	15.4177208204099	1	1
+JAZ	jasmonate-zim-domain protein	JAZ	Hormone - Jasmonate (JA)	1	41.1682720127975	40.9447032559451	14	1
+JAZ|MYC	NA	JAZ|MYC	Hormone - Jasmonate (JA)	1	44.6365598597469	41.5698657698973	2	1
+JAZ|RBC	NA	JAZ|RBC		1	37.2870584410536	42.6222410803709	2	1
+JAZ|WRKY57	NA	JAZ|WRKY57	Hormone - Jasmonate (JA)	1	39.1762828677523	45.8867126229127	2	1
+JMT	jasmonate O-methyltransferase	JMT	Hormone - Jasmonate (JA)	1	35.3333625359047	15.6962696839416	2	1
+JR1	jacalin-related lectin 35	JR1	Hormone - Jasmonate (JA)	1	43.2188155581143	48.0789424272741	4	1
+KAO1,2	ent-kaurenoic acid oxidase 1,2	KAO1,2	Hormone - Gibberellin (GA)	1	13.8864671125487	22.2059182914365	2	1
+KAT	acetyl-CoA acyltransferase	KAT	Hormone - Jasmonate (JA)	1	52.0724318372381	17.8816255042112	4	1
+KO	ent-kaurene oxidase	KO	Hormone - Gibberellin (GA)	1	14.3101353078328	14.0274937322297	2	1
+KS	ent-kaurene synthase	KS	Hormone - Gibberellin (GA)	1	7.24786096184265	12.7627329950491	2	1
+L-arogenate	L-arogenate	L-arogenate		1	65.8689501714115	27.7818714379121	6	1
+L-Dopa	3,4-dihydroxy-L-phenylalanine	L-Dopa	Primary metabolism - Amino-acids	1	72.7823249834753	21.6477215977683	4	1
+L-homo-cys	L-homocysteine	L-homo-cys	Hormone - Ethylene (ET)	1	21.0576074273461	58.3775921416095	4	1
+L-Met	L-methionine	L-Met	Hormone - Ethylene (ET)	1	20.9620612000224	52.0134303133715	4	1
+LA	Linoleic acid	LA	Hormone - Jasmonate (JA)	1	46.6090366373558	31.9562333635833	2	1
+LCY1	lycopene cyclase	LCY1		1	28.1617470546177	-8.84104366660616	4	1
+LECRK19	Concanavalin A-like lectin protein kinase family protein	LECRK19	Signalling - Other	1	29.4717818969168	34.8318504233972	3	1
+LOG	cytokinin riboside 5'-monophosphate phosphoribohydrolase	LOG	Hormone - Cytokinins (CK)	1	72.0988123348837	46.3778586540491	8	1
+LOX	lipoxygenase	LOX	Hormone - Jasmonate (JA)	1	45.8123497694509	38.5750595466462	5	1
+LSD1	LSD1 zinc finger family protein	LSD1	Regulation - Transcription & Translation	1	53.7790706565499	27.1829106354713	2	1
+Lycopene	Lycopene	Lycopene	Secondary metabolism - Terpenoids	1	24.5605018070756	-13.0670195467405	4	1
+MAPKKK8	MAP kinase kinase kinase MAPKKK8/MEKK1	MAPKKK8	Signalling - MAP kinases (MAPKs)	1	22.4855755813035	42.514035519681	2	1
+MAX1	cytochrome P450, family 711, subfamily A, polypeptide 1; more axillary branches 1	MAX1	Hormone - Strigolactones (SL)	1	22.8802120646396	9.47273246210868	2	1
+MAX2	E3 ubiquitin ligase SCF complex F-box subunit; more axillary branches 2	MAX2	Signalling - Perception and resistance genes	1	32.6812568845193	24.8887774688688	3	1
+me-vsiRNA	methylated viral-derived small interfering RNAs	me-vsiRNA	Regulation - Silencing	1	30.1015440334371	53.0810650823623	7	1
+MeIAA	methyl (indol-3-yl)acetate	MeIAA	Hormone - Auxins (AUX)	1	61.6916593079315	53.1530695964617	2	1
+MeJA	methyl jasmonic acid	MeJA	Hormone - Jasmonate (JA)	1	38.3011135074066	15.2090432783372	2	1
+MES	methyl esterase 1,2,4,7,9	MES	Hormone - Salicylic acid (SA)	1	59.0941494703414	35.1077075268153	2	1
+MeSA	methyl salicylate	MeSA	Hormone - Salicylic acid (SA)	1	59.9228787109261	33.9869825377333	4	1
+MFP	enoyl-CoA hydratase/3-hydroxyacyl-CoA dehydrogenase	MFP	Hormone - Jasmonate (JA)	1	51.0568584370422	12.7290443600114	2	1
+MIND1	division-related factor MinD	MIND1	Secondary metabolism - Terpenoids	1	27.6634176215808	52.1064891176387	2	1
+miR159AB	microRNA 159AB	miR159AB	Regulation - Silencing	1	30.2346450508917	30.8465744434643	1	1
+miR168	microRNA 168A	miR168	Regulation - Silencing	1	30.152120053523	59.0644303976096	2	1
+MIR390	microRNA 390	MIR390	Regulation - Silencing	1	48.0622860195387	75.7563499517745	1	1
+MKD1	Protein kinase superfamily protein	MKD1	Signalling - MAP kinases (MAPKs)	1	-44.4907683509483	34.31691059549	1	1
+MKK1	mitogen-activated protein (MAP) kinase/ ERK kinase 1	MKK1	Signalling - MAP kinases (MAPKs)	1	-43.4187647574551	29.0695767693479	1	1
+MKK4	mitogen-activated protein (MAP) kinase kinase 4	MKK4	Hormone - Ethylene (ET)	1	41.8651284276108	41.8934116481443	2	1
+MKS1	mitogen-activated protein (MAP) kinase substrate 1	MKS1	Signalling - MAP kinases (MAPKs)	1	26.9121383888925	37.1042071808335	2	1
+MKS1|WRKY33	NA	MKS1|WRKY33	Signalling - MAP kinases (MAPKs)	1	25.8752146442748	39.9190230874716	2	1
+MOS	importin-alpha isoform (IMPA/MOS)	MOS	Hormone - Salicylic acid (SA)	1	50.6021555204745	34.3763797288806	1	1
+MPK3,6	mitogen-activated protein (MAP) kinase 3,6	MPK3,6	Signalling - MAP kinases (MAPKs)	1	37.5333314718427	40.9525873613662	14	1
+MPK4	mitogen-activated protein (MAP) kinase 4	MPK4	Signalling - MAP kinases (MAPKs)	1	43.7963141454577	34.9965820056701	3	1
+MS	Methionine Synthase	MS	Hormone - Ethylene (ET)	1	17.4069945336399	58.0174152245649	2	1
+MVA	Mevalonic acid	MVA	Secondary metabolism - Isoprenoids	1	15.2654814805302	34.4096086757887	2	1
+MVK	mevalonate kinase	MVK	Secondary metabolism - Isoprenoids	1	22.203906185244	33.7610547499129	3	1
+MYB113	MYB domain containing transcription factor	MYB113	Secondary metabolism - Anthocyanins	1	45.7759353721847	49.5842565168192	2	1
+MYB33,44,65	MYB transcription factors 33,44,65	MYB33,44,65	Secondary metabolism - Anthocyanins	1	33.7450000764167	35.8918255540776	4	1
+MYC|PYL	NA	MYC|PYL		1	47.3355368569298	39.4954274852178	2	1
+MYC2	basic helix-loop-helix (bHLH) DNA-binding superfamily protein	MYC2	Hormone - Jasmonate (JA)	1	46.0077104877629	42.7329976574124	26	1
+N-pyruvoyl-L-Glu	N-pyruvoyl-L-glutamate	N-pyruvoyl-L-Glu	Hormone - Salicylic acid (SA)	1	64.6101164983691	33.7666791986643	3	1
+NAC019	NAC domain containing protein 19	NAC019	Regulation - Transcription & Translation	1	50.5007748842223	43.513244224236	5	1
+NAC019|TCP8	NA	NAC019|TCP8		1	53.9820130437923	49.2130007668549	2	1
+NAC032	NAC domain containing protein 32	NAC032	Regulation - Transcription & Translation	1	51.2356326978071	49.5974782564255	2	1
+NAC055	ATAF-like NAC-domain transcription factor	NAC055	Regulation - Transcription & Translation	1	50.3161154208368	42.3010343602462	3	1
+NAC072	NA	NAC072	Regulation - Transcription & Translation	1	49.6062118725671	41.0306991170096	3	1
+NCED	nine-cis-epoxycarotenoid dioxygenase 2,3,4,5,6,9	NCED		1	56.6498689123126	10.1934772705667	3	1
+NDR1	non race-specific disease resistance 1	NDR1	Signalling - Perception and resistance genes	1	48.0831738866987	55.163617225182	2	1
+NDR1|RIN4	NA	NDR1|RIN4	Signalling - Perception and resistance genes	1	50.2209897293508	54.9904602536551	2	1
+NIMIN	NIM1-interacting	NIMIN	Hormone - Salicylic acid (SA)	1	48.8707797092644	34.5092053648982	2	1
+NIMIN|NPR1	NA	NIMIN|NPR1	Hormone - Salicylic acid (SA)	1	51.766015827919	36.6131263090441	2	1
+NIT1	nitrilase 1	NIT1	Hormone - Auxins (AUX)	1	57.3694080235287	55.2257966946218	2	1
+NPR1	nonexpresser of PR genes	NPR1	Hormone - Salicylic acid (SA)	1	49.3049456773319	38.9039171081431	32	1
+NPR1 high & JAZ high	High NPR1 activity, high JAZ activity	NPR1 high & JAZ high		1	52.2091018863474	38.2144263156533	2	1
+NPR1 high & JAZ low	High NPR1 activity, low JAZ activity	NPR1 high & JAZ low		1	48.0617282889856	44.7846639124638	6	1
+NPR1 low & JAZ low	Low NPR1 activity, low JAZ activity	NPR1 low & JAZ low		1	40.5124815100596	44.4157358334987	12	1
+NPR1|NPR1	NA	NPR1|NPR1	Hormone - Salicylic acid (SA)	1	48.4575466024696	35.2105847150415	3	1
+NPR1|TGA2,5,6	NA	NPR1|TGA2,5,6	Hormone - Salicylic acid (SA)	1	46.7309704808438	42.3844417623554	8	1
+NPR1|WRKY18	NA	NPR1|WRKY18		1	52.7846730702721	39.4908110598629	2	1
+NPR3	NPR1-like protein 3	NPR3	Hormone - Salicylic acid (SA)	1	49.937975259714	34.2160967469009	1	1
+NPR4	NPR1-like protein 4	NPR4	Hormone - Salicylic acid (SA)	1	54.0684010816461	40.3971468665785	1	1
+O2	Oxygen	O2	Signalling - Reactive oxygen species (ROS)	1	37.2778548353268	32.9867074450979	2	1
+O2-deficiency	NA	O2-deficiency		1	25.5485687137478	25.68963223926	1	1
+OBE1	oberon 1	OBE1	Signalling - Perception and resistance genes	1	36.4990375969305	64.4760173450178	8	1
+OBE1|VPg	NA	OBE1|VPg	Signalling - Perception and resistance genes	1	40.6256286161134	63.3228174649901	2	1
+OBE1|WRKY11	NA	OBE1|WRKY11	Regulation - Transcription & Translation	1	35.0565821782615	69.8871863142603	2	1
+OBE1|WRKY17	NA	OBE1|WRKY17	Regulation - Transcription & Translation	1	32.2972864353262	68.9343658444544	2	1
+OG	Oligogalacturonides	OG	Signalling - Perception and resistance genes	1	25.5850996399936	40.2318902251588	1	1
+OMR1	threonine ammonia-lyase	OMR1	Hormone - Jasmonate (JA)	1	29.595525538742	17.7273939532981	2	1
+OPC4-CoA	OPC4-CoA	OPC4-CoA	Hormone - Jasmonate (JA)	1	47.9268198931114	14.8804796111875	4	1
+OPC6-CoA	OPC6-CoA	OPC6-CoA	Hormone - Jasmonate (JA)	1	50.6447729778949	18.6756518737959	4	1
+OPC8	oxopentenyl-cyclopentane-octanoic acid	OPC8	Hormone - Jasmonate (JA)	1	54.7352114168485	24.8998211641101	4	1
+OPC8-CoA	oxopentenyl-cyclopentane-octanoyl-CoA	OPC8-CoA	Hormone - Jasmonate (JA)	1	53.436511928018	20.761814733636	4	1
+OPCL1	OPC-8:0 CoA ligase1	OPCL1	Hormone - Jasmonate (JA)	1	55.8110241408664	18.5108635396361	2	1
+OPDA	12-oxophytodienoic acid	OPDA	Hormone - Jasmonate (JA)	1	52.0560842906273	24.2174501976982	5	1
+OPR	12-oxophytodienoic acid reductase	OPR	Hormone - Jasmonate (JA)	1	52.4708488521549	31.0733457801034	3	1
+ORA59	octadecanoid-responsive AP2/ERF 59	ORA59	Hormone - Ethylene (ET)	1	48.0618843055238	43.9831763146731	16	1
+p-Coumaric acid	Hydroxycinnamic acid isonomer	p-Coumaric acid		1	62.950077344515	19.2959985991228	2	1
+P3	cell-to-cell movement	P3	Stress - Biotic	1	34.3716414274825	48.4481862571823	3	1
+P3|RBC	NA	P3|RBC	Primary metabolism - Photosynthesis	1	30.8288800504579	44.2982560893553	2	1
+PA	aspartate aminotransferase	PA	Hormone - Salicylic acid (SA)	1	66.0590171079441	29.9324784687934	2	1
+PAA	Phenylacetaldehyde	PAA	Primary metabolism - Amino-acids	1	69.2210210290555	17.6697261323286	3	1
+PAA2	20S proteasome alpha subunit A	PAA2	Degradation - Ubiquitination	1	25.0724785504537	53.7463923206995	2	1
+PAD4	phytoalexin deficient, InterPro Lipase, class 3	PAD4	Hormone - Salicylic acid (SA)	1	38.3765336469557	35.7557159515848	3	1
+PAL	phenylalanine ammonia-lyase 1,2,3,4	PAL	Hormone - Salicylic acid (SA)	1	65.194342616069	22.4417456917391	2	1
+PBB2	20S proteasome beta subunit B	PBB2	Degradation - Ubiquitination	1	29.0803077803866	55.7065175009879	2	1
+PBE1	20S proteasome beta subunit E	PBE1	Degradation - Ubiquitination	1	29.1757328263642	58.3628225503908	2	1
+PBS3	Auxin-responsive GH3 family protein	PBS3	Hormone - Salicylic acid (SA)	1	61.1115316297835	41.457971791042	3	1
+PDF1.2	plant defensin 1.2a,b,c	PDF1.2	Hormone - Ethylene (ET)	1	42.1693236984842	42.7949034829214	4	1
+PDS	phytoene desaturase 3	PDS		1	11.263002553425	-8.7929570336721	4	1
+PEP	Precursos of elicitor peptide	PEP	Hormone - Peptides	1	37.3301163030329	48.0004207234234	2	1
+PEPR	PEP receptor	PEPR	Hormone - Peptides	1	42.4898171795902	43.8760699104177	3	1
+PEPR1|PEP1	NA	PEPR1|PEP1		1	34.809679322703	43.65846098166	4	1
+Phe	Phenylalanine	Phe	Hormone - Salicylic acid (SA)	1	67.0676475067968	24.0036306716843	8	1
+Phytoene	15-cis-Phytoene	Phytoene	Hormone - Strigolactones (SL)	1	8.96612888349674	-2.63860027222254	3	1
+PIF3,4	BHLH transcription factor, phytochrome interacting factor 3	PIF3,4	Signalling - Senescence	1	41.1257863396954	50.4401788173586	2	1
+potyvirus	NA	potyvirus	Stress - Biotic	1	37.9735753921496	51.1333170622842	20	1
+PP2C	protein phosphatase 2C	PP2C	Stress - Waterlogging	1	51.389878152677	32.3371546295222	2	1
+PR1	pathogenesis-related protein 1	PR1	Hormone - Salicylic acid (SA)	1	41.4246310667566	46.1854596356293	6	1
+PR13	thionin	PR13	Hormone - Jasmonate (JA)	1	42.6658487775126	47.252499199212	4	1
+PR2	pathogenesis-related protein 2; beta 1,3-glucanase	PR2	Hormone - Salicylic acid (SA)	1	42.6636333554444	50.9768035636603	2	1
+PR3	basic chitinase	PR3	Hormone - Ethylene (ET)	1	42.4349177548265	48.6405201798299	3	1
+PR4	pathogenesis-related 4	PR4	Hormone - Ethylene (ET)	1	41.7833998012464	48.0832490134619	3	1
+PR5	pathogenesis-related protein 5; thaumatin-like protein	PR5	Hormone - Salicylic acid (SA)	1	43.0640545445169	51.034352525652	2	1
+prenyl-tRNA	tRNA containing 6-isopentenyladenosine	prenyl-tRNA	Hormone - Cytokinins (CK)	1	84.0020449463882	43.5585122987535	4	1
+Prep	prephenate	Prep	Hormone - Salicylic acid (SA)	1	60.9590323486426	32.7194523797185	4	1
+PSAK	photosystem I subunit K	PSAK	Primary metabolism - Photosynthesis	1	39.2151809105553	62.6304383456214	2	1
+PYL	regulatory components of ABA receptor family protein	PYL	Signalling - Other	1	47.5676257940739	36.287647192638	5	1
+R-gene	NA	R-gene	Signalling - Perception and resistance genes	1	35.3253855411762	46.8008616720055	4	1
+R-gene|potyvirus	NA	R-gene|potyvirus	Signalling - Perception and resistance genes	1	34.825860597042	51.0365192412385	2	1
+RANGAP	RAN GTPase activating protein	RANGAP	Signalling - Perception and resistance genes	1	-15.0923021747523	102.832136815584	4	1
+RANGAP|Rx	NA	RANGAP|Rx	Signalling - Perception and resistance genes	1	-18.6055968302045	101.560250058514	2	1
+RAPTOR2	regulatory-associated protein of TOR 2 (RAPTOR2)	RAPTOR2	Primary metabolism - Photosynthesis	1	48.2767663332011	29.6221802562347	3	1
+RAPTOR2|TOR	NA	RAPTOR2|TOR	Primary metabolism - Photosynthesis	1	45.7733210974753	29.5836420069814	6	1
+RAR1	resistance signalling protein, cysteine and histidine-rich domain-containing protein	RAR1	Signalling - Perception and resistance genes	1	-40.8029777014982	69.3702066885983	3	1
+RBC	ribulose-bisphosphate carboxylase	RBC	Primary metabolism - Photosynthesis	1	35.8765113168971	41.0055975375327	6	1
+RBOH	NADPH oxidase	RBOH	Signalling - Reactive oxygen species (ROS)	1	35.6832462018846	37.6785619907104	8	1
+RBX	RING-box	RBX	Degradation - Ubiquitination	1	33.052058963906	25.4896361491125	3	1
+RDR1,6	RNA-dependent RNA polymerases	RDR1,6	Regulation - Silencing	1	36.2067606498733	62.3073171581331	1	1
+RDR6	RNA-dependent RNA polymerase 6	RDR6	Regulation - Silencing	1	38.1452637286048	51.100214769533	1	1
+REM12	transcriptional factor B3 family protein	REM12	Regulation - Transcription & Translation	1	41.1128417793021	62.5377304552602	2	1
+REM12|VPg	NA	REM12|VPg		1	38.0397576483428	63.1326584304469	2	1
+RH8	RNAhelicase-like 8 (DEAD/DEAH box helicase)	RH8	Regulation - Silencing	1	42.2323444463844	63.1287202148091	2	1
+RH8|VPg	NA	RH8|VPg	Regulation - Silencing	1	38.5058889993587	63.4605316578161	2	1
+ribosome	ribosome	ribosome	Regulation - Transcription & Translation	1	25.6855216559651	52.8767717999386	2	1
+RIN4	RPM1 interacting protein 4	RIN4	Signalling - Perception and resistance genes	1	47.7763686292844	47.7446745483258	3	1
+RISC	RNA-induced silencing complex	RISC	Regulation - Silencing	1	36.5015684266869	54.4102458987326	3	1
+ROS	Reactive oxygen species	ROS	Signalling - Reactive oxygen species (ROS)	1	42.6081163452875	33.1710875702961	14	1
+RTE1	protein REVERSION-TO-ETHYLENE SENSITIVITY-like protein (DUF778)	RTE1	Hormone - Ethylene (ET)	1	23.9980682484155	37.5905970724337	1	1
+Rx	NA	Rx	Signalling - Perception and resistance genes	1	-19.1342034180929	99.0911876467631	2	1
+S-alkyl-thiohydroximate	S-(Indolylmethylthiohydroximoyl)-L-cysteine	S-alkyl-thiohydroximate	Hormone - Auxins (AUX)	1	89.3816906377119	113.740499870881	2	1
+SA	Salicylic acid	SA	Hormone - Salicylic acid (SA)	1	55.3329845292535	36.6338488315981	24	1
+SA-Asp	Salicyloyl-aspartate	SA-Asp	Hormone - Salicylic acid (SA)	1	58.9585018303545	39.8402371758211	2	1
+SA high	High SA concentration	SA high		1	51.7313327457574	34.7086448165422	1	1
+SA low	Low SA concentration	SA low		1	53.0077249385434	40.7584299656296	2	1
+SAG	salicylic acid 2-O-&beta;-D-glucoside	SAG	Hormone - Salicylic acid (SA)	1	58.0183911725505	34.8491604691955	2	1
+SAGs	Senescence Associated Genes	SAGs	Hormone - Salicylic acid (SA)	1	42.9206462276307	44.9036365952182	3	1
+SAGT	UDP-glucosyltransferase	SAGT	Hormone - Salicylic acid (SA)	1	55.4219231456975	39.6882131124876	5	1
+SAH	S-adenosyl-l-homocysteine	SAH	Hormone - Ethylene (ET)	1	22.3157751551902	54.1640490376672	5	1
+SAHH	S-adenosyl-l-homocysteine (SAH) hydrolase 2	SAHH	Hormone - Jasmonate (JA)	1	25.7424586419062	56.1267475929911	3	1
+SAMC	S-adenosylmethionine carrier 1,2	SAMC	Hormone - Salicylic acid (SA)	1	58.2064060443057	33.037719373166	2	1
+SAMe	S-adenosyl-L-methionine	SAMe	Hormone - Ethylene (ET)	1	27.5588415091035	48.6303040529005	8	1
+SAMS	S-adenosylmethionine (SAM) synthetase	SAMS	Hormone - Ethylene (ET)	1	25.6369254096019	50.9364384965465	3	1
+SARD1	Calmodulin binding protein-like protein	SARD1	Hormone - Salicylic acid (SA)	1	53.3323446249613	45.9079900848728	3	1
+SARD1|TCP8	NA	SARD1|TCP8	Hormone - Salicylic acid (SA)	1	55.063930160024	53.1519566973666	2	1
+SAUR41	SAUR-like auxin-responsive protein family	SAUR41	Hormone - Auxins (AUX)	1	51.5693046879825	69.062844014458	1	1
+SCF	SCF	SCF	Degradation - Ubiquitination	1	34.7756550494066	29.8901789687111	15	1
+SCL14	scarecrow-like 14; GRAS family transcription factor	SCL14	Regulation - Transcription & Translation	1	56.6202061711549	44.2553090190976	2	1
+SCL14|TGA2,5,6	NA	SCL14|TGA2,5,6	Hormone - Salicylic acid (SA)	1	55.9164350524609	46.7723119455268	3	1
+SEN4	senescence 4 / meristem 5; similar to endo xyloglucan transferase in sequence	SEN4	Hormone - Brassinosteroids (BS)	1	42.3231053137095	56.1584861101397	1	1
+SGT1	SGT1 protein binding; suppressor of the g2 allelle of SKP1	SGT1	Signalling - Perception and resistance genes	1	-38.3857882874421	72.4571993319677	3	1
+SIK1	Protein kinase superfamily protein	SIK1	Signalling - Growth	1	30.5618610354743	35.5626798065904	2	1
+SL	Biologically active strigolactones (strigol and orobanchol)	SL	Hormone - Strigolactones (SL)	1	32.1210113393714	16.8087296216833	2	1
+SNRK2	Protein kinase superfamily protein, SNF1-RELATED PROTEIN KINASE 2.8	SNRK2	Hormone - Abscisic acid (ABA)	1	50.6787349042295	35.8480164892475	7	1
+SOD	superoxide dismutase	SOD	Signalling - Reactive oxygen species (ROS)	1	41.2403753915179	27.5548900940556	1	1
+SP5G	Flowering locus T-like protein	SP5G	Signalling - Tuberisation	1	43.6390018831886	59.1976858510869	2	1
+SR1IP1	SR1/CAMPTA3 interacting protein	SR1IP1	Degradation - Ubiquitination	1	34.0870222186091	47.7094880982412	1	1
+Stomatal closure	Phenotype response to water deficit	Stomatal closure		1	46.6387431741764	28.7235322081972	2	1
+SUR1	Tyrosine transaminase family protein	SUR1	Hormone - Auxins (AUX)	1	85.2675973840671	114.244826138575	2	1
+TAA1	tryptophan aminotransferase of Arabidopsis 1	TAA1	Hormone - Auxins (AUX)	1	52.8544988230254	60.7845810489238	2	1
+TAS3	trans-acting siRNA3	TAS3	Regulation - Silencing	1	48.4872935368042	70.0521009116189	2	1
+TCP8	TCP family transcription factor	TCP8	Hormone - Salicylic acid (SA)	1	51.6327082788745	46.4847240037529	7	1
+TCP8,14,15	TCP family transcription factor	TCP8,14,15	Hormone - Salicylic acid (SA)	1	53.9019922193816	41.9489445220185	1	1
+TCP8|WRKY28	NA	TCP8|WRKY28		1	50.6173565633461	53.849186198794	2	1
+TDX	tetracopeptide domain-containing thioredoxin	TDX	Signalling - Reactive oxygen species (ROS)	1	27.5193270836615	53.7595462015533	2	1
+TGA2,5,6	TGACG sequence-specific binding protein	TGA2,5,6	Hormone - Salicylic acid (SA)	1	50.5192400391741	40.6426778969906	10	1
+Thiohydroximate	Indolylmethylthiohydroximate	Thiohydroximate	Hormone - Auxins (AUX)	1	83.295102366238	116.004934401146	2	1
+Thr	Threonine	Thr	Hormone - Jasmonate (JA)	1	31.5435008427282	16.6799395099642	2	1
+TIR1	F-box/RNI-like superfamily protein	TIR1	Hormone - Auxins (AUX)	1	53.3223312156848	56.206415602867	2	1
+TOR	Target Of Rapamycin	TOR	Primary metabolism - Photosynthesis	1	41.4440087806801	32.4718758471483	3	1
+Trichome-initiation	Initiation of trichome growth.	Trichome-initiation	Secondary metabolism - Terpenoids	1	36.3223376201578	51.9862324057845	2	1
+trichous-bacteria	NA	trichous-bacteria	Stress - Biotic	1	10.1753293277334	39.5277353283706	1	1
+tRNA-adenine	Adenosine in tRNA	tRNA-adenine	Hormone - Cytokinins (CK)	1	84.8103709088908	46.6716513741719	3	1
+Trp	Tryptophan	Trp	Hormone - Auxins (AUX)	1	55.3093184237595	61.1343407995294	6	1
+TRX-H	thioredoxin	TRX-H	Hormone - Salicylic acid (SA)	1	46.2515160339772	34.3587632772131	3	1
+Tyr	L-tyrosine	Tyr	Primary metabolism - Amino-acids	1	72.7191648718366	27.8313364320045	2	1
+TYRAAT1,2	arogenate dehydrogenase	TYRAAT1,2		1	71.8872774040832	26.1980707826473	2	1
+tZ	trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)purine]	tZ	Hormone - Cytokinins (CK)	1	68.0887836055193	45.2489743361434	28	1
+tZ7G	trans-zeatin-7-beta-D-glucoside; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-7-b-D-glucopyranosylpurine]	tZ7G	Hormone - Cytokinins (CK)	1	67.2280069679637	38.3897520418397	3	1
+tZ9G	9-(&alpha;-D-glucosyl)-trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-9-&beta;-D-glucopyranosylpurine]	tZ9G	Hormone - Cytokinins (CK)	1	68.7917188438226	38.561323158795	3	1
+tZOG	O-&beta;-D-glucosyl-trans-zeatin; [6-((E)-4-&beta;-D-glucopyranosyloxy-3-methylbut-2-enylamino)purine]	tZOG	Hormone - Cytokinins (CK)	1	65.5180201474609	46.5081922318873	6	1
+tZR	9-ribosyl-trans-zeatin; [6-((E)-4-hydroxy-3-methylbut-2-enylamino)-9-&beta;-D-ribofuranosylpurine]	tZR	Hormone - Cytokinins (CK)	1	70.4375295910735	52.1569702852395	3	1
+tZRDP	9-ribosyl-trans-zeatin-5&prime;-diphosphate	tZRDP	Hormone - Cytokinins (CK)	1	75.9674853035432	54.5661747095402	4	1
+tZRMP	9-ribosyl-trans-zeatin-5&prime;-monophosphate	tZRMP	Hormone - Cytokinins (CK)	1	72.5859742422567	50.0311909311674	10	1
+tZROG	O-glucosyl-trans-zeatin riboside; [6-((Z)-4-&beta;-D-glucopyranosyloxy-3-methylbut-2-enylamino)-9-&beta;-D-ribofuranosylpurine]; trans-ZEATIN-O-GLUCOSIDE RIBOSIDE	tZROG	Hormone - Cytokinins (CK)	1	64.7992043845002	46.326018717871	6	1
+tZRTP	9-ribosyl-trans-zeatin-5&prime;-triphosphate	tZRTP	Hormone - Cytokinins (CK)	1	80.9302148600182	55.6350415582397	3	1
+UGT73C1,C5	zeatin O-glucosyltransferase	UGT73C1,C5	Hormone - Cytokinins (CK)	1	66.1112901135707	48.33201806721	18	1
+UGT76C1,C2	UDP-glucosyl transferase	UGT76C1,C2	Hormone - Cytokinins (CK)	1	68.6295287263644	41.5023085527036	24	1
+UGT84B1	UDP-glucosyl transferase 84B1	UGT84B1	Hormone - Auxins (AUX)	1	55.2944803064702	57.3458976490388	2	1
+UGT85A1	UDP-Glycosyltransferase superfamily protein	UGT85A1	Hormone - Cytokinins (CK)	1	66.4638393363781	43.4748943191271	24	1
+UPL5	ubiquitin protein ligase, HECT E3 class	UPL5	Degradation - Ubiquitination	1	10.7878020907469	48.0390942581463	1	1
+UTR1	UDP-galactose transporter 1	UTR1	Regulation - Transport	1	51.8468481035979	48.4283543743967	1	1
+VDE1	non-photochemical quenching 1	VDE1		1	49.9962992981862	-1.2153539053574	4	1
+Violaxanthin	Violaxanthin	Violaxanthin	Hormone - Abscisic acid (ABA)	1	52.5656261726072	3.24331159262734	5	1
+viral dsRNA	viral double stranded RNA (siRNAs precursor)	viral dsRNA	Regulation - Silencing	1	36.5533562998388	55.5090782190469	5	1
+VPg	viral protein genome-linked	VPg	Stress - Biotic	1	38.7573196320569	57.7191514847818	9	1
+vsiRNA	viral-derived small interfering RNAs	vsiRNA	Regulation - Silencing	1	28.5433271320872	56.1128899919332	7	1
+VSP	vegetative storage protein	VSP	Hormone - Jasmonate (JA)	1	42.3476509971546	47.4949249545463	4	1
+WAK1	cell wall-associated kinase 1	WAK1	Signalling - Perception and resistance genes	1	33.1552979891125	41.6211945293896	2	1
+Waterlogging	NA	Waterlogging		1	29.9546177111011	31.8351804395316	3	1
+WD/bHLH/MYB	WD/bHLH/MYB	WD/bHLH/MYB	Regulation - Transcription & Translation	1	37.4301622036114	45.8980826317881	3	1
+WRKY11	WRKY family transcription factor 11	WRKY11	Regulation - Transcription & Translation	1	38.4785031608026	70.2682064598262	2	1
+WRKY17	WRKY family transcription factor 17	WRKY17	Regulation - Transcription & Translation	1	36.9050111961205	70.2916238631018	2	1
+WRKY18	WRKY family transcription factor 18	WRKY18	Regulation - Transcription & Translation	1	54.0129581967838	36.8314088674083	5	1
+WRKY28	WRKY family transcription factor 28	WRKY28	Regulation - Transcription & Translation	1	47.8778141289856	47.2260995771891	5	1
+WRKY30	WRKY family transcription factor 30	WRKY30	Regulation - Transcription & Translation	1	12.6914024121494	53.1353307611188	2	1
+WRKY30|WRKY53	NA	WRKY30|WRKY53	Regulation - Transcription & Translation	1	11.8058002487126	51.2250745164533	2	1
+WRKY33	WRKY family transcription factor 33	WRKY33	Regulation - Transcription & Translation	1	32.4155317513103	40.430135607163	5	1
+WRKY46	WRKY family transcription factor 46	WRKY46	Regulation - Transcription & Translation	1	48.3531086214587	54.0549394077215	3	1
+WRKY48	WRKY family transcription factor 48	WRKY48	Regulation - Transcription & Translation	1	46.4882725801995	46.6860160489477	3	1
+WRKY53	WRKY family transcription factor 53	WRKY53	Regulation - Transcription & Translation	1	15.9722268844566	46.3049344523625	6	1
+WRKY57	WRKY family transcription factor 57	WRKY57	Regulation - Transcription & Translation	1	43.0630494403877	49.5387018787978	6	1
+WRKY6	WRKY family transcription factor 8	WRKY6	Regulation - Transcription & Translation	1	52.7095423749843	35.4898118942067	3	1
+WRKY70	WRKY family transcription factor 70	WRKY70	Regulation - Transcription & Translation	1	41.4932190384426	36.9887763410246	2	1
+WRKY8	WRKY family transcription factor 8	WRKY8	Regulation - Transcription & Translation	1	47.5578706866254	46.0408496545837	3	1
+Xanthoxin	Xanthoxin	Xanthoxin	Secondary metabolism - Terpenoids	1	54.4027074305376	15.159975607794	4	1
+XTH	xyloglucan endotransglucosylase	XTH	Hormone - Brassinosteroids (BS)	1	20.3041686021037	18.1869153669433	1	1
+YUC	flavin-binding monooxygenase family protein	YUC	Hormone - Auxins (AUX)	1	50.068433271035	48.2025545932227	3	1
+ZDS1	zeta-carotene desaturase	ZDS1		1	19.4799706345813	-15.7481946509776	4	1
+Zeaxanthin	Zeaxanthin	Zeaxanthin	Secondary metabolism - Terpenoids	1	46.2451960406242	-6.02417695341039	6	1
+ZEP	zeaxanthin epoxidase	ZEP		1	52.1371647976768	-2.04597492136386	4	1

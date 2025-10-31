@@ -1,0 +1,220 @@
+name	node_type	pathway
+CRT	PlantCoding	Signalling - Calcium
+SNRK2	PlantCoding	Hormone - Abscisic acid (ABA)
+ARR-A	PlantCoding	Hormone - Cytokinins (CK)
+CML	PlantCoding	Signalling - Calcium
+BZO1	PlantCoding	Secondary metabolism - Terpenoids
+EDS1	PlantCoding	Hormone - Salicylic acid (SA)
+PAD4	PlantCoding	Hormone - Salicylic acid (SA)
+EDS1|PAD4	Complex	Hormone - Salicylic acid (SA)
+MPK3,6	PlantCoding	Signalling - MAP kinases (MAPKs)
+RBC	PlantCoding	Primary metabolism - Photosynthesis
+ETR	PlantCoding	Hormone - Ethylene (ET)
+Ca2+	Metabolite	Signalling - Calcium
+SAMS	PlantCoding	Hormone - Ethylene (ET)
+SAHH	PlantCoding	Hormone - Jasmonate (JA)
+HSP90	PlantCoding	Signalling - Heat-shock proteins (HSPs)
+SGT1	PlantCoding	Signalling - Perception and resistance genes
+RAR1	PlantCoding	Signalling - Perception and resistance genes
+SAGs	PlantCoding	Hormone - Salicylic acid (SA)
+EDS1|PAD4|SAG	Complex	Hormone - Salicylic acid (SA)
+RIN4	PlantCoding	Signalling - Perception and resistance genes
+NDR1	PlantCoding	Signalling - Perception and resistance genes
+TGA2,5,6	PlantCoding	Hormone - Salicylic acid (SA)
+NPR1	PlantCoding	Hormone - Salicylic acid (SA)
+NPR1|TGA2,5,6	Complex	Hormone - Salicylic acid (SA)
+COI1	PlantCoding	Hormone - Jasmonate (JA)
+JAZ	PlantCoding	Hormone - Jasmonate (JA)
+HEN1	PlantCoding	Regulation - Silencing
+EPS1	PlantCoding	Hormone - Salicylic acid (SA)
+FLS2	PlantCoding	Signalling - Perception and resistance genes
+BAK1	PlantCoding	Hormone - Brassinosteroids (BS)
+WRKY33	PlantCoding	Regulation - Transcription & Translation
+MKS1	PlantCoding	Signalling - MAP kinases (MAPKs)
+GID	PlantCoding	Hormone - Gibberellin (GA)
+GA|GID1	Complex	Hormone - Gibberellin (GA)
+DELLA	PlantCoding	Hormone - Gibberellin (GA)
+WRKY53	PlantCoding	Regulation - Transcription & Translation
+ESP	PlantCoding	Signalling - Perception and resistance genes
+WRKY30	PlantCoding	Regulation - Transcription & Translation
+WRKY57	PlantCoding	Regulation - Transcription & Translation
+AUX/IAA	PlantCoding	Hormone - Auxins (AUX)
+SCL14	PlantCoding	Regulation - Transcription & Translation
+SCL14|TGA2,5,6	Complex	Hormone - Salicylic acid (SA)
+MYC2	PlantCoding	Hormone - Jasmonate (JA)
+SCF	Complex	Degradation - Ubiquitination
+CAT	PlantCoding	Signalling - Reactive oxygen species (ROS)
+LSD1	PlantCoding	Regulation - Transcription & Translation
+ACX	PlantCoding	Hormone - Jasmonate (JA)
+MAX2	PlantCoding	Signalling - Perception and resistance genes
+D14	PlantCoding	Hormone - Strigolactones (SL)
+D14|MAX2|SCF	Complex	Hormone - Strigolactones (SL)
+AHK2,3,4	PlantCoding	Hormone - Cytokinins (CK)
+NIMIN	PlantCoding	Hormone - Salicylic acid (SA)
+ACS	PlantCoding	Hormone - Ethylene (ET)
+OMR1	PlantCoding	Hormone - Jasmonate (JA)
+LOX	PlantCoding	Hormone - Jasmonate (JA)
+AOS	PlantCoding	Hormone - Jasmonate (JA)
+AOC	PlantCoding	Hormone - Jasmonate (JA)
+OPR	PlantCoding	Hormone - Jasmonate (JA)
+ASK	PlantCoding	Degradation - Ubiquitination
+RBX	PlantCoding	Degradation - Ubiquitination
+CUL	PlantCoding	Degradation - Ubiquitination
+OPCL1	PlantCoding	Hormone - Jasmonate (JA)
+MFP	PlantCoding	Hormone - Jasmonate (JA)
+KAT	PlantCoding	Hormone - Jasmonate (JA)
+ACH	PlantCoding	Hormone - Jasmonate (JA)
+JAR	PlantCoding	Hormone - Jasmonate (JA)
+CYP94	PlantCoding	Hormone - Jasmonate (JA)
+MES	PlantCoding	Hormone - Salicylic acid (SA)
+ICS	PlantCoding	Hormone - Salicylic acid (SA)
+CM	PlantCoding	Hormone - Salicylic acid (SA)
+PAL	PlantCoding	Hormone - Salicylic acid (SA)
+AAO	PlantCoding	Hormone - Salicylic acid (SA)
+BA2H	PlantAbstract	Hormone - Salicylic acid (SA)
+PYL	PlantCoding	Signalling - Perception and resistance genes
+SAMC	PlantCoding	Hormone - Salicylic acid (SA)
+SOD	PlantCoding	Signalling - Reactive oxygen species (ROS)
+ROS	Metabolite	Signalling - Reactive oxygen species (ROS)
+RBOH	PlantCoding	Signalling - Reactive oxygen species (ROS)
+CO2-deficiency	Process	Signalling - Reactive oxygen species (ROS)
+EIN3(like)	PlantCoding	Hormone - Ethylene (ET)
+COI1|JA-Ile|SCF	Complex	Hormone - Jasmonate (JA)
+NPR1|NPR1	Complex	Hormone - Salicylic acid (SA)
+TRX-H	PlantCoding	Hormone - Salicylic acid (SA)
+EBF|SCF	Complex	Hormone - Ethylene (ET)
+TAS3	PlantNonCoding	Regulation - Silencing
+ARF	PlantCoding	Hormone - Auxins (AUX)
+UPL5	PlantCoding	Degradation - Ubiquitination
+AOX	PlantCoding	Primary metabolism - Respiration
+SR1IP1	PlantCoding	Degradation - Ubiquitination
+CAMTA3	PlantCoding	Signalling - Calcium
+APX	PlantCoding	Signalling - Reactive oxygen species (ROS)
+GPX	PlantCoding	Signalling - Reactive oxygen species (ROS)
+miR159AB	PlantNonCoding	Regulation - Silencing
+MYB33,44,65	PlantCoding	Secondary metabolism - Anthocyanins
+CTS	PlantCoding	Hormone - Jasmonate (JA)
+JAT2	PlantCoding	Hormone - Jasmonate (JA)
+MOS	PlantCoding	Hormone - Salicylic acid (SA)
+RTE1	PlantCoding	Hormone - Ethylene (ET)
+CTR|ETR	Complex	Hormone - Ethylene (ET)
+ETP|SCF	Complex	Hormone - Ethylene (ET)
+EIN2	PlantCoding	Hormone - Ethylene (ET)
+MPK4	PlantCoding	Signalling - MAP kinases (MAPKs)
+ERF6	PlantCoding	Hormone - Ethylene (ET)
+ABA2	PlantCoding	Hormone - Abscisic acid (ABA)
+NCED	PlantCoding	Hormone - Abscisic acid (ABA)
+GRX480	PlantCoding	Signalling - Reactive oxygen species (ROS)
+CDPK	PlantCoding	Signalling - Calcium
+CML|Ca2+	Complex	Signalling - Calcium
+WRKY8	PlantCoding	Regulation - Transcription & Translation
+WRKY28	PlantCoding	Regulation - Transcription & Translation
+WRKY48	PlantCoding	Regulation - Transcription & Translation
+CBP60G	PlantCoding	Signalling - Calcium
+BIK1	PlantCoding	Signalling - Perception and resistance genes
+AHP	PlantCoding	Hormone - Cytokinins (CK)
+ARR-B	PlantCoding	Hormone - Cytokinins (CK)
+WD/bHLH/MYB	Complex	Regulation - Transcription & Translation
+EIN5	PlantCoding	Hormone - Ethylene (ET)
+EBF	PlantCoding	Hormone - Ethylene (ET)
+ERF/EDF	PlantCoding	Hormone - Ethylene (ET)
+CTR	PlantCoding	Hormone - Ethylene (ET)
+MIR390	PlantNonCoding	Regulation - Silencing
+MAPKKK8	PlantCoding	Signalling - MAP kinases (MAPKs)
+ORA59	PlantCoding	Hormone - Ethylene (ET)
+ERF1	PlantCoding	Hormone - Ethylene (ET)
+4CL	PlantCoding	Hormone - Salicylic acid (SA)
+ERF/ORA59	PlantCoding	Hormone - Ethylene (ET)
+JAM	PlantCoding	Hormone - Jasmonate (JA)
+NAC019	PlantCoding	Regulation - Transcription & Translation
+NAC055	PlantCoding	Regulation - Transcription & Translation
+NAC072	PlantCoding	Regulation - Transcription & Translation
+DHNAT2	PlantCoding	Hormone - Salicylic acid (SA)
+ETP	PlantCoding	Hormone - Ethylene (ET)
+CHY1	PlantCoding	Hormone - Salicylic acid (SA)
+YUC	PlantCoding	Hormone - Auxins (AUX)
+ERF11	PlantCoding	Regulation - Transcription & Translation
+EIJP1	PlantCoding	Signalling - Heat-shock proteins (HSPs)
+TOR	PlantCoding	Primary metabolism - Photosynthesis
+RAPTOR2	PlantCoding	Primary metabolism - Photosynthesis
+NPR3	PlantCoding	Hormone - Salicylic acid (SA)
+NPR4	PlantCoding	Hormone - Salicylic acid (SA)
+MKD1	PlantCoding	Signalling - MAP kinases (MAPKs)
+MKK1	PlantCoding	Signalling - MAP kinases (MAPKs)
+iaaM	PlantAbstract	Hormone - Auxins (AUX)
+SARD1	PlantCoding	Hormone - Salicylic acid (SA)
+TCP8	PlantCoding	Hormone - Salicylic acid (SA)
+IAR	PlantCoding	Hormone - Auxins (AUX)
+TAA1	PlantCoding	Hormone - Auxins (AUX)
+BRI1	PlantCoding	Hormone - Brassinosteroids (BS)
+BAK1|BRI1	Complex	Hormone - Brassinosteroids (BS)
+NIT1	PlantCoding	Hormone - Auxins (AUX)
+AMI1	PlantCoding	Hormone - Auxins (AUX)
+LECRK19	PlantCoding	Signalling - Perception and resistance genes
+ILR1	PlantCoding	Hormone - Auxins (AUX)
+SIK1	PlantCoding	Signalling - Growth
+IAMT1	PlantCoding	Hormone - Auxins (AUX)
+TIR1	PlantCoding	Hormone - Auxins (AUX)
+PP2C	PlantCoding	Stress - Waterlogging
+bZIP21	PlantCoding	Hormone - Salicylic acid (SA)
+Stomatal closure	Process	Stress - Drought
+BSK	PlantCoding	Hormone - Brassinosteroids (BS)
+BSU1	PlantCoding	Hormone - Brassinosteroids (BS)
+BZR2	PlantCoding	Hormone - Brassinosteroids (BS)
+CDK	PlantCoding	Regulation - Transcription & Translation
+PEPR	PlantCoding	Hormone - Peptides
+TCP8,14,15	PlantCoding	Hormone - Salicylic acid (SA)
+PEP	PlantCoding	Hormone - Peptides
+PEPR1|PEP1	Complex	Hormone - Peptides
+PA	PlantCoding	Hormone - Salicylic acid (SA)
+ADT	PlantCoding	Hormone - Salicylic acid (SA)
+MS	PlantCoding	Hormone - Ethylene (ET)
+GSNO	PlantCoding	Hormone - Salicylic acid (SA)
+PBS3	PlantCoding	Hormone - Salicylic acid (SA)
+EDS5	PlantCoding	Hormone - Salicylic acid (SA)
+GBF4	PlantCoding	Signalling - MAP kinases (MAPKs)
+ERF5	PlantCoding	Hormone - Ethylene (ET)
+ERF104	PlantCoding	Hormone - Ethylene (ET)
+ERF105	PlantCoding	Hormone - Ethylene (ET)
+WAK1	PlantCoding	Signalling - Perception and resistance genes
+WRKY70	PlantCoding	Regulation - Transcription & Translation
+PR1	PlantCoding	Hormone - Salicylic acid (SA)
+PR2	PlantCoding	Hormone - Salicylic acid (SA)
+PR5	PlantCoding	Hormone - Salicylic acid (SA)
+SAGT	PlantCoding	Hormone - Salicylic acid (SA)
+GH3	PlantCoding	Hormone - Salicylic acid (SA)
+GID|SCF	Complex	Hormone - Gibberellin (GA)
+PIF3,4	PlantCoding	Signalling - Senescence
+SEN4	PlantCoding	Hormone - Brassinosteroids (BS)
+NAC032	PlantCoding	Regulation - Transcription & Translation
+CLH	PlantCoding	Hormone - Jasmonate (JA)
+JR1	PlantCoding	Hormone - Jasmonate (JA)
+PR13	PlantCoding	Hormone - Jasmonate (JA)
+VSP	PlantCoding	Hormone - Jasmonate (JA)
+D53	PlantCoding	Hormone - Strigolactones (SL)
+ACO	PlantCoding	Hormone - Ethylene (ET)
+JMT	PlantCoding	Hormone - Jasmonate (JA)
+CYP73A5	PlantCoding	Hormone - Salicylic acid (SA)
+GST	PlantCoding	Signalling - Reactive oxygen species (ROS)
+GH3.7	PlantCoding	Hormone - Auxins (AUX)
+SAUR41	PlantCoding	Hormone - Auxins (AUX)
+RDR1,6	PlantCoding	Regulation - Silencing
+PDF1.2	PlantCoding	Hormone - Ethylene (ET)
+WRKY46	PlantCoding	Regulation - Transcription & Translation
+Anthocyanin-accumulation	Process	Secondary metabolism - Anthocyanins
+Trichome-initiation	Process	Secondary metabolism - Terpenoids
+MYB113	PlantCoding	Secondary metabolism - Anthocyanins
+ERF096	PlantCoding	Hormone - Ethylene (ET)
+FKBP65	PlantCoding	Signalling - Heat-shock proteins (HSPs)
+UTR1	PlantCoding	Regulation - Transport
+BGLU30	PlantCoding	Hormone - Salicylic acid (SA)
+CYP81F4	PlantCoding	Secondary metabolism - Alkaloids
+DR4	PlantCoding	Hormone - Abscisic acid (ABA)
+ERF016	PlantCoding	Hormone - Ethylene (ET)
+UGT84B1	PlantCoding	Hormone - Auxins (AUX)
+BT4	PlantCoding	Regulation - Transcription & Translation
+MVK	PlantCoding	Secondary metabolism - Terpenoids
+XTH	PlantCoding	Hormone - Brassinosteroids (BS)
+CYCD3-3	PlantCoding	Hormone - Brassinosteroids (BS)
+TYRAAT1,2	PlantCoding	Primary metabolism - Amino-acids
+ELI5	PlantCoding	Primary metabolism - Amino-acids
