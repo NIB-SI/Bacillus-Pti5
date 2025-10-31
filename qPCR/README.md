@@ -131,5 +131,5 @@ See sessionInfo output for package version.
 
 
 ___
-Suggestions:
-- check [DHARMa package](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html)
+🦘 Suggestions:
+- [DHARMa package](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.html)
