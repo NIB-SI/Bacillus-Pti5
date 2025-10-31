@@ -1,4 +1,6 @@
-# [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
+# GSEA and visualisation
+
+[GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
 
 e.g. of .cls file:
 ```
