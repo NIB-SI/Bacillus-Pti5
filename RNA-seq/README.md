@@ -2,11 +2,11 @@
 
 ## Input files
 
-- genome fasta
-- general feature format (gff3)
+- reference potato genome file (fasta)
+- reference potato genome annotation file (gff3)
+- Illumina paired-end RNA-seq reads (fastq)
 - gene set file (gmt)
-- fastq
-
+- phenotype labels file (cls)
 
 ## Steps and tools used
 
