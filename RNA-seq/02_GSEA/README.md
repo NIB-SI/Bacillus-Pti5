@@ -5,8 +5,6 @@
 The [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp) tool was run with the following relevant parameters:
 
 
-[GSEA User Guide](https://docs.gsea-msigdb.org/#GSEA/GSEA_User_Guide/)
-
 
 ```
 param	num	100
@@ -34,6 +32,9 @@ param	collapse	No\_Collapse
 ```
 
 For all runs, the stu\_PGSC-ITAG-merged.gmt file was used (see ../input/) and experiment-specific cls files (see ../input/Monocultures/ and ../input/Interactions/).
+
+
+See [GSEA User Guide](https://docs.gsea-msigdb.org/#GSEA/GSEA_User_Guide/) for instructions on running the tool. 
 
 
 ## Visualisation
