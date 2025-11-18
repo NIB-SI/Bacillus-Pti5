@@ -716,7 +716,7 @@ list.files(fp)
 fn = 'Table_combinedInputs.xlsx'
 wb = openxlsx::loadWorkbook(file.path(fp, fn))
 sheet_names = names(wb)
-sheet_name = grep("S5_Desiree_Rywal", sheet_names, value = TRUE)
+sheet_name = grep("Desiree_Rywal", sheet_names, value = TRUE)
 
 
 myTable = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
