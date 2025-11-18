@@ -12,7 +12,7 @@
 │   └── Flagellin treatment
 │   └── ...
 ├── other/              # Miscellaneous files
-├── output/             # Output tables from scirpts as .tsv and restructured analogues in .xlsx
+├── output/             # Output tables from scripts as .tsv and restructured analogues in .xlsx
 ├── reports/            # Separate `.pdf` and `.svg` plots
 ├── scripts/            # `.Rmd` scripts and `.html` reports
 ├── README.md           # Project overview
