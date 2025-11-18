@@ -420,7 +420,10 @@ plot(g1)
 print(g2)
 
 
-pdf("../reports/heatmaps.pdf", width = 18, height = 4.5)
+fpo = "../reports/heatmaps"
+dir.create(fpo, recursive = TRUE, showWarnings = FALSE)
+fn = "heatmaps.pdf"
+pdf(file.path(fpo, fn), width = 18, height = 4.5)
 gridExtra::grid.arrange(g1, g2, ncol = 2, 
                         widths = c(nrow(roots)/2/(nrow(shoots)/2 + nrow(roots)/2), 
                                    nrow(shoots)/2/(nrow(shoots)/2 + nrow(roots)/2)))
