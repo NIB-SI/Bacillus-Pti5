@@ -11,7 +11,7 @@
 
 <meta name="author" content="zagor" />
 
-<meta name="date" content="2025-10-30" />
+<meta name="date" content="2025-11-18" />
 
 <title>merge-GSEA</title>
 
@@ -1667,7 +1667,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">merge-GSEA</h1>
 <h4 class="author">zagor</h4>
-<h4 class="date">2025-10-30</h4>
+<h4 class="date">2025-11-18</h4>
 
 </div>
 
@@ -1713,7 +1713,7 @@ border-radius: 0px;
 <h1><span class="header-section-number">2</span> GSEA java results</h1>
 <div id="monocoltures" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Monocoltures</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">&#39;..&#39;</span>, <span class="st">&#39;output&#39;</span>, <span class="st">&#39;Monocoltures&#39;</span>)</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">&#39;..&#39;</span>, <span class="st">&#39;output&#39;</span>, <span class="st">&#39;Monocultures&#39;</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>fl <span class="ot">=</span> <span class="fu">list.files</span>(fp, <span class="at">recursive =</span> <span class="cn">TRUE</span>, <span class="at">pattern =</span> <span class="st">&#39;gsea_report_for_.*</span><span class="sc">\\</span><span class="st">.tsv&#39;</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a></span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>cnt <span class="ot">=</span> <span class="dv">1</span></span>
@@ -1784,7 +1784,7 @@ border-radius: 0px;
 <span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a></span>
 <span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a></span>
 <span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>fpo <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">&#39;..&#39;</span>, <span class="st">&#39;reports&#39;</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_all-cols_Monocoltures.txt&#39;</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_all-cols_Monocultures.txt&#39;</span></span>
 <span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="fu">write.table</span>(gmmPlus,</span>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>            <span class="at">file =</span> <span class="fu">file.path</span>(fpo, fn),</span>
 <span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>            <span class="at">append =</span> <span class="cn">FALSE</span>,</span>
@@ -2015,7 +2015,7 @@ border-radius: 0px;
 <span id="cb22-21"><a href="#cb22-21" tabindex="-1"></a></span>
 <span id="cb22-22"><a href="#cb22-22" tabindex="-1"></a>gmmFiltered <span class="ot">=</span> dplyr<span class="sc">::</span><span class="fu">bind_cols</span>(gmmFinal[<span class="fu">c</span>(<span class="st">&quot;NAME&quot;</span>, <span class="st">&quot;SIZE&quot;</span>)], filtered_nes_df)</span>
 <span id="cb22-23"><a href="#cb22-23" tabindex="-1"></a></span>
-<span id="cb22-24"><a href="#cb22-24" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_filtred.tsv&#39;</span></span>
+<span id="cb22-24"><a href="#cb22-24" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_filtered.tsv&#39;</span></span>
 <span id="cb22-25"><a href="#cb22-25" tabindex="-1"></a></span>
 <span id="cb22-26"><a href="#cb22-26" tabindex="-1"></a><span class="fu">write.table</span>(gmmFiltered,</span>
 <span id="cb22-27"><a href="#cb22-27" tabindex="-1"></a>            <span class="at">file =</span> <span class="fu">file.path</span>(fpo, fn),</span>
@@ -2050,7 +2050,7 @@ border-radius: 0px;
 <span id="cb22-56"><a href="#cb22-56" tabindex="-1"></a></span>
 <span id="cb22-57"><a href="#cb22-57" tabindex="-1"></a></span>
 <span id="cb22-58"><a href="#cb22-58" tabindex="-1"></a></span>
-<span id="cb22-59"><a href="#cb22-59" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_filtred_sign.tsv&#39;</span></span>
+<span id="cb22-59"><a href="#cb22-59" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;GSEA_filtered_sign.tsv&#39;</span></span>
 <span id="cb22-60"><a href="#cb22-60" tabindex="-1"></a></span>
 <span id="cb22-61"><a href="#cb22-61" tabindex="-1"></a><span class="fu">write.table</span>(gmmFiltered,</span>
 <span id="cb22-62"><a href="#cb22-62" tabindex="-1"></a>            <span class="at">file =</span> <span class="fu">file.path</span>(fpo, fn),</span>

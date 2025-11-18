@@ -81,7 +81,7 @@ gc()
 
 ```{r, echo=TRUE, warning=FALSE, message=FALSE}
 
-fp = file.path('..', 'output', 'Monocoltures')
+fp = file.path('..', 'output', 'Monocultures')
 fl = list.files(fp, recursive = TRUE, pattern = 'gsea_report_for_.*\\.tsv')
 
 cnt = 1
@@ -145,7 +145,7 @@ gmmPlus = gmmPlus[-ind, ]
 
 
 fpo = file.path('..', 'reports')
-fn = 'GSEA_all-cols_Monocoltures.txt'
+fn = 'GSEA_all-cols_Monocultures.txt'
 write.table(gmmPlus,
             file = file.path(fpo, fn),
             append = FALSE,
@@ -348,7 +348,7 @@ filtered_nes_df = as.data.frame(filtered_nes)
 
 gmmFiltered = dplyr::bind_cols(gmmFinal[c("NAME", "SIZE")], filtered_nes_df)
 
-fn = 'GSEA_filtred.tsv'
+fn = 'GSEA_filtered.tsv'
 
 write.table(gmmFiltered,
             file = file.path(fpo, fn),
@@ -383,7 +383,7 @@ gmmFiltered = merge(gmmLevels, gmmFiltered, by = 'NAME', all.x = TRUE, all.y = T
 
 
 
-fn = 'GSEA_filtred_sign.tsv'
+fn = 'GSEA_filtered_sign.tsv'
 
 write.table(gmmFiltered,
             file = file.path(fpo, fn),

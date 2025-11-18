@@ -134,7 +134,7 @@ colnames(subset)[2] = 'potatoID'
 
 ```{r, de}
 
-fp = file.path('..', '..', 'DE', 'output')
+fp = file.path('..', '..', '01_DE', 'output')
 fn = 'Results.xlsx'
 header_rows = openxlsx::read.xlsx(file.path(fp, fn),
                                    sheet = "DifferentialGeneExpression",
