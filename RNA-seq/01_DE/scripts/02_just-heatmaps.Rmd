@@ -57,7 +57,7 @@ library(grid)
 
 ```{r}
 
-fp = file.path('.')
+fp = file.path('..', 'other')
 
 
 fn1 = 'heatmap-all.xlsx'
@@ -78,6 +78,10 @@ r2 = round(max(abs(range(df1[, 3:ncol(df1)], na.rm = TRUE)), abs(range(df2[, 2:n
 
 ```{r}
 
+fpo = "../reports/heatmaps"
+dir.create(fpo, recursive = TRUE, showWarnings = FALSE)
+
+
 data = as.matrix(df1[, 3:ncol(df1)])
 rownames(data) = df1$shortname
 dn = data
@@ -89,7 +93,7 @@ l = 20
 mycol = rev(paletteer::paletteer_c("ggthemes::Red-Blue-White Diverging", l))
 pie(rep(1, length(mycol)), col = mycol)
 mycol = colorRampPalette(c("#104E8B", "white", "#B22222"))(l)
-pie(rep(1, length(mycol)), col = mycol)
+# pie(rep(1, length(mycol)), col = mycol)
 
 
 p = pheatmap(data, 
@@ -109,7 +113,7 @@ p = pheatmap(data,
          cellheight = 15)
 
 # Save the heatmap to a PDF file
-pdf(paste0(gsub('\\..*', '', fn1), '_1.pdf'), width = 6, height = 6)  # Open PDF device
+pdf(file.path(fpo, paste0(gsub('\\..*', '', fn1), '_1.pdf')), width = 6, height = 6)  # Open PDF device
 grid::grid.draw(p$gtable)                  # Explicitly draw the heatmap
 dev.off()                                  # Close the PDF device
 
@@ -131,7 +135,7 @@ p = pheatmap(data,
          cellheight = 15)
 
 # Save the heatmap to a PDF file
-pdf(paste0(gsub('\\..*', '', fn1), '_2.pdf'), width = 6, height = 6)  # Open PDF device
+pdf(file.path(fpo, paste0(gsub('\\..*', '', fn1), '_2.pdf')), width = 6, height = 6)  # Open PDF device
 grid::grid.draw(p$gtable)                  # Explicitly draw the heatmap
 dev.off()                                  # Close the PDF device
 
@@ -172,7 +176,7 @@ p = pheatmap(data,
          cellheight = 15)
 
 # Save the heatmap to a PDF file
-pdf(paste0(gsub('\\..*', '', fn2), '_1.pdf'), width = 6, height = 6)  # Open PDF device
+pdf(file.path(fpo, paste0( gsub('\\..*', '', fn2), '_1.pdf')), width = 6, height = 6)  # Open PDF device
 grid::grid.draw(p$gtable)                  # Explicitly draw the heatmap
 dev.off()                                  # Close the PDF device
 
@@ -194,7 +198,7 @@ p = pheatmap(data,
          cellheight = 15)
 
 # Save the heatmap to a PDF file
-pdf(paste0(gsub('\\..*', '', fn2), '_2.pdf'), width = 6, height = 6)  # Open PDF device
+pdf(file.path(fpo, paste0(gsub('\\..*', '', fn2), '_2.pdf')), width = 6, height = 6)  # Open PDF device
 grid::grid.draw(p$gtable)                  # Explicitly draw the heatmap
 dev.off()                                  # Close the PDF device
 
