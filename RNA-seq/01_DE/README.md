@@ -7,8 +7,7 @@
 
 ## Outputs
 
-* 
-* 
+* annoated DE tables
 
 ## Essential parts of the analysis scripts
 
