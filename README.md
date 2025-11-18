@@ -14,6 +14,7 @@ We have recently identified an ethylene response factor Pti5 as a susceptibility
 
 
 ## RNA-seq
+- Mapping
 - DE analysis
 - GSEA
 - Network analysis
