@@ -5,7 +5,7 @@
 ############# ROOTS
 
 # combine all counts in to an expression matrix
-files <- list.files(path="../output/mapping/Monocultures/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)
+files <- list.files(path="../../00_mapping/output/mapping/Monocultures/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)
 
 geneNames <- read.table(files[1], header = FALSE, sep = "\t", skip= 4)[,1]
 
@@ -44,7 +44,7 @@ library("stringr")
 colnames(counts)
 
 # read phenodata from analytes.txt/phenodata.txt (samples used for RNA-Seq)
-phenodata <- read.table("../input/phenodata.txt",  row.names=1, header = TRUE)
+phenodata <- read.table("../input/phenodata_Monocultures.txt",  row.names=1, header = TRUE)
 dim(phenodata)
 head(phenodata)
 
@@ -71,7 +71,7 @@ y <- DGEList(counts=x, group=group)
 col= c(rep("grey",4), rep("sienna1",4), rep("red1",4), rep("grey20",4), rep("sienna4",4), rep("red4",3))
 
 #check density plot
-pdf("../other/root_density_plot_before_lowexpr_filter.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_density_plot_before_lowexpr_filter.pdf", onefile=TRUE, family= "Helvetica")
 nsamples <- ncol(x)
 
 lcpm <- log(as.matrix(x),10)
@@ -97,16 +97,16 @@ y1 <- calcNormFactors(y1)
 
 ## Plot QC plots using different functions e.g.:
 
-pdf("../other/root_log10rawcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_log10rawcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(log(y$counts+1,10), las=2, ylab="log10(counts)", col=col)
 dev.off()
 
-pdf("../other/root_log10filteredcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_log10filteredcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(log(y1$counts+1,10), las=2, ylab="log10(counts)", col=col)
 dev.off()
 
 #density plots before and after removing low expressed genes
-pdf("../other/root_norm_counts_raw&filtered_densityplots.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_norm_counts_raw&filtered_densityplots.pdf", onefile=TRUE, family= "Helvetica")
 opar <- par()
 par(mfrow=c(1,2), cex = 0.6)
 nsamples <- ncol(x)
@@ -135,11 +135,11 @@ dev.off()
 
 
 #MDS (PCA-like) graph
-pdf("../other/root_norm_counts_filtered_MDS.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_norm_counts_filtered_MDS.pdf", onefile=TRUE, family= "Helvetica")
 plotMDS(y1, labels=colnames(y1), col = col, cex = 0.6)
 dev.off()
 
-pdf("../other/root_norm_cf_lcpm_MDS.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_norm_cf_lcpm_MDS.pdf", onefile=TRUE, family= "Helvetica")
 lcpm <- log(as.matrix(y1),10)
 plotMDS(lcpm, labels=colnames(lcpm), col = col, cex = 0.6)
 dev.off()
@@ -151,7 +151,7 @@ design <- model.matrix(~0+group)
 colnames(design) <- levels(group)
 
 # limma voom fit for filtered RNA-seq dataset (y1)
-pdf("../other/root_voom_mean-variance_trend.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_voom_mean-variance_trend.pdf", onefile=TRUE, family= "Helvetica")
 v <- voom(y1,design,plot=TRUE)
 dev.off()
 fit <- lmFit(v, design)
@@ -177,7 +177,7 @@ colnames(dt)
 
 ## eBayes statistics calculation
 fit2 <- eBayes(fit2)
-pdf("../other/root_SIGMA_vs_A_plot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_SIGMA_vs_A_plot.pdf", onefile=TRUE, family= "Helvetica")
 plotSA(fit2)
 dev.off()
 
@@ -216,7 +216,7 @@ length(rownames(y1))==length(results[,1])
 all(rownames(y1) == results[,1]) # if FALSE, have to do merge, not cbind!
 
 
-pdf("../other/root_TMMnormLOGcpm_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Monocultures/root_TMMnormLOGcpm_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(cpm(y1, log=TRUE, prior.count=0.5), las=2, ylab="TMM normalized log_cpm values with prior.counts 0.5", col=col)
 dev.off()
 

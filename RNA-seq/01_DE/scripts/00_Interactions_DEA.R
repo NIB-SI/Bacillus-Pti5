@@ -1,8 +1,7 @@
-# Exp2 limma DGEA with added venn diagrams
+# Interactions experiment differential expresseion analysis
 
 
-setwd("O:/DEJAVNOSTI/OMIKE/pISA-Projects/_p_Endophytes/_I_Bsubtilis/_S_NGS_mixed_cultures_exp2/_A_03_exp2-STAR_limma/scripts")
-files <- list.files(path="../output/unique_map/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)  ## if not enough DEGs, use multi_map!!!
+files <- list.files(path="../../00_mapping/output/mapping/Interactions/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)  ## if not enough DEGs, use multi_map!!!
 
 geneNames <- read.table(files[1], header = FALSE, sep = "\t", skip= 4)[,1]
 
@@ -31,7 +30,7 @@ head(counts1) # check if it makes sense!
 counts <- counts1
 
 #export table with all counts
-write.table(counts, file="../output/StGenome_mergedGFF_STAR_counts_Stranded.txt", sep="\t", row.names=TRUE)
+write.table(counts, file="../output/Interactions/StGenome_mergedGFF_STAR_counts_Stranded.txt", sep="\t", row.names=TRUE)
 
 
 library ("limma")
@@ -41,7 +40,7 @@ library("stringr")
 colnames(counts)
 
 # read phenodata from analytes.txt/phenodata.txt (samples used for RNA-Seq)
-phenodata <- read.table("../input/phenodata.txt",  row.names=1, header = TRUE)
+phenodata <- read.table("../input/phenodata_Interactions.txt",  row.names=1, header = TRUE)
 dim(phenodata)
 head(phenodata)
 
@@ -82,7 +81,7 @@ y1 <- calcNormFactors(y1)
 col= c(rep("grey",4), rep("darkgoldenrod1",2), rep("red1",3), rep("red4",3), rep("darkgoldenrod4",4), rep("steelblue",4))
 
 #check density plot
-pdf("../other/root_density_plot_before_lowexpr_filter.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_density_plot_before_lowexpr_filter.pdf", onefile=TRUE, family= "Helvetica")
 nsamples <- ncol(x)
 
 lcpm <- log(as.matrix(x),10)
@@ -100,16 +99,16 @@ dev.off()
 
 ## Plot QC plots using different functions e.g.:
 
-pdf("../other/root_log10rawcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_log10rawcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(log(y$counts+1,10), las=2, ylab="log10(counts)", col=col)
 dev.off()
 
-pdf("../other/root_log10filteredcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_log10filteredcounts_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(log(y1$counts+1,10), las=2, ylab="log10(counts)", col=col)
 dev.off()
 
 #density plots before and after removing low expressed genes
-pdf("../other/root_norm_counts_raw&filtered_densityplots.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_norm_counts_raw&filtered_densityplots.pdf", onefile=TRUE, family= "Helvetica")
 opar <- par()
 par(mfrow=c(1,2), cex = 0.6)
 nsamples <- ncol(x)
@@ -138,12 +137,12 @@ dev.off()
 
 
 #MDS (PCA-like) graph
-pdf("../other/root_norm_counts_filtered_MDS.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_norm_counts_filtered_MDS.pdf", onefile=TRUE, family= "Helvetica")
 plotMDS(y1, labels=colnames(y1), col = col, cex = 0.6)
 legend("topleft", legend=unique(group), text.col=unique(col), bty="n", cex=0.6)
 dev.off()
 
-pdf("../other/root_norm_cf_lcpm_MDS.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_norm_cf_lcpm_MDS.pdf", onefile=TRUE, family= "Helvetica")
 lcpm <- log(as.matrix(y1),10)
 plotMDS(lcpm, labels=colnames(lcpm), col = col, cex = 0.6)
 legend("topleft", legend=unique(group), text.col=unique(col), bty="n", cex=0.6)
@@ -153,7 +152,7 @@ dev.off()
 ## limma-voom protocol
 
 # limma voom fit for filtered RNA-seq dataset (y1)
-pdf("../other/root_voom_mean-variance_trend.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_voom_mean-variance_trend.pdf", onefile=TRUE, family= "Helvetica")
 v <- voom(y1,design,plot=TRUE)
 dev.off()
 fit <- lmFit(v, design)
@@ -178,7 +177,7 @@ colnames(dt)
 
 ## eBayes statistics calculation
 fit2 <- eBayes(fit2)
-pdf("../other/root_SIGMA_vs_A_plot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_SIGMA_vs_A_plot.pdf", onefile=TRUE, family= "Helvetica")
 plotSA(fit2)
 dev.off()
 
@@ -213,20 +212,20 @@ length(rownames(y1))==length(results[,1])
 all(rownames(y1) == results[,1]) # if FALSE, have to do merge, not cbind!
 
 
-pdf("../other/root_TMMnormLOGcpm_boxplot.pdf", onefile=TRUE, family= "Helvetica")
+pdf("../output/Interactions/root_TMMnormLOGcpm_boxplot.pdf", onefile=TRUE, family= "Helvetica")
 boxplot(cpm(y1, log=TRUE, prior.count=0.5), las=2, ylab="TMM normalized log_cpm values with prior.counts 0.5", col=col)
 dev.off()
 
 results.raw <- merge(results, y1$counts, by.x="row.names", by.y="row.names", all.x= TRUE, all.y= FALSE, sort= FALSE)
 head(results.raw)
 colnames(results.raw)[1] <- c("GeneID")
-write.table(results.raw, file="../output/root_logFC_padj_rawReads.txt", sep="\t", quote=TRUE, row.names=FALSE)
+write.table(results.raw, file="../output/Interactions/root_logFC_padj_rawReads.txt", sep="\t", quote=TRUE, row.names=FALSE)
 
 #instead of raw counts here I export TMM normalized cpm values with prior.counts 0.5 
 results.tmm <- merge(results, cpm(y1, log=TRUE, prior.count=0.5), by.x="row.names", by.y="row.names", all.x= TRUE, all.y= FALSE, sort= FALSE)
 head(results.tmm)
 colnames(results.tmm)[1] <- c("GeneID")
-write.table(results.tmm, file="../output/root_logFC_padj_TMMcpm.txt", sep="\t", quote=TRUE, row.names=FALSE)
+write.table(results.tmm, file="../output/Interactions/root_logFC_padj_TMMcpm.txt", sep="\t", quote=TRUE, row.names=FALSE)
 
 #unfiltered TMM-normalized results output
 y_GSEA <- calcNormFactors(y)
@@ -235,7 +234,7 @@ y_GSEA <- cbind(rownames(y_GSEA), rep("NA", length(rownames(y_GSEA))), y_GSEA)
 colnames(y_GSEA)[1:2] <- c("NAME","DESCRIPTION")
 
 head(y_GSEA)  
-write.table(y_GSEA, file="../output/root_TMM_GSEA_noDESC.txt", sep="\t", quote=FALSE, row.names=FALSE)
+write.table(y_GSEA, file="../output/Interactions/root_TMM_GSEA_noDESC.txt", sep="\t", quote=FALSE, row.names=FALSE)
 
 ################################################
 ## LIMMA VENN DIAGRAMS FOR SELECTED CONTRASTS ##
@@ -592,7 +591,7 @@ my.vennDiagram(dt[, 1:3], include=c("up", "down"), counts.col=c("red", "blue"), 
 vennDiagram(dt[, 4:5], include=c("up", "down"), counts.col=c("red", "blue"), circle.col = c("red", "blue"), cex=c(1,0.8,0.7))
 my.vennDiagram(dt[, 4:5], include=c("up", "down"), counts.col=c("red", "blue"), circle.col = c("red", "blue"), cex=c(1,0.8,0.7))
 
-pdf(file = "../output/limma_venns_Exp2_roots.pdf", family = "Helvetica-Narrow")
+pdf(file = "../output/Interactions/limma_venns_Exp2_roots.pdf", family = "Helvetica-Narrow")
 my.vennDiagram(dt[, 1:3], include=c("up", "down"), counts.col=c("red", "blue"), circle.col = c("red", "blue", "green3"), cex=c(1,0.8,0.7))
 my.vennDiagram(dt[, 4:5], include=c("up", "down"), counts.col=c("red", "blue"), circle.col = c("red", "blue"), cex=c(1,0.8,0.7))
 dev.off()

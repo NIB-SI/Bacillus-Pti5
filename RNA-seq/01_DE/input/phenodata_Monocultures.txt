@@ -1,0 +1,36 @@
+names	type	treatment	sampleDescription
+BS443	PE	roots_noninoculated_A	Rywal_roots_noninoculated__206
+BS444	PE	roots_noninoculated_A	Rywal_roots_noninoculated__207
+BS445	PE	roots_noninoculated_A	Rywal_roots_noninoculated__208
+BS446	PE	roots_noninoculated_A	Rywal_roots_noninoculated__209
+BS447	PE	roots_inoculated_PS216_2h_A	"Rywal_roots_inoculated_PS-216, 2h_210"
+BS448	PE	roots_inoculated_PS216_2h_A	"Rywal_roots_inoculated_PS-216, 2h_211"
+BS449	PE	roots_inoculated_PS216_2h_A	"Rywal_roots_inoculated_PS-216, 2h_212"
+BS450	PE	roots_inoculated_PS216_2h_A	"Rywal_roots_inoculated_PS-216, 2h_213"
+BS451	PE	roots_inoculated_PS218_2h_A	"Rywal_roots_inoculated_PS-218, 2h_214"
+BS452	PE	roots_inoculated_PS218_2h_A	"Rywal_roots_inoculated_PS-218, 2h_215"
+BS453	PE	roots_inoculated_PS218_2h_A	"Rywal_roots_inoculated_PS-218, 2h_216"
+BS454	PE	roots_inoculated_PS218_2h_A	"Rywal_roots_inoculated_PS-218, 2h_217"
+BS463	PE	roots_noninoculated_B	Rywal_roots_noninoculated__226
+BS464	PE	roots_noninoculated_B	Rywal_roots_noninoculated__227
+BS465	PE	roots_noninoculated_B	Rywal_roots_noninoculated__228
+BS466	PE	roots_noninoculated_B	Rywal_roots_noninoculated__229
+BS467	PE	roots_inoculated_PS216_26h_B	"Rywal_roots_inoculated_PS-216, 26h_230"
+BS468	PE	roots_inoculated_PS216_26h_B	"Rywal_roots_inoculated_PS-216, 26h_231"
+BS469	PE	roots_inoculated_PS216_26h_B	"Rywal_roots_inoculated_PS-216, 26h_232"
+BS470	PE	roots_inoculated_PS216_26h_B	"Rywal_roots_inoculated_PS-216, 26h_233"
+BS471	PE	roots_inoculated_PS218_26h_B	"Rywal_roots_inoculated_PS-218, 26h_234"
+BS473	PE	roots_inoculated_PS218_26h_B	"Rywal_roots_inoculated_PS-218, 26h_236"
+BS474	PE	roots_inoculated_PS218_26h_B	"Rywal_roots_inoculated_PS-218, 26h_237"
+BS475	PE	leaves_noninoculated	Rywal_leaves_noninoculated__226
+BS476	PE	leaves_noninoculated	Rywal_leaves_noninoculated__227
+BS477	PE	leaves_noninoculated	Rywal_leaves_noninoculated__228
+BS478	PE	leaves_noninoculated	Rywal_leaves_noninoculated__229
+BS479	PE	leaves_inoculated_PS216_26h	Rywal_leaves_inoculated_PS-216_230
+BS480	PE	leaves_inoculated_PS216_26h	Rywal_leaves_inoculated_PS-216_231
+BS481	PE	leaves_inoculated_PS216_26h	Rywal_leaves_inoculated_PS-216_232
+BS482	PE	leaves_inoculated_PS216_26h	Rywal_leaves_inoculated_PS-216_233
+BS483	PE	leaves_inoculated_PS218_26h	Rywal_leaves_inoculated_PS-218_234
+BS484	PE	leaves_inoculated_PS218_26h	Rywal_leaves_inoculated_PS-218_235
+BS485	PE	leaves_inoculated_PS218_26h	Rywal_leaves_inoculated_PS-218_236
+BS486	PE	leaves_inoculated_PS218_26h	Rywal_leaves_inoculated_PS-218_237
