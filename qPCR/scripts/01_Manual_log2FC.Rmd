@@ -60,7 +60,7 @@ library(ggplot2)
 
 
 fp = file.path('..', "input")
-list.files(fp)
+
 
 fn = 'Table_combinedInputs.xlsx'
 wb = openxlsx::loadWorkbook(file.path(fp, fn))
@@ -86,8 +86,8 @@ df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
 
 data.table::setDT(df)
 df[, Sample.ID := NULL]
-df[, Genotype := NULL]
-df[, Strain := NULL]
+# df[, Genotype := NULL]
+# df[, Strain := NULL]
 df$Tissue = as.factor(trimws(df$Tissue))
 df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inoculated"))
 
@@ -111,6 +111,11 @@ log2fc_df1 = df %>%
   # }, .names = "log2FC_{.col}"), .groups = "drop")
   }, .names = "{.col}"), .groups = "drop")
 
+ind = grep('Genotype|Tissue|Strain', colnames(df))
+tmp = unique(df[!is.na(df$Strain), ..ind])
+log2fc_df1 = merge(tmp, log2fc_df1, by = c('Tissue'))
+
+
 
 ```
 
@@ -124,7 +129,7 @@ log2fc_df1 = df %>%
 
 
 fp = file.path('..', "input")
-list.files(fp)
+
 
 fn = 'Table_combinedInputs.xlsx'
 wb = openxlsx::loadWorkbook(file.path(fp, fn))
@@ -149,8 +154,8 @@ df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
 
 data.table::setDT(df)
 df[, Sample.ID := NULL]
-df[, Genotype := NULL]
-df[, Strain := NULL]
+# df[, Genotype := NULL]
+# df[, Strain := NULL]
 df$Tissue = as.factor(trimws(df$Tissue))
 df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inoculated"))
 
@@ -174,6 +179,197 @@ log2fc_df2 = df %>%
   # }, .names = "log2FC_{.col}"), .groups = "drop")
   }, .names = "{.col}"), .groups = "drop")
 
+ind = grep('Genotype|Tissue|Strain', colnames(df))
+tmp = unique(df[!is.na(df$Strain), ..ind])
+log2fc_df2 = merge(tmp, log2fc_df2, by = c('Tissue'))
+
+
+```
+
+
+# Desiree & Rywal
+
+
+
+```{r, input_Desiree-Rywal}
+
+
+fp = file.path('..', "input")
+
+
+fn = 'Table_combinedInputs.xlsx'
+wb = openxlsx::loadWorkbook(file.path(fp, fn))
+sheet_names = names(wb)
+sheet_name = grep("Desiree_Rywal", sheet_names, value = TRUE)
+
+df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = sheet_name,
+                            startRow = 10,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(df)
+df[, SampleID := NULL]
+df$Genotype = as.factor(trimws(df$Genotype))
+df$Strain = as.factor(trimws(df$Strain))
+df$Tissue = as.factor(trimws(df$Tissue))
+df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inoculated"))
+
+
+
+```
+
+
+# log2FC
+
+```{r}
+
+PS216 = df[df$Strain %in% c(NA, 'PS-216'), ]
+notPS216 = df[!(df$Strain %in% c('PS-216')), ]
+
+
+genes = c("StPti5", "St13-LOX")
+
+log2fc_df3 = PS216 %>%
+  dplyr::group_by(Tissue, Genotype) %>%
+  dplyr::summarise(dplyr::across(all_of(genes), ~ {
+    group2 = log2(.x[Treatment == "inoculated"])
+    group1 = log2(.x[Treatment == "noninoculated"])
+    round(mean(group2, na.rm = TRUE) - mean(group1, na.rm = TRUE), 2)
+  # }, .names = "log2FC_{.col}"), .groups = "drop")
+  }, .names = "{.col}"), .groups = "drop")
+
+ind = grep('Genotype|Tissue|Strain', colnames(PS216))
+tmp = unique(PS216[!is.na(PS216$Strain), ..ind])
+tmp$Time = NA
+log2fc_df3 = merge(tmp, log2fc_df3, by = c('Genotype', 'Tissue'))
+
+log2fc_df4 = notPS216 %>%
+  dplyr::group_by(Tissue, Genotype) %>%
+  dplyr::summarise(dplyr::across(all_of(genes), ~ {
+    group2 = log2(.x[Treatment == "inoculated"])
+    group1 = log2(.x[Treatment == "noninoculated"])
+    round(mean(group2, na.rm = TRUE) - mean(group1, na.rm = TRUE), 2)
+  # }, .names = "log2FC_{.col}"), .groups = "drop")
+  }, .names = "{.col}"), .groups = "drop")
+
+ind = grep('Genotype|Tissue|Strain', colnames(notPS216))
+tmp = unique(notPS216[!is.na(notPS216$Strain), ..ind])
+tmp$Time = NA
+log2fc_df4 = merge(tmp, log2fc_df4, by = c('Genotype', 'Tissue'))
+
+```
+
+
+```{r}
+
+log2fc_df1$Experiment = 'Exp1'
+log2fc_df2$Experiment = 'Exp2'
+log2fc_df3$Experiment = 'Desiree_Rywal'
+log2fc_df4$Experiment = 'Desiree_Rywal'
+
+log2FC = rbind(log2fc_df1,
+               log2fc_df2,
+               log2fc_df3,
+               log2fc_df4)
+
+```
+
+
+# P sig
+
+```{r input_p}
+
+
+
+
+fp = file.path('..', "other")
+fn = 'heatmap-subset.xlsx'
+
+df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = 1,
+                            startRow = 1,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(df)
+
+log2FC_long = log2FC %>%
+  tidyr::pivot_longer(
+    cols = c(StPti5, `St13-LOX`),   # all gene columns
+    names_to = "Gene",            # new column with gene names
+    values_to = "log2FC"          # new column with values
+  )
+
+
+log2FC_long = merge(log2FC_long, df, by = c('Experiment', 'Genotype', 'Tissue', 'Strain', 'Time', 'Gene'))
+log2FC_long = log2FC_long[order(log2FC_long$OrderInPlot), ]
+
+
+```
+
+
+```{r}
+
+
+log2FC_long$Gene = factor(log2FC_long$Gene, levels = c('St13-LOX', 'StPti5'))
+log2FC_long$Experiment = factor(log2FC_long$Experiment, levels = c('Exp1', 'Exp2', 'Desiree_Rywal'))
+log2FC_long$Genotype = factor(log2FC_long$Genotype, levels = c('Rywal', 'Desiree'))
+
+log2FC_long$Time[is.na(log2FC_long$Time)] = '-'
+log2FC_long$Time = factor(log2FC_long$Time, levels = c('1 min', '15 min', '30 min', '1 h', '2 h', '4 h', '6 h', '-'))
+
+
+log2FC_long = log2FC_long %>%
+  tidyr::unite("Group", c(Experiment, Genotype, Strain, Time),
+               sep = " ", remove = FALSE, na.rm = TRUE)
+group_levels = expand.grid(
+  Experiment = factor(levels(log2FC_long$Experiment),
+                      levels = levels(log2FC_long$Experiment)),
+  Genotype   = factor(levels(log2FC_long$Genotype),
+                      levels = levels(log2FC_long$Genotype)),
+  Strain     = factor(levels(log2FC_long$Strain),
+                      levels = levels(log2FC_long$Strain)),
+  Time       = factor(levels(log2FC_long$Time),
+                      levels = levels(log2FC_long$Time)),
+  KEEP.OUT.ATTRS = FALSE
+) %>%
+  dplyr::arrange(Experiment, Genotype, Strain, Time) %>%
+  dplyr::mutate(Group = paste(Experiment, Genotype, Strain, Time)) %>%
+  dplyr::pull(Group)
+log2FC_long$Group = factor(log2FC_long$Group, levels = group_levels)
+
+
+log2FC_long = log2FC_long %>%
+  dplyr::mutate(log2FC_capped = pmax(pmin(log2FC, 3.5), -0.5))
+
+
+
+
+roots = log2FC_long[log2FC_long$Tissue == 'roots', ]
+shoots = log2FC_long[log2FC_long$Tissue == 'shoots', ]
+
+
 
 ```
 
@@ -182,73 +378,64 @@ log2fc_df2 = df %>%
 
 
 
-log2fc_df1_roots = log2fc_df1 %>% dplyr::filter(Tissue == "roots")
-log2fc_df1_shoots = log2fc_df1 %>% dplyr::filter(Tissue == "shoots")
-log2fc_df2_roots = log2fc_df2 %>% dplyr::filter(Tissue == "roots")
-
-
-combined_df = dplyr::bind_rows(log2fc_df1_roots, log2fc_df2_roots, log2fc_df1_shoots)
-
-
-combined_df = combined_df %>%
-  dplyr::mutate(TissueTime = paste(Tissue, Time, sep = "_")) %>%
-  dplyr::select(TissueTime, StPti5, `St13-LOX`)
-combined_df = combined_df %>%
-  dplyr::mutate(
-    Tissue = stringr::str_extract(TissueTime, "^[^_]+"),
-    Time_raw = stringr::str_extract(TissueTime, "(?<=_).*"),
-    Time_value = as.numeric(stringr::str_extract(Time_raw, "\\d+")),
-    Time_unit = stringr::str_extract(Time_raw, "[a-zA-Z]+"),
-    Time_sort = dplyr::case_when(
-      Time_unit == "min" ~ Time_value,
-      Time_unit == "h" ~ Time_value * 60,
-      TRUE ~ NA_real_
-    )
-  )
-combined_df = combined_df %>%
-  dplyr::arrange(Tissue, Time_sort)
-combined_df = combined_df %>%
-  dplyr::mutate(TissueTime = paste(Tissue, Time_raw, sep = "_")) %>%
-  dplyr::select(TissueTime, StPti5, `St13-LOX`)
-
-
-combined_df = combined_df %>%
-  dplyr::mutate(
-    TissueTime = make.unique(TissueTime, sep = "_")
-  )
-
-
-reshaped_df = combined_df %>%
-  tidyr::pivot_longer(cols = c(StPti5, `St13-LOX`), names_to = "Gene", values_to = "log2FC") %>%
-  tidyr::pivot_wider(names_from = TissueTime, values_from = log2FC)
-
-
-
-heatmap_df = reshaped_df %>%
-  tidyr::pivot_longer(-Gene, names_to = "TissueTime", values_to = "log2FC")
-heatmap_df$TissueTime = factor(
-  heatmap_df$TissueTime,
-  levels = colnames(reshaped_df)[-1]  # exclude 'Gene'
-)
-
-ggplot(heatmap_df, aes(x = TissueTime, y = Gene, fill = log2FC)) +
+g1 = ggplot(roots, aes(x = Group, y = Gene, fill = log2FC_capped)) +
   geom_tile(color = "grey80") +
-  geom_text(aes(label = round(log2FC, 2)), size = 3) +  # Add numbers to tiles
+  geom_text(aes(
+    label = formatC(log2FC, format = "f", digits = 2),
+    fontface = ifelse(Psig == "ns", "italic", "bold"),
+    color = ifelse(Psig == "ns", "grey40", "black"))) +
   scale_fill_gradient2(
-    low = "darkblue", mid = "white", high = "darkred",
+    low = "darkblue",
+    mid = "white",
+    high = "darkred",
     midpoint = 0,
-    limits = c(min(heatmap_df$log2FC), max(heatmap_df$log2FC)),
-    name = "log2FC"
+    limits = c(-0.5, 3.5)
   ) +
-  theme_minimal() +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    axis.title.x = element_blank(),
-    axis.title.y = element_blank()
+  scale_color_identity() +
+  theme_minimal(base_size = 14) +
+  labs(fill = "log2FC", x = "roots", y = "log2FC") +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 90, hjust = 1))
+
+g2 = ggplot(shoots, aes(x = Group, y = Gene, fill = log2FC_capped)) +
+  geom_tile(color = "grey80") +
+  geom_text(aes(
+    label = formatC(log2FC, format = "f", digits = 2),
+    fontface = ifelse(Psig == "ns", "italic", "bold"),
+    color = ifelse(Psig == "ns", "grey40", "black"))) +
+  scale_fill_gradient2(
+    low = "darkblue",
+    mid = "white",
+    high = "darkred",
+    midpoint = 0,
+    limits = c(-0.5, 3.5)
   ) +
-  labs(title = "")
+  scale_color_identity() +
+  theme_minimal(base_size = 14) +
+  labs(fill = "log2FC", x = "shoots", y = "log2FC") +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 90, hjust = 1))
+
+plot(g1)
+print(g2)
+
+
+pdf("../reports/heatmaps.pdf", width = 18, height = 4.5)
+gridExtra::grid.arrange(g1, g2, ncol = 2, 
+                        widths = c(nrow(roots)/2/(nrow(shoots)/2 + nrow(roots)/2), 
+                                   nrow(shoots)/2/(nrow(shoots)/2 + nrow(roots)/2)))
+dev.off()
+
+
+
+
+
 
 ```
+
+
+
+
 
 
 # sessionInfo
