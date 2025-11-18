@@ -1,0 +1,367 @@
+STAR version=2.7.5c
+STAR compilation time,server,dir=Sun Aug 16 18:27:20 EDT 2020 vega:/home/dobin/data/STAR/STARcode/STAR.master/source
+##### Command Line:
+STAR --genomeDir ../output/STAR_index --runThreadN 30 --quantMode GeneCounts --readFilesIn ../output/trim_galore/BS486_1_val_1.fq.gz ../output/trim_galore/BS486_2_val_2.fq.gz --outFileNamePrefix ../output/unique_map/_BS486. --outFilterMultimapNmax 1 --outFilterMismatchNoverReadLmax 0.02 --outSAMtype None --quantTranscriptomeBan Singleend --outFilterType BySJout --alignSJoverhangMin 10 --alignSJDBoverhangMin 1 --alignIntronMin 20 --alignIntronMax 10000 --alignMatesGapMax 10000 --readFilesCommand pigz -cd -p 30
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 ../output/unique_map/_BS486.
+###### All USER parameters from Command Line:
+genomeDir                     ../output/STAR_index     ~RE-DEFINED
+runThreadN                    30     ~RE-DEFINED
+quantMode                     GeneCounts        ~RE-DEFINED
+readFilesIn                   ../output/trim_galore/BS486_1_val_1.fq.gz   ../output/trim_galore/BS486_2_val_2.fq.gz        ~RE-DEFINED
+outFileNamePrefix             ../output/unique_map/_BS486.     ~RE-DEFINED
+outFilterMultimapNmax         1     ~RE-DEFINED
+outFilterMismatchNoverReadLmax0.02     ~RE-DEFINED
+outSAMtype                    None        ~RE-DEFINED
+quantTranscriptomeBan         Singleend     ~RE-DEFINED
+outFilterType                 BySJout     ~RE-DEFINED
+alignSJoverhangMin            10     ~RE-DEFINED
+alignSJDBoverhangMin          1     ~RE-DEFINED
+alignIntronMin                20     ~RE-DEFINED
+alignIntronMax                10000     ~RE-DEFINED
+alignMatesGapMax              10000     ~RE-DEFINED
+readFilesCommand              pigz   -cd   -p   30        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runThreadN                        30
+genomeDir                         ../output/STAR_index
+readFilesIn                       ../output/trim_galore/BS486_1_val_1.fq.gz   ../output/trim_galore/BS486_2_val_2.fq.gz   
+readFilesCommand                  pigz   -cd   -p   30   
+outFileNamePrefix                 ../output/unique_map/_BS486.
+outSAMtype                        None   
+outFilterType                     BySJout
+outFilterMultimapNmax             1
+outFilterMismatchNoverReadLmax    0.02
+alignIntronMin                    20
+alignIntronMax                    10000
+alignMatesGapMax                  10000
+alignSJoverhangMin                10
+alignSJDBoverhangMin              1
+quantMode                         GeneCounts   
+quantTranscriptomeBan             Singleend
+
+-------------------------------
+##### Final effective command line:
+STAR   --runThreadN 30   --genomeDir ../output/STAR_index   --readFilesIn ../output/trim_galore/BS486_1_val_1.fq.gz   ../output/trim_galore/BS486_2_val_2.fq.gz      --readFilesCommand pigz   -cd   -p   30      --outFileNamePrefix ../output/unique_map/_BS486.   --outSAMtype None      --outFilterType BySJout   --outFilterMultimapNmax 1   --outFilterMismatchNoverReadLmax 0.02   --alignIntronMin 20   --alignIntronMax 10000   --alignMatesGapMax 10000   --alignSJoverhangMin 10   --alignSJDBoverhangMin 1   --quantMode GeneCounts      --quantTranscriptomeBan Singleend
+----------------------------------------
+
+Number of fastq files for each mate = 1
+
+   Input read files for mate 1 :
+-rw-rw-r-- 1 administrator administrator 1866925855 Dec  4 22:08 ../output/trim_galore/BS486_1_val_1.fq.gz
+
+   readsCommandsFile:
+exec > "../output/unique_map/_BS486._STARtmp/tmp.fifo.read1"
+echo FILE 0
+pigz   -cd   -p   30      "../output/trim_galore/BS486_1_val_1.fq.gz"
+
+
+   Input read files for mate 2 :
+-rw-rw-r-- 1 administrator administrator 1917251641 Dec  4 22:08 ../output/trim_galore/BS486_2_val_2.fq.gz
+
+   readsCommandsFile:
+exec > "../output/unique_map/_BS486._STARtmp/tmp.fifo.read2"
+echo FILE 0
+pigz   -cd   -p   30      "../output/trim_galore/BS486_2_val_2.fq.gz"
+
+Finished loading and checking parameters
+Reading genome generation parameters:
+### STAR   --runMode genomeGenerate   --runThreadN 30   --genomeDir ../output/STAR_index   --genomeFastaFiles ../input/StPGSC4.04n_2018-01-18.fasta      --genomeSAindexNbases 13   --limitGenomeGenerateRAM 50000000000   --sjdbGTFfile ../input/StPGSC4.04n_PGSC-ITAG-merged_representative-transcript_genes_2020-01-20.gtf   --sjdbOverhang 149
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              ../input/StPGSC4.04n_2018-01-18.fasta        ~RE-DEFINED
+genomeSAindexNbases           13     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  149     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   ../input/StPGSC4.04n_PGSC-ITAG-merged_representative-transcript_genes_2020-01-20.gtf     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               923586170   6320315004        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 14
+1	StPGSC4.04n_Chr01	88663952	0
+2	StPGSC4.04n_Chr02	48614681	88866816
+3	StPGSC4.04n_Chr03	62290286	137625600
+4	StPGSC4.04n_Chr04	72208621	200015872
+5	StPGSC4.04n_Chr05	52070158	272367616
+6	StPGSC4.04n_Chr06	59532096	324534272
+7	StPGSC4.04n_Chr07	56760843	384303104
+8	StPGSC4.04n_Chr08	56938457	441188352
+9	StPGSC4.04n_Chr09	61540751	498335744
+10	StPGSC4.04n_Chr10	59756223	559939584
+11	StPGSC4.04n_Chr11	45475667	619708416
+12	StPGSC4.04n_Chr12	61165649	665321472
+13	StPGSC4.04n_Chr00	48012048	726663168
+14	StPGSC4.04n_ChrUn	111078864	774897664
+--sjdbOverhang = 149 taken from the generated genome
+Started loading the genome: Sat Dec  5 01:39:23 2020
+
+Genome: size given as a parameter = 923586170
+SA: size given as a parameter = 6320315004
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=13  nSAi=89478484
+nGenome=923586170;  nSAbyte=6320315004
+GstrandBit=32   SA number of indices=1532197576
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 923586170 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 923586170 bytes
+SA file size: 6320315004 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 6320315004 bytes
+Loading SAindex ... done: 391468491 bytes
+Finished loading the genome: Sat Dec  5 01:39:27 2020
+
+Processing splice junctions database sjdbN=125550,   pGe.sjdbOverhang=149 
+To accommodate alignIntronMax=10000 redefined winBinNbits=14
+To accommodate alignIntronMax=10000 and alignMatesGapMax=10000, redefined winFlankNbins=1 and winAnchorDistNbins=2
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread0 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread1 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread2 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread2 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread3 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread3 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread4 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread4 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread5 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread5 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread6 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread6 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread7 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread7 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread8 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread8 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread9 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread9 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread10 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread10 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread11 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread11 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread12 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread12 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread13 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread13 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread14 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread14 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread15 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread15 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread16 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread16 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread17 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread17 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread18 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread18 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread19 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread19 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread20 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread20 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread21 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread21 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread22 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread22 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread23 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread23 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread24 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread24 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread25 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread25 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread26 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread26 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread27 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread27 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread28 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread28 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate1.thread29 ... ok
+Opening the file: ../output/unique_map/_BS486._STARtmp//FilterBySJoutFiles.mate2.thread29 ... ok
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Starting to map file # 0
+mate 1:   ../output/trim_galore/BS486_1_val_1.fq.gz
+mate 2:   ../output/trim_galore/BS486_2_val_2.fq.gz
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Created thread # 12
+Created thread # 13
+Created thread # 14
+Created thread # 15
+Created thread # 16
+Created thread # 17
+Created thread # 18
+Created thread # 19
+Created thread # 20
+Created thread # 21
+Created thread # 22
+Created thread # 23
+Created thread # 24
+Created thread # 25
+Created thread # 26
+Created thread # 27
+Created thread # 28
+Created thread # 29
+Thread #20 end of input stream, nextChar=-1
+Completed: thread #15
+Completed: thread #24
+Completed: thread #22
+Completed: thread #21
+Completed: thread #28
+Completed: thread #23
+Completed: thread #25
+Completed: thread #14
+Completed: thread #11
+Completed: thread #6
+Completed: thread #13
+Completed: thread #0
+Completed: thread #20
+Completed: thread #18
+Completed: thread #4
+Completed: thread #26
+Completed: thread #3
+Completed: thread #16
+Completed: thread #12
+Completed: thread #1
+Joined thread # 1
+Completed: thread #17
+Completed: thread #7
+Completed: thread #19
+Completed: thread #27
+Completed: thread #5
+Completed: thread #2
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Completed: thread #29
+Completed: thread #9
+Completed: thread #8
+Joined thread # 8
+Joined thread # 9
+Completed: thread #10
+Joined thread # 10
+Joined thread # 11
+Joined thread # 12
+Joined thread # 13
+Joined thread # 14
+Joined thread # 15
+Joined thread # 16
+Joined thread # 17
+Joined thread # 18
+Joined thread # 19
+Joined thread # 20
+Joined thread # 21
+Joined thread # 22
+Joined thread # 23
+Joined thread # 24
+Joined thread # 25
+Joined thread # 26
+Joined thread # 27
+Joined thread # 28
+Joined thread # 29
+Completed stage 1 mapping of outFilterBySJout mapping
+Detected 45933 novel junctions that passed filtering, will proceed to filter reads that contained unannotated junctions
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Created thread # 12
+Created thread # 13
+Created thread # 14
+Created thread # 15
+Created thread # 16
+Created thread # 17
+Created thread # 18
+Created thread # 19
+Created thread # 20
+Created thread # 21
+Created thread # 22
+Created thread # 23
+Created thread # 24
+Created thread # 25
+Created thread # 26
+Created thread # 27
+Created thread # 28
+Created thread # 29
+Completed: thread #25
+Completed: thread #23
+Completed: thread #4
+Completed: thread #15
+Completed: thread #21
+Completed: thread #9
+Completed: thread #28
+Completed: thread #22
+Completed: thread #3
+Completed: thread #16
+Completed: thread #24
+Completed: thread #0
+Completed: thread #11
+Completed: thread #14
+Completed: thread #8
+Completed: thread #27
+Completed: thread #7
+Completed: thread #12
+Completed: thread #5
+Completed: thread #13
+Completed: thread #1
+Joined thread # 1
+Completed: thread #10
+Completed: thread #6
+Completed: thread #18
+Completed: thread #2
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Joined thread # 12
+Joined thread # 13
+Joined thread # 14
+Joined thread # 15
+Joined thread # 16
+Completed: thread #26
+Completed: thread #19
+Completed: thread #20
+Completed: thread #29
+Completed: thread #17
+Joined thread # 17
+Joined thread # 18
+Joined thread # 19
+Joined thread # 20
+Joined thread # 21
+Joined thread # 22
+Joined thread # 23
+Joined thread # 24
+Joined thread # 25
+Joined thread # 26
+Joined thread # 27
+Joined thread # 28
+Joined thread # 29
+ALL DONE!

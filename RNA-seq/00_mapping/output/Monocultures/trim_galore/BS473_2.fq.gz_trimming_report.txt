@@ -1,0 +1,209 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: /NFSs-datarepo/ngs_omics/NGS_stu_rna-seq_2020_mpe_Bacillus/data/BS473_2.fq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 30
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 8511). Second best hit was smallRNA (count: 36)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Removing Ns from the start and end of reads
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.10 with Python 3.7.8
+Command line parameters: -j 30 -e 0.1 -q 20 -O 1 --trim-n -a AGATCGGAAGAGC /NFSs-datarepo/ngs_omics/NGS_stu_rna-seq_2020_mpe_Bacillus/data/BS473_2.fq.gz
+Processing reads on 30 cores in single-end mode ...
+Finished in 146.70 s (7 us/read; 8.15 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              19,919,633
+Reads with adapters:                 7,308,121 (36.7%)
+Reads written (passing filters):    19,919,633 (100.0%)
+
+Total basepairs processed: 2,987,944,950 bp
+Quality-trimmed:               2,296,117 bp (0.1%)
+Total written (filtered):  2,969,609,756 bp (99.4%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 7308121 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 33.6%
+  C: 24.8%
+  G: 23.6%
+  T: 18.1%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	5071916	4979908.2	0	5071916
+2	1368104	1244977.1	0	1368104
+3	464395	311244.3	0	464395
+4	125793	77811.1	0	125793
+5	33670	19452.8	0	33670
+6	12540	4863.2	0	12540
+7	10290	1215.8	0	10290
+8	10260	303.9	0	10260
+9	9082	76.0	0	8348 734
+10	9813	19.0	1	8396 1417
+11	8479	4.7	1	7843 636
+12	8334	1.2	1	7930 404
+13	7834	0.3	1	7599 235
+14	8214	0.3	1	7973 241
+15	7145	0.3	1	6953 192
+16	7021	0.3	1	6793 228
+17	7461	0.3	1	7260 201
+18	5565	0.3	1	5429 136
+19	7225	0.3	1	7035 190
+20	5977	0.3	1	5819 158
+21	5414	0.3	1	5263 151
+22	5483	0.3	1	5307 176
+23	5138	0.3	1	4996 142
+24	5427	0.3	1	5224 203
+25	5426	0.3	1	5285 141
+26	3977	0.3	1	3861 116
+27	4269	0.3	1	4135 134
+28	4248	0.3	1	4131 117
+29	3906	0.3	1	3739 167
+30	4228	0.3	1	4127 101
+31	3326	0.3	1	3233 93
+32	3518	0.3	1	3415 103
+33	3449	0.3	1	3340 109
+34	3325	0.3	1	3240 85
+35	3291	0.3	1	3155 136
+36	3458	0.3	1	3357 101
+37	2475	0.3	1	2381 94
+38	2825	0.3	1	2702 123
+39	4116	0.3	1	4006 110
+40	2075	0.3	1	2002 73
+41	1324	0.3	1	1263 61
+42	2896	0.3	1	2805 91
+43	1388	0.3	1	1329 59
+44	3473	0.3	1	3389 84
+45	2471	0.3	1	2392 79
+46	1164	0.3	1	1103 61
+47	3416	0.3	1	3338 78
+48	427	0.3	1	376 51
+49	1530	0.3	1	1431 99
+50	330	0.3	1	293 37
+51	761	0.3	1	713 48
+52	368	0.3	1	315 53
+53	1148	0.3	1	1089 59
+54	1915	0.3	1	1850 65
+55	448	0.3	1	409 39
+56	1076	0.3	1	1030 46
+57	2798	0.3	1	2709 89
+58	494	0.3	1	459 35
+59	327	0.3	1	255 72
+60	1559	0.3	1	1509 50
+61	417	0.3	1	356 61
+62	180	0.3	1	160 20
+63	1180	0.3	1	1117 63
+64	1286	0.3	1	1225 61
+65	159	0.3	1	128 31
+66	335	0.3	1	291 44
+67	165	0.3	1	135 30
+68	157	0.3	1	105 52
+69	158	0.3	1	141 17
+70	317	0.3	1	249 68
+71	120	0.3	1	77 43
+72	126	0.3	1	87 39
+73	131	0.3	1	105 26
+74	115	0.3	1	100 15
+75	112	0.3	1	91 21
+76	191	0.3	1	111 80
+77	118	0.3	1	92 26
+78	184	0.3	1	132 52
+79	138	0.3	1	119 19
+80	165	0.3	1	141 24
+81	91	0.3	1	78 13
+82	106	0.3	1	84 22
+83	148	0.3	1	96 52
+84	119	0.3	1	99 20
+85	125	0.3	1	98 27
+86	123	0.3	1	72 51
+87	85	0.3	1	72 13
+88	103	0.3	1	74 29
+89	94	0.3	1	74 20
+90	102	0.3	1	68 34
+91	120	0.3	1	68 52
+92	100	0.3	1	50 50
+93	102	0.3	1	56 46
+94	93	0.3	1	52 41
+95	74	0.3	1	51 23
+96	58	0.3	1	46 12
+97	67	0.3	1	38 29
+98	59	0.3	1	36 23
+99	54	0.3	1	32 22
+100	84	0.3	1	32 52
+101	91	0.3	1	33 58
+102	44	0.3	1	22 22
+103	62	0.3	1	31 31
+104	85	0.3	1	39 46
+105	46	0.3	1	21 25
+106	47	0.3	1	27 20
+107	62	0.3	1	27 35
+108	50	0.3	1	14 36
+109	23	0.3	1	17 6
+110	36	0.3	1	23 13
+111	47	0.3	1	10 37
+112	32	0.3	1	22 10
+113	75	0.3	1	36 39
+114	43	0.3	1	28 15
+115	49	0.3	1	34 15
+116	42	0.3	1	19 23
+117	41	0.3	1	26 15
+118	40	0.3	1	29 11
+119	160	0.3	1	153 7
+120	91	0.3	1	84 7
+121	59	0.3	1	43 16
+122	57	0.3	1	27 30
+123	43	0.3	1	18 25
+124	44	0.3	1	16 28
+125	16	0.3	1	11 5
+126	53	0.3	1	5 48
+127	202	0.3	1	168 34
+128	35	0.3	1	15 20
+129	15	0.3	1	11 4
+130	69	0.3	1	20 49
+131	23	0.3	1	14 9
+132	27	0.3	1	11 16
+133	30	0.3	1	8 22
+134	61	0.3	1	6 55
+135	19	0.3	1	9 10
+136	13	0.3	1	3 10
+137	17	0.3	1	3 14
+138	87	0.3	1	53 34
+139	33	0.3	1	13 20
+140	15	0.3	1	13 2
+141	94	0.3	1	69 25
+142	18	0.3	1	8 10
+143	46	0.3	1	44 2
+144	22	0.3	1	7 15
+145	28	0.3	1	10 18
+146	13	0.3	1	3 10
+147	58	0.3	1	4 54
+148	21	0.3	1	0 21
+149	54	0.3	1	4 50
+150	217	0.3	1	72 145
+
+RUN STATISTICS FOR INPUT FILE: /NFSs-datarepo/ngs_omics/NGS_stu_rna-seq_2020_mpe_Bacillus/data/BS473_2.fq.gz
+=============================================
+19919633 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 19919633
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 4385 (0.02%)

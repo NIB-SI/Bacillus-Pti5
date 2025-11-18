@@ -1,0 +1,209 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: ../../_A_02_QC_centrifuge-RNASeq/input/BS863_2.fq
+Trimming mode: paired-end
+Trim Galore version: 0.6.4_dev
+Cutadapt version: 2.10
+Python version: could not detect
+Number of cores used for trimming: 30
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 2770). Second best hit was Nextera (count: 4)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Removing Ns from the start and end of reads
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.10 with Python 3.7.8
+Command line parameters: -j 30 -e 0.1 -q 20 -O 1 --trim-n -a AGATCGGAAGAGC ../../_A_02_QC_centrifuge-RNASeq/input/BS863_2.fq
+Processing reads on 30 cores in single-end mode ...
+Finished in 94.59 s (4 us/read; 14.35 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:              22,619,886
+Reads with adapters:                 8,243,884 (36.4%)
+Reads written (passing filters):    22,619,886 (100.0%)
+
+Total basepairs processed: 3,392,982,900 bp
+Quality-trimmed:               3,061,761 bp (0.1%)
+Total written (filtered):  3,375,601,791 bp (99.5%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 8243884 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 34.7%
+  C: 24.7%
+  G: 22.9%
+  T: 17.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	5916435	5654971.5	0	5916435
+2	1532461	1413742.9	0	1532461
+3	532108	353435.7	0	532108
+4	136911	88358.9	0	136911
+5	28995	22089.7	0	28995
+6	6181	5522.4	0	6181
+7	3722	1380.6	0	3722
+8	4195	345.2	0	4195
+9	3376	86.3	0	2830 546
+10	4241	21.6	1	2804 1437
+11	3278	5.4	1	2529 749
+12	3129	1.3	1	2942 187
+13	2567	0.3	1	2396 171
+14	2679	0.3	1	2465 214
+15	2557	0.3	1	2409 148
+16	2258	0.3	1	2134 124
+17	2172	0.3	1	2070 102
+18	1880	0.3	1	1802 78
+19	1981	0.3	1	1859 122
+20	2054	0.3	1	1932 122
+21	1830	0.3	1	1736 94
+22	1704	0.3	1	1599 105
+23	1683	0.3	1	1591 92
+24	1676	0.3	1	1594 82
+25	1574	0.3	1	1454 120
+26	1332	0.3	1	1245 87
+27	1199	0.3	1	1130 69
+28	1186	0.3	1	1133 53
+29	1185	0.3	1	1105 80
+30	1102	0.3	1	1029 73
+31	1074	0.3	1	1002 72
+32	1017	0.3	1	959 58
+33	1083	0.3	1	983 100
+34	1043	0.3	1	975 68
+35	1211	0.3	1	1037 174
+36	737	0.3	1	627 110
+37	1007	0.3	1	960 47
+38	838	0.3	1	671 167
+39	719	0.3	1	680 39
+40	784	0.3	1	723 61
+41	651	0.3	1	597 54
+42	838	0.3	1	769 69
+43	774	0.3	1	675 99
+44	589	0.3	1	544 45
+45	673	0.3	1	599 74
+46	687	0.3	1	615 72
+47	637	0.3	1	588 49
+48	690	0.3	1	481 209
+49	510	0.3	1	447 63
+50	660	0.3	1	441 219
+51	471	0.3	1	420 51
+52	447	0.3	1	382 65
+53	440	0.3	1	390 50
+54	532	0.3	1	455 77
+55	356	0.3	1	310 46
+56	459	0.3	1	358 101
+57	449	0.3	1	370 79
+58	324	0.3	1	267 57
+59	371	0.3	1	271 100
+60	759	0.3	1	637 122
+61	4220	0.3	1	4039 181
+62	665	0.3	1	606 59
+63	639	0.3	1	512 127
+64	501	0.3	1	283 218
+65	287	0.3	1	201 86
+66	236	0.3	1	201 35
+67	249	0.3	1	188 61
+68	366	0.3	1	242 124
+69	209	0.3	1	164 45
+70	280	0.3	1	199 81
+71	219	0.3	1	140 79
+72	247	0.3	1	188 59
+73	356	0.3	1	287 69
+74	255	0.3	1	211 44
+75	304	0.3	1	165 139
+76	107	0.3	1	73 34
+77	164	0.3	1	61 103
+78	74	0.3	1	42 32
+79	91	0.3	1	77 14
+80	101	0.3	1	76 25
+81	110	0.3	1	74 36
+82	127	0.3	1	107 20
+83	156	0.3	1	121 35
+84	158	0.3	1	99 59
+85	217	0.3	1	125 92
+86	155	0.3	1	116 39
+87	197	0.3	1	85 112
+88	196	0.3	1	102 94
+89	101	0.3	1	80 21
+90	195	0.3	1	91 104
+91	104	0.3	1	84 20
+92	99	0.3	1	69 30
+93	95	0.3	1	75 20
+94	127	0.3	1	79 48
+95	124	0.3	1	46 78
+96	78	0.3	1	51 27
+97	68	0.3	1	53 15
+98	116	0.3	1	51 65
+99	73	0.3	1	51 22
+100	83	0.3	1	59 24
+101	71	0.3	1	58 13
+102	120	0.3	1	58 62
+103	87	0.3	1	42 45
+104	113	0.3	1	47 66
+105	152	0.3	1	64 88
+106	89	0.3	1	53 36
+107	58	0.3	1	47 11
+108	64	0.3	1	49 15
+109	91	0.3	1	77 14
+110	143	0.3	1	40 103
+111	63	0.3	1	49 14
+112	26	0.3	1	21 5
+113	87	0.3	1	38 49
+114	38	0.3	1	28 10
+115	116	0.3	1	29 87
+116	76	0.3	1	20 56
+117	33	0.3	1	28 5
+118	98	0.3	1	34 64
+119	109	0.3	1	61 48
+120	36	0.3	1	32 4
+121	76	0.3	1	23 53
+122	18	0.3	1	15 3
+123	82	0.3	1	12 70
+124	17	0.3	1	10 7
+125	83	0.3	1	13 70
+126	66	0.3	1	15 51
+127	43	0.3	1	12 31
+128	38	0.3	1	18 20
+129	124	0.3	1	4 120
+130	8	0.3	1	8
+131	17	0.3	1	15 2
+132	8	0.3	1	6 2
+133	10	0.3	1	8 2
+134	71	0.3	1	5 66
+135	21	0.3	1	14 7
+136	91	0.3	1	4 87
+137	6	0.3	1	6
+138	7	0.3	1	6 1
+139	14	0.3	1	13 1
+140	10	0.3	1	2 8
+141	189	0.3	1	84 105
+142	6	0.3	1	6
+143	46	0.3	1	24 22
+144	61	0.3	1	3 58
+145	68	0.3	1	0 68
+146	10	0.3	1	10
+147	45	0.3	1	3 42
+148	3	0.3	1	1 2
+149	116	0.3	1	19 97
+150	230	0.3	1	190 40
+
+RUN STATISTICS FOR INPUT FILE: ../../_A_02_QC_centrifuge-RNASeq/input/BS863_2.fq
+=============================================
+22619886 sequences processed in total
+
+Total number of sequences analysed for the sequence pair length validation: 22619886
+
+Number of sequence pairs removed because at least one read was shorter than the length cutoff (20 bp): 15222 (0.07%)

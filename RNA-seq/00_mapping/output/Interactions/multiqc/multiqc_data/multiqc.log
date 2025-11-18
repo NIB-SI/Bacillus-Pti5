@@ -1,0 +1,4 @@
+[2024-11-07 09:50:58,888] multiqc.core.version_check                         [WARNING]  MultiQC Version v1.25.1 now available!
+[2024-11-07 09:50:58,889] multiqc.core.file_search                           [INFO   ]  Search path: /DKHC/scratch/markop/_p_Endophytes/_I_Bsubtilis/_S_NGS_mixed_cultures_exp2/_A_03_exp2-STAR_limma/output
+[2024-11-07 09:51:08,887] multiqc.modules.star.star                          [INFO   ]  Found 20 reports and 20 gene count files
+[2024-11-07 09:51:09,023] multiqc.modules.cutadapt.cutadapt                  [INFO   ]  Found 40 reports

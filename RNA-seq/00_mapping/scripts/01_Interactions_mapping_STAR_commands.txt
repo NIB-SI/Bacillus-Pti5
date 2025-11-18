@@ -1,0 +1,79 @@
+# RNA-Seq B. subtilis mapping for Interactions (mixed culture exp2) using STAR
+
+cd ~/RNAseq/DE/scripts
+
+ulimit -n 10000
+ncores=30
+
+## QC 
+
+### Centrifuge
+
+for f in `basename -a ../input/Monocultures_fastq/*_1.fq | sed 's/_1.fq//' `
+do
+  centrifuge -x /DATA/_Centri/dbs_v2018/nt -1 ../input/Interactions_fastq/${f}_1.fq -2 ../input/Interactions_fastq/${f}_2.fq -S ../output/Interactions/centrifuge/output_centrifuge_${f}.txt --report-file ../output/Interactions/centrifuge/output_report_${f}.txt --seed 42 -p 30
+done
+
+for f in `basename -a ../input/*_1.fq | sed 's/_1.fq//' `
+do
+  centrifuge-kreport -x /DATA/_Centri/dbs_v2018/nt ../output/Interactions/centrifuge/output_centrifuge_${f}.txt > ../output/Interactions/centrifuge/kreport_${f}.txt
+done
+
+### Pavian (visualisation of centrifuge results)
+- run pavian in R / RStudio:
+Installs required packages from CRAN and Bioconductor
+if (!require(remotes)) { install.packages("remotes") }
+remotes::install_github("fbreitwieser/pavian")
+pavian::runApp(port=5000)
+
+### FastQC reports
+fastqc -t $ncores ../input/Interactions/*.fq.gz -o ../output/Interactions/fastqc
+
+### trim and QV-filter reads PE
+for i in $(ls /input/Interactions_fastq | grep fq.gz | sed s/_[12].fq.gz// | sort -u) 
+do trim_galore --cores $ncores --quality 20 --paired --trim-n --gzip -o ../output/Interactions/trim_galore ../input/Interactions_fastq/${i}_1.fq.gz ../input/Interactions_fastq/${i}_2.fq.gz
+done
+
+## RNAseq Mapping
+
+### generate genome index (if not yet produced)
+gffread ../input/StPGSC4.04n_PGSC-ITAG-merged_representative-transcript_genes_2020-01-20.gff3 -T -o ../input/StPGSC4.04n_PGSC-ITAG-merged_representative-transcript_genes_2020-01-20.gtf
+
+STAR \
+--runThreadN $ncores \
+--runMode genomeGenerate \
+--genomeDir ../output/STAR_index \
+--genomeFastaFiles ../input/StPGSC4.04n_2018-01-18.fasta \
+--sjdbGTFfile ../input/StPGSC4.04n_PGSC-ITAG-merged_representative-transcript_genes_2020-01-20.gtf \
+--sjdbOverhang 149 \
+--genomeSAindexNbases 13 \
+--limitGenomeGenerateRAM 50000000000
+
+### map reads
+STAR --genomeLoad LoadAndExit --genomeDir ../output/STAR_index
+
+# map reads PE unique mapping
+for i in $(ls ../output/Interactions/trim_galore/ | grep fq.gz | sed s/_[12]_val_[12].fq.gz// | sort -u)
+do  STAR \
+        --genomeDir ../output/STAR_index \
+	--runThreadN $ncores \
+	--quantMode GeneCounts \
+	--readFilesIn  ../output/Interactions/trim_galore/${i}_1_val_1.fq.gz ../output/Interactions/trim_galore/${i}_2_val_2.fq.gz \
+	--outFileNamePrefix ../output/Interactions/STAR/_$i. \
+	--outFilterMultimapNmax 1 \
+        --outFilterMismatchNoverReadLmax 0.02 \
+	--outSAMtype None \
+	--quantTranscriptomeBan Singleend \
+	--outFilterType BySJout \
+	--alignSJoverhangMin 10 \
+	--alignSJDBoverhangMin 1 \
+	--alignIntronMin 20 \
+	--alignIntronMax 10000 \
+	--alignMatesGapMax 10000 \
+        --readFilesCommand pigz -cd -p $ncores
+done
+
+STAR --genomeLoad Remove --genomeDir ../output/STAR_index
+
+## MultiQC
+multiqc ../output/Interactions/multiqc -o ../output/Interactions/
