@@ -1,6 +1,6 @@
 # Quality control and read mapping
 
-## 
+
 
 ## Input files
 
@@ -14,7 +14,7 @@
 
 
 
-### QC
+### Quality control (QC)
 
 Mutliqc reports including stats of all qc steps:
 
@@ -31,7 +31,7 @@ In directories ./output/Monocultures/STAR/ and ./output/Interactions/STAR/
 
 * \*.ReadsPerGene.out.tab - raw counts tables
 * \*.Log.final.out - mapping statistics
-* \*.Log.out - 
+* \*.Log.out -
 
 
 
@@ -52,7 +52,7 @@ In directories ./output/Monocultures/STAR/ and ./output/Interactions/STAR/
 
 
 
-### Quality control (QC)
+### QC
 
 * [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 * [MultiQC](https://github.com/MultiQC/MultiQC)
