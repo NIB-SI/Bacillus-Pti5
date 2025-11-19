@@ -31,7 +31,7 @@ In directories ./output/Monocultures/STAR/ and ./output/Interactions/STAR/
 
 * \*.ReadsPerGene.out.tab - raw counts tables
 * \*.Log.final.out - mapping statistics
-* \*.Log.out -
+* \*.Log.out - mapping run log
 
 
 
