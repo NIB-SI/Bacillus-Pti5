@@ -1,55 +1,28 @@
 # RNA-seq analysis pipeline
 
-## Input files
-
-- reference potato genome file (fasta)
-- reference potato genome annotation file (gff3)
-- Illumina paired-end RNA-seq reads (fastq)
-- gene set file (gmt)
-- phenotype labels file (cls)
-
-## Steps and tools used
-
-### Quality control (QC)
-
-- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-
-### Trimming
-
-- PHRED basecall quality score > 20
-
-- [TrimGalore](https://github.com/FelixKrueger/TrimGalore)
 
 
-### Taxonomic classification of reads
+**ExperimentalDesign.xlsx** - Sample information (metadata) for RNA-seq experiments
 
-- [Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
 
-- [Pavian](https://github.com/fbreitwieser/pavian)
 
-### Read mapping
+## 00\_mapping (and QC)
 
-- [STAR](https://github.com/alexdobin/STAR)
-     
-### Differential expression (DE)
+* Read quality control (QC)
+* Taxonomic classification of reads
+* Trimming
+* Read mapping
 
-- [edgeR](https://bioconductor.org/packages/release/bioc/html/edgeR.html)
+## 01\_DE
 
-- [limma](https://www.bioconductor.org/packages/release/bioc/html/limma.html)
+* Differential expression analysis in R
 
-### Gene set enrichment analysis (GSEA)
+## 02\_GSEA
 
-- [GSEA](https://www.gsea-msigdb.org/gsea/index.jsp)
+* Gene set enrichment analysis
+* Visualisation
 
-- [biokit](https://github.com/martingarridorc/biokit)
+## 03\_Network
 
-### Network analysis
-
-- [SKM](https://skm.nib.si/)
-
-- [SKM tools](https://github.com/NIB-SI/skm-tools)
-
-- [DiNAR](https://github.com/NIB-SI/DiNAR)
-
-- [Cytoscape](https://cytoscape.org/)
+Network analysis using [Stress Knowledge Map](https://skm.nib.si/)
 
