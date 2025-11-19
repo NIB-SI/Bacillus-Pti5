@@ -1,4 +1,5 @@
-# RNA-seq DE
+# RNA-seq DE output
 
-- various outputs per analysis steps
-- see [reports](https://github.com/NIB-SI/Bacillus-Pti5/tree/main/RNA-seq/01_DE/reports) for Excel tables
+* outputs per experiment
+* Results.xlsx - final results table
+* see [reports](../reports/) for more annotated Excel tables
