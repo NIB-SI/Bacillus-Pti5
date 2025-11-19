@@ -11,7 +11,7 @@
 
 
 
-Excel versions in ./reports/(./reports/)
+Excel versions in [./reports/](./reports/)
 
 ## Essential parts of the analysis scripts
 
