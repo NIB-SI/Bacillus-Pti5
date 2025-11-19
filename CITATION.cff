@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite it as below."
+authors:
+- family-names: "xx"
+  given-names: "yy"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+- family-names: "pp"
+  given-names: "qq"
+  orcid: "https://orcid.org/0000-0000-0000-0000"
+title: ""
+version: 1.0.0
+doi: xxx.xxx/zenodo.xxx
+date-released: 2025-11-24
+url: "https://github.com/NIB-SI/Bacillus-Pti5"
