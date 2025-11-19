@@ -1,4 +1,4 @@
-# GSEA and visualisation
+# GSEA and visualisation scripts
 
 1. run GSEA
   - see [Running a Gene Set Enrichment Analysis](https://docs.gsea-msigdb.org/#GSEA/GSEA_User_Guide/#running-a-gene-set-enrichment-analysis)
