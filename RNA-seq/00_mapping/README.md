@@ -1,24 +1,45 @@
-# Quality control and read mapping tools used
+# Quality control and read mapping 
 
-## Taxonomic classification
+## 
 
-[Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
+## Input files
 
-[Pavian](https://github.com/fbreitwieser/pavian)
+* reference potato genome file (fasta)
+* reference potato genome annotation file (gff3)
+* Illumina paired-end RNA-seq reads (fastq)
 
-## QC
 
-[FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
-## Trimming
+## Steps and tools used
+
+
+
+
+
+### Taxonomic classification
+
+* [Centrifuge](https://github.com/DaehwanKimLab/centrifuge)
+* [Pavian](https://github.com/fbreitwieser/pavian)
+
+
+
+### Quality control (QC)
+
+* [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+* [MultiQC](https://github.com/MultiQC/MultiQC)
+
+
+
+### Trimming
 
 PHRED basecall quality score > 20
 
-[TrimGalore](https://github.com/FelixKrueger/TrimGalore)
+* [TrimGalore](https://github.com/FelixKrueger/TrimGalore)
 
-## Mapping
+
+
+### Mapping
 
 counting only uniquely mapped paired reads
 
-[STAR](https://github.com/alexdobin/STAR)
-
+* [STAR](https://github.com/alexdobin/STAR)
