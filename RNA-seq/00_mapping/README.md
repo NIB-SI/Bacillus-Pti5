@@ -1,4 +1,4 @@
-# Quality control and read mapping 
+# Quality control and read mapping
 
 ## 
 
@@ -7,6 +7,35 @@
 * reference potato genome file (fasta)
 * reference potato genome annotation file (gff3)
 * Illumina paired-end RNA-seq reads (fastq)
+
+
+
+## Most relevant output files
+
+
+
+### QC
+
+Mutliqc reports including stats of all qc steps:
+
+* ./output/Monocultures/multiqc/multiqc\_report.html
+* ./output/Interactions/multiqc/multiqc\_report.html
+
+
+
+### STAR mapping
+
+In directories ./output/Monocultures/STAR/ and ./output/Interactions/STAR/
+
+
+
+* \*.ReadsPerGene.out.tab - raw counts tables
+* \*.Log.final.out - mapping statistics
+* \*.Log.out - 
+
+
+
+
 
 
 
