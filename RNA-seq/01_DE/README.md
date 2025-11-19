@@ -7,7 +7,11 @@
 
 ## Outputs
 
-* annotated DE tables
+* annotated tab-delimited DE tables: \*\_logFC\_padj\_rawReads.txt, \*\_logFC\_padj\_TMMcpm.txt
+
+
+
+Excel versions in ./reports/(./reports/)
 
 ## Essential parts of the analysis scripts
 
@@ -17,7 +21,7 @@
 x <- counts
 y <- DGEList(counts=x, group=group)
 keep.exprs <- rowSums(y$counts>100)>=4
-y1 <- y[keep.exprs, , keep.lib.sizes=TRUE]
+y1 <- y\[keep.exprs, , keep.lib.sizes=TRUE]
 y1 <- calcNormFactors(y1)
 ```
 
