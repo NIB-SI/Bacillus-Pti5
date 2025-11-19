@@ -12,3 +12,39 @@ version: 1.0.0
 doi: xxx.xxx/zenodo.xxx
 date-released: 2025-11-24
 url: "https://github.com/NIB-SI/Bacillus-Pti5"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: ""
+    given-names: ""
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+  doi: "10.0000/00000"
+  journal: "Journal Title"
+  month: x
+  start: y # First page number
+  end: z # Last page number
+  title: ".."
+  issue: x
+  volume: y
+  year: 2025
