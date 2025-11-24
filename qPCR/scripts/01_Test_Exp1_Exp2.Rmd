@@ -802,6 +802,20 @@ group2_names = setdiff(max_per_transcript$transcript, group1_names)
 y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
 y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
 
+# override for LOX and PTI5
+y_scales1 = list(
+  transcript == "St13-LOX" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  ),
+  transcript == "StPti5" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  )
+)
+
+
+
 result = test_and_plot(data_long_raw = shoots.216
                        , myorder = myorder
                        , pal = pal
@@ -895,6 +909,19 @@ group2_names = setdiff(max_per_transcript$transcript, group1_names)
 y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
 y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
 
+# override for LOX and PTI5
+y_scales1 = list(
+  transcript == "St13-LOX" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  ),
+  transcript == "StPti5" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  )
+)
+
+
 result = test_and_plot(data_long_raw = roots.216
                        , myorder = myorder
                        , pal = pal
@@ -984,6 +1011,19 @@ max_per_transcript = shoots.218 %>%
 group2_names = setdiff(max_per_transcript$transcript, group1_names)
 y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
 y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+
+# override for LOX and PTI5
+y_scales1 = list(
+  transcript == "St13-LOX" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  ),
+  transcript == "StPti5" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  )
+)
+
 
 result = test_and_plot(data_long_raw = shoots.218
                        , myorder = myorder
@@ -1076,6 +1116,19 @@ max_per_transcript = roots.218 %>%
 group2_names = setdiff(max_per_transcript$transcript, group1_names)
 y_scales1 = build_y_scales_for(group1_names, max_per_transcript)
 y_scales2 = build_y_scales_for(group2_names, max_per_transcript)
+
+# override for LOX and PTI5
+y_scales1 = list(
+  transcript == "St13-LOX" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  ),
+  transcript == "StPti5" ~ ggplot2::scale_y_continuous(
+    limits = c(0, 11),
+    breaks = c(0, 2, 4, 6, 8, 10)
+  )
+)
+
 
 result = test_and_plot(data_long_raw = roots.218
                        , myorder = myorder

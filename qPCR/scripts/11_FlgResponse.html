@@ -11,7 +11,7 @@
 
 <meta name="author" content="zagor" />
 
-<meta name="date" content="2025-10-29" />
+<meta name="date" content="2025-11-24" />
 
 <title>FlgResponse</title>
 
@@ -1570,7 +1570,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">FlgResponse</h1>
 <h4 class="author">zagor</h4>
-<h4 class="date">2025-10-29</h4>
+<h4 class="date">2025-11-24</h4>
 
 </div>
 
@@ -1578,8 +1578,8 @@ border-radius: 0px;
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>(<span class="at">all =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">gc</span>()</span></code></pre></div>
 <pre><code>##           used (Mb) gc trigger (Mb) max used (Mb)
-## Ncells  617706 33.0    1420588 75.9   686457 36.7
-## Vcells 1162345  8.9    8388608 64.0  1877160 14.4</code></pre>
+## Ncells  617703 33.0    1420588 75.9   686457 36.7
+## Vcells 1162330  8.9    8388608 64.0  1877160 14.4</code></pre>
 <div id="packages" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> packages</h1>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># %&gt;% </span></span>
@@ -1633,7 +1633,7 @@ of the reference group</h2>
 <span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>scale_mean)</span>
 <span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>  df.scaled <span class="ot">=</span> df.scaled <span class="sc">%&gt;%</span> </span>
 <span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">arrange</span>(dplyr<span class="sc">::</span><span class="fu">desc</span>(transcript), dplyr<span class="sc">::</span><span class="fu">desc</span>(Treatment))</span>
-<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>  shoots <span class="ot">=</span> df.scaled <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Tissue <span class="sc">==</span> <span class="st">&quot;leaves&quot;</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>  shoots <span class="ot">=</span> df.scaled <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Tissue <span class="sc">==</span> <span class="st">&quot;shoots&quot;</span>)</span>
 <span id="cb6-17"><a href="#cb6-17" tabindex="-1"></a>  roots <span class="ot">=</span> df.scaled <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(Tissue <span class="sc">==</span> <span class="st">&quot;roots&quot;</span>)</span>
 <span id="cb6-18"><a href="#cb6-18" tabindex="-1"></a>  </span>
 <span id="cb6-19"><a href="#cb6-19" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(</span>
@@ -2209,8 +2209,7 @@ different sensitivity to outliers</li>
 <h1><span class="header-section-number">4</span> input</h1>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>fp <span class="ot">=</span> <span class="fu">file.path</span>(<span class="st">&#39;..&#39;</span>, <span class="st">&quot;input&quot;</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="fu">list.files</span>(fp)</span></code></pre></div>
-<pre><code>## [1] &quot;~$Table_combinedInputs.xlsx&quot; &quot;archive&quot;                    
-## [3] &quot;README.md&quot;                   &quot;Table_combinedInputs.xlsx&quot;</code></pre>
+<pre><code>## [1] &quot;README.md&quot;                 &quot;Table_combinedInputs.xlsx&quot;</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>fn <span class="ot">=</span> <span class="st">&#39;Table_combinedInputs.xlsx&#39;</span></span>
 <span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>wb <span class="ot">=</span> openxlsx<span class="sc">::</span><span class="fu">loadWorkbook</span>(<span class="fu">file.path</span>(fp, fn))</span>
 <span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>sheet_names <span class="ot">=</span> <span class="fu">names</span>(wb)</span>

@@ -118,7 +118,7 @@ process_data <- function(df, groupvars, measurevar, scale_treatment = "no treatm
     dplyr::select(-scale_mean)
   df.scaled = df.scaled %>% 
     dplyr::arrange(dplyr::desc(transcript), dplyr::desc(Treatment))
-  shoots = df.scaled %>% dplyr::filter(Tissue == "leaves")
+  shoots = df.scaled %>% dplyr::filter(Tissue == "shoots")
   roots = df.scaled %>% dplyr::filter(Tissue == "roots")
   
   return(list(

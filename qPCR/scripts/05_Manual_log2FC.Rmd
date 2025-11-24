@@ -95,7 +95,7 @@ df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inocula
 
 ```
 
-# log2FC
+## log2FC
 
 ```{r}
 
@@ -163,7 +163,7 @@ df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inocula
 ```
 
 
-# log2FC
+## log2FC
 
 ```{r}
 
@@ -230,7 +230,7 @@ df$Treatment = factor(trimws(df$Treatment), levels = c("noninoculated", "inocula
 ```
 
 
-# log2FC
+## log2FC
 
 ```{r}
 
@@ -374,6 +374,8 @@ shoots = log2FC_long[log2FC_long$Tissue == 'shoots', ]
 ```
 
 
+# plot heatmap
+
 ```{r}
 
 
@@ -427,6 +429,175 @@ pdf(file.path(fpo, fn), width = 18, height = 4.5)
 gridExtra::grid.arrange(g1, g2, ncol = 2, 
                         widths = c(nrow(roots)/2/(nrow(shoots)/2 + nrow(roots)/2), 
                                    nrow(shoots)/2/(nrow(shoots)/2 + nrow(roots)/2)))
+dev.off()
+
+
+
+
+
+
+```
+
+
+
+# flagelin
+
+
+
+```{r, input_flagelin}
+
+
+fp = file.path('..', "input")
+
+
+fn = 'Table_combinedInputs.xlsx'
+wb = openxlsx::loadWorkbook(file.path(fp, fn))
+sheet_names = names(wb)
+sheet_name = grep("FlgResponse", sheet_names, value = TRUE)
+
+
+df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = sheet_name,
+                            startRow = 10,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(df)
+df[, Sample.ID := NULL]
+df$Tissue = as.factor(trimws(df$Tissue))
+df$Treatment = factor(trimws(df$Treatment), levels = c("no treatment", "flg22"))
+
+
+
+```
+
+## log2FC
+
+```{r}
+
+
+genes = c("StRBOHD", "StPR1B", "StBGLU2", "StACO2", "StPti5", "St13-LOX")
+
+log2fc_df1 = df %>%
+  dplyr::group_by(Tissue) %>%
+  dplyr::summarise(dplyr::across(all_of(genes), ~ {
+    group2 = log2(.x[Treatment == "flg22"])
+    group1 = log2(.x[Treatment == "no treatment"])
+    round(mean(group2, na.rm = TRUE) - mean(group1, na.rm = TRUE), 2)
+  # }, .names = "log2FC_{.col}"), .groups = "drop")
+  }, .names = "{.col}"), .groups = "drop")
+
+ind = grep('Genotype|Tissue', colnames(df))
+tmp = unique(df[, ..ind])
+log2fc_df = merge(tmp, log2fc_df1, by = c('Tissue'))
+
+
+
+```
+
+
+## P sig
+
+```{r input_p_f}
+
+
+
+
+fp = file.path('..', "other")
+fn = 'heatmap_flagelin.xlsx'
+
+df = openxlsx::read.xlsx(xlsxFile = file.path(fp, fn),
+                            sheet = 1,
+                            startRow = 1,
+                            colNames = TRUE,
+                            rowNames = FALSE,
+                            detectDates = FALSE,
+                            skipEmptyRows = TRUE,
+                            skipEmptyCols = TRUE,
+                            rows = NULL,
+                            cols = NULL,
+                            check.names = FALSE,
+                            sep.names = ".",
+                            namedRegion = NULL,
+                            na.strings = "NA",
+                            fillMergedCells = FALSE)
+
+data.table::setDT(df)
+
+log2FC_long = log2fc_df %>%
+  tidyr::pivot_longer(
+    cols = -c(Tissue, Genotype),   # all gene columns
+    names_to = "Gene",            # new column with gene names
+    values_to = "log2FC"          # new column with values
+  )
+
+
+log2FC_long = merge(log2FC_long, df, by = c('Genotype', 'Tissue', 'Gene'))
+log2FC_long = log2FC_long[order(log2FC_long$OrderInPlot), ]
+
+
+```
+
+
+```{r}
+
+
+log2FC_long$Gene = factor(log2FC_long$Gene, levels = genes)
+
+
+log2FC_long = log2FC_long %>%
+  dplyr::mutate(log2FC_capped = pmax(pmin(log2FC, 2), -2))
+
+
+
+
+```
+
+## plot heatmap
+
+```{r}
+
+
+
+g3 = ggplot(log2FC_long, aes(x = Gene, y = Tissue, fill = log2FC_capped)) +
+  geom_tile(color = "grey80") +
+  geom_text(aes(
+    label = formatC(log2FC, format = "f", digits = 2),
+    fontface = ifelse(Psig == "ns", "italic", "bold"),
+    color = ifelse(Psig == "ns", "grey40", "black"))) +
+  scale_fill_gradient2(
+    low = "darkblue",
+    mid = "white",
+    high = "darkred",
+    midpoint = 0,
+    limits = c(-2, 2)
+  ) +
+  scale_color_identity() +
+  theme_minimal(base_size = 14) +
+  labs(fill = "log2FC", x = "", y = "log2FC") +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 90, hjust = 1))
+
+
+plot(g3)
+
+
+
+fpo = "../reports/heatmaps"
+dir.create(fpo, recursive = TRUE, showWarnings = FALSE)
+fn = "heatmaps_flagelin.pdf"
+pdf(file.path(fpo, fn), width = 5.5, height = 2.5)
+gridExtra::grid.arrange(g3, ncol = 1)
 dev.off()
 
 
