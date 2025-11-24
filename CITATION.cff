@@ -1,17 +1,17 @@
 cff-version: 1.2.0
 message: "If you use this workflow, please cite it as below."
 authors:
-- family-names: "xx"
-  given-names: "yy"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-- family-names: "pp"
-  given-names: "qq"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
-title: ""
+- family-names: "Petek"
+  given-names: "Marko"
+  orcid: "https://orcid.org/0000-0003-3644-7827"
+- family-names: "Zagorščak"
+  given-names: "Maja"
+  orcid: "https://orcid.org/0000-0002-1669-6482"
+title: "Complete dry-lab workflow for "An ERF transcription factor StPti5, a novel regulator of endophyte community maintenance in potato""
 version: 1.0.0
 date-released: "2025-11-24"
 identifiers:
-  - description: This is the archived snapshot of version 1.0.0 of Bacillus-Pti5 workflow
+  - description: Complete dry-lab workflow for "An ERF transcription factor StPti5, a novel regulator of endophyte community maintenance in potato"
     type: doi
     value: "xx.yyy/zenodo.qqqq"
 license: MIT
