@@ -1,8 +1,17 @@
 cff-version: 1.2.0
-message: "please cite it as below."
-title: "Complete dry-lab workflow for An ERF transcription factor StPti5, a novel regulator of endophyte community maintenance in potato"
+message: "If you use this software, please cite it as below."
+title: "Complete dry-lab workflow for an ERF transcription factor StPti5, a novel regulator of endophyte community maintenance in potato"
 version: 1.0.0
-identifiers:
-  - type: doi
-    value: 00.0000/zenodo.0000
+doi: 10.5281/zenodo.1234567
 date-released: 2025-11-26
+
+authors:
+  - family-names: "Petek"
+    given-names: "Marko"
+    affiliation: "National Institute of Biology, Slovenia"
+  - family-names: "Zagorščak"
+    given-names: "Maja"
+    affiliation: "National Institute of Biology, Slovenia"
+
+repository-code: "https://github.com/NIB-SI/Bacillus-Pti5"
+license: "MIT"
