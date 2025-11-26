@@ -54,7 +54,7 @@ gc()
 - Binomial outcome
 
 
-# Bayesian generalized linear model1s with group-specific terms via Stan
+# Bayesian generalized linear models with group-specific terms via Stan
 - [rstanarm GitHub](https://github.com/stan-dev/rstanarm)
 - [vignette](https://mc-stan.org/rstanarm/articles/rstanarm.html)
 
@@ -121,6 +121,8 @@ inn$`Positive/Negative.sample` = trimws(inn$`Positive/Negative.sample`)
 inn$output[inn$`Positive/Negative.sample` == '+'] = 1
 inn$output[inn$`Positive/Negative.sample` == '-'] = 0
 
+inn = inn[grep('apex', inn$Tissue, invert = TRUE), ]
+
 
 table(inn$Tissue, inn$output)
 inn$part = gsub(' .*', '', inn$Tissue)
@@ -169,7 +171,7 @@ ggplot(plot_data, aes(x = part, y = count, fill = output)) +
 ```
 
 
-## Bayesian generalized linear model1s with group-specific terms via Stan
+## Bayesian generalized linear models with group-specific terms via Stan
 
 
 ```{r, bayes_L6}
@@ -218,7 +220,7 @@ rstanarm::pp_check(model3)
 mean(rstanarm::bayes_R2(model3))
 
 # Compares the distribution of observed outcomes (y) to the distribution of simulated outcomes (yrep)
-yrep = rstanarm::posterior_predict(model1)
+yrep = rstanarm::posterior_predict(model2)
 
 # Uses bar plots to show how often each outcome (0 or 1) occurs
 bayesplot::ppc_bars(y = inn$output, yrep = yrep) # Bar plot of observed vs predicted
@@ -229,9 +231,9 @@ bayesplot::ppc_bars_grouped(y = inn$output, yrep = yrep, group = inn$Genotype)
 
 
 
-# Compute a Bayesian version of R-squared for regression model1s
+# Compute a Bayesian version of R-squared for regression models
 r2_samples = rstanarm::bayes_R2(model2)
-# On average,  model1 explains about XY% of the variance in the binary outcome
+# On average,  model explains about XY% of the variance in the binary outcome
 mean(r2_samples)  # Average R² across posterior
 # 95% Credible Interval
 quantile(r2_samples, probs = c(0.025, 0.975))  # 95% credible interval
@@ -341,19 +343,19 @@ bayestestR::describe_posterior(model2)
 prop.table(table(inn$Genotype, inn$output), 1)
 
 # Fisher's Exact Test for Count Data
-fisher.test(table(inn$Genotype, inn$output))
+fisher.test(table(inn$Genotype, inn$output), alternative = "greater") # one‑sided Fisher’s test
 
-for (i in levels(inn$part)) {
-  cat("Tissue: ", i, '\n')
-  tmp = table(inn[part == i, .(Genotype, output)])
-  for (lvl in c("0","1")) if (!(lvl %in% colnames(tmp))) {
-    tmp = cbind(tmp, setNames(rep(0, nrow(tmp)), lvl))
-    colnames(tmp)[2] = lvl}
-  tmp = tmp[, c("0","1")] 
-  # print("Proportions")
-  # print(prop.table(tmp, 1))
-  cat("Fisher's Exact Test for Count Data p-value: ", fisher.test(tmp)$p.value, '\n')
-}
+# for (i in levels(inn$part)) {
+#   cat("Tissue: ", i, '\n')
+#   tmp = table(inn[part == i, .(Genotype, output)])
+#   for (lvl in c("0","1")) if (!(lvl %in% colnames(tmp))) {
+#     tmp = cbind(tmp, setNames(rep(0, nrow(tmp)), lvl))
+#     colnames(tmp)[2] = lvl}
+#   tmp = tmp[, c("0","1")] 
+#   # print("Proportions")
+#   # print(prop.table(tmp, 1))
+#   cat("Fisher's Exact Test for Count Data p-value: ", fisher.test(tmp)$p.value, '\n')
+# }
 
 
 
@@ -365,7 +367,7 @@ for (i in levels(inn$part)) {
 
 - Genotype — highest level
 - plant IDs are reused within genotypes (plant is nested within Genotype)
-- parts (apex, 1st, 2nd, …) are repeated within plants (part is nested within plant)
+- parts (1st, 2nd, …) are repeated within plants (part is nested within plant)
 - output: 0/1 - perfect separation
 
 
@@ -403,6 +405,8 @@ inn$output = NA
 inn$`Positive/Negative.sample` = trimws(inn$`Positive/Negative.sample`)
 inn$output[inn$`Positive/Negative.sample` == '+'] = 1
 inn$output[inn$`Positive/Negative.sample` == '-'] = 0
+
+inn = inn[grep('apex', inn$Tissue, invert = TRUE), ]
 
 
 table(inn$Tissue, inn$output)
@@ -453,7 +457,7 @@ ggplot(plot_data, aes(x = part, y = count, fill = output)) +
 
 
 
-## Bayesian generalized linear model1s with group-specific terms via Stan
+## Bayesian generalized linear models with group-specific terms via Stan
 
 
 ```{r, bayes_L2}
@@ -489,9 +493,9 @@ bayesplot::ppc_bars_grouped(y = inn$output, yrep = yrep, group = inn$Genotype)
 
 
 
-# Compute a Bayesian version of R-squared for regression model1s
+# Compute a Bayesian version of R-squared for regression models
 r2_samples = rstanarm::bayes_R2(model1)
-# On average,  model1 explains about XY% of the variance in the binary outcome
+# On average,  model explains about XY% of the variance in the binary outcome
 mean(r2_samples)  # Average R² across posterior
 # 95% Credible Interval
 quantile(r2_samples, probs = c(0.025, 0.975))  # 95% credible interval
@@ -522,15 +526,15 @@ bayesplot::mcmc_pairs(
   posterior_array,
   pars = c(
     "GenotypeRywal",
-    "partapex",
+    "part4th",
     "GenotypeshPTI5-Rywal L2",
-    "GenotypeshPTI5-Rywal L2:partapex"
+    "GenotypeshPTI5-Rywal L2:part4th"
   )
 )
 
 
-bayesplot::mcmc_trace(posterior, pars = c("GenotypeRywal","partapex",
-                                          "GenotypeshPTI5-Rywal L2", "GenotypeshPTI5-Rywal L2:partapex"))
+bayesplot::mcmc_trace(posterior, pars = c("GenotypeRywal","part4th",
+                                          "GenotypeshPTI5-Rywal L2", "GenotypeshPTI5-Rywal L2:part4th"))
 
 
 
@@ -601,19 +605,20 @@ bayestestR::describe_posterior(model1)
 prop.table(table(inn$Genotype, inn$output), 1)
 
 # Fisher's Exact Test for Count Data
-fisher.test(table(inn$Genotype, inn$output))
+fisher.test(table(inn$Genotype, inn$output), alternative = "greater") # one‑sided Fisher’s test
 
-for (i in levels(inn$part)) {
-  cat("Tissue: ", i, '\n')
-  tmp = table(inn[part == i, .(Genotype, output)])
-  for (lvl in c("0","1")) if (!(lvl %in% colnames(tmp))) {
-    tmp = cbind(tmp, setNames(rep(0, nrow(tmp)), lvl))
-    colnames(tmp)[2] = lvl}
-  tmp = tmp[, c("0","1")] 
-  # print("Proportions")
-  # print(prop.table(tmp, 1))
-  cat("Fisher's Exact Test for Count Data p-value: ", fisher.test(tmp)$p.value, '\n')
-}
+
+# for (i in levels(inn$part)) {
+#   cat("Tissue: ", i, '\n')
+#   tmp = table(inn[part == i, .(Genotype, output)])
+#   for (lvl in c("0","1")) if (!(lvl %in% colnames(tmp))) {
+#     tmp = cbind(tmp, setNames(rep(0, nrow(tmp)), lvl))
+#     colnames(tmp)[2] = lvl}
+#   tmp = tmp[, c("0","1")] 
+#   # print("Proportions")
+#   # print(prop.table(tmp, 1))
+#   cat("Fisher's Exact Test for Count Data p-value: ", fisher.test(tmp)$p.value, '\n')
+# }
 
 
 
