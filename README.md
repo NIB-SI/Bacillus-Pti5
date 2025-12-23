@@ -39,4 +39,4 @@ This repository follows https://github.com/NIB-SI/pISA-tree structure.
 Check README files at each layer.
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17728235.svg)](https://doi.org/10.5281/zenodo.17728235)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17728235-blue)](https://doi.org/10.5281/zenodo.17728235)
