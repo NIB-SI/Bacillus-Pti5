@@ -5,7 +5,7 @@
 ############# ROOTS
 
 # combine all counts in to an expression matrix
-files <- list.files(path="../../00_mapping/output/mapping/Monocultures/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)
+files <- list.files(path="../../00_mapping/output/Monocultures/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)
 
 geneNames <- read.table(files[1], header = FALSE, sep = "\t", skip= 4)[,1]
 

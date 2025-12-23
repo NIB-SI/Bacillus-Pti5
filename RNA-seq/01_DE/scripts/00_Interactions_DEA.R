@@ -1,7 +1,7 @@
 # Interactions experiment differential expresseion analysis
 
 
-files <- list.files(path="../../00_mapping/output/mapping/Interactions/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)  ## if not enough DEGs, use multi_map!!!
+files <- list.files(path="../../00_mapping/output/Interactions/STAR/", pattern=".ReadsPerGene.out.tab",  full.names= TRUE)
 
 geneNames <- read.table(files[1], header = FALSE, sep = "\t", skip= 4)[,1]
 
